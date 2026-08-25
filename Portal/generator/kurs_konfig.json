@@ -7,7 +7,10 @@
   "abschnitte": [
     {"nr":1,"ordner":"Abschnitt_1_Einleitung","titel":"Einführung in UML","unter":"Was UML ist und die Diagramm-Landkarte","ergaenzung":false},
     {"nr":2,"ordner":"Abschnitt_2_UseCase","titel":"Use-Case-Diagramme","unter":"Die Anwendersicht auf Software","ergaenzung":false},
-    {"nr":3,"ordner":"Abschnitt_3_Klassen","titel":"Klassendiagramme","unter":"Die statische Struktur eines Systems","ergaenzung":false}
+    {"nr":3,"ordner":"Abschnitt_3_Klassen","titel":"Klassendiagramme","unter":"Die statische Struktur eines Systems","ergaenzung":false},
+    {"nr":4,"ordner":"Abschnitt_4_Aktivitaet","titel":"Aktivitätsdiagramme","unter":"Die Prozess-Sicht: Abläufe und Parallelität","ergaenzung":false},
+    {"nr":5,"ordner":"Abschnitt_5_Sequenz","titel":"Sequenzdiagramme","unter":"Die Interaktions-Sicht: wer spricht wann mit wem","ergaenzung":false},
+    {"nr":6,"ordner":"Abschnitt_6_Zustand","titel":"Zustandsdiagramme","unter":"Der Lebenszyklus eines Objekts","ergaenzung":false}
   ],
   "gattungen": {
     "Lerntext": ["lt","Lerntext","Lerntext – lesen und verstehen","text"],

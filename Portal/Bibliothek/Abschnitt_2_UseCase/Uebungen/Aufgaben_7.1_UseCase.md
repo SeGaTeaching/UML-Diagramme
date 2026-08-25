@@ -7,7 +7,7 @@ Systemgrenze (Rechteck), Assoziation, `«include»` und `«extend»`.
 
 ---
 
-## Teil A — Zwischenübungen (Vormittag)
+## Teil A — Grundübungen
 
 ### Aufgabe A1 [leicht]: Kino-Ticketkauf
 
@@ -186,7 +186,7 @@ Basis-Use-Case verbunden, denn "Pizza bestellen" funktioniert auch ohne die Erwe
 
 ---
 
-## Teil B — Selbstlernphase (Nachmittag)
+## Teil B — Vertiefungsaufgaben
 
 ### Aufgabe B1 [leicht]: Geldautomat — Grundmodell
 

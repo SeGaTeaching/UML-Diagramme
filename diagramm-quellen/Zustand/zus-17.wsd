@@ -1,0 +1,10 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+state pruefen <<choice>>
+[*] --> AntragPruefen
+AntragPruefen --> pruefen
+pruefen --> Genehmigt : [betrag <= 1000]
+pruefen --> Abgelehnt : [betrag > 1000]
+Genehmigt --> [*]
+Abgelehnt --> [*]
+@enduml

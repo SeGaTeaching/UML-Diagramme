@@ -57,7 +57,7 @@ UML-Diagramme · Tag 1 von 3 · **Vormittag Unterricht · Nachmittag Selbstlernp
 ### 1. Vier Fenster bereitlegen
 
 `UML_Diagramme.pptx` — die 58 Folien (heute 1–27). Dieses Dozentenskript auf dem **zweiten
-Fenster** oder Monitor. Das **Portal** (`../Portal/HTML/index.html`) für Lerntext und Übungen. Und —
+Fenster** oder Monitor. Das **Portal** (`../docs/index.html`) für Lerntext und Übungen. Und —
 neu und heute zentral — ein **Zeichentool** für den Live-Aufbau, siehe unten.
 
 ### 2. Das Zeichentool: Empfehlung draw.io (diagrams.net)
@@ -979,7 +979,7 @@ Vormittags — jede Aufgabe hat eine eingeklappte Musterlösung, die Teilnehmer 
 
 | Datei | Wofür |
 |---|---|
-| `../Portal/HTML/index.html` | das **Lernportal** — Lerntexte 7.1 und 7.2 zum Nachlesen, Übungen im selben Layout |
+| `../docs/index.html` | das **Lernportal** — Lerntexte 7.1 und 7.2 zum Nachlesen, Übungen im selben Layout |
 | Aufgabenblatt 7.1, **Teil B** (8–12 Aufgaben) | Use-Case selbstständig modellieren, gestaffelt leicht→schwer |
 | Aufgabenblatt 7.2, **Teil B** (8–12 Aufgaben) | Klassendiagramme selbstständig modellieren, bis zu mehreren Klassen mit allen Beziehungen |
 

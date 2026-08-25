@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="444px" preserveAspectRatio="none" style="width:295px;height:444px;" version="1.1" viewBox="0 0 295 444" width="295px" zoomAndPan="magnify"><defs/><g><polygon fill="#FFF3E0" points="118.5,200,130.5,212,118.5,224,106.5,212,118.5,200" style="stroke: #FB8C00; stroke-width: 1.5;"/><ellipse cx="118.5" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="119" x="59" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="59" x2="178" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="69" y="106.9951">AntragPruefen</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="97" x="6" y="302"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="103" y1="328.2969" y2="328.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="16" y="319.9951">Genehmigt</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="91" x="147" y="302"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="147" x2="238" y1="328.2969" y2="328.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="157" y="319.9951">Abgelehnt</text><ellipse cx="118.5" cy="423" fill="none" rx="10" ry="10" style="stroke: #222222; stroke-width: 1.0;"/><ellipse cx="119" cy="423.5" fill="#222222" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/><!--link *start to AntragPruefen--><path d="M118.5,28.01 C118.5,40.7 118.5,64.41 118.5,83.57 " fill="none" id="*start-AntragPruefen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="118.5,88.84,122.5,79.84,118.5,83.84,114.5,79.84,118.5,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link AntragPruefen to pruefen--><path d="M118.5,139.22 C118.5,156.54 118.5,179.38 118.5,194.59 " fill="none" id="AntragPruefen-pruefen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="118.5,199.83,122.5,190.83,118.5,194.83,114.5,190.83,118.5,199.83" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link pruefen to Genehmigt--><path d="M108.65,214.36 C90.09,217.52 50.31,227.22 33.5,254 C25.29,267.08 29.19,283.49 35.75,297.34 " fill="none" id="pruefen-Genehmigt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="38.06,301.93,37.5876,292.0925,35.8125,297.4636,30.4414,295.6885,38.06,301.93" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="34.5" y="267.9951">[betrag &lt;= 1000]</text><!--link pruefen to Abgelehnt--><path d="M124.99,217.62 C134.38,224.57 151.77,238.57 162.5,254 C171.52,266.97 178.55,283.07 183.53,296.76 " fill="none" id="pruefen-Abgelehnt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="185.27,301.68,186.0326,291.8607,183.5992,296.9674,178.4925,294.534,185.27,301.68" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="172.5" y="267.9951">[betrag &gt; 1000]</text><!--link Genehmigt to *end--><path d="M70.98,352.21 C83.6,370.74 100.47,395.52 110.34,410.02 " fill="none" id="Genehmigt-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="113.17,414.17,111.4059,404.4804,110.3538,410.0386,104.7956,408.9864,113.17,414.17" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Abgelehnt to *end--><path d="M173.44,352.21 C158.7,370.94 138.93,396.05 127.57,410.48 " fill="none" id="Abgelehnt-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="124.33,414.6,133.0349,409.993,127.4185,410.6679,126.7436,405.0515,124.33,414.6" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+state pruefen <<choice>>
+[*] - -> AntragPruefen
+AntragPruefen - -> pruefen
+pruefen - -> Genehmigt : [betrag <= 1000]
+pruefen - -> Abgelehnt : [betrag > 1000]
+Genehmigt - -> [*]
+Abgelehnt - -> [*]
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

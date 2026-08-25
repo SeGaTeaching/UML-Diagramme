@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="920px" preserveAspectRatio="none" style="width:884px;height:920px;" version="1.1" viewBox="0 0 884 920" width="884px" zoomAndPan="magnify"><defs/><g><ellipse cx="298.5" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="216" x="190.5" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="190.5" x2="406.5" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="286.5" y="106.9951">Idle</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="196" x="195.5" y="133.292">entry / Display zurücksetzen</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="289" x="6" y="220"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="295" y1="246.2969" y2="246.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="116" y="237.9951">VerifyCard</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="147" x="11" y="264.292">entry / Karte einlesen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="11" y="280.5889">do / Karte validieren</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="269" x="11" y="296.8857">exit / Karte zurückgeben [falls ungültig]</text><rect fill="#E3F2FD" height="68.8906" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="222" x="253.5" y="383"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="253.5" x2="475.5" y1="409.2969" y2="409.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="58" x="335.5" y="400.9951">VerifyPin</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="202" x="258.5" y="427.292">entry / PIN-Eingabe anfordern</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="258.5" y="443.5889">do / PIN prüfen</text><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="175" x="342" y="530"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="342" x2="517" y1="556.2969" y2="556.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="375.5" y="547.9951">AccountActions</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="155" x="347" y="574.292">entry / Menü anzeigen</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="237" x="357" y="661"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="357" x2="594" y1="687.2969" y2="687.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="419.5" y="678.9951">DispenseMoney</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="143" x="362" y="705.292">entry / Betrag prüfen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="137" x="362" y="721.5889">do / Geld ausgeben</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="217" x="362" y="737.8857">exit / Transaktion protokollieren</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="220" x="469.5" y="824"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="469.5" x2="689.5" y1="850.2969" y2="850.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="537.5" y="841.9951">PrintReceipt</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="187" x="474.5" y="868.292">entry / Drucker initialisieren</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="474.5" y="884.5889">do / Bon drucken</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="200" x="474.5" y="900.8857">exit / Drucker herunterfahren</text><!--link *start to Idle--><path d="M298.5,28.16 C298.5,40.79 298.5,64.18 298.5,83.43 " fill="none" id="*start-Idle" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="298.5,88.74,302.5,79.74,298.5,83.74,294.5,79.74,298.5,88.74" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Idle to VerifyCard--><path d="M190.38,129.37 C137.78,138.08 82.47,151.76 66.5,172 C54.7,186.96 61.39,202.39 75.09,216.13 " fill="none" id="Idle-VerifyCard" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="78.72,219.59,74.9623,210.4862,75.0997,216.1414,69.4445,216.2787,78.72,219.59" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="67.5" y="185.9951">Karte eingesteckt</text><!--link VerifyCard to Idle--><path d="M185.44,219.7 C199,204.22 214.98,186.83 230.5,172 C240.03,162.89 250.88,153.6 261.08,145.29 " fill="none" id="VerifyCard-Idle" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="265.1,142.03,255.5926,144.6009,261.2194,145.183,260.6373,150.8098,265.1,142.03" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="231.5" y="185.9951">[Karte ungültig]</text><!--link VerifyCard to VerifyPin--><path d="M191.54,305.05 C208.41,321.01 228.63,338.8 248.5,353 C262.04,362.68 277.22,371.97 292.02,380.31 " fill="none" id="VerifyCard-VerifyPin" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="296.59,382.87,290.6652,375.0026,292.2192,380.4418,286.78,381.9958,296.59,382.87" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="249.5" y="348.9951">[Karte gültig]</text><!--link VerifyPin to AccountActions--><path d="M380.4,452.01 C390.95,474.26 404.7,503.22 414.96,524.85 " fill="none" id="VerifyPin-AccountActions" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="417.22,529.63,416.9741,519.7842,415.0759,525.1131,409.747,523.2148,417.22,529.63" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="403.5" y="495.9951">[PIN korrekt]</text><!--link VerifyPin to Idle--><path d="M367.41,382.68 C370.28,334.16 370.8,242.85 342.5,172 C338.88,162.94 333.28,154.17 327.28,146.38 " fill="none" id="VerifyPin-Idle" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="323.91,142.15,326.4003,151.6788,327.03,146.0571,332.6517,146.6869,323.91,142.15" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="261" x="368.5" y="267.4951">[PIN falsch] / Fehlermeldung anzeigen</text><!--link AccountActions to DispenseMoney--><path d="M437.62,583.09 C444.03,603.29 453.13,632 460.81,656.21 " fill="none" id="AccountActions-DispenseMoney" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="462.33,660.98,463.4201,651.1917,460.8175,656.2142,455.7949,653.6116,462.33,660.98" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="98" x="453.5" y="626.9951">Geld abheben</text><!--link DispenseMoney to PrintReceipt--><path d="M472.8,746.27 C473.49,762.09 476.45,779.71 484.5,794 C489.9,803.58 497.16,812.27 505.29,820.03 " fill="none" id="DispenseMoney-PrintReceipt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="509.34,823.76,505.4545,814.71,505.6715,820.3627,500.0188,820.5796,509.34,823.76" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="168" x="485.5" y="789.9951">[Transaktion erfolgreich]</text><!--link PrintReceipt to Idle--><path d="M634.31,823.93 C643.46,814.91 652.05,804.8 658.5,794 C679.49,758.83 680.5,745.46 680.5,704.5 C680.5,261.5 680.5,261.5 680.5,261.5 C680.5,203.44 524.32,160.35 411.68,136.82 " fill="none" id="PrintReceipt-Idle" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="406.69,135.78,414.6924,141.5213,411.5862,136.7935,416.314,133.6873,406.69,135.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="191" x="681.5" y="495.9951">Transaktion abgeschlossen</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Idle
+
+state Idle {
+}
+Idle : entry / Display zurücksetzen
+
+state VerifyCard {
+}
+VerifyCard : entry / Karte einlesen
+VerifyCard : do / Karte validieren
+VerifyCard : exit / Karte zurückgeben [falls ungültig]
+
+state VerifyPin {
+}
+VerifyPin : entry / PIN-Eingabe anfordern
+VerifyPin : do / PIN prüfen
+
+state AccountActions {
+}
+AccountActions : entry / Menü anzeigen
+
+state DispenseMoney {
+}
+DispenseMoney : entry / Betrag prüfen
+DispenseMoney : do / Geld ausgeben
+DispenseMoney : exit / Transaktion protokollieren
+
+state PrintReceipt {
+}
+PrintReceipt : entry / Drucker initialisieren
+PrintReceipt : do / Bon drucken
+PrintReceipt : exit / Drucker herunterfahren
+
+Idle - -> VerifyCard : Karte eingesteckt
+VerifyCard - -> VerifyPin : [Karte gültig]
+VerifyCard - -> Idle : [Karte ungültig]
+VerifyPin - -> AccountActions : [PIN korrekt]
+VerifyPin - -> Idle : [PIN falsch] / Fehlermeldung anzeigen
+AccountActions - -> DispenseMoney : Geld abheben
+DispenseMoney - -> PrintReceipt : [Transaktion erfolgreich]
+PrintReceipt - -> Idle : Transaktion abgeschlossen
+
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

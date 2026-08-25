@@ -1,0 +1,10 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+interface Zahlbar {
+  +zahlen(betrag: double): void
+}
+class Rechnung
+class Kunde
+Zahlbar <|.. Rechnung
+Zahlbar <|.. Kunde
+@enduml

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="770px" preserveAspectRatio="none" style="width:1668px;height:770px;" version="1.1" viewBox="0 0 1668 770" width="1668px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="558.3438" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="290.5" y="114.5938"/><rect fill="#ECEFF1" height="528.0469" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="762.5" y="144.8906"/><rect fill="#ECEFF1" height="15" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1075.5" y="185.1875"/><rect fill="#ECEFF1" height="184.4844" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1075.5" y="333.9688"/><rect fill="#ECEFF1" height="14" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1228.5" y="390.8594"/><rect fill="#ECEFF1" height="14" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1398" y="437.1563"/><rect fill="#ECEFF1" height="14" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1563.5" y="483.4531"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="142" x="1009.5" y="152.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="1016.5" y="172.8857">szenario: Szenario</text><rect fill="#FFFFFF" height="62.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="342" x="650" y="215.1875"/><rect fill="#FFFFFF" height="373.8594" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="1643.5" x="13" y="292.0781"/><rect fill="#FFFFFF" height="156.4844" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="647" x="999.5" y="348.9688"/><rect fill="#FFFFFF" height="46.2969" style="stroke: none; stroke-width: 1.0;" width="647" x="999.5" y="412.8594"/><rect fill="#FFFFFF" height="46.2969" style="stroke: none; stroke-width: 1.0;" width="647" x="999.5" y="459.1563"/><rect fill="#FFFFFF" height="78.8906" style="stroke: none; stroke-width: 1.0;" width="1643.5" x="13" y="587.0469"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="61" x2="61" y1="82.2969" y2="682.9375"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="295" x2="295" y1="82.2969" y2="682.9375"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="767" x2="767" y1="82.2969" y2="682.9375"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="1080.5" x2="1080.5" y1="183.5391" y2="682.9375"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="1233.5" x2="1233.5" y1="82.2969" y2="682.9375"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="1402.5" x2="1402.5" y1="82.2969" y2="682.9375"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="1568.5" x2="1568.5" y1="82.2969" y2="682.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="23" y="78.9951">Bewohner</text><ellipse cx="61.5" cy="13" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M61.5,21 L61.5,48 M48.5,29 L74.5,29 M61.5,48 L48.5,63 M61.5,48 L74.5,63 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="23" y="694.9326">Bewohner</text><ellipse cx="61.5" cy="708.2344" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M61.5,716.2344 L61.5,743.2344 M48.5,724.2344 L74.5,724.2344 M61.5,743.2344 L48.5,758.2344 M61.5,743.2344 L74.5,758.2344 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="167" x="212" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="153" x="219" y="70.9951">app: Smart-Home-App</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="167" x="212" y="681.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="153" x="219" y="701.9326">app: Smart-Home-App</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="215" x="660" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="667" y="70.9951">system: Smart-Home-System</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="215" x="660" y="681.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="667" y="701.9326">system: Smart-Home-System</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="142" x="1009.5" y="681.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="1016.5" y="701.9326">szenario: Szenario</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="144" x="1161.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="1168.5" y="70.9951">rollladen: Rollläden</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="144" x="1161.5" y="681.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="1168.5" y="701.9326">rollladen: Rollläden</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="175" x="1315.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="161" x="1322.5" y="70.9951">kaffee: Kaffeemaschine</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="175" x="1315.5" y="681.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="161" x="1322.5" y="701.9326">kaffee: Kaffeemaschine</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="136" x="1500.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="1507.5" y="70.9951">heizung: Heizung</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="136" x="1500.5" y="681.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="1507.5" y="701.9326">heizung: Heizung</text><rect fill="#ECEFF1" height="558.3438" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="290.5" y="114.5938"/><rect fill="#ECEFF1" height="528.0469" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="762.5" y="144.8906"/><rect fill="#ECEFF1" height="15" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1075.5" y="185.1875"/><rect fill="#ECEFF1" height="184.4844" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1075.5" y="333.9688"/><rect fill="#ECEFF1" height="14" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1228.5" y="390.8594"/><rect fill="#ECEFF1" height="14" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1398" y="437.1563"/><rect fill="#ECEFF1" height="14" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="1563.5" y="483.4531"/><polygon fill="#1976D2" points="278.5,110.5938,288.5,114.5938,278.5,118.5938,282.5,114.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="61.5" x2="284.5" y1="114.5938" y2="114.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="210" x="68.5" y="109.292">aktiviereGutenMorgenModus()</text><polygon fill="#1976D2" points="750.5,140.8906,760.5,144.8906,750.5,148.8906,754.5,144.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="300.5" x2="756.5" y1="144.8906" y2="144.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="193" x="307.5" y="139.5889">starteGutenMorgenModus()</text><polygon fill="#1976D2" points="997.5,171.1875,1007.5,175.1875,997.5,179.1875,1001.5,175.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="772.5" x2="1003.5" y1="175.1875" y2="175.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="213" x="779.5" y="169.8857">&lt;&lt;create&gt;&gt;("Guten-Morgen")</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="142" x="1009.5" y="152.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="1016.5" y="172.8857">szenario: Szenario</text><polygon fill="#1976D2" points="783.5,196.1875,773.5,200.1875,783.5,204.1875,779.5,200.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="777.5" x2="1079.5" y1="200.1875" y2="200.1875"/><path d="M656,215.1875 L729,215.1875 L729,223.1875 L719,233.1875 L650,233.1875 L650,221.1875 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="62.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="342" x="650" y="215.1875"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="34" x="665" y="229.1826">loop</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="243" x="744" y="230.1826">[für jedes Gerät in Geräteliste]</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="772.5" x2="814.5" y1="257.0781" y2="257.0781"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="814.5" x2="814.5" y1="257.0781" y2="270.0781"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="773.5" x2="814.5" y1="270.0781" y2="270.0781"/><polygon fill="#1976D2" points="783.5,266.0781,773.5,270.0781,783.5,274.0781,779.5,270.0781" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="191" x="779.5" y="251.7764">pruefeGeraetStatus(geraet)</text><path d="M19,292.0781 L77,292.0781 L77,300.0781 L67,310.0781 L13,310.0781 L13,298.0781 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="373.8594" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="1643.5" x="13" y="292.0781"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="28" y="306.0732">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="151" x="92" y="307.0732">[alle Geräte online]</text><polygon fill="#1976D2" points="1063.5,329.9688,1073.5,333.9688,1063.5,337.9688,1067.5,333.9688" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="772.5" x2="1069.5" y1="333.9688" y2="333.9688"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="779.5" y="328.667">starten()</text><path d="M1005.5,348.9688 L1070.5,348.9688 L1070.5,356.9688 L1060.5,366.9688 L999.5,366.9688 L999.5,354.9688 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="156.4844" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="647" x="999.5" y="348.9688"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="26" x="1014.5" y="362.9639">par</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="220" x="1085.5" y="363.9639">[Parallele Gerätesteuerung]</text><polygon fill="#1976D2" points="1216.5,386.8594,1226.5,390.8594,1216.5,394.8594,1220.5,390.8594" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="1085.5" x2="1222.5" y1="390.8594" y2="390.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="1092.5" y="385.5576">oeffnen()</text><polygon fill="#1976D2" points="1096.5,400.8594,1086.5,404.8594,1096.5,408.8594,1092.5,404.8594" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="1090.5" x2="1232.5" y1="404.8594" y2="404.8594"/><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="999.5" x2="1646.5" y1="413.8594" y2="413.8594"/><polygon fill="#1976D2" points="1386,433.1563,1396,437.1563,1386,441.1563,1390,437.1563" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="1085.5" x2="1392" y1="437.1563" y2="437.1563"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="1092.5" y="431.8545">einschalten()</text><polygon fill="#1976D2" points="1096.5,447.1563,1086.5,451.1563,1096.5,455.1563,1092.5,451.1563" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="1090.5" x2="1402" y1="451.1563" y2="451.1563"/><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="999.5" x2="1646.5" y1="460.1563" y2="460.1563"/><polygon fill="#1976D2" points="1551.5,479.4531,1561.5,483.4531,1551.5,487.4531,1555.5,483.4531" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="1085.5" x2="1557.5" y1="483.4531" y2="483.4531"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="148" x="1092.5" y="478.1514">setzeTemperatur(21)</text><polygon fill="#1976D2" points="1096.5,493.4531,1086.5,497.4531,1096.5,501.4531,1092.5,497.4531" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="1090.5" x2="1567.5" y1="497.4531" y2="497.4531"/><polygon fill="#1976D2" points="783.5,514.4531,773.5,518.4531,783.5,522.4531,779.5,518.4531" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="777.5" x2="1079.5" y1="518.4531" y2="518.4531"/><polygon fill="#1976D2" points="311.5,544.75,301.5,548.75,311.5,552.75,307.5,548.75" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="305.5" x2="761.5" y1="548.75" y2="548.75"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="431" x="317.5" y="543.4482">sendePushBenachrichtigung("Guten-Morgen-Modus aktiviert")</text><polygon fill="#1976D2" points="72.5,575.0469,62.5,579.0469,72.5,583.0469,68.5,579.0469" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="66.5" x2="289.5" y1="579.0469" y2="579.0469"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="170" x="78.5" y="573.7451">zeigeBenachrichtigung()</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="1656.5" y1="588.0469" y2="588.0469"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="174" x="18" y="601.042">[einige Geräte offline]</text><polygon fill="#1976D2" points="311.5,623.6406,301.5,627.6406,311.5,631.6406,307.5,627.6406" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="305.5" x2="761.5" y1="627.6406" y2="627.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="438" x="317.5" y="622.3389">zeigeFehlermeldung("Einige Geräte sind offline", offlineGeraete)</text><polygon fill="#1976D2" points="72.5,653.9375,62.5,657.9375,72.5,661.9375,68.5,657.9375" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="66.5" x2="289.5" y1="657.9375" y2="657.9375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="152" x="78.5" y="652.6357">zeigeFehlermeldung()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+actor Bewohner
+participant "app: Smart-Home-App" as App
+participant "system: Smart-Home-System" as System
+participant "szenario: Szenario" as Szenario
+participant "rollladen: Rollläden" as Rollladen
+participant "kaffee: Kaffeemaschine" as Kaffee
+participant "heizung: Heizung" as Heizung
+
+Bewohner -> App: aktiviereGutenMorgenModus()
+activate App
+
+App -> System: starteGutenMorgenModus()
+activate System
+
+create Szenario
+System -> Szenario: <<create>>("Guten-Morgen")
+activate Szenario
+Szenario - -> System:
+deactivate Szenario
+
+loop für jedes Gerät in Geräteliste
+    System -> System: pruefeGeraetStatus(geraet)
+end
+
+alt alle Geräte online
+    System -> Szenario: starten()
+    activate Szenario
+
+    par Parallele Gerätesteuerung
+        Szenario -> Rollladen: oeffnen()
+        activate Rollladen
+        Rollladen - -> Szenario:
+        deactivate Rollladen
+    else
+        Szenario -> Kaffee: einschalten()
+        activate Kaffee
+        Kaffee - -> Szenario:
+        deactivate Kaffee
+    else
+        Szenario -> Heizung: setzeTemperatur(21)
+        activate Heizung
+        Heizung - -> Szenario:
+        deactivate Heizung
+    end
+
+    Szenario - -> System:
+    deactivate Szenario
+
+    System -> App: sendePushBenachrichtigung("Guten-Morgen-Modus aktiviert")
+    App - -> Bewohner: zeigeBenachrichtigung()
+else einige Geräte offline
+    System -> App: zeigeFehlermeldung("Einige Geräte sind offline", offlineGeraete)
+    App - -> Bewohner: zeigeFehlermeldung()
+end
+
+deactivate System
+deactivate App
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

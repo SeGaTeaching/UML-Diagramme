@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+abstract class Fahrzeug {
+  -geschwindigkeit: double
+  +beschleunigen(): void
+  {abstract} +tanken(): void
+}
+class Auto
+class LKW
+Fahrzeug <|-- Auto
+Fahrzeug <|-- LKW
+@enduml

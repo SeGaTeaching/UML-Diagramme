@@ -7,7 +7,7 @@ und auf die richtige Verschachtelung von Fragmenten.
 
 ---
 
-## Teil A — Zwischenübungen (Vormittag)
+## Teil A — Grundübungen
 
 ### Aufgabe A1 [leicht]: Kaffeemaschine
 
@@ -218,7 +218,7 @@ der Kern von "Fire and Forget". Es gibt bewusst keine Rückgabenachricht vom Ver
 
 ---
 
-## Teil B — Selbstlernphase (Nachmittag)
+## Teil B — Vertiefungsaufgaben
 
 ### Aufgabe B1 [leicht]: Taxi-Bestellung per App
 

@@ -1,0 +1,15 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+state Bestellabwicklung {
+  state Zahlung {
+    [*] --> Offen
+    Offen --> Bezahlt : zahlen
+  }
+  --
+  state Versand {
+    [*] --> Vorbereitung
+    Vorbereitung --> Versendet : abschicken
+  }
+}
+[*] --> Bestellabwicklung
+@enduml

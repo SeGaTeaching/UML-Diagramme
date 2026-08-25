@@ -1,0 +1,8 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Drucker {
+  +drucke(d: Dokument): void
+}
+class Dokument
+Drucker ..> Dokument : <<use>>
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+left to right direction
+actor Kunde
+rectangle "Kasse" {
+  usecase "Bezahlen" as B
+  usecase "Mit Karte zahlen" as K
+  usecase "Mit Bargeld zahlen" as G
+}
+Kunde --> B
+B <|-- K
+B <|-- G
+@enduml

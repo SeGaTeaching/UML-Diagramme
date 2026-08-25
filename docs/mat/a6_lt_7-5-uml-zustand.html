@@ -1,0 +1,860 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zustandsdiagramme: Die Lebenszyklus-Sicht · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 6: Zustandsdiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a><a href="../Abschnitt_4.html">Kapitel 4: Aktivitätsdiagramme</a><a href="../Abschnitt_5.html">Kapitel 5: Sequenzdiagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 6</div><a href="../Abschnitt_6.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a6_lt_7-5-uml-zustand.html" class="hier">Zustandsdiagramme: Die Lebenszyklus-Sicht</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a6_ue_aufgaben-7-5-zustand.html">Aufgaben — Zustandsdiagramme</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_6.html">Kapitel 6</a><span>›</span>Zustandsdiagramme: Die Lebenszyklus-Sicht</div><h1>Zustandsdiagramme: Die Lebenszyklus-Sicht</h1><h2 id="lernziele">Lernziele</h2>
+<ul>
+<li>Verstehen, warum Zustandsdiagramme für die Modellierung komplexer Objektlebenszyklen unverzichtbar sind</li>
+<li>Die Notationselemente eines Zustandsdiagramms kennen und korrekt anwenden können</li>
+<li>Zustände, Transitionen, Ereignisse und Wächterbedingungen unterscheiden und einsetzen können</li>
+<li>Aktionen bei Zustandsübergängen und innerhalb von Zuständen modellieren können</li>
+<li>Den Unterschied zwischen Transitionsaktionen und Zustandsaktionen verstehen</li>
+<li>Zusammengesetzte Zustände, History-Zustände, Pseudozustände (Auswahl) und parallele Regionen kennen und lesen können</li>
+<li>Den Unterschied zwischen Zustandsdiagrammen und anderen Verhaltensdiagrammen verstehen</li>
+<li>Zustandsdiagramme in Code übersetzen können</li>
+</ul>
+<hr>
+<h2 id="1-warum-brauchen-wir-zustandsdiagramme">1. Warum brauchen wir Zustandsdiagramme?</h2>
+<h3 id="11-das-problem-komplexe-objektlebenszyklen">1.1 Das Problem: Komplexe Objektlebenszyklen</h3>
+<p>Stellen Sie sich vor, Sie sollen einem neuen Teammitglied erklären, wie sich ein Benutzerkonto in Ihrer Anwendung verhält. Sie beginnen: "Nach der Registrierung ist das Konto nicht verifiziert, dann wird es aktiv, aber es kann auch gesperrt werden, oder deaktiviert, und dann..." Aber schon nach wenigen Sätzen wird es unübersichtlich. In welchen Zuständen kann sich das Konto befinden? Welche Übergänge sind möglich? Unter welchen Bedingungen?</p>
+<p>Textbeschreibungen von Objektzuständen sind:
+- Mehrdeutig und schwer nachzuvollziehen
+- Anfällig für Missverständnisse über mögliche Zustandsübergänge
+- Schwierig zu warten und zu aktualisieren
+- Ungeeignet für komplexe Lebenszyklen mit vielen Zuständen</p>
+<p><strong>Das Zustandsdiagramm löst dieses Problem.</strong> Es visualisiert den Lebenszyklus eines Objekts als eine Abfolge von Zuständen und zeigt, durch welche Ereignisse das Objekt von einem Zustand in den nächsten wechselt.</p>
+<h3 id="12-die-zentrale-frage-in-welchen-zustanden-kann-sich-ein-objekt-befinden">1.2 Die zentrale Frage: In welchen Zuständen kann sich ein Objekt befinden?</h3>
+<p>Während Sequenzdiagramme die Interaktion zwischen mehreren Objekten zeigen, zoomen Zustandsdiagramme tief in ein einzelnes, komplexes Objekt hinein und modellieren seinen Lebenszyklus.</p>
+<p><strong>Sequenzdiagramm:</strong>
+- Zeigt Interaktion zwischen mehreren Objekten
+- Fokus: Nachrichtenfluss
+- "Wer spricht wann mit wem?"</p>
+<p><strong>Zustandsdiagramm:</strong>
+- Zeigt Lebenszyklus eines einzelnen Objekts
+- Fokus: Zustandsübergänge
+- "In welchen Zuständen kann sich ein Objekt befinden?"</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Das Zustandsdiagramm ist ein Verhaltensdiagramm, das den Lebenszyklus eines einzelnen Objekts modelliert. Es zeigt, in welchen Zuständen sich das Objekt befinden kann und durch welche Ereignisse es von einem Zustand in den nächsten wechselt.</p>
+</blockquote>
+<h3 id="13-wann-verwende-ich-zustandsdiagramme">1.3 Wann verwende ich Zustandsdiagramme?</h3>
+<p>Zustandsdiagramme sind nicht für jedes Objekt sinnvoll. Sie eignen sich besonders für Objekte mit:</p>
+<p><strong>Komplexen Lebenszyklen:</strong>
+- Objekte, die mehrere klar unterscheidbare Zustände durchlaufen
+- Beispiel: Bestellungen (Neu → Bezahlt → Versendet → Zugestellt)</p>
+<p><strong>Zustandsabhängigem Verhalten:</strong>
+- Objekte, die sich je nach Zustand unterschiedlich verhalten
+- Beispiel: Ein Benutzerkonto kann nur im Zustand "Aktiv" einloggen</p>
+<p><strong>Ereignisgesteuerten Übergängen:</strong>
+- Objekte, deren Zustand durch externe Ereignisse geändert wird
+- Beispiel: Ein Ticket wird durch "schließen()" geschlossen</p>
+<p><strong>Wann NICHT verwenden:</strong>
+- Einfache Objekte mit nur einem oder zwei Zuständen
+- Objekte ohne klare Zustandsübergänge
+- Objekte, deren Verhalten nicht zustandsabhängig ist</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+In der IHK-Abschlussprüfung sind Zustandsdiagramme relevant, aber seltener als Sequenz- oder Klassendiagramme. Sie werden oft für Geschäftsobjekte wie Bestellungen, Tickets oder Benutzerkonten verwendet.</p>
+</blockquote>
+<h3 id="14-die-rolle-im-entwicklungsprozess">1.4 Die Rolle im Entwicklungsprozess</h3>
+<p>Zustandsdiagramme entstehen typischerweise nach dem Klassendiagramm und parallel zu anderen Verhaltensdiagrammen:</p>
+<pre><code>Use-Case-Diagramm
+(Was soll das System tun?)
+        ↓
+Aktivitätsdiagramm
+(Wie läuft ein Use Case ab?)
+        ↓
+Klassendiagramm
+(Welche Klassen setzen das um?)
+        ↓
+Sequenzdiagramm
+(Wie kommunizieren die Objekte?)
+        ↓
+Zustandsdiagramm ← Wir sind hier
+(Welche Zustände durchläuft ein Objekt?)
+        ↓
+Code
+</code></pre>
+<hr>
+<h2 id="2-die-notationselemente-die-bausteine-eines-zustandsdiagramms">2. Die Notationselemente: Die Bausteine eines Zustandsdiagramms</h2>
+<h3 id="21-ubersicht-die-legende">2.1 Übersicht: Die Legende</h3>
+<p>Bevor wir komplexe Diagramme betrachten, schauen wir uns die einzelnen Elemente und ihre Bedeutung an. Diese Legende ist Ihr Werkzeugkasten für die Zustandsmodellierung:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Beschreibung</th>
+<th>Verwendung</th>
+<th>Darstellung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zustand</strong></td>
+<td>Abgerundetes Rechteck</td>
+<td>Repräsentiert eine stabile Phase im Leben eines Objekts</td>
+<td><img src="../bilder/zus-1.svg" width="140"></td>
+</tr>
+<tr>
+<td><strong>Startzustand</strong></td>
+<td>Gefüllter schwarzer Kreis (●)</td>
+<td>Markiert den Beginn des Lebenszyklus</td>
+<td><img src="../bilder/zus-2.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Endzustand</strong></td>
+<td>Gefüllter schwarzer Kreis mit Ring (◉)</td>
+<td>Markiert das Ende des Lebenszyklus</td>
+<td><img src="../bilder/zus-2.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Transition</strong></td>
+<td>Pfeil von einem Zustand zum anderen</td>
+<td>Zeigt den Übergang zwischen Zuständen</td>
+<td><img src="../bilder/zus-3.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Ereignis</strong></td>
+<td>Text auf der Transition</td>
+<td>Löst den Zustandsübergang aus (z.B. Methodenaufruf)</td>
+<td><img src="../bilder/zus-4.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Wächterbedingung</strong></td>
+<td>Text in eckigen Klammern [bedingung]</td>
+<td>Zusätzliche Bedingung, die erfüllt sein muss</td>
+<td><img src="../bilder/zus-5.svg" width="140"></td>
+</tr>
+<tr>
+<td><strong>Transitionsaktion</strong></td>
+<td>Text nach einem Schrägstrich / aktion</td>
+<td>Wird beim Zustandsübergang ausgeführt</td>
+<td><img src="../bilder/zus-6.svg" width="140"></td>
+</tr>
+<tr>
+<td><strong>Zustandsaktion</strong></td>
+<td>Text im Zustand: entry / do / exit</td>
+<td>Wird beim Betreten, während oder beim Verlassen ausgeführt</td>
+<td><img src="../bilder/zus-7.svg" width="140"></td>
+</tr>
+<tr>
+<td><strong>Zusammengesetzter Zustand</strong></td>
+<td>Zustand mit Unterzuständen</td>
+<td>Bündelt Unterzustände; äußere Transition gilt für alle</td>
+<td><img src="../bilder/zus-15.svg" width="140"></td>
+</tr>
+<tr>
+<td><strong>History-Zustand</strong></td>
+<td>Kreis mit H bzw. H*</td>
+<td>Merkt den zuletzt aktiven Unterzustand</td>
+<td><img src="../bilder/zus-16.svg" width="140"></td>
+</tr>
+<tr>
+<td><strong>Auswahl (Choice)</strong></td>
+<td>Raute</td>
+<td>Verzweigt anhand von Wächterbedingungen</td>
+<td><img src="../bilder/zus-17.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Parallele Regionen</strong></td>
+<td>Gestrichelte Trennlinie im Zustand</td>
+<td>Gleichzeitige Zustände (je Region einer)</td>
+<td><img src="../bilder/zus-18.svg" width="140"></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Die Notation ist sehr präzise. Verwechseln Sie nicht den Startzustand (●) mit dem Endzustand (◉). Der Endzustand hat einen zusätzlichen Ring.</p>
+</blockquote>
+<h3 id="22-zustande-die-stabilen-phasen">2.2 Zustände: Die stabilen Phasen</h3>
+<p>Ein <strong>Zustand</strong> ist eine stabile Phase im Leben eines Objekts, in der es auf ein Ereignis wartet. Während sich das Objekt in einem Zustand befindet, ändert sich sein Verhalten nicht.</p>
+<p><strong>Darstellung:</strong>
+- Abgerundetes Rechteck
+- Name des Zustands im Inneren
+- Beispiele: "Aktiv", "Gesperrt", "Im Regal", "Versendet"</p>
+<div style="text-align: center;"><img src="../bilder/zus-1.svg" width="600"></div>
+
+<p><strong>Eigenschaften:</strong>
+- Ein Objekt befindet sich zu jedem Zeitpunkt in genau einem Zustand
+- Ein Zustand ist stabil: Das Objekt wartet auf ein Ereignis
+- Zustände beschreiben das "Was", nicht das "Wie"</p>
+<p><strong>Beispiele:</strong>
+- Ein Benutzerkonto kann "Nicht verifiziert", "Aktiv", "Deaktiviert" oder "Gesperrt" sein
+- Eine Bestellung kann "Neu", "Bezahlt", "Versendet" oder "Zugestellt" sein
+- Ein Ticket kann "Offen", "In Bearbeitung", "Gelöst" oder "Geschlossen" sein</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+Zustände sind keine Aktionen! "Verarbeiten" ist kein Zustand, sondern eine Aktion. Ein Zustand ist eine stabile Phase, z.B. "In Bearbeitung".</p>
+</blockquote>
+<h3 id="23-start-und-endzustande">2.3 Start- und Endzustände</h3>
+<p><strong>Startzustand (●):</strong>
+- Markiert den Beginn des Lebenszyklus
+- Jedes Zustandsdiagramm hat genau einen Startzustand
+- Von hier aus beginnt das Objekt seine Reise
+- Beispiel: Ein Benutzerkonto beginnt im Zustand "Nicht verifiziert"</p>
+<p><strong>Endzustand (◉):</strong>
+- Markiert das Ende des Lebenszyklus
+- Ein Zustandsdiagramm kann mehrere Endzustände haben (oder keinen)
+- Wenn das Objekt diesen Zustand erreicht, endet sein Lebenszyklus
+- Beispiel: Ein Ticket endet im Zustand "Geschlossen"</p>
+<div style="text-align: center;"><img src="../bilder/zus-2.svg" width="400"></div>
+
+<blockquote>
+<p><strong>Hinweis:</strong>
+Nicht jedes Objekt hat einen Endzustand. Manche Objekte existieren für immer (z.B. ein Benutzerkonto, das nie gelöscht wird).</p>
+</blockquote>
+<h3 id="24-transitionen-die-ubergange-zwischen-zustanden">2.4 Transitionen: Die Übergänge zwischen Zuständen</h3>
+<p>Eine <strong>Transition</strong> (Übergang) ist der Wechsel von einem Zustand in den nächsten. Sie wird durch einen Pfeil dargestellt.</p>
+<p><strong>Darstellung:</strong>
+- Pfeil von einem Zustand zum anderen
+- Beschriftung: <code>ereignis [bedingung] / aktion</code>
+- Alle drei Teile sind optional, aber mindestens eines sollte vorhanden sein</p>
+<div style="text-align: center;"><img src="../bilder/zus-3.svg" width="200"></div>
+
+<p><strong>Eigenschaften:</strong>
+- Eine Transition ist instant (dauert keine Zeit)
+  - Sie wird durch ein Ereignis ausgelöst
+  - Sie kann eine Bedingung haben (Wächterbedingung)
+  - Sie kann eine Aktion ausführen</p>
+<p><strong>Beispiele:</strong>
+- <code>registrieren()</code> → Übergang von "Nicht verifiziert" zu "Aktiv"
+- <code>sperren() [Anzahl Fehlversuche &gt;= 3]</code> → Übergang von "Aktiv" zu "Gesperrt"
+- <code>bezahlen() / Rechnung erstellen</code> → Übergang von "Neu" zu "Bezahlt" mit Aktion</p>
+<h3 id="25-ereignisse-die-ausloser-fur-zustandsubergange">2.5 Ereignisse: Die Auslöser für Zustandsübergänge</h3>
+<p>Ein <strong>Ereignis</strong> (Event, Trigger) ist der Auslöser für einen Zustandsübergang. Es ist oft der Name einer Methode, die aufgerufen wird.</p>
+<p><strong>Darstellung:</strong>
+- Text auf der Transition
+- Oft ein Methodenname mit Klammern: <code>ereignis()</code>
+- Beispiele: <code>registrieren()</code>, <code>sperren()</code>, <code>bezahlen()</code></p>
+<div style="text-align: center;"><img src="../bilder/zus-4.svg" width="200"></div>
+
+<p><strong>Eigenschaften:</strong>
+- Ein Ereignis ist der "Trigger", der den Übergang auslöst
+- Ohne Ereignis bleibt das Objekt im aktuellen Zustand
+- Ereignisse können Parameter haben: <code>login(username, password)</code></p>
+<p><strong>Beispiele:</strong>
+- <code>registrieren()</code> → Benutzer registriert sich
+- <code>verifizieren()</code> → Benutzer klickt auf Verifizierungslink
+- <code>sperren()</code> → Administrator sperrt das Konto
+- <code>bezahlen()</code> → Kunde bezahlt die Bestellung</p>
+<blockquote>
+<p><strong>Tipp:</strong>
+Ereignisse sind oft Methodennamen aus dem Klassendiagramm. Wenn Sie ein Klassendiagramm haben, können Sie die Methoden als Ereignisse verwenden.</p>
+</blockquote>
+<h3 id="26-wachterbedingungen-die-tursteher">2.6 Wächterbedingungen: Die Türsteher</h3>
+<p>Eine <strong>Wächterbedingung</strong> (Guard Condition) ist eine zusätzliche Bedingung, die erfüllt sein muss, damit ein Zustandsübergang nach einem Ereignis stattfinden kann.</p>
+<p><strong>Darstellung:</strong>
+- Text in eckigen Klammern: <code>[bedingung]</code>
+- Steht nach dem Ereignis: <code>ereignis [bedingung]</code>
+- Beispiele: <code>[Anzahl Fehlversuche &gt;= 3]</code>, <code>[Guthaben &gt; 0]</code>, <code>[Alter &gt;= 18]</code></p>
+<div style="text-align: center;"><img src="../bilder/zus-5.svg" width="600"></div>
+
+<p><strong>Eigenschaften:</strong>
+- Die Wächterbedingung ist der "Türsteher", der prüft, ob der Übergang erlaubt ist
+- Das Ereignis ist der Auslöser, die Wächterbedingung ist die Prüfung
+- Wenn die Bedingung nicht erfüllt ist, bleibt das Objekt im aktuellen Zustand</p>
+<p><strong>Beispiele:</strong>
+- <code>login() [Passwort korrekt]</code> → Login nur bei korrektem Passwort
+- <code>abheben(betrag) [Guthaben &gt;= betrag]</code> → Abheben nur bei ausreichendem Guthaben
+- <code>sperren() [Anzahl Fehlversuche &gt;= 3]</code> → Sperren nur nach 3 Fehlversuchen</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+Verwechseln Sie nicht Ereignis und Wächterbedingung! Das Ereignis ist der Auslöser, die Wächterbedingung ist die Prüfung. Beide müssen erfüllt sein, damit der Übergang stattfindet.</p>
+</blockquote>
+<h3 id="27-transitionsaktionen-was-passiert-beim-ubergang">2.7 Transitionsaktionen: Was passiert beim Übergang?</h3>
+<p>Eine <strong>Transitionsaktion</strong> (Transition Action) ist eine kurze, ununterbrechbare Aktivität, die während eines Zustandsübergangs ausgeführt wird.</p>
+<p><strong>Darstellung:</strong>
+- Text nach einem Schrägstrich: <code>/ aktion</code>
+- Steht nach dem Ereignis und der Wächterbedingung: <code>ereignis [bedingung] / aktion</code>
+- Beispiele: <code>/ Rechnung erstellen</code>, <code>/ E-Mail senden</code>, <code>/ Zähler erhöhen</code></p>
+<div style="text-align: center;"><img src="../bilder/zus-6.svg" width="600"></div>
+
+<p><strong>Eigenschaften:</strong>
+- Die Aktion wird ausgeführt, nachdem das Ereignis eingetreten und die Wächterbedingung erfüllt ist
+- Aktionen sind kurz und ununterbrechbar
+- Aktionen sind optional</p>
+<p><strong>Beispiele:</strong>
+- <code>bezahlen() / Rechnung erstellen</code> → Beim Bezahlen wird eine Rechnung erstellt
+- <code>registrieren() / Bestätigungs-E-Mail senden</code> → Bei der Registrierung wird eine E-Mail gesendet
+- <code>login() [Passwort falsch] / Fehlversuch-Zähler erhöhen</code> → Bei falschem Passwort wird der Zähler erhöht</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Transitionsaktionen sind Nebeneffekte des Zustandsübergangs. Sie ändern nicht den Zustand selbst, sondern führen zusätzliche Operationen aus.</p>
+</blockquote>
+<h3 id="28-zustandsaktionen-was-passiert-im-zustand">2.8 Zustandsaktionen: Was passiert im Zustand?</h3>
+<p>Neben Transitionsaktionen (die beim Übergang ausgeführt werden) können Zustände auch <strong>Zustandsaktionen</strong> (State Actions) haben. Diese werden nicht beim Übergang, sondern beim Betreten, während oder beim Verlassen eines Zustands ausgeführt.</p>
+<p><strong>Die drei Arten von Zustandsaktionen:</strong></p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Syntax</th>
+<th>Wann wird sie ausgeführt?</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>entry</strong></td>
+<td><code>entry / aktion</code></td>
+<td>Beim <strong>Betreten</strong> des Zustands</td>
+<td><code>entry / Verbindung öffnen</code></td>
+</tr>
+<tr>
+<td><strong>do</strong></td>
+<td><code>do / aktion</code></td>
+<td><strong>Während</strong> sich das Objekt im Zustand befindet</td>
+<td><code>do / Daten verarbeiten</code></td>
+</tr>
+<tr>
+<td><strong>exit</strong></td>
+<td><code>exit / aktion</code></td>
+<td>Beim <strong>Verlassen</strong> des Zustands</td>
+<td><code>exit / Verbindung schließen</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="darstellung-im-zustandsdiagramm">Darstellung im Zustandsdiagramm:</h3>
+<div style="text-align: center;"><img src="../bilder/zus-7.svg" width="600"></div>
+
+<p><strong>Eigenschaften:</strong></p>
+<p><strong>entry-Aktion:</strong>
+- Wird <strong>einmalig</strong> beim Betreten des Zustands ausgeführt
+- Typische Verwendung: Initialisierung, Ressourcen öffnen, Benachrichtigungen senden
+- Beispiele: Verbindung öffnen, Timer starten, E-Mail senden</p>
+<p><strong>do-Aktion:</strong>
+- Wird <strong>kontinuierlich</strong> ausgeführt, solange sich das Objekt im Zustand befindet
+- Kann unterbrochen werden, wenn ein Ereignis eintritt
+- Typische Verwendung: Langandauernde Aktivitäten, Überwachung, Verarbeitung
+- Beispiele: Daten verarbeiten, Animation abspielen, Sensor überwachen</p>
+<p><strong>exit-Aktion:</strong>
+- Wird <strong>einmalig</strong> beim Verlassen des Zustands ausgeführt
+- Typische Verwendung: Aufräumen, Ressourcen freigeben, Abschlussaktionen
+- Beispiele: Verbindung schließen, Timer stoppen, Protokoll schreiben</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+entry = "Beim Ankommen", do = "Während des Aufenthalts", exit = "Beim Verlassen"</p>
+</blockquote>
+<h3 id="unterschied-transitionsaktion-vs-zustandsaktion"><strong>Unterschied: Transitionsaktion vs. Zustandsaktion</strong></h3>
+<div style="text-align: center;"><img src="../bilder/zus-8.svg" width="300"></div>
+
+<p><strong>Ausführungsreihenfolge beim Zustandsübergang:</strong>
+1. <strong>exit-Aktion</strong> des alten Zustands wird ausgeführt
+2. <strong>Transitionsaktion</strong> wird ausgeführt
+3. <strong>entry-Aktion</strong> des neuen Zustands wird ausgeführt</p>
+<p><strong>Beispiel: ATM (Geldautomat)</strong></p>
+<div style="text-align: center;"><img src="../bilder/zus-9.svg" width="600"></div>
+
+<p><strong>Was zeigt dieses Diagramm?</strong></p>
+<p><strong>Zustand "VerifyCard":</strong>
+- <code>entry / Karte einlesen</code> → Beim Betreten: Karte wird eingelesen
+- <code>do / Karte validieren</code> → Während: Karte wird kontinuierlich validiert
+- <code>exit / Karte zurückgeben [falls ungültig]</code> → Beim Verlassen: Karte wird zurückgegeben (falls ungültig)</p>
+<p><strong>Zustand "DispenseMoney":</strong>
+- <code>entry / Betrag prüfen</code> → Beim Betreten: Betrag wird geprüft
+- <code>do / Geld ausgeben</code> → Während: Geld wird ausgegeben
+- <code>exit / Transaktion protokollieren</code> → Beim Verlassen: Transaktion wird protokolliert</p>
+<p><strong>Zustand "PrintReceipt":</strong>
+- <code>entry / Drucker initialisieren</code> → Beim Betreten: Drucker wird initialisiert
+- <code>do / Bon drucken</code> → Während: Bon wird gedruckt
+- <code>exit / Drucker herunterfahren</code> → Beim Verlassen: Drucker wird heruntergefahren</p>
+<blockquote>
+<p><strong>Tipp:</strong>
+Verwenden Sie entry-Aktionen für Initialisierungen, do-Aktionen für kontinuierliche Aktivitäten und exit-Aktionen für Aufräumarbeiten.</p>
+</blockquote>
+<p><strong>Wann verwende ich Zustandsaktionen statt Transitionsaktionen?</strong></p>
+<p><strong>Zustandsaktionen verwenden, wenn:</strong>
+- Die Aktion beim Betreten <strong>jedes Mal</strong> ausgeführt werden soll, egal von welchem Zustand aus
+- Die Aktion kontinuierlich während des Zustands ausgeführt werden soll
+- Die Aktion beim Verlassen <strong>jedes Mal</strong> ausgeführt werden soll, egal zu welchem Zustand</p>
+<p><strong>Transitionsaktionen verwenden, wenn:</strong>
+- Die Aktion nur bei einem <strong>bestimmten Übergang</strong> ausgeführt werden soll
+- Die Aktion vom Kontext des Übergangs abhängt</p>
+<p><strong>Beispiel:</strong></p>
+<div style="text-align: center;"><img src="../bilder/zus-10.svg" width="250"></div>
+
+<p>In diesem Beispiel wird die Willkommens-E-Mail <strong>immer</strong> gesendet, egal ob der Benutzer von "Nicht verifiziert" oder "Deaktiviert" kommt. Das ist sinnvoller als die Aktion auf jede Transition zu schreiben.</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+Verwechseln Sie nicht do-Aktionen mit Zuständen! "Daten verarbeiten" ist keine do-Aktion, wenn es der Hauptzweck des Zustands ist. do-Aktionen sind für kontinuierliche Hintergrundaktivitäten gedacht.</p>
+</blockquote>
+<hr>
+<h3 id="29-zusammengesetzte-zustande-verschachtelte-zustande">2.9 Zusammengesetzte Zustände (verschachtelte Zustände)</h3>
+<p>Bei komplexen Objekten werden Zustände schnell unübersichtlich. Ein <strong>zusammengesetzter Zustand</strong> (composite state) fasst mehrere <strong>Unterzustände</strong> (Subzustände) in einem übergeordneten Zustand zusammen — wie ein Ordner, der weitere Zustände enthält.</p>
+<p><img alt="Zusammengesetzter Zustand: Media-Player mit Unterzuständen" src="../bilder/zus-15.svg"></p>
+<p><strong>Bedeutung:</strong> Der Zustand <code>Angeschaltet</code> enthält die Unterzustände <code>Spielt</code> und <code>Pausiert</code>. Solange das Gerät angeschaltet ist, befindet es sich in <strong>einem</strong> dieser Unterzustände. Die Transition <code>ausschalten</code> gilt für den <strong>gesamten</strong> zusammengesetzten Zustand — egal, ob gerade gespielt oder pausiert wird.</p>
+<p><strong>Der Vorteil:</strong> Man muss die Transition „ausschalten" nur <strong>einmal</strong> am äußeren Zustand zeichnen, statt von jedem Unterzustand einzeln. Das hält das Diagramm lesbar.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein zusammengesetzter Zustand bündelt Unterzustände. Eine Transition vom äußeren Rand gilt für alle Unterzustände gemeinsam.</p>
+</blockquote>
+<h3 id="210-history-zustande-h-und-h">2.10 History-Zustände (H und H*)</h3>
+<p>Was passiert, wenn man einen zusammengesetzten Zustand verlässt und später zurückkehrt? Standardmäßig beginnt man wieder beim Startzustand. Der <strong>History-Zustand</strong> merkt sich stattdessen den <strong>zuletzt aktiven Unterzustand</strong>.</p>
+<ul>
+<li><strong>Flacher History-Zustand <code>[H]</code></strong> — stellt den zuletzt aktiven Unterzustand auf <strong>derselben</strong> Ebene wieder her.</li>
+<li><strong>Tiefer History-Zustand <code>[H*]</code></strong> — stellt den zuletzt aktiven Unterzustand über <strong>alle</strong> Verschachtelungsebenen hinweg wieder her.</li>
+</ul>
+<p><img alt="History-Zustand: Waschmaschine setzt nach Pause fort" src="../bilder/zus-16.svg"></p>
+<p><strong>Bedeutung:</strong> Öffnet man während des Waschgangs den Deckel, geht die Maschine in <code>Pause</code>. Schließt man ihn wieder, kehrt sie dank <code>[H]</code> <strong>an genau die Stelle</strong> zurück, an der sie unterbrochen wurde (z. B. <code>Spülen</code>) — nicht zurück an den Anfang.</p>
+<blockquote>
+<p><strong>Prüfungstipp (IHK):</strong>
+History-Zustände tauchen in Prüfungen bei Geräten mit „Fortsetzen nach Unterbrechung" auf (Waschmaschine, Media-Player, Aufzug). Merke: <strong><code>H</code> = zuletzt aktiver Unterzustand wird wiederhergestellt.</strong></p>
+</blockquote>
+<h3 id="211-pseudozustande-auswahl-choice-und-kreuzung-junction">2.11 Pseudozustände: Auswahl (choice) und Kreuzung (junction)</h3>
+<p><strong>Pseudozustände</strong> sind Hilfselemente, die keine echten Zustände sind, sondern den Ablauf steuern. Der wichtigste ist die <strong>Auswahl (choice)</strong> — eine Raute, die einen Übergang abhängig von einer Bedingung verzweigt.</p>
+<p><img alt="Auswahl-Pseudozustand mit Wächterbedingungen" src="../bilder/zus-17.svg"></p>
+<p><strong>Bedeutung:</strong> Nach dem Prüfen entscheidet die Raute anhand der <strong>Wächterbedingungen</strong>, welcher Zustand als Nächstes erreicht wird: bei <code>[betrag &lt;= 1000]</code> nach <code>Genehmigt</code>, sonst nach <code>Abgelehnt</code>. Die Auswahl entspricht dem Entscheidungsknoten (Raute) im Aktivitätsdiagramm.</p>
+<ul>
+<li><strong>Auswahl (choice)</strong> — die Bedingungen werden <strong>erst beim Erreichen</strong> der Raute ausgewertet (dynamisch).</li>
+<li><strong>Kreuzung (junction)</strong> — fasst mehrere Transitionen zusammen oder teilt sie auf; die Bedingungen sind <strong>statisch</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Weitere Start-/Endmarkierungen (<code>[*]</code>) und die gleich folgenden Fork/Join-Balken sind ebenfalls Pseudozustände — echte Zustände sind nur die abgerundeten Rechtecke.</p>
+</blockquote>
+<h3 id="212-parallele-regionen-nebenlaufige-zustande">2.12 Parallele Regionen (nebenläufige Zustände)</h3>
+<p>Manchmal befindet sich ein Objekt <strong>gleichzeitig</strong> in mehreren unabhängigen Zuständen. Ein zusammengesetzter Zustand kann dafür in <strong>parallele Regionen</strong> (orthogonale Regionen) geteilt werden, getrennt durch eine <strong>gestrichelte Linie</strong>.</p>
+<p><img alt="Parallele Regionen: Zahlung und Versand gleichzeitig" src="../bilder/zus-18.svg"></p>
+<p><strong>Bedeutung:</strong> Eine <code>Bestellabwicklung</code> läuft in zwei Regionen <strong>gleichzeitig</strong>: Die Zahlung durchläuft <code>Offen → Bezahlt</code>, <strong>unabhängig davon</strong> durchläuft der Versand <code>Vorbereitung → Versendet</code>. Das Objekt ist zu jedem Zeitpunkt in <strong>je einem</strong> Zustand <strong>pro Region</strong>.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Gestrichelte Trennlinie im Zustand = parallele Regionen = das Objekt ist gleichzeitig in mehreren Zuständen (einer je Region). Betreten/Verlassen wird oft mit <strong>Fork</strong> (Gabelung) und <strong>Join</strong> (Synchronisation) gezeichnet — denselben Balken wie im Aktivitätsdiagramm.</p>
+</blockquote>
+<h2 id="3-vollstandiges-beispiel-lebenszyklus-eines-bibliotheksbuchs">3. Vollständiges Beispiel: Lebenszyklus eines Bibliotheksbuchs</h2>
+<h3 id="31-das-szenario">3.1 Das Szenario</h3>
+<p>Wir modellieren den Lebenszyklus eines einzelnen Buch-Exemplars in einer Bibliotheks-Software. Jedes Buch durchläuft verschiedene Zustände:</p>
+<p><strong>Zustände:</strong>
+- <strong>Im Regal</strong>: Das Buch ist verfügbar und kann ausgeliehen werden
+- <strong>Reserviert</strong>: Das Buch ist für ein Mitglied reserviert
+- <strong>Ausgeliehen</strong>: Das Buch ist an ein Mitglied ausgeliehen
+- <strong>In Reparatur</strong>: Das Buch ist beschädigt und wird repariert
+- <strong>Verloren</strong>: Das Buch ist verloren (Endzustand)</p>
+<p><strong>Ereignisse:</strong>
+- <code>reservieren()</code>: Ein Mitglied reserviert das Buch
+- <code>ausleihen()</code>: Ein Mitglied leiht das Buch aus
+- <code>zurueckgeben()</code>: Das Buch wird zurückgegeben
+- <code>schadenMelden()</code>: Ein Schaden wird gemeldet
+- <code>reparieren()</code>: Das Buch wird repariert
+- <code>verlustMelden()</code>: Das Buch wird als verloren gemeldet</p>
+<h3 id="32-das-zustandsdiagramm">3.2 Das Zustandsdiagramm</h3>
+<div style="text-align: center;"><img src="../bilder/zus-11.svg" width="600"></div>
+
+<h3 id="33-was-zeigt-dieses-diagramm">3.3 Was zeigt dieses Diagramm?</h3>
+<p><strong>Startzustand:</strong>
+- Jedes Buch beginnt im Zustand "Im Regal"
+- Der gefüllte schwarze Kreis (●) markiert den Start</p>
+<p><strong>Hauptzustände:</strong>
+- <strong>Im Regal</strong>: Das Buch ist verfügbar
+- <strong>Reserviert</strong>: Das Buch ist für ein Mitglied reserviert
+- <strong>Ausgeliehen</strong>: Das Buch ist an ein Mitglied ausgeliehen
+- <strong>In Reparatur</strong>: Das Buch wird repariert</p>
+<p><strong>Transitionen:</strong>
+- Von "Im Regal" zu "Reserviert": <code>reservieren()</code>
+- Von "Im Regal" zu "Ausgeliehen": <code>ausleihen()</code> mit Aktion "Ausleihfrist in Kalender eintragen"
+- Von "Reserviert" zu "Ausgeliehen": <code>ausleihen()</code> mit Aktion
+- Von "Ausgeliehen" zu "Im Regal": <code>zurueckgeben()</code> mit Wächterbedingung <code>[kein Schaden]</code>
+- Von "Ausgeliehen" zu "In Reparatur": <code>zurueckgeben()</code> mit Wächterbedingung <code>[Schaden festgestellt]</code></p>
+<p><strong>Wächterbedingungen:</strong>
+- <code>[kein Schaden]</code>: Rückgabe nur ins Regal, wenn kein Schaden vorliegt
+- <code>[Schaden festgestellt]</code>: Rückgabe in Reparatur, wenn Schaden vorliegt</p>
+<p><strong>Aktionen:</strong>
+- <code>/ Ausleihfrist in Kalender eintragen</code>: Wird bei jeder Ausleihe ausgeführt</p>
+<p><strong>Endzustand:</strong>
+- "Verloren": Das Buch ist verloren und endet hier
+- Der gefüllte schwarze Kreis mit Ring (◉) markiert das Ende</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Beachten Sie, dass von "Ausgeliehen" zwei Transitionen mit demselben Ereignis <code>zurueckgeben()</code> ausgehen. Die Wächterbedingungen entscheiden, welcher Übergang stattfindet.</p>
+</blockquote>
+<h3 id="34-lebenszyklus-szenarien">3.4 Lebenszyklus-Szenarien</h3>
+<p><strong>Szenario 1: Normaler Ausleihvorgang</strong>
+1. Buch ist "Im Regal"
+2. Mitglied leiht Buch aus → "Ausgeliehen" (Aktion: Ausleihfrist eintragen)
+3. Mitglied gibt Buch zurück (kein Schaden) → "Im Regal"</p>
+<p><strong>Szenario 2: Reservierung</strong>
+1. Buch ist "Im Regal"
+2. Mitglied reserviert Buch → "Reserviert"
+3. Mitglied holt Reservierung ab → "Ausgeliehen" (Aktion: Ausleihfrist eintragen)
+4. Mitglied gibt Buch zurück (kein Schaden) → "Im Regal"</p>
+<p><strong>Szenario 3: Schaden bei Rückgabe</strong>
+1. Buch ist "Ausgeliehen"
+2. Mitglied gibt Buch zurück (Schaden festgestellt) → "In Reparatur"
+3. Buch wird repariert → "Im Regal"</p>
+<p><strong>Szenario 4: Verlust</strong>
+1. Buch ist "Ausgeliehen"
+2. Mitglied meldet Verlust → "Verloren" (Endzustand)</p>
+<hr>
+<h2 id="4-komplexeres-beispiel-lebenszyklus-eines-benutzerkontos">4. Komplexeres Beispiel: Lebenszyklus eines Benutzerkontos</h2>
+<h3 id="41-das-szenario">4.1 Das Szenario</h3>
+<p>Wir modellieren den Lebenszyklus eines Benutzerkontos in einer Web-Anwendung. Das Konto durchläuft verschiedene Zustände:</p>
+<p><strong>Zustände:</strong>
+- <strong>Nicht verifiziert</strong>: Konto ist registriert, aber noch nicht verifiziert
+- <strong>Aktiv</strong>: Konto ist verifiziert und kann sich einloggen
+- <strong>Deaktiviert</strong>: Konto ist vom Benutzer deaktiviert
+- <strong>Gesperrt</strong>: Konto ist nach zu vielen Fehlversuchen gesperrt</p>
+<p><strong>Ereignisse:</strong>
+- <code>registrieren()</code>: Benutzer registriert sich
+- <code>verifizieren()</code>: Benutzer klickt auf Verifizierungslink
+- <code>deaktivieren()</code>: Benutzer deaktiviert sein Konto
+- <code>aktivieren()</code>: Benutzer aktiviert sein Konto wieder
+- <code>login()</code>: Benutzer versucht sich einzuloggen
+- <code>passwortZuruecksetzen()</code>: Benutzer setzt sein Passwort zurück</p>
+<h3 id="42-das-zustandsdiagramm">4.2 Das Zustandsdiagramm</h3>
+<div style="text-align: center;"><img src="../bilder/zus-12.svg" width="600"></div>
+
+<h3 id="43-was-zeigt-dieses-diagramm">4.3 Was zeigt dieses Diagramm?</h3>
+<p><strong>Startzustand:</strong>
+- Ein Konto beginnt im Zustand "Nicht verifiziert"
+- Die Transition vom Startzustand hat das Ereignis <code>registrieren()</code> und die Aktion "Bestätigungs-E-Mail senden"</p>
+<p><strong>Hauptzustände:</strong>
+- <strong>Nicht verifiziert</strong>: Konto ist registriert, aber noch nicht verifiziert
+- <strong>Aktiv</strong>: Konto ist verifiziert und kann sich einloggen
+- <strong>Deaktiviert</strong>: Konto ist vom Benutzer deaktiviert
+- <strong>Gesperrt</strong>: Konto ist nach zu vielen Fehlversuchen gesperrt</p>
+<p><strong>Transitionen:</strong>
+- Von "Nicht verifiziert" zu "Aktiv": <code>verifizieren()</code>
+- Von "Aktiv" zu "Deaktiviert": <code>deaktivieren()</code> mit Aktion "Bestätigungs-E-Mail senden"
+- Von "Aktiv" zu "Gesperrt": <code>login()</code> mit Wächterbedingung <code>[Anzahl Fehlversuche &gt;= 3]</code> und Aktion "Fehlversuch-Zähler erhöhen"
+- Von "Deaktiviert" zu "Aktiv": <code>aktivieren()</code>
+- Von "Gesperrt" zu "Aktiv": <code>passwortZuruecksetzen()</code></p>
+<p><strong>Selbst-Transition:</strong>
+- Von "Aktiv" zu "Aktiv": <code>login() [Passwort falsch] / Fehlversuch-Zähler erhöhen</code>
+- Dies ist eine Selbst-Transition: Das Objekt bleibt im selben Zustand, aber die Aktion wird ausgeführt</p>
+<p><strong>Wächterbedingungen:</strong>
+- <code>[Anzahl Fehlversuche &gt;= 3]</code>: Sperren nur nach 3 Fehlversuchen
+- <code>[Passwort falsch]</code>: Fehlversuch-Zähler nur bei falschem Passwort erhöhen</p>
+<p><strong>Aktionen:</strong>
+- <code>/ Bestätigungs-E-Mail senden</code>: Wird bei Registrierung und Deaktivierung ausgeführt
+- <code>/ Fehlversuch-Zähler erhöhen</code>: Wird bei jedem fehlgeschlagenen Login-Versuch ausgeführt</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+Die Selbst-Transition von "Aktiv" zu "Aktiv" ist wichtig! Sie zeigt, dass bei jedem fehlgeschlagenen Login-Versuch der Fehlversuch-Zähler erhöht wird, auch wenn das Konto im Zustand "Aktiv" bleibt.</p>
+</blockquote>
+<h3 id="44-lebenszyklus-szenarien">4.4 Lebenszyklus-Szenarien</h3>
+<p><strong>Szenario 1: Erfolgreiche Registrierung und Login</strong>
+1. Benutzer registriert sich → "Nicht verifiziert" (Aktion: E-Mail senden)
+2. Benutzer klickt auf Verifizierungslink → "Aktiv"
+3. Benutzer loggt sich ein (Passwort korrekt) → bleibt "Aktiv"</p>
+<p><strong>Szenario 2: Fehlgeschlagene Login-Versuche</strong>
+1. Konto ist "Aktiv"
+2. Benutzer loggt sich ein (Passwort falsch) → bleibt "Aktiv" (Aktion: Zähler erhöhen)
+3. Benutzer loggt sich ein (Passwort falsch) → bleibt "Aktiv" (Aktion: Zähler erhöhen)
+4. Benutzer loggt sich ein (Passwort falsch, Zähler &gt;= 3) → "Gesperrt" (Aktion: Zähler erhöhen)
+5. Benutzer setzt Passwort zurück → "Aktiv"</p>
+<p><strong>Szenario 3: Deaktivierung und Reaktivierung</strong>
+1. Konto ist "Aktiv"
+2. Benutzer deaktiviert Konto → "Deaktiviert" (Aktion: E-Mail senden)
+3. Benutzer aktiviert Konto wieder → "Aktiv"</p>
+<hr>
+<h2 id="5-zustandsdiagramme-vs-andere-uml-diagramme">5. Zustandsdiagramme vs. andere UML-Diagramme</h2>
+<h3 id="51-zustandsdiagramm-vs-aktivitatsdiagramm">5.1 Zustandsdiagramm vs. Aktivitätsdiagramm</h3>
+<p>Beide Diagramme zeigen Abläufe, aber mit unterschiedlichem Fokus:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Aktivitätsdiagramm</th>
+<th>Zustandsdiagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fokus</strong></td>
+<td>Kontrollfluss, Prozesse</td>
+<td>Zustandsübergänge eines Objekts</td>
+</tr>
+<tr>
+<td><strong>Zeigt</strong></td>
+<td>Aktionen, Entscheidungen, Parallelität</td>
+<td>Zustände, Ereignisse, Transitionen</td>
+</tr>
+<tr>
+<td><strong>Frage</strong></td>
+<td>"Was passiert wann?"</td>
+<td>"In welchen Zuständen kann sich ein Objekt befinden?"</td>
+</tr>
+<tr>
+<td><strong>Verwendung</strong></td>
+<td>Geschäftsprozesse, Algorithmen</td>
+<td>Objektlebenszyklen</td>
+</tr>
+<tr>
+<td><strong>Beispiel</strong></td>
+<td>Bestellprozess (mehrere Objekte)</td>
+<td>Lebenszyklus einer Bestellung (ein Objekt)</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Aktivitätsdiagramme zeigen den Kontrollfluss (was passiert wann), Zustandsdiagramme zeigen den Lebenszyklus eines Objekts (in welchen Zuständen kann es sich befinden).</p>
+</blockquote>
+<h3 id="52-zustandsdiagramm-vs-sequenzdiagramm">5.2 Zustandsdiagramm vs. Sequenzdiagramm</h3>
+<p>Beide Diagramme zeigen dynamisches Verhalten, aber mit unterschiedlichem Fokus:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Sequenzdiagramm</th>
+<th>Zustandsdiagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fokus</strong></td>
+<td>Objektinteraktionen</td>
+<td>Objektlebenszyklus</td>
+</tr>
+<tr>
+<td><strong>Zeigt</strong></td>
+<td>Nachrichten, zeitliche Abfolge</td>
+<td>Zustände, Ereignisse, Transitionen</td>
+</tr>
+<tr>
+<td><strong>Frage</strong></td>
+<td>"Wer spricht wann mit wem?"</td>
+<td>"In welchen Zuständen kann sich ein Objekt befinden?"</td>
+</tr>
+<tr>
+<td><strong>Verwendung</strong></td>
+<td>Interaktionen zwischen Objekten</td>
+<td>Lebenszyklus eines einzelnen Objekts</td>
+</tr>
+<tr>
+<td><strong>Beispiel</strong></td>
+<td>Login-Prozess (UI, Controller, DB)</td>
+<td>Lebenszyklus eines Benutzerkontos</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Sequenzdiagramme zeigen die Interaktion zwischen mehreren Objekten, Zustandsdiagramme zoomen in ein einzelnes Objekt hinein.</p>
+</blockquote>
+<hr>
+<h2 id="6-vom-zustandsdiagramm-zum-code">6. Vom Zustandsdiagramm zum Code</h2>
+<p>Zustandsdiagramme setzt man klassisch mit einem <strong>Zustandsattribut</strong> (oft einem <code>enum</code>) und einer Fallunterscheidung um — bei vielen Zuständen lohnt das <strong>State-Pattern</strong> (je Zustand eine eigene Klasse):</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Diagramm-Element</th>
+<th>Umsetzung im Code (Java)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zustand</td>
+<td>Wert eines <code>enum Zustand { ... }</code></td>
+</tr>
+<tr>
+<td>aktueller Zustand</td>
+<td>Attribut <code>private Zustand zustand;</code></td>
+</tr>
+<tr>
+<td>Ereignis</td>
+<td>Methode, die den Übergang auslöst</td>
+</tr>
+<tr>
+<td>Transition</td>
+<td>Zuweisung <code>zustand = ...</code> in der Ereignismethode</td>
+</tr>
+<tr>
+<td>Wächterbedingung <code>[…]</code></td>
+<td><code>if</code>-Bedingung vor dem Übergang</td>
+</tr>
+<tr>
+<td>Transitionsaktion <code>/ aktion</code></td>
+<td>Anweisung beim Übergang</td>
+</tr>
+<tr>
+<td>Zustandsaktion entry/do/exit</td>
+<td>Code beim Betreten / Verweilen / Verlassen</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein <code>enum</code> für die Zustände, ein Attribut für den aktuellen Zustand, je Ereignis eine Methode mit <code>switch</code>. Bei vielen Zuständen: State-Pattern.</p>
+</blockquote>
+<h2 id="typische-fehler">Typische Fehler</h2>
+<ul>
+<li><strong>Zustand mit Aktion/Aktivität verwechselt</strong> — „Verarbeiten" ist eine Aktion, „In Bearbeitung" ein Zustand. Ein Zustand ist eine stabile Phase des Wartens.</li>
+<li><strong>Ereignis mit Wächterbedingung verwechselt</strong> — das Ereignis ist der Auslöser, die <code>[Bedingung]</code> eine Zusatzvoraussetzung. Format: <code>Ereignis [Bedingung] / Aktion</code>.</li>
+<li><strong>Transitionsaktion und Zustandsaktion verwechselt</strong> — <code>/ aktion</code> an der Transition gegenüber <code>entry/do/exit</code> im Zustand.</li>
+<li><strong>Kein oder mehrere Startzustände</strong> — genau ein Startzustand je (Unter-)Region.</li>
+<li><strong>Zustandsdiagramm für mehrere Objekte genutzt</strong> — es beschreibt den Lebenszyklus EINES Objekts. Für das Zusammenspiel mehrerer Objekte ist das Sequenzdiagramm zuständig.</li>
+</ul>
+<h2 id="7-zusammenfassung">7. Zusammenfassung</h2>
+<h3 id="71-kernkonzepte">7.1 Kernkonzepte</h3>
+<p><strong>Zustandsdiagramm:</strong>
+- Visualisiert den Lebenszyklus eines einzelnen Objekts
+- Zeigt, in welchen Zuständen sich das Objekt befinden kann
+- Zeigt, durch welche Ereignisse das Objekt von einem Zustand in den nächsten wechselt</p>
+<p><strong>Notationselemente:</strong>
+- <strong>Zustand</strong>: Abgerundetes Rechteck (stabile Phase)
+- <strong>Startzustand</strong>: Gefüllter schwarzer Kreis (●)
+- <strong>Endzustand</strong>: Gefüllter schwarzer Kreis mit Ring (◉)
+- <strong>Transition</strong>: Pfeil von einem Zustand zum anderen
+- <strong>Ereignis</strong>: Text auf der Transition (Auslöser)
+- <strong>Wächterbedingung</strong>: Text in eckigen Klammern [bedingung] (Prüfung)
+- <strong>Aktion</strong>: Text nach einem Schrägstrich / aktion (Nebeneffekt)</p>
+<p><strong>Verwendung:</strong>
+- Modellierung komplexer Objektlebenszyklen
+- Objekte mit zustandsabhängigem Verhalten
+- Ereignisgesteuerte Übergänge</p>
+<h3 id="72-praktische-faustregeln">7.2 Praktische Faustregeln</h3>
+<ol>
+<li>
+<p><strong>Beginne mit den Hauptzuständen</strong>
+   - In welchen stabilen Phasen kann sich das Objekt befinden?
+   - Was sind die wichtigsten Zustände?</p>
+</li>
+<li>
+<p><strong>Identifiziere die Ereignisse</strong>
+   - Welche Ereignisse lösen Zustandsübergänge aus?
+   - Welche Methoden ändern den Zustand?</p>
+</li>
+<li>
+<p><strong>Füge Wächterbedingungen hinzu</strong>
+   - Gibt es zusätzliche Bedingungen für Übergänge?
+   - Müssen mehrere Transitionen mit demselben Ereignis unterschieden werden?</p>
+</li>
+<li>
+<p><strong>Füge Aktionen hinzu</strong>
+   - Welche Nebeneffekte haben Zustandsübergänge?
+   - Was passiert beim Übergang?</p>
+</li>
+<li>
+<p><strong>Halte es einfach</strong>
+   - Nicht jedes Detail muss im Diagramm sein
+   - Fokus auf die Hauptzustände und Hauptübergänge</p>
+</li>
+</ol>
+<h3 id="73-wichtige-erkenntnisse">7.3 Wichtige Erkenntnisse</h3>
+<ul>
+<li>Zustandsdiagramme sind Werkzeuge zur Modellierung komplexer Objektlebenszyklen</li>
+<li>Sie sind die Brücke zwischen Klassendiagrammen und Code</li>
+<li>Zustände sind stabile Phasen, keine Aktionen</li>
+<li>Ereignisse sind Auslöser, Wächterbedingungen sind Prüfungen</li>
+<li>Aktionen sind Nebeneffekte, die beim Übergang ausgeführt werden</li>
+<li>In der IHK-Prüfung sind Zustandsdiagramme relevant, aber seltener als Sequenz- oder Klassendiagramme</li>
+</ul>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein Zustandsdiagramm ist wie eine Landkarte des Lebens eines Objekts: Die Zustände sind die Orte, die Transitionen sind die Wege, und die Ereignisse sind die Gründe, warum das Objekt von einem Ort zum anderen reist.</p>
+</blockquote>
+<hr>
+<h2 id="glossar">Glossar</h2>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zustandsdiagramm (State Machine Diagram / State Diagram)</td>
+<td>Verhaltensdiagramm, das den Lebenszyklus eines einzelnen Objekts als Abfolge von Zuständen und Übergängen modelliert</td>
+</tr>
+<tr>
+<td>Zustand (State)</td>
+<td>Stabile Phase im Leben eines Objekts, in der es auf ein Ereignis wartet; Darstellung als abgerundetes Rechteck</td>
+</tr>
+<tr>
+<td>Startzustand (Initial State)</td>
+<td>Gefüllter schwarzer Kreis (●); markiert den Beginn des Lebenszyklus; genau einer pro Diagramm</td>
+</tr>
+<tr>
+<td>Endzustand (Final State)</td>
+<td>Gefüllter schwarzer Kreis mit Ring (◉); markiert das Ende des Lebenszyklus; ein Diagramm kann mehrere oder keinen haben</td>
+</tr>
+<tr>
+<td>Transition (Transition)</td>
+<td>Pfeil von einem Zustand zum anderen; stellt einen instantanen Übergang dar</td>
+</tr>
+<tr>
+<td>Ereignis (Event, Trigger)</td>
+<td>Auslöser eines Zustandsübergangs, oft ein Methodenaufruf, z. B. <code>login()</code></td>
+</tr>
+<tr>
+<td>Wächterbedingung (Guard Condition)</td>
+<td>Zusätzliche Bedingung in eckigen Klammern <code>[bedingung]</code>, die erfüllt sein muss, damit die Transition stattfindet</td>
+</tr>
+<tr>
+<td>Transitionsaktion (Transition Action)</td>
+<td>Kurze, ununterbrechbare Aktivität nach einem Schrägstrich <code>/ aktion</code>, die beim Zustandsübergang ausgeführt wird</td>
+</tr>
+<tr>
+<td>Zusammengesetzter Zustand (Composite State)</td>
+<td>Zustand, der weitere Unterzustände enthält; eine Transition am äußeren Rand gilt für alle Unterzustände</td>
+</tr>
+<tr>
+<td>Unterzustand (Substate)</td>
+<td>Zustand innerhalb eines zusammengesetzten Zustands</td>
+</tr>
+<tr>
+<td>History-Zustand (History State, <code>H</code> / <code>H*</code>)</td>
+<td>Pseudozustand, der den zuletzt aktiven Unterzustand merkt; <code>H</code> flach, <code>H*</code> über alle Ebenen</td>
+</tr>
+<tr>
+<td>Pseudozustand (Pseudostate)</td>
+<td>Hilfselement ohne eigene Dauer, das den Ablauf steuert (Start, Ende, Auswahl, Kreuzung, Fork, Join, History)</td>
+</tr>
+<tr>
+<td>Auswahl (Choice)</td>
+<td>Rautenförmiger Pseudozustand, der einen Übergang anhand von Wächterbedingungen verzweigt</td>
+</tr>
+<tr>
+<td>Parallele/orthogonale Region</td>
+<td>Durch gestrichelte Linie getrennter Bereich in einem zusammengesetzten Zustand; das Objekt ist gleichzeitig in je einem Zustand pro Region</td>
+</tr>
+<tr>
+<td>Fork / Join</td>
+<td>Balken, der parallele Regionen aufteilt (Fork) bzw. wieder zusammenführt (Join)</td>
+</tr>
+<tr>
+<td>Zustandsaktion (State Action)</td>
+<td>Oberbegriff für entry-, do- und exit-Aktionen, die an einen Zustand selbst gebunden sind (nicht an eine Transition)</td>
+</tr>
+<tr>
+<td>entry-Aktion</td>
+<td>Wird einmalig beim Betreten eines Zustands ausgeführt, unabhängig davon, von wo aus der Zustand erreicht wurde</td>
+</tr>
+<tr>
+<td>do-Aktion</td>
+<td>Wird kontinuierlich ausgeführt, solange sich das Objekt im Zustand befindet; kann durch ein Ereignis unterbrochen werden</td>
+</tr>
+<tr>
+<td>exit-Aktion</td>
+<td>Wird einmalig beim Verlassen eines Zustands ausgeführt, unabhängig davon, in welchen Zustand gewechselt wird</td>
+</tr>
+<tr>
+<td>Selbst-Transition (Self-Transition)</td>
+<td>Transition, die von einem Zustand zu sich selbst zurückführt; der Zustand ändert sich nicht, aber eine Aktion wird ausgeführt</td>
+</tr>
+<tr>
+<td>Lebenszyklus (Life Cycle)</td>
+<td>Die Gesamtheit aller Zustände und Übergänge, die ein Objekt von seiner Entstehung bis zu seinem Ende durchlaufen kann</td>
+</tr>
+<tr>
+<td>Verhaltensdiagramm (Behavior Diagram)</td>
+<td>Oberkategorie von UML-Diagrammen, die dynamisches Verhalten zeigen (u. a. Zustands-, Aktivitäts- und Sequenzdiagramm)</td>
+</tr>
+<tr>
+<td>Objektlebenszyklus</td>
+<td>Synonym für Lebenszyklus eines einzelnen Objekts; zentraler Modellierungsgegenstand des Zustandsdiagramms</td>
+</tr>
+<tr>
+<td>State Pattern</td>
+<td>Entwurfsmuster, bei dem jeder Zustand als eigene Klasse implementiert wird und das Objekt an das aktuelle Zustandsobjekt delegiert</td>
+</tr>
+<tr>
+<td>Enum (Enumeration)</td>
+<td>Python-Datentyp zur Definition einer festen Menge benannter Werte; wird häufig zur typsicheren Abbildung von Zuständen im Code verwendet</td>
+</tr>
+</tbody>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_6.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 6: Zustandsdiagramme</div></a><a class="blatt blatt--weiter" href="a6_ue_aufgaben-7-5-zustand.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Zustandsdiagramme</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-warum-brauchen-wir-zustandsdiagramme">1. Warum brauchen wir Zustandsdiagramme?</a><a href="#11-das-problem-komplexe-objektlebenszyklen" class="stufe3">1.1 Das Problem: Komplexe Objektlebenszyklen</a><a href="#12-die-zentrale-frage-in-welchen-zustanden-kann-sich-ein-objekt-befinden" class="stufe3">1.2 Die zentrale Frage: In welchen Zuständen kann sich ein Objekt befinden?</a><a href="#13-wann-verwende-ich-zustandsdiagramme" class="stufe3">1.3 Wann verwende ich Zustandsdiagramme?</a><a href="#14-die-rolle-im-entwicklungsprozess" class="stufe3">1.4 Die Rolle im Entwicklungsprozess</a><a href="#2-die-notationselemente-die-bausteine-eines-zustandsdiagramms">2. Die Notationselemente: Die Bausteine eines Zustandsdiagramms</a><a href="#21-ubersicht-die-legende" class="stufe3">2.1 Übersicht: Die Legende</a><a href="#22-zustande-die-stabilen-phasen" class="stufe3">2.2 Zustände: Die stabilen Phasen</a><a href="#23-start-und-endzustande" class="stufe3">2.3 Start- und Endzustände</a><a href="#24-transitionen-die-ubergange-zwischen-zustanden" class="stufe3">2.4 Transitionen: Die Übergänge zwischen Zuständen</a><a href="#25-ereignisse-die-ausloser-fur-zustandsubergange" class="stufe3">2.5 Ereignisse: Die Auslöser für Zustandsübergänge</a><a href="#26-wachterbedingungen-die-tursteher" class="stufe3">2.6 Wächterbedingungen: Die Türsteher</a><a href="#27-transitionsaktionen-was-passiert-beim-ubergang" class="stufe3">2.7 Transitionsaktionen: Was passiert beim Übergang?</a><a href="#28-zustandsaktionen-was-passiert-im-zustand" class="stufe3">2.8 Zustandsaktionen: Was passiert im Zustand?</a><a href="#darstellung-im-zustandsdiagramm" class="stufe3">Darstellung im Zustandsdiagramm:</a><a href="#unterschied-transitionsaktion-vs-zustandsaktion" class="stufe3">Unterschied: Transitionsaktion vs. Zustandsaktion</a><a href="#29-zusammengesetzte-zustande-verschachtelte-zustande" class="stufe3">2.9 Zusammengesetzte Zustände (verschachtelte Zustände)</a><a href="#210-history-zustande-h-und-h" class="stufe3">2.10 History-Zustände (H und H*)</a><a href="#211-pseudozustande-auswahl-choice-und-kreuzung-junction" class="stufe3">2.11 Pseudozustände: Auswahl (choice) und Kreuzung (junction)</a><a href="#212-parallele-regionen-nebenlaufige-zustande" class="stufe3">2.12 Parallele Regionen (nebenläufige Zustände)</a><a href="#3-vollstandiges-beispiel-lebenszyklus-eines-bibliotheksbuchs">3. Vollständiges Beispiel: Lebenszyklus eines Bibliotheksbuchs</a><a href="#31-das-szenario" class="stufe3">3.1 Das Szenario</a><a href="#32-das-zustandsdiagramm" class="stufe3">3.2 Das Zustandsdiagramm</a><a href="#33-was-zeigt-dieses-diagramm" class="stufe3">3.3 Was zeigt dieses Diagramm?</a><a href="#34-lebenszyklus-szenarien" class="stufe3">3.4 Lebenszyklus-Szenarien</a><a href="#4-komplexeres-beispiel-lebenszyklus-eines-benutzerkontos">4. Komplexeres Beispiel: Lebenszyklus eines Benutzerkontos</a><a href="#41-das-szenario" class="stufe3">4.1 Das Szenario</a><a href="#42-das-zustandsdiagramm" class="stufe3">4.2 Das Zustandsdiagramm</a><a href="#43-was-zeigt-dieses-diagramm" class="stufe3">4.3 Was zeigt dieses Diagramm?</a><a href="#44-lebenszyklus-szenarien" class="stufe3">4.4 Lebenszyklus-Szenarien</a><a href="#5-zustandsdiagramme-vs-andere-uml-diagramme">5. Zustandsdiagramme vs. andere UML-Diagramme</a><a href="#51-zustandsdiagramm-vs-aktivitatsdiagramm" class="stufe3">5.1 Zustandsdiagramm vs. Aktivitätsdiagramm</a><a href="#52-zustandsdiagramm-vs-sequenzdiagramm" class="stufe3">5.2 Zustandsdiagramm vs. Sequenzdiagramm</a><a href="#6-vom-zustandsdiagramm-zum-code">6. Vom Zustandsdiagramm zum Code</a><a href="#typische-fehler">Typische Fehler</a><a href="#7-zusammenfassung">7. Zusammenfassung</a><a href="#71-kernkonzepte" class="stufe3">7.1 Kernkonzepte</a><a href="#72-praktische-faustregeln" class="stufe3">7.2 Praktische Faustregeln</a><a href="#73-wichtige-erkenntnisse" class="stufe3">7.3 Wichtige Erkenntnisse</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="334px" preserveAspectRatio="none" style="width:263px;height:334px;" version="1.1" viewBox="0 0 263 334" width="263px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="49.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="186.5" x="13" y="51.2969"/><rect fill="#FFFFFF" height="49.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="239" x="13" y="115.1875"/><rect fill="#FFFFFF" height="98.4844" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="186.5" x="13" y="179.0781"/><rect fill="#FFFFFF" height="48.5938" style="stroke: none; stroke-width: 1.0;" width="186.5" x="13" y="228.9688"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="34" x2="34" y1="34.2969" y2="294.5625"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="177.5" x2="177.5" y1="34.2969" y2="294.5625"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="23" x="23" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="30" y="22.9951">A</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="23" x="23" y="293.5625"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="30" y="313.5576">A</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="24" x="165.5" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="10" x="172.5" y="22.9951">B</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="24" x="165.5" y="293.5625"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="10" x="172.5" y="313.5576">B</text><path d="M19,51.2969 L92,51.2969 L92,59.2969 L82,69.2969 L13,69.2969 L13,57.2969 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="49.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="186.5" x="13" y="51.2969"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="34" x="28" y="65.292">loop</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="54" x="107" y="66.292">[n mal]</text><polygon fill="#1976D2" points="165.5,89.1875,175.5,93.1875,165.5,97.1875,169.5,93.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="34.5" x2="171.5" y1="93.1875" y2="93.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="41.5" y="87.8857">wiederhole()</text><path d="M19,115.1875 L84,115.1875 L84,123.1875 L74,133.1875 L13,133.1875 L13,121.1875 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="49.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="239" x="13" y="115.1875"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="26" x="28" y="129.1826">opt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="148" x="99" y="130.1826">[Bedingung erfüllt]</text><polygon fill="#1976D2" points="165.5,153.0781,175.5,157.0781,165.5,161.0781,169.5,157.0781" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="34.5" x2="171.5" y1="157.0781" y2="157.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="41.5" y="151.7764">optionalerAufruf()</text><path d="M19,179.0781 L77,179.0781 L77,187.0781 L67,197.0781 L13,197.0781 L13,185.0781 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="98.4844" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="186.5" x="13" y="179.0781"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="28" y="193.0732">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="92" y="194.0732">[Fall 1]</text><polygon fill="#1976D2" points="165.5,216.9688,175.5,220.9688,165.5,224.9688,169.5,220.9688" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="34.5" x2="171.5" y1="220.9688" y2="220.9688"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="41.5" y="215.667">aufrufFall1()</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="199.5" y1="229.9688" y2="229.9688"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="18" y="242.9639">[Fall 2]</text><polygon fill="#1976D2" points="165.5,265.5625,175.5,269.5625,165.5,273.5625,169.5,269.5625" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="34.5" x2="171.5" y1="269.5625" y2="269.5625"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="41.5" y="264.2607">aufrufFall2()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+participant A
+participant B
+
+loop n mal
+    A -> B: wiederhole()
+end
+
+opt Bedingung erfüllt
+    A -> B: optionalerAufruf()
+end
+
+alt Fall 1
+    A -> B: aufrufFall1()
+else Fall 2
+    A -> B: aufrufFall2()
+end
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="197px" preserveAspectRatio="none" style="width:759px;height:197px;" version="1.1" viewBox="0 0 759 197" width="759px" zoomAndPan="magnify"><defs/><g><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="50" x="17" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="17" x2="67" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="28" y="25.9951">Neu</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="72" x="6" y="136"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="78" y1="162.2969" y2="162.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52" x="16" y="153.9951">Bezahlt</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="118" x="248" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="248" x2="366" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="98" x="258" y="25.9951">NichtVerifiziert</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="52" x="281" y="136"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281" x2="333" y1="162.2969" y2="162.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="291" y="153.9951">Aktiv</text><!--link Neu to Bezahlt--><path d="M40.37,58.18 C39.82,67.5 39.27,78.24 39,88 C38.61,102.02 39.14,117.57 39.85,130.62 " fill="none" id="Neu-Bezahlt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="40.15,135.68,43.6022,126.456,39.8497,130.689,35.6167,126.9365,40.15,135.68" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="223" x="40" y="101.9951">bezahlen() / Rechnung erstellen</text><!--link NichtVerifiziert to Aktiv--><path d="M307,58.29 C307,78.95 307,108.67 307,130.65 " fill="none" id="NichtVerifiziert-Aktiv" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="307,135.78,311,126.78,307,130.78,303,126.78,307,135.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="296" x="308" y="101.9951">registrieren() / Bestätigungs-E-Mail senden</text><!--link Aktiv to Aktiv--><path d="M333.02,150.11 C350.69,146.93 368,150.56 368,161 C368,170.38 354.03,174.26 338.37,172.64 " fill="none" id="Aktiv-Aktiv" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="333.02,171.89,341.3723,177.1091,337.9709,172.5891,342.4909,169.1877,333.02,171.89" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="373" x="374" y="165.9951">login() [Passwort falsch] / Fehlversuch-Zähler erhöhen</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+state Neu
+state Bezahlt
+state NichtVerifiziert
+state Aktiv
+
+Neu - -> Bezahlt : bezahlen() / Rechnung erstellen
+NichtVerifiziert - -> Aktiv : registrieren() / Bestätigungs-E-Mail senden
+Aktiv - -> Aktiv : login() [Passwort falsch] / Fehlversuch-Zähler erhöhen
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

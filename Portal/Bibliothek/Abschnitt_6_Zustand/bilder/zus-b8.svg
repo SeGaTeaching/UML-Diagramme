@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="685px" preserveAspectRatio="none" style="width:402px;height:685px;" version="1.1" viewBox="0 0 402 685" width="402px" zoomAndPan="magnify"><defs/><g><ellipse cx="119.5" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="61" x="89" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="89" x2="150" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="99" y="106.9951">Bereit</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="189" x="25" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="25" x2="214" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="87.5" y="234.9951">Waschen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="169" x="30" y="261.292">entry / Wasser einlassen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="30" y="277.5889">do / Trommel drehen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="167" x="30" y="293.8857">exit / Wasser abpumpen</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="227" x="6" y="380"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="233" y1="406.2969" y2="406.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="79" x="80" y="397.9951">Schleudern</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="193" x="11" y="424.292">entry / Drehzahl hochfahren</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="177" x="11" y="440.5889">do / Waesche schleudern</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="207" x="11" y="456.8857">exit / Drehzahl herunterfahren</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="59" x="90" y="543"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="90" x2="149" y1="569.2969" y2="569.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="100" y="560.9951">Fertig</text><ellipse cx="119.5" cy="664" fill="none" rx="10" ry="10" style="stroke: #222222; stroke-width: 1.0;"/><ellipse cx="120" cy="664.5" fill="#222222" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/><!--link *start to Bereit--><path d="M119.5,28.01 C119.5,40.7 119.5,64.41 119.5,83.57 " fill="none" id="*start-Bereit" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="119.5,88.84,123.5,79.84,119.5,83.84,115.5,79.84,119.5,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bereit to Waschen--><path d="M119.5,139.02 C119.5,158.83 119.5,187.53 119.5,211.84 " fill="none" id="Bereit-Waschen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="119.5,216.96,123.5,207.96,119.5,211.96,115.5,207.96,119.5,216.96" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="270" x="120.5" y="182.9951">programmStarten() [Tuer geschlossen]</text><!--link Waschen to Schleudern--><path d="M119.5,302.38 C119.5,324.56 119.5,351.85 119.5,374.72 " fill="none" id="Waschen-Schleudern" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="119.5,379.83,123.5,370.83,119.5,374.83,115.5,370.83,119.5,379.83" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="120.5" y="345.9951">waschgangFertig()</text><!--link Schleudern to Fertig--><path d="M119.5,465.01 C119.5,488.2 119.5,516.56 119.5,537.49 " fill="none" id="Schleudern-Fertig" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="119.5,542.64,123.5,533.64,119.5,537.64,115.5,533.64,119.5,542.64" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="153" x="120.5" y="508.9951">schleudergangFertig()</text><!--link Fertig to *end--><path d="M119.5,593.21 C119.5,610.84 119.5,634.13 119.5,648.84 " fill="none" id="Fertig-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="119.5,653.84,123.5,644.84,119.5,648.84,115.5,644.84,119.5,653.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Bereit
+
+state Waschen
+Waschen : entry / Wasser einlassen
+Waschen : do / Trommel drehen
+Waschen : exit / Wasser abpumpen
+
+state Schleudern
+Schleudern : entry / Drehzahl hochfahren
+Schleudern : do / Waesche schleudern
+Schleudern : exit / Drehzahl herunterfahren
+
+Bereit - -> Waschen : programmStarten() [Tuer geschlossen]
+Waschen - -> Schleudern : waschgangFertig()
+Schleudern - -> Fertig : schleudergangFertig()
+
+Fertig - -> [*]
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Use-Case-Diagramme: Die Anwendersicht auf Software · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
 <a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
-<details class="nav-wechsler"><summary>Kapitel 2: Use-Case-Diagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a></div></details>
+<details class="nav-wechsler"><summary>Kapitel 2: Use-Case-Diagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a><a href="../Abschnitt_4.html">Kapitel 4: Aktivitätsdiagramme</a><a href="../Abschnitt_5.html">Kapitel 5: Sequenzdiagramme</a><a href="../Abschnitt_6.html">Kapitel 6: Zustandsdiagramme</a></div></details>
 <div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 2</div><a href="../Abschnitt_2.html">Übersicht und Lernweg</a></div>
 <details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a2_lt_7-1-uml-use-case.html" class="hier">Use-Case-Diagramme: Die Anwendersicht auf Software</a></div></details>
 <details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a2_ue_aufgaben-7-1-usecase.html">Aufgaben — Use-Case-Diagramme</a></div></details>
@@ -8,6 +8,7 @@
 <ul>
 <li>Use-Case-Diagramme lesen und erstellen können</li>
 <li>Akteure und Anwendungsfälle identifizieren und korrekt darstellen</li>
+<li>Die drei Beziehungsarten (Generalisierung, Include, Extend) unterscheiden und korrekt einsetzen können</li>
 <li>Die Rolle von Use-Case-Diagrammen im Softwareentwicklungsprozess verstehen</li>
 </ul>
 <blockquote>
@@ -250,7 +251,25 @@ Akteure stehen außerhalb der Systemgrenze, Anwendungsfälle innerhalb. Linien z
 <p><strong>Hinweis:</strong>
 Beziehungen zwischen Use Cases sind ein fortgeschrittenes Konzept. Für einfache Systeme reichen oft Akteure, Use Cases und Systemgrenze aus.</p>
 </blockquote>
-<h3 id="32-include-beziehung-gemeinsame-teilschritte">3.2 Include-Beziehung: Gemeinsame Teilschritte</h3>
+<p>Es gibt drei Beziehungsarten zwischen den Elementen eines Use-Case-Diagramms: <strong>Generalisierung</strong>, <strong>Include</strong> und <strong>Extend</strong>. Sie werden im Folgenden einzeln erklärt und am Ende in einer Übersicht gegenübergestellt.</p>
+<h3 id="32-generalisierung-vererbung-von-akteuren-und-anwendungsfallen">3.2 Generalisierung: Vererbung von Akteuren und Anwendungsfällen</h3>
+<p><strong>Das Konzept:</strong></p>
+<p>Die Generalisierung ist die „ist-ein"-Beziehung des Use-Case-Diagramms — dieselbe Idee wie die Vererbung im Klassendiagramm. Ein spezieller Akteur (oder Anwendungsfall) <strong>erbt</strong> alles vom allgemeinen und ergänzt Eigenes. Notation: eine <strong>durchgezogene Linie mit einem hohlen Dreieckspfeil</strong>, dessen Spitze auf das <strong>Allgemeinere</strong> zeigt.</p>
+<p><strong>Generalisierung von Akteuren:</strong></p>
+<p>Ein <em>Premium-Kunde</em> ist ein besonderer <em>Kunde</em>: Er kann alles, was ein Kunde kann, und zusätzlich etwas Eigenes. Statt beim Premium-Kunden alle Anwendungsfälle des Kunden zu wiederholen, zeichnet man ihn als Spezialisierung.</p>
+<p><img alt="Akteur-Generalisierung: Premium-Kunde erbt von Kunde" src="../bilder/uc-07.svg"></p>
+<p><strong>Bedeutung:</strong> Der Premium-Kunde kann „Waren bestellen" (geerbt vom Kunden) <strong>und</strong> „Vorab-Zugang nutzen" (nur er). Der Dreieckspfeil zeigt vom Speziellen (Premium-Kunde) zum Allgemeinen (Kunde).</p>
+<p><strong>Generalisierung von Anwendungsfällen:</strong></p>
+<p>„Mit Karte zahlen" und „Mit Bargeld zahlen" sind Spezialfälle von „Bezahlen". Der allgemeine Anwendungsfall beschreibt das gemeinsame Ziel, die speziellen konkretisieren, <em>wie</em> es erreicht wird.</p>
+<p><img alt="Use-Case-Generalisierung: Bezahlen als Oberfall" src="../bilder/uc-08.svg"></p>
+<p><strong>Bedeutung:</strong> Wo immer „Bezahlen" verlangt ist, kann eine der Spezialisierungen einspringen. Die speziellen Fälle erben die Bedeutung des allgemeinen und verfeinern sie.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Generalisierung ist die „ist-ein"-Beziehung: durchgezogene Linie, hohles Dreieck, Spitze zum Allgemeineren. Der Spezialfall erbt alles vom allgemeinen Fall.</p>
+<p><strong>Warnung:</strong>
+Die Generalisierung (durchgezogene Linie, Dreieck) wird leicht mit <code>«include»</code>/<code>«extend»</code> (gestrichelte Linien, offene Pfeilspitze) verwechselt. Merke: <strong>durchgezogen + Dreieck = Vererbung</strong>, <strong>gestrichelt + offener Pfeil = include/extend</strong>.</p>
+</blockquote>
+<h3 id="33-include-beziehung-gemeinsame-teilschritte">3.3 Include-Beziehung: Gemeinsame Teilschritte</h3>
 <p><strong>Das Konzept:</strong></p>
 <p>Die <code>«include»</code>-Beziehung zeigt an, dass ein Use Case einen anderen Use Case <strong>immer</strong> als Teilschritt enthält.</p>
 <p><strong>Beispiel:</strong></p>
@@ -262,7 +281,7 @@ Beziehungen zwischen Use Cases sind ein fortgeschrittenes Konzept. Für einfache
 <p><strong>Merksatz:</strong>
 <code>«include»</code> bedeutet: "Dieser Use Case enthält immer diesen anderen Use Case als notwendigen Teilschritt."</p>
 </blockquote>
-<h3 id="33-extend-beziehung-optionale-erweiterungen">3.3 Extend-Beziehung: Optionale Erweiterungen</h3>
+<h3 id="34-extend-beziehung-optionale-erweiterungen">3.4 Extend-Beziehung: Optionale Erweiterungen</h3>
 <p><strong>Das Konzept:</strong></p>
 <p>Die <code>«extend»</code>-Beziehung zeigt an, dass ein Use Case einen anderen Use Case <strong>optional</strong> erweitern kann.</p>
 <p><strong>Beispiel:</strong></p>
@@ -274,41 +293,54 @@ Beziehungen zwischen Use Cases sind ein fortgeschrittenes Konzept. Für einfache
 <p><strong>Merksatz:</strong>
 <code>«extend»</code> bedeutet: "Dieser Use Case kann den anderen Use Case optional erweitern, ist aber nicht notwendig."</p>
 </blockquote>
-<h3 id="34-include-vs-extend-der-unterschied">3.4 Include vs. Extend: Der Unterschied</h3>
+<h3 id="35-die-drei-beziehungsarten-im-uberblick">3.5 Die drei Beziehungsarten im Überblick</h3>
 <div class="tabellenhuelle"><table>
 <thead>
 <tr>
 <th>Aspekt</th>
+<th>Generalisierung</th>
 <th><code>«include»</code></th>
 <th><code>«extend»</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Notwendigkeit</strong></td>
-<td>Immer notwendig</td>
-<td>Optional</td>
+<td><strong>Frage</strong></td>
+<td>ist-ein?</td>
+<td>immer nötiger Teilschritt?</td>
+<td>optionale Erweiterung?</td>
 </tr>
 <tr>
-<td><strong>Richtung</strong></td>
-<td>Basis-Use-Case inkludiert Teilschritt</td>
-<td>Erweiterung erweitert Basis</td>
+<td><strong>Notation</strong></td>
+<td>durchgezogene Linie, <strong>hohles Dreieck</strong></td>
+<td>gestrichelte Linie, offener Pfeil, <code>«include»</code></td>
+<td>gestrichelte Linie, offener Pfeil, <code>«extend»</code></td>
+</tr>
+<tr>
+<td><strong>Pfeilrichtung</strong></td>
+<td>Spezialfall → Allgemeinfall</td>
+<td>Basisfall → Teilschritt</td>
+<td>Erweiterung → Basisfall</td>
+</tr>
+<tr>
+<td><strong>Notwendigkeit</strong></td>
+<td>Vererbung</td>
+<td>immer</td>
+<td>optional (Bedingung)</td>
 </tr>
 <tr>
 <td><strong>Beispiel</strong></td>
-<td>"Geld abheben" inkludiert "Authentifizieren"</td>
-<td>"Rabattcode eingeben" erweitert "Ticket kaufen"</td>
-</tr>
-<tr>
-<td><strong>Im Code</strong></td>
-<td>Methode wird immer aufgerufen</td>
-<td>Methode wird nur manchmal aufgerufen</td>
+<td>„Premium-Kunde" ist ein „Kunde"</td>
+<td>„Geld abheben" inkludiert „Authentifizieren"</td>
+<td>„Rabattcode eingeben" erweitert „Ticket kaufen"</td>
 </tr>
 </tbody>
 </table></div>
 <blockquote>
+<p><strong>Prüfungstipp (IHK):</strong>
+In der Prüfung wird häufig verlangt, aus einem Anforderungstext ein Use-Case-Diagramm zu erstellen oder ein gegebenes Diagramm zu lesen. Achte besonders auf die <strong>Pfeilrichtung</strong> bei <code>«extend»</code> (zeigt auf den Basisfall, also <em>gegen</em> den Ablauf) und auf die <strong>Unterscheidung der Linienarten</strong> (durchgezogen+Dreieck = Generalisierung, gestrichelt = include/extend). Ein sehr häufiger Fehler ist, <code>«include»</code> und <code>«extend»</code> zu vertauschen — merke: <strong>include = immer (Pflicht), extend = manchmal (Kür)</strong>.</p>
 <p><strong>Warnung:</strong>
-Verwenden Sie <code>«include»</code> und <code>«extend»</code> sparsam. Zu viele Beziehungen machen das Diagramm unübersichtlich. Oft reicht ein einfaches Diagramm ohne Beziehungen aus.</p>
+Verwenden Sie Beziehungen sparsam. Zu viele Include-, Extend- und Generalisierungspfeile machen das Diagramm unübersichtlich. Oft reicht ein einfaches Diagramm aus Akteuren, Use Cases und Systemgrenze.</p>
 </blockquote>
 <hr>
 <h2 id="4-use-case-diagramme-im-entwicklungsprozess">4. Use-Case-Diagramme im Entwicklungsprozess</h2>
@@ -401,6 +433,15 @@ Alternativabläufe:
 </code></pre>
 <p>Diese Textbeschreibung ist die Grundlage für die spätere Implementierung und für Aktivitätsdiagramme.</p>
 <hr>
+<h2 id="typische-fehler">Typische Fehler</h2>
+<ul>
+<li><strong>Anwendungsfall als Schritt statt Ziel</strong> — „PIN eingeben" oder „Adresse eingeben" als eigene Ellipse. Ursache: Ablaufdenken → Folge: Das Diagramm wird zur Ablaufbeschreibung statt zur Zielübersicht. Test: Hat der Fall für den Akteur einen abgeschlossenen Nutzen?</li>
+<li><strong>include und extend vertauscht</strong> — Pflichtschritt als <code>«extend»</code>, optionale Erweiterung als <code>«include»</code>. Folge: falsche Aussage über den Ablauf. Merke: include = immer, extend = manchmal.</li>
+<li><strong>Falsche Pfeilrichtung bei extend</strong> — Pfeil vom Basisfall zur Erweiterung statt umgekehrt. Folge: Semantik verdreht. Der extend-Pfeil zeigt auf den Basisfall.</li>
+<li><strong>Akteur innerhalb der Systemgrenze</strong> — Rolle als Teil des Systems gezeichnet. Folge: Die Außensicht geht verloren. Akteure stehen immer außerhalb.</li>
+<li><strong>Konkrete Person statt Rolle</strong> — „Max Mustermann" als Akteur. Folge: nicht wiederverwendbar. Akteure sind Rollen (Kunde, Administrator).</li>
+<li><strong>Abläufe ins Use-Case-Diagramm</strong> — Reihenfolge und Bedingungen mit Pfeilen modelliert. Folge: falscher Diagrammtyp — dafür sind Aktivitäts- und Sequenzdiagramm da.</li>
+</ul>
 <h2 id="5-zusammenfassung">5. Zusammenfassung</h2>
 <h3 id="51-kernkonzepte">5.1 Kernkonzepte</h3>
 <p><strong>UML ist:</strong>
@@ -507,6 +548,10 @@ Use-Case-Diagramme sind die Brücke zwischen Anforderungen und Code. Sie zeigen,
 <td>Durchgezogene Linie zwischen Akteur und Use Case; bedeutet "nutzt"</td>
 </tr>
 <tr>
+<td>Generalisierung (Use-Case)</td>
+<td>„ist-ein"-Beziehung mit hohlem Dreieckspfeil: Ein spezieller Akteur oder Anwendungsfall erbt vom allgemeinen (z. B. Premium-Kunde ist ein Kunde)</td>
+</tr>
+<tr>
 <td>Include-Beziehung (<code>«include»</code>)</td>
 <td>Gestrichelte Beziehung: Ein Basis-Use-Case enthält einen anderen Use Case <strong>immer</strong> als notwendigen Teilschritt</td>
 </tr>
@@ -527,4 +572,4 @@ Use-Case-Diagramme sind die Brücke zwischen Anforderungen und Code. Sie zeigen,
 <td>Person oder Gruppe mit einem Interesse am Projekt (z. B. Auftraggeber, Nutzer)</td>
 </tr>
 </tbody>
-</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_2.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 2: Use-Case-Diagramme</div></a><a class="blatt blatt--weiter" href="a2_ue_aufgaben-7-1-usecase.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Use-Case-Diagramme</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-das-use-case-diagramm-die-auensicht">1. Das Use-Case-Diagramm: Die Außensicht</a><a href="#11-warum-beginnen-wir-mit-use-case-diagrammen" class="stufe3">1.1 Warum beginnen wir mit Use-Case-Diagrammen?</a><a href="#12-die-drei-kernelemente" class="stufe3">1.2 Die drei Kernelemente</a><a href="#121-die-diagramm-elemente-im-detail" class="stufe3">1.2.1 Die Diagramm-Elemente im Detail</a><a href="#13-was-ist-ein-akteur" class="stufe3">1.3 Was ist ein Akteur?</a><a href="#14-was-ist-ein-anwendungsfall-use-case" class="stufe3">1.4 Was ist ein Anwendungsfall (Use Case)?</a><a href="#2-ein-vollstandiges-beispiel-bibliothekssystem">2. Ein vollständiges Beispiel: Bibliothekssystem</a><a href="#21-die-anforderungen-verstehen" class="stufe3">2.1 Die Anforderungen verstehen</a><a href="#22-schritt-1-akteure-identifizieren" class="stufe3">2.2 Schritt 1: Akteure identifizieren</a><a href="#23-schritt-2-anwendungsfalle-identifizieren" class="stufe3">2.3 Schritt 2: Anwendungsfälle identifizieren</a><a href="#24-schritt-3-das-diagramm-zeichnen" class="stufe3">2.4 Schritt 3: Das Diagramm zeichnen</a><a href="#3-erweiterte-konzepte-beziehungen-zwischen-use-cases">3. Erweiterte Konzepte: Beziehungen zwischen Use Cases</a><a href="#31-warum-beziehungen" class="stufe3">3.1 Warum Beziehungen?</a><a href="#32-include-beziehung-gemeinsame-teilschritte" class="stufe3">3.2 Include-Beziehung: Gemeinsame Teilschritte</a><a href="#33-extend-beziehung-optionale-erweiterungen" class="stufe3">3.3 Extend-Beziehung: Optionale Erweiterungen</a><a href="#34-include-vs-extend-der-unterschied" class="stufe3">3.4 Include vs. Extend: Der Unterschied</a><a href="#4-use-case-diagramme-im-entwicklungsprozess">4. Use-Case-Diagramme im Entwicklungsprozess</a><a href="#41-wann-erstelle-ich-use-case-diagramme" class="stufe3">4.1 Wann erstelle ich Use-Case-Diagramme?</a><a href="#42-wie-use-case-diagramme-mit-anderen-diagrammen-zusammenhangen" class="stufe3">4.2 Wie Use-Case-Diagramme mit anderen Diagrammen zusammenhängen</a><a href="#43-praktische-tipps-fur-gute-use-case-diagramme" class="stufe3">4.3 Praktische Tipps für gute Use-Case-Diagramme</a><a href="#5-zusammenfassung">5. Zusammenfassung</a><a href="#51-kernkonzepte" class="stufe3">5.1 Kernkonzepte</a><a href="#52-praktische-faustregeln" class="stufe3">5.2 Praktische Faustregeln</a><a href="#53-vom-diagramm-zum-code" class="stufe3">5.3 Vom Diagramm zum Code</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_2.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 2: Use-Case-Diagramme</div></a><a class="blatt blatt--weiter" href="a2_ue_aufgaben-7-1-usecase.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Use-Case-Diagramme</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-das-use-case-diagramm-die-auensicht">1. Das Use-Case-Diagramm: Die Außensicht</a><a href="#11-warum-beginnen-wir-mit-use-case-diagrammen" class="stufe3">1.1 Warum beginnen wir mit Use-Case-Diagrammen?</a><a href="#12-die-drei-kernelemente" class="stufe3">1.2 Die drei Kernelemente</a><a href="#121-die-diagramm-elemente-im-detail" class="stufe3">1.2.1 Die Diagramm-Elemente im Detail</a><a href="#13-was-ist-ein-akteur" class="stufe3">1.3 Was ist ein Akteur?</a><a href="#14-was-ist-ein-anwendungsfall-use-case" class="stufe3">1.4 Was ist ein Anwendungsfall (Use Case)?</a><a href="#2-ein-vollstandiges-beispiel-bibliothekssystem">2. Ein vollständiges Beispiel: Bibliothekssystem</a><a href="#21-die-anforderungen-verstehen" class="stufe3">2.1 Die Anforderungen verstehen</a><a href="#22-schritt-1-akteure-identifizieren" class="stufe3">2.2 Schritt 1: Akteure identifizieren</a><a href="#23-schritt-2-anwendungsfalle-identifizieren" class="stufe3">2.3 Schritt 2: Anwendungsfälle identifizieren</a><a href="#24-schritt-3-das-diagramm-zeichnen" class="stufe3">2.4 Schritt 3: Das Diagramm zeichnen</a><a href="#3-erweiterte-konzepte-beziehungen-zwischen-use-cases">3. Erweiterte Konzepte: Beziehungen zwischen Use Cases</a><a href="#31-warum-beziehungen" class="stufe3">3.1 Warum Beziehungen?</a><a href="#32-generalisierung-vererbung-von-akteuren-und-anwendungsfallen" class="stufe3">3.2 Generalisierung: Vererbung von Akteuren und Anwendungsfällen</a><a href="#33-include-beziehung-gemeinsame-teilschritte" class="stufe3">3.3 Include-Beziehung: Gemeinsame Teilschritte</a><a href="#34-extend-beziehung-optionale-erweiterungen" class="stufe3">3.4 Extend-Beziehung: Optionale Erweiterungen</a><a href="#35-die-drei-beziehungsarten-im-uberblick" class="stufe3">3.5 Die drei Beziehungsarten im Überblick</a><a href="#4-use-case-diagramme-im-entwicklungsprozess">4. Use-Case-Diagramme im Entwicklungsprozess</a><a href="#41-wann-erstelle-ich-use-case-diagramme" class="stufe3">4.1 Wann erstelle ich Use-Case-Diagramme?</a><a href="#42-wie-use-case-diagramme-mit-anderen-diagrammen-zusammenhangen" class="stufe3">4.2 Wie Use-Case-Diagramme mit anderen Diagrammen zusammenhängen</a><a href="#43-praktische-tipps-fur-gute-use-case-diagramme" class="stufe3">4.3 Praktische Tipps für gute Use-Case-Diagramme</a><a href="#typische-fehler">Typische Fehler</a><a href="#5-zusammenfassung">5. Zusammenfassung</a><a href="#51-kernkonzepte" class="stufe3">5.1 Kernkonzepte</a><a href="#52-praktische-faustregeln" class="stufe3">5.2 Praktische Faustregeln</a><a href="#53-vom-diagramm-zum-code" class="stufe3">5.3 Vom Diagramm zum Code</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

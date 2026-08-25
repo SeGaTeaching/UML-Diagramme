@@ -11,7 +11,8 @@ HTML-Lernportal.
 | **`Lerntexte/`** | Die fünf Lerntexte `7.1`–`7.5` (Markdown) mit eingebetteten SVG-Diagrammen. Das Herzstück zum Lesen und Unterrichten. |
 | **`Aufgaben/`** | Aufgabensätze je Diagrammtyp: **Teil A** (Vormittag, gemeinsam) + **Teil B** (Nachmittag, Selbstlernphase), jede Aufgabe mit eingeklappter Musterlösung. |
 | **`Dozentenskript/`** | Folienbezogenes Regie-Skript (`.md` + fertiges `.html`). Tag 1 = Use-Case + Klassendiagramm. |
-| **`Portal/`** | Das gebaute **HTML-Lernportal** — hier starten: `Portal/HTML/index.html`. Läuft offline per Doppelklick. |
+| **`docs/`** | Das **gebaute HTML-Lernportal** — hier starten: `docs/index.html`. Wird von **GitHub Pages** (Einstellung „/docs") ausgeliefert und läuft auch offline per Doppelklick. Nicht von Hand bearbeiten — wird neu erzeugt. |
+| **`Portal/`** | **Quelle** des Portals: der Generator (`Portal/generator/`) und die zusammengestellte `Portal/Bibliothek/`. Aus ihnen wird `docs/` gebaut. |
 | **`Folien/`** | Die PowerPoint `UML_Diagramme.pptx` und ihr PDF-Export. |
 | **`grafiken/`** | Alle gerenderten Diagramme als SVG (`uc-*`, `kls-*`, `act-*`, `seq-*`, `zus-*`); Lösungsdiagramme unter `grafiken/loesungen/`. |
 | **`diagramm-quellen/`** | Die PlantUML-Quelltexte (`.wsd`) je Typ + gemeinsames `theme.puml`. Aus ihnen werden die SVGs erzeugt. |
@@ -21,7 +22,7 @@ HTML-Lernportal.
 ## Schnellzugriff
 
 - **Unterrichten:** `Dozentenskript/Dozentenskript_Tag1_UML.html` (zweites Fenster) + `Folien/UML_Diagramme.pptx` (geteilter Bildschirm).
-- **Teilnehmer, Selbstlernen:** `Portal/HTML/index.html`.
+- **Teilnehmer, Selbstlernen:** `docs/index.html` (lokal) bzw. die GitHub-Pages-URL.
 - **Nachschlagen/Bearbeiten:** die Markdown in `Lerntexte/` und `Aufgaben/`.
 
 ## Stand
@@ -42,5 +43,5 @@ SVGs aus den Quellen rendern (Beispiel):
 java -jar plantuml.jar -tsvg diagramm-quellen/UseCase/uc-01.wsd -o ../../grafiken
 ```
 
-Portal neu bauen: `python3 Portal/generator/build_v2.py` (liest aus `Portal/Bibliothek/`).
+Portal neu bauen: `python3 Portal/generator/build_v2.py` (liest aus `Portal/Bibliothek/`, schreibt nach `docs/`). Für GitHub Pages: `docs/` committen und pushen; die Pages-Quelle steht auf „main /docs". Eine `.nojekyll`-Datei in `docs/` verhindert die Jekyll-Verarbeitung.
 Dozentenskript-HTML bauen: mit `skript_bauen.py` aus dem Kursprojekt-Template.

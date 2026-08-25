@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="607px" preserveAspectRatio="none" style="width:808px;height:607px;" version="1.1" viewBox="0 0 808 607" width="808px" zoomAndPan="magnify"><defs/><g><ellipse cx="316" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="93" x="269.5" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="269.5" x2="362.5" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="73" x="279.5" y="106.9951">Deaktiviert</text><rect fill="#E3F2FD" height="68.8906" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="240" x="6" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="246" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="54" x="99" y="234.9951">Aktiviert</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="220" x="11" y="261.292">entry / Sensoren scharfschalten</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="200" x="11" y="277.5889">exit / Sensoren entschaerfen</text><rect fill="#E3F2FD" height="68.8906" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="221" x="124.5" y="364"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="124.5" x2="345.5" y1="390.2969" y2="390.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="185.5" y="381.9951">Verzoegerung</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="181" x="129.5" y="408.292">entry / Countdown starten</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="129.5" y="424.5889">do / Auf Codeeingabe warten</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="290" x="181" y="511"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="181" x2="471" y1="537.2969" y2="537.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="38" x="307" y="528.9951">Alarm</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="176" x="186" y="555.292">entry / Sirene einschalten</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="270" x="186" y="571.5889">do / Alarmmeldung an Zentrale senden</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="169" x="186" y="587.8857">exit / Sirene ausschalten</text><!--link *start to Deaktiviert--><path d="M316,28.01 C316,40.7 316,64.41 316,83.57 " fill="none" id="*start-Deaktiviert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="316,88.84,320,79.84,316,83.84,312,79.84,316,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Deaktiviert to Aktiviert--><path d="M269.27,125.13 C240.29,133.23 203.63,146.97 177,169 C163.01,180.57 151.71,197.02 143.33,212.11 " fill="none" id="Deaktiviert-Aktiviert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="140.82,216.74,148.6262,210.7348,143.2033,212.3445,141.5935,206.9216,140.82,216.74" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="178" y="182.9951">scharfschalten()</text><!--link Aktiviert to Verzoegerung--><path d="M131.42,286.34 C135.1,301.88 141.16,319.93 151,334 C157.79,343.7 166.51,352.55 175.77,360.37 " fill="none" id="Aktiviert-Verzoegerung" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="179.76,363.66,175.3486,354.8543,175.8979,360.4845,170.2677,361.0338,179.76,363.66" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="137" x="152" y="329.9951">bewegungErkannt()</text><!--link Verzoegerung to Deaktiviert--><path d="M273.59,363.95 C281.61,355.03 289.1,344.83 294,334 C322.43,271.09 321.69,187.91 318.79,144.4 " fill="none" id="Verzoegerung-Deaktiviert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="318.43,139.29,315.0833,148.5528,318.7873,144.2772,323.0628,147.9812,318.43,139.29" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="215" x="321" y="256.4951">codeEingeben() [Code korrekt]</text><!--link Verzoegerung to Alarm--><path d="M124.49,419.99 C84.15,432.62 53.17,452.08 75,481 C88.73,499.19 130.42,514.12 175.98,525.55 " fill="none" id="Verzoegerung-Alarm" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="180.97,526.78,173.1921,520.7381,176.1159,525.5808,171.2733,528.5046,180.97,526.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="206" x="76" y="476.9951">codeEingeben() [Code falsch]</text><!--link Verzoegerung to Alarm--><path d="M265.43,433.15 C273.01,442.44 280.76,452.79 287,463 C295.18,476.38 302.54,491.79 308.61,506 " fill="none" id="Verzoegerung-Alarm-1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="310.61,510.77,310.804,500.9231,308.6697,506.1618,303.4309,504.0275,310.61,510.77" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="235" x="298" y="476.9951">timeout() [kein Code eingegeben]</text><!--link Alarm to Deaktiviert--><path d="M471.23,531.52 C498.84,520.8 524.53,504.8 542,481 C613.48,383.63 571.87,258.39 545,217 C505.97,156.88 422.38,131.9 367.72,121.73 " fill="none" id="Alarm-Deaktiviert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="362.53,120.79,370.6622,126.3459,367.4482,121.6907,372.1033,118.4767,362.53,120.79" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="215" x="581" y="329.9951">codeEingeben() [Code korrekt]</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Deaktiviert
+
+state Aktiviert
+Aktiviert : entry / Sensoren scharfschalten
+Aktiviert : exit / Sensoren entschaerfen
+
+state Verzoegerung
+Verzoegerung : entry / Countdown starten
+Verzoegerung : do / Auf Codeeingabe warten
+
+state Alarm
+Alarm : entry / Sirene einschalten
+Alarm : do / Alarmmeldung an Zentrale senden
+Alarm : exit / Sirene ausschalten
+
+Deaktiviert - -> Aktiviert : scharfschalten()
+
+Aktiviert - -> Verzoegerung : bewegungErkannt()
+Verzoegerung - -> Deaktiviert : codeEingeben() [Code korrekt]
+Verzoegerung - -> Alarm : codeEingeben() [Code falsch]
+Verzoegerung - -> Alarm : timeout() [kein Code eingegeben]
+
+Alarm - -> Deaktiviert : codeEingeben() [Code korrekt]
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

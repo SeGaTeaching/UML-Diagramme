@@ -11,7 +11,7 @@ Multiplizitäten.
 
 ---
 
-## Teil A — Zwischenübungen (Vormittag)
+## Teil A — Grundübungen
 
 ### Aufgabe A1 [leicht]: Die Klasse Fahrzeug
 
@@ -152,7 +152,7 @@ gibt es die Kapitel nicht — wird das Buch gelöscht, verschwinden auch seine K
 
 ---
 
-## Teil B — Selbstlernphase (Nachmittag)
+## Teil B — Vertiefungsaufgaben
 
 ### Aufgabe B1 [leicht]: Die Klasse Produkt
 

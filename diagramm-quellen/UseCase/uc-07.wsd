@@ -1,0 +1,13 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+left to right direction
+actor Kunde
+actor "Premium-Kunde" as PK
+rectangle "Online-Shop" {
+  usecase "Waren bestellen" as UC1
+  usecase "Vorab-Zugang nutzen" as UC2
+}
+Kunde <|-- PK
+Kunde --> UC1
+PK --> UC2
+@enduml

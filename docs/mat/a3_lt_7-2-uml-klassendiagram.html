@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Klassendiagramm · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
 <a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
-<details class="nav-wechsler"><summary>Kapitel 3: Klassendiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a></div></details>
+<details class="nav-wechsler"><summary>Kapitel 3: Klassendiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a><a href="../Abschnitt_4.html">Kapitel 4: Aktivitätsdiagramme</a><a href="../Abschnitt_5.html">Kapitel 5: Sequenzdiagramme</a><a href="../Abschnitt_6.html">Kapitel 6: Zustandsdiagramme</a></div></details>
 <div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 3</div><a href="../Abschnitt_3.html">Übersicht und Lernweg</a></div>
 <details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a3_lt_7-2-uml-klassendiagram.html" class="hier">Klassendiagramm</a></div></details>
 <details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a3_ue_aufgaben-7-2-klassen.html">Aufgaben — Klassendiagramm</a></div></details>
@@ -9,6 +9,7 @@
 <li>Verstehen, warum Klassendiagramme das wichtigste Werkzeug für die Planung objektorientierter Software sind</li>
 <li>Die Anatomie einer Klasse im UML-Klassendiagramm kennen und anwenden können</li>
 <li>Beziehungen zwischen Klassen (Vererbung, Assoziation, Aggregation, Komposition) unterscheiden und modellieren können</li>
+<li>Gerichtete Assoziation, Abhängigkeit, abstrakte Klassen sowie Interfaces mit Realisierung kennen und korrekt darstellen</li>
 <li>Multiplizitäten korrekt einsetzen, um Kardinalitäten zwischen Klassen auszudrücken</li>
 <li>Klassendiagramme als Brücke zwischen Anforderungen und Code verstehen</li>
 </ul>
@@ -311,7 +312,135 @@ Aggregation (hohle Raute): Das Teil kann ohne das Ganze existieren. Komposition 
 Stellen Sie sich ein Auto vor:
 - <strong>Komposition</strong>: Die Beziehung "Auto hat Motor" ist eine Komposition. Ohne Auto macht der spezifische Motor keinen Sinn.
 - <strong>Aggregation</strong>: Die Beziehung "Auto hat Fahrer" ist eine Aggregation. Das Auto kann ohne Fahrer existieren und der Fahrer kann ohne Auto existieren.</p>
-<h3 id="36-ubersicht-welche-beziehung-wann">3.6 Übersicht: Welche Beziehung wann?</h3>
+<h3 id="36-gerichtete-assoziation-und-rollennamen">3.6 Gerichtete Assoziation und Rollennamen</h3>
+<p>Eine gewöhnliche Assoziation ist eine einfache Linie und in beide Richtungen lesbar. Oft weiß man aber genauer, <strong>wer wen kennt</strong> — dann macht man die Assoziation <strong>gerichtet</strong>.</p>
+<p><strong>Gerichtete Assoziation (directed association):</strong> Eine Linie mit <strong>offener Pfeilspitze</strong>. Sie sagt: Nur die Klasse am Linienanfang kennt die Klasse an der Pfeilspitze, nicht umgekehrt. Man nennt das <strong>Navigierbarkeit</strong>.</p>
+<p><img alt="Gerichtete Assoziation: Kunde kennt Warenkorb" src="../bilder/kls-17.svg"></p>
+<p>Gelesen: „Der Kunde kennt seinen Warenkorb" — der Warenkorb muss den Kunden nicht kennen. Im Java-Code ist das genau ein <strong>Attribut</strong>: <code>class Kunde { private Warenkorb warenkorb; }</code>.</p>
+<p><strong>Rollennamen und Leserichtung:</strong> An die Enden einer Assoziation kann man zusätzlich schreiben:</p>
+<ul>
+<li><strong>Rollennamen</strong> — welche Rolle die Klasse in der Beziehung spielt (z. B. <code>arbeitgeber</code> / <code>angestellter</code> an einer Beziehung zwischen <code>Firma</code> und <code>Person</code>).</li>
+<li><strong>Einen Beziehungsnamen mit Leserichtung</strong> — ein Verb mit kleinem Dreieck (▸), das angibt, in welche Richtung man den Satz liest (z. B. <code>Kunde ── besitzt ▸ ── Warenkorb</code>).</li>
+</ul>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Einfache Linie = beide kennen sich. Pfeilspitze = nur eine Richtung kennt die andere (Navigierbarkeit). Rollennamen und Leserichtung machen ein Diagramm eindeutig lesbar.</p>
+</blockquote>
+<h3 id="37-abhangigkeit-dependency-die-kurzfristige-benutzt-ein-beziehung">3.7 Abhängigkeit (Dependency): Die kurzfristige „benutzt-ein"-Beziehung</h3>
+<p>Assoziation, Aggregation und Komposition sind <strong>dauerhafte</strong> Beziehungen — ein Objekt speichert das andere als Attribut. Die <strong>Abhängigkeit</strong> ist der schwächste Beziehungstyp und <strong>kurzfristig</strong>.</p>
+<p><strong>Notation:</strong> Eine <strong>gestrichelte</strong> Linie mit <strong>offener Pfeilspitze</strong> von der abhängigen zur benutzten Klasse.</p>
+<p><img alt="Abhängigkeit: Drucker benutzt Dokument" src="../bilder/kls-18.svg"></p>
+<p><strong>Bedeutung:</strong> Der <code>Drucker</code> benutzt ein <code>Dokument</code> nur <strong>vorübergehend</strong> — als Methodenparameter, lokale Variable oder Rückgabewert. Er speichert es nicht. „Benutzt-ein" statt „kennt-ein".</p>
+<p><strong>Der Unterschied zur Assoziation</strong> ist die häufigste Verwechslung des Themas:</p>
+<ul>
+<li><strong>Assoziation</strong> (durchgezogen) — das Objekt speichert das andere als <strong>Attribut</strong> (dauerhaft). <em>Die Ehe.</em></li>
+<li><strong>Abhängigkeit</strong> (gestrichelt) — das Objekt benutzt das andere nur <strong>im Moment eines Methodenaufrufs</strong> (kurzfristig). <em>Das Taxi.</em></li>
+</ul>
+<p>In Java: <code>private Dokument aktuellesDokument;</code> (Attribut → Assoziation) gegenüber <code>void drucke(Dokument d)</code> (Parameter → Abhängigkeit).</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Gestrichelter Pfeil = Abhängigkeit = „benutzt kurz". Sobald das Objekt als Attribut gespeichert wird, ist es eine Assoziation (durchgezogen).</p>
+</blockquote>
+<h3 id="38-abstrakte-klassen-bauplan-ohne-eigene-objekte">3.8 Abstrakte Klassen: Bauplan ohne eigene Objekte</h3>
+<p>Eine <strong>abstrakte Klasse</strong> ist eine Klasse, von der man <strong>keine Objekte</strong> erzeugen kann. Sie dient nur als gemeinsame Oberklasse und legt fest, was alle Unterklassen können müssen — teils mit, teils ohne fertige Umsetzung.</p>
+<p><strong>Notation:</strong> Der Klassenname (und abstrakte Methoden) werden <strong>kursiv</strong> geschrieben, oder man kennzeichnet sie mit dem Schlüsselwort <strong><code>{abstract}</code></strong>.</p>
+<p><img alt="Abstrakte Klasse Fahrzeug mit Unterklassen" src="../bilder/kls-19.svg"></p>
+<p><strong>Bedeutung:</strong> <code>Fahrzeug</code> ist abstrakt (kursiv). Es gibt kein Objekt „ein Fahrzeug", sondern nur konkrete <code>Auto</code>- und <code>LKW</code>-Objekte. Die abstrakte Methode <code>tanken()</code> <strong>muss</strong> jede Unterklasse selbst umsetzen. In Java: <code>public abstract class Fahrzeug { public abstract void tanken(); }</code>.</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Eine <strong>abstrakte Methode</strong> hat nur eine Signatur, keinen Rumpf — die Unterklassen liefern die Umsetzung. Eine abstrakte Klasse kann sowohl abstrakte als auch fertig umgesetzte Methoden enthalten.</p>
+</blockquote>
+<h3 id="39-interfaces-und-realisierung">3.9 Interfaces und Realisierung</h3>
+<p>Ein <strong>Interface</strong> (Schnittstelle) ist ein reiner <strong>Vertrag</strong>: eine Sammlung von Methodensignaturen <strong>ohne</strong> Umsetzung. Es sagt, <strong>was</strong> eine Klasse können muss, nicht <strong>wie</strong>. Eine Klasse kann <strong>mehrere</strong> Interfaces erfüllen — anders als bei der Vererbung, wo es (in Java) nur eine Oberklasse gibt.</p>
+<p><strong>Notation:</strong> Über dem Namen steht <strong><code>«interface»</code></strong>. Eine Klasse, die das Interface erfüllt, wird mit einer <strong>gestrichelten Linie mit hohlem Dreieckspfeil</strong> angebunden — das ist die <strong>Realisierung</strong> (realization/implementation).</p>
+<p><img alt="Interface Zahlbar mit Realisierung durch Rechnung und Kunde" src="../bilder/kls-20.svg"></p>
+<p><strong>Bedeutung:</strong> <code>Rechnung</code> und <code>Kunde</code> <strong>realisieren</strong> das Interface <code>Zahlbar</code>, das heißt: Beide setzen die Methode <code>zahlen()</code> um. In Java: <code>class Rechnung implements Zahlbar</code>.</p>
+<p><strong>Vererbung vs. Realisierung</strong> — beide nutzen ein Dreieck, unterscheiden sich aber in der Linie:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th></th>
+<th>Vererbung (Generalisierung)</th>
+<th>Realisierung (Interface)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Linie</strong></td>
+<td>durchgezogen</td>
+<td>gestrichelt</td>
+</tr>
+<tr>
+<td><strong>Pfeilspitze</strong></td>
+<td>hohles Dreieck</td>
+<td>hohles Dreieck</td>
+</tr>
+<tr>
+<td><strong>Bedeutung</strong></td>
+<td>„ist ein" (erbt Umsetzung)</td>
+<td>„erfüllt Vertrag" (liefert Umsetzung)</td>
+</tr>
+<tr>
+<td><strong>Java</strong></td>
+<td><code>extends</code></td>
+<td><code>implements</code></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Prüfungstipp (IHK):</strong>
+Die Unterscheidung <strong>durchgezogenes</strong> Dreieck (Vererbung, <code>extends</code>) gegen <strong>gestricheltes</strong> Dreieck (Realisierung, <code>implements</code>) wird gern abgefragt. Merke: gestrichelt = „nur ein Versprechen" (Interface), durchgezogen = „echte Verwandtschaft" (Oberklasse).</p>
+</blockquote>
+<h3 id="310-ubersicht-welche-beziehung-wann">3.10 Übersicht: Welche Beziehung wann?</h3>
+<p>Alle Beziehungstypen des Klassendiagramms auf einen Blick — geordnet von der stärksten Bindung (Vererbung) zur schwächsten (Abhängigkeit):</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Beziehung</th>
+<th>Notation</th>
+<th>Leitfrage</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vererbung / Generalisierung</strong></td>
+<td>durchgezogene Linie, hohles Dreieck △</td>
+<td>ist-ein?</td>
+<td><code>extends</code></td>
+</tr>
+<tr>
+<td><strong>Realisierung</strong></td>
+<td>gestrichelte Linie, hohles Dreieck △</td>
+<td>erfüllt-Vertrag?</td>
+<td><code>implements</code></td>
+</tr>
+<tr>
+<td><strong>Komposition</strong></td>
+<td>durchgezogene Linie, gefüllte Raute ◆</td>
+<td>besteht-aus (fest)?</td>
+<td>Attribut, Teil stirbt mit dem Ganzen</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>durchgezogene Linie, leere Raute ◇</td>
+<td>hat-ein (locker)?</td>
+<td>Attribut, Teil überlebt</td>
+</tr>
+<tr>
+<td><strong>Assoziation</strong></td>
+<td>durchgezogene Linie (ggf. Pfeilspitze)</td>
+<td>kennt-ein (dauerhaft)?</td>
+<td>Attribut</td>
+</tr>
+<tr>
+<td><strong>Abhängigkeit</strong></td>
+<td>gestrichelte Linie, offene Pfeilspitze</td>
+<td>benutzt-ein (kurz)?</td>
+<td>Parameter / lokale Variable</td>
+</tr>
+</tbody>
+</table></div>
 <p><img alt="Übersicht: Welche Beziehung wann?" src="../bilder/kls-09.svg"></p>
 <h4 id="korrekte-pfeile-fur-klassendiagramme">Korrekte Pfeile für Klassendiagramme</h4>
 <p><img alt="Korrekte Pfeile für die vier Beziehungstypen" src="../bilder/kls-10.svg"></p>
@@ -445,6 +574,15 @@ Halte das Klassendiagramm aktuell, wenn sich der Code ändert.</p>
 Verwende Tools wie PlantUML, draw.io oder Lucidchart, um Klassendiagramme zu erstellen. Diese Tools können oft auch Code aus Diagrammen generieren.</p>
 </blockquote>
 <hr>
+<h2 id="typische-fehler">Typische Fehler</h2>
+<ul>
+<li><strong>Aggregation und Komposition verwechselt</strong> — leere statt gefüllte Raute (oder umgekehrt). Folge: falsche Aussage über die Lebensdauer des Teils. Raute-Test: Stirbt das Teil mit dem Ganzen?</li>
+<li><strong>Assoziation und Abhängigkeit verwechselt</strong> — durchgezogene statt gestrichelte Linie. Folge: dauerhafte statt kurzfristige Beziehung. Als Attribut gespeichert = Assoziation; nur im Methodenaufruf benutzt = Abhängigkeit.</li>
+<li><strong>Vererbung statt Teil-Beziehung</strong> — „Motor ist ein Auto". Folge: falsches Modell. ist-ein-Test: nur bei echter „ist ein"-Beziehung Vererbung, sonst Aggregation/Komposition.</li>
+<li><strong>Vererbung und Realisierung verwechselt</strong> — durchgezogenes vs. gestricheltes Dreieck. Folge: <code>extends</code> und <code>implements</code> vermischt.</li>
+<li><strong>Multiplizität falsch herum gelesen</strong> — Ursache: Seiten vertauscht. Die Zahl steht bei der Klasse, von der aus gezählt wird; über Kreuz lesen.</li>
+<li><strong>Alles public</strong> — keine <code>-</code>-Attribute. Folge: Kapselung verletzt. Attribute privat, Zugriff über öffentliche Methoden.</li>
+</ul>
 <h2 id="7-zusammenfassung">7. Zusammenfassung</h2>
 <h3 id="71-kernkonzepte">7.1 Kernkonzepte</h3>
 <p><strong>Klassendiagramm:</strong>
@@ -585,8 +723,36 @@ Ein Klassendiagramm ist wie ein Stadtplan: Es zeigt die wichtigsten Straßen und
 <td>Angabe, wie viele Objekte an einer Beziehung beteiligt sind, z. B. <code>1</code>, <code>*</code>, <code>0..1</code>, <code>1..*</code></td>
 </tr>
 <tr>
-<td>Navigationsrichtung</td>
+<td>Navigationsrichtung / Navigierbarkeit</td>
 <td>Optionaler Pfeil an einer Assoziation, der anzeigt, von welcher Klasse aus die andere erreichbar ist</td>
+</tr>
+<tr>
+<td>Gerichtete Assoziation (directed association)</td>
+<td>Assoziation mit offener Pfeilspitze; nur die Klasse am Anfang kennt die am Pfeilende</td>
+</tr>
+<tr>
+<td>Rollenname (role name)</td>
+<td>Beschriftung an einem Assoziationsende, die die Rolle der Klasse in der Beziehung benennt</td>
+</tr>
+<tr>
+<td>Abhängigkeit (dependency)</td>
+<td>Schwächste, kurzfristige Beziehung ("benutzt-ein"); gestrichelte Linie mit offener Pfeilspitze; entsteht z. B. durch einen Methodenparameter</td>
+</tr>
+<tr>
+<td>Abstrakte Klasse (abstract class)</td>
+<td>Klasse, von der keine Objekte erzeugt werden können; Name kursiv oder mit <code>{abstract}</code>; dient als gemeinsame Oberklasse</td>
+</tr>
+<tr>
+<td>Abstrakte Methode</td>
+<td>Methode mit Signatur, aber ohne Umsetzung; muss von jeder Unterklasse implementiert werden</td>
+</tr>
+<tr>
+<td>Interface / Schnittstelle</td>
+<td>Reiner Vertrag aus Methodensignaturen ohne Umsetzung; mit <code>«interface»</code> gekennzeichnet; eine Klasse kann mehrere erfüllen</td>
+</tr>
+<tr>
+<td>Realisierung (realization)</td>
+<td>Beziehung "Klasse erfüllt Interface"; gestrichelte Linie mit hohlem Dreieck (in Java: <code>implements</code>)</td>
 </tr>
 <tr>
 <td>Polymorphismus (polymorphism)</td>
@@ -605,4 +771,4 @@ Ein Klassendiagramm ist wie ein Stadtplan: Es zeigt die wichtigsten Straßen und
 <td>Vorgelagertes UML-Diagramm, das die Anforderungen aus Anwendersicht beschreibt</td>
 </tr>
 </tbody>
-</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_3.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 3: Klassendiagramme</div></a><a class="blatt blatt--weiter" href="a3_ue_aufgaben-7-2-klassen.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Klassendiagramm</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#notationsreferenz-alle-elemente-auf-einen-blick">Notationsreferenz: Alle Elemente auf einen Blick</a><a href="#1-warum-brauchen-wir-klassendiagramme">1. Warum brauchen wir Klassendiagramme?</a><a href="#11-das-problem-vom-konzept-zum-code" class="stufe3">1.1 Das Problem: Vom Konzept zum Code</a><a href="#12-die-brucke-zwischen-anforderungen-und-code" class="stufe3">1.2 Die Brücke zwischen Anforderungen und Code</a><a href="#13-praktischer-nutzen" class="stufe3">1.3 Praktischer Nutzen</a><a href="#2-die-anatomie-einer-klasse">2. Die Anatomie einer Klasse</a><a href="#21-das-drei-bereiche-modell" class="stufe3">2.1 Das Drei-Bereiche-Modell</a><a href="#22-sichtbarkeiten-wer-darf-was-sehen" class="stufe3">2.2 Sichtbarkeiten: Wer darf was sehen?</a><a href="#23-attribute-der-zustand-eines-objekts" class="stufe3">2.3 Attribute: Der Zustand eines Objekts</a><a href="#24-methoden-das-verhalten-eines-objekts" class="stufe3">2.4 Methoden: Das Verhalten eines Objekts</a><a href="#3-beziehungen-zwischen-klassen">3. Beziehungen zwischen Klassen</a><a href="#31-warum-beziehungen-wichtig-sind" class="stufe3">3.1 Warum Beziehungen wichtig sind</a><a href="#32-vererbung-die-ist-ein-beziehung" class="stufe3">3.2 Vererbung: Die "ist-ein"-Beziehung</a><a href="#33-assoziation-die-kennt-ein-beziehung" class="stufe3">3.3 Assoziation: Die "kennt-ein"-Beziehung</a><a href="#34-aggregation-die-lose-hat-ein-beziehung" class="stufe3">3.4 Aggregation: Die lose "hat-ein"-Beziehung</a><a href="#35-komposition-die-starke-enthalt-ein-beziehung" class="stufe3">3.5 Komposition: Die starke "enthält-ein"-Beziehung</a><a href="#36-ubersicht-welche-beziehung-wann" class="stufe3">3.6 Übersicht: Welche Beziehung wann?</a><a href="#4-multiplizitaten-wie-viele-objekte-sind-beteiligt">4. Multiplizitäten: Wie viele Objekte sind beteiligt?</a><a href="#41-das-konzept" class="stufe3">4.1 Das Konzept</a><a href="#42-die-wichtigsten-multiplizitaten" class="stufe3">4.2 Die wichtigsten Multiplizitäten</a><a href="#43-praktisches-beispiel-kunde-und-konto" class="stufe3">4.3 Praktisches Beispiel: Kunde und Konto</a><a href="#44-weitere-beispiele" class="stufe3">4.4 Weitere Beispiele</a><a href="#5-vollstandiges-beispiel-banksystem">5. Vollständiges Beispiel: Banksystem</a><a href="#51-das-szenario" class="stufe3">5.1 Das Szenario</a><a href="#52-das-klassendiagramm" class="stufe3">5.2 Das Klassendiagramm</a><a href="#6-vom-klassendiagramm-zum-code">6. Vom Klassendiagramm zum Code</a><a href="#61-der-ubersetzungsprozess" class="stufe3">6.1 Der Übersetzungsprozess</a><a href="#62-praktische-tipps" class="stufe3">6.2 Praktische Tipps</a><a href="#7-zusammenfassung">7. Zusammenfassung</a><a href="#71-kernkonzepte" class="stufe3">7.1 Kernkonzepte</a><a href="#72-praktische-faustregeln" class="stufe3">7.2 Praktische Faustregeln</a><a href="#73-wichtige-erkenntnisse" class="stufe3">7.3 Wichtige Erkenntnisse</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_3.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 3: Klassendiagramme</div></a><a class="blatt blatt--weiter" href="a3_ue_aufgaben-7-2-klassen.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Klassendiagramm</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#notationsreferenz-alle-elemente-auf-einen-blick">Notationsreferenz: Alle Elemente auf einen Blick</a><a href="#1-warum-brauchen-wir-klassendiagramme">1. Warum brauchen wir Klassendiagramme?</a><a href="#11-das-problem-vom-konzept-zum-code" class="stufe3">1.1 Das Problem: Vom Konzept zum Code</a><a href="#12-die-brucke-zwischen-anforderungen-und-code" class="stufe3">1.2 Die Brücke zwischen Anforderungen und Code</a><a href="#13-praktischer-nutzen" class="stufe3">1.3 Praktischer Nutzen</a><a href="#2-die-anatomie-einer-klasse">2. Die Anatomie einer Klasse</a><a href="#21-das-drei-bereiche-modell" class="stufe3">2.1 Das Drei-Bereiche-Modell</a><a href="#22-sichtbarkeiten-wer-darf-was-sehen" class="stufe3">2.2 Sichtbarkeiten: Wer darf was sehen?</a><a href="#23-attribute-der-zustand-eines-objekts" class="stufe3">2.3 Attribute: Der Zustand eines Objekts</a><a href="#24-methoden-das-verhalten-eines-objekts" class="stufe3">2.4 Methoden: Das Verhalten eines Objekts</a><a href="#3-beziehungen-zwischen-klassen">3. Beziehungen zwischen Klassen</a><a href="#31-warum-beziehungen-wichtig-sind" class="stufe3">3.1 Warum Beziehungen wichtig sind</a><a href="#32-vererbung-die-ist-ein-beziehung" class="stufe3">3.2 Vererbung: Die "ist-ein"-Beziehung</a><a href="#33-assoziation-die-kennt-ein-beziehung" class="stufe3">3.3 Assoziation: Die "kennt-ein"-Beziehung</a><a href="#34-aggregation-die-lose-hat-ein-beziehung" class="stufe3">3.4 Aggregation: Die lose "hat-ein"-Beziehung</a><a href="#35-komposition-die-starke-enthalt-ein-beziehung" class="stufe3">3.5 Komposition: Die starke "enthält-ein"-Beziehung</a><a href="#36-gerichtete-assoziation-und-rollennamen" class="stufe3">3.6 Gerichtete Assoziation und Rollennamen</a><a href="#37-abhangigkeit-dependency-die-kurzfristige-benutzt-ein-beziehung" class="stufe3">3.7 Abhängigkeit (Dependency): Die kurzfristige „benutzt-ein"-Beziehung</a><a href="#38-abstrakte-klassen-bauplan-ohne-eigene-objekte" class="stufe3">3.8 Abstrakte Klassen: Bauplan ohne eigene Objekte</a><a href="#39-interfaces-und-realisierung" class="stufe3">3.9 Interfaces und Realisierung</a><a href="#310-ubersicht-welche-beziehung-wann" class="stufe3">3.10 Übersicht: Welche Beziehung wann?</a><a href="#4-multiplizitaten-wie-viele-objekte-sind-beteiligt">4. Multiplizitäten: Wie viele Objekte sind beteiligt?</a><a href="#41-das-konzept" class="stufe3">4.1 Das Konzept</a><a href="#42-die-wichtigsten-multiplizitaten" class="stufe3">4.2 Die wichtigsten Multiplizitäten</a><a href="#43-praktisches-beispiel-kunde-und-konto" class="stufe3">4.3 Praktisches Beispiel: Kunde und Konto</a><a href="#44-weitere-beispiele" class="stufe3">4.4 Weitere Beispiele</a><a href="#5-vollstandiges-beispiel-banksystem">5. Vollständiges Beispiel: Banksystem</a><a href="#51-das-szenario" class="stufe3">5.1 Das Szenario</a><a href="#52-das-klassendiagramm" class="stufe3">5.2 Das Klassendiagramm</a><a href="#6-vom-klassendiagramm-zum-code">6. Vom Klassendiagramm zum Code</a><a href="#61-der-ubersetzungsprozess" class="stufe3">6.1 Der Übersetzungsprozess</a><a href="#62-praktische-tipps" class="stufe3">6.2 Praktische Tipps</a><a href="#typische-fehler">Typische Fehler</a><a href="#7-zusammenfassung">7. Zusammenfassung</a><a href="#71-kernkonzepte" class="stufe3">7.1 Kernkonzepte</a><a href="#72-praktische-faustregeln" class="stufe3">7.2 Praktische Faustregeln</a><a href="#73-wichtige-erkenntnisse" class="stufe3">7.3 Wichtige Erkenntnisse</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

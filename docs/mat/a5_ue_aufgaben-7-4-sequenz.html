@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aufgaben — Sequenzdiagramme · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 5: Sequenzdiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a><a href="../Abschnitt_4.html">Kapitel 4: Aktivitätsdiagramme</a><a href="../Abschnitt_6.html">Kapitel 6: Zustandsdiagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 5</div><a href="../Abschnitt_5.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext"><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a5_lt_7-4-uml-sequenz.html">Sequenzdiagramme: Die Interaktions-Sicht</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen" open><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a5_ue_aufgaben-7-4-sequenz.html" class="hier">Aufgaben — Sequenzdiagramme</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_5.html">Kapitel 5</a><span>›</span>Aufgaben — Sequenzdiagramme</div><h1>Aufgaben — Sequenzdiagramme</h1><p>Diese Aufgaben gehören zum Lerntext <code>7.4_UML-Sequenz.md</code>. Modelliere jeweils nur, <strong>was</strong>
+passieren soll — die Klappbox mit der Musterlösung zeigt danach eine mögliche Umsetzung.
+Achte besonders auf die Pfeilspitze (synchron <code>-&gt;</code> vs. asynchron <code>-&gt;&gt;</code>), auf Aktivierungsbalken
+und auf die richtige Verschachtelung von Fragmenten.</p>
+<hr>
+<h2 id="teil-a-grundubungen">Teil A — Grundübungen</h2>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A1 [leicht]: Kaffeemaschine</h3><p><strong>Szenario:</strong> Ein Benutzer möchte an einer automatischen Kaffeemaschine einen Kaffee zubereiten:</p>
+<ol>
+<li>Der Benutzer drückt den Start-Button.</li>
+<li>Die Kaffeemaschine prüft den Wasserstand im Wassertank.</li>
+<li>Der Wassertank meldet zurück, dass genug Wasser vorhanden ist.</li>
+<li>Die Kaffeemaschine prüft den Bohnenstand im Bohnenbehälter.</li>
+<li>Der Bohnenbehälter meldet zurück, dass genug Bohnen vorhanden sind.</li>
+<li>Die Kaffeemaschine startet Mahl- und Brühvorgang (zwei Selbstaufrufe).</li>
+<li>Die Kaffeemaschine meldet: "Kaffee fertig".</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit den Teilnehmern Benutzer (Akteur), Kaffeemaschine, Wassertank
+und Bohnenbehälter. Verwende ausschließlich synchrone Nachrichten und Aktivierungsbalken.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A1: Kaffeemaschine" src="../bilder/seq-a1.svg"></p>
+<pre><code>@startuml
+actor Benutzer
+participant "maschine: Kaffeemaschine" as Maschine
+participant "tank: Wassertank" as Tank
+participant "behaelter: Bohnenbehälter" as Behaelter
+
+Benutzer -> Maschine: drueckeStartButton()
+activate Maschine
+
+Maschine -> Tank: pruefeWasserstand()
+activate Tank
+Tank --> Maschine: wasserVorhanden
+deactivate Tank
+
+Maschine -> Behaelter: pruefeBohnenstand()
+activate Behaelter
+Behaelter --> Maschine: bohnenVorhanden
+deactivate Behaelter
+
+Maschine -> Maschine: starteMahlvorgang()
+Maschine -> Maschine: starteBruehvorgang()
+
+Maschine --> Benutzer: meldung("Kaffee fertig")
+deactivate Maschine
+@enduml
+</code></pre>
+
+<p>Alle Nachrichten sind synchron, weil jeder Schritt auf das Ergebnis des vorherigen wartet.
+Die beiden Selbstaufrufe (<code>starteMahlvorgang</code>, <code>starteBruehvorgang</code>) zeigen interne Abläufe der
+Kaffeemaschine, ohne dass ein anderes Objekt beteiligt ist.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A2 [leicht]: Geldautomat</h3><p><strong>Szenario:</strong> Ein Kunde hebt an einem Geldautomaten Bargeld ab:</p>
+<ol>
+<li>Der Kunde führt seine Karte ein; der Automat prüft die Karte beim Bankserver.</li>
+<li>Der Kunde gibt die PIN ein; der Automat prüft die PIN beim Bankserver.</li>
+<li>Der Kunde gibt den gewünschten Betrag ein; der Automat prüft das Guthaben beim Bankserver.</li>
+<li>Der Automat zählt intern die Scheine aus (Selbstaufruf) und gibt das Geld aus.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit den Teilnehmern Kunde (Akteur), Geldautomat und Bankserver.
+Nutze für jede Prüfung eine eigene synchrone Nachricht mit Rückgabe.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A2: Geldautomat" src="../bilder/seq-a2.svg"></p>
+<pre><code>@startuml
+actor Kunde
+participant "automat: Geldautomat" as Automat
+participant "bank: Bankserver" as Bank
+
+Kunde -> Automat: karteEinfuehren()
+activate Automat
+
+Automat -> Bank: pruefeKarte(kartennummer)
+activate Bank
+Bank --> Automat: kartenStatus
+deactivate Bank
+
+Kunde -> Automat: gibPinEin(pin)
+Automat -> Bank: pruefePin(kartennummer, pin)
+activate Bank
+Bank --> Automat: pinKorrekt
+deactivate Bank
+
+Kunde -> Automat: gibBetragEin(betrag)
+Automat -> Bank: pruefeGuthaben(kartennummer, betrag)
+activate Bank
+Bank --> Automat: guthabenAusreichend
+deactivate Bank
+
+Automat -> Automat: zaehleScheineAus(betrag)
+Automat --> Kunde: gibGeldAus(betrag)
+deactivate Automat
+@enduml
+</code></pre>
+
+<p>Drei getrennte Prüfungen (Karte, PIN, Guthaben) zeigen, wie ein realer Ablauf in einzelne,
+klar benannte Nachrichten zerlegt wird. Der Kunde greift zwischendurch aktiv ein (PIN, Betrag),
+das ist im Diagramm durch weitere Nachrichten vom Akteur zum Automaten sichtbar.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A3 [mittel]: Bibliothekssystem mit Verzweigung</h3><p><strong>Szenario:</strong> Ein Benutzer möchte an einem Terminal ein Buch ausleihen:</p>
+<ol>
+<li>Der Benutzer scannt seinen Bibliotheksausweis; das System prüft, ob er gültig ist.</li>
+<li><strong>Falls gültig:</strong> Der Benutzer scannt das Buch; das System prüft die Verfügbarkeit.
+   - <strong>Falls verfügbar:</strong> Das System registriert die Ausleihe, das Terminal zeigt eine Bestätigung.
+   - <strong>Falls nicht verfügbar:</strong> Das Terminal zeigt "Buch bereits ausgeliehen".</li>
+<li><strong>Falls der Ausweis ungültig ist:</strong> Das Terminal zeigt "Ausweis ungültig".</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit den Teilnehmern Benutzer (Akteur), Terminal und
+Bibliothekssystem. Verwende zwei verschachtelte <code>alt</code>-Fragmente.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A3: Bibliothekssystem" src="../bilder/seq-a3.svg"></p>
+<pre><code>@startuml
+actor Benutzer
+participant "terminal: Terminal" as Terminal
+participant "system: Bibliothekssystem" as System
+
+Benutzer -> Terminal: scanneAusweis(ausweisnummer)
+activate Terminal
+
+Terminal -> System: pruefeAusweis(ausweisnummer)
+activate System
+System --> Terminal: ausweisStatus
+deactivate System
+
+alt Ausweis gültig
+    Terminal --> Benutzer: fordereZumBuchscannenAuf()
+
+    Benutzer -> Terminal: scanneBuch(buchnummer)
+
+    Terminal -> System: pruefeBuchVerfuegbarkeit(buchnummer)
+    activate System
+    System --> Terminal: verfuegbar
+    deactivate System
+
+    alt Buch verfügbar
+        Terminal -> System: registriereAusleihe(ausweisnummer, buchnummer)
+        activate System
+        System --> Terminal: ausleihbestaetigung
+        deactivate System
+        Terminal --> Benutzer: zeigeBestaetigung("Ausleihe erfolgreich")
+    else Buch nicht verfügbar
+        Terminal --> Benutzer: zeigeFehlermeldung("Buch bereits ausgeliehen")
+    end
+else Ausweis ungültig
+    Terminal --> Benutzer: zeigeFehlermeldung("Ausweis ungültig")
+end
+
+deactivate Terminal
+@enduml
+</code></pre>
+
+<p>Die Verschachtelung von <code>alt</code> in <code>alt</code> bildet die zweistufige Entscheidung ab: Erst wird der
+Ausweis geprüft, nur im positiven Fall folgt die zweite Prüfung (Buchverfügbarkeit). So bleibt
+jedes Fragment übersichtlich, statt eine einzige Bedingung mit vier Fällen zu bilden.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A4 [mittel]: Newsletter-Versand (asynchron)</h3><p><strong>Szenario:</strong> Ein Redaktionssystem verschickt einen Newsletter:</p>
+<ol>
+<li>Das Redaktionssystem erstellt den Newsletter (Selbstaufruf).</li>
+<li>Es gibt den Versand an einen Versanddienst weiter — <strong>ohne auf dessen Abschluss zu warten</strong>.</li>
+<li>Das Redaktionssystem zeigt dem Redakteur sofort eine Erfolgsmeldung an, unabhängig davon,
+   wie lange der eigentliche Versand dauert.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit den Teilnehmern Redaktionssystem und Versanddienst.
+Achte darauf, die richtige Pfeilspitze für den Versandauftrag zu verwenden.</p>
+<h2 id="teil-b-vertiefungsaufgaben">Teil B — Vertiefungsaufgaben</h2></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A4: Newsletter-Versand" src="../bilder/seq-a4.svg"></p>
+<pre><code>@startuml
+participant "redaktion: Redaktionssystem" as Redaktion
+participant "versand: Versanddienst" as Versand
+
+Redaktion -> Redaktion: erstelleNewsletter()
+Redaktion ->> Versand: sendeNewsletterAnAlle(empfaengerliste)
+note right: Asynchron: Redaktion wartet nicht auf den Versand
+Redaktion -> Redaktion: zeigeErfolgsmeldung()
+@enduml
+</code></pre>
+
+<p>Die Nachricht an den Versanddienst nutzt die offene Pfeilspitze (<code>-&gt;&gt;</code>), weil das
+Redaktionssystem sofort weiterarbeitet, statt auf den Abschluss des Versands zu warten — das ist
+der Kern von "Fire and Forget". Es gibt bewusst keine Rückgabenachricht vom Versanddienst.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B1 [leicht]: Taxi-Bestellung per App</h3><p><strong>Szenario:</strong> Ein Fahrgast bestellt über eine App ein Taxi:</p>
+<ol>
+<li>Der Fahrgast bestellt ein Taxi mit seinem Standort.</li>
+<li>Die App fragt bei der Taxizentrale nach einem freien Fahrer.</li>
+<li>Die Zentrale fragt bei einem Fahrer die Verfügbarkeit ab; der Fahrer meldet sich verfügbar.</li>
+<li>Die Zentrale meldet der App den zugewiesenen Fahrer und die Ankunftszeit.</li>
+<li>Die App zeigt dem Fahrgast die Fahrerdaten an.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Fahrgast (Akteur), App, Taxizentrale und Fahrer. Nur
+synchrone Nachrichten, keine Fragmente nötig.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B1: Taxi-App" src="../bilder/seq-b1.svg"></p>
+<pre><code>@startuml
+actor Fahrgast
+participant "app: TaxiApp" as App
+participant "zentrale: Taxizentrale" as Zentrale
+participant "fahrer: Fahrer" as Fahrer
+
+Fahrgast -> App: bestelleTaxi(standort)
+activate App
+
+App -> Zentrale: sucheFreienFahrer(standort)
+activate Zentrale
+
+Zentrale -> Fahrer: frageVerfuegbarkeit()
+activate Fahrer
+Fahrer --> Zentrale: verfuegbar
+deactivate Fahrer
+
+Zentrale --> App: fahrerZugewiesen(fahrerId, ankunftszeit)
+deactivate Zentrale
+
+App --> Fahrgast: zeigeFahrerdaten(fahrerId, ankunftszeit)
+deactivate App
+@enduml
+</code></pre>
+
+<p>Eine reine Kette aus vier synchronen Aufrufen — jede Schicht wartet auf die Antwort der nächsten,
+bevor sie selbst antwortet. Gute Übung, um die Grundform "Aufruf → Aufruf → Rückgabe → Rückgabe"
+zu festigen.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B2 [leicht]: Wecker mit Schlummerfunktion</h3><p><strong>Szenario:</strong> Ein Wecker klingelt und wird per Schlummerfunktion (Snooze) verschoben:</p>
+<ol>
+<li>Der Wecker klingelt (interner Ablauf, kein externer Auslöser nötig).</li>
+<li>Beim Klingeln berechnet der Wecker intern eine neue Weckzeit.</li>
+<li>Der Wecker aktiviert intern die Schlummerfunktion mit der neuen Weckzeit.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit nur einem Teilnehmer (Wecker) und ausschließlich
+Selbstaufrufen. Achte auf die Verschachtelung der Aktivierungsbalken.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B2: Wecker" src="../bilder/seq-b2.svg"></p>
+<pre><code>@startuml
+participant "wecker: Wecker" as Wecker
+
+activate Wecker
+Wecker -> Wecker: klingeln()
+activate Wecker
+Wecker -> Wecker: berechneNeueWeckzeit(minuten)
+activate Wecker
+Wecker --> Wecker: neueWeckzeit
+deactivate Wecker
+Wecker -> Wecker: snooze(neueWeckzeit)
+deactivate Wecker
+deactivate Wecker
+@enduml
+</code></pre>
+
+<p>Drei Ebenen von Aktivierungsbalken übereinander zeigen den Call Stack: <code>klingeln()</code> ruft
+<code>berechneNeueWeckzeit()</code> auf, danach ruft <code>klingeln()</code> noch <code>snooze()</code> auf. Ein Diagramm mit
+nur einem Teilnehmer ist ungewöhnlich, aber für reine Selbstaufruf-Ketten völlig zulässig.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B3 [mittel]: Paketverfolgung mit mehreren Checkpoints</h3><p><strong>Szenario:</strong> Ein Kunde verfolgt eine Sendung in einer Tracking-App:</p>
+<ol>
+<li>Der Kunde fragt den Sendungsstatus über die App ab.</li>
+<li>Die App fragt den Paketdienst nach dem Status.</li>
+<li>Der Paketdienst prüft <strong>für jeden Checkpoint</strong> der Route den Status (Schleife).</li>
+<li>Der Paketdienst gibt den gesamten Statusverlauf zurück.</li>
+<li>Die App zeigt dem Kunden den Statusverlauf an.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Kunde (Akteur), TrackingApp und Paketdienst. Verwende ein
+<code>loop</code>-Fragment für die Prüfung der Checkpoints.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B3: Paketverfolgung" src="../bilder/seq-b3.svg"></p>
+<pre><code>@startuml
+actor Kunde
+participant "app: TrackingApp" as App
+participant "dienst: Paketdienst" as Dienst
+
+Kunde -> App: verfolgePaket(sendungsnummer)
+activate App
+
+App -> Dienst: holeStatus(sendungsnummer)
+activate Dienst
+
+loop für jeden Checkpoint
+    Dienst -> Dienst: pruefeCheckpoint()
+end
+
+Dienst --> App: statusverlauf
+deactivate Dienst
+
+App --> Kunde: zeigeStatusverlauf(statusverlauf)
+deactivate App
+@enduml
+</code></pre>
+
+<p>Die Schleife enthält hier bewusst nur einen Selbstaufruf des Paketdienstes — sie steht
+stellvertretend für "für jeden Checkpoint in der Liste". Erst nach der gesamten Schleife wird
+ein einziges, gesammeltes Ergebnis zurückgegeben.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B4 [mittel]: Fahrkartenautomat mit Guthabenprüfung</h3><p><strong>Szenario:</strong> Ein Fahrgast kauft am Automaten eine Fahrkarte:</p>
+<ol>
+<li>Der Fahrgast wählt eine Fahrkarte für ein Ziel.</li>
+<li>Der Fahrgast wirft Geld ein; der Automat prüft beim Zahlungssystem, ob der Betrag reicht.</li>
+<li><strong>Falls das Guthaben ausreicht:</strong> Der Automat druckt die Fahrkarte (Selbstaufruf) und gibt
+   Fahrkarte und Wechselgeld aus.</li>
+<li><strong>Falls das Guthaben nicht ausreicht:</strong> Der Automat zeigt eine Fehlermeldung.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Fahrgast (Akteur), Fahrkartenautomat und Zahlungssystem.
+Verwende ein <code>alt</code>-Fragment für die Verzweigung.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B4: Fahrkartenautomat" src="../bilder/seq-b4.svg"></p>
+<pre><code>@startuml
+actor Fahrgast
+participant "automat: Fahrkartenautomat" as Automat
+participant "zahlung: Zahlungssystem" as Zahlung
+
+Fahrgast -> Automat: waehleFahrkarte(ziel)
+activate Automat
+
+Fahrgast -> Automat: legeGeldEin(betrag)
+Automat -> Zahlung: pruefeBetrag(betrag, preis)
+activate Zahlung
+Zahlung --> Automat: guthabenAusreichend
+deactivate Zahlung
+
+alt Guthaben ausreichend
+    Automat -> Automat: druckeFahrkarte()
+    Automat --> Fahrgast: gibFahrkarteUndWechselgeldAus()
+else Guthaben nicht ausreichend
+    Automat --> Fahrgast: zeigeFehlermeldung("Bitte mehr Geld einwerfen")
+end
+
+deactivate Automat
+@enduml
+</code></pre>
+
+<p>Der Fahrgast tritt zweimal aktiv in Erscheinung (Auswahl, Geldeinwurf) — beides sind Nachrichten
+vom Akteur zum Automaten. Das <code>alt</code>-Fragment kapselt danach sauber die beiden möglichen Ausgänge.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B5 [mittel]: Datei-Upload mit temporärem Handler-Objekt</h3><p><strong>Szenario:</strong> Ein Benutzer lädt eine Datei über einen Upload-Dienst hoch:</p>
+<ol>
+<li>Der Benutzer lädt eine Datei beim Upload-Dienst hoch.</li>
+<li>Der Dienst erzeugt für diesen Upload ein neues Handler-Objekt (<code>&lt;&lt;create&gt;&gt;</code>).</li>
+<li>Der Dienst lässt den Handler die Datei verarbeiten; der Handler meldet Erfolg zurück.</li>
+<li>Der Dienst zeigt dem Benutzer eine Erfolgsmeldung.</li>
+<li>Der Handler wird danach zerstört, da er nur für diesen einen Upload gebraucht wurde.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Benutzer (Akteur), UploadService und UploadHandler. Verwende
+<code>&lt;&lt;create&gt;&gt;</code> und die Objektzerstörung (<code>destroy</code>).</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B5: Datei-Upload" src="../bilder/seq-b5.svg"></p>
+<pre><code>@startuml
+actor Benutzer
+participant "service: UploadService" as Service
+
+Benutzer -> Service: ladeDateiHoch(datei)
+activate Service
+
+create "handler: UploadHandler" as Handler
+Service -> Handler: <<create>>
+activate Handler
+Handler --> Service:
+deactivate Handler
+
+Service -> Handler: verarbeiteDatei(datei)
+activate Handler
+Handler --> Service: verarbeitungErfolgreich
+deactivate Handler
+
+Service --> Benutzer: zeigeErfolgsmeldung()
+
+destroy Handler
+note right: Handler wird nach Gebrauch zerstört
+deactivate Service
+@enduml
+</code></pre>
+
+<p>Wichtig: Die <code>create</code>-Anweisung muss direkt vor der Nachricht stehen, die das Objekt tatsächlich
+erzeugt — dazwischen darf keine andere Nachricht liegen. Die Lebenslinie des Handlers beginnt
+deshalb sichtbar erst mittendrin im Diagramm, nicht schon ganz oben.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B6 [mittel]: Bestellbestätigung mit Push-Benachrichtigung</h3><p><strong>Szenario:</strong> Ein Online-Shop bestätigt eine Bestellung und benachrichtigt den Kunden zusätzlich
+per Push:</p>
+<ol>
+<li>Der Client sendet eine Bestellung an den Server; der Server bestätigt <strong>synchron und sofort</strong>
+   nur den Eingang der Bestellung.</li>
+<li>Der Server informiert <strong>asynchron</strong> einen Benachrichtigungsdienst über die neue Bestellung
+   (der Server wartet nicht darauf).</li>
+<li>Der Benachrichtigungsdienst schickt <strong>asynchron und zeitversetzt</strong> eine Push-Benachrichtigung
+   an den Client.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Client, Server und BenachrichtigungsDienst. Kombiniere
+bewusst eine synchrone mit zwei asynchronen Nachrichten.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B6: Push-Benachrichtigung" src="../bilder/seq-b6.svg"></p>
+<pre><code>@startuml
+participant "client: Client" as Client
+participant "server: Server" as Server
+participant "dienst: BenachrichtigungsDienst" as Dienst
+
+Client -> Server: sendeBestellung(bestellung)
+activate Server
+Server --> Client: bestellungEingegangen
+deactivate Server
+
+Server ->> Dienst: informiereUeberNeueBestellung(bestellung)
+note right: Asynchron: Server wartet nicht auf den Dienst
+
+Dienst ->> Client: pushBenachrichtigung("Bestellung eingegangen")
+note right: Asynchron: Push kommt zeitversetzt an
+@enduml
+</code></pre>
+
+<p>Diese Aufgabe übt den bewussten Wechsel zwischen synchron und asynchron innerhalb eines
+Ablaufs: Der Kunde bekommt sofort eine schnelle Bestätigung (synchron), die eigentliche
+Benachrichtigungskette läuft im Hintergrund weiter (zweimal asynchron), ohne dass der Client
+oder der Server darauf warten.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B7 [schwer]: Aufzugsteuerung mit Etagenfahrt und Türlogik</h3><p><strong>Szenario:</strong> Ein Fahrgast ruft einen Aufzug zu einem Stockwerk:</p>
+<ol>
+<li>Der Fahrgast drückt einen Stockwerksknopf.</li>
+<li>Die Aufzugsteuerung fährt <strong>wiederholt</strong> ein Stockwerk weiter, bis das Ziel erreicht ist
+   (Schleife).</li>
+<li>Am Ziel öffnet die Steuerung die Tür.</li>
+<li><strong>Falls die Tür frei ist:</strong> Die Tür öffnet sich, die Steuerung signalisiert die Ankunft.</li>
+<li><strong>Falls die Tür blockiert ist:</strong> Die Steuerung versucht erneut, die Tür zu öffnen.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Fahrgast (Akteur), Aufzugsteuerung und Tür. Kombiniere ein
+<code>loop</code>-Fragment (Etagenfahrt) mit einem <code>alt</code>-Fragment (Türlogik).</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B7: Aufzugsteuerung" src="../bilder/seq-b7.svg"></p>
+<pre><code>@startuml
+actor Fahrgast
+participant "steuerung: Aufzugsteuerung" as Steuerung
+participant "tuer: Tuer" as Tuer
+
+Fahrgast -> Steuerung: drueckeStockwerk(ziel)
+activate Steuerung
+
+loop bis Zielstockwerk erreicht
+    Steuerung -> Steuerung: fahreEinStockwerk()
+end
+
+Steuerung -> Tuer: oeffneTuer()
+activate Tuer
+
+alt Tuer frei
+    Tuer --> Steuerung: tuerGeoeffnet
+    Steuerung --> Fahrgast: signalisiereAnkunft()
+else Tuer blockiert
+    Tuer --> Steuerung: tuerBlockiert
+    Steuerung -> Tuer: versucheErneutZuOeffnen()
+end
+
+deactivate Tuer
+deactivate Steuerung
+@enduml
+</code></pre>
+
+<p>Zwei unterschiedliche Kontrollstrukturen direkt hintereinander: Erst eine Schleife für die
+Fahrt (Anzahl der Wiederholungen ist zur Modellierungszeit unbekannt), danach eine Verzweigung
+für die Türlogik. Das ist ein typisches Muster in technischen Steuerungsabläufen.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B8 [schwer, Transfer]: Smart-Home "Guten-Morgen-Modus"</h3><p><strong>Szenario:</strong> Ein Bewohner aktiviert über eine App den "Guten-Morgen-Modus" seines Smart-Home-Systems:</p>
+<ol>
+<li>Der Bewohner aktiviert den Modus über die App.</li>
+<li>Das Smart-Home-System erzeugt ein neues Szenario-Objekt (<code>&lt;&lt;create&gt;&gt;</code>).</li>
+<li><strong>Schleife:</strong> Für jedes Gerät in der Geräteliste prüft das System, ob es online ist.</li>
+<li><strong>Verzweigung:</strong>
+   - <strong>Falls alle Geräte online sind:</strong> Das Szenario startet und steuert <strong>parallel</strong>
+     Rollläden, Kaffeemaschine und Heizung an. Erst wenn alle drei fertig sind, sendet das
+     System eine Push-Benachrichtigung an die App.
+   - <strong>Falls nicht alle Geräte online sind:</strong> Das System meldet der App die offline-Geräte,
+     die App zeigt eine Fehlermeldung.</li>
+</ol>
+<p>Modelliere ein Sequenzdiagramm mit Bewohner (Akteur), Smart-Home-App, Smart-Home-System,
+Szenario (wird erzeugt), Rollläden, Kaffeemaschine und Heizung. Kombiniere <code>&lt;&lt;create&gt;&gt;</code>,
+<code>loop</code>, <code>alt</code> und <code>par</code> in einem Diagramm — diese Aufgabe fasst alle Konzepte des Kapitels
+zusammen.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B8: Smart-Home Guten-Morgen-Modus" src="../bilder/seq-b8.svg"></p>
+<pre><code>@startuml
+actor Bewohner
+participant "app: Smart-Home-App" as App
+participant "system: Smart-Home-System" as System
+participant "szenario: Szenario" as Szenario
+participant "rollladen: Rollläden" as Rollladen
+participant "kaffee: Kaffeemaschine" as Kaffee
+participant "heizung: Heizung" as Heizung
+
+Bewohner -> App: aktiviereGutenMorgenModus()
+activate App
+
+App -> System: starteGutenMorgenModus()
+activate System
+
+create Szenario
+System -> Szenario: <<create>>("Guten-Morgen")
+activate Szenario
+Szenario --> System:
+deactivate Szenario
+
+loop für jedes Gerät in Geräteliste
+    System -> System: pruefeGeraetStatus(geraet)
+end
+
+alt alle Geräte online
+    System -> Szenario: starten()
+    activate Szenario
+
+    par Parallele Gerätesteuerung
+        Szenario -> Rollladen: oeffnen()
+        activate Rollladen
+        Rollladen --> Szenario:
+        deactivate Rollladen
+    else
+        Szenario -> Kaffee: einschalten()
+        activate Kaffee
+        Kaffee --> Szenario:
+        deactivate Kaffee
+    else
+        Szenario -> Heizung: setzeTemperatur(21)
+        activate Heizung
+        Heizung --> Szenario:
+        deactivate Heizung
+    end
+
+    Szenario --> System:
+    deactivate Szenario
+
+    System -> App: sendePushBenachrichtigung("Guten-Morgen-Modus aktiviert")
+    App --> Bewohner: zeigeBenachrichtigung()
+else einige Geräte offline
+    System -> App: zeigeFehlermeldung("Einige Geräte sind offline", offlineGeraete)
+    App --> Bewohner: zeigeFehlermeldung()
+end
+
+deactivate System
+deactivate App
+@enduml
+</code></pre>
+
+<p>Diese Transferaufgabe verbindet vier Konzepte in einem Diagramm: Objekterzeugung (<code>create</code>),
+eine Schleife über die Geräteliste, eine Verzweigung für den Online-Status und einen
+Parallelblock (<code>par</code>) für die drei gleichzeitigen Gerätesteuerungen. Wichtig beim <code>par</code>-Fragment:
+Die einzelnen parallelen Zweige werden — wie bei <code>alt</code> — durch <code>else</code> voneinander getrennt.
+Erst wenn alle drei Zweige abgeschlossen sind, geht es nach dem Fragment weiter.</p></div></details></div></article><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="a5_lt_7-4-uml-sequenz.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Sequenzdiagramme: Die Interaktions-Sicht</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#teil-a-grundubungen">Teil A — Grundübungen</a><a href="#teil-b-vertiefungsaufgaben">Teil B — Vertiefungsaufgaben</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="202px" preserveAspectRatio="none" style="width:290px;height:202px;" version="1.1" viewBox="0 0 290 202" width="290px" zoomAndPan="magnify"><defs/><g><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="129" x="17" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="17" x2="146" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="67" x="48" y="25.9951">Zustand1</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="22" y="52.292">exit / exit-Aktion</text><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="151" x="6" y="139"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="157" y1="165.2969" y2="165.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="67" x="48" y="156.9951">Zustand2</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="11" y="183.292">entry / entry-Aktion</text><!--link Zustand1 to Zustand2--><path d="M81.5,61.3 C81.5,82.12 81.5,111.5 81.5,133.59 " fill="none" id="Zustand1-Zustand2" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="81.5,138.75,85.5,129.75,81.5,133.75,77.5,129.75,81.5,138.75" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="196" x="82.5" y="104.9951">ereignis() / Transitionsaktion</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+state Zustand1
+state Zustand2 {
+}
+Zustand1 : exit / exit-Aktion
+Zustand2 : entry / entry-Aktion
+
+Zustand1 - -> Zustand2 : ereignis() / Transitionsaktion
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,732 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aktivitätsdiagramme: Die Prozess-Sicht · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 4: Aktivitätsdiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a><a href="../Abschnitt_5.html">Kapitel 5: Sequenzdiagramme</a><a href="../Abschnitt_6.html">Kapitel 6: Zustandsdiagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 4</div><a href="../Abschnitt_4.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a4_lt_7-3-uml-aktivitaet.html" class="hier">Aktivitätsdiagramme: Die Prozess-Sicht</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a4_ue_aufgaben-7-3-aktivitaet.html">Aufgaben — Aktivitätsdiagramm</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_4.html">Kapitel 4</a><span>›</span>Aktivitätsdiagramme: Die Prozess-Sicht</div><h1>Aktivitätsdiagramme: Die Prozess-Sicht</h1><h2 id="lernziele">Lernziele</h2>
+<ul>
+<li>Verstehen, warum Aktivitätsdiagramme für die Modellierung von Prozessen und Abläufen unverzichtbar sind</li>
+<li>Die Notationselemente eines Aktivitätsdiagramms kennen und korrekt anwenden können</li>
+<li>Sequenzen, Entscheidungen, Schleifen und Parallelisierungen modellieren können</li>
+<li>Swimlanes einsetzen, um Zuständigkeiten in Prozessen darzustellen</li>
+<li>Den Unterschied zwischen Aktivitätsdiagrammen und Programmablaufplänen verstehen</li>
+</ul>
+<hr>
+<h2 id="1-warum-brauchen-wir-aktivitatsdiagramme">1. Warum brauchen wir Aktivitätsdiagramme?</h2>
+<h3 id="11-das-problem-komplexe-ablaufe-verstehen">1.1 Das Problem: Komplexe Abläufe verstehen</h3>
+<p>Stellen Sie sich vor, Sie sollen einem neuen Teammitglied den Bestellprozess in Ihrem Online-Shop erklären. Sie beginnen: "Zuerst legt der Kunde Artikel in den Warenkorb, dann geht er zur Kasse, gibt seine Adresse ein, wählt die Zahlungsmethode..." Aber schon nach wenigen Sätzen wird es unübersichtlich. Was passiert, wenn die Zahlung fehlschlägt? Wann wird das Lager informiert? Welche Schritte laufen parallel ab? Wer ist wofür verantwortlich?</p>
+<p>Textbeschreibungen von Prozessen sind:
+- Mehrdeutig und schwer zu überblicken
+- Anfällig für Missverständnisse
+- Schwierig zu warten und zu aktualisieren
+- Ungeeignet für komplexe Abläufe mit Verzweigungen und Parallelität</p>
+<p><strong>Das Aktivitätsdiagramm löst dieses Problem.</strong> Es visualisiert Prozesse, Abläufe und Geschäftslogiken auf eine klare, standardisierte Weise.</p>
+<h3 id="12-die-weiterentwicklung-des-programmablaufplans">1.2 Die Weiterentwicklung des Programmablaufplans</h3>
+<p>Sie kennen bereits Programmablaufpläne (PAP) aus früheren Kapiteln. Aktivitätsdiagramme sind die moderne, mächtige Weiterentwicklung davon. Während ein PAP hauptsächlich sequenzielle Abläufe und einfache Verzweigungen darstellt, bietet das Aktivitätsdiagramm deutlich mehr:</p>
+<p><strong>Programmablaufplan (PAP):</strong>
+- Sequenzen und einfache Verzweigungen
+- Fokus auf algorithmische Abläufe
+- Keine Darstellung von Parallelität
+- Keine Zuständigkeiten</p>
+<p><strong>Aktivitätsdiagramm:</strong>
+- Alle Funktionen des PAP
+- Parallelität (Fork/Join)
+- Zuständigkeiten (Swimlanes)
+- Komplexe Synchronisationen
+- Standardisiert durch UML</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Das Aktivitätsdiagramm ist das professionelle Werkzeug für die Prozessmodellierung. Es zeigt nicht nur die Reihenfolge von Schritten, sondern auch Entscheidungen, Parallelität und Zuständigkeiten.</p>
+</blockquote>
+<h3 id="13-wann-verwende-ich-aktivitatsdiagramme">1.3 Wann verwende ich Aktivitätsdiagramme?</h3>
+<p>Aktivitätsdiagramme sind vielseitig einsetzbar:</p>
+<p><strong>Geschäftsprozesse modellieren:</strong>
+- Bestellabwicklung in einem Online-Shop
+- Kreditantragsprozess in einer Bank
+- Patientenaufnahme in einem Krankenhaus</p>
+<p><strong>Algorithmen planen:</strong>
+- Sortieralgorithmen
+- Suchverfahren
+- Datenverarbeitungspipelines</p>
+<p><strong>Use Cases detaillieren:</strong>
+- Aus dem Use-Case-Diagramm kennen wir das "Was"
+- Das Aktivitätsdiagramm zeigt das "Wie" (den detaillierten Ablauf)</p>
+<p><strong>Workflows dokumentieren:</strong>
+- Genehmigungsprozesse
+- Deployment-Pipelines
+- Testverfahren</p>
+<h3 id="14-die-rolle-im-entwicklungsprozess">1.4 Die Rolle im Entwicklungsprozess</h3>
+<p>Aktivitätsdiagramme entstehen typischerweise nach dem Use-Case-Diagramm und vor oder parallel zum Klassendiagramm:</p>
+<pre><code>Use-Case-Diagramm
+(Was soll das System tun?)
+        ↓
+Aktivitätsdiagramm ← Wir sind hier
+(Wie läuft ein Use Case ab?)
+        ↓
+Klassendiagramm
+(Welche Klassen setzen das um?)
+        ↓
+Sequenzdiagramm
+(Wie kommunizieren die Objekte?)
+        ↓
+Code
+</code></pre>
+<hr>
+<h2 id="2-die-notationselemente-die-bausteine-eines-aktivitatsdiagramms">2. Die Notationselemente: Die Bausteine eines Aktivitätsdiagramms</h2>
+<h3 id="21-ubersicht-die-legende">2.1 Übersicht: Die Legende</h3>
+<p>Bevor wir komplexe Diagramme betrachten, schauen wir uns die einzelnen Elemente und ihre Bedeutung an. Diese Legende ist Ihr Werkzeugkasten für die Prozessmodellierung:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Symbol</th>
+<th>Beschreibung</th>
+<th>Verwendung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Startknoten</strong></td>
+<td>⚫ (gefüllter Kreis)</td>
+<td>Markiert den Beginn des Prozesses</td>
+<td>Jedes Diagramm hat genau einen Startknoten</td>
+<td><img src="../bilder/act-1.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Endknoten</strong></td>
+<td>⊙ (gefüllter Kreis mit Ring)</td>
+<td>Markiert das Ende des Prozesses</td>
+<td>Ein Diagramm kann mehrere Endknoten haben</td>
+<td><img src="../bilder/act-1.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Aktion</strong></td>
+<td>Rechteck mit abgerundeten Ecken</td>
+<td>Ein einzelner, atomarer Arbeitsschritt</td>
+<td>Sollte ein Verb enthalten (z.B. "Karte eingeben")</td>
+<td><img src="../bilder/act-2.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Kontrollfluss</strong></td>
+<td>Pfeil (durchgezogene Linie)</td>
+<td>Zeigt die Reihenfolge der Aktionen</td>
+<td>Verbindet Aktionen miteinander</td>
+<td><img src="../bilder/act-2.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Entscheidungsknoten</strong></td>
+<td>◊ (Raute)</td>
+<td>Verzweigung basierend auf einer Bedingung</td>
+<td>Hat einen Eingang, mehrere Ausgänge mit Bedingungen</td>
+<td><img src="../bilder/act-3-1.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Zusammenführungsknoten</strong></td>
+<td>◊ (Raute)</td>
+<td>Führt alternative Pfade zusammen</td>
+<td>Hat mehrere Eingänge, einen Ausgang (ODER-Logik)</td>
+<td><img src="../bilder/act-3.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Fork (Gabelung)</strong></td>
+<td>Dicker schwarzer Balken</td>
+<td>Startet parallele Prozesse</td>
+<td>Hat einen Eingang, mehrere Ausgänge (UND-Logik)</td>
+<td><img src="../bilder/act-4.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Join (Synchronisation)</strong></td>
+<td>Dicker schwarzer Balken</td>
+<td>Wartet auf parallele Prozesse</td>
+<td>Hat mehrere Eingänge, einen Ausgang (UND-Logik)</td>
+<td><img src="../bilder/act-4.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Swimlane</strong></td>
+<td>Vertikale/horizontale Bahn</td>
+<td>Zeigt Zuständigkeiten</td>
+<td>Unterteilt das Diagramm nach Akteuren/Rollen</td>
+<td><img src="../bilder/act-5.svg" width="90"></td>
+</tr>
+<tr>
+<td><strong>Objektknoten</strong></td>
+<td>Scharfeckiges Rechteck</td>
+<td>Ein Datenobjekt, das im Prozess fließt</td>
+<td>Zeigt den Datenfluss zusätzlich zum Kontrollfluss</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Objektfluss</strong></td>
+<td>Pfeil zu/von einem Objektknoten</td>
+<td>Gibt ein Objekt an die nächste Aktion weiter</td>
+<td>Objekt als Ein-/Ausgabe einer Aktion</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Signal senden / empfangen</strong></td>
+<td>Konvexes / konkaves Fünfeck</td>
+<td>Senden bzw. Warten auf ein Signal</td>
+<td>Kommunikation zwischen Prozessen</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Zeitereignis</strong></td>
+<td>Sanduhr</td>
+<td>Warten auf Zeitpunkt oder Dauer</td>
+<td>z. B. „nach 24 Stunden"</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Die Raute wird sowohl für Entscheidungen als auch für Zusammenführungen verwendet. Der Kontext (Anzahl der Ein-/Ausgänge) macht die Bedeutung klar.</p>
+</blockquote>
+<h3 id="22-startknoten-und-endknoten">2.2 Startknoten und Endknoten</h3>
+<p><strong>Startknoten (⚫):</strong>
+- Jeder Prozess beginnt an genau einem Startknoten
+- Er ist ein gefüllter schwarzer Kreis
+- Keine eingehenden Pfeile, nur ausgehende</p>
+<p><strong>Endknoten (⊙):</strong>
+- Markiert das Ende eines Prozesses
+- Gefüllter schwarzer Kreis mit weißem Ring
+- Nur eingehende Pfeile, keine ausgehenden
+- Ein Diagramm kann mehrere Endknoten haben (verschiedene Endzustände)</p>
+<p><strong>Warum mehrere Endknoten?</strong>
+Ein Prozess kann auf verschiedene Arten enden:
+- "Erfolgreich abgeschlossen"
+- "Abgebrochen wegen Fehler"
+- "Vom Benutzer abgebrochen"</p>
+<div style="text-align: center;"><img src="../bilder/act-1.svg" width="400"></div>
+
+<h3 id="23-aktionen-und-kontrollfluss">2.3 Aktionen und Kontrollfluss</h3>
+<p><strong>Aktion:</strong>
+- Ein einzelner, nicht weiter zerlegbarer Arbeitsschritt
+- Darstellung: Rechteck mit abgerundeten Ecken
+- Benennung: Verb im Infinitiv (z.B. "Karte eingeben", "Daten validieren", "E-Mail senden")
+- Atomarität: Eine Aktion wird entweder vollständig ausgeführt oder gar nicht</p>
+<p><strong>Kontrollfluss:</strong>
+- Durchgezogener Pfeil mit offener Spitze
+- Zeigt die Richtung des Prozessflusses
+- Verbindet Aktionen, Entscheidungen, Forks und Joins
+- Repräsentiert einen "Token", der durch das Diagramm fließt</p>
+<p><strong>Analogie: Der Token</strong>
+Stellen Sie sich vor, eine Münze (Token) wandert durch das Diagramm. Sie startet am Startknoten, folgt den Pfeilen, durchläuft Aktionen und endet am Endknoten. Diese Vorstellung hilft, den Ablauf zu verstehen.</p>
+<div style="text-align: center;"><img src="../bilder/act-2.svg" width="400"></div>
+
+<h3 id="24-entscheidungsknoten-und-zusammenfuhrungsknoten">2.4 Entscheidungsknoten und Zusammenführungsknoten</h3>
+<p><strong>Entscheidungsknoten (Decision):</strong>
+- Darstellung: Raute (◊)
+- Funktion: Verzweigung basierend auf einer Bedingung
+- Eingänge: Genau einer
+- Ausgänge: Zwei oder mehr
+- Bedingungen: An jeden ausgehenden Pfad wird eine Bedingung in eckigen Klammern geschrieben</p>
+<p><strong>Beispiel:</strong></p>
+<pre><code>[Alter &gt;= 18] → Zugang gewähren
+[Alter &lt; 18] → Zugang verweigern
+</code></pre>
+<p><strong>Zusammenführungsknoten (Merge):</strong>
+- Darstellung: Raute (◊)
+- Funktion: Führt alternative Pfade wieder zusammen
+- Eingänge: Zwei oder mehr
+- Ausgänge: Genau einer
+- Logik: ODER – sobald ein Token an einem Eingang ankommt, wird es sofort weitergeleitet</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+Verwechseln Sie nicht Zusammenführung (ODER-Logik) mit Join (UND-Logik). Bei der Zusammenführung reicht ein Token, beim Join müssen alle Tokens ankommen.</p>
+</blockquote>
+<div style="text-align: center;"><img src="../bilder/act-3-1.svg" width="400"></div>
+
+<div style="text-align: center;"><img src="../bilder/act-3.svg" width="400"></div>
+
+<h3 id="25-fork-und-join-parallelitat-modellieren">2.5 Fork und Join: Parallelität modellieren</h3>
+<p><strong>Fork (Gabelung):</strong>
+- Darstellung: Dicker schwarzer Balken (horizontal oder vertikal)
+- Funktion: Teilt einen Kontrollfluss in mehrere parallele Flüsse auf
+- Eingänge: Genau einer
+- Ausgänge: Zwei oder mehr
+- Logik: Der eingehende Token wird dupliziert und an alle Ausgänge gleichzeitig weitergeleitet</p>
+<p><strong>Join (Synchronisation):</strong>
+- Darstellung: Dicker schwarzer Balken (horizontal oder vertikal)
+- Funktion: Wartet, bis alle parallelen Flüsse abgeschlossen sind
+- Eingänge: Zwei oder mehr
+- Ausgänge: Genau einer
+- Logik: UND – der Join wartet zwingend, bis an ALLEN Eingängen ein Token angekommen ist</p>
+<p><strong>Warum ist das wichtig?</strong>
+Parallelität ist ein zentrales Konzept moderner Software:
+- Webseiten laden Bilder, Text und Werbung parallel
+- Datenbanken verarbeiten mehrere Anfragen gleichzeitig
+- Build-Pipelines führen Tests parallel aus</p>
+<div style="text-align: center;"><img src="../bilder/act-4.svg" width="400"></div>
+
+<blockquote>
+<p><strong>Merksatz:</strong>
+Fork dupliziert den Token (parallele Ausführung), Join wartet auf alle Tokens (Synchronisation). Das ist der Hauptunterschied zum Programmablaufplan, der keine Parallelität darstellen kann.</p>
+</blockquote>
+<h3 id="26-swimlanes-zustandigkeiten-visualisieren">2.6 Swimlanes: Zuständigkeiten visualisieren</h3>
+<p><strong>Das Konzept:</strong>
+Swimlanes (Schwimmbahnen) unterteilen ein Aktivitätsdiagramm in vertikale oder horizontale Bereiche. Jede Bahn repräsentiert einen Akteur, eine Rolle oder eine Systemkomponente.</p>
+<p><strong>Warum Swimlanes?</strong>
+In komplexen Prozessen sind oft mehrere Parteien beteiligt:
+- Kunde, Webshop, Lager, Versanddienstleister
+- Benutzer, Frontend, Backend, Datenbank
+- Antragsteller, Sachbearbeiter, Manager</p>
+<p>Swimlanes machen auf einen Blick klar, WER für WELCHEN Schritt verantwortlich ist.</p>
+<p><strong>Darstellung:</strong>
+- Vertikale oder horizontale Bahnen
+- Jede Bahn hat eine Überschrift (Name des Akteurs/der Rolle)
+- Aktionen werden in der Bahn des Verantwortlichen platziert
+- Kontrollflüsse können Bahnen überqueren</p>
+<div style="text-align: center;"><img src="../bilder/act-5.svg" width="400"></div>
+
+<blockquote>
+<p><strong>Hinweis:</strong>
+Swimlanes sind optional, aber extrem nützlich für Prozesse mit mehreren Beteiligten. Sie erleichtern die Kommunikation zwischen Teams und Abteilungen enorm.</p>
+</blockquote>
+<hr>
+<h3 id="27-objektknoten-und-objektfluss">2.7 Objektknoten und Objektfluss</h3>
+<p>Bisher haben wir nur den <strong>Kontrollfluss</strong> betrachtet — die Reihenfolge der Aktionen. Aktivitätsdiagramme können zusätzlich zeigen, <strong>welche Daten</strong> durch den Prozess fließen. Dafür gibt es den <strong>Objektknoten</strong> und den <strong>Objektfluss</strong>.</p>
+<ul>
+<li><strong>Objektknoten (object node):</strong> ein <strong>Rechteck mit scharfen Ecken</strong> (im Gegensatz zur abgerundeten Aktion). Es steht für ein Datenobjekt, das erzeugt, weitergegeben oder verbraucht wird — z. B. <code>Bestellung</code>, <code>Rechnung</code>.</li>
+<li><strong>Objektfluss (object flow):</strong> ein Pfeil, der ein Objekt von einer Aktion zur nächsten weitergibt. Er zeigt, dass die Zielaktion dieses Objekt als <strong>Eingabe</strong> braucht.</li>
+<li><strong>Objektzustand:</strong> In eckigen Klammern kann der Zustand des Objekts stehen, z. B. <code>Bestellung [bezahlt]</code> — dasselbe Objekt in einer späteren Phase.</li>
+</ul>
+<p><strong>Beispiel (in Worten):</strong> Die Aktion <code>Bestellung aufnehmen</code> erzeugt den Objektknoten <code>Bestellung [neu]</code>. Dieser fließt zur Aktion <code>Bezahlung verarbeiten</code>, die daraus <code>Bestellung [bezahlt]</code> macht, die wiederum zur Aktion <code>Versenden</code> fließt.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Abgerundetes Rechteck = Aktion (etwas passiert). Scharfeckiges Rechteck = Objektknoten (ein Datending fließt). Der Objektfluss zeigt, welche Aktion welches Objekt braucht.</p>
+</blockquote>
+<h3 id="28-signale-und-zeitereignisse">2.8 Signale und Zeitereignisse</h3>
+<p>Prozesse warten manchmal auf ein Ereignis von außen oder auf einen Zeitpunkt. Dafür gibt es besondere Notationselemente:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Signal senden</strong> (send signal)</td>
+<td>konvexes Fünfeck (Spitze nach außen)</td>
+<td>Der Prozess schickt ein Signal an einen anderen Prozess/Empfänger</td>
+</tr>
+<tr>
+<td><strong>Signal empfangen</strong> (accept event)</td>
+<td>konkaves Fünfeck (Einkerbung innen)</td>
+<td>Der Prozess <strong>wartet</strong> auf ein Signal und macht erst weiter, wenn es eintrifft</td>
+</tr>
+<tr>
+<td><strong>Zeitereignis</strong> (time event)</td>
+<td>Sanduhr-Symbol</td>
+<td>Der Prozess wartet auf einen Zeitpunkt oder eine Dauer (z. B. „nach 24 Stunden")</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Typischer Einsatz:</strong> Ein Bestellprozess sendet nach dem Versand das Signal „Versandbestätigung" (Fünfeck nach außen) und wartet danach mit einem Zeitereignis (Sanduhr) „nach 14 Tagen" auf die mögliche Rücksendung.</p>
+<blockquote>
+<p><strong>Prüfungstipp (IHK):</strong>
+Das <strong>konkave</strong> Fünfeck (Einkerbung) bedeutet <strong>Warten/Empfangen</strong>, das <strong>konvexe</strong> (Spitze) bedeutet <strong>Senden</strong>. Die Sanduhr ist immer ein Zeitereignis. Diese Symbole werden in Prüfungen gern zum Zuordnen abgefragt.</p>
+</blockquote>
+<h2 id="3-prozessmuster-sequenzen-entscheidungen-schleifen-parallelitat">3. Prozessmuster: Sequenzen, Entscheidungen, Schleifen, Parallelität</h2>
+<h3 id="31-sequenzen-die-einfache-abfolge">3.1 Sequenzen: Die einfache Abfolge</h3>
+<p>Eine Sequenz ist die grundlegendste Struktur: Eine Aktion folgt der anderen, ohne Verzweigungen oder Parallelität.</p>
+<p><strong>Beispiel: Kaffee kochen</strong></p>
+<pre><code>Start → Wasser kochen → Kaffee aufbrühen → Kaffee servieren → Ende
+</code></pre>
+<p><strong>Wann verwenden?</strong>
+- Für einfache, lineare Abläufe
+- Als Basis für komplexere Prozesse
+- Wenn keine Entscheidungen oder Parallelität nötig sind</p>
+<div style="text-align: center;"><img src="../bilder/act-6.svg" width="400"></div>
+
+<h3 id="32-entscheidungen-verzweigungen-im-prozess">3.2 Entscheidungen: Verzweigungen im Prozess</h3>
+<p>Entscheidungen ermöglichen alternative Pfade basierend auf Bedingungen. Sie entsprechen if-else-Strukturen in der Programmierung.</p>
+<p><strong>Beispiel: Volljährigkeit prüfen</strong></p>
+<pre><code>Start → Alter prüfen → [Alter &gt;= 18] → Zugang gewähren → Ende
+                     → [Alter &lt; 18] → Zugang verweigern → Ende
+</code></pre>
+<p><strong>Wichtige Regeln:</strong>
+- Jeder ausgehende Pfad muss eine Bedingung haben
+- Die Bedingungen müssen sich gegenseitig ausschließen
+- Alle möglichen Fälle müssen abgedeckt sein</p>
+<div style="text-align: center;"><img src="../bilder/act-7.svg" width="400"></div>
+
+<h3 id="33-schleifen-wiederholungen-modellieren">3.3 Schleifen: Wiederholungen modellieren</h3>
+<p>Eine Schleife ist keine neue Form, sondern eine clevere Anwendung des Entscheidungsknotens. Der Kontrollfluss wird von einem Punkt nach der Entscheidung zurück zu einem Punkt vor der Entscheidung geführt.</p>
+<p><strong>Beispiel: Passwort-Eingabe mit maximal 3 Versuchen</strong></p>
+<pre><code>Start → Passwort eingeben → Passwort korrekt? → [Ja] → Zugang gewährt → Ende
+                                              → [Nein, Versuche &lt; 3] → (zurück zu Passwort eingeben)
+                                              → [Nein, Versuche &gt;= 3] → Zugang verweigert → Ende
+</code></pre>
+<p><strong>Wann verwenden?</strong>
+- Für Wiederholungen mit Abbruchbedingung
+- Für Validierungen mit mehreren Versuchen
+- Für Iterationen über Datenstrukturen</p>
+<div style="text-align: center;"><img src="../bilder/act-8.svg" width="400"></div>
+
+<blockquote>
+<p><strong>Tipp:</strong>
+Achten Sie darauf, dass Schleifen immer eine Abbruchbedingung haben. Endlosschleifen sind in Aktivitätsdiagrammen ein Fehler (außer bei absichtlich dauerhaften Prozessen wie "Server läuft").</p>
+</blockquote>
+<h3 id="34-parallelitat-fork-und-join-in-der-praxis">3.4 Parallelität: Fork und Join in der Praxis</h3>
+<p>Parallelität ist das mächtigste Feature von Aktivitätsdiagrammen. Sie ermöglicht die Darstellung von Prozessen, die gleichzeitig ablaufen.</p>
+<p><strong>Beispiel: Morgenroutine</strong></p>
+<pre><code>Start → Aufstehen → Fork → Zähne putzen → Join → Zur Arbeit gehen → Ende
+                         → Kaffee kochen →
+</code></pre>
+<p>Beide Aktivitäten (Zähne putzen, Kaffee kochen) laufen parallel. Der Join wartet, bis beide abgeschlossen sind.</p>
+<p><strong>Praktisches Beispiel: Online-Bestellung</strong></p>
+<pre><code>Start → Bestellung aufgeben → Fork → Lager informieren → Artikel kommissionieren → Join → Paket versenden → Ende
+                                   → Rechnung erstellen → Rechnung versenden →
+</code></pre>
+<div style="text-align: center;"><img src="../bilder/act-9.svg" width="400"></div>
+
+<hr>
+<h2 id="4-vollstandiges-beispiel-online-bestellprozess-mit-swimlanes">4. Vollständiges Beispiel: Online-Bestellprozess mit Swimlanes</h2>
+<h3 id="41-das-szenario">4.1 Das Szenario</h3>
+<p>Wir modellieren einen Online-Bestellprozess mit folgenden Beteiligten:
+- <strong>Kunde</strong>: Wählt Artikel aus, geht zur Kasse, zahlt
+- <strong>Webshop</strong>: Prüft Verfügbarkeit, bestätigt Bestellung
+- <strong>Lager</strong>: Kommissioniert Artikel, packt Paket
+- <strong>Versand</strong>: Holt Paket ab, stellt zu</p>
+<h3 id="42-der-prozessablauf">4.2 Der Prozessablauf</h3>
+<ol>
+<li>Kunde wählt Artikel aus</li>
+<li>Kunde geht zur Kasse</li>
+<li>Webshop prüft Verfügbarkeit</li>
+<li><strong>Entscheidung</strong>: Verfügbar?
+   - <strong>Nein</strong>: Bestellung abbrechen
+   - <strong>Ja</strong>: Weiter</li>
+<li>Kunde führt Zahlung durch</li>
+<li><strong>Entscheidung</strong>: Zahlung erfolgreich?
+   - <strong>Nein</strong>: Bestellung abbrechen
+   - <strong>Ja</strong>: Weiter</li>
+<li>Webshop bestätigt Bestellung</li>
+<li><strong>Fork</strong>: Parallele Prozesse starten
+   - Lager kommissioniert Artikel
+   - Lager packt Paket</li>
+<li><strong>Join</strong>: Warten auf Lager</li>
+<li>Versand holt Paket ab</li>
+<li>Versand stellt Paket zu</li>
+<li>Ende</li>
+</ol>
+<div style="text-align: center;"><img src="../bilder/act-10.svg" width="600"></div>
+
+<h3 id="44-was-zeigt-dieses-diagramm">4.4 Was zeigt dieses Diagramm?</h3>
+<p><strong>Zuständigkeiten:</strong>
+- Jede Swimlane zeigt klar, wer für welchen Schritt verantwortlich ist
+- Der Kontrollfluss überquert Swimlanes (z.B. von Kunde zu Webshop)</p>
+<p><strong>Entscheidungen:</strong>
+- Zwei Entscheidungsknoten prüfen Verfügbarkeit und Zahlungserfolg
+- Bei Fehlern endet der Prozess vorzeitig (mehrere Endknoten)</p>
+<p><strong>Parallelität:</strong>
+- Nach der Bestellbestätigung laufen Kommissionierung und Verpackung parallel
+- Der Join wartet, bis beide Schritte abgeschlossen sind</p>
+<p><strong>Realitätsnähe:</strong>
+- Das Diagramm bildet einen realen Geschäftsprozess ab
+- Es ist Grundlage für Implementierung und Optimierung</p>
+<hr>
+<h2 id="5-aktivitatsdiagramme-vs-programmablaufplane">5. Aktivitätsdiagramme vs. Programmablaufpläne</h2>
+<h3 id="51-gemeinsamkeiten">5.1 Gemeinsamkeiten</h3>
+<p>Beide Diagrammtypen:
+- Visualisieren Abläufe und Prozesse
+- Verwenden Symbole für Aktionen und Entscheidungen
+- Zeigen den Kontrollfluss mit Pfeilen
+- Sind hilfreich für Planung und Dokumentation</p>
+<h3 id="52-unterschiede">5.2 Unterschiede</h3>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Programmablaufplan (PAP)</th>
+<th>Aktivitätsdiagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard</strong></td>
+<td>DIN 66001 (veraltet)</td>
+<td>UML (aktuell)</td>
+</tr>
+<tr>
+<td><strong>Parallelität</strong></td>
+<td>Nicht darstellbar</td>
+<td>Fork/Join</td>
+</tr>
+<tr>
+<td><strong>Zuständigkeiten</strong></td>
+<td>Nicht darstellbar</td>
+<td>Swimlanes</td>
+</tr>
+<tr>
+<td><strong>Komplexität</strong></td>
+<td>Einfache Algorithmen</td>
+<td>Komplexe Geschäftsprozesse</td>
+</tr>
+<tr>
+<td><strong>Verwendung</strong></td>
+<td>Algorithmische Abläufe</td>
+<td>Prozessmodellierung, Use-Case-Detaillierung</td>
+</tr>
+<tr>
+<td><strong>Verbreitung</strong></td>
+<td>Veraltet, kaum noch genutzt</td>
+<td>Standard in der Softwareentwicklung</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Der Programmablaufplan ist der Vorläufer des Aktivitätsdiagramms. Aktivitätsdiagramme sind mächtiger, standardisierter und in der modernen Softwareentwicklung unverzichtbar.</p>
+</blockquote>
+<hr>
+<h2 id="6-praktische-tipps-fur-gute-aktivitatsdiagramme">6. Praktische Tipps für gute Aktivitätsdiagramme</h2>
+<h3 id="61-halte-es-ubersichtlich">6.1 Halte es übersichtlich</h3>
+<p><strong>Problem:</strong> Zu viele Aktionen, zu viele Verzweigungen, zu viele Swimlanes.</p>
+<p><strong>Lösung:</strong>
+- Fokussiere auf den Hauptprozess
+- Lagere Teilprozesse in separate Diagramme aus
+- Verwende maximal 5-7 Swimlanes
+- Begrenze die Anzahl der Aktionen auf 15-20</p>
+<h3 id="62-verwende-klare-benennungen">6.2 Verwende klare Benennungen</h3>
+<p><strong>Aktionen:</strong>
+- Gut: "Karte eingeben", "Daten validieren", "E-Mail senden"
+- Schlecht: "Schritt 1", "Verarbeitung", "Aktion"</p>
+<p><strong>Bedingungen:</strong>
+- Gut: "[Alter &gt;= 18]", "[Zahlung erfolgreich]", "[Lagerbestand &gt; 0]"
+- Schlecht: "[Ja]", "[OK]", "[Weiter]"</p>
+<h3 id="63-prufe-die-logik">6.3 Prüfe die Logik</h3>
+<p><strong>Entscheidungen:</strong>
+- Alle Pfade müssen Bedingungen haben
+- Bedingungen müssen sich gegenseitig ausschließen
+- Alle Fälle müssen abgedeckt sein</p>
+<p><strong>Fork/Join:</strong>
+- Jeder Fork braucht einen Join
+- Join wartet auf alle parallelen Pfade
+- Keine "verwaisten" Pfade</p>
+<h3 id="64-nutze-swimlanes-sinnvoll">6.4 Nutze Swimlanes sinnvoll</h3>
+<p><strong>Wann Swimlanes?</strong>
+- Bei Prozessen mit mehreren Beteiligten
+- Wenn Zuständigkeiten unklar sind
+- Für Kommunikation zwischen Teams</p>
+<p><strong>Wann keine Swimlanes?</strong>
+- Bei einfachen, linearen Abläufen
+- Wenn nur ein Akteur beteiligt ist
+- Bei rein algorithmischen Prozessen</p>
+<h3 id="65-dokumentiere-das-diagramm">6.5 Dokumentiere das Diagramm</h3>
+<p>Ein Aktivitätsdiagramm ist nur der Überblick. Ergänze es durch:
+- Textbeschreibungen der Aktionen
+- Erklärungen der Bedingungen
+- Hinweise auf Ausnahmefälle
+- Verweise auf Use Cases oder Anforderungen</p>
+<hr>
+<h2 id="7-vom-aktivitatsdiagramm-zum-code">7. Vom Aktivitätsdiagramm zum Code</h2>
+<p>Ein Aktivitätsdiagramm ist im Kern der <strong>Kontrollfluss</strong> eines Programms als Bild. Die Elemente lassen sich direkt in Programmstrukturen übersetzen:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Diagramm-Element</th>
+<th>Umsetzung im Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktion (abgerundetes Rechteck)</td>
+<td>Anweisung oder Methodenaufruf</td>
+</tr>
+<tr>
+<td>Kontrollfluss (Pfeil)</td>
+<td>Reihenfolge der Anweisungen</td>
+</tr>
+<tr>
+<td>Entscheidung (Raute)</td>
+<td><code>if</code> / <code>else</code> bzw. <code>switch</code></td>
+</tr>
+<tr>
+<td>Zusammenführung (Merge)</td>
+<td>Ende des <code>if</code>/<code>else</code>-Blocks</td>
+</tr>
+<tr>
+<td>Schleife (Rückfluss)</td>
+<td><code>while</code> / <code>for</code></td>
+</tr>
+<tr>
+<td>Fork / Join</td>
+<td>parallele Threads (<code>Thread</code>, <code>join()</code>)</td>
+</tr>
+<tr>
+<td>Swimlane</td>
+<td>Zuständigkeit einer Klasse/Komponente</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Entscheidung → Verzweigung, Rückfluss → Schleife, Fork/Join → Nebenläufigkeit.</p>
+</blockquote>
+<h2 id="typische-fehler">Typische Fehler</h2>
+<ul>
+<li><strong>Entscheidung ohne Wächterbedingungen</strong> — Raute mit unbeschrifteten Ausgängen. Folge: mehrdeutig, welcher Pfad wann gilt. An jeden Ausgang eine <code>[Bedingung]</code>.</li>
+<li><strong>Fork ohne Join (oder umgekehrt)</strong> — parallele Pfade werden nicht wieder zusammengeführt. Folge: unklarer Abschluss. Was per Fork geteilt wird, per Join synchronisieren.</li>
+<li><strong>Entscheidung mit Zusammenführung verwechselt</strong> — beide sind Rauten. Entscheidung: 1 Eingang / mehrere Ausgänge; Merge: mehrere Eingänge / 1 Ausgang.</li>
+<li><strong>Aktion als Zustand formuliert</strong> — Aktionen sind Verben („Rechnung erstellen"), keine stabilen Zustände.</li>
+<li><strong>Mehrere Startknoten</strong> — es gibt genau einen Startknoten je Diagramm.</li>
+</ul>
+<h2 id="8-zusammenfassung">8. Zusammenfassung</h2>
+<h3 id="81-kernkonzepte">8.1 Kernkonzepte</h3>
+<p><strong>Aktivitätsdiagramm:</strong>
+- Visualisiert Prozesse, Abläufe und Geschäftslogiken
+- Zeigt Sequenzen, Entscheidungen, Schleifen und Parallelität
+- Ist die moderne Weiterentwicklung des Programmablaufplans</p>
+<p><strong>Notationselemente:</strong>
+- <strong>Startknoten</strong> (⚫): Beginn des Prozesses
+- <strong>Endknoten</strong> (⊙): Ende des Prozesses
+- <strong>Aktion</strong>: Einzelner Arbeitsschritt
+- <strong>Kontrollfluss</strong>: Pfeil, der die Reihenfolge zeigt
+- <strong>Entscheidung</strong> (◊): Verzweigung (ODER-Logik)
+- <strong>Zusammenführung</strong> (◊): Pfade zusammenführen (ODER-Logik)
+- <strong>Fork</strong>: Parallele Prozesse starten (UND-Logik)
+- <strong>Join</strong>: Auf parallele Prozesse warten (UND-Logik)
+- <strong>Swimlanes</strong>: Zuständigkeiten visualisieren</p>
+<p><strong>Prozessmuster:</strong>
+- <strong>Sequenz</strong>: Einfache Abfolge
+- <strong>Entscheidung</strong>: if-else-Struktur
+- <strong>Schleife</strong>: Wiederholung mit Rückfluss
+- <strong>Parallelität</strong>: Fork/Join für gleichzeitige Abläufe</p>
+<h3 id="82-praktische-faustregeln">8.2 Praktische Faustregeln</h3>
+<ol>
+<li>
+<p><strong>Beginne mit dem Hauptprozess</strong>
+   - Was ist das Ziel?
+   - Welche Schritte sind nötig?</p>
+</li>
+<li>
+<p><strong>Identifiziere Entscheidungen</strong>
+   - Wo gibt es Verzweigungen?
+   - Welche Bedingungen sind relevant?</p>
+</li>
+<li>
+<p><strong>Erkenne Parallelität</strong>
+   - Welche Schritte können gleichzeitig ablaufen?
+   - Wo muss synchronisiert werden?</p>
+</li>
+<li>
+<p><strong>Nutze Swimlanes bei mehreren Beteiligten</strong>
+   - Wer ist wofür verantwortlich?
+   - Wo wechselt die Zuständigkeit?</p>
+</li>
+<li>
+<p><strong>Halte es einfach</strong>
+   - Nicht jedes Detail muss im Diagramm sein
+   - Fokus auf den Hauptablauf
+   - Lagere Teilprozesse aus</p>
+</li>
+</ol>
+<h3 id="83-wichtige-erkenntnisse">8.3 Wichtige Erkenntnisse</h3>
+<ul>
+<li>Aktivitätsdiagramme sind Werkzeuge zur Planung und Kommunikation</li>
+<li>Sie sind die Brücke zwischen Use Cases und Code</li>
+<li>Swimlanes machen Zuständigkeiten transparent</li>
+<li>Fork/Join ermöglichen die Darstellung von Parallelität</li>
+<li>In der IHK-Prüfung sind Aktivitätsdiagramme oft Teil der Projektdokumentation</li>
+</ul>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein Aktivitätsdiagramm ist wie ein Rezept: Es zeigt Schritt für Schritt, was zu tun ist, wer es tut und was parallel laufen kann. Es macht komplexe Prozesse überschaubar und kommunizierbar.</p>
+</blockquote>
+<hr>
+<h2 id="glossar">Glossar</h2>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktivitätsdiagramm (Activity Diagram)</td>
+<td>UML-Diagramm zur Modellierung von Prozessen, Abläufen und Geschäftslogiken mit Sequenzen, Entscheidungen, Schleifen und Parallelität</td>
+</tr>
+<tr>
+<td>Aktion (Action)</td>
+<td>Einzelner, atomarer Arbeitsschritt in einem Aktivitätsdiagramm; dargestellt als Rechteck mit abgerundeten Ecken</td>
+</tr>
+<tr>
+<td>Startknoten (Initial Node)</td>
+<td>Gefüllter schwarzer Kreis, markiert den eindeutigen Beginn eines Prozesses</td>
+</tr>
+<tr>
+<td>Endknoten (Activity Final Node)</td>
+<td>Gefüllter Kreis mit weißem Ring, markiert das Ende eines Prozesses; ein Diagramm kann mehrere davon haben</td>
+</tr>
+<tr>
+<td>Kontrollfluss (Control Flow)</td>
+<td>Pfeil, der die Reihenfolge der Aktionen zeigt; repräsentiert den "Token", der durch das Diagramm fließt</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Gedankliches Hilfsmittel: eine "Münze", die durch das Diagramm wandert und den aktuellen Ausführungspunkt markiert</td>
+</tr>
+<tr>
+<td>Entscheidungsknoten (Decision Node)</td>
+<td>Raute mit einem Eingang und mehreren Ausgängen; verzweigt den Kontrollfluss basierend auf einer Bedingung (ODER-Logik)</td>
+</tr>
+<tr>
+<td>Zusammenführungsknoten (Merge Node)</td>
+<td>Raute mit mehreren Eingängen und einem Ausgang; führt alternative Pfade wieder zusammen (ODER-Logik)</td>
+</tr>
+<tr>
+<td>Fork (Gabelung)</td>
+<td>Dicker schwarzer Balken mit einem Eingang und mehreren Ausgängen; startet parallele Kontrollflüsse (UND-Logik)</td>
+</tr>
+<tr>
+<td>Join (Synchronisation)</td>
+<td>Dicker schwarzer Balken mit mehreren Eingängen und einem Ausgang; wartet, bis alle parallelen Flüsse abgeschlossen sind (UND-Logik)</td>
+</tr>
+<tr>
+<td>Swimlane (Schwimmbahn)</td>
+<td>Vertikaler oder horizontaler Bereich, der Aktionen einem Akteur, einer Rolle oder einer Systemkomponente zuordnet</td>
+</tr>
+<tr>
+<td>Sequenz (Sequence)</td>
+<td>Grundlegendste Struktur: Aktionen folgen ohne Verzweigung oder Parallelität aufeinander</td>
+</tr>
+<tr>
+<td>Schleife (Loop)</td>
+<td>Wiederholung von Aktionen durch einen Kontrollfluss, der von einem Punkt nach einer Entscheidung zurück zu einem früheren Punkt führt</td>
+</tr>
+<tr>
+<td>Parallelität (Concurrency)</td>
+<td>Gleichzeitige Ausführung mehrerer Kontrollflüsse, dargestellt mit Fork und Join</td>
+</tr>
+<tr>
+<td>Programmablaufplan (PAP, Flowchart)</td>
+<td>Älterer, nach DIN 66001 genormter Diagrammtyp für Algorithmen; Vorläufer des Aktivitätsdiagramms ohne Parallelität und Zuständigkeiten</td>
+</tr>
+<tr>
+<td>Objektknoten (Object Node)</td>
+<td>Scharfeckiges Rechteck für ein Datenobjekt, das im Prozess erzeugt, weitergegeben oder verbraucht wird</td>
+</tr>
+<tr>
+<td>Objektfluss (Object Flow)</td>
+<td>Pfeil, der ein Objekt von einer Aktion zur nächsten weitergibt; zeigt den Datenfluss zusätzlich zum Kontrollfluss</td>
+</tr>
+<tr>
+<td>Signal senden / empfangen</td>
+<td>Konvexes Fünfeck (senden) bzw. konkaves Fünfeck (empfangen/warten) für Signale zwischen Prozessen</td>
+</tr>
+<tr>
+<td>Zeitereignis (Time Event)</td>
+<td>Sanduhr-Symbol; der Prozess wartet auf einen Zeitpunkt oder eine Dauer</td>
+</tr>
+<tr>
+<td>Use Case</td>
+<td>Im Use-Case-Diagramm beschriebene Systemfunktion; das Aktivitätsdiagramm zeigt den detaillierten Ablauf ("Wie") dazu</td>
+</tr>
+</tbody>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_4.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 4: Aktivitätsdiagramme</div></a><a class="blatt blatt--weiter" href="a4_ue_aufgaben-7-3-aktivitaet.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Aktivitätsdiagramm</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-warum-brauchen-wir-aktivitatsdiagramme">1. Warum brauchen wir Aktivitätsdiagramme?</a><a href="#11-das-problem-komplexe-ablaufe-verstehen" class="stufe3">1.1 Das Problem: Komplexe Abläufe verstehen</a><a href="#12-die-weiterentwicklung-des-programmablaufplans" class="stufe3">1.2 Die Weiterentwicklung des Programmablaufplans</a><a href="#13-wann-verwende-ich-aktivitatsdiagramme" class="stufe3">1.3 Wann verwende ich Aktivitätsdiagramme?</a><a href="#14-die-rolle-im-entwicklungsprozess" class="stufe3">1.4 Die Rolle im Entwicklungsprozess</a><a href="#2-die-notationselemente-die-bausteine-eines-aktivitatsdiagramms">2. Die Notationselemente: Die Bausteine eines Aktivitätsdiagramms</a><a href="#21-ubersicht-die-legende" class="stufe3">2.1 Übersicht: Die Legende</a><a href="#22-startknoten-und-endknoten" class="stufe3">2.2 Startknoten und Endknoten</a><a href="#23-aktionen-und-kontrollfluss" class="stufe3">2.3 Aktionen und Kontrollfluss</a><a href="#24-entscheidungsknoten-und-zusammenfuhrungsknoten" class="stufe3">2.4 Entscheidungsknoten und Zusammenführungsknoten</a><a href="#25-fork-und-join-parallelitat-modellieren" class="stufe3">2.5 Fork und Join: Parallelität modellieren</a><a href="#26-swimlanes-zustandigkeiten-visualisieren" class="stufe3">2.6 Swimlanes: Zuständigkeiten visualisieren</a><a href="#27-objektknoten-und-objektfluss" class="stufe3">2.7 Objektknoten und Objektfluss</a><a href="#28-signale-und-zeitereignisse" class="stufe3">2.8 Signale und Zeitereignisse</a><a href="#3-prozessmuster-sequenzen-entscheidungen-schleifen-parallelitat">3. Prozessmuster: Sequenzen, Entscheidungen, Schleifen, Parallelität</a><a href="#31-sequenzen-die-einfache-abfolge" class="stufe3">3.1 Sequenzen: Die einfache Abfolge</a><a href="#32-entscheidungen-verzweigungen-im-prozess" class="stufe3">3.2 Entscheidungen: Verzweigungen im Prozess</a><a href="#33-schleifen-wiederholungen-modellieren" class="stufe3">3.3 Schleifen: Wiederholungen modellieren</a><a href="#34-parallelitat-fork-und-join-in-der-praxis" class="stufe3">3.4 Parallelität: Fork und Join in der Praxis</a><a href="#4-vollstandiges-beispiel-online-bestellprozess-mit-swimlanes">4. Vollständiges Beispiel: Online-Bestellprozess mit Swimlanes</a><a href="#41-das-szenario" class="stufe3">4.1 Das Szenario</a><a href="#42-der-prozessablauf" class="stufe3">4.2 Der Prozessablauf</a><a href="#44-was-zeigt-dieses-diagramm" class="stufe3">4.4 Was zeigt dieses Diagramm?</a><a href="#5-aktivitatsdiagramme-vs-programmablaufplane">5. Aktivitätsdiagramme vs. Programmablaufpläne</a><a href="#51-gemeinsamkeiten" class="stufe3">5.1 Gemeinsamkeiten</a><a href="#52-unterschiede" class="stufe3">5.2 Unterschiede</a><a href="#6-praktische-tipps-fur-gute-aktivitatsdiagramme">6. Praktische Tipps für gute Aktivitätsdiagramme</a><a href="#61-halte-es-ubersichtlich" class="stufe3">6.1 Halte es übersichtlich</a><a href="#62-verwende-klare-benennungen" class="stufe3">6.2 Verwende klare Benennungen</a><a href="#63-prufe-die-logik" class="stufe3">6.3 Prüfe die Logik</a><a href="#64-nutze-swimlanes-sinnvoll" class="stufe3">6.4 Nutze Swimlanes sinnvoll</a><a href="#65-dokumentiere-das-diagramm" class="stufe3">6.5 Dokumentiere das Diagramm</a><a href="#7-vom-aktivitatsdiagramm-zum-code">7. Vom Aktivitätsdiagramm zum Code</a><a href="#typische-fehler">Typische Fehler</a><a href="#8-zusammenfassung">8. Zusammenfassung</a><a href="#81-kernkonzepte" class="stufe3">8.1 Kernkonzepte</a><a href="#82-praktische-faustregeln" class="stufe3">8.2 Praktische Faustregeln</a><a href="#83-wichtige-erkenntnisse" class="stufe3">8.3 Wichtige Erkenntnisse</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

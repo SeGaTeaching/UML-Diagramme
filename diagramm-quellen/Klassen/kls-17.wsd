@@ -1,19 +1,6 @@
 @startuml
 !include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
-rectangle "UML: Klasse" as A #E1F5FF
-rectangle "Python: class" as B #C8E6C9
-rectangle "UML: Attribut" as C #E1F5FF
-rectangle "Python: self._attribut" as D #C8E6C9
-rectangle "UML: Methode" as E #E1F5FF
-rectangle "Python: def methode()" as F #C8E6C9
-rectangle "UML: Vererbung" as G #E1F5FF
-rectangle "Python: class Kind(Parent)" as H #C8E6C9
-rectangle "UML: Assoziation" as I #E1F5FF
-rectangle "Python: Referenz-Attribut" as J #C8E6C9
-
-A -right-> B : wird zu
-C -right-> D : wird zu
-E -right-> F : wird zu
-G -right-> H : wird zu
-I -right-> J : wird zu
+class Kunde
+class Warenkorb
+Kunde "1" --> "1" Warenkorb : besitzt >
 @enduml

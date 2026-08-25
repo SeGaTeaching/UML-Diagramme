@@ -4,7 +4,7 @@ Diese Aufgaben gehören zum Skript `7.5_UML-Zustand.md`. Modellieren Sie jeweils
 
 ---
 
-## Teil A — Zwischenübungen (Vormittag)
+## Teil A — Grundübungen
 
 ### Aufgabe A1 [leicht]: Verkehrsampel
 
@@ -113,7 +113,7 @@ Diese Aufgabe übt, dass dasselbe Ereignis (`play()` bzw. `stop()`) von mehreren
 
 ---
 
-## Teil B — Selbstlernphase (Nachmittag)
+## Teil B — Vertiefungsaufgaben
 
 ### Aufgabe B1 [leicht]: Lichtschalter
 

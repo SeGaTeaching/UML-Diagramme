@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="406px" preserveAspectRatio="none" style="width:272px;height:406px;" version="1.1" viewBox="0 0 272 406" width="272px" zoomAndPan="magnify"><defs/><g><ellipse cx="100.5" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="79" x="61" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="61" x2="140" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="71" y="106.9951">Stehend</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="77" x="6" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="83" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="16" y="234.9951">Fahrend</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="89" x="54" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="54" x2="143" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="64" y="362.9951">TuerOffen</text><!--link *start to Stehend--><path d="M100.5,28.01 C100.5,40.7 100.5,64.41 100.5,83.57 " fill="none" id="*start-Stehend" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="100.5,88.84,104.5,79.84,100.5,83.84,96.5,79.84,100.5,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Stehend to Fahrend--><path d="M89.7,139.29 C80.44,160.12 67.09,190.17 57.3,212.21 " fill="none" id="Stehend-Fahrend" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="55.26,216.78,62.5743,210.1845,57.2933,212.2121,55.2657,206.9311,55.26,216.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="77.5" y="182.9951">rufen()</text><!--link Fahrend to TuerOffen--><path d="M37.29,267.32 C34.33,281.76 32.94,300.09 39.5,315 C43.83,324.83 50.93,333.65 58.73,341.17 " fill="none" id="Fahrend-TuerOffen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="62.6,344.76,58.7145,335.71,58.9315,341.3627,53.2788,341.5796,62.6,344.76" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="40.5" y="310.9951">ankommen()</text><!--link TuerOffen to Stehend--><path d="M118.31,344.95 C124.42,336.08 130.36,325.61 133.5,315 C151.9,252.77 149.89,231.52 132.5,169 C130.04,160.14 125.72,151.26 121.04,143.32 " fill="none" id="TuerOffen-Stehend" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="118.41,139.02,119.6727,148.7876,121.0097,143.291,126.5063,144.628,118.41,139.02" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="147.5" y="246.9951">tuerSchliessen()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Stehend
+
+Stehend - -> Fahrend : rufen()
+Fahrend - -> TuerOffen : ankommen()
+TuerOffen - -> Stehend : tuerSchliessen()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

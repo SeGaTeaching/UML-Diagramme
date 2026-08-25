@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="533px" preserveAspectRatio="none" style="width:376px;height:533px;" version="1.1" viewBox="0 0 376 533" width="376px" zoomAndPan="magnify"><defs/><g><ellipse cx="179" cy="20" fill="#000000" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="157" x="100.5" y="94"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="137" x="110.5" y="116.9951">Bewerbung senden</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="184" x="87" y="150.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="164" x="97" y="173.292">Rückmeldung abwarten</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="180" x="158" y="230.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="160" x="168" y="253.5889">Vertrag unterschreiben</text><ellipse cx="248" cy="300.1875" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="248" cy="300.1875" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="143" x="176.5" y="355.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="186.5" y="378.1826">Suche abbrechen</text><ellipse cx="248" cy="422.4844" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="248" cy="422.4844" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><polygon fill="#FFF9C4" points="36.5,206.5938,141.5,206.5938,153.5,218.5938,141.5,230.5938,36.5,230.5938,24.5,218.5938,36.5,206.5938" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="105" x="36.5" y="223.4404">Angenommen?</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="153.5" y="215.292">[ja]</text><polygon fill="#FFF9C4" points="32,331.1875,146,331.1875,158,343.1875,146,355.1875,32,355.1875,20,343.1875,32,331.1875" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="93" y="368.1826">[nein]</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="114" x="32" y="348.0342">Versuche &gt;= 3?</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="158" y="339.8857">[ja]</text><polygon fill="#FFF9C4" points="179,453.4844,191,465.4844,179,477.4844,167,465.4844,179,453.4844" style="stroke: #FBC02D; stroke-width: 1.5;"/><polygon fill="#FFF9C4" points="179,50,191,62,179,74,167,62,179,50" style="stroke: #FBC02D; stroke-width: 1.5;"/><polygon fill="#FFF9C4" points="46.5,497.4844,311.5,497.4844,323.5,509.4844,311.5,521.4844,46.5,521.4844,34.5,509.4844,46.5,497.4844" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="265" x="46.5" y="514.3311">Abgelehnt, weitere Versuche möglich?</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="179" y1="130.2969" y2="150.2969"/><polygon fill="#1976D2" points="175,140.2969,179,150.2969,183,140.2969,179,144.2969" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="248" x2="248" y1="266.8906" y2="289.1875"/><polygon fill="#1976D2" points="244,279.1875,248,289.1875,252,279.1875,248,283.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="248" x2="248" y1="391.4844" y2="411.4844"/><polygon fill="#1976D2" points="244,401.4844,248,411.4844,252,401.4844,248,405.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="153.5" x2="248" y1="218.5938" y2="218.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="248" x2="248" y1="218.5938" y2="230.5938"/><polygon fill="#1976D2" points="244,220.5938,248,230.5938,252,220.5938,248,224.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="158" x2="248" y1="343.1875" y2="343.1875"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="248" x2="248" y1="343.1875" y2="355.1875"/><polygon fill="#1976D2" points="244,345.1875,248,355.1875,252,345.1875,248,349.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="89" x2="89" y1="230.5938" y2="331.1875"/><polygon fill="#1976D2" points="85,321.1875,89,331.1875,93,321.1875,89,325.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="179" y1="186.5938" y2="191.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="89" y1="191.5938" y2="191.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="89" x2="89" y1="191.5938" y2="206.5938"/><polygon fill="#1976D2" points="85,196.5938,89,206.5938,93,196.5938,89,200.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="89" x2="89" y1="355.1875" y2="438.4844"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="89" x2="179" y1="438.4844" y2="438.4844"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="179" y1="438.4844" y2="453.4844"/><polygon fill="#1976D2" points="175,443.4844,179,453.4844,183,443.4844,179,447.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="179" y1="74" y2="94"/><polygon fill="#1976D2" points="175,84,179,94,183,84,179,88" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="323.5" x2="350" y1="509.4844" y2="509.4844"/><polygon fill="#1976D2" points="346,286.8906,350,276.8906,354,286.8906,350,282.8906" style="stroke: #1976D2; stroke-width: 1.5;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="350" x2="350" y1="62" y2="509.4844"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="350" x2="191" y1="62" y2="62"/><polygon fill="#1976D2" points="201,58,191,62,201,66,197,62" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="179" y1="477.4844" y2="497.4844"/><polygon fill="#1976D2" points="175,487.4844,179,497.4844,183,487.4844,179,491.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="179" x2="179" y1="30" y2="50"/><polygon fill="#1976D2" points="175,40,179,50,183,40,179,44" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+start
+repeat
+  :Bewerbung senden;
+  :Rückmeldung abwarten;
+  if (Angenommen?) then ([ja])
+    :Vertrag unterschreiben;
+    stop
+  elseif (Versuche >= 3?) then ([ja])
+    :Suche abbrechen;
+    stop
+  else ([nein])
+  endif
+repeat while (Abgelehnt, weitere Versuche möglich?)
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

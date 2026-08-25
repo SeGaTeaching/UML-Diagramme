@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="104px" preserveAspectRatio="none" style="width:670px;height:104px;" version="1.1" viewBox="0 0 670 104" width="670px" zoomAndPan="magnify"><defs/><g><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="208" x="6" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="214" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="49" y="25.9951">DatenVerarbeiten</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="176" x="11" y="52.292">entry / Verbindung öffnen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="155" x="11" y="68.5889">do / Daten verarbeiten</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="188" x="11" y="84.8857">exit / Verbindung schließen</text><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="153" x="249.5" y="24"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="249.5" x2="402.5" y1="50.2969" y2="50.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="270" y="41.9951">KarteVerifizieren</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="133" x="254.5" y="68.292">entry / Karte prüfen</text><rect fill="#E3F2FD" height="85.1875" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="220" x="438" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="438" x2="658" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="504.5" y="25.9951">BonDrucken</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="187" x="443" y="52.292">entry / Drucker initialisieren</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="443" y="68.5889">do / Bon drucken</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="200" x="443" y="84.8857">exit / Drucker herunterfahren</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+state DatenVerarbeiten {
+}
+DatenVerarbeiten : entry / Verbindung öffnen
+DatenVerarbeiten : do / Daten verarbeiten
+DatenVerarbeiten : exit / Verbindung schließen
+
+state KarteVerifizieren {
+}
+KarteVerifizieren : entry / Karte prüfen
+
+state BonDrucken {
+}
+BonDrucken : entry / Drucker initialisieren
+BonDrucken : do / Bon drucken
+BonDrucken : exit / Drucker herunterfahren
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,11 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+[*] --> Aus
+Aus --> Angeschaltet : einschalten
+state Angeschaltet {
+  [*] --> Spielt
+  Spielt --> Pausiert : pause
+  Pausiert --> Spielt : play
+}
+Angeschaltet --> Aus : ausschalten
+@enduml

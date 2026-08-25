@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="534px" preserveAspectRatio="none" style="width:250px;height:534px;" version="1.1" viewBox="0 0 250 534" width="250px" zoomAndPan="magnify"><defs/><g><ellipse cx="103" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="50" x="78" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="78" x2="128" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="91" y="106.9951">Rot</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="76" x="6" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="82" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="16" y="234.9951">RotGelb</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="63" x="15.5" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="15.5" x2="78.5" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="25.5" y="362.9951">Gruen</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="52" x="77" y="473"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="77" x2="129" y1="499.2969" y2="499.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="87" y="490.9951">Gelb</text><!--link *start to Rot--><path d="M103,28.01 C103,40.7 103,64.41 103,83.57 " fill="none" id="*start-Rot" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="103,88.84,107,79.84,103,83.84,99,79.84,103,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Rot to RotGelb--><path d="M77.77,135.99 C68.45,145.14 58.77,156.61 53,169 C46.85,182.21 44.42,198.18 43.61,211.72 " fill="none" id="Rot-RotGelb" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="43.36,216.97,47.768,208.1626,43.589,211.9752,39.7764,207.7963,43.36,216.97" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="54" y="182.9951">zeitAblauf()</text><!--link RotGelb to Gruen--><path d="M38.73,267.32 C36.35,281.26 34.4,299.11 36,315 C36.83,323.2 38.34,331.99 39.99,340.05 " fill="none" id="RotGelb-Gruen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="41.03,344.97,43.0689,335.3345,39.9892,340.0795,35.2441,336.9998,41.03,344.97" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="37" y="310.9951">zeitAblauf()</text><!--link Gruen to Gelb--><path d="M45.15,395.31 C44.98,409.74 46.42,428.08 53,443 C57.65,453.55 65.23,463.37 73.1,471.67 " fill="none" id="Gruen-Gelb" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="76.98,475.61,73.5375,466.3824,73.4804,472.0389,67.8238,471.9818,76.98,475.61" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="54" y="438.9951">zeitAblauf()</text><!--link Gelb to Rot--><path d="M121.69,472.8 C127.45,463.92 133.05,453.47 136,443 C168.98,325.77 168.98,286.23 136,169 C133.51,160.17 129.14,151.35 124.37,143.47 " fill="none" id="Gelb-Rot" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="121.69,139.2,123.0768,148.9507,124.3438,143.4376,129.857,144.7046,121.69,139.2" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="161" y="310.9951">zeitAblauf()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Rot
+
+Rot - -> RotGelb : zeitAblauf()
+RotGelb - -> Gruen : zeitAblauf()
+Gruen - -> Gelb : zeitAblauf()
+Gelb - -> Rot : zeitAblauf()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

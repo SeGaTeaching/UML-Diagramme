@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="217px" preserveAspectRatio="none" style="width:814px;height:217px;" version="1.1" viewBox="0 0 814 217" width="814px" zoomAndPan="magnify"><defs/><g><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="116" x2="116" y1="34.2969" y2="177.1875"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="422" x2="422" y1="34.2969" y2="177.1875"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="216" x="8" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="202" x="15" y="22.9951">redaktion: Redaktionssystem</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="216" x="8" y="176.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="202" x="15" y="196.1826">redaktion: Redaktionssystem</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="178" x="333" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="164" x="340" y="22.9951">versand: Versanddienst</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="178" x="333" y="176.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="164" x="340" y="196.1826">versand: Versanddienst</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="116" x2="158" y1="66.5938" y2="66.5938"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="158" x2="158" y1="66.5938" y2="79.5938"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="117" x2="158" y1="79.5938" y2="79.5938"/><polygon fill="#1976D2" points="127,75.5938,117,79.5938,127,83.5938,123,79.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="123" y="61.292">erstelleNewsletter()</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="420" x2="410" y1="112.8906" y2="108.8906"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="420" x2="410" y1="112.8906" y2="116.8906"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="116" x2="421" y1="112.8906" y2="112.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="282" x="123" y="107.5889">sendeNewsletterAnAlle(empfaengerliste)</text><path d="M427,98.5938 L427,112.5938 A6,6 0 0 0 433,118.5938 L796,118.5938 A6,6 0 0 0 802,112.5938 L802,102.5938 L792,92.5938 L433,92.5938 A6,6 0 0 0 427,98.5938 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M792,92.5938 L792,99.5938 A3,3 0 0 0 795,102.5938 L802,102.5938 L792,92.5938 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="354" x="433" y="110.5889">Asynchron: Redaktion wartet nicht auf den Versand</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="116" x2="158" y1="146.1875" y2="146.1875"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="158" x2="158" y1="146.1875" y2="159.1875"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="117" x2="158" y1="159.1875" y2="159.1875"/><polygon fill="#1976D2" points="127,155.1875,117,159.1875,127,163.1875,123,159.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="123" y="140.8857">zeigeErfolgsmeldung()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+participant "redaktion: Redaktionssystem" as Redaktion
+participant "versand: Versanddienst" as Versand
+
+Redaktion -> Redaktion: erstelleNewsletter()
+Redaktion ->> Versand: sendeNewsletterAnAlle(empfaengerliste)
+note right: Asynchron: Redaktion wartet nicht auf den Versand
+Redaktion -> Redaktion: zeigeErfolgsmeldung()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

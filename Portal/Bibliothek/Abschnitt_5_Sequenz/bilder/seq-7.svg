@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="668px" preserveAspectRatio="none" style="width:1059px;height:668px;" version="1.1" viewBox="0 0 1059 668" width="1059px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="457.0469" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="268.5" y="114.5938"/><rect fill="#ECEFF1" height="90.8906" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="537.5" y="171.4844"/><rect fill="#ECEFF1" height="151.4844" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="537.5" y="326.2656"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="781.5" y="201.7813"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="781.5" y="417.1563"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="935.5" y="356.5625"/><rect fill="#FFFFFF" height="140.7813" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="622.5" x="221.5" y="129.5938"/><rect fill="#FFFFFF" height="280.2656" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="1034" x="13" y="284.375"/><rect fill="#FFFFFF" height="48.5938" style="stroke: none; stroke-width: 1.0;" width="1034" x="13" y="516.0469"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="48" x2="48" y1="82.2969" y2="581.6406"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="273.5" x2="273.5" y1="82.2969" y2="581.6406"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="542.5" x2="542.5" y1="82.2969" y2="581.6406"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="786" x2="786" y1="82.2969" y2="581.6406"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="940" x2="940" y1="82.2969" y2="581.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="23" y="78.9951">Kunde</text><ellipse cx="48.5" cy="13" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M48.5,21 L48.5,48 M35.5,29 L61.5,29 M48.5,48 L35.5,63 M48.5,48 L61.5,63 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="23" y="593.6357">Kunde</text><ellipse cx="48.5" cy="606.9375" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M48.5,614.9375 L48.5,641.9375 M35.5,622.9375 L61.5,622.9375 M48.5,641.9375 L35.5,656.9375 M48.5,641.9375 L61.5,656.9375 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="84" x="231.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="238.5" y="70.9951">ui: ShopUI</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="84" x="231.5" y="580.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="238.5" y="600.6357">ui: ShopUI</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="158" x="463.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="144" x="470.5" y="70.9951">ctrl: BestellController</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="158" x="463.5" y="580.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="144" x="470.5" y="600.6357">ctrl: BestellController</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="95" x="739" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="746" y="70.9951">lager: Lager</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="95" x="739" y="580.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="746" y="600.6357">lager: Lager</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="193" x="844" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="179" x="851" y="70.9951">zahlung: Zahlungssystem</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="193" x="844" y="580.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="179" x="851" y="600.6357">zahlung: Zahlungssystem</text><rect fill="#ECEFF1" height="457.0469" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="268.5" y="114.5938"/><rect fill="#ECEFF1" height="90.8906" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="537.5" y="171.4844"/><rect fill="#ECEFF1" height="151.4844" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="537.5" y="326.2656"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="781.5" y="201.7813"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="781.5" y="417.1563"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="935.5" y="356.5625"/><polygon fill="#1976D2" points="256.5,110.5938,266.5,114.5938,256.5,118.5938,260.5,114.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="48.5" x2="262.5" y1="114.5938" y2="114.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="55.5" y="109.292">bestelleProdukte(warenkorb)</text><path d="M227.5,129.5938 L300.5,129.5938 L300.5,137.5938 L290.5,147.5938 L221.5,147.5938 L221.5,135.5938 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="140.7813" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="622.5" x="221.5" y="129.5938"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="34" x="236.5" y="143.5889">loop</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="315.5" y="144.5889">[für jedes Produkt]</text><polygon fill="#1976D2" points="525.5,167.4844,535.5,171.4844,525.5,175.4844,529.5,171.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="278.5" x2="531.5" y1="171.4844" y2="171.4844"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="210" x="285.5" y="166.1826">pruefeVerfuegbarkeit(produkt)</text><polygon fill="#1976D2" points="769.5,197.7813,779.5,201.7813,769.5,205.7813,773.5,201.7813" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="547.5" x2="775.5" y1="201.7813" y2="201.7813"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="554.5" y="196.4795">istVerfuegbar(produkt)</text><polygon fill="#1976D2" points="558.5,228.0781,548.5,232.0781,558.5,236.0781,554.5,232.0781" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="552.5" x2="785.5" y1="232.0781" y2="232.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="564.5" y="226.7764">verfuegbar</text><polygon fill="#1976D2" points="289.5,258.375,279.5,262.375,289.5,266.375,285.5,262.375" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="283.5" x2="541.5" y1="262.375" y2="262.375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="295.5" y="257.0732">verfuegbar</text><path d="M19,284.375 L77,284.375 L77,292.375 L67,302.375 L13,302.375 L13,290.375 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="280.2656" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="1034" x="13" y="284.375"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="28" y="298.3701">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="199" x="92" y="299.3701">[alle Produkte verfügbar]</text><polygon fill="#1976D2" points="525.5,322.2656,535.5,326.2656,525.5,330.2656,529.5,326.2656" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="278.5" x2="531.5" y1="326.2656" y2="326.2656"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="240" x="285.5" y="320.9639">bestaetigenBestellung(warenkorb)</text><polygon fill="#1976D2" points="923.5,352.5625,933.5,356.5625,923.5,360.5625,927.5,356.5625" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="547.5" x2="929.5" y1="356.5625" y2="356.5625"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="181" x="554.5" y="351.2607">verarbeiteZahlung(betrag)</text><polygon fill="#1976D2" points="558.5,382.8594,548.5,386.8594,558.5,390.8594,554.5,386.8594" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="552.5" x2="939.5" y1="386.8594" y2="386.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="564.5" y="381.5576">erfolg</text><polygon fill="#1976D2" points="769.5,413.1563,779.5,417.1563,769.5,421.1563,773.5,417.1563" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="547.5" x2="775.5" y1="417.1563" y2="417.1563"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="215" x="554.5" y="411.8545">reserviereProdukte(warenkorb)</text><polygon fill="#1976D2" points="558.5,443.4531,548.5,447.4531,558.5,451.4531,554.5,447.4531" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="552.5" x2="785.5" y1="447.4531" y2="447.4531"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="564.5" y="442.1514">reserviert</text><polygon fill="#1976D2" points="289.5,473.75,279.5,477.75,289.5,481.75,285.5,477.75" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="283.5" x2="541.5" y1="477.75" y2="477.75"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="295.5" y="472.4482">bestellungErfolgreich</text><polygon fill="#1976D2" points="59.5,504.0469,49.5,508.0469,59.5,512.0469,55.5,508.0469" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="53.5" x2="267.5" y1="508.0469" y2="508.0469"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="65.5" y="502.7451">zeigeBestaetigung()</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="1047" y1="517.0469" y2="517.0469"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="211" x="18" y="530.042">[Produkte nicht verfügbar]</text><polygon fill="#1976D2" points="59.5,552.6406,49.5,556.6406,59.5,560.6406,55.5,556.6406" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="53.5" x2="267.5" y1="556.6406" y2="556.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="152" x="65.5" y="551.3389">zeigeFehlermeldung()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+actor Kunde
+participant "ui: ShopUI" as UI
+participant "ctrl: BestellController" as Ctrl
+participant "lager: Lager" as Lager
+participant "zahlung: Zahlungssystem" as Zahlung
+
+Kunde -> UI: bestelleProdukte(warenkorb)
+activate UI
+
+loop für jedes Produkt
+    UI -> Ctrl: pruefeVerfuegbarkeit(produkt)
+    activate Ctrl
+    Ctrl -> Lager: istVerfuegbar(produkt)
+    activate Lager
+    Lager - -> Ctrl: verfuegbar
+    deactivate Lager
+    Ctrl - -> UI: verfuegbar
+    deactivate Ctrl
+end
+
+alt alle Produkte verfügbar
+    UI -> Ctrl: bestaetigenBestellung(warenkorb)
+    activate Ctrl
+    Ctrl -> Zahlung: verarbeiteZahlung(betrag)
+    activate Zahlung
+    Zahlung - -> Ctrl: erfolg
+    deactivate Zahlung
+    Ctrl -> Lager: reserviereProdukte(warenkorb)
+    activate Lager
+    Lager - -> Ctrl: reserviert
+    deactivate Lager
+    Ctrl - -> UI: bestellungErfolgreich
+    deactivate Ctrl
+    UI - -> Kunde: zeigeBestaetigung()
+else Produkte nicht verfügbar
+    UI - -> Kunde: zeigeFehlermeldung()
+end
+
+deactivate UI
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

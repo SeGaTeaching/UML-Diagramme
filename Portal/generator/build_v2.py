@@ -35,7 +35,7 @@ except ImportError:
 
 GEN = Path(__file__).resolve().parent
 WURZEL = GEN.parent
-AUS = WURZEL / "HTML"
+AUS = WURZEL.parent / "docs"
 AUS_MAT = AUS / "mat"
 AUS_ASSETS = AUS / "assets"
 AUS_BILD = AUS / "bilder"

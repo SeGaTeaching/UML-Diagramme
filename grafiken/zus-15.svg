@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="493px" preserveAspectRatio="none" style="width:198px;height:493px;" version="1.1" viewBox="0 0 198 493" width="198px" zoomAndPan="magnify"><defs/><g><ellipse cx="77.88" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="50" x="52.88" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="52.88" x2="102.88" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="64.88" y="106.9951">Aus</text><rect fill="#E3F2FD" height="265.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="123" x="16.38" y="217"/><rect fill="#FFFFFF" height="233" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="117" x="19.38" y="246.2969"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="16.38" x2="139.38" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="91" x="32.38" y="234.9951">Angeschaltet</text><ellipse cx="65.38" cy="266.2969" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="58" x="36.38" y="313.2969"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="36.38" x2="94.38" y1="339.5938" y2="339.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="38" x="46.38" y="331.292">Spielt</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="76" x="27.38" y="417.2969"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="27.38" x2="103.38" y1="443.5938" y2="443.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="37.38" y="435.292">Pausiert</text><!--link *start*Angeschaltet to Spielt--><path d="M65.38,276.4469 C65.38,284.4869 65.38,296.6269 65.38,307.9469 " fill="none" id="*start*Angeschaltet-Spielt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="65.38,313.0769,69.38,304.0769,65.38,308.0769,61.38,304.0769,65.38,313.0769" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Spielt to Pausiert--><path d="M42.12,363.4169 C38.13,368.9069 34.56,374.9869 32.38,381.2969 C28.67,392.0169 32.31,403.0769 38.33,412.7369 " fill="none" id="Spielt-Pausiert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="41.25,417.0669,39.5474,407.3663,38.46,412.9177,32.9087,411.8303,41.25,417.0669" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="33.38" y="395.292">pause</text><!--link Pausiert to Spielt--><path d="M73.99,417.1769 C76.9,406.2669 79.04,393.1869 77.38,381.2969 C76.79,377.0869 75.88,372.7069 74.83,368.4269 " fill="none" id="Pausiert-Spielt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="73.53,363.4769,71.9465,373.1976,74.7997,368.313,79.6843,371.1661,73.53,363.4769" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="27" x="78.38" y="395.292">play</text><!--link *start to Aus--><path d="M77.88,28.01 C77.88,40.7 77.88,64.41 77.88,83.57 " fill="none" id="*start-Aus" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="77.88,88.84,81.88,79.84,77.88,83.84,73.88,79.84,77.88,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Aus to Angeschaltet--><path d="M52.75,128.7 C38.48,137.99 21.91,151.73 13.88,169 C2.07,194.42 5.09,222.68 14.41,249.11 " fill="none" id="Aus-Angeschaltet" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="16.22,254.02,16.8676,244.1925,14.4941,249.3273,9.3593,246.9539,16.22,254.02" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="14.88" y="182.9951">einschalten</text><!--link Angeschaltet to Aus--><path d="M103.56,216.79 C103.9,200.64 102.9,184.41 99.88,169 C98.24,160.61 95.29,151.88 92.06,143.94 " fill="none" id="Angeschaltet-Aus" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="90.03,139.11,89.836,148.9569,91.9703,143.7182,97.2091,145.8525,90.03,139.11" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="102.88" y="182.9951">ausschalten</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Aus
+Aus - -> Angeschaltet : einschalten
+state Angeschaltet {
+  [*] - -> Spielt
+  Spielt - -> Pausiert : pause
+  Pausiert - -> Spielt : play
+}
+Angeschaltet - -> Aus : ausschalten
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

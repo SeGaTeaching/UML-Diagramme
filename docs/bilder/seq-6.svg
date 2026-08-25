@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="371px" preserveAspectRatio="none" style="width:886px;height:371px;" version="1.1" viewBox="0 0 886 371" width="886px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="151.4844" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="270" y="114.5938"/><rect fill="#ECEFF1" height="90.8906" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="487" y="144.8906"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="817" y="175.1875"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="43" x2="43" y1="82.2969" y2="284.0781"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="274.5" x2="274.5" y1="82.2969" y2="284.0781"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="492" x2="492" y1="82.2969" y2="284.0781"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="821.5" x2="821.5" y1="82.2969" y2="284.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="8" y="78.9951">Benutzer</text><ellipse cx="43" cy="13" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M43,21 L43,48 M30,29 L56,29 M43,48 L30,63 M43,48 L56,63 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="8" y="296.0732">Benutzer</text><ellipse cx="43" cy="309.375" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M43,317.375 L43,344.375 M30,325.375 L56,325.375 M43,344.375 L30,359.375 M43,344.375 L56,359.375 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="85" x="232.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="239.5" y="70.9951">ui: LoginUI</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="85" x="232.5" y="283.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="239.5" y="303.0732">ui: LoginUI</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="148" x="418" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="425" y="70.9951">ctrl: LoginController</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="148" x="418" y="283.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="425" y="303.0732">ctrl: LoginController</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="107" x="768.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="775.5" y="70.9951">db: Database</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="107" x="768.5" y="283.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="775.5" y="303.0732">db: Database</text><rect fill="#ECEFF1" height="151.4844" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="270" y="114.5938"/><rect fill="#ECEFF1" height="90.8906" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="487" y="144.8906"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="817" y="175.1875"/><polygon fill="#1976D2" points="258,110.5938,268,114.5938,258,118.5938,262,114.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="43" x2="264" y1="114.5938" y2="114.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="50" y="109.292">gibBenutzerdatenEin()</text><polygon fill="#1976D2" points="475,140.8906,485,144.8906,475,148.8906,479,144.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="280" x2="481" y1="144.8906" y2="144.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="188" x="287" y="139.5889">login(username, password)</text><polygon fill="#1976D2" points="805,171.1875,815,175.1875,805,179.1875,809,175.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="497" x2="811" y1="175.1875" y2="175.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="301" x="504" y="169.8857">pruefeAnmeldedaten(username, password)</text><polygon fill="#1976D2" points="508,201.4844,498,205.4844,508,209.4844,504,205.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="502" x2="821" y1="205.4844" y2="205.4844"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="514" y="200.1826">true</text><polygon fill="#1976D2" points="291,231.7813,281,235.7813,291,239.7813,287,235.7813" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="285" x2="491" y1="235.7813" y2="235.7813"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="297" y="230.4795">erfolg</text><polygon fill="#1976D2" points="54,262.0781,44,266.0781,54,270.0781,50,266.0781" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="48" x2="274" y1="266.0781" y2="266.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="203" x="60" y="260.7764">zeigeWillkommensnachricht()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+actor Benutzer
+participant "ui: LoginUI" as UI
+participant "ctrl: LoginController" as Ctrl
+participant "db: Database" as DB
+
+Benutzer -> UI: gibBenutzerdatenEin()
+activate UI
+
+UI -> Ctrl: login(username, password)
+activate Ctrl
+
+Ctrl -> DB: pruefeAnmeldedaten(username, password)
+activate DB
+DB - -> Ctrl: true
+deactivate DB
+
+Ctrl - -> UI: erfolg
+deactivate Ctrl
+
+UI - -> Benutzer: zeigeWillkommensnachricht()
+deactivate UI
+
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="406px" preserveAspectRatio="none" style="width:890px;height:406px;" version="1.1" viewBox="0 0 890 406" width="890px" zoomAndPan="magnify"><defs/><g><ellipse cx="429.47" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="50" x="404.47" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="404.47" x2="454.47" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="416.47" y="106.9951">Aus</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="68" x="86.47" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="86.47" x2="154.47" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="96.47" y="234.9951">Heizen</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="76" x="293.47" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="293.47" x2="369.47" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="303.47" y="362.9951">Standby</text><!--link *start to Aus--><path d="M429.47,28.01 C429.47,40.7 429.47,64.41 429.47,83.57 " fill="none" id="*start-Aus" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="429.47,88.84,433.47,79.84,429.47,83.84,425.47,79.84,429.47,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Aus to Heizen--><path d="M404.3,114.69 C329.26,114.36 109.6,117.84 65.47,169 C52.59,183.93 65.51,201.51 82.06,215.56 " fill="none" id="Aus-Heizen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="86.33,219.05,81.9026,210.2524,82.4621,215.8815,76.833,216.441,86.33,219.05" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="260" x="66.47" y="182.9951">einschalten() [Temperatur &lt; Zielwert]</text><!--link Heizen to Aus--><path d="M154.72,236.36 C197.64,229.64 272.68,214.82 331.47,187 C356.48,175.16 381.57,156.57 400.11,141.24 " fill="none" id="Heizen-Aus" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="404.2,137.82,394.7292,140.5227,400.3636,141.0266,399.8597,146.6609,404.2,137.82" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="360.47" y="182.9951">ausschalten()</text><!--link Aus to Standby--><path d="M448.53,139.18 C454.45,148.06 460.26,158.51 463.47,169 C482.44,231.08 503.93,261.29 467.47,315 C446.81,345.43 406.03,358.71 374.49,364.51 " fill="none" id="Aus-Standby" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="369.51,365.38,379.0623,367.7788,374.4361,364.5233,377.6915,359.8971,369.51,365.38" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="272" x="487.47" y="246.9951">einschalten() [Temperatur &gt;= Zielwert]</text><!--link Standby to Aus--><path d="M369.61,366.01 C466.63,357.53 718.65,329.78 768.47,267 C854.63,158.42 557.23,125.02 459.53,117.1 " fill="none" id="Standby-Aus" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="454.48,116.7,463.1447,121.3823,459.4651,117.0857,463.7617,113.4061,454.48,116.7" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="784.47" y="246.9951">ausschalten()</text><!--link Heizen to Standby--><path d="M86.19,251.31 C45.81,262.68 -12.77,285.14 12.47,315 C47.28,356.2 209.36,365.97 288.19,368.29 " fill="none" id="Heizen-Standby" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="293.26,368.43,284.3779,364.1746,288.262,368.2872,284.1494,372.1713,293.26,368.43" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="13.47" y="310.9951">zielwertErreicht()</text><!--link Standby to Heizen--><path d="M293.47,363.29 C258.66,356.53 207.14,342.51 170.47,315 C155.35,303.66 143.14,286.38 134.57,271.6 " fill="none" id="Standby-Heizen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="132.02,267.1,132.9567,276.9042,134.4761,271.4552,139.9251,272.9745,132.02,267.1" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="291" x="171.47" y="310.9951">temperaturSinkt() [Temperatur &lt; Zielwert]</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Aus
+
+Aus - -> Heizen : einschalten() [Temperatur < Zielwert]
+Aus - -> Standby : einschalten() [Temperatur >= Zielwert]
+Heizen - -> Standby : zielwertErreicht()
+Standby - -> Heizen : temperaturSinkt() [Temperatur < Zielwert]
+Heizen - -> Aus : ausschalten()
+Standby - -> Aus : ausschalten()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

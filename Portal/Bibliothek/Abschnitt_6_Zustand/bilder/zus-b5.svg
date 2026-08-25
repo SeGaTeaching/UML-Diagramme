@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="487px" preserveAspectRatio="none" style="width:595px;height:487px;" version="1.1" viewBox="0 0 595 487" width="595px" zoomAndPan="magnify"><defs/><g><ellipse cx="350.74" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="52" x="324.74" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="324.74" x2="376.74" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="334.74" y="106.9951">Aktiv</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="81" x="310.24" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="310.24" x2="391.24" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="320.24" y="234.9951">Gesperrt</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="101" x="374.24" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="374.24" x2="475.24" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="384.24" y="362.9951">Gekuendigt</text><ellipse cx="424.74" cy="466" fill="none" rx="10" ry="10" style="stroke: #222222; stroke-width: 1.0;"/><ellipse cx="425.24" cy="466.5" fill="#222222" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/><!--link *start to Aktiv--><path d="M350.74,28.01 C350.74,40.7 350.74,64.41 350.74,83.57 " fill="none" id="*start-Aktiv" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="350.74,88.84,354.74,79.84,350.74,83.84,346.74,79.84,350.74,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Aktiv to Gesperrt--><path d="M324.67,114.99 C252.24,115.57 51.29,121.5 10.74,169 C-28.65,215.14 203.66,233.22 305.11,238.85 " fill="none" id="Aktiv-Gesperrt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="310.13,239.13,301.3608,234.6467,305.1374,238.8582,300.9259,242.6348,310.13,239.13" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="295" x="11.74" y="182.9951">beitragUeberfaellig() [Beitrag nicht bezahlt]</text><!--link Gesperrt to Aktiv--><path d="M348.88,216.68 C348.03,202.73 347.3,184.88 347.74,169 C347.96,161.07 348.36,152.49 348.8,144.56 " fill="none" id="Gesperrt-Aktiv" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="349.11,139.18,344.6031,147.9371,348.8248,144.1719,352.59,148.3935,349.11,139.18" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="348.74" y="182.9951">beitragBezahlen()</text><!--link Aktiv to Gekuendigt--><path d="M376.83,117.84 C406.78,122.64 454.6,135.42 476.74,169 C512.46,223.17 501,254.82 476.74,315 C472.85,324.65 466.32,333.53 459.18,341.19 " fill="none" id="Aktiv-Gekuendigt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="455.63,344.85,464.7566,341.1479,459.1007,341.2508,458.9978,335.5949,455.63,344.85" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="499.74" y="246.9951">kuendigen()</text><!--link Gesperrt to Gekuendigt--><path d="M361.7,267.15 C368.42,281.36 377.49,299.52 386.74,315 C391.8,323.47 397.75,332.35 403.42,340.4 " fill="none" id="Gesperrt-Gekuendigt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="406.54,344.78,404.6151,335.1211,403.6555,340.696,398.0806,339.7363,406.54,344.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="387.74" y="310.9951">kuendigen()</text><!--link Gekuendigt to *end--><path d="M424.74,395.21 C424.74,412.84 424.74,436.13 424.74,450.84 " fill="none" id="Gekuendigt-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="424.74,455.84,428.74,446.84,424.74,450.84,420.74,446.84,424.74,455.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Aktiv
+
+Aktiv - -> Gesperrt : beitragUeberfaellig() [Beitrag nicht bezahlt]
+Gesperrt - -> Aktiv : beitragBezahlen()
+Aktiv - -> Gekuendigt : kuendigen()
+Gesperrt - -> Gekuendigt : kuendigen()
+
+Gekuendigt - -> [*]
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

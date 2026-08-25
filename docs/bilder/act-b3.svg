@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="372px" preserveAspectRatio="none" style="width:387px;height:372px;" version="1.1" viewBox="0 0 387 372" width="387px" zoomAndPan="magnify"><defs/><g><ellipse cx="211" cy="20" fill="#000000" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="123" x="149.5" y="50"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="159.5" y="72.9951">Ziel auswählen</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="156" x="133" y="106.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="143" y="129.292">Zahlungsart wählen</text><polygon fill="#FFF9C4" points="166,162.5938,256,162.5938,268,174.5938,256,186.5938,166,186.5938,154,174.5938,166,162.5938" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="166" y="179.4404">Zahlungsart?</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="91" y="171.292">[Bargeld]</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="268" y="171.292">[Karte]</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="209" x="10" y="196.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="189" x="20" y="219.5889">Münzen/Scheine einwerfen</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="137" x="239" y="196.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="249" y="219.5889">Karte einstecken</text><polygon fill="#FFF9C4" points="211,238.8906,223,250.8906,211,262.8906,199,250.8906,211,238.8906" style="stroke: #FBC02D; stroke-width: 1.5;"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="136" x="143" y="282.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="153" y="305.8857">Ticket ausgeben</text><ellipse cx="211" cy="350.1875" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="211" cy="350.1875" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="211" x2="211" y1="30" y2="50"/><polygon fill="#1976D2" points="207,40,211,50,215,40,211,44" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="211" x2="211" y1="86.2969" y2="106.2969"/><polygon fill="#1976D2" points="207,96.2969,211,106.2969,215,96.2969,211,100.2969" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="154" x2="114.5" y1="174.5938" y2="174.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="114.5" x2="114.5" y1="174.5938" y2="196.5938"/><polygon fill="#1976D2" points="110.5,186.5938,114.5,196.5938,118.5,186.5938,114.5,190.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="268" x2="307.5" y1="174.5938" y2="174.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="307.5" x2="307.5" y1="174.5938" y2="196.5938"/><polygon fill="#1976D2" points="303.5,186.5938,307.5,196.5938,311.5,186.5938,307.5,190.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="114.5" x2="114.5" y1="232.8906" y2="250.8906"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="114.5" x2="199" y1="250.8906" y2="250.8906"/><polygon fill="#1976D2" points="189,246.8906,199,250.8906,189,254.8906,193,250.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="307.5" x2="307.5" y1="232.8906" y2="250.8906"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="307.5" x2="223" y1="250.8906" y2="250.8906"/><polygon fill="#1976D2" points="233,246.8906,223,250.8906,233,254.8906,229,250.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="211" x2="211" y1="142.5938" y2="162.5938"/><polygon fill="#1976D2" points="207,152.5938,211,162.5938,215,152.5938,211,156.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="211" x2="211" y1="262.8906" y2="282.8906"/><polygon fill="#1976D2" points="207,272.8906,211,282.8906,215,272.8906,211,276.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="211" x2="211" y1="319.1875" y2="339.1875"/><polygon fill="#1976D2" points="207,329.1875,211,339.1875,215,329.1875,211,333.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+start
+:Ziel auswählen;
+:Zahlungsart wählen;
+if (Zahlungsart?) then ([Bargeld])
+  :Münzen/Scheine einwerfen;
+else ([Karte])
+  :Karte einstecken;
+endif
+:Ticket ausgeben;
+stop
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

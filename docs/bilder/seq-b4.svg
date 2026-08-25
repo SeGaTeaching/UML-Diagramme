@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="466px" preserveAspectRatio="none" style="width:751px;height:466px;" version="1.1" viewBox="0 0 751 466" width="751px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="254.6719" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="422" y="114.5938"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="639" y="175.1875"/><rect fill="#FFFFFF" height="141.7813" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="561" x="13" y="220.4844"/><rect fill="#FFFFFF" height="48.5938" style="stroke: none; stroke-width: 1.0;" width="561" x="13" y="313.6719"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="56" x2="56" y1="82.2969" y2="379.2656"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="426.5" x2="426.5" y1="82.2969" y2="379.2656"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="643.5" x2="643.5" y1="82.2969" y2="379.2656"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="23" y="78.9951">Fahrgast</text><ellipse cx="56" cy="13" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M56,21 L56,48 M43,29 L69,29 M56,48 L43,63 M56,48 L69,63 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="23" y="391.2607">Fahrgast</text><ellipse cx="56" cy="404.5625" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M56,412.5625 L56,439.5625 M43,420.5625 L69,420.5625 M56,439.5625 L43,454.5625 M56,439.5625 L69,454.5625 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="211" x="321.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="197" x="328.5" y="70.9951">automat: Fahrkartenautomat</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="211" x="321.5" y="378.2656"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="197" x="328.5" y="398.2607">automat: Fahrkartenautomat</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="193" x="547.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="179" x="554.5" y="70.9951">zahlung: Zahlungssystem</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="193" x="547.5" y="378.2656"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="179" x="554.5" y="398.2607">zahlung: Zahlungssystem</text><rect fill="#ECEFF1" height="254.6719" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="422" y="114.5938"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="639" y="175.1875"/><polygon fill="#1976D2" points="410,110.5938,420,114.5938,410,118.5938,414,114.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="56" x2="416" y1="114.5938" y2="114.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="147" x="63" y="109.292">waehleFahrkarte(ziel)</text><polygon fill="#1976D2" points="410,140.8906,420,144.8906,410,148.8906,414,144.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="56" x2="416" y1="144.8906" y2="144.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="138" x="63" y="139.5889">legeGeldEin(betrag)</text><polygon fill="#1976D2" points="627,171.1875,637,175.1875,627,179.1875,631,175.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="432" x2="633" y1="175.1875" y2="175.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="188" x="439" y="169.8857">pruefeBetrag(betrag, preis)</text><polygon fill="#1976D2" points="443,201.4844,433,205.4844,443,209.4844,439,205.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="437" x2="643" y1="205.4844" y2="205.4844"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="154" x="449" y="200.1826">guthabenAusreichend</text><path d="M19,220.4844 L77,220.4844 L77,228.4844 L67,238.4844 L13,238.4844 L13,226.4844 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="141.7813" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="561" x="13" y="220.4844"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="28" y="234.4795">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="92" y="235.4795">[Guthaben ausreichend]</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="432" x2="474" y1="262.375" y2="262.375"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="474" x2="474" y1="262.375" y2="275.375"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="433" x2="474" y1="275.375" y2="275.375"/><polygon fill="#1976D2" points="443,271.375,433,275.375,443,279.375,439,275.375" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="439" y="257.0732">druckeFahrkarte()</text><polygon fill="#1976D2" points="67,301.6719,57,305.6719,67,309.6719,63,305.6719" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="61" x2="421" y1="305.6719" y2="305.6719"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="239" x="73" y="300.3701">gibFahrkarteUndWechselgeldAus()</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="574" y1="314.6719" y2="314.6719"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="236" x="18" y="327.667">[Guthaben nicht ausreichend]</text><polygon fill="#1976D2" points="67,350.2656,57,354.2656,67,358.2656,63,354.2656" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="61" x2="421" y1="354.2656" y2="354.2656"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="342" x="73" y="348.9639">zeigeFehlermeldung("Bitte mehr Geld einwerfen")</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+actor Fahrgast
+participant "automat: Fahrkartenautomat" as Automat
+participant "zahlung: Zahlungssystem" as Zahlung
+
+Fahrgast -> Automat: waehleFahrkarte(ziel)
+activate Automat
+
+Fahrgast -> Automat: legeGeldEin(betrag)
+Automat -> Zahlung: pruefeBetrag(betrag, preis)
+activate Zahlung
+Zahlung - -> Automat: guthabenAusreichend
+deactivate Zahlung
+
+alt Guthaben ausreichend
+    Automat -> Automat: druckeFahrkarte()
+    Automat - -> Fahrgast: gibFahrkarteUndWechselgeldAus()
+else Guthaben nicht ausreichend
+    Automat - -> Fahrgast: zeigeFehlermeldung("Bitte mehr Geld einwerfen")
+end
+
+deactivate Automat
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

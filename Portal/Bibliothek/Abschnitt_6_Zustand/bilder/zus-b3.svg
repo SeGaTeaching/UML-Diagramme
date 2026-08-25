@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="278px" preserveAspectRatio="none" style="width:484px;height:278px;" version="1.1" viewBox="0 0 484 278" width="484px" zoomAndPan="magnify"><defs/><g><ellipse cx="144.6" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="61" x="114.1" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="114.1" x2="175.1" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="124.1" y="106.9951">Bereit</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="155" x="67.1" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="67.1" x2="222.1" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="77.1" y="234.9951">GetraenkAusgeben</text><!--link *start to Bereit--><path d="M144.6,28.01 C144.6,40.7 144.6,64.41 144.6,83.57 " fill="none" id="*start-Bereit" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="144.6,88.84,148.6,79.84,144.6,83.84,140.6,79.84,144.6,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bereit to Bereit--><path d="M175.26,104.47 C193.25,102.44 210.1,105.62 210.1,114 C210.1,121.6 196.27,124.92 180.28,123.96 " fill="none" id="Bereit-Bereit" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="175.26,123.53,183.8844,128.2861,180.2416,123.9582,184.5695,120.3155,175.26,123.53" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="256" x="216.1" y="118.9951">waehlen() [Betrag nicht ausreichend]</text><!--link Bereit to GetraenkAusgeben--><path d="M113.97,117.82 C82.3,122.55 34.36,135.2 11.6,169 C-6.78,196.31 24.74,214.14 61.69,225.22 " fill="none" id="Bereit-GetraenkAusgeben" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="66.7,226.67,59.1626,220.3307,61.8962,225.2832,56.9437,228.0168,66.7,226.67" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="218" x="12.6" y="182.9951">waehlen() [Betrag ausreichend]</text><!--link GetraenkAusgeben to Bereit--><path d="M209.18,216.9 C230.74,204.84 246.76,188.61 235.6,169 C223.73,148.16 200.31,134.53 180.2,126.18 " fill="none" id="GetraenkAusgeben-Bereit" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="175.43,124.27,182.3007,131.3264,180.0724,126.127,185.2719,123.8986,175.43,124.27" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="239.6" y="182.9951">ausgabeFertig()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Bereit
+
+Bereit - -> Bereit : waehlen() [Betrag nicht ausreichend]
+Bereit - -> GetraenkAusgeben : waehlen() [Betrag ausreichend]
+GetraenkAusgeben - -> Bereit : ausgabeFertig()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

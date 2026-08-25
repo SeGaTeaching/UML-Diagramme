@@ -1,0 +1,776 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sequenzdiagramme: Die Interaktions-Sicht · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 5: Sequenzdiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a><a href="../Abschnitt_4.html">Kapitel 4: Aktivitätsdiagramme</a><a href="../Abschnitt_6.html">Kapitel 6: Zustandsdiagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 5</div><a href="../Abschnitt_5.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a5_lt_7-4-uml-sequenz.html" class="hier">Sequenzdiagramme: Die Interaktions-Sicht</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a5_ue_aufgaben-7-4-sequenz.html">Aufgaben — Sequenzdiagramme</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_5.html">Kapitel 5</a><span>›</span>Sequenzdiagramme: Die Interaktions-Sicht</div><h1>Sequenzdiagramme: Die Interaktions-Sicht</h1><h2 id="lernziele">Lernziele</h2>
+<ul>
+<li>Verstehen, warum Sequenzdiagramme für die Modellierung von Objektinteraktionen unverzichtbar sind</li>
+<li>Die Notationselemente eines Sequenzdiagramms kennen und korrekt anwenden können</li>
+<li>Synchrone und asynchrone Nachrichten unterscheiden und einsetzen können</li>
+<li>Objekterzeugung, Selbstaufrufe und Objektzerstörung modellieren können</li>
+<li>Fragmente (alt, opt, loop) für Kontrollstrukturen verwenden können</li>
+<li>Den Unterschied zwischen Modellierung und Dokumentation verstehen</li>
+</ul>
+<hr>
+<h2 id="1-warum-brauchen-wir-sequenzdiagramme">1. Warum brauchen wir Sequenzdiagramme?</h2>
+<h3 id="11-das-problem-wer-spricht-wann-mit-wem">1.1 Das Problem: Wer spricht wann mit wem?</h3>
+<p>Stellen Sie sich vor, Sie sollen einem neuen Teammitglied erklären, wie der Login-Prozess in Ihrer Anwendung funktioniert. Sie beginnen: "Der Benutzer gibt seine Daten in die UI ein, die UI ruft den Controller auf, der Controller fragt die Datenbank..." Aber schon nach wenigen Sätzen wird es unübersichtlich. In welcher Reihenfolge passiert das genau? Wer wartet auf wen? Welche Objekte sind beteiligt?</p>
+<p>Textbeschreibungen von Objektinteraktionen sind:
+- Mehrdeutig und schwer nachzuvollziehen
+- Anfällig für Missverständnisse über die zeitliche Abfolge
+- Schwierig zu warten und zu aktualisieren
+- Ungeeignet für komplexe Interaktionen mit vielen Objekten</p>
+<p><strong>Das Sequenzdiagramm löst dieses Problem.</strong> Es visualisiert den dynamischen Austausch von Nachrichten (Methodenaufrufen) zwischen verschiedenen Objekten über die Zeit auf eine klare, standardisierte Weise.</p>
+<h3 id="12-die-zentrale-frage-wer-spricht-wann-mit-wem">1.2 Die zentrale Frage: Wer spricht wann mit wem?</h3>
+<p>Während Klassendiagramme die statische Struktur zeigen (welche Klassen existieren, welche Attribute und Methoden sie haben), zeigen Sequenzdiagramme die dynamische Sicht: <strong>Wie kommunizieren Objekte zur Laufzeit miteinander?</strong></p>
+<p><strong>Klassendiagramm:</strong>
+- Zeigt Klassen, Attribute, Methoden
+- Statische Struktur
+- "Was existiert?"</p>
+<p><strong>Sequenzdiagramm:</strong>
+- Zeigt Objekte, Nachrichten, zeitliche Abfolge
+- Dynamisches Verhalten
+- "Wer spricht wann mit wem?"</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Das Sequenzdiagramm ist das wichtigste Verhaltensdiagramm der UML. Es zeigt nicht die Struktur, sondern die Interaktion zwischen Objekten über die Zeit.</p>
+</blockquote>
+<h3 id="13-modellierung-vs-dokumentation">1.3 Modellierung vs. Dokumentation</h3>
+<p>Ein Sequenzdiagramm kann sehr detailliert werden und komplexe Algorithmen mit Schleifen und Bedingungen abbilden. Daher stellt sich oft die Frage: Nutzt man es vor dem Programmieren zur Modellierung oder danach zur Dokumentation?</p>
+<p><strong>Zur Modellierung:</strong>
+- Hilfreich, um eine noch unklare Interaktion zwischen Objekten zu planen
+- Vor der Implementierung: "Wie soll das System funktionieren?"
+- Ermöglicht frühes Erkennen von Designproblemen</p>
+<p><strong>Zur Dokumentation:</strong>
+- Oft der häufigere Anwendungsfall
+- Nach der Implementierung: "Wie funktioniert das System?"
+- Perfekt, um auf einer höheren Ebene zu dokumentieren, wie verschiedene Systemkomponenten (z.B. Frontend, Backend, Datenbank) für einen bestimmten Anwendungsfall zusammenarbeiten, ohne den gesamten Code lesen zu müssen</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+In der IHK-Abschlussprüfung sind Sequenzdiagramme extrem relevant. Sie werden oft in der Projektdokumentation verwendet, um die Interaktion zwischen Systemkomponenten zu dokumentieren.</p>
+</blockquote>
+<h3 id="14-wann-verwende-ich-sequenzdiagramme">1.4 Wann verwende ich Sequenzdiagramme?</h3>
+<p>Sequenzdiagramme sind vielseitig einsetzbar:</p>
+<p><strong>Use Cases detaillieren:</strong>
+- Aus dem Use-Case-Diagramm kennen wir das "Was"
+- Das Sequenzdiagramm zeigt das "Wie" (welche Objekte beteiligt sind)</p>
+<p><strong>Systemarchitektur dokumentieren:</strong>
+- Wie kommunizieren Frontend, Backend und Datenbank?
+- Welche API-Aufrufe werden in welcher Reihenfolge gemacht?</p>
+<p><strong>Komplexe Abläufe planen:</strong>
+- Login-Prozesse
+- Bestellvorgänge
+- Zahlungsabwicklungen</p>
+<p><strong>Fehlersuche und Debugging:</strong>
+- Wo bricht die Kommunikation ab?
+- Welche Nachricht wird nicht gesendet?</p>
+<h3 id="15-die-rolle-im-entwicklungsprozess">1.5 Die Rolle im Entwicklungsprozess</h3>
+<p>Sequenzdiagramme entstehen typischerweise nach dem Klassendiagramm und parallel zum Aktivitätsdiagramm:</p>
+<pre><code>Use-Case-Diagramm
+(Was soll das System tun?)
+        ↓
+Aktivitätsdiagramm
+(Wie läuft ein Use Case ab?)
+        ↓
+Klassendiagramm
+(Welche Klassen setzen das um?)
+        ↓
+Sequenzdiagramm ← Wir sind hier
+(Wie kommunizieren die Objekte?)
+        ↓
+Code
+</code></pre>
+<hr>
+<h2 id="2-die-notationselemente-die-bausteine-eines-sequenzdiagramms">2. Die Notationselemente: Die Bausteine eines Sequenzdiagramms</h2>
+<h3 id="21-ubersicht-die-legende">2.1 Übersicht: Die Legende</h3>
+<p>Bevor wir komplexe Diagramme betrachten, schauen wir uns die einzelnen Elemente und ihre Bedeutung an. Diese Legende ist Ihr Werkzeugkasten für die Interaktionsmodellierung:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Beschreibung</th>
+<th>Verwendung</th>
+<th>Darstellung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Objekt/Teilnehmer</strong></td>
+<td>Rechteck am oberen Rand</td>
+<td>Repräsentiert ein Objekt, eine Systemkomponente oder einen Akteur</td>
+<td><img src="../bilder/seq-leg-1.svg" width="170" alt="Objekt, Lebenslinie und Aktivierungsbalken"></td>
+</tr>
+<tr>
+<td><strong>Lebenslinie</strong></td>
+<td>Gestrichelte vertikale Linie</td>
+<td>Zeigt die Existenz des Objekts über die Zeit</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Aktivierungsbalken</strong></td>
+<td>Schmales Rechteck auf der Lebenslinie</td>
+<td>Zeigt an, wann ein Objekt aktiv ist (Methode ausführt)</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Synchrone Nachricht</strong></td>
+<td>Pfeil mit gefüllter Spitze (<code>-&gt;</code>)</td>
+<td>Sender wartet auf Antwort (blockierend)</td>
+<td><img src="../bilder/seq-leg-2.svg" width="170" alt="Synchrone, asynchrone und Rückgabenachricht"></td>
+</tr>
+<tr>
+<td><strong>Asynchrone Nachricht</strong></td>
+<td>Pfeil mit offener Spitze (<code>-&gt;&gt;</code>)</td>
+<td>Sender wartet nicht auf Antwort ("Fire and Forget")</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Rückgabenachricht</strong></td>
+<td>Gestrichelter Pfeil (<code>--&gt;</code>)</td>
+<td>Rückgabewert einer synchronen Nachricht</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Selbstaufruf</strong></td>
+<td>Pfeil zur eigenen Lebenslinie</td>
+<td>Objekt ruft eigene Methode auf</td>
+<td><img src="../bilder/seq-leg-3.svg" width="150" alt="Selbstaufruf mit verschachteltem Aktivierungsbalken"></td>
+</tr>
+<tr>
+<td><strong>Objekterzeugung</strong></td>
+<td>Pfeil mit <code>&lt;&lt;create&gt;&gt;</code></td>
+<td>Erzeugt ein neues Objekt</td>
+<td><img src="../bilder/seq-leg-4.svg" width="170" alt="Objekterzeugung und Objektzerstörung"></td>
+</tr>
+<tr>
+<td><strong>Objektzerstörung</strong></td>
+<td>Großes X am Ende der Lebenslinie</td>
+<td>Objekt wird zerstört</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Fragment (alt)</strong></td>
+<td>Box mit "alt"</td>
+<td>if-else-Verzweigung</td>
+<td><img src="../bilder/seq-leg-5.svg" width="200" alt="Fragmente loop, opt und alt"></td>
+</tr>
+<tr>
+<td><strong>Fragment (opt)</strong></td>
+<td>Box mit "opt"</td>
+<td>Einfacher if-Block ohne else</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Fragment (loop)</strong></td>
+<td>Box mit "loop"</td>
+<td>Schleife</td>
+<td>siehe oben</td>
+</tr>
+<tr>
+<td><strong>Fragment (break)</strong></td>
+<td>Box mit "break"</td>
+<td>Bricht den umgebenden Ablauf ab</td>
+<td>Fehler-/Abbruchbehandlung</td>
+</tr>
+<tr>
+<td><strong>Fragment (ref)</strong></td>
+<td>Box mit "ref"</td>
+<td>Verweis auf ein ausgelagertes Diagramm</td>
+<td>Wiederverwendung</td>
+</tr>
+<tr>
+<td><strong>Verlorene Nachricht</strong></td>
+<td>Pfeil endet an kleinem Kreis</td>
+<td>Empfänger unbekannt/nicht modelliert</td>
+<td>Ausschnitt eines größeren Ablaufs</td>
+</tr>
+<tr>
+<td><strong>Gefundene Nachricht</strong></td>
+<td>Pfeil beginnt an kleinem Kreis</td>
+<td>Sender unbekannt/nicht modelliert</td>
+<td>Externer Auslöser</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Die Pfeilspitze ist extrem wichtig! Eine gefüllte Spitze bedeutet synchron (blockierend), eine offene Spitze bedeutet asynchron (nicht blockierend).</p>
+</blockquote>
+<h3 id="22-objekte-lebenslinien-und-aktivierungsbalken">2.2 Objekte, Lebenslinien und Aktivierungsbalken</h3>
+<p><strong>Objekte/Teilnehmer:</strong>
+- Stehen ganz oben als Rechtecke
+- Können konkrete Objekte sein (z.B. <code>kunde: Kunde</code>)
+- Können Systemkomponenten sein (z.B. <code>Frontend</code>, <code>Backend</code>, <code>Datenbank</code>)
+- Können Akteure sein (z.B. Benutzer als Strichmännchen)
+- Notation: <code>objektname: Klassenname</code> oder nur <code>Klassenname</code></p>
+<p><strong>Lebenslinie:</strong>
+- Die gestrichelte Linie, die von jedem Objekt nach unten verläuft
+- Repräsentiert die Existenz des Objekts über die Zeit
+- Das Diagramm wird von oben nach unten gelesen (Zeit läuft nach unten)</p>
+<p><strong>Aktivierungsbalken:</strong>
+- Ein auf der Lebenslinie gezeichnetes, schmales Rechteck
+- Zeigt an, wann ein Objekt aktiv ist, d.h. wann es gerade eine Methode ausführt oder auf eine Antwort wartet
+- <strong>Analogie: Der Call Stack aus dem Debugger</strong>
+  - Jeder neue Aktivierungsbalken ist wie ein neuer Eintrag auf dem Stack
+  - Wenn eine Methode eine andere aufruft, wird ein neuer Balken auf den vorherigen gezeichnet
+  - Wenn eine Methode zurückkehrt, endet der Balken</p>
+<div style="text-align: center;"><img src="../bilder/seq-1.svg" width="600" alt="Sequenzdiagramm: Login-Ausschnitt mit Aktivierungsbalken"></div>
+
+<p><strong>Was zeigt dieses Diagramm?</strong>
+- Drei Teilnehmer: Benutzer, UI, Controller
+- Lebenslinien für jeden Teilnehmer
+- Aktivierungsbalken zeigen, wann UI und Controller aktiv sind
+- Die Zeit läuft von oben nach unten</p>
+<h3 id="23-nachrichten-synchron-vs-asynchron">2.3 Nachrichten: Synchron vs. Asynchron</h3>
+<p>Nachrichten sind die Pfeile zwischen den Lebenslinien und repräsentieren Methodenaufrufe. Die Pfeilspitze ist extrem wichtig.</p>
+<p><strong>Synchrone Nachricht (gefüllte Pfeilspitze <code>-&gt;</code>):</strong>
+- Der Sender wartet auf eine Antwort und blockiert währenddessen
+- Dies ist der Standardfall in den meisten Programmiersprachen (z.B. ein normaler Java-Methodenaufruf)
+- Erfordert immer eine Rückgabenachricht (gestrichelter Pfeil --&gt;)
+- Beispiel: <code>kunde.getAdresse()</code> – der Aufrufer wartet, bis die Adresse zurückgegeben wird</p>
+<p><strong>Asynchrone Nachricht (offene Pfeilspitze <code>-&gt;&gt;</code>):</strong>
+- Der Sender feuert die Nachricht ab und macht sofort weiter, ohne auf eine Antwort zu warten ("Fire and Forget")
+- Beispiel: E-Mail senden, Event auslösen, Nachricht in eine Queue schreiben
+- Keine Rückgabenachricht nötig</p>
+<p><strong>Rückgabenachricht (gestrichelter Pfeil --&gt;):</strong>
+- Zeigt den Rückgabewert einer synchronen Nachricht
+- Optional: Kann weggelassen werden, wenn der Rückgabewert nicht wichtig ist
+- Notation: <code>return wert</code> oder einfach <code>wert</code></p>
+<div style="text-align: center;"><img src="../bilder/seq-2.svg" width="600" alt="Sequenzdiagramm: synchrone und asynchrone Nachricht im Vergleich"></div>
+
+<blockquote>
+<p><strong>Warnung:</strong>
+Verwechseln Sie nicht synchrone und asynchrone Nachrichten! Die Pfeilspitze macht den Unterschied. In der Praxis sind die meisten Methodenaufrufe synchron.</p>
+</blockquote>
+<h3 id="24-selbstaufrufe">2.4 Selbstaufrufe</h3>
+<p>Ein Selbstaufruf ist ein Pfeil, der von einer Lebenslinie zur selben Lebenslinie zurückkehrt. Er zeigt, dass ein Objekt eine eigene Methode aufruft.</p>
+<p><strong>Wann verwenden?</strong>
+- Wenn eine Methode eine andere Methode derselben Klasse aufruft
+- Wenn eine rekursive Methode sich selbst aufruft
+- Wenn interne Hilfsmethoden aufgerufen werden</p>
+<p><strong>Darstellung:</strong>
+- Ein zweiter, kleinerer Aktivierungsbalken wird auf dem ersten gezeichnet
+- Zeigt, dass das Objekt eine weitere Methode ausführt, während die erste noch aktiv ist</p>
+<div style="text-align: center;"><img src="../bilder/seq-3.svg" width="600" alt="Sequenzdiagramm: Selbstaufruf mit verschachtelten Aktivierungsbalken"></div>
+
+<p><strong>Was zeigt dieses Diagramm?</strong>
+- <code>schreibeLog()</code> ruft intern <code>formatiereZeitstempel()</code> auf
+- Beide Methoden gehören zur selben Klasse <code>Logger</code>
+- Die Aktivierungsbalken zeigen die Verschachtelung (wie ein Call Stack)</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Selbstaufrufe sind keine Rekursion im mathematischen Sinne, sondern einfach Methodenaufrufe innerhalb derselben Klasse. Sie zeigen interne Abläufe, die für das Verständnis wichtig sind.</p>
+</blockquote>
+<h3 id="25-objekterzeugung-und-objektzerstorung">2.5 Objekterzeugung und Objektzerstörung</h3>
+<p>Objekte müssen nicht von Anfang an existieren. Sie können während des Ablaufs erzeugt und auch wieder zerstört werden.</p>
+<p><strong>Objekterzeugung (&lt;<create>&gt;):</strong>
+- Darstellung: Pfeil mit Stereotyp <code>&lt;&lt;create&gt;&gt;</code>
+- Das Zielobjekt wird erst beim Empfang dieser Nachricht erzeugt
+- Die Lebenslinie des neuen Objekts beginnt erst an diesem Punkt
+- Beispiel: <code>new Logger()</code> in Java oder <code>Logger()</code> in Python</p>
+<p><strong>Objektzerstörung:</strong>
+- Darstellung: Großes X am Ende der Lebenslinie
+- Zeigt, dass das Objekt zerstört wird (z.B. durch <code>delete</code> in C++ oder Garbage Collection)
+- In Python und Java meist nicht explizit nötig (Garbage Collector)</p>
+<div style="text-align: center;"><img src="../bilder/seq-4.svg" width="600" alt="Sequenzdiagramm: Objekterzeugung und Objektzerstörung"></div>
+
+<p><strong>Was zeigt dieses Diagramm?</strong>
+- Die Application erzeugt ein Logger-Objekt
+- Das Logger-Objekt wird verwendet
+- Am Ende wird das Logger-Objekt zerstört</p>
+<h3 id="26-fragmente-kontrollstrukturen-im-sequenzdiagramm">2.6 Fragmente: Kontrollstrukturen im Sequenzdiagramm</h3>
+<p>Fragmente sind Boxen, die um Teile des Diagramms gezeichnet werden, um Kontrollstrukturen wie Verzweigungen und Schleifen darzustellen.</p>
+<p><strong>alt (Alternative) – if-else-Verzweigung:</strong>
+- Die Box wird durch eine gestrichelte Linie in die verschiedenen Fälle unterteilt
+- Jeder Fall hat eine Bedingung in eckigen Klammern
+- Entspricht einer if-else-Struktur in der Programmierung</p>
+<p><strong>opt (Optional) – einfacher if-Block:</strong>
+- Für einen einfachen if-Block ohne else
+- Der Inhalt wird nur ausgeführt, wenn die Bedingung wahr ist</p>
+<p><strong>loop (Schleife):</strong>
+- Der Inhalt der Box wird wiederholt, solange die Bedingung zutrifft
+- Entspricht einer while-Schleife in der Programmierung</p>
+<div style="text-align: center;"><img src="../bilder/seq-5.svg" width="600" alt="Sequenzdiagramm: alt-Fragment für eine Verfügbarkeitsprüfung"></div>
+
+<p><strong>Was zeigt dieses Diagramm?</strong>
+- Eine Verzweigung mit <code>alt</code>: Wenn alle Produkte verfügbar sind, wird die Bestellung bestätigt, sonst wird eine Fehlermeldung angezeigt
+- Die gestrichelte Linie trennt die beiden Fälle</p>
+<blockquote>
+<p><strong>Tipp:</strong>
+Fragmente machen Sequenzdiagramme sehr mächtig, aber auch komplexer. Verwenden Sie sie nur, wenn die Kontrollstruktur für das Verständnis wichtig ist.</p>
+</blockquote>
+<hr>
+<h3 id="27-weitere-kombinierte-fragmente-break-ref-und-critical">2.7 Weitere kombinierte Fragmente: break, ref und critical</h3>
+<p>Neben <code>alt</code>, <code>opt</code>, <code>loop</code> und <code>par</code> gibt es weitere kombinierte Fragmente, die in Prüfungen und in der Praxis vorkommen:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>break</code></strong></td>
+<td>Bricht den umgebenden Ablauf ab (wie <code>break</code> in einer Schleife). Der Inhalt wird ausgeführt, danach wird das umgebende Fragment verlassen — typisch für Fehler-/Abbruchbehandlung.</td>
+</tr>
+<tr>
+<td><strong><code>ref</code></strong></td>
+<td>Verweist auf ein <strong>anderes, ausgelagertes</strong> Sequenzdiagramm. Statt einen komplexen Ablauf mehrfach zu zeichnen, lagert man ihn aus und referenziert ihn — die Wiederverwendung des Sequenzdiagramms.</td>
+</tr>
+<tr>
+<td><strong><code>critical</code></strong></td>
+<td>Kritischer Bereich, der <strong>nicht unterbrochen</strong> werden darf (z. B. bei parallelen Abläufen ein atomarer Abschnitt).</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Beispiel <code>ref</code>:</strong> Ein „Bestellprozess"-Diagramm enthält ein <code>ref</code>-Fragment „Anmeldung", das auf ein separates „Anmelde"-Sequenzdiagramm verweist — so bleibt das Hauptdiagramm übersichtlich.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+<code>ref</code> = „siehe anderes Diagramm" (Auslagerung), <code>break</code> = „hier abbrechen", <code>critical</code> = „nicht unterbrechen". Zusammen mit <code>alt/opt/loop/par</code> decken sie die Kontrollstrukturen des Sequenzdiagramms ab.</p>
+</blockquote>
+<h3 id="28-verlorene-und-gefundene-nachrichten">2.8 Verlorene und gefundene Nachrichten</h3>
+<p>Manchmal ist der Sender oder Empfänger einer Nachricht <strong>nicht im Diagramm</strong> dargestellt — etwa, weil er außerhalb des betrachteten Ausschnitts liegt. Dafür gibt es zwei Sonderformen:</p>
+<ul>
+<li><strong>Verlorene Nachricht (lost message):</strong> Der Pfeil geht von einer Lebenslinie aus, endet aber an einem <strong>kleinen ausgefüllten Kreis</strong> statt an einem Empfänger. Bedeutung: Die Nachricht wird gesendet, der Empfänger ist aber unbekannt oder nicht modelliert.</li>
+<li><strong>Gefundene Nachricht (found message):</strong> Der Pfeil <strong>beginnt</strong> an einem kleinen ausgefüllten Kreis und trifft auf eine Lebenslinie. Bedeutung: Eine Nachricht kommt an, der Sender ist aber unbekannt oder nicht modelliert (z. B. ein externer Auslöser).</li>
+</ul>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Verlorene und gefundene Nachrichten sind nützlich, wenn man bewusst nur einen <strong>Ausschnitt</strong> eines größeren Ablaufs zeigt, ohne alle beteiligten Objekte zu zeichnen.</p>
+</blockquote>
+<h2 id="3-vollstandiges-beispiel-login-prozess">3. Vollständiges Beispiel: Login-Prozess</h2>
+<h3 id="31-das-szenario">3.1 Das Szenario</h3>
+<p>Wir modellieren einen Login-Prozess mit folgenden Beteiligten:
+- <strong>Benutzer</strong>: Gibt Benutzerdaten ein
+- <strong>LoginUI</strong>: Präsentationsschicht (Benutzerinteraktion)
+- <strong>LoginController</strong>: Logikschicht (Geschäftslogik)
+- <strong>Database</strong>: Datenschicht (Datenverwaltung)</p>
+<h3 id="32-der-prozessablauf">3.2 Der Prozessablauf</h3>
+<ol>
+<li>Benutzer gibt Benutzerdaten ein</li>
+<li>UI ruft <code>login()</code> des Controllers auf</li>
+<li>Controller ruft <code>pruefeAnmeldedaten()</code> der Datenbank auf</li>
+<li>Datenbank gibt <code>true</code> oder <code>false</code> zurück</li>
+<li>Controller gibt "erfolg" oder "fehler" zurück</li>
+<li>UI zeigt entsprechende Nachricht</li>
+</ol>
+<div style="text-align: center;"><img src="../bilder/seq-6.svg" width="600" alt="Sequenzdiagramm: vollständiger Login-Prozess über drei Schichten"></div>
+
+<h3 id="33-was-zeigt-dieses-diagramm">3.3 Was zeigt dieses Diagramm?</h3>
+<p><strong>Drei-Schichten-Architektur:</strong>
+- Klare Trennung zwischen UI, Logik und Daten
+- Jede Schicht kennt nur die direkt darunter liegende Schicht</p>
+<p><strong>Zeitliche Abfolge:</strong>
+- Von oben nach unten: Benutzer → UI → Controller → Datenbank
+- Rückgabewerte: Datenbank → Controller → UI → Benutzer</p>
+<p><strong>Aktivierungsbalken:</strong>
+- Zeigen, wann welches Objekt aktiv ist
+- UI ist aktiv, während Controller arbeitet
+- Controller ist aktiv, während Datenbank arbeitet</p>
+<p><strong>Synchrone Kommunikation:</strong>
+- Alle Nachrichten sind synchron (gefüllte Pfeilspitzen)
+- Jeder Aufrufer wartet auf die Antwort</p>
+<hr>
+<h2 id="4-komplexeres-beispiel-bestellprozess-mit-bedingungen">4. Komplexeres Beispiel: Bestellprozess mit Bedingungen</h2>
+<h3 id="41-das-szenario">4.1 Das Szenario</h3>
+<p>Wir modellieren einen Bestellprozess mit folgenden Beteiligten:
+- <strong>Kunde</strong>: Bestellt Produkte
+- <strong>ShopUI</strong>: Präsentationsschicht
+- <strong>BestellController</strong>: Logikschicht
+- <strong>Lager</strong>: Lagerverwaltung
+- <strong>Zahlungssystem</strong>: Zahlungsabwicklung</p>
+<h3 id="42-der-prozessablauf">4.2 Der Prozessablauf</h3>
+<ol>
+<li>Kunde bestellt Produkte</li>
+<li>UI prüft Verfügbarkeit für jedes Produkt (Schleife)</li>
+<li><strong>Entscheidung</strong>: Alle Produkte verfügbar?
+   - <strong>Ja</strong>: Bestellung bestätigen, Zahlung verarbeiten, Produkte reservieren
+   - <strong>Nein</strong>: Fehlermeldung anzeigen</li>
+</ol>
+<div style="text-align: center;"><img src="../bilder/seq-7.svg" width="700" alt="Sequenzdiagramm: Bestellprozess mit loop und alt"></div>
+
+<h3 id="43-was-zeigt-dieses-diagramm">4.3 Was zeigt dieses Diagramm?</h3>
+<p><strong>Schleife (loop):</strong>
+- Für jedes Produkt im Warenkorb wird die Verfügbarkeit geprüft
+- Entspricht einer <code>for</code>-Schleife in der Programmierung</p>
+<p><strong>Verzweigung (alt/else):</strong>
+- Wenn alle Produkte verfügbar sind, wird die Bestellung bestätigt
+- Sonst wird eine Fehlermeldung angezeigt</p>
+<p><strong>Komplexe Interaktion:</strong>
+- Mehrere Objekte sind beteiligt (UI, Controller, Lager, Zahlungssystem)
+- Die Reihenfolge ist klar: Erst Verfügbarkeit prüfen, dann Zahlung, dann Reservierung</p>
+<p><strong>Transaktionale Logik:</strong>
+- Die Schritte müssen in dieser Reihenfolge erfolgen
+- Wenn die Zahlung fehlschlägt, dürfen keine Produkte reserviert werden</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+In echten Systemen müssen Transaktionen atomar sein: Wenn die Zahlung fehlschlägt, dürfen keine Produkte reserviert werden. Sequenzdiagramme helfen, solche kritischen Abläufe zu planen.</p>
+</blockquote>
+<hr>
+<h2 id="5-objekterzeugung-und-selbstaufrufe-in-der-praxis">5. Objekterzeugung und Selbstaufrufe in der Praxis</h2>
+<h3 id="51-das-szenario">5.1 Das Szenario</h3>
+<p>Wir modellieren eine Anwendung, die beim Start ein Logger-Objekt erzeugt und verwendet:</p>
+<div style="text-align: center;"><img src="../bilder/seq-8.svg" width="650" alt="Sequenzdiagramm: Objekterzeugung und Selbstaufrufe in der Praxis"></div>
+
+<h3 id="52-was-zeigt-dieses-diagramm">5.2 Was zeigt dieses Diagramm?</h3>
+<p><strong>Objekterzeugung:</strong>
+- Die Application erzeugt ein Logger-Objekt mit <code>&lt;&lt;create&gt;&gt;</code>
+- Die Lebenslinie des Loggers beginnt erst an diesem Punkt</p>
+<p><strong>Selbstaufrufe:</strong>
+- <code>formatiereZeitstempel()</code> wird von <code>schreibeLog()</code> aufgerufen (innerhalb derselben Klasse)
+- <code>fuehreHauptlogikAus()</code> wird von <code>starte()</code> aufgerufen (innerhalb derselben Klasse)</p>
+<p><strong>Aktivierungsbalken bei Selbstaufrufen:</strong>
+- Ein zweiter, kleinerer Aktivierungsbalken wird auf dem ersten gezeichnet
+- Zeigt die Verschachtelung (wie ein Call Stack)</p>
+<hr>
+<h2 id="6-praktische-tipps-fur-gute-sequenzdiagramme">6. Praktische Tipps für gute Sequenzdiagramme</h2>
+<h3 id="61-halte-es-ubersichtlich">6.1 Halte es übersichtlich</h3>
+<p><strong>Problem:</strong> Zu viele Objekte, zu viele Nachrichten, zu viele Fragmente.</p>
+<p><strong>Lösung:</strong>
+- Fokussiere auf den Hauptablauf
+- Lagere Teilabläufe in separate Diagramme aus
+- Verwende maximal 5-7 Objekte pro Diagramm
+- Begrenze die Anzahl der Nachrichten auf 15-20</p>
+<h3 id="62-verwende-klare-benennungen">6.2 Verwende klare Benennungen</h3>
+<p><strong>Objekte:</strong>
+- Gut: <code>kunde: Kunde</code>, <code>ui: LoginUI</code>, <code>db: Database</code>
+- Schlecht: <code>obj1</code>, <code>obj2</code>, <code>system</code></p>
+<p><strong>Nachrichten:</strong>
+- Gut: <code>login(username, password)</code>, <code>pruefeAnmeldedaten()</code>, <code>sendeEmail()</code>
+- Schlecht: <code>methode1()</code>, <code>aufruf()</code>, <code>verarbeite()</code></p>
+<h3 id="63-prufe-die-logik">6.3 Prüfe die Logik</h3>
+<p><strong>Synchrone Nachrichten:</strong>
+- Jede synchrone Nachricht braucht eine Rückgabenachricht (optional, aber empfohlen)
+- Der Sender wartet auf die Antwort</p>
+<p><strong>Asynchrone Nachrichten:</strong>
+- Keine Rückgabenachricht nötig
+- Der Sender macht sofort weiter</p>
+<p><strong>Fragmente:</strong>
+- Bedingungen müssen klar formuliert sein
+- Alle Fälle müssen abgedeckt sein (bei <code>alt</code>)</p>
+<h3 id="64-nutze-fragmente-sinnvoll">6.4 Nutze Fragmente sinnvoll</h3>
+<p><strong>Wann Fragmente?</strong>
+- Bei Verzweigungen (if-else)
+- Bei Schleifen (for, while)
+- Bei optionalen Abläufen (if ohne else)</p>
+<p><strong>Wann keine Fragmente?</strong>
+- Bei einfachen, linearen Abläufen
+- Wenn die Kontrollstruktur nicht wichtig ist
+- Wenn das Diagramm dadurch zu komplex wird</p>
+<h3 id="65-dokumentiere-das-diagramm">6.5 Dokumentiere das Diagramm</h3>
+<p>Ein Sequenzdiagramm ist nur der Überblick. Ergänze es durch:
+- Textbeschreibungen der Nachrichten
+- Erklärungen der Bedingungen
+- Hinweise auf Ausnahmefälle
+- Verweise auf Use Cases oder Anforderungen</p>
+<hr>
+<h2 id="7-sequenzdiagramme-vs-andere-uml-diagramme">7. Sequenzdiagramme vs. andere UML-Diagramme</h2>
+<h3 id="71-sequenzdiagramm-vs-klassendiagramm">7.1 Sequenzdiagramm vs. Klassendiagramm</h3>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Klassendiagramm</th>
+<th>Sequenzdiagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sicht</strong></td>
+<td>Statische Struktur</td>
+<td>Dynamisches Verhalten</td>
+</tr>
+<tr>
+<td><strong>Zeigt</strong></td>
+<td>Klassen, Attribute, Methoden</td>
+<td>Objekte, Nachrichten, zeitliche Abfolge</td>
+</tr>
+<tr>
+<td><strong>Frage</strong></td>
+<td>"Was existiert?"</td>
+<td>"Wer spricht wann mit wem?"</td>
+</tr>
+<tr>
+<td><strong>Verwendung</strong></td>
+<td>Systemarchitektur, Datenmodell</td>
+<td>Interaktionen, Abläufe</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="72-sequenzdiagramm-vs-aktivitatsdiagramm">7.2 Sequenzdiagramm vs. Aktivitätsdiagramm</h3>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Aktivitätsdiagramm</th>
+<th>Sequenzdiagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fokus</strong></td>
+<td>Kontrollfluss, Prozesse</td>
+<td>Objektinteraktionen</td>
+</tr>
+<tr>
+<td><strong>Zeigt</strong></td>
+<td>Aktionen, Entscheidungen, Parallelität</td>
+<td>Nachrichten, zeitliche Abfolge</td>
+</tr>
+<tr>
+<td><strong>Frage</strong></td>
+<td>"Was passiert wann?"</td>
+<td>"Wer spricht wann mit wem?"</td>
+</tr>
+<tr>
+<td><strong>Verwendung</strong></td>
+<td>Geschäftsprozesse, Algorithmen</td>
+<td>Objektkommunikation</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Aktivitätsdiagramme zeigen den Kontrollfluss (was passiert wann), Sequenzdiagramme zeigen den Nachrichtenfluss (wer spricht wann mit wem).</p>
+</blockquote>
+<hr>
+<h2 id="8-vom-sequenzdiagramm-zum-code">8. Vom Sequenzdiagramm zum Code</h2>
+<p>Ein Sequenzdiagramm zeigt <strong>Methodenaufrufe zwischen Objekten</strong> über die Zeit — jede Nachricht ist ein Aufruf:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Diagramm-Element</th>
+<th>Umsetzung im Code (Java)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lebenslinie / Objekt</td>
+<td>Objekt einer Klasse</td>
+</tr>
+<tr>
+<td>Synchrone Nachricht</td>
+<td>Methodenaufruf <code>objekt.methode(...)</code></td>
+</tr>
+<tr>
+<td>Rückgabenachricht</td>
+<td><code>return</code>-Wert des Aufrufs</td>
+</tr>
+<tr>
+<td>Selbstaufruf</td>
+<td>Aufruf einer eigenen Methode (<code>this.methode()</code>)</td>
+</tr>
+<tr>
+<td>Objekterzeugung <code>«create»</code></td>
+<td><code>new Klasse(...)</code></td>
+</tr>
+<tr>
+<td>alt / opt</td>
+<td><code>if</code> / <code>else</code></td>
+</tr>
+<tr>
+<td>loop</td>
+<td><code>for</code> / <code>while</code></td>
+</tr>
+<tr>
+<td>par</td>
+<td>parallele Threads</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Jeder Pfeil ist ein Methodenaufruf; die Reihenfolge von oben nach unten ist die Aufrufreihenfolge.</p>
+</blockquote>
+<h2 id="typische-fehler">Typische Fehler</h2>
+<ul>
+<li><strong>Synchron / asynchron / Rückgabe verwechselt</strong> — gefüllte Spitze (synchron), offene Spitze (asynchron), gestrichelt (Rückgabe). Folge: falsche Aussage über das Blockieren. Die Pfeilart ist entscheidend.</li>
+<li><strong>Aktivierungsbalken fehlen oder falsch</strong> — Folge: unklar, wann ein Objekt aktiv ist. Der Balken beginnt beim Empfang und endet bei der Rückgabe.</li>
+<li><strong>Zeitliche Reihenfolge missachtet</strong> — Nachrichten nicht streng von oben nach unten. Folge: der zeitliche Ablauf stimmt nicht.</li>
+<li><strong>Rückgabepfeil vergessen</strong> — nach einer synchronen Nachricht fehlt die Antwort. Folge: unvollständige Interaktion.</li>
+<li><strong>Fragment ohne Bedingung</strong> — <code>alt</code>/<code>loop</code> ohne <code>[Bedingung]</code>. Folge: Verzweigung bzw. Schleife nicht nachvollziehbar.</li>
+</ul>
+<h2 id="9-zusammenfassung">9. Zusammenfassung</h2>
+<h3 id="91-kernkonzepte">9.1 Kernkonzepte</h3>
+<p><strong>Sequenzdiagramm:</strong>
+- Visualisiert den dynamischen Austausch von Nachrichten zwischen Objekten über die Zeit
+- Zeigt, wer wann mit wem spricht
+- Ist das wichtigste Verhaltensdiagramm der UML</p>
+<p><strong>Notationselemente:</strong>
+- <strong>Objekt/Teilnehmer</strong>: Rechteck am oberen Rand
+- <strong>Lebenslinie</strong>: Gestrichelte vertikale Linie (Existenz über die Zeit)
+- <strong>Aktivierungsbalken</strong>: Schmales Rechteck (Objekt ist aktiv)
+- <strong>Synchrone Nachricht</strong>: Gefüllte Pfeilspitze (Sender wartet)
+- <strong>Asynchrone Nachricht</strong>: Offene Pfeilspitze (Sender wartet nicht)
+- <strong>Rückgabenachricht</strong>: Gestrichelter Pfeil
+- <strong>Selbstaufruf</strong>: Pfeil zur eigenen Lebenslinie
+- <strong>Objekterzeugung</strong>: <code>&lt;&lt;create&gt;&gt;</code>
+- <strong>Objektzerstörung</strong>: Großes X
+- <strong>Fragmente</strong>: <code>alt</code> (if-else), <code>opt</code> (if), <code>loop</code> (Schleife)</p>
+<p><strong>Verwendung:</strong>
+- Modellierung: Vor der Implementierung planen
+- Dokumentation: Nach der Implementierung dokumentieren (häufiger)
+- Use Cases detaillieren
+- Systemarchitektur dokumentieren
+- Fehlersuche und Debugging</p>
+<h3 id="92-praktische-faustregeln">9.2 Praktische Faustregeln</h3>
+<ol>
+<li>
+<p><strong>Beginne mit den Hauptobjekten</strong>
+   - Welche Objekte sind beteiligt?
+   - Welche Systemkomponenten kommunizieren?</p>
+</li>
+<li>
+<p><strong>Identifiziere die Nachrichten</strong>
+   - Welche Methodenaufrufe werden gemacht?
+   - In welcher Reihenfolge?</p>
+</li>
+<li>
+<p><strong>Unterscheide synchron und asynchron</strong>
+   - Wartet der Sender auf eine Antwort? → Synchron (gefüllte Pfeilspitze)
+   - Macht der Sender sofort weiter? → Asynchron (offene Pfeilspitze)</p>
+</li>
+<li>
+<p><strong>Nutze Fragmente bei Bedarf</strong>
+   - Verzweigungen: <code>alt</code>
+   - Optionale Abläufe: <code>opt</code>
+   - Schleifen: <code>loop</code></p>
+</li>
+<li>
+<p><strong>Halte es einfach</strong>
+   - Nicht jedes Detail muss im Diagramm sein
+   - Fokus auf den Hauptablauf
+   - Lagere Teilabläufe aus</p>
+</li>
+</ol>
+<h3 id="93-wichtige-erkenntnisse">9.3 Wichtige Erkenntnisse</h3>
+<ul>
+<li>Sequenzdiagramme sind Werkzeuge zur Planung und Kommunikation</li>
+<li>Sie sind die Brücke zwischen Klassendiagrammen und Code</li>
+<li>Die Pfeilspitze ist extrem wichtig (synchron vs. asynchron)</li>
+<li>Aktivierungsbalken zeigen die Verschachtelung (wie ein Call Stack)</li>
+<li>In der IHK-Prüfung sind Sequenzdiagramme extrem relevant</li>
+</ul>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein Sequenzdiagramm ist wie ein Theaterstück: Die Akteure stehen oben, die Zeit läuft von oben nach unten, und die Dialoge (Nachrichten) zeigen, wer wann mit wem spricht.</p>
+</blockquote>
+<hr>
+<h2 id="glossar">Glossar</h2>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequenzdiagramm (Sequence Diagram)</td>
+<td>UML-Verhaltensdiagramm, das den zeitlichen Austausch von Nachrichten zwischen Objekten darstellt</td>
+</tr>
+<tr>
+<td>Teilnehmer/Objekt (Participant)</td>
+<td>Ein an der Interaktion beteiligtes Objekt, eine Systemkomponente oder ein Akteur, dargestellt als Rechteck am oberen Rand</td>
+</tr>
+<tr>
+<td>Akteur (Actor)</td>
+<td>Eine Person oder ein System außerhalb des betrachteten Systems, dargestellt als Strichmännchen</td>
+</tr>
+<tr>
+<td>Lebenslinie (Lifeline)</td>
+<td>Die gestrichelte vertikale Linie unter einem Teilnehmer, die dessen Existenz über die Zeit zeigt</td>
+</tr>
+<tr>
+<td>Aktivierungsbalken (Activation Bar / Execution Specification)</td>
+<td>Schmales Rechteck auf der Lebenslinie, das anzeigt, wann ein Objekt aktiv eine Methode ausführt</td>
+</tr>
+<tr>
+<td>Nachricht (Message)</td>
+<td>Ein Pfeil zwischen zwei Lebenslinien, der einen Methodenaufruf oder Datenaustausch repräsentiert</td>
+</tr>
+<tr>
+<td>Synchrone Nachricht (Synchronous Message)</td>
+<td>Nachricht mit gefüllter Pfeilspitze (<code>-&gt;</code>); der Sender wartet blockierend auf eine Antwort</td>
+</tr>
+<tr>
+<td>Asynchrone Nachricht (Asynchronous Message)</td>
+<td>Nachricht mit offener Pfeilspitze (<code>-&gt;&gt;</code>); der Sender wartet nicht auf eine Antwort ("Fire and Forget")</td>
+</tr>
+<tr>
+<td>Rückgabenachricht (Return Message)</td>
+<td>Gestrichelter Pfeil (<code>--&gt;</code>), der den Rückgabewert einer synchronen Nachricht zeigt</td>
+</tr>
+<tr>
+<td>Selbstaufruf (Self-Message)</td>
+<td>Nachricht, die ein Objekt an seine eigene Lebenslinie sendet (Aufruf einer eigenen Methode)</td>
+</tr>
+<tr>
+<td>Objekterzeugung (Object Creation)</td>
+<td>Nachricht mit dem Stereotyp <code>&lt;&lt;create&gt;&gt;</code>, die ein neues Objekt zur Laufzeit erzeugt</td>
+</tr>
+<tr>
+<td>Objektzerstörung (Object Destruction)</td>
+<td>Großes X am Ende einer Lebenslinie; zeigt, dass das Objekt zerstört wird</td>
+</tr>
+<tr>
+<td>Fragment (Combined Fragment)</td>
+<td>Eine Box um einen Teil des Diagramms, die eine Kontrollstruktur wie <code>alt</code>, <code>opt</code> oder <code>loop</code> darstellt</td>
+</tr>
+<tr>
+<td>alt (Alternative)</td>
+<td>Fragment für eine if-else-Verzweigung mit mehreren sich ausschließenden Fällen</td>
+</tr>
+<tr>
+<td>opt (Optional)</td>
+<td>Fragment für einen einfachen if-Block ohne else-Zweig</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Fragment für eine Schleife (wiederholte Ausführung)</td>
+</tr>
+<tr>
+<td>par (Parallel)</td>
+<td>Fragment für parallel bzw. nebenläufig ablaufende Interaktionen</td>
+</tr>
+<tr>
+<td>break</td>
+<td>Fragment, das den umgebenden Ablauf abbricht (z. B. bei Fehlerbehandlung)</td>
+</tr>
+<tr>
+<td>ref (Reference)</td>
+<td>Verweis auf ein ausgelagertes Sequenzdiagramm zur Wiederverwendung</td>
+</tr>
+<tr>
+<td>critical</td>
+<td>Kritischer, nicht unterbrechbarer Bereich innerhalb einer Interaktion</td>
+</tr>
+<tr>
+<td>Verlorene Nachricht (Lost Message)</td>
+<td>Nachricht mit unbekanntem Empfänger; Pfeil endet an einem kleinen ausgefüllten Kreis</td>
+</tr>
+<tr>
+<td>Gefundene Nachricht (Found Message)</td>
+<td>Nachricht mit unbekanntem Sender; Pfeil beginnt an einem kleinen ausgefüllten Kreis</td>
+</tr>
+<tr>
+<td>Call Stack</td>
+<td>Analogie aus der Programmierung: der Stapel aktiver Methodenaufrufe, vergleichbar mit verschachtelten Aktivierungsbalken</td>
+</tr>
+<tr>
+<td>Drei-Schichten-Architektur</td>
+<td>Aufteilung einer Anwendung in Präsentationsschicht (UI), Logikschicht (Controller) und Datenschicht (Database)</td>
+</tr>
+<tr>
+<td>Modellierung</td>
+<td>Einsatz des Sequenzdiagramms vor der Implementierung, um eine Interaktion zu planen</td>
+</tr>
+<tr>
+<td>Dokumentation</td>
+<td>Einsatz des Sequenzdiagramms nach der Implementierung, um eine bestehende Interaktion zu beschreiben</td>
+</tr>
+</tbody>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_5.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 5: Sequenzdiagramme</div></a><a class="blatt blatt--weiter" href="a5_ue_aufgaben-7-4-sequenz.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Sequenzdiagramme</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-warum-brauchen-wir-sequenzdiagramme">1. Warum brauchen wir Sequenzdiagramme?</a><a href="#11-das-problem-wer-spricht-wann-mit-wem" class="stufe3">1.1 Das Problem: Wer spricht wann mit wem?</a><a href="#12-die-zentrale-frage-wer-spricht-wann-mit-wem" class="stufe3">1.2 Die zentrale Frage: Wer spricht wann mit wem?</a><a href="#13-modellierung-vs-dokumentation" class="stufe3">1.3 Modellierung vs. Dokumentation</a><a href="#14-wann-verwende-ich-sequenzdiagramme" class="stufe3">1.4 Wann verwende ich Sequenzdiagramme?</a><a href="#15-die-rolle-im-entwicklungsprozess" class="stufe3">1.5 Die Rolle im Entwicklungsprozess</a><a href="#2-die-notationselemente-die-bausteine-eines-sequenzdiagramms">2. Die Notationselemente: Die Bausteine eines Sequenzdiagramms</a><a href="#21-ubersicht-die-legende" class="stufe3">2.1 Übersicht: Die Legende</a><a href="#22-objekte-lebenslinien-und-aktivierungsbalken" class="stufe3">2.2 Objekte, Lebenslinien und Aktivierungsbalken</a><a href="#23-nachrichten-synchron-vs-asynchron" class="stufe3">2.3 Nachrichten: Synchron vs. Asynchron</a><a href="#24-selbstaufrufe" class="stufe3">2.4 Selbstaufrufe</a><a href="#25-objekterzeugung-und-objektzerstorung" class="stufe3">2.5 Objekterzeugung und Objektzerstörung</a><a href="#26-fragmente-kontrollstrukturen-im-sequenzdiagramm" class="stufe3">2.6 Fragmente: Kontrollstrukturen im Sequenzdiagramm</a><a href="#27-weitere-kombinierte-fragmente-break-ref-und-critical" class="stufe3">2.7 Weitere kombinierte Fragmente: break, ref und critical</a><a href="#28-verlorene-und-gefundene-nachrichten" class="stufe3">2.8 Verlorene und gefundene Nachrichten</a><a href="#3-vollstandiges-beispiel-login-prozess">3. Vollständiges Beispiel: Login-Prozess</a><a href="#31-das-szenario" class="stufe3">3.1 Das Szenario</a><a href="#32-der-prozessablauf" class="stufe3">3.2 Der Prozessablauf</a><a href="#33-was-zeigt-dieses-diagramm" class="stufe3">3.3 Was zeigt dieses Diagramm?</a><a href="#4-komplexeres-beispiel-bestellprozess-mit-bedingungen">4. Komplexeres Beispiel: Bestellprozess mit Bedingungen</a><a href="#41-das-szenario" class="stufe3">4.1 Das Szenario</a><a href="#42-der-prozessablauf" class="stufe3">4.2 Der Prozessablauf</a><a href="#43-was-zeigt-dieses-diagramm" class="stufe3">4.3 Was zeigt dieses Diagramm?</a><a href="#5-objekterzeugung-und-selbstaufrufe-in-der-praxis">5. Objekterzeugung und Selbstaufrufe in der Praxis</a><a href="#51-das-szenario" class="stufe3">5.1 Das Szenario</a><a href="#52-was-zeigt-dieses-diagramm" class="stufe3">5.2 Was zeigt dieses Diagramm?</a><a href="#6-praktische-tipps-fur-gute-sequenzdiagramme">6. Praktische Tipps für gute Sequenzdiagramme</a><a href="#61-halte-es-ubersichtlich" class="stufe3">6.1 Halte es übersichtlich</a><a href="#62-verwende-klare-benennungen" class="stufe3">6.2 Verwende klare Benennungen</a><a href="#63-prufe-die-logik" class="stufe3">6.3 Prüfe die Logik</a><a href="#64-nutze-fragmente-sinnvoll" class="stufe3">6.4 Nutze Fragmente sinnvoll</a><a href="#65-dokumentiere-das-diagramm" class="stufe3">6.5 Dokumentiere das Diagramm</a><a href="#7-sequenzdiagramme-vs-andere-uml-diagramme">7. Sequenzdiagramme vs. andere UML-Diagramme</a><a href="#71-sequenzdiagramm-vs-klassendiagramm" class="stufe3">7.1 Sequenzdiagramm vs. Klassendiagramm</a><a href="#72-sequenzdiagramm-vs-aktivitatsdiagramm" class="stufe3">7.2 Sequenzdiagramm vs. Aktivitätsdiagramm</a><a href="#8-vom-sequenzdiagramm-zum-code">8. Vom Sequenzdiagramm zum Code</a><a href="#typische-fehler">Typische Fehler</a><a href="#9-zusammenfassung">9. Zusammenfassung</a><a href="#91-kernkonzepte" class="stufe3">9.1 Kernkonzepte</a><a href="#92-praktische-faustregeln" class="stufe3">9.2 Praktische Faustregeln</a><a href="#93-wichtige-erkenntnisse" class="stufe3">9.3 Wichtige Erkenntnisse</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

@@ -8,7 +8,7 @@ Musterlösung aufklappst.
 
 ---
 
-## Teil A — Zwischenübungen (Vormittag)
+## Teil A — Grundübungen
 
 ### Aufgabe A1 [leicht]: Tee zubereiten
 
@@ -204,7 +204,7 @@ mit dem Pfeil — dafür brauchst du keine besondere Notation, nur den Wechsel d
 
 ---
 
-## Teil B — Selbstlernphase (Nachmittag)
+## Teil B — Vertiefungsaufgaben
 
 ### Aufgabe B1 [leicht]: Pizza online bestellen
 

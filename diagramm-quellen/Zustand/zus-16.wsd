@@ -1,0 +1,13 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+[*] --> Bereit
+Bereit --> Waschgang : starten
+state Waschgang {
+  [*] --> Waschen
+  Waschen --> Spuelen : fertig
+  Spuelen --> Schleudern : fertig
+}
+Waschgang --> Pause : Deckel oeffnen
+Pause --> Waschgang[H] : Deckel schliessen
+Waschgang --> Bereit : Programm fertig
+@enduml
