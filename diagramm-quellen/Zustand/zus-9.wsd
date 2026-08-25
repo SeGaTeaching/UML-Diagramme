@@ -1,0 +1,45 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+[*] --> Idle
+
+state Idle {
+}
+Idle : entry / Display zurücksetzen
+
+state VerifyCard {
+}
+VerifyCard : entry / Karte einlesen
+VerifyCard : do / Karte validieren
+VerifyCard : exit / Karte zurückgeben [falls ungültig]
+
+state VerifyPin {
+}
+VerifyPin : entry / PIN-Eingabe anfordern
+VerifyPin : do / PIN prüfen
+
+state AccountActions {
+}
+AccountActions : entry / Menü anzeigen
+
+state DispenseMoney {
+}
+DispenseMoney : entry / Betrag prüfen
+DispenseMoney : do / Geld ausgeben
+DispenseMoney : exit / Transaktion protokollieren
+
+state PrintReceipt {
+}
+PrintReceipt : entry / Drucker initialisieren
+PrintReceipt : do / Bon drucken
+PrintReceipt : exit / Drucker herunterfahren
+
+Idle --> VerifyCard : Karte eingesteckt
+VerifyCard --> VerifyPin : [Karte gültig]
+VerifyCard --> Idle : [Karte ungültig]
+VerifyPin --> AccountActions : [PIN korrekt]
+VerifyPin --> Idle : [PIN falsch] / Fehlermeldung anzeigen
+AccountActions --> DispenseMoney : Geld abheben
+DispenseMoney --> PrintReceipt : [Transaktion erfolgreich]
+PrintReceipt --> Idle : Transaktion abgeschlossen
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Schauspieler {
+  -name: String
+}
+class Film {
+  -titel: String
+  -erscheinungsjahr: int
+}
+Schauspieler "*" -- "*" Film : spielt in
+@enduml

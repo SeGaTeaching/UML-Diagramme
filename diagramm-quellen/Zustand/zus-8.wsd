@@ -1,0 +1,10 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+state Zustand1
+state Zustand2 {
+}
+Zustand1 : exit / exit-Aktion
+Zustand2 : entry / entry-Aktion
+
+Zustand1 --> Zustand2 : ereignis() / Transitionsaktion
+@enduml

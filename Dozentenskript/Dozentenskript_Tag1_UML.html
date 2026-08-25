@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dozentenskript — Tag 1: UML-Grundidee, Use-Case- und Klassendiagramme</title>
+<style>/* Lernportal – Basis-Stylesheet
+   Akzentfarben: Blau/Cyan (bei Bedarf pro Kurs anpassen).
+   Das Label der Hersteller-Box ("AZURE-UMSETZUNG") ersetzt build.py beim Laden
+   durch das konfigurierte box_label aus kurs_konfig.json.
+   Wird vom Generator inline in jede HTML-Datei eingebettet (Offline-Faehigkeit). */
+
+:root{--brand:#0078D4;--brand2:#50E6FF;--ink:#1b1b1b;--mut:#5b5b5b;--bg:#f7f9fb;--card:#fff;--line:#dde3e9;--accent:#0b5aa2;--ok:#1a7f37;--okbg:#e7f5ec;--bad:#c0392b;--badbg:#fdeaea;--erg:#8250df;--ergbg:#f5f0ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.nav{position:sticky;top:0;background:#1a1a2e;color:#fff;padding:10px 18px;font-size:14px;z-index:20;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.nav a{color:var(--brand2);text-decoration:none;font-weight:600}.nav a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:24px 20px 80px}
+.layout{display:flex;gap:26px;max-width:1144px;margin:0 auto;padding:14px 20px 70px}
+.side{flex:0 0 258px;position:sticky;top:54px;align-self:flex-start;max-height:calc(100vh - 74px);overflow:auto;font-size:.9em;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.side .stitle{font-weight:800;font-size:1.02em;margin:2px 0 8px}
+.side a{display:block;padding:5px 9px;border-radius:7px;color:var(--ink);text-decoration:none}
+.side a:hover{background:#eaf4fc}.side a.cur{background:var(--brand);color:#fff;font-weight:700}
+.side .grp{font-size:.72em;text-transform:uppercase;color:var(--mut);margin:11px 0 2px;letter-spacing:.06em;font-weight:700}
+.main{flex:1 1 auto;min-width:0;width:100%;max-width:820px}
+h1{font-size:1.85em;border-bottom:4px solid var(--brand);padding-bottom:.25em;margin-top:.15em}
+h2{font-size:1.3em;margin-top:1.5em;border-bottom:1px solid var(--line);padding-bottom:.2em}
+h3{font-size:1.08em;margin-top:1.2em}
+a{color:var(--accent)}
+.bc{font-size:.85em;color:var(--mut);margin:0 0 10px}.bc a{color:var(--accent);text-decoration:none}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#eef3f8}tr:nth-child(even) td{background:#fafcfe}
+code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:.9em}
+pre{background:#1e293b;color:#f1f5f9;padding:14px;border-radius:8px;overflow:auto}pre code{background:none;color:inherit}
+blockquote{border-left:4px solid var(--brand);margin:1em 0;padding:.4em 1em;background:#f2f9ff;color:#333}
+
+/* Azure-Umsetzungsbox – die zweite Ebene des Konzept/Produkt-Aufbaus (A5).
+   Bewusst visuell abgesetzt, damit sie fuer einen spaeteren CompTIA-Data+-Kurs
+   mit einem Handgriff entfernbar ist. */
+blockquote.azure{border-left:4px solid var(--brand);background:#eaf4fc;position:relative;padding:.6em 1em .6em 1em}
+blockquote.azure:before{content:"AZURE-UMSETZUNG";display:block;font-size:.68em;letter-spacing:.09em;font-weight:800;color:var(--brand);margin-bottom:.3em}
+
+details{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;margin:10px 0;padding:6px 14px}
+details summary{cursor:pointer;font-weight:600;padding:6px 0;list-style:none}details summary::-webkit-details-marker{display:none}
+details summary:before{content:"\25B6 ";color:var(--accent);font-size:.8em}details[open] summary:before{content:"\25BC "}
+.hub{display:grid;gap:10px;margin:10px 0 4px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 16px;text-decoration:none;color:var(--ink);position:relative;padding-right:36px}
+.card:hover{border-color:var(--brand);box-shadow:0 3px 10px rgba(0,0,0,.09)}.card .t{font-weight:700}
+.card:after{content:"\203A";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.7em;font-weight:700;line-height:.5}
+.card:hover:after{right:10px;color:var(--brand)}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
+.step .sh{font-weight:700;font-size:1.05em}.step .si{color:var(--mut);font-size:.92em;margin:2px 0 8px}
+.objbtns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:18px 0}
+.objbtn{background:#fff;border:1px solid var(--line);border-top:5px solid var(--brand);border-radius:12px;padding:18px;text-decoration:none;color:var(--ink);position:relative}
+.objbtn.erg{border-top-color:var(--erg)}
+.objbtn:hover{box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.objbtn .n{font-size:.8em;color:var(--mut);font-weight:700;text-transform:uppercase}
+.objbtn .h{font-size:1.1em;font-weight:700;margin-top:4px}
+.objbtn .w{font-size:.8em;color:var(--mut);margin-top:4px}
+.objbtn .cta{margin-top:12px;display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.82em;padding:6px 13px;border-radius:8px}
+.objbtn:hover .cta{background:#083f72}
+
+/* Ergaenzungs-Badge – kennzeichnet Material ueber den Pruefungs-Syllabus hinaus (A7) */
+.badge-erg{display:inline-block;background:var(--ergbg);color:var(--erg);border:1px solid var(--erg);border-radius:20px;padding:1px 9px;font-size:.7em;font-weight:800;letter-spacing:.04em;vertical-align:middle;margin-left:7px}
+.side a .badge-erg{margin-left:4px;font-size:.62em;padding:0 6px}
+.ergnote{background:var(--ergbg);border:1px solid #d8c9f5;border-left:4px solid var(--erg);border-radius:8px;padding:10px 14px;margin:14px 0;font-size:.93em}
+
+footer{color:var(--mut);font-size:.82em;border-top:1px solid var(--line);margin-top:40px;padding-top:14px;flex:1 0 100%;clear:both}
+li.task{list-style:none;margin-left:-1.2em}li.task input{margin-right:8px;transform:scale(1.15)}
+.mslearn{background:#eef6fb;border:1px solid #cfe6f5;border-radius:12px;padding:12px 16px;margin:16px 0}
+.mslearn h2{border:0;margin:.2em 0 .4em;font-size:1.1em}.mslearn ul{margin:.3em 0}
+.mslearn table{font-size:.88em;margin:.4em 0}
+.prevnext{display:flex;justify-content:space-between;gap:12px;margin-top:34px;border-top:2px solid var(--brand);padding-top:16px}
+.pn{flex:1;max-width:49%;border:1px solid var(--line);border-radius:10px;padding:10px 14px;text-decoration:none;color:var(--ink);background:#fff}
+.pn:hover{border-color:var(--brand)}.pn .lab{font-size:.75em;color:var(--mut)}.pn .tt{font-weight:700}.pn.next{text-align:right;margin-left:auto}
+.scorebar{position:sticky;top:52px;background:#f2f9ff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0;font-weight:600;display:flex;gap:16px;align-items:center;z-index:6}
+.scorebar button{margin-left:auto;background:#eee;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer;font:inherit}
+.mcq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:16px 0}
+.mcq-h{font-weight:700}.mcq .lvl{font-size:.72em;background:#e8eefc;border-radius:20px;padding:2px 8px;margin-right:6px;color:#334}.mcq-q{margin:6px 0 12px}
+.opt{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin:7px 0;cursor:pointer}
+.opt:hover{border-color:var(--brand);background:#f7fbff}.opt input{margin-top:3px}.opt .ltr{font-weight:700;min-width:1.3em}
+.mcq.answered .opt{cursor:default}
+.opt.correct{background:var(--okbg);border-color:var(--ok)}.opt.correct .ltr{color:var(--ok)}
+.opt.wrong{background:var(--badbg);border-color:var(--bad)}.opt.wrong .ltr{color:var(--bad)}
+.opt .mark{margin-left:auto;font-weight:700}
+.opt.correct .mark:after{content:"\2714 richtig";color:var(--ok)}.opt.wrong .mark:after{content:"\2716 falsch";color:var(--bad)}
+.sol{display:none;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}.mcq.answered .sol{display:block}
+.pruefen{display:none;margin-top:8px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 16px;cursor:pointer;font:inherit}
+.subh{font-weight:700;margin:14px 0 4px}
+.hint{background:#e8f4fd;border:1px solid var(--brand);border-radius:8px;padding:10px 14px;font-weight:600;margin:12px 0}
+img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:.6em 0}
+@media(max-width:820px){.layout{flex-direction:column}.side{position:static;flex-basis:auto;max-height:none}}
+@media print{.side,.nav,.prevnext,.scorebar{display:none}.layout{display:block}.sol{display:block}}
+
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #f8f8f8; }
+.codehilite .c { color: #3D7B7B; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #9C6500 } /* Comment.Preproc */
+.codehilite .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #E40000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #008400 } /* Generic.Inserted */
+.codehilite .go { color: #717171 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #687822 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #767600 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #A45A77 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* --- Dozentenskript: Ergaenzungen zum Portal-Stylesheet --- */
+.layout{max-width:1186px}
+.side{flex-basis:300px;top:58px;max-height:calc(100vh - 78px);font-size:.87em}
+.main{max-width:820px}
+.side .grp{margin:13px 0 3px;font-size:.7em}
+.side a{line-height:1.35;padding:5px 9px;display:flex;gap:8px;align-items:baseline}
+.side a span.txt{flex:1 1 auto;min-width:0}
+.side a.sec{font-weight:700}
+.side a.cur{background:var(--brand);color:#fff}
+.side .zeit{flex:0 0 auto;font-size:.78em;opacity:.6;font-weight:600;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.side a.cur .zeit{opacity:.9}
+.nav{display:flex;align-items:baseline;gap:14px}
+.nav .hier{margin-left:auto;color:#c8d0e0;font-weight:400;font-size:.93em;
+  max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main h1{font-size:1.5em;border-bottom:0;border-left:6px solid var(--brand);
+  padding:.1em 0 .1em .55em;margin:2.4em 0 .8em;background:linear-gradient(90deg,#eaf4fc,transparent 70%)}
+.main h1:first-of-type{margin-top:.2em}
+.titel{font-size:2.05em;font-weight:800;border-bottom:4px solid var(--brand);
+  padding-bottom:.22em;margin:.1em 0 .35em;line-height:1.2}
+.untertitel{color:var(--mut);font-size:1.02em;margin:0 0 .3em}
+h2{font-size:1.24em;margin-top:1.9em;border-bottom:1px solid var(--line);padding-bottom:.18em}
+h3{font-size:1.06em;margin-top:1.4em;color:var(--accent)}
+hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+blockquote{border-left:4px solid var(--brand);background:#f2f9ff;padding:.7em 1.1em}
+/* Marker-Kaesten */
+.mk{border-radius:10px;padding:.85em 1.25em;margin:1.25em 0}
+.mk>:first-child{margin-top:0}.mk>:last-child{margin-bottom:0}
+.mk .lbl{display:block;font-size:.68em;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:.15em}
+.mk-wissen{background:#f5f7f9;border:1px solid var(--line);border-left:5px solid #8a94a0}
+.mk-wissen .lbl{color:#6b7580}
+.mk-sagen{background:#f0f8ff;border:1px solid #bfdcf5;border-left:5px solid var(--brand)}
+.mk-sagen .lbl{color:var(--brand)}
+.mk-sagen blockquote{background:#fff;border-left-color:var(--brand);margin:.6em 0;
+  font-size:1.06em;line-height:1.68}
+.mk-aus{background:#1e293b;border-left:5px solid var(--brand2);color:#f1f5f9}
+.mk-aus .lbl{color:var(--brand2)}
+.mk-aus code{background:rgba(255,255,255,.17);color:#fff}
+.mk-aus strong{color:#fff}
+.mk-aus em{color:#9fd8ff;font-style:normal;font-weight:600}
+.mk-frage{background:var(--ergbg);border:1px solid #d8c9f5;border-left:5px solid var(--erg)}
+.mk-frage .lbl{color:var(--erg)}
+.mk-frage blockquote{background:#fff;border-left-color:var(--erg);margin:.6em 0;font-size:1.06em}
+.mk-brueck{background:#fff7e8;border:1px solid #f0d7a8;border-left:5px solid #b8791a}
+.mk-brueck .lbl{color:#a06a12}
+.mk-brueck blockquote{background:#fff;border-left-color:#b8791a;margin:.6em 0;font-size:1.06em}
+.mk-tun{background:var(--okbg);border:1px solid #b9e0c6;border-left:5px solid var(--ok)}
+.mk-tun .lbl{color:var(--ok)}
+.mk table{background:#fff;margin:.7em 0}
+/* Tabellen und Codebloecke im dunklen Ausfuehren-Kasten lesbar halten */
+.mk-aus table,.mk-aus table *{color:#101828}
+.mk-aus table th{background:#e8eef6}
+.mk-aus table td code,.mk-aus table th code{background:#e6ebf2;color:#101828}
+.mk-aus .codehilite{background:#0a1120;border:1px solid #3a4a63;border-radius:7px;
+  margin:.7em 0;padding:.15em .4em}
+.mk-aus .codehilite pre{background:transparent;color:#e8eef7;margin:0}
+.mk-aus .codehilite code,.mk-aus .codehilite span{background:transparent;color:#e8eef7}
+.mk-aus blockquote{background:#16233a;border-left-color:var(--brand2);color:#e8eef7}
+.zurueck{position:fixed;right:22px;bottom:22px;background:var(--accent);color:#fff;
+  border:0;border-radius:24px;padding:9px 17px;font:inherit;font-size:.88em;font-weight:600;
+  cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.22);display:none;z-index:30}
+.zurueck.an{display:block}
+@media(max-width:900px){.side{display:none}.nav .hier{display:none}}
+@media print{.nav,.side,.zurueck,.zurueck.an{display:none !important}.layout{display:block}.main{width:100%}
+  .mk{break-inside:avoid}h1,h2{page-break-after:avoid}.wrap,.layout{max-width:none;padding:0}}
+</style></head>
+<body>
+<div class="nav"><b>UML · Dozentenskript</b>
+<a href="../Portal/HTML/index.html">Schüler-Lernportal</a>
+<span class="hier" id="hier"></span></div>
+<div class="layout">
+<aside class="side"><div class="stitle">Dozentenskript<br><span style="font-weight:400;font-size:.9em">Tag 1 · Use-Case &amp; Klassendiagramm</span></div><a href="#der-zeitschnitt" data-ziel="der-zeitschnitt"><span class="txt">Der Zeitschnitt</span></a><a href="#vor-dem-unterricht" data-ziel="vor-dem-unterricht"><span class="txt">Vor dem Unterricht</span></a><a href="#der-einstieg-um-08-30" data-ziel="der-einstieg-um-08-30"><span class="txt">Der Einstieg um 08:30</span></a><a class="sec" href="#block-1-uml-grundidee-und-use-case-diagramme" data-ziel="block-1-uml-grundidee-und-use-case-diagramme"><span class="txt">Block 1 · UML-Grundidee und Use-Case-Diagramme</span></a><a href="#teil-1-1-was-ist-uml-und-die-diagramm-landkarte" data-ziel="teil-1-1-was-ist-uml-und-die-diagramm-landkarte"><span class="txt">Teil 1.1 · Was ist UML, und die Diagramm-Landkarte</span></a><a href="#teil-1-2-use-case-akteure-anwendungsfaelle-systemgrenze" data-ziel="teil-1-2-use-case-akteure-anwendungsfaelle-systemgrenze"><span class="txt">Teil 1.2 · Use-Case: Akteure, Anwendungsfälle, Systemgrenze</span></a><a href="#teil-1-3-beziehungen-und-der-komplette-live-aufbau" data-ziel="teil-1-3-beziehungen-und-der-komplette-live-aufbau"><span class="txt">Teil 1.3 · Beziehungen und der komplette Live-Aufbau</span></a><a class="sec" href="#block-2-klassendiagramme" data-ziel="block-2-klassendiagramme"><span class="txt">Block 2 · Klassendiagramme</span></a><a href="#teil-2-1-die-klasse-kompletter-live-aufbau-mit-zwei-klassen" data-ziel="teil-2-1-die-klasse-kompletter-live-aufbau-mit-zwei-klassen"><span class="txt">Teil 2.1 · Die Klasse — kompletter Live-Aufbau mit zwei Klassen</span></a><a href="#teil-2-2-die-beziehungen-im-ueberblick-und-interfaces" data-ziel="teil-2-2-die-beziehungen-im-ueberblick-und-interfaces"><span class="txt">Teil 2.2 · Die Beziehungen im Überblick — und Interfaces</span></a><a href="#teil-2-3-die-vier-beziehungen-im-detail-mit-dem-raute-test-live" data-ziel="teil-2-3-die-vier-beziehungen-im-detail-mit-dem-raute-test-live"><span class="txt">Teil 2.3 · Die vier Beziehungen im Detail — mit dem Raute-Test live</span></a><a href="#teil-2-4-objektdiagramm-und-abschluss" data-ziel="teil-2-4-objektdiagramm-und-abschluss"><span class="txt">Teil 2.4 · Objektdiagramm und Abschluss</span></a><a href="#der-nachmittag-selbstlernphase" data-ziel="der-nachmittag-selbstlernphase"><span class="txt">Der Nachmittag: Selbstlernphase</span></a><a href="#wenn-eine-frage-kommt-die-du-nicht-sofort-beantworten-willst" data-ziel="wenn-eine-frage-kommt-die-du-nicht-sofort-beantworten-willst"><span class="txt">Wenn eine Frage kommt, die du nicht sofort beantworten willst</span></a><a href="#notfallweg-wenn-die-zeit-knapp-wird" data-ziel="notfallweg-wenn-die-zeit-knapp-wird"><span class="txt">Notfallweg, wenn die Zeit knapp wird</span></a><a href="#blick-auf-morgen" data-ziel="blick-auf-morgen"><span class="txt">Blick auf morgen</span></a></aside>
+<main class="main">
+<div class="titel">Dozentenskript — Tag 1: UML-Grundidee, Use-Case- und Klassendiagramme</div>
+<p class="untertitel">UML-Diagramme · Tag 1 · Einführung, Use-Case- und Klassendiagramme · Live-Zeichen-Regie</p>
+
+<p><strong>Die ersten beiden Diagrammtypen — live gezeichnet, Element für Element</strong>
+UML-Diagramme · Tag 1 von 3 · <strong>Vormittag Unterricht · Nachmittag Selbstlernphase</strong> · Folien 1–27</p>
+<blockquote>
+<p><strong>Das ist kein Vorlese-Skript.</strong> Es ist dein roter Faden durch den Vormittag — und vor allem eine
+<strong>Zeichen-Regie</strong>: An jeder mit <strong><code>AKTIV</code></strong> markierten Stelle baust du das jeweilige Diagramm
+<strong>selbst live</strong> in einem Zeichentool auf, Baustein für Baustein, und sprichst dabei genau die
+Sätze, die unter dem Baustein stehen. Am Ende jedes Blocks steht ein <strong>vollständiges</strong> Diagramm
+vor der Gruppe — mit allen Sonderfällen, die üblicherweise zu Verwechslungen führen. Die Folien
+begleiten dich (Zweck, Notation, Referenz), aber das Diagramm selbst <strong>entsteht vor den Augen der
+Gruppe</strong>, nicht als fertiges Bild von der Folie.</p>
+<p><strong>Die Zeiten unten sind ein Vorschlag</strong> für einen Vormittag mit rund dreieinhalb
+Unterrichtsstunden. Verschieb die Blockgrenzen auf deinen tatsächlichen Stundenplan — der
+<strong>Feinschnitt</strong> und der <strong>Notfallweg</strong> sagen dir, woran du das Tempo misst und was zuerst entfällt.</p>
+</blockquote>
+<hr />
+<h2 id="der-zeitschnitt">Der Zeitschnitt</h2>
+<table>
+<thead>
+<tr>
+<th>Zeit (Vorschlag)</th>
+<th>Teil</th>
+<th>Folien</th>
+<th>Dauer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:30–08:45</td>
+<td>Einstieg — Was ist UML, was kommt heute</td>
+<td><strong>1</strong></td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><strong>08:45–10:15</strong></td>
+<td><strong>Block 1 · UML-Grundidee und Use-Case-Diagramme</strong></td>
+<td><strong>2–10</strong></td>
+<td>90 min</td>
+</tr>
+<tr>
+<td>10:15–10:30</td>
+<td>Pause</td>
+<td></td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>10:30–10:45</td>
+<td><strong>Zwischenübung Use-Case</strong> (Teil A, gemeinsam)</td>
+<td>Aufgabenblatt 7.1</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><strong>10:45–12:15</strong></td>
+<td><strong>Block 2 · Klassendiagramme</strong></td>
+<td><strong>11–27</strong></td>
+<td>90 min</td>
+</tr>
+<tr>
+<td>12:15–12:30</td>
+<td><strong>Zwischenübung Klasse</strong> (Teil A, gemeinsam)</td>
+<td>Aufgabenblatt 7.2</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td><strong>Nachmittag</strong></td>
+<td><strong>Selbstlernphase</strong> — Aufgaben Teil B zu 7.1 und 7.2, im Portal</td>
+<td></td>
+<td>offen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Feinschnitt Block 1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zeit</th>
+<th>Teil</th>
+<th>Folien</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:45–09:05</td>
+<td>1.1 · Was ist UML, die Diagramm-Landkarte</td>
+<td>2–3</td>
+</tr>
+<tr>
+<td>09:05–09:40</td>
+<td>1.2 · Use-Case: Akteure, Anwendungsfälle, Systemgrenze</td>
+<td>4–7</td>
+</tr>
+<tr>
+<td>09:40–10:15</td>
+<td>1.3 · Beziehungen, Live-Komplettaufbau am Geldautomaten</td>
+<td>8–10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Feinschnitt Block 2:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zeit</th>
+<th>Teil</th>
+<th>Folien</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:45–11:15</td>
+<td>2.1 · Die Klasse: Live-Komplettaufbau mit zwei Klassen</td>
+<td>11–14</td>
+</tr>
+<tr>
+<td>11:15–11:25</td>
+<td>2.2 · Interfaces (Ergänzung, Java-Bezug)</td>
+<td>15, 17–19</td>
+</tr>
+<tr>
+<td>11:25–12:05</td>
+<td>2.3 · Die vier Beziehungen und ihre Pfeile, Raute-Test live</td>
+<td>16, 20–26</td>
+</tr>
+<tr>
+<td>12:05–12:15</td>
+<td>2.4 · Objektdiagramm und Abschluss</td>
+<td>27</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Woran du das Tempo misst:</strong> Bist du <strong>10:15</strong> am Ende von Folie 10, liegst du gut. Der
+Klassendiagramm-Block ist der dichtere — wenn etwas drängt, kürze bei den Interfaces (17–19,
+Ergänzung), <strong>nicht</strong> bei den Live-Aufbauten. Der Notfallweg unten sagt die Reihenfolge.</p>
+</blockquote>
+<hr />
+<h2 id="vor-dem-unterricht">Vor dem Unterricht</h2>
+<h3>1. Vier Fenster bereitlegen</h3>
+<p><code>UML_Diagramme.pptx</code> — die 58 Folien (heute 1–27). Dieses Dozentenskript auf dem <strong>zweiten
+Fenster</strong> oder Monitor. Das <strong>Portal</strong> (<code>../Portal/HTML/index.html</code>) für Lerntext und Übungen. Und —
+neu und heute zentral — ein <strong>Zeichentool</strong> für den Live-Aufbau, siehe unten.</p>
+<h3>2. Das Zeichentool: Empfehlung draw.io (diagrams.net)</h3>
+<p>Du baust die Diagramme <strong>selbst live</strong> auf, Element für Element. <strong>Empfehlung: draw.io</strong>
+(<code>app.diagrams.net</code>, kostenlos, ohne Konto, läuft im Browser oder als Desktop-App).</p>
+<p><strong>Warum draw.io für diese Aufgabe gewinnt:</strong> Es hat <strong>fertige UML-Shape-Bibliotheken</strong> — Akteur
+(Strichmännchen), Use-Case-Ellipse, Klasse mit den drei Fächern, alle Beziehungspfeile
+(Vererbungsdreieck, Rauten, gestrichelte Pfeile) liegen fix und fertig in der Seitenleiste. Elemente
+<strong>rasten ein</strong> und <strong>verbinden sich sauber</strong> mit den richtigen Pfeilspitzen — du zeichnest kein
+krummes Dreieck von Hand, sondern ziehst das korrekte UML-Symbol auf die Fläche. Das Ergebnis ist
+am Ende ein <strong>korrektes</strong> Diagramm, kein nur ungefähr richtiges. Export als SVG/PNG geht mit einem
+Klick, falls du das Ergebnis sichern oder ins Portal stellen willst.</p>
+<p><strong>Einrichtung (einmalig, dauert eine Minute):</strong> In draw.io links in der Formenpalette ganz unten auf
+„<strong>More Shapes…</strong>" klicken, die Kategorie <strong>UML</strong> aktivieren, bestätigen — danach liegen Akteur,
+Use-Case-Ellipse, Klassen-Box und alle Beziehungspfeile fix in der Seitenleiste bereit.</p>
+<p><strong>Alternativen, falls du sie bevorzugst:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>draw.io</strong> (empfohlen)</th>
+<th>Excalidraw</th>
+<th>Miro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UML-Symbole korrekt &amp; fertig</td>
+<td>ja, eigene UML-Bibliothek</td>
+<td>nein, frei Hand gezeichnet</td>
+<td>teils, per Vorlage</td>
+</tr>
+<tr>
+<td>Elemente rasten/verbinden sauber</td>
+<td>ja</td>
+<td>nein, bewusst „unfertig"</td>
+<td>ja</td>
+</tr>
+<tr>
+<td>Stil</td>
+<td>sauber, technisch korrekt</td>
+<td>locker, „handgezeichnet"</td>
+<td>neutral</td>
+</tr>
+<tr>
+<td>Konto nötig</td>
+<td>nein</td>
+<td>nein</td>
+<td>ja</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>SVG/PNG</td>
+<td>PNG/SVG</td>
+<td>PNG/PDF</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Excalidraw</strong> (<code>excalidraw.com</code>) ist die gute Alternative, wenn du bewusst einen lockeren,
+„handgezeichneten" Stil willst — der signalisiert „wir entwickeln das gerade", was manchen Gruppen
+die Scheu nimmt, selbst mitzuzeichnen. Der Nachteil: Es gibt keine fertigen UML-Symbole, du
+zeichnest Dreiecke und Rauten frei Hand, mit dem Risiko, dass sie nicht ganz UML-konform aussehen.
+<strong>Miro</strong> nur, wenn du ohnehin schon damit arbeitest und deine Gruppe es kennt — für den reinen
+Live-Aufbau bringt es gegenüber draw.io keinen Vorteil, aber mehr Overhead (Konto, Board anlegen).</p>
+<blockquote>
+<p><strong>Vorbereiten:</strong> draw.io offen, ein leeres Blatt, UML-Kategorie aktiviert (siehe oben). An den mit
+<strong><code>AKTIV</code></strong> markierten Stellen baust du das jeweilige Diagramm <strong>live, Element für Element</strong> auf,
+statt nur die Folie zu zeigen. Zieh dir die Grundformen (Akteur, Ellipse, Rechteck-Klasse) schon
+vor Kursbeginn einmal testweise auf die Fläche, damit du im Unterricht nicht suchen musst.</p>
+</blockquote>
+<h3>3. Kein Code — bewusst</h3>
+<p>Der Kurs lehrt <strong>Modellierung</strong>, nicht Programmierung; die Codebeispiele sind aus den Lerntexten
+heraus. <strong>Aber:</strong> Die Gruppe kommt aus Java. Übersetze UML deshalb <strong>mündlich</strong> nach Java, wo es
+das Verständnis stützt (<code>-attribut</code> → <code>private</code>, △ → <code>extends</code>, <code>&lt;&lt;interface&gt;&gt;</code> → <code>implements</code>).
+Das ist der stärkste Hebel, den du bei dieser Gruppe hast.</p>
+<h3>4. Die Wikipedia-Folien kennen</h3>
+<p>Mehrere Folien (3, 5, 6, 7, 10, 15) zeigen <strong>eingebettete Wikipedia-Grafiken</strong> mit CC-BY-SA-Quelle.
+Sie sind lizenzrechtlich sauber (Attribution steht drauf), aber teils <strong>klein oder englisch</strong>. Zeig
+sie kurz zur Orientierung — das <strong>eigentliche</strong> Diagramm entsteht ohnehin live in draw.io, nicht auf
+der Folie. Für Nacharbeit verweise auf die deutschen, größeren Portal-SVGs.</p>
+<hr />
+<h2 id="der-einstieg-um-08-30">Der Einstieg um 08:30</h2>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>1 — Titelfolie: UML-Diagramme</strong></p>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Guten Morgen. In den nächsten Tagen lernen Sie eine Sprache — aber keine Programmier­sprache,
+sondern eine <strong>Bildsprache</strong>: UML, die Unified Modeling Language. Damit zeichnet man Software,
+bevor man sie baut.</p>
+<p>Sie kennen Java. Stellen Sie sich vor, Sie sollen mit drei Kollegen ein größeres System bauen.
+Bevor die erste Zeile Code entsteht, müssen sich alle einig sein: <strong>Welche Klassen gibt es, wer
+darf was, wie hängt das zusammen?</strong> Genau dafür ist UML da — es ist der <strong>Bauplan vor dem Code</strong>.</p>
+<p>Heute nehmen wir die zwei Diagramme, mit denen jede Modellierung anfängt: das <strong>Use-Case-Diagramm</strong>
+— die Sicht von außen, wer will was vom System — und das <strong>Klassendiagramm</strong> — die Sicht von
+innen, woraus das System besteht. Und ich zeichne heute alles selbst mit — Sie sehen jedes
+Diagramm wachsen, nicht fertig von der Folie fallen.</p>
+</blockquote>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Kurze Handzeichenfrage: Wer hat schon einmal ein UML-Diagramm gesehen — egal wo?</p>
+</blockquote>
+<p><strong>Das ist Kalibrierung, keine Kontrolle.</strong> Melden sich viele, kannst du beim Use-Case Tempo machen
+und mehr fragen als erklären. Melden sich wenige, nimm die Folien 4 und 11 (die zwei „Zweck"-Folien)
+besonders sorgfältig.</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Halte den Einstieg bei fünfzehn Minuten.</strong> Der Stoff selbst ist heute dankbar — der Einstieg muss
+nur die eine Idee setzen: <em>UML ist kein einzelnes Bild, sondern mehrere Sichten auf dasselbe System.</em>
+Diese Idee kommt auf Folie 3 als Bild wieder.</p>
+</div>
+<hr />
+<h1 id="block-1-uml-grundidee-und-use-case-diagramme">Block 1 · UML-Grundidee und Use-Case-Diagramme</h1>
+<p><strong>90 Minuten · 08:45–10:15 · Folien 2–10</strong></p>
+<div class="mk mk-brueck">
+<p><span class="lbl">Der Faden dieses Blocks</span></p>
+<p>Der Block hängt an vier Fragen, von der allgemeinsten zur konkretesten:</p>
+<ol>
+<li><strong>Warum überhaupt Bilder statt Text?</strong> → was UML ist, die zwei Kategorien <em>(2–3)</em></li>
+<li><strong>Wer will was vom System?</strong> → Akteur, Anwendungsfall, Systemgrenze <em>(4–7)</em></li>
+<li><strong>Wie hängen Anwendungsfälle zusammen?</strong> → include, extend, Generalisierung <em>(8–9)</em></li>
+<li><strong>Wie sieht das fertig aus?</strong> → hier bauen wir das komplette Diagramm live <em>(10)</em></li>
+</ol>
+<p><strong>Der Schnitt bei Folie 4 gehört ausgesprochen:</strong> Bis 3 geht es um UML allgemein, ab 4 beginnt der
+erste konkrete Diagrammtyp.</p>
+</div>
+<hr />
+<h2 id="teil-1-1-was-ist-uml-und-die-diagramm-landkarte">Teil 1.1 · Was ist UML, und die Diagramm-Landkarte</h2>
+<p><strong>20 Minuten · 08:45–09:05 · Folien 2–3</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>2 — Einführung in UML</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Fangen wir mit der Frage an, die jeder im Kopf hat: Warum zeichnen, wenn man auch programmieren
+kann? Weil natürliche Sprache <strong>mehrdeutig</strong> ist und Code <strong>zu detailliert</strong>, um den Überblick zu
+behalten. UML liegt genau dazwischen.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>UML ist eine <strong>standardisierte, grafische Sprache</strong> zur Modellierung von Softwaresystemen —
+standardisiert heißt: weltweit gleich, jeder Entwickler liest dieselben Symbole gleich. Sie dient
+drei Dingen: <strong>Visualisieren</strong> (das System sichtbar machen), <strong>Spezifizieren</strong> (festlegen, was
+gebaut wird) und <strong>Dokumentieren</strong> (festhalten, was gebaut wurde).</p>
+<p>Wichtig — und das nimmt Druck raus: <strong>UML ist keine Programmiersprache.</strong> Aus einem UML-Diagramm
+läuft nichts. Es ist der Plan, nach dem Sie hinterher in Java bauen.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Der Vergleich, der immer zieht:</strong> UML ist für Software, was der Bauplan für den Hausbau ist —
+niemand mauert ohne Grundriss. Diesen Vergleich brauchst du gleich auf Folie 3 wieder, halt ihn
+also bereit.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>3 — Übersicht: die UML-Diagramm-Hierarchie</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Und jetzt die Landkarte. UML ist nicht ein Diagramm, sondern eine ganze Familie — und die zerfällt
+in zwei Hälften.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Zwei große Gruppen. <strong>Strukturdiagramme</strong> beschreiben den <strong>Aufbau</strong> — die „Substantive" des
+Systems: Klassen, Objekte, Komponenten. Die Frage dahinter: <em>Woraus besteht das System?</em> Das
+wichtigste ist das <strong>Klassendiagramm</strong> — unser zweites Thema heute.</p>
+<p><strong>Verhaltensdiagramme</strong> beschreiben die <strong>Abläufe</strong> — die „Verben": Aktionen, Interaktionen,
+Zustände. Die Frage: <em>Was passiert zur Laufzeit?</em> Dazu gehören Use-Case, Aktivität, Sequenz und
+Zustand — die anderen vier Themen der Woche.</p>
+<p>Merken Sie sich für heute nur die Zweiteilung und wo wir stehen: <strong>Use-Case ist Verhalten,
+Klassendiagramm ist Struktur.</strong> Wir fangen mit dem Verhalten an, weil man ein System zuerst von
+außen betrachtet, bevor man hineinschaut.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Die abgebildete Grafik ist die Wikipedia-Übersicht — englisch und dicht.</strong> Zeig sie als Landkarte,
+aber lies sie <strong>nicht</strong> Kästchen für Kästchen vor. Es genügt: zwei Gruppen, und wir behandeln fünf
+der Typen. Wer die vollständige Aufzählung will, findet sie in Lerntext 7.1, Abschnitt 1.</p>
+</div>
+<hr />
+<h2 id="teil-1-2-use-case-akteure-anwendungsfaelle-systemgrenze">Teil 1.2 · Use-Case: Akteure, Anwendungsfälle, Systemgrenze</h2>
+<p><strong>35 Minuten · 09:05–09:40 · Folien 4–7</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>4 — Use-Case-Diagramm (Anwendungsfalldiagramm)</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Das erste konkrete Diagramm — und das zugänglichste. Es beantwortet eine einzige Frage: <strong>Wer
+will was vom System?</strong> Nicht wie, nicht in welcher Reihenfolge — nur <em>wer</em> und <em>was</em>.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Drei Bausteine, mehr braucht es zunächst nicht:</p>
+<p><strong>Der Akteur</strong> — das Strichmännchen. Eine <strong>Rolle</strong>, die mit dem System arbeitet: Kunde,
+Bibliothekar. Wichtig: eine Rolle, kein einzelner Mensch, und er steht <strong>außerhalb</strong> des Systems.</p>
+<p><strong>Der Anwendungsfall</strong> — die Ellipse. Ein <strong>Ziel</strong>, das der Akteur erreichen will: „Geld abheben",
+„Buch ausleihen". Immer aus Nutzersicht, immer ein abgeschlossener Nutzen.</p>
+<p><strong>Die Systemgrenze</strong> — der Kasten drumherum. Alles innerhalb ist das System, die Akteure stehen
+außen. Diese Grenze zu ziehen ist die eigentliche Denkarbeit: Sie sagt, was <em>wir</em> bauen und was
+<em>Umwelt</em> ist.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Ein erster, kurzer Live-Antippser in draw.io — noch nicht das ganze Diagramm, nur die drei
+Bausteine einmal in Aktion sehen:</p>
+<ol>
+<li><strong>Rechteck aus der UML-Palette ziehen, oben beschriften: „Geldautomat".</strong> Sag: „Alles in diesem
+   Kasten ist unser System, alles außerhalb ist die Umwelt."</li>
+<li><strong>Akteur-Symbol (Strichmännchen) links außerhalb des Rechtecks platzieren, beschriften: „Kunde".</strong>
+   Sag: „Der Kunde steht bewusst außen — er ist nicht Teil des Systems, er benutzt es nur."</li>
+<li><strong>Eine Use-Case-Ellipse in den Kasten ziehen, beschriften: „Geld abheben".</strong> Verbindungslinie vom
+   Kunden zur Ellipse ziehen (die Palette rastet automatisch am Rand ein). Sag: „Diese Linie heißt
+   Assoziation — sie sagt nur: der Kunde kann das."</li>
+</ol>
+<p><strong>Das ist erst der Auftakt.</strong> Das vollständige Diagramm mit allen Anwendungsfällen und Beziehungen
+bauen wir gemeinsam auf Folie 10 — heb dir dafür eine frische, leere Fläche auf.</p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Ist „Karte einstecken" ein eigener Anwendungsfall?</p>
+</blockquote>
+<p>Erwartete Falle: viele sagen ja. <strong>Antwort:</strong> nein — das ist ein <em>Schritt</em> auf dem Weg zum Ziel
+„Geld abheben", kein eigenständiges Ziel. <strong>Das ist der wichtigste Test des Themas:</strong> Hat die
+Ellipse für den Akteur einen abgeschlossenen Nutzen? Karte einstecken allein bringt ihm nichts. Wir
+kommen auf diese Falle beim Komplettaufbau (Folie 10) noch einmal ganz konkret zurück.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>5 — Beispiel: Akteur und Anwendungsfälle</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Genau das, was wir eben gezeichnet haben, hier als sauberes Beispiel.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Ein Akteur, mehrere Anwendungsfälle, jede Verbindung eine einfache Linie — die <strong>Assoziation</strong>,
+sie sagt nur „dieser Akteur nutzt diesen Anwendungsfall". Mehr Notation ist hier nicht im Spiel.</p>
+<p>Achten Sie auf die <strong>Benennung</strong>: Anwendungsfälle heißen <strong>Verb + Objekt</strong> — „Buch ausleihen",
+nicht „Ausleihe". Ein Substantiv als Ellipsentitel ist fast immer ein Zeichen, dass da in
+Wahrheit ein Datending steht, kein Nutzerziel.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Die Grafik ist ein Wikipedia-SVG</strong> (Attribution auf der Folie). Inhaltlich brauchbar; wenn du ein
+deutsches, größeres Beispiel willst, öffne stattdessen <code>uc-03.svg</code> im Portal (Bibliotheks­system).</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>6 — Komplexeres Beispiel</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Und so sieht es aus, wenn ein reales System mit mehreren Akteuren dazukommt. Nicht auswendig
+lernen — nur den Blick üben.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Zwei Beobachtungen genügen. Erstens: Es gibt <strong>mehrere Akteure</strong>, und nicht jeder darf alles —
+man sieht sofort, welche Rolle welche Anwendungsfälle nutzt. Zweitens: Das Diagramm bleibt trotz
+vieler Ellipsen lesbar, <strong>weil keine Abläufe drinstehen</strong>. In dem Moment, wo Sie Pfeile mit „dann,
+dann, dann" bräuchten, ist es das falsche Diagramm — dafür kommen Aktivität und Sequenz.</p>
+</blockquote>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>7 — Generalisierung von Akteuren und Anwendungsfällen</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Ein erstes Beziehungsmittel, und es ist genau das, was Sie aus Java als Vererbung kennen — nur
+hier für Rollen und Ziele.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p><strong>Generalisierung von Akteuren:</strong> Ein „Premium-Kunde" ist ein besonderer „Kunde" — er kann alles,
+was ein Kunde kann, und mehr. Derselbe Dreieckspfeil wie bei der Vererbung, Spitze zum
+Allgemeineren.</p>
+<p><strong>Generalisierung von Anwendungsfällen:</strong> „Mit Karte zahlen" und „Mit Bargeld zahlen" sind
+Spezialfälle von „Bezahlen". Der Spezialfall erbt die Bedeutung des allgemeinen und verfeinert sie.</p>
+<p>Für die Java-Gruppe: <strong>Das ist <code>extends</code> auf der Ebene der Anforderungen.</strong> Dieselbe Idee, die Sie
+beim Klassendiagramm gleich wiedersehen — dort mit demselben Pfeil.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Wichtig — ein Akteur muss kein Mensch sein.</strong> Neben „Premium-Kunde" gehört hierher auch der
+zweite große Sonderfall des Themas: Ein Akteur kann ein <strong>externes System</strong> sein (ein
+Bezahlsystem, das der Automat anruft) oder ein <strong>Zeitgeber</strong> (eine nächtliche Stapelverarbeitung).
+Erkennungsmerkmal ist immer dasselbe: <strong>außerhalb der Systemgrenze, will etwas vom System.</strong> Wir
+setzen genau so einen Systemakteur gleich beim Komplettaufbau ein — halt diesen Gedanken bereit.</p>
+<p><strong>Hier endet der leichte Teil des Blocks.</strong> Ab Folie 8 kommen include und extend — die einzige echte
+Stolperstelle des Use-Case-Themas. Der Satz für den Übergang: <em>„Jetzt die zwei Pfeile, die
+regelmäßig verwechselt werden — und die Prüfung fragt genau die Verwechslung ab."</em></p>
+</div>
+<hr />
+<h2 id="teil-1-3-beziehungen-und-der-komplette-live-aufbau">Teil 1.3 · Beziehungen und der komplette Live-Aufbau</h2>
+<p><strong>35 Minuten · 09:40–10:15 · Folien 8–10</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>8 — Include- und Extend-Beziehung</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Zwei gestrichelte Pfeile, die fast gleich aussehen und Gegenteiliges bedeuten. Wenn heute im
+Use-Case-Teil eine Prüfungsfrage lauert, dann hier.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p><strong><code>&lt;&lt;include&gt;&gt;</code> — der Pflichtbaustein.</strong> „Geld abheben" schließt <strong>immer</strong> „PIN prüfen" ein. Man
+lagert den Schritt aus, weil ihn <strong>mehrere</strong> Anwendungsfälle brauchen — einmal modelliert, überall
+genutzt. Der Pfeil geht <strong>vom Basisfall zum eingebundenen</strong> Fall: „Geld abheben" <code>..&gt;</code> „PIN prüfen".</p>
+<p><strong><code>&lt;&lt;extend&gt;&gt;</code> — die Kür.</strong> „Ticket kaufen" wird <strong>manchmal</strong> um „Rabattcode einlösen" erweitert —
+nur unter einer Bedingung. Der Pfeil geht <strong>von der Erweiterung zum Basisfall</strong>, also <strong>umgekehrt</strong>:
+„Rabattcode einlösen" <code>..&gt;</code> „Ticket kaufen". Das ist der zweite Stolperstein — die Richtung.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Zeichne beide isoliert nebeneinander in draw.io, damit die Richtung sich einprägt, <strong>bevor</strong> wir sie
+gleich im Gesamtbild wiederverwenden:</p>
+<ol>
+<li><strong>Zwei Ellipsen „Geld abheben" und „PIN prüfen" nebeneinander.</strong> Gestrichelter Pfeil (aus der
+   UML-Palette, Include-Vorlage) von „Geld abheben" zu „PIN prüfen", beschriftet <code>«include»</code>. Sag:
+   „Pflicht — der Pfeil folgt dem Ablauf: erst abheben, das schließt PIN prüfen zwingend ein."</li>
+<li><strong>Darunter zwei Ellipsen „Rabattcode einlösen" und „Ticket kaufen".</strong> Gestrichelter Pfeil von
+   „Rabattcode einlösen" zu „Ticket kaufen", beschriftet <code>«extend»</code>. Sag: „Kür — und der Pfeil zeigt
+   <strong>gegen</strong> den gewohnten Ablauf, nämlich auf den, der erweitert wird."</li>
+</ol>
+<p>Lass die beiden Zeichnungen <strong>nebeneinander stehen bleiben</strong> — der Vergleich ist die Lektion.</p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>„Kunde bewerten" beim Onlineshop: Der Verkauf funktioniert auch ohne. Include oder extend?</p>
+</blockquote>
+<p><strong>Antwort: extend</strong> — es passiert nur manchmal, der Verkauf braucht es nicht. <strong>Die Prüffrage laut
+mitsprechen lassen:</strong> <em>Passiert es immer? → include. Nur manchmal? → extend.</em></p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Das ist die eine Folie, die sitzen muss.</strong> Wenn die Gruppe hier wackelt, nimm dir zwei Minuten
+mehr — der Rest des Use-Case-Themas ist dagegen selbsterklärend. Merksatz zum Mitgeben:
+<strong>include = eingebaut (immer), extend = erweitert (manchmal).</strong></p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>9 — Extend mit Extension Point</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Eine Verfeinerung von extend — kurz halten, es ist Zusatzwissen.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Der <strong>Extension Point</strong> sagt, <strong>an welcher Stelle</strong> und <strong>unter welcher Bedingung</strong> die Erweiterung
+einhakt — zum Beispiel „nach der Betragseingabe, falls die Karte aus dem Ausland stammt". Praktisch
+ist es die Feinschrift zu Folie 8: <em>wann genau</em> die Kür greift.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Kürzbar (Notfallweg, Rang 2).</strong> Für die Prüfung genügt der Unterschied include/extend von Folie 8.
+Wenn du kürzt, ein Satz: <em>„Man kann bei extend zusätzlich angeben, an welcher Stelle und unter
+welcher Bedingung erweitert wird — das heißt Extension Point."</em></p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>10 — Vollständiges Beispiel</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Jetzt alles zusammen — und diesmal zeichnen wir es komplett neu, von einer leeren Fläche bis zum
+fertigen Diagramm. Jedes Element, das wir heute Vormittag einzeln besprochen haben, kommt jetzt an
+seinen Platz.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Bevor wir zeichnen, einmal die <strong>Lesereihenfolge</strong>, die zugleich die <strong>Zeichenreihenfolge</strong> ist:
+Erst die <strong>Systemgrenze</strong> — was gehört dazu? Dann die <strong>Akteure</strong> außen — wer ist beteiligt? Dann
+die <strong>Anwendungsfälle</strong> innen — welche Ziele? Dann die <strong>Assoziationen</strong> — wer darf was? Zuletzt
+die <strong>gestrichelten Pfeile</strong> — was ist Pflicht (include), was Kür (extend)?</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p><strong>Der komplette Live-Aufbau — neue, leere Fläche in draw.io.</strong> Baue jetzt das gesamte
+Geldautomat-Diagramm Baustein für Baustein auf. Sprich bei jedem Schritt genau den Satz dazu, der
+Sonderfälle unterwegs ausdrücklich mit:</p>
+<ol>
+<li><strong>Systemgrenze zeichnen</strong> — ein großes Rechteck, oben „Geldautomat". Sag: „Alles in diesem Kasten
+   ist unser System, alles außerhalb ist Umwelt — das legen wir immer zuerst fest."</li>
+<li><strong>Ersten Akteur setzen</strong> — Strichmännchen links außerhalb, „Kunde". Sag: „Unser primärer Akteur —
+   ein Mensch, der ein eigenes Ziel verfolgt."</li>
+<li><strong>Zweiten Akteur setzen — bewusst kein Mensch</strong> — ein zweites Strichmännchen rechts außerhalb,
+   „Banksystem". Sag: „Akteure müssen keine Menschen sein. Das Banksystem ist ein externes System,
+   das unser Automat kontaktiert — auch das ist ein Akteur, weil es außerhalb steht und mit unserem
+   System kommuniziert. Das nennt man einen sekundären Akteur."</li>
+<li><strong>Ersten Anwendungsfall in die Systemgrenze ziehen</strong> — Ellipse „Geld abheben", Linie zum Kunden.
+   Sag: „Ein abgeschlossenes Ziel des Kunden."</li>
+<li><strong>Zwei weitere Anwendungsfälle ergänzen</strong> — Ellipsen „Kontostand abfragen" und „PIN ändern",
+   jeweils mit Linie zum Kunden. Frag die Gruppe: „Was will der Kunde noch von diesem Automaten?" —
+   und ergänze, was kommt.</li>
+<li><strong>Bewusster Fehlversuch, sofort korrigiert</strong> — kurz eine vierte Ellipse „PIN eingeben" andeuten,
+   dann <strong>durchstreichen</strong> oder wieder löschen. Sag: „Fast reingerutscht — aber das ist kein eigenes
+   Ziel, nur ein Schritt auf dem Weg zu ‚Geld abheben'. Der Test: Hat es für den Kunden allein einen
+   abgeschlossenen Nutzen? Nein — also keine eigene Ellipse."</li>
+<li><strong>Den gemeinsamen Teilschritt auslagern</strong> — neue Ellipse „Authentifizieren" in die Systemgrenze,
+   <strong>unterhalb</strong> der drei bisherigen. Sag: „Das ist der Schritt, den wir eben nicht extra gezeichnet
+   haben, sondern jetzt sauber als eigenen Anwendungsfall modellieren."</li>
+<li><strong>Drei Include-Pfeile ziehen</strong> — gestrichelte <code>«include»</code>-Pfeile von „Geld abheben", „Kontostand
+   abfragen" und „PIN ändern" jeweils zu „Authentifizieren". Sag: „Alle drei brauchen ihn <strong>immer</strong>
+   — deshalb dreimal include, einmal modelliert."</li>
+<li><strong>Das Banksystem anbinden</strong> — Linie vom Akteur „Banksystem" zu „Authentifizieren". Sag: „Die
+   PIN-Prüfung selbst läuft nicht im Automaten, sondern wird beim Banksystem angefragt — deshalb
+   auch hier eine Assoziation, diesmal von einem System-Akteur."</li>
+<li><strong>Die optionale Erweiterung ergänzen</strong> — neue Ellipse „Bargeld in Fremdwährung ausgeben".
+    Gestrichelter <code>«extend»</code>-Pfeil <strong>von</strong> dieser Ellipse <strong>zu</strong> „Geld abheben". Sag: „Nur bei
+    ausländischen Karten kommt das dazu — deshalb extend, und der Pfeil zeigt bewusst <strong>gegen</strong> den
+    Ablauf, auf den Basisfall, den er erweitert."</li>
+<li><strong>Einmal komplett vorlesen</strong> — mit dem Finger über das fertige Bild fahren: Systemgrenze, zwei
+    Akteure (einer davon kein Mensch), fünf Anwendungsfälle, drei Include-Pfeile, ein Extend-Pfeil.
+    Sag: „Das ist ein vollständiges Use-Case-Diagramm — und genauso, in dieser Reihenfolge, gehen
+    Sie in der Übung gleich selbst vor."</li>
+</ol>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Diese eine Zeichnung trägt den ganzen Block.</strong> Lass sie nach dem Zeichnen sichtbar stehen — auch
+während der Pause und der Zwischenübung, sie ist die Referenz, auf die sich die Gruppe beim eigenen
+Zeichnen bezieht. <strong>Zwei Sonderfälle sind absichtlich eingebaut</strong> und sollten explizit benannt
+bleiben: der Akteur, der kein Mensch ist (Banksystem), und der Fehlversuch, der zeigt, warum
+„PIN eingeben" kein Use Case ist.</p>
+<p><strong>Hier endet Block 1.</strong> Bist du vor 10:15 fertig, ist das gut — der Klassendiagramm-Block ist der
+dichtere. Der Satz für die Pause und die Übung: <em>„Nach der Pause zeichnen Sie zuerst selbst ein
+Use-Case-Diagramm — dann drehen wir das System um und schauen hinein: das Klassendiagramm."</em></p>
+<p>Die <strong>Zwischenübung Use-Case</strong> (Aufgabenblatt 7.1, Teil A) macht ihr gemeinsam: eine Aufgabe an der
+Tafel/in draw.io vorführen, eine die Gruppe selbst, Musterlösung aus dem Portal aufdecken.</p>
+</div>
+<hr />
+<h1 id="block-2-klassendiagramme">Block 2 · Klassendiagramme</h1>
+<p><strong>90 Minuten · 10:45–12:15 · Folien 11–27</strong></p>
+<div class="mk mk-brueck">
+<p><span class="lbl">Der Faden dieses Blocks</span></p>
+<p>Der Block dreht das System um: von der Außensicht zur Innensicht. Vier Fragen:</p>
+<ol>
+<li><strong>Woraus besteht eine Klasse, und wie hängen zwei Klassen zusammen?</strong> → Live-Komplettaufbau
+   <em>(11–14)</em></li>
+<li><strong>Welche Beziehungen gibt es im Überblick?</strong> → die Pfeil-Übersicht, Interfaces <em>(15–19)</em></li>
+<li><strong>Was bedeutet jede Beziehung genau?</strong> → Vererbung, Aggregation, Komposition live mit
+   Raute-Test <em>(13, 20–26)</em></li>
+<li><strong>Wie sieht das zur Laufzeit aus?</strong> → das Objektdiagramm <em>(27)</em></li>
+</ol>
+<p><strong>Der wichtigste Satz des Blocks fällt gleich bei Folie 11 und noch einmal am Ende:</strong> Ein
+Klassendiagramm lässt sich <strong>Zeile für Zeile nach Java übersetzen</strong> — und weil die Gruppe Java kann,
+ist das dein stärkster Hebel.</p>
+</div>
+<hr />
+<h2 id="teil-2-1-die-klasse-kompletter-live-aufbau-mit-zwei-klassen">Teil 2.1 · Die Klasse — kompletter Live-Aufbau mit zwei Klassen</h2>
+<p><strong>30 Minuten · 10:45–11:15 · Folien 11–14</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>11 — Klassendiagramm (Struktur)</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Wir haben von außen geschaut: wer will was. Jetzt schauen wir hinein: <strong>woraus</strong> bauen wir das
+System? Das Klassendiagramm ist das wichtigste Diagramm der objektorientierten Programmierung —
+und Ihrem Java-Alltag am nächsten.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Das Klassendiagramm zeigt die <strong>Bausteine</strong> eines Systems und wie sie zusammenhängen: <strong>Klassen</strong>,
+ihre <strong>Attribute</strong> (was ein Objekt weiß), ihre <strong>Methoden</strong> (was ein Objekt kann) und die
+<strong>Beziehungen</strong> zwischen ihnen.</p>
+<p>Und der Satz, den Sie den ganzen Block über hören werden: <strong>Ein Klassendiagramm ist Java in
+Kurzschrift.</strong> Was hier als Kästchen steht, wird bei Ihnen zur <code>class</code>; jedes Attribut zu einem
+Feld, jede Methode zu einer Methode. Wer das Diagramm liest, hat die Klasse schon geschrieben.</p>
+</blockquote>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>12 — Aufbau und Syntax einer Klasse</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Ab jetzt zeichnen wir wieder komplett selbst, von einer leeren Fläche an — und diesmal bauen wir
+gleich zwei Klassen mit einer vollständigen Beziehung dazwischen. Das ist der wichtigste
+Live-Aufbau des Klassendiagramm-Blocks.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Eine Klasse ist ein Rechteck mit <strong>drei Fächern</strong> übereinander — Name, Attribute, Methoden — und
+davor bei Attributen und Methoden ein <strong>Sichtbarkeitszeichen</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Zeichen</th>
+<th>Bedeutung</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>öffentlich</td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>privat</td>
+<td><code>private</code></td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>geschützt</td>
+<td><code>protected</code></td>
+</tr>
+</tbody>
+</table>
+<p>Die Faustregel, die die meisten Fehler verhindert: <strong>Attribute privat, Methoden öffentlich</strong> —
+die Daten werden gekapselt, der Zugriff läuft über Methoden. Das ist genau das
+„private Feld, public Getter", das Sie schon schreiben.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p><strong>Der komplette Live-Aufbau — neue, leere Fläche in draw.io.</strong> Baue zwei Klassen mit einer
+vollständigen Beziehung samt Multiplizität auf, Fach für Fach:</p>
+<ol>
+<li><strong>Leeres Klassen-Rechteck aus der UML-Palette ziehen</strong> — noch ohne Beschriftung, nur die drei
+   leeren Fächer sichtbar. Sag: „Das ist der leere Steckbrief — jede Klasse fängt bei mir mit diesem
+   Kasten an."</li>
+<li><strong>Oberstes Fach beschriften: „Konto"</strong> — fett, Singular. Sag: „Der Name steht immer oben,
+   groß geschrieben, in der Einzahl — nicht ‚Konten'."</li>
+<li><strong>Erstes Attribut ins mittlere Fach: <code>-kontonummer: String</code>.</strong> Sag: „Minus heißt privat — von
+   außen nicht direkt sichtbar. In Java wäre das <code>private String kontonummer;</code>."</li>
+<li><strong>Zweites Attribut ergänzen: <code>-kontostand: double</code>.</strong> Sag: „Auch privat — der Kontostand ist
+   sensibel, den lassen wir niemanden direkt verändern."</li>
+<li><strong>Erste Methode ins untere Fach: <code>+einzahlen(betrag: double): void</code>.</strong> Sag: „Plus heißt
+   öffentlich — von außen aufrufbar. In Java: <code>public void einzahlen(double betrag) { }</code>."</li>
+<li><strong>Zweite Methode ergänzen: <code>+getKontostand(): double</code>.</strong> Sag: „Ein Getter — er macht den privaten
+   Kontostand kontrolliert von außen zugänglich. Genau das Prinzip: privat schützen, über eine
+   öffentliche Methode freigeben."</li>
+<li><strong>Zweite, leere Klasse daneben ziehen, beschriften: „Kunde", ein Attribut <code>-name: String</code>.</strong>
+   Sag: „Zweite Klasse, gleiches Schema — Name oben, Attribut privat darunter."</li>
+<li><strong>Verbindungslinie zwischen „Kunde" und „Konto" ziehen</strong> — einfache Assoziationslinie. Sag:
+   „Diese Linie sagt: Ein Kunde kennt sein Konto — mehr noch nicht."</li>
+<li><strong>Multiplizität an beide Enden schreiben: <code>1</code> bei Kunde, <code>1..*</code> bei Konto.</strong> Sag: „Jetzt wird es
+   präzise: Ein Konto gehört zu <strong>genau einem</strong> Kunden — die <code>1</code> beim Kunden. Ein Kunde hat
+   <strong>mindestens ein</strong> Konto, vielleicht mehrere — die <code>1..*</code> beim Konto. Gelesen wird über Kreuz:
+   die Zahl steht bei der Klasse, von der aus man zählt."</li>
+<li><strong>Kurz zurücktreten und komplett vorlesen</strong> — mit dem Finger über das fertige Bild: zwei
+    Klassen, je drei Fächer, Sichtbarkeiten, eine Beziehung mit Multiplizität an beiden Enden. Sag:
+    „Das ist ein vollständiges kleines Klassendiagramm — Steckbrief, Steckbrief, Beziehung dazwischen."</li>
+</ol>
+<p>Dann frag: <em>„Wie sähe die Klasse Konto als Java-Code aus?"</em> — und lass die Gruppe <code>private double
+kontostand;</code>, <code>public void einzahlen(double betrag)</code> und <code>private Konto konto;</code> (für die
+Beziehung, als Attribut in <code>Kunde</code>) zurufen. <strong>Dieser Übersetzungsmoment ist Gold bei dieser Gruppe.</strong></p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Lass dieses Diagramm stehen — es ist die Referenz für den ganzen Block.</strong> Auf Folie 14
+(Multiplizität formal) und Folie 20 (gerichtete Assoziation) greifst du genau darauf zurück, statt
+neu zu zeichnen: „Erinnern Sie sich an die <code>1</code> und die <code>1..*</code> zwischen Kunde und Konto von eben —
+genau das war schon eine Multiplizität, genau die Linie schon eine Assoziation."</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>13 — Vererbung: „Auto erbt von Fahrzeug"</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Die erste Beziehung, und die kennen Sie schon: Vererbung. In UML hat sie ein unverwechselbares
+Symbol. Ein kurzer, eigener Aufbau dafür.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p><strong>Der Dreieckspfeil</strong> mit der Spitze zur <strong>allgemeineren</strong> Klasse: <code>Auto ──▷ Fahrzeug</code>. Gelesen:
+„Auto <strong>ist ein</strong> Fahrzeug." Das Auto erbt alle Attribute und Methoden von Fahrzeug und ergänzt
+eigene.</p>
+<p>Für Sie: <strong>Das ist <code>class Auto extends Fahrzeug</code>.</strong> Die leere Dreiecksspitze steht immer beim
+<strong>Elternteil</strong> — der Merksatz: <em>Die Spitze zeigt auf den, von dem geerbt wird.</em></p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Kurzer, eigener Live-Aufbau — neue Fläche, oder rechts neben dem Kunde/Konto-Diagramm:</p>
+<ol>
+<li><strong>Klasse „Fahrzeug" zeichnen</strong>, ein Attribut <code>-geschwindigkeit: double</code>, eine Methode
+   <code>+beschleunigen(): void</code>. Sag: „Die allgemeine Basisklasse — das, was jedes Fahrzeug kann."</li>
+<li><strong>Klasse „Auto" darunter zeichnen</strong>, ein eigenes Attribut <code>-anzahlTueren: int</code>. Sag: „Das Auto
+   bekommt zusätzlich etwas Eigenes, das nicht jedes Fahrzeug hat."</li>
+<li><strong>Vererbungspfeil aus der UML-Palette (leeres Dreieck) von „Auto" zu „Fahrzeug" ziehen.</strong> Sag:
+   „Die Spitze zeigt nach oben, zum Elternteil. Auto erbt jetzt Geschwindigkeit und Beschleunigen
+   automatisch dazu."</li>
+<li><strong>Den ist-ein-Test laut anwenden.</strong> Sag: „Ist ein Auto ein Fahrzeug? Ja — Vererbung passt. Wäre
+   die Frage ‚Ist ein Motor ein Auto?', wäre die Antwort nein — der Motor ist ein <em>Teil</em>, das ist
+   eine andere Beziehung, die kommt gleich."</li>
+</ol>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Der ist-ein-Test ist das wichtigste Werkzeug gegen den häufigsten Anfängerfehler:</strong> Vererbung zu
+verwenden, wo eine Teil-Beziehung gemeint ist. Halt den Satz „Ist ein Motor ein Auto?" bereit — du
+brauchst ihn bei Folie 23 wieder, wenn die Aggregation drankommt.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>14 — Multiplizität / Kardinalität</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Wir haben die Multiplizität eben am Kunde-Konto-Diagramm schon benutzt — jetzt machen wir die
+Regel dahinter explizit.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Die <strong>Multiplizität</strong> steht an den <strong>Enden</strong> einer Beziehung und gibt an, wie viele Objekte
+beteiligt sein dürfen — als <code>untere..obere</code> Schranke:</p>
+<table>
+<thead>
+<tr>
+<th>Angabe</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td>genau eins</td>
+</tr>
+<tr>
+<td><code>0..1</code></td>
+<td>keins oder eins (optional)</td>
+</tr>
+<tr>
+<td><code>*</code> oder <code>0..*</code></td>
+<td>beliebig viele</td>
+</tr>
+<tr>
+<td><code>1..*</code></td>
+<td>mindestens eins</td>
+</tr>
+</tbody>
+</table>
+<p>Der Stern steht für die <strong>obere</strong> Schranke „beliebig viele". Gelesen wird <strong>über Kreuz</strong>: „Ein
+Kunde hat <code>1..*</code> Konten; ein Konto gehört zu genau <code>1</code> Kunden" — genau das Diagramm, das gerade
+neben uns steht.</p>
+</blockquote>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Ein Auto und seine Räder — welche Multiplizität schreiben Sie an die beiden Enden?</p>
+</blockquote>
+<p>Erwarte: Auto <code>1</code> — Rad <code>4</code> (oder <code>1..*</code>, je nach Modell). <strong>Der Punkt:</strong> Multiplizität zwingt zum
+Nachdenken über den Sonderfall — darf es null sein? beliebig viele? Genau das prüft die Klausur.</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Die abgebildete Tabelle ist vollständig — nutze sie als Referenz</strong>, aber lass die Gruppe die drei
+wichtigsten (<code>1</code>, <code>0..*</code>, <code>1..*</code>) am eigenen Kunde-Konto-Diagramm nachvollziehen, statt alle Zeilen
+vorzulesen. Die Portal-Referenz <code>kls-ref-multiplizitaet.svg</code> zeigt es zusätzlich grafisch.</p>
+</div>
+<hr />
+<h2 id="teil-2-2-die-beziehungen-im-ueberblick-und-interfaces">Teil 2.2 · Die Beziehungen im Überblick — und Interfaces</h2>
+<p><strong>10 Minuten · 11:15–11:25 · Folien 15, 17–19</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>15 — Ein vollständiges Klassendiagramm</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Bevor wir die restlichen Beziehungen einzeln durchgehen, einmal das große Bild: So sieht ein
+fertiges Klassendiagramm mit mehreren Klassen aus.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Lesen Sie es wie eine Landkarte: erst die <strong>Kästen</strong> (welche Klassen gibt es?), dann die <strong>Linien</strong>
+dazwischen (wie hängen sie zusammen?). Noch müssen Sie nicht jede Linienart deuten können — das
+kommt gleich. Der Punkt ist: <strong>Ein Klassendiagramm ist selten eine Klasse, meist ein Netz.</strong></p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Wikipedia-Grafik, englisch/klein.</strong> Für ein deutsches, sauberes Gesamtbeispiel öffne im Portal das
+Banksystem-Diagramm (<code>kls-14.svg</code> / <code>kls-16.svg</code> im Lerntext 7.2) — das greift die Beispiele auf,
+die die Gruppe schon aus dem Use-Case-Teil kennt.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>17 — Interfaces</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Ein kurzer Ausflug, der Ihnen als Java-Leuten leichtfällt: das Interface. Es ist eine Sonderform
+der Klasse.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Ein <strong>Interface</strong> ist ein <strong>Vertrag</strong>: Es legt fest, <strong>was</strong> eine Klasse können muss, aber nicht,
+<strong>wie</strong>. Nur Methodensignaturen, keine Umsetzung. Eine Klasse kann <strong>mehrere</strong> Interfaces erfüllen
+— anders als bei der Vererbung, wo es in Java nur eine Elternklasse gibt.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Das ist Ergänzungsstoff — nicht in den fünf Kern-Lerntexten, aber auf den Folien.</strong> Halt es kurz;
+die Gruppe kennt Interfaces aus Java. Der UML-Teil ist nur die <strong>Schreibweise</strong>, und die kommt auf
+Folie 19.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>18 — Interfaces in Java</strong></p>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Kurz der Java-Bezug, den Sie schon haben: <code>interface Zahlbar { void zahlen(); }</code> und
+<code>class Rechnung implements Zahlbar</code>. <strong>Wichtig für gleich:</strong> In UML wird <code>implements</code> nicht zum
+Vererbungspfeil, sondern zu einem <strong>gestrichelten</strong> Dreieckspfeil — der <strong>Realisierung</strong>.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Kürzbar (Notfallweg, Rang 1).</strong> Wenn die Zeit im Block drängt, fasse 17–19 in einem Satz zusammen:
+<em>„Interface = Vertrag; in UML <code>&lt;&lt;interface&gt;&gt;</code> überm Namen und ein gestrichelter Dreieckspfeil für
+<code>implements</code>."</em> — und geh weiter zu den Beziehungen, die prüfungsrelevanter sind.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>19 — Interface-Darstellung in UML</strong></p>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Zwei Schreibweisen: Entweder ein Klassenkasten mit <strong><code>&lt;&lt;interface&gt;&gt;</code></strong> über dem Namen und einer
+gestrichelten Realisierungslinie von der umsetzenden Klasse — oder die <strong>„Lollipop"-Notation</strong>:
+ein kleiner Kreis am Faden, der das angebotene Interface markiert. Die erste Form sehen Sie
+häufiger.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Der Übergang zurück zum Kern:</strong> <em>„So viel zum Vertrag. Jetzt die vier Beziehungen, die Sie am
+häufigsten brauchen — und die die Prüfung liebt."</em></p>
+</div>
+<hr />
+<h2 id="teil-2-3-die-vier-beziehungen-im-detail-mit-dem-raute-test-live">Teil 2.3 · Die vier Beziehungen im Detail — mit dem Raute-Test live</h2>
+<p><strong>40 Minuten · 11:25–12:05 · Folien 16, 20–26</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>16 — Übersicht: alle Beziehungspfeile</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Der „Pfeil-Zoo" — alle Beziehungsarten nebeneinander. Diese eine Folie ist die Nachschlagekarte
+für den Rest des Blocks.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Sieben Linienarten, und jede sagt etwas anderes:</p>
+<table>
+<thead>
+<tr>
+<th>Beziehung</th>
+<th>Linie/Pfeil</th>
+<th>Frage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assoziation</strong></td>
+<td>einfache Linie</td>
+<td>kennt-ein?</td>
+</tr>
+<tr>
+<td><strong>Gerichtete Assoziation</strong></td>
+<td>Linie mit offener Pfeilspitze</td>
+<td>kennt-ein, nur in eine Richtung</td>
+</tr>
+<tr>
+<td><strong>Vererbung</strong></td>
+<td>leerer Dreieckspfeil △</td>
+<td>ist-ein?</td>
+</tr>
+<tr>
+<td><strong>Realisierung</strong></td>
+<td>gestrichelter Dreieckspfeil</td>
+<td>erfüllt-Vertrag (Interface)</td>
+</tr>
+<tr>
+<td><strong>Abhängigkeit</strong></td>
+<td>gestrichelte Linie, offene Spitze</td>
+<td>benutzt-kurz?</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>leere Raute ◇</td>
+<td>hat-ein (locker)</td>
+</tr>
+<tr>
+<td><strong>Komposition</strong></td>
+<td>gefüllte Raute ◆</td>
+<td>besteht-aus (fest)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Zeichne den „Pfeil-Zoo" <strong>einmal live</strong> untereinander — je zwei Kästchen aus der UML-Palette,
+dazwischen die jeweilige Linie, rechts das Stichwort. Das dauert drei Minuten und ist die Referenz,
+auf die du die nächsten Folien alle beziehst: <em>„Erinnern Sie sich an die gestrichelte Linie von
+eben — das war die Abhängigkeit."</em></p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Die zwei Rauten sind die Prüfungsfalle des ganzen Themas</strong> — leer gegen gefüllt. Sag es hier schon
+an: <em>„Merken Sie sich die zwei Rauten, dazu kommen wir gleich mit einem Test, der sie
+auseinanderhält."</em> Das ist der Raute-Test von Folie 25.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>20 — Gerichtete Assoziation</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Die einfachste dauerhafte Beziehung — und ihre gerichtete Variante. Wir haben sie eben schon
+gezeichnet, ohne den Namen zu nennen.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Eine <strong>Assoziation</strong> ist eine <strong>dauerhafte</strong> Verbindung: Ein Objekt kennt ein anderes über die
+Zeit — genau wie „Kunde kennt Konto" von vorhin.</p>
+<p><strong>Gerichtet</strong> heißt: Die Kenntnis geht nur in <strong>eine</strong> Richtung — eine offene Pfeilspitze zeigt,
+wer wen kennt. Der Kunde kennt sein Konto; das Konto muss seinen Kunden nicht zwingend kennen.</p>
+<p>Für Sie: <strong>Das ist ein Attribut.</strong> <code>class Kunde { private Konto konto; }</code> — die gerichtete
+Assoziation ist genau dieses Feld, das Sie am Anfang des Blocks schon mündlich benannt haben.</p>
+</blockquote>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>21 — Abhängigkeit (Dependency)</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Und jetzt der schwächere Verwandte, der ständig mit der Assoziation verwechselt wird.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Eine <strong>Abhängigkeit</strong> ist <strong>kurzfristig</strong>: Ein Objekt benutzt ein anderes nur <strong>vorübergehend</strong> —
+als Methodenparameter, als lokale Variable, für einen Moment. „Benutzt-ein" statt „kennt-ein".
+Gestrichelte Linie mit offener Spitze.</p>
+<p>Der Unterschied in einem Bild: <strong>Die Assoziation ist eine Ehe (dauerhaft, als Attribut
+gespeichert), die Abhängigkeit ein Taxi (kurz genutzt, dann weg).</strong> In Java: Attribut gegen
+Parameter — <code>void bezahlen(Kreditkarte k)</code> hängt von <code>Kreditkarte</code> ab, speichert sie aber nicht.</p>
+</blockquote>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Ein Drucker, der ein Dokument druckt — Assoziation oder Abhängigkeit?</p>
+</blockquote>
+<p><strong>Antwort: Abhängigkeit</strong> — der Drucker <em>benutzt</em> das Dokument im Moment des Druckens, <em>besitzt</em> es
+nicht. Kommt „nur für einen Aufruf" vor → gestrichelt.</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Die Leitfrage, die beide trennt:</strong> <em>Speichert das Objekt das andere als Attribut?</em> Ja →
+Assoziation (durchgezogen). Nur kurz benutzt → Abhängigkeit (gestrichelt). Wenn die Gruppe hier
+„Assoziation gegen Abhängigkeit" sicher trennt, kannst du bei Aggregation/Komposition Tempo machen —
+die bauen auf demselben Denken auf.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>22 — Beispiel kombiniert</strong></p>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Beides an einem Bild: Der <strong>Kunde</strong> hat eine <strong>gerichtete Assoziation</strong> zum <strong>Warenkorb</strong> — er
+besitzt ihn über den ganzen Einkauf. Und der Kunde hat eine <strong>Abhängigkeit</strong> zur <strong>Kreditkarte</strong> —
+die braucht er nur im Moment des Bezahlens.</p>
+</blockquote>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>23 — Aggregation</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Jetzt die zwei Teil-Ganzes-Beziehungen — und hier sitzt die berühmteste Verwechslung von UML.
+Zuerst die lockere Form, wieder als eigener kurzer Live-Aufbau.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Die <strong>Aggregation</strong> ist eine <strong>lockere</strong> „Teil-von"-Beziehung: Ein Objekt ist Teil eines Ganzen,
+<strong>kann aber unabhängig davon existieren</strong>. Symbol: die <strong>leere Raute</strong> ◇ — und sie sitzt immer
+<strong>beim Ganzen</strong>.</p>
+<p>„Ein <strong>Spieler</strong> ist Teil eines <strong>Teams</strong> — aber der Spieler existiert auch ohne das Team weiter."
+Löst sich das Team auf, sind die Spieler nicht verschwunden.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Eigener kurzer Live-Aufbau — neue Fläche, für den direkten Vergleich mit Komposition gleich
+reserviert genug Platz darunter:</p>
+<ol>
+<li><strong>Klasse „Team" zeichnen</strong>, ein Attribut <code>-name: String</code>. Sag: „Das Ganze."</li>
+<li><strong>Klasse „Spieler" daneben zeichnen</strong>, ein Attribut <code>-rueckennummer: int</code>. Sag: „Das Teil."</li>
+<li><strong>Linie zwischen beiden ziehen, am Ende bei „Team" die leere Raute aus der UML-Palette setzen.</strong>
+   Sag: „Die Raute sitzt beim Ganzen, nie beim Teil — sie zeigt, wer wen ‚hat'."</li>
+<li><strong>Den Raute-Test laut anwenden.</strong> Sag: „Löse ich das Team auf — existiert der Spieler noch?
+   Ja. Deshalb die leere Raute."</li>
+</ol>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>24 — Beispiel Aggregation</strong></p>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Ein zweites Beispiel zum Festigen: <strong>Bibliothek ◇— Buch</strong> — das Buch existiert auch, wenn die
+Bibliothek schließt. Gemeinsames Muster mit Team/Spieler: <strong>Das Teil hat ein Eigenleben.</strong></p>
+</blockquote>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>25 — Komposition</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Und jetzt die starke Form — direkt unter die Aggregation gezeichnet, damit der Unterschied auf
+einen Blick sichtbar wird.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Die <strong>Komposition</strong> ist eine <strong>starke</strong> „Besteht-aus"-Beziehung: Das Teil ist <strong>fester Bestandteil</strong>
+des Ganzen und <strong>stirbt mit ihm</strong>. Symbol: die <strong>gefüllte Raute</strong> ◆, wieder beim Ganzen.</p>
+<p>„Ein <strong>Raum</strong> ist Teil eines <strong>Hauses</strong> — wird das Haus abgerissen, verschwinden die Räume mit."
+Der Raum hat kein Eigenleben außerhalb des Hauses.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Direkt <strong>unter</strong> das Team/Spieler-Diagramm von Folie 23 zeichnen, gleiches Schema:</p>
+<ol>
+<li><strong>Klasse „Haus" zeichnen</strong>, ein Attribut <code>-adresse: String</code>. Sag: „Wieder das Ganze — direkt
+   unter Team, damit wir gleich vergleichen können."</li>
+<li><strong>Klasse „Raum" daneben zeichnen</strong>, ein Attribut <code>-quadratmeter: double</code>. Sag: „Wieder das Teil."</li>
+<li><strong>Linie ziehen, am Ende bei „Haus" die gefüllte Raute aus der UML-Palette setzen.</strong> Sag: „Optisch
+   fast identisch mit eben — nur diesmal ist die Raute ausgefüllt."</li>
+<li><strong>Beide Diagramme nebeneinander zeigen und den Raute-Test aussprechen:</strong></li>
+</ol>
+<blockquote>
+<p><strong>Der Raute-Test:</strong> Zerstöre das Ganze. Lebt das Teil weiter? <strong>Ja → leere Raute</strong> (Aggregation).
+<strong>Nein → gefüllte Raute</strong> (Komposition).</p>
+</blockquote>
+<p>Sag: <em>„Team weg, Spieler da — leere Raute. Haus weg, Räume weg — gefüllte Raute."</em> <strong>Dieser eine
+Test beantwortet jede Prüfungsfrage zum Thema.</strong></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Eine Bestellung und ihre Bestellpositionen — leere oder gefüllte Raute?</p>
+</blockquote>
+<p><strong>Antwort: gefüllt (Komposition)</strong> — löscht man die Bestellung, sind die Positionen sinnlos und
+verschwinden. Wende den Test laut an.</p>
+</div>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>26 — Beispiel Komposition</strong></p>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Zum Festigen: <strong>Haus ◆— Raum</strong> und <strong>Bestellung ◆— Bestellposition</strong>. Gemeinsames Muster: <strong>Das
+Teil gehört zu genau einem Ganzen und teilt dessen Lebensdauer.</strong> Damit haben Sie alle vier
+Beziehungen live gesehen: Vererbung (ist-ein), Assoziation (kennt-ein), Aggregation (hat-ein
+locker), Komposition (besteht-aus fest).</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Hier ist der inhaltliche Höhepunkt des Tages erreicht.</strong> Wenn du die vier Beziehungen mit ihren
+Tests (ist-ein, kennt-ein, Raute-Test) live gezeichnet und sicher rübergebracht hast, ist das
+Tageslernziel erfüllt. Der Rest ist Zugabe.</p>
+</div>
+<hr />
+<h2 id="teil-2-4-objektdiagramm-und-abschluss">Teil 2.4 · Objektdiagramm und Abschluss</h2>
+<p><strong>10 Minuten · 12:05–12:15 · Folie 27</strong></p>
+<div class="mk mk-aus">
+<p><span class="lbl">Auf dem geteilten Bildschirm</span></p>
+<p><strong>27 — Objektdiagramm</strong></p>
+</div>
+<div class="mk mk-brueck">
+<p><span class="lbl">Überleitung — laut sagen</span></p>
+<blockquote>
+<p>Ein letztes, kurzes Diagramm — die Momentaufnahme zum Klassendiagramm.</p>
+</blockquote>
+</div>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Das <strong>Klassendiagramm</strong> zeigt die <strong>Bauform</strong> — die Klasse <code>Kunde</code>, allgemein. Das
+<strong>Objektdiagramm</strong> zeigt einen <strong>konkreten Augenblick</strong>: <code>max : Kunde</code> mit seinen zwei konkreten
+Konten. Objektnamen werden <strong>unterstrichen</strong> und mit Doppelpunkt geschrieben: <code>max : Kunde</code>.</p>
+<p>Wozu? Es macht Multiplizitäten <strong>anfassbar</strong>: Wo das Klassendiagramm „ein Kunde hat <code>1..*</code> Konten"
+sagt, zeigt das Objektdiagramm den konkreten Max mit genau zwei Konten. <strong>Es ist der Schnappschuss
+zur Bauzeichnung.</strong></p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Optionaler Mini-Aufbau, wenn die Zeit reicht — direkt neben dem Kunde/Konto-Klassendiagramm vom
+Anfang des Blocks:</p>
+<ol>
+<li><strong>Rechteck zeichnen, Titel unterstrichen: „max : Kunde".</strong> Sag: „Kein Klassenname mehr — ein
+   konkreter Name, gefolgt von der Klasse, aus der er stammt."</li>
+<li><strong>Zwei weitere Rechtecke daneben: „sparkonto1 : Konto" und „girokonto1 : Konto", je eine Linie
+   zu „max : Kunde".</strong> Sag: „Genau zwei Konten — das ist die Multiplizität <code>1..*</code> von vorhin, jetzt
+   an einem konkreten Beispiel gezeigt statt nur als Regel."</li>
+</ol>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Kürzbar (Notfallweg, Rang 3), aber schade drum</strong> — es ist ein Zwei-Minuten-Diagramm und schließt
+den Block rund ab. Merksatz: <strong>Klasse = Bauplan, Objekt = ein gebautes Haus.</strong></p>
+<p><strong>Der Tagesabschluss, ohne Folie:</strong></p>
+<blockquote>
+<p>Ich fasse den Tag in zwei Sätzen zusammen. <strong>Erstens: Man schaut ein System zuerst von außen an —
+wer will was (Use-Case) — und dann von innen — woraus besteht es (Klassen).</strong> <strong>Zweitens: Ein
+Klassendiagramm ist Java in Kurzschrift</strong> — drei Fächer, Sichtbarkeiten, und vier Beziehungen, die
+Sie mit drei Fragen auseinanderhalten: ist-ein, kennt-ein, und der Raute-Test.</p>
+<p>Heute Nachmittag üben Sie beides selbst — die Aufgaben liegen im Portal, jede mit Musterlösung.
+Morgen drehen wir vom Aufbau zum Ablauf: <strong>wie sich das System zur Laufzeit verhält.</strong></p>
+</blockquote>
+<p>Die <strong>Zwischenübung Klasse</strong> (Aufgabenblatt 7.2, Teil A) direkt im Anschluss: eine Klasse mit
+Attributen/Methoden gemeinsam zeichnen, dann eine Beziehungsaufgabe, Musterlösung aus dem Portal.</p>
+</div>
+<hr />
+<h2 id="der-nachmittag-selbstlernphase">Der Nachmittag: Selbstlernphase</h2>
+<p><strong>Heute arbeitet die Gruppe selbstständig.</strong> Der Nachmittag vertieft die zwei Diagrammtypen des
+Vormittags — jede Aufgabe hat eine eingeklappte Musterlösung, die Teilnehmer prüfen sich selbst.</p>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Wofür</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>../Portal/HTML/index.html</code></td>
+<td>das <strong>Lernportal</strong> — Lerntexte 7.1 und 7.2 zum Nachlesen, Übungen im selben Layout</td>
+</tr>
+<tr>
+<td>Aufgabenblatt 7.1, <strong>Teil B</strong> (8–12 Aufgaben)</td>
+<td>Use-Case selbstständig modellieren, gestaffelt leicht→schwer</td>
+</tr>
+<tr>
+<td>Aufgabenblatt 7.2, <strong>Teil B</strong> (8–12 Aufgaben)</td>
+<td>Klassendiagramme selbstständig modellieren, bis zu mehreren Klassen mit allen Beziehungen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sag der Gruppe, wie sie üben soll:</strong> erst selbst zeichnen (Papier oder draw.io), <strong>dann erst</strong> die
+Musterlösung aufdecken. Das Aufdecken vor dem eigenen Versuch ist der häufigste Lernfehler. Wer
+draw.io noch nicht kennt: kurzer Hinweis auf die UML-Palette (siehe „Vor dem Unterricht") reicht,
+die Bedienung ist selbsterklärend.</p>
+<p><strong>Wer schnell fertig ist:</strong> die letzten beiden Aufgaben in Teil B sind bewusst anspruchsvoller
+(mehrere Akteure mit include/extend; mehrere Klassen mit allen vier Beziehungen und Multiplizitäten).</p>
+<hr />
+<h2 id="wenn-eine-frage-kommt-die-du-nicht-sofort-beantworten-willst">Wenn eine Frage kommt, die du nicht sofort beantworten willst</h2>
+<blockquote>
+<p>„Gute Frage — was denken die anderen?" — und dann zurück zum Diagramm.</p>
+<p>„Das ist eine Vertiefung, die über den heutigen Stoff hinausgeht. <strong>Wer von Ihnen hat damit
+schon gearbeitet?</strong>"</p>
+</blockquote>
+<p><strong>Die sieben Fragen, die mit hoher Wahrscheinlichkeit kommen, mit Antwort:</strong></p>
+<p><strong>„Ist ein Akteur immer ein Mensch?"</strong> — Nein, und das ist wichtig zu sagen. Ein Akteur ist eine
+<strong>Rolle</strong>, die mit dem System interagiert — das kann auch ein <strong>Fremdsystem</strong> (das Banksystem, das
+der Automat aufruft — genau der Akteur aus unserem Live-Aufbau) oder ein <strong>Zeitgeber</strong> (eine
+nächtliche Abrechnung) sein. Man erkennt ihn daran, dass er <strong>außerhalb</strong> des Systems steht und
+etwas von ihm will. <em>(Folie 4/7, live gezeichnet auf Folie 10.)</em></p>
+<p><strong>„Wann include, wann extend?"</strong> — Passiert der Teilschritt <strong>immer</strong>, ist es <code>include</code>; passiert
+er <strong>nur unter einer Bedingung</strong>, ist es <code>extend</code>. Eselsbrücke: <strong>include = Pflichtbaustein,
+extend = Sonderfall.</strong> <em>(Folie 8/9, live gezeichnet auf Folie 10.)</em></p>
+<p><strong>„Was ist der Unterschied zwischen Assoziation und Abhängigkeit?"</strong> — Die <strong>Assoziation</strong> ist
+<strong>dauerhaft</strong> (ein Objekt hält das andere als Attribut — der Kunde <em>hat</em> sein Konto). Die
+<strong>Abhängigkeit</strong> ist <strong>kurzfristig</strong> (ein Objekt benutzt ein anderes nur vorübergehend, etwa als
+Methodenparameter — „benutzt-ein"). In Java: Attribut gegen lokale Variable. <em>(Folie 20/21.)</em></p>
+<p><strong>„Aggregation oder Komposition — brauche ich das im echten Java-Code überhaupt?"</strong> — Ehrliche
+Antwort: <strong>im Code kaum sichtbar</strong>, beides ist am Ende ein Attribut. Der Unterschied ist die
+<strong>Lebensdauer</strong> und wird beim Modellieren entschieden. Für die Modellierung (und die Prüfung) zählt
+der <strong>Raute-Test</strong>. <em>(Folie 23–26, live gezeichnet.)</em></p>
+<p><strong>„Interface oder abstrakte Klasse?"</strong> — Die Java-Gruppe kennt das. Kurz: Ein <strong>Interface</strong> ist ein
+reiner <strong>Vertrag</strong> (nur Methodensignaturen, keine Umsetzung, eine Klasse kann <strong>mehrere</strong>
+implementieren). In UML steht <code>&lt;&lt;interface&gt;&gt;</code> über dem Klassennamen, die Umsetzung ist ein
+<strong>gestrichelter</strong> Dreieckspfeil (<strong>Realisierung</strong>). <em>(Folie 17–19.)</em></p>
+<p><strong>„Wir schreiben doch gar keinen Code — warum dann so genau?"</strong> — Weil UML die <strong>Sprache vor dem
+Code</strong> ist: Ein Klassendiagramm lässt sich Zeile für Zeile nach Java übersetzen (<code>-attribut</code> →
+<code>private</code>, Dreieckspfeil → <code>extends</code>, <code>&lt;&lt;interface&gt;&gt;</code> → <code>implements</code>). <strong>Wer das Diagramm sauber
+liest, schreibt hinterher die Klassen fehlerfrei.</strong> Die knappe UML→Java-Tabelle steht am Ende von
+Lerntext 7.2.</p>
+<p><strong>„Wozu ein Objektdiagramm, wenn es das Klassendiagramm gibt?"</strong> — Das Klassendiagramm zeigt die
+<strong>Bauform</strong> (die Klasse <em>Kunde</em>), das Objektdiagramm eine <strong>Momentaufnahme</strong> konkreter Objekte
+(<em>Max Mustermann : Kunde</em> mit seinen zwei konkreten Konten). Es ist der Beweis, dass eine
+Multiplizität stimmt. <em>(Folie 27.)</em></p>
+<hr />
+<h2 id="notfallweg-wenn-die-zeit-knapp-wird">Notfallweg, wenn die Zeit knapp wird</h2>
+<p><strong>Der Klassendiagramm-Block ist der dichtere.</strong> Wenn es drängt, kürze in dieser Reihenfolge:</p>
+<table>
+<thead>
+<tr>
+<th>Rang</th>
+<th>Folien</th>
+<th>Was entfällt</th>
+<th>Was der Verzicht kostet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>17–19</strong></td>
+<td>Interfaces</td>
+<td>Ergänzung, nicht in den Kern-Lerntexten. Ein Satz: „Interface = Vertrag, in UML <code>&lt;&lt;interface&gt;&gt;</code> + gestrichelter Dreieckspfeil"</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>9</strong></td>
+<td>Extension Point</td>
+<td>Ein Satz genügt — der Unterschied include/extend (Folie 8) reicht</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>27</strong></td>
+<td>Objektdiagramm / dessen Live-Aufbau</td>
+<td>Merksatz mündlich: „Klasse = Bauplan, Objekt = ein gebautes Haus"</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>6</strong></td>
+<td>Komplexes Use-Case-Beispiel</td>
+<td>Zeigen, nicht besprechen — Folie 5 trägt die Notation schon</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>15</strong></td>
+<td>Wikipedia-Gesamtbeispiel</td>
+<td>Durch das deutsche Portal-SVG ersetzen oder überspringen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Was auf keinen Fall entfällt — die Live-Aufbauten, die den Tag tragen:</strong> <strong>4/10</strong> (der komplette
+Use-Case-Aufbau am Geldautomaten, inklusive der beiden Sonderfälle), <strong>12</strong> (der komplette
+Klassen-Aufbau mit zwei Klassen, Sichtbarkeiten und Multiplizität), <strong>13</strong> (Vererbung und der
+ist-ein-Test) sowie <strong>23/25</strong> (Aggregation und Komposition mit dem Raute-Test). Wenn du nur diese
+vier Live-Aufbauten schaffst, hat die Gruppe den kompletten Kern des Tages selbst wachsen sehen.</p>
+<p><strong>Wenn Block 2 nicht mehr durchläuft:</strong> Streich 17–19 und den Live-Aufbau von 27. <strong>Kürze nicht bei
+23/25</strong> — der Unterschied der beiden Rauten ist die häufigste Prüfungsfrage des Klassendiagramms.</p>
+<hr />
+<h2 id="blick-auf-morgen">Blick auf morgen</h2>
+<p><strong>Tag 2 — Aktivitäts- und Sequenzdiagramme.</strong> Der Blickwechsel von der <strong>Struktur</strong> zum
+<strong>Verhalten</strong>: Heute ging es darum, <em>woraus</em> ein System besteht; morgen darum, <em>wie</em> es abläuft.</p>
+<blockquote>
+<p><strong>Der rote Faden für morgen:</strong> Das <strong>Aktivitätsdiagramm</strong> zeigt einen Prozess als Fluss (wie ein
+Flussdiagramm — Entscheidungen, Schleifen, Parallelität). Das <strong>Sequenzdiagramm</strong> zeigt, <strong>wer
+wann mit wem spricht</strong> (der zeitliche Nachrichtenaustausch zwischen Objekten). Beide werden wieder
+live in draw.io aufgebaut, genau wie heute — nur mit neuen Symbolen aus derselben UML-Palette.</p>
+</blockquote>
+<p><strong>Ein Satz zum Mitgeben am Ende von heute:</strong> <em>„Sie können jetzt ein System von außen (Use-Case) und
+von innen (Klassen) beschreiben. Morgen bringen wir es in Bewegung."</em></p>
+</main></div>
+<button class="zurueck" id="hoch">Nach oben</button>
+<script>
+(function(){
+ var links=[].slice.call(document.querySelectorAll('.side a[data-ziel]'));
+ var karte={}; links.forEach(function(a){karte[a.dataset.ziel]=a;});
+ var ziele=links.map(function(a){return document.getElementById(a.dataset.ziel);}).filter(Boolean);
+ var hier=document.getElementById('hier'), seite=document.querySelector('.side');
+ function setzen(){
+   var akt=null, grenze=140;
+   for(var i=0;i<ziele.length;i++){ if(ziele[i].getBoundingClientRect().top<=grenze) akt=ziele[i]; }
+   if(!akt) akt=ziele[0];
+   if(!akt) return;
+   links.forEach(function(a){a.classList.remove('cur');});
+   var a=karte[akt.id];
+   if(a){ a.classList.add('cur');
+     var r=a.getBoundingClientRect(), s=seite.getBoundingClientRect();
+     if(r.top<s.top+8||r.bottom>s.bottom-8) a.scrollIntoView({block:'nearest'});
+     var tx=a.querySelector('.txt'); hier.textContent=(tx?tx.textContent:a.textContent).replace(/\s+/g,' ').trim(); }
+ }
+ var wartet=false;
+ addEventListener('scroll',function(){ if(wartet)return; wartet=true;
+   requestAnimationFrame(function(){setzen();wartet=false;}); },{passive:true});
+ addEventListener('resize',setzen); setzen();
+ var btn=document.getElementById('hoch');
+ addEventListener('scroll',function(){ btn.classList.toggle('an',scrollY>700); },{passive:true});
+ btn.onclick=function(){ scrollTo({top:0,behavior:'smooth'}); };
+})();</script>
+</body></html>

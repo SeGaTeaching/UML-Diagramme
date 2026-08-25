@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="197px" preserveAspectRatio="none" style="width:589px;height:197px;" version="1.1" viewBox="0 0 589 197" width="589px" zoomAndPan="magnify"><defs/><g><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="52" x="20.5" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="20.5" x2="72.5" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="30.5" y="25.9951">Aktiv</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="81" x="6" y="136"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="87" y1="162.2969" y2="162.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="16" y="153.9951">Gesperrt</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="75" x="242" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="242" x2="317" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="252" y="25.9951">ImRegal</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="100" x="229.5" y="136"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="229.5" x2="329.5" y1="162.2969" y2="162.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="239.5" y="153.9951">InReparatur</text><!--link Aktiv to Gesperrt--><path d="M44.65,58.32 C43.79,72.27 43.06,90.12 43.5,106 C43.72,113.93 44.12,122.51 44.56,130.44 " fill="none" id="Aktiv-Gesperrt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="44.87,135.82,48.3485,126.6059,44.5839,130.8282,40.3616,127.0636,44.87,135.82" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="191" x="44.5" y="101.9951">login() [Fehlversuche &gt;= 3]</text><!--link ImRegal to ImRegal--><path d="M317.17,21.32 C335.63,19.8 352,23.69 352,33 C352,41.44 338.55,45.43 322.3,44.96 " fill="none" id="ImRegal-ImRegal" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="317.17,44.68,325.9392,49.1633,322.1626,44.9518,326.3741,41.1752,317.17,44.68" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="219" x="358" y="37.9951">zurueckgeben() [kein Schaden]</text><!--link ImRegal to InReparatur--><path d="M279.5,58.29 C279.5,78.95 279.5,108.67 279.5,130.65 " fill="none" id="ImRegal-InReparatur" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="279.5,135.78,283.5,126.78,279.5,130.78,275.5,126.78,279.5,135.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="267" x="280.5" y="101.9951">zurueckgeben() [Schaden festgestellt]</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+state Aktiv
+state Gesperrt
+state ImRegal
+state InReparatur
+
+Aktiv - -> Gesperrt : login() [Fehlversuche >= 3]
+ImRegal - -> ImRegal : zurueckgeben() [kein Schaden]
+ImRegal - -> InReparatur : zurueckgeben() [Schaden festgestellt]
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

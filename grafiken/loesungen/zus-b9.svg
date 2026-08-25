@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="446px" preserveAspectRatio="none" style="width:839px;height:446px;" version="1.1" viewBox="0 0 839 446" width="839px" zoomAndPan="magnify"><defs/><g><ellipse cx="355.77" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="68.8906" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="238" x="236.77" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="236.77" x2="474.77" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="331.27" y="106.9951">Puffern</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="218" x="241.77" y="133.292">entry / Ladeanzeige einblenden</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="115" x="241.77" y="149.5889">do / Daten laden</text><rect fill="#E3F2FD" height="68.8906" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="242" x="73.77" y="236"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="73.77" x2="315.77" y1="262.2969" y2="262.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="160.77" y="253.9951">Abspielen</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="222" x="78.77" y="280.292">entry / Ladeanzeige ausblenden</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="165" x="78.77" y="296.5889">do / Video wiedergeben</text><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="215" x="33.27" y="383"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="33.27" x2="248.27" y1="409.2969" y2="409.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="112.77" y="400.9951">Pausiert</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="195" x="38.27" y="427.292">entry / Wiedergabe anhalten</text><rect fill="#E3F2FD" height="52.5938" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="240" x="324.77" y="383"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="324.77" x2="564.77" y1="409.2969" y2="409.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="423.27" y="400.9951">Fehler</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="220" x="329.77" y="427.292">entry / Fehlermeldung anzeigen</text><!--link *start to Puffern--><path d="M355.77,28.18 C355.77,40.59 355.77,63.47 355.77,83.58 " fill="none" id="*start-Puffern" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="355.77,88.63,359.77,79.63,355.77,83.63,351.77,79.63,355.77,88.63" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Puffern to Abspielen--><path d="M236.56,130.87 C149.82,138.29 42.86,154.19 14.77,188 C-10.51,218.42 23.49,237.97 68.51,250.27 " fill="none" id="Puffern-Abspielen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="73.47,251.59,65.7807,245.4357,68.6339,250.3203,63.7493,253.1735,73.47,251.59" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="208" x="15.77" y="201.9951">pufferVoll() [Verbindung stabil]</text><!--link Abspielen to Puffern--><path d="M220.6,235.66 C233.12,220.29 248.86,202.39 264.77,188 C275.07,178.68 286.8,169.57 298.32,161.29 " fill="none" id="Abspielen-Puffern" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="302.56,158.28,292.9088,160.2434,298.4875,161.1808,297.5501,166.7594,302.56,158.28" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="152" x="265.77" y="201.9951">bandbreiteZuNiedrig()</text><!--link Puffern to Fehler--><path d="M400.6,158.31 C409.32,167.02 417.4,177.06 422.77,188 C453.12,249.91 451.75,333.2 448.21,377.6 " fill="none" id="Puffern-Fehler" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="447.77,382.81,452.5261,374.1856,448.1982,377.8284,444.5555,373.5005,447.77,382.81" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="450.77" y="275.4951">verbindungVerloren()</text><!--link Fehler to Puffern--><path d="M513.71,382.97 C547.94,366.37 586.1,341.02 605.77,305 C620.46,278.08 622.46,261.72 605.77,236 C577.44,192.35 527.61,165.64 479.86,149.37 " fill="none" id="Fehler-Puffern" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="474.95,147.73,482.2352,154.3576,479.6963,149.3026,484.7513,146.7636,474.95,147.73" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="210" x="617.77" y="275.4951">verbindungWiederhergestellt()</text><!--link Abspielen to Pausiert--><path d="M123.51,305.09 C112.77,313.33 103.16,323.24 96.77,335 C88.78,349.68 96.29,365.64 107.22,378.92 " fill="none" id="Abspielen-Pausiert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="110.71,382.95,107.8519,373.525,107.4408,379.1668,101.7989,378.7557,110.71,382.95" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="97.77" y="348.9951">pause()</text><!--link Pausiert to Abspielen--><path d="M150.96,382.63 C159.05,362.1 170.48,333.11 179.64,309.88 " fill="none" id="Pausiert-Abspielen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="181.56,305.01,174.5291,311.9068,179.7203,309.6592,181.9679,314.8504,181.56,305.01" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="170.77" y="348.9951">play()</text><!--link Abspielen to Fehler--><path d="M219.38,305.14 C232.93,321.58 250.99,340.48 270.77,353 C288.87,364.46 309.54,373.74 330.16,381.19 " fill="none" id="Abspielen-Fehler" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="335.12,382.95,327.974,376.1725,330.4074,381.2792,325.3007,383.7126,335.12,382.95" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="271.77" y="348.9951">verbindungVerloren()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Puffern
+
+state Puffern
+Puffern : entry / Ladeanzeige einblenden
+Puffern : do / Daten laden
+
+state Abspielen
+Abspielen : entry / Ladeanzeige ausblenden
+Abspielen : do / Video wiedergeben
+
+state Pausiert
+Pausiert : entry / Wiedergabe anhalten
+
+state Fehler
+Fehler : entry / Fehlermeldung anzeigen
+
+Puffern - -> Abspielen : pufferVoll() [Verbindung stabil]
+Puffern - -> Fehler : verbindungVerloren()
+
+Abspielen - -> Pausiert : pause()
+Pausiert - -> Abspielen : play()
+
+Abspielen - -> Puffern : bandbreiteZuNiedrig()
+Abspielen - -> Fehler : verbindungVerloren()
+
+Fehler - -> Puffern : verbindungWiederhergestellt()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

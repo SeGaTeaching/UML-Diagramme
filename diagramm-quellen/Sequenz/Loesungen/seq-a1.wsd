@@ -1,0 +1,26 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Benutzer
+participant "maschine: Kaffeemaschine" as Maschine
+participant "tank: Wassertank" as Tank
+participant "behaelter: Bohnenbehälter" as Behaelter
+
+Benutzer -> Maschine: drueckeStartButton()
+activate Maschine
+
+Maschine -> Tank: pruefeWasserstand()
+activate Tank
+Tank --> Maschine: wasserVorhanden
+deactivate Tank
+
+Maschine -> Behaelter: pruefeBohnenstand()
+activate Behaelter
+Behaelter --> Maschine: bohnenVorhanden
+deactivate Behaelter
+
+Maschine -> Maschine: starteMahlvorgang()
+Maschine -> Maschine: starteBruehvorgang()
+
+Maschine --> Benutzer: meldung("Kaffee fertig")
+deactivate Maschine
+@enduml

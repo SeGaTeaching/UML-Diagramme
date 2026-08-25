@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="473px" preserveAspectRatio="none" style="width:620px;height:473px;" version="1.1" viewBox="0 0 620 473" width="620px" zoomAndPan="magnify"><defs/><g><!--cluster Bibliothekssystem--><rect fill="#FFFFFF" height="436" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="210" x="134" y="24"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="143" x="167.5" y="38.9951">Bibliothekssystem</text><ellipse cx="239.2471" cy="75.9494" fill="#E3F2FD" rx="70.2471" ry="16.4494" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="185.7471" y="80.5979">Buch ausleihen</text><ellipse cx="239.0624" cy="146.0125" fill="#E3F2FD" rx="80.5624" ry="18.5125" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="173.0624" y="150.6609">Buch zurückgeben</text><ellipse cx="238.9486" cy="214.7897" fill="#E3F2FD" rx="64.4486" ry="15.2897" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="192.9486" y="219.4382">Buch suchen</text><ellipse cx="239.2002" cy="282.84" fill="#E3F2FD" rx="74.7002" ry="17.34" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="180.2002" y="287.4885">Buch hinzufügen</text><ellipse cx="239.1456" cy="352.0291" fill="#E3F2FD" rx="70.6456" ry="16.5291" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="185.1456" y="356.6776">Buch entfernen</text><ellipse cx="239.2318" cy="424.2464" fill="#E3F2FD" rx="89.2318" ry="20.2464" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="152" x="163.2318" y="428.8948">Mahnung verschicken</text><!--entity Nutzer--><ellipse cx="46.5" cy="76.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M46.5,84.5 L46.5,111.5 M33.5,92.5 L59.5,92.5 M46.5,111.5 L33.5,126.5 M46.5,111.5 L59.5,126.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="23.5" y="142.4951">Nutzer</text><!--entity Bibliothekar--><ellipse cx="46.5" cy="260.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M46.5,268.5 L46.5,295.5 M33.5,276.5 L59.5,276.5 M46.5,295.5 L33.5,310.5 M46.5,295.5 L59.5,310.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="6" y="326.4951">Bibliothekar</text><!--entity Bezahlsystem--><ellipse cx="559.5" cy="394.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M559.5,402.5 L559.5,429.5 M546.5,410.5 L572.5,410.5 M559.5,429.5 L546.5,444.5 M559.5,429.5 L572.5,444.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="511" y="460.4951">Bezahlsystem</text><!--link Nutzer to UC1--><path d="M69.81,98.82 C83.33,94.75 101,89.89 117,87 C132.71,84.16 149.7,82.04 165.85,80.46 " fill="none" id="Nutzer-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="170.83,79.99,161.4926,76.8575,165.8523,80.462,162.2478,84.8218,170.83,79.99" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Nutzer to UC2--><path d="M69.73,110.67 C95.08,115.99 137.68,124.93 173.67,132.49 " fill="none" id="Nutzer-UC2" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="178.93,133.6,170.931,127.8541,174.0344,132.5837,169.3048,135.6871,178.93,133.6" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Nutzer to UC3--><path d="M69.69,133.34 C84.17,149.58 104.37,169.39 126,182 C143.13,191.99 163.52,199.16 182.17,204.21 " fill="none" id="Nutzer-UC3" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="187.38,205.58,179.6952,199.4201,182.5448,204.3068,177.6581,207.1564,187.38,205.58" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothekar to UC1--><path d="M60.37,250.46 C76.35,203.61 104.16,129.43 126,110 C139.07,98.37 156.02,90.72 172.75,85.68 " fill="none" id="Bibliothekar-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="177.94,84.2,168.1885,82.8187,173.1313,85.5698,170.3802,90.5127,177.94,84.2" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothekar to UC2--><path d="M67.93,250.37 C81.58,227.46 101.5,199.74 126,182 C139.64,172.12 156.12,164.87 172.19,159.58 " fill="none" id="Bibliothekar-UC2" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="177.16,158,167.3717,156.9099,172.3942,159.5125,169.7916,164.5351,177.16,158" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothekar to UC3--><path d="M87.07,266.79 C99.3,260.18 112.98,253.33 126,248 C145.89,239.85 168.51,232.79 188.19,227.32 " fill="none" id="Bibliothekar-UC3" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="193.13,225.96,183.3902,224.4983,188.3102,227.2901,185.5184,232.2101,193.13,225.96" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothekar to UC4--><path d="M87.03,289.69 C97.13,289.54 107.97,289.32 118,289 C131.93,288.55 146.75,287.93 161.07,287.26 " fill="none" id="Bibliothekar-UC4" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="166.31,287,157.1363,283.4164,161.3152,287.229,157.5026,291.408,166.31,287" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothekar to UC5--><path d="M87.31,304.62 C99.66,309.04 113.36,313.83 126,318 C146.64,324.81 169.58,331.86 189.29,337.77 " fill="none" id="Bibliothekar-UC5" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="194.23,339.24,186.7449,332.8389,189.4377,337.8137,184.4629,340.5065,194.23,339.24" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothekar to UC6--><path d="M72.11,329.55 C85.88,348.9 104.59,371.16 126,386 C139.53,395.38 155.58,402.62 171.24,408.13 " fill="none" id="Bibliothekar-UC6" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="176.08,409.78,168.8731,403.0673,171.3525,408.1518,166.268,410.6312,176.08,409.78" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link UC6 to Bezahlsystem--><path d="M328.3,424 C385.32,424 457.59,424 505.79,424 " fill="none" id="UC6-Bezahlsystem" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="510.97,424,501.97,420,505.97,424,501.97,428,510.97,424" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="361" y="419.9951">kommuniziert mit</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+left to right direction
+
+actor Nutzer
+actor Bibliothekar
+actor "Bezahlsystem" as Bezahlsystem
+
+rectangle "Bibliothekssystem" {
+  usecase "Buch ausleihen" as UC1
+  usecase "Buch zurückgeben" as UC2
+  usecase "Buch suchen" as UC3
+  usecase "Buch hinzufügen" as UC4
+  usecase "Buch entfernen" as UC5
+  usecase "Mahnung verschicken" as UC6
+}
+
+Nutzer - -> UC1
+Nutzer - -> UC2
+Nutzer - -> UC3
+
+Bibliothekar - -> UC1
+Bibliothekar - -> UC2
+Bibliothekar - -> UC3
+Bibliothekar - -> UC4
+Bibliothekar - -> UC5
+Bibliothekar - -> UC6
+
+UC6 - -> Bezahlsystem : kommuniziert mit
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

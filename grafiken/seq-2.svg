@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="197px" preserveAspectRatio="none" style="width:586px;height:197px;" version="1.1" viewBox="0 0 586 197" width="586px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="33.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="183.5" y="69.5938"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="57" x2="57" y1="34.2969" y2="157.1875"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="188.5" x2="188.5" y1="34.2969" y2="157.1875"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="342.5" x2="342.5" y1="34.2969" y2="157.1875"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="99" x="8" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="15" y="22.9951">client: Client</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="99" x="8" y="156.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="15" y="176.1826">client: Client</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="110" x="133.5" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="96" x="140.5" y="22.9951">server: Server</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="110" x="133.5" y="156.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="96" x="140.5" y="176.1826">server: Server</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="178" x="253.5" y="3"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="164" x="260.5" y="22.9951">queue: MessageQueue</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="178" x="253.5" y="156.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="164" x="260.5" y="176.1826">queue: MessageQueue</text><rect fill="#ECEFF1" height="33.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="183.5" y="69.5938"/><polygon fill="#1976D2" points="171.5,65.5938,181.5,69.5938,171.5,73.5938,175.5,69.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="57.5" x2="177.5" y1="69.5938" y2="69.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="64.5" y="64.292">sendeAnfrage()</text><path d="M198,55.2969 L198,69.2969 A6,6 0 0 0 204,75.2969 L373,75.2969 A6,6 0 0 0 379,69.2969 L379,59.2969 L369,49.2969 L204,49.2969 A6,6 0 0 0 198,55.2969 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M369,49.2969 L369,56.2969 A3,3 0 0 0 372,59.2969 L379,59.2969 L369,49.2969 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="160" x="204" y="67.292">Synchron: Client wartet</text><polygon fill="#1976D2" points="68.5,98.8906,58.5,102.8906,68.5,106.8906,64.5,102.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="62.5" x2="187.5" y1="102.8906" y2="102.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52" x="74.5" y="97.5889">antwort</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="340.5" x2="330.5" y1="136.1875" y2="132.1875"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="340.5" x2="330.5" y1="136.1875" y2="140.1875"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="57.5" x2="341.5" y1="136.1875" y2="136.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="64.5" y="130.8857">sendeNachricht()</text><path d="M347,121.8906 L347,135.8906 A6,6 0 0 0 353,141.8906 L568,141.8906 A6,6 0 0 0 574,135.8906 L574,125.8906 L564,115.8906 L353,115.8906 A6,6 0 0 0 347,121.8906 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M564,115.8906 L564,122.8906 A3,3 0 0 0 567,125.8906 L574,125.8906 L564,115.8906 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="206" x="353" y="133.8857">Asynchron: Client wartet nicht</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+participant "client: Client" as Client
+participant "server: Server" as Server
+participant "queue: MessageQueue" as Queue
+
+Client -> Server: sendeAnfrage()
+activate Server
+note right: Synchron: Client wartet
+
+Server - -> Client: antwort
+deactivate Server
+
+Client ->> Queue: sendeNachricht()
+note right: Asynchron: Client wartet nicht
+
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

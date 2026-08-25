@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="286px" preserveAspectRatio="none" style="width:307px;height:286px;" version="1.1" viewBox="0 0 307 286" width="307px" zoomAndPan="magnify"><defs/><g><!--class Kunde--><rect fill="#E3F2FD" height="111.1875" id="Kunde" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="290" x="6" y="8"/><ellipse cx="124.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M126.8906,27.7031 Q126.4063,27.9531 125.875,28.0781 Q125.3594,28.2031 124.7813,28.2031 Q122.7188,28.2031 121.625,26.8438 Q120.5469,25.4844 120.5469,22.9063 Q120.5469,20.3281 121.625,18.9688 Q122.7188,17.6094 124.7813,17.6094 Q125.3594,17.6094 125.8906,17.7344 Q126.4219,17.8594 126.8906,18.0938 L126.8906,20.3438 Q126.375,19.8594 125.875,19.6406 Q125.3906,19.4219 124.875,19.4219 Q123.7656,19.4219 123.2031,20.2969 Q122.6406,21.1719 122.6406,22.9063 Q122.6406,24.625 123.2031,25.5156 Q123.7656,26.3906 124.875,26.3906 Q125.3906,26.3906 125.875,26.1719 Q126.375,25.9375 126.8906,25.4688 L126.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="143.5" y="27.8467">Kunde</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="295" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="25" y="54.9951">name: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="25" y="71.292">konten: List&lt;Konto&gt;</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="295" y1="78.5938" y2="78.5938"/><ellipse cx="17" cy="92.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="265" x="25" y="95.5889">kontoHinzufuegen(konto: Konto): void</text><ellipse cx="17" cy="108.5391" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="161" x="25" y="111.8857">kontenAnzeigen(): void</text><!--class Konto--><rect fill="#E3F2FD" height="78.5938" id="Konto" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="172" x="65" y="197"/><ellipse cx="126.5" cy="212" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M128.8906,216.7031 Q128.4063,216.9531 127.875,217.0781 Q127.3594,217.2031 126.7813,217.2031 Q124.7188,217.2031 123.625,215.8438 Q122.5469,214.4844 122.5469,211.9063 Q122.5469,209.3281 123.625,207.9688 Q124.7188,206.6094 126.7813,206.6094 Q127.3594,206.6094 127.8906,206.7344 Q128.4219,206.8594 128.8906,207.0938 L128.8906,209.3438 Q128.375,208.8594 127.875,208.6406 Q127.3906,208.4219 126.875,208.4219 Q125.7656,208.4219 125.2031,209.2969 Q124.6406,210.1719 124.6406,211.9063 Q124.6406,213.625 125.2031,214.5156 Q125.7656,215.3906 126.875,215.3906 Q127.3906,215.3906 127.875,215.1719 Q128.375,214.9375 128.8906,214.4688 L128.8906,216.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="145.5" y="216.8467">Konto</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="66" x2="236" y1="227" y2="227"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="73" y="237.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="147" x="84" y="243.9951">kontonummer: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="73" y="253.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="84" y="260.292">kontostand: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="66" x2="236" y1="267.5938" y2="267.5938"/><!--link Kunde to Konto--><path d="M151,132.14 C151,154.12 151,177.74 151,196.86 " fill="none" id="Kunde-Konto" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="151,119.08,147,125.08,151,131.08,155,125.08,151,119.08" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="152" y="162.9951">hat</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Kunde {
+  -name: String
+  -konten: List<Konto>
+  +kontoHinzufuegen(konto: Konto): void
+  +kontenAnzeigen(): void
+}
+class Konto {
+  -kontonummer: String
+  -kontostand: double
+}
+Kunde o- - Konto : hat
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

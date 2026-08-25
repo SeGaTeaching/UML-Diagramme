@@ -1,0 +1,8 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Stehend
+
+Stehend --> Fahrend : rufen()
+Fahrend --> TuerOffen : ankommen()
+TuerOffen --> Stehend : tuerSchliessen()
+@enduml

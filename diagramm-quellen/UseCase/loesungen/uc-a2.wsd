@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Bewohner
+
+rectangle "Smart-Home-System" {
+  usecase "Licht steuern" as UC1
+  usecase "Temperatur einstellen" as UC2
+  usecase "Kamera prüfen" as UC3
+}
+
+Bewohner --> UC1
+Bewohner --> UC2
+Bewohner --> UC3
+@enduml

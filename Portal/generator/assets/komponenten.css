@@ -1,0 +1,397 @@
+/* ===========================================================================
+   Lernportal – Komponenten
+   ---------------------------------------------------------------------------
+   Karteikarte, Übung und Multiple-Choice-Frage sind drei Ausprägungen EINER
+   Grundform (.karte), nicht drei zufällig ähnliche Kästen. Das ist der Grund,
+   warum sie nicht mehr auseinanderdriften können.
+
+     1  Abschnittsliste (Startseite)
+     2  Materialliste (Abschnittsseite)
+     3  Grundform Karte
+     4  Karteikarten
+     5  Übungen
+     6  Multiple Choice
+     7  Glossar
+   =========================================================================== */
+
+/* ------------------------------------------------- 1 Abschnittsliste (Start) */
+/* Einspaltige Liste statt Kachelraster. Das Raster hat für jede Anzahl außer
+   2, 3, 4 und 6 ein Layoutproblem (bei 4 Kacheln: 3 oben, 1 gestreckt darunter).
+   Die Liste hat für keine eins – sie funktioniert mit 1 wie mit 12 Abschnitten. */
+.abschnittsliste {
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-l);
+  overflow: hidden;
+  background: var(--flaeche);
+  box-shadow: var(--schatten-1);
+  margin: var(--s5) 0;
+}
+.abschnitt {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: var(--s5);
+  padding: var(--s5);
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--linie);
+  transition: background .12s;
+}
+.abschnitt:last-child { border-bottom: 0; }
+.abschnitt:hover { background: var(--flaeche-2); }
+.abschnitt:hover .abschnitt-pfeil { transform: translateX(3px); color: var(--akzent); }
+
+.abschnitt-nr {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--rund-m);
+  background: var(--akzent-weich);
+  color: var(--akzent);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.abschnitt--erg .abschnitt-nr { background: var(--erg-weich); color: var(--erg); }
+.abschnitt-text { display: block; min-width: 0; }
+.abschnitt-titel { display: block; font-weight: 700; font-size: 1.06rem; line-height: 1.35; }
+.abschnitt-unter { display: block; color: var(--text-2); font-size: .9rem; line-height: 1.45; margin-top: 2px; }
+.abschnitt-meta { display: block; color: var(--text-3); font-size: .8rem; line-height: 1.4; margin-top: var(--s2); }
+.abschnitt-gewicht {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--text-2);
+  background: var(--flaeche-2);
+  border: 1px solid var(--linie);
+  border-radius: 20px;
+  padding: 2px var(--s3);
+  white-space: nowrap;
+}
+.abschnitt-pfeil { color: var(--text-3); font-size: 1.5rem; line-height: 1; transition: transform .12s, color .12s; }
+
+@media (max-width: 640px) {
+  .abschnitt { grid-template-columns: auto minmax(0, 1fr); gap: var(--s4); padding: var(--s4); }
+  .abschnitt-gewicht, .abschnitt-pfeil { display: none; }
+}
+
+/* Lernweg auf der Startseite */
+.lernweg { counter-reset: schritt; list-style: none; padding: 0; margin: var(--s5) 0; }
+.lernweg li {
+  counter-increment: schritt;
+  position: relative;
+  padding-left: var(--s8);
+  margin: 0 0 var(--s4);
+  min-height: 34px;
+}
+.lernweg li:before {
+  content: counter(schritt);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--flaeche);
+  border: 1px solid var(--linie-2);
+  color: var(--text-2);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+/* ------------------------------------------ 2 Materialliste (Abschnittsseite) */
+.gattung { margin: var(--s6) 0; }
+.gattung-titel {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 700;
+  color: var(--text-3);
+  margin-bottom: var(--s3);
+}
+.materialliste {
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-m);
+  overflow: hidden;
+  background: var(--flaeche);
+}
+.material {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  border-bottom: 1px solid var(--linie);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 550;
+}
+.material:last-child { border-bottom: 0; }
+.material:hover { background: var(--flaeche-2); color: var(--akzent); }
+.material:after { content: "›"; margin-left: auto; color: var(--text-3); font-size: 1.3rem; line-height: 1; }
+.material:hover:after { color: var(--akzent); }
+
+/* --------------------------------------------------------- 3 Grundform Karte */
+.karte {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-l);
+  box-shadow: var(--schatten-2);
+  margin: 0 0 var(--s6);          /* 32 px statt vorher 10 px */
+  overflow: hidden;
+}
+.karte-marke {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s3);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 700;
+  color: var(--text-3);
+  margin: 0 0 var(--s2);
+  padding: 0 var(--s1);
+}
+.karte-koerper { padding: var(--s6) var(--s5); }
+.karte-fuss {
+  border-top: 1px solid var(--linie);
+  background: var(--flaeche-2);
+  padding: var(--s3) var(--s4);
+}
+/* Die Klappboxen im Kartenfuß sind bewusst NICHT dieselbe Komponente wie ein
+   Exkurs-Einschub im Lerntext. */
+.karte-fuss details {
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-s);
+  background: var(--flaeche);
+  margin: var(--s2) 0;
+}
+.karte-fuss details > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--s2) var(--s3);
+  font-weight: 640;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  color: var(--text-2);
+}
+.karte-fuss details > summary::-webkit-details-marker { display: none; }
+.karte-fuss details > summary:before {
+  content: "▸"; color: var(--text-3); font-size: .8em; width: 10px;
+}
+.karte-fuss details[open] > summary:before { content: "▾"; }
+.karte-fuss details[open] > summary { color: var(--text); border-bottom: 1px solid var(--linie); }
+.karte-fuss .klappinhalt { padding: var(--s3) var(--s4); font-size: .96rem; }
+.karte-fuss .klappinhalt > *:last-child { margin-bottom: 0; }
+.karte-fuss details[data-gesperrt] { opacity: .4; }
+.karte-fuss details[data-gesperrt] > summary { cursor: not-allowed; }
+
+/* ------------------------------------------------------------ 4 Karteikarten */
+.kartenleiste {
+  position: sticky;
+  top: var(--kopf-hoehe);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  flex-wrap: wrap;
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-m);
+  padding: var(--s2) var(--s4);
+  margin: var(--s5) 0 var(--s6);
+  font-size: .88rem;
+  box-shadow: var(--schatten-1);
+}
+.kartenleiste .zaehler { font-weight: 650; color: var(--text-2); }
+.kartenleiste .knopf { margin-left: auto; }
+
+.karte--frage .karte-koerper { text-align: left; }
+.karte-frage {
+  font-size: 1.18rem;
+  font-weight: 640;
+  line-height: 1.5;
+  margin: 0;
+}
+.karte-aufdecken { margin-top: var(--s5); }
+.karte-antwort {
+  margin-top: var(--s5);
+  padding-top: var(--s5);
+  border-top: 1px dashed var(--linie-2);
+}
+.karte-antwort > *:last-child { margin-bottom: 0; }
+.karte-antwort-marke {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 800;
+  color: var(--ok);
+  margin-bottom: var(--s2);
+}
+/* Ohne JavaScript (Ausdruck, JS aus) ist die Antwort einfach sichtbar –
+   die Karte funktioniert, nur ohne Aufdeck-Effekt. */
+.js .karte--frage:not(.aufgedeckt) .karte-antwort { display: none; }
+.js .karte--frage.aufgedeckt .karte-aufdecken { display: none; }
+.karte--frage.aufgedeckt { border-color: var(--linie-2); }
+
+/* ---------------------------------------------------------------- 5 Übungen */
+.karte--uebung .karte-koerper { padding: var(--s5); }
+.karte--uebung .karte-koerper > *:first-child { margin-top: 0; }
+.karte--uebung .karte-koerper > *:last-child { margin-bottom: 0; }
+.uebung-titel { font-size: 1.1rem; font-weight: 700; margin: 0 0 var(--s3); line-height: 1.4; }
+
+/* -------------------------------------------------------- 6 Multiple Choice */
+.mc-leiste {
+  position: sticky;
+  top: var(--kopf-hoehe);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-m);
+  padding: var(--s2) var(--s4);
+  margin: var(--s5) 0 var(--s6);
+  font-weight: 640;
+  font-size: .9rem;
+  box-shadow: var(--schatten-1);
+}
+.mc-leiste .knopf { margin-left: auto; }
+
+.mc {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-l);
+  box-shadow: var(--schatten-2);
+  margin: 0 0 var(--s6);
+  padding: var(--s5);
+}
+.mc-kopf { display: flex; align-items: center; gap: var(--s2); flex-wrap: wrap; margin-bottom: var(--s2); }
+.mc-nr { font-weight: 700; }
+.mc-stufe {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  background: var(--flaeche-2);
+  border: 1px solid var(--linie);
+  color: var(--text-2);
+  border-radius: 20px;
+  padding: 1px var(--s2);
+}
+.mc-frage { margin-bottom: var(--s4); }
+.mc-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-m);
+  padding: var(--s3) var(--s4);
+  margin: var(--s2) 0;
+  cursor: pointer;
+  background: var(--flaeche);
+  transition: border-color .12s, background .12s;
+}
+.mc-option:hover { border-color: var(--akzent); background: var(--akzent-weich); }
+.mc-option input { margin-top: 6px; accent-color: var(--akzent); }
+.mc-buchstabe { font-weight: 700; min-width: 1.4em; }
+.mc.beantwortet .mc-option { cursor: default; }
+.mc.beantwortet .mc-option:hover { border-color: var(--linie); background: var(--flaeche); }
+.mc-option.richtig { background: var(--ok-weich); border-color: var(--ok); }
+.mc-option.richtig .mc-buchstabe { color: var(--ok); }
+.mc-option.falsch { background: var(--fehler-weich); border-color: var(--fehler); }
+.mc-option.falsch .mc-buchstabe { color: var(--fehler); }
+.mc-zeichen { margin-left: auto; font-weight: 700; font-size: .85rem; white-space: nowrap; }
+.mc-option.richtig .mc-zeichen:after { content: "✔ richtig"; color: var(--ok); }
+.mc-option.falsch .mc-zeichen:after { content: "✖ falsch"; color: var(--fehler); }
+.mc-loesung { display: none; margin-top: var(--s4); padding-top: var(--s4); border-top: 1px dashed var(--linie-2); font-size: .96rem; }
+.mc.beantwortet .mc-loesung { display: block; }
+.mc-loesung > *:last-child { margin-bottom: 0; }
+
+/* --------------------------------------------------------------- 7 Glossar */
+.glossar-kopf {
+  position: sticky;
+  top: var(--kopf-hoehe);
+  z-index: 6;
+  background: var(--grund);
+  padding: var(--s4) 0 var(--s3);
+  margin-bottom: var(--s3);
+  border-bottom: 1px solid var(--linie);
+}
+.suchfeld {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--linie-2);
+  border-radius: var(--rund-m);
+  background: var(--flaeche);
+  color: var(--text);
+}
+.suchfeld::placeholder { color: var(--text-3); }
+.suchfeld:focus { border-color: var(--akzent); outline: none; box-shadow: 0 0 0 3px var(--akzent-weich); }
+
+.az { display: flex; flex-wrap: wrap; gap: 3px; margin-top: var(--s3); }
+.az a {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--rund-s);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--text-2);
+  text-decoration: none;
+}
+.az a:hover { background: var(--akzent-weich); color: var(--akzent); }
+.az a.leer { opacity: .28; pointer-events: none; }
+
+.treffer { font-size: .84rem; color: var(--text-3); margin-top: var(--s2); }
+
+.buchstabe {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--akzent);
+  margin: var(--s7) 0 var(--s2);
+  padding-bottom: var(--s2);
+  border-bottom: 2px solid var(--akzent-weich);
+  scroll-margin-top: 140px;
+}
+.eintrag { padding: var(--s4) 0; border-bottom: 1px solid var(--linie); }
+.eintrag-begriff { font-weight: 700; font-size: 1.03rem; line-height: 1.35; }
+.eintrag-en { font-size: .83rem; color: var(--text-3); margin-top: 1px; font-style: italic; }
+.eintrag-text { margin-top: var(--s2); color: var(--text-2); }
+.eintrag[hidden] { display: none; }
+
+/* "Nicht zu verwechseln mit ..." kommt im Glossar auffällig oft vor – und ist
+   genau der Stoff, den die Prüfung abfragt. Deshalb aus dem Fließtext heraus. */
+.verwechseln {
+  margin-top: var(--s3);
+  padding: var(--s2) var(--s4);
+  border-left: 3px solid var(--warn);
+  background: var(--warn-weich);
+  border-radius: 0 var(--rund-s) var(--rund-s) 0;
+  font-size: .9rem;
+  color: var(--text);
+}
+.verwechseln:before {
+  content: "Verwechslungsgefahr";
+  display: block;
+  font-size: .66rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--warn);
+}
+
+@media print {
+  .kartenleiste, .mc-leiste, .glossar-kopf { display: none !important; }
+  .karte, .mc { box-shadow: none; break-inside: avoid; }
+  .karte-antwort { display: block !important; }
+  .mc-loesung { display: block !important; }
+}

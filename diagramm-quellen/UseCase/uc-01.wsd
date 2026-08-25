@@ -1,0 +1,35 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+skinparam rectangle {
+  BackgroundColor #F5F5F5
+  BorderColor #333333
+  FontColor #000000
+}
+skinparam ArrowColor #555555
+
+rectangle "UML-Diagramme" as UML
+
+rectangle "Strukturdiagramme\nWAS ist das System?" as Struktur #D4EDDA
+rectangle "Verhaltensdiagramme\nWIE verhält sich das System?" as Verhalten #CCE5FF
+
+rectangle "Klassendiagramm" as Klasse
+rectangle "Objektdiagramm" as Objekt
+rectangle "Komponentendiagramm" as Komponente
+
+rectangle "Use-Case-Diagramm\n(Wir sind hier)" as UC #FFF3CD
+rectangle "Aktivitätsdiagramm" as Aktivitaet
+rectangle "Sequenzdiagramm" as Sequenz
+rectangle "Zustandsdiagramm" as Zustand
+
+UML --> Struktur
+UML --> Verhalten
+
+Struktur --> Klasse
+Struktur --> Objekt
+Struktur --> Komponente
+
+Verhalten --> UC
+Verhalten --> Aktivitaet
+Verhalten --> Sequenz
+Verhalten --> Zustand
+@enduml

@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Klassendiagramm · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 3: Klassendiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 3</div><a href="../Abschnitt_3.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a3_lt_7-2-uml-klassendiagram.html" class="hier">Klassendiagramm</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a3_ue_aufgaben-7-2-klassen.html">Aufgaben — Klassendiagramm</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_3.html">Kapitel 3</a><span>›</span>Klassendiagramm</div><h1>Klassendiagramm</h1><h2 id="lernziele">Lernziele</h2>
+<ul>
+<li>Verstehen, warum Klassendiagramme das wichtigste Werkzeug für die Planung objektorientierter Software sind</li>
+<li>Die Anatomie einer Klasse im UML-Klassendiagramm kennen und anwenden können</li>
+<li>Beziehungen zwischen Klassen (Vererbung, Assoziation, Aggregation, Komposition) unterscheiden und modellieren können</li>
+<li>Multiplizitäten korrekt einsetzen, um Kardinalitäten zwischen Klassen auszudrücken</li>
+<li>Klassendiagramme als Brücke zwischen Anforderungen und Code verstehen</li>
+</ul>
+<hr>
+<h2 id="notationsreferenz-alle-elemente-auf-einen-blick">Notationsreferenz: Alle Elemente auf einen Blick</h2>
+<p>Diese Tabelle fasst die komplette Notation zusammen, die in diesem Kapitel erklärt wird. Nutzen Sie
+sie später als Nachschlagehilfe, wenn Sie eigene Klassendiagramme zeichnen.</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Bedeutung</th>
+<th>Notation / Beispiel</th>
+<th>Diagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klasse</td>
+<td>Rechteck mit drei Bereichen: Name, Attribute, Methoden</td>
+<td><code>Klassenname</code></td>
+<td><img alt="Klasse" src="../bilder/kls-ref-klasse.svg"></td>
+</tr>
+<tr>
+<td>Attribut</td>
+<td>Eigenschaft bzw. Zustand eines Objekts</td>
+<td><code>sichtbarkeit name: Typ</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Methode</td>
+<td>Verhalten bzw. Fähigkeit eines Objekts</td>
+<td><code>sichtbarkeit name(param: Typ): Rückgabetyp</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Sichtbarkeit public</td>
+<td>von überall sichtbar</td>
+<td><code>+</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Sichtbarkeit private</td>
+<td>nur innerhalb der Klasse sichtbar</td>
+<td><code>-</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Sichtbarkeit protected</td>
+<td>sichtbar für die Klasse und ihre Unterklassen</td>
+<td><code>#</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Vererbung (Generalisierung)</td>
+<td>"ist-ein"-Beziehung; Unterklasse erbt von Oberklasse</td>
+<td><code>Oberklasse &lt;|-- Unterklasse</code></td>
+<td><img alt="Vererbung" src="../bilder/kls-ref-vererbung.svg"></td>
+</tr>
+<tr>
+<td>Assoziation</td>
+<td>"kennt-ein"-Beziehung; allgemeine Verbindung zweier Klassen</td>
+<td><code>KlasseA --&gt; KlasseB</code></td>
+<td><img alt="Assoziation" src="../bilder/kls-ref-assoziation.svg"></td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>lose "hat-ein"-Beziehung; das Teil kann auch ohne das Ganze existieren</td>
+<td><code>Ganzes o-- Teil</code></td>
+<td><img alt="Aggregation" src="../bilder/kls-ref-aggregation.svg"></td>
+</tr>
+<tr>
+<td>Komposition</td>
+<td>starke "enthält-ein"-Beziehung; das Teil kann nicht ohne das Ganze existieren</td>
+<td><code>Ganzes *-- Teil</code></td>
+<td><img alt="Komposition" src="../bilder/kls-ref-komposition.svg"></td>
+</tr>
+<tr>
+<td>Multiplizität (Kardinalität)</td>
+<td>Anzahl der beteiligten Objekte an einer Beziehung</td>
+<td><code>KlasseA "1" -- "0..*" KlasseB</code></td>
+<td><img alt="Multiplizität" src="../bilder/kls-ref-multiplizitaet.svg"></td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="1-warum-brauchen-wir-klassendiagramme">1. Warum brauchen wir Klassendiagramme?</h2>
+<h3 id="11-das-problem-vom-konzept-zum-code">1.1 Das Problem: Vom Konzept zum Code</h3>
+<p>Stellen Sie sich vor, Sie sollen eine Software für ein Banksystem entwickeln. Sie haben bereits ein Use-Case-Diagramm erstellt und wissen, <strong>was</strong> das System tun soll. Aber wie setzen Sie das um? Welche Klassen brauchen Sie? Welche Eigenschaften haben diese Klassen? Wie hängen sie zusammen?</p>
+<p>Ohne einen Plan würden Sie direkt mit dem Programmieren beginnen und dabei:
+- Wichtige Klassen vergessen
+- Beziehungen zwischen Klassen falsch modellieren
+- Redundanten Code schreiben
+- Die Struktur ständig ändern müssen</p>
+<p><strong>Das Klassendiagramm löst dieses Problem.</strong> Es ist der detaillierte, technische Bauplan für Ihren Code. Es zeigt:
+- Welche Klassen existieren
+- Welche Eigenschaften (Attribute) jede Klasse hat
+- Welche Fähigkeiten (Methoden) jede Klasse besitzt
+- Wie die Klassen miteinander in Beziehung stehen</p>
+<h3 id="12-die-brucke-zwischen-anforderungen-und-code">1.2 Die Brücke zwischen Anforderungen und Code</h3>
+<p>Das Klassendiagramm ist das wichtigste und am häufigsten verwendete Strukturdiagramm in der objektorientierten Programmierung. Es steht zwischen zwei Welten:</p>
+<p><strong>Anforderungen (Use-Case-Diagramm)</strong>
+- Was soll das System tun?
+- Welche Funktionen brauchen wir?
+- Aus Sicht des Anwenders</p>
+<p><strong>Code (Python, Java, C#)</strong>
+- Wie setzen wir das um?
+- Welche Klassen, Methoden, Attribute?
+- Technische Implementierung</p>
+<p>Das Klassendiagramm übersetzt die Anforderungen in eine technische Struktur, die direkt in Code umgesetzt werden kann.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Das Klassendiagramm ist der Bauplan für objektorientierte Software. Es zeigt die statische Struktur des Systems: Welche Klassen existieren und wie sie zusammenhängen.</p>
+</blockquote>
+<h3 id="13-praktischer-nutzen">1.3 Praktischer Nutzen</h3>
+<p><strong>Für die Planung:</strong>
+- Struktur vor dem Programmieren durchdenken
+- Fehler früh erkennen (auf dem Papier, nicht im Code)
+- Gemeinsames Verständnis im Team schaffen</p>
+<p><strong>Für die Dokumentation:</strong>
+- Schneller Überblick über die Systemstruktur
+- Wartung und Erweiterung erleichtern
+- Einarbeitung neuer Teammitglieder beschleunigen</p>
+<p><strong>Für die IHK-Prüfung:</strong>
+- Klassendiagramme sind zentraler Bestandteil der Projektdokumentation
+- Zeigen, dass die Struktur durchdacht und geplant wurde
+- Belegen technisches Verständnis</p>
+<hr>
+<h2 id="2-die-anatomie-einer-klasse">2. Die Anatomie einer Klasse</h2>
+<h3 id="21-das-drei-bereiche-modell">2.1 Das Drei-Bereiche-Modell</h3>
+<p>Eine Klasse wird im UML-Klassendiagramm als Rechteck mit drei übereinanderliegenden Bereichen dargestellt. Jeder Bereich hat eine spezifische Bedeutung:</p>
+<p><img alt="Drei-Bereiche-Modell einer Klasse" src="../bilder/kls-01.svg"></p>
+<p><strong>Oben: Klassenname</strong>
+- Immer fett gedruckt
+- Beginnt mit Großbuchstaben
+- Singular (nicht Plural)
+- Beispiele: <code>Konto</code>, <code>Kunde</code>, <code>Fahrzeug</code></p>
+<p><strong>Mitte: Attribute</strong>
+- Beschreiben den Zustand eines Objekts
+- Die Daten, die ein Objekt speichert
+- Beispiele: <code>kontonummer</code>, <code>kontostand</code>, <code>inhaber</code></p>
+<p><strong>Unten: Methoden</strong>
+- Beschreiben das Verhalten eines Objekts
+- Die Operationen, die ein Objekt ausführen kann
+- Beispiele: <code>einzahlen()</code>, <code>abheben()</code>, <code>getKontostand()</code></p>
+<h3 id="22-sichtbarkeiten-wer-darf-was-sehen">2.2 Sichtbarkeiten: Wer darf was sehen?</h3>
+<p>Jedes Attribut und jede Methode hat eine Sichtbarkeit, die festlegt, von wo aus darauf zugegriffen werden darf. Die Sichtbarkeiten entsprechen exakt den Zugriffsmodifizierern aus der objektorientierten Programmierung:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>public</td>
+<td>Von überall sichtbar</td>
+</tr>
+<tr>
+<td>-</td>
+<td>private</td>
+<td>Nur innerhalb der Klasse sichtbar</td>
+</tr>
+<tr>
+<td>#</td>
+<td>protected</td>
+<td>Sichtbar für die Klasse und ihre Unterklassen</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Warum ist das wichtig?</strong>
+Sichtbarkeiten sind ein zentrales Konzept der Kapselung. Sie schützen die innere Struktur einer Klasse und definieren eine klare Schnittstelle nach außen.</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+In Python gibt es keine echten private Attribute (nur Konvention mit <code>_</code> oder <code>__</code>). In Java und C# werden Sichtbarkeiten strikt durchgesetzt. Das Klassendiagramm zeigt die konzeptionelle Sichtbarkeit, unabhängig von der Sprache.</p>
+</blockquote>
+<h3 id="23-attribute-der-zustand-eines-objekts">2.3 Attribute: Der Zustand eines Objekts</h3>
+<p>Attribute beschreiben, welche Daten ein Objekt speichert. Sie werden nach folgendem Schema notiert:</p>
+<pre><code>Sichtbarkeit Name: Datentyp
+</code></pre>
+<p><strong>Beispiele:</strong>
+- <code>-kontonummer: String</code> (private, vom Typ String)
+- <code>-kontostand: double</code> (private, vom Typ double)
+- <code>+name: String</code> (public, vom Typ String)</p>
+<p><strong>Praktisches Beispiel: Konto-Klasse</strong></p>
+<p><img alt="Klasse Konto mit Attributen" src="../bilder/kls-02.svg"></p>
+<p>Diese Darstellung sagt uns:
+- Die Klasse heißt <code>Konto</code>
+- Sie hat drei Attribute, alle private
+- <code>kontonummer</code> und <code>inhaber</code> sind Texte (String)
+- <code>kontostand</code> ist eine Dezimalzahl (double)</p>
+<h3 id="24-methoden-das-verhalten-eines-objekts">2.4 Methoden: Das Verhalten eines Objekts</h3>
+<p>Methoden beschreiben, was ein Objekt tun kann. Sie werden nach folgendem Schema notiert:</p>
+<pre><code>Sichtbarkeit Name(Parameter: Typ): Rückgabetyp
+</code></pre>
+<p><strong>Beispiele:</strong>
+- <code>+einzahlen(betrag: double): void</code> (public, nimmt double entgegen, gibt nichts zurück)
+- <code>+abheben(betrag: double): boolean</code> (public, nimmt double entgegen, gibt boolean zurück)
+- <code>+getKontostand(): double</code> (public, keine Parameter, gibt double zurück)</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Das <code>void</code> bei Methoden ohne Rückgabewert kann in UML-Diagrammen oft weggelassen werden. Beide Schreibweisen sind korrekt.</p>
+</blockquote>
+<p><strong>Vollständige Konto-Klasse mit Methoden:</strong></p>
+<p><img alt="Klasse Konto mit Attributen und Methoden" src="../bilder/kls-03.svg"></p>
+<p>Die Klasse <code>Konto</code> hat drei Methoden, die alle public sind: <code>einzahlen()</code> erhöht den Kontostand, wenn der Betrag positiv ist; <code>abheben()</code> verringert den Kontostand, wenn genug Guthaben vorhanden ist, und gibt einen Erfolgswert zurück; <code>getKontostand()</code> ist ein Getter, der den privaten Kontostand nach außen zugänglich macht.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Attribute sollten private sein, Methoden public. Das ist das Prinzip der Kapselung: Der Zustand wird geschützt, das Verhalten wird nach außen angeboten.</p>
+</blockquote>
+<hr>
+<h2 id="3-beziehungen-zwischen-klassen">3. Beziehungen zwischen Klassen</h2>
+<h3 id="31-warum-beziehungen-wichtig-sind">3.1 Warum Beziehungen wichtig sind</h3>
+<p>Ein System besteht selten aus nur einer Klasse. Die wahre Stärke eines Klassendiagramms liegt in der Visualisierung der Beziehungen zwischen den Klassen. Diese Beziehungen zeigen:
+- Wie Klassen zusammenarbeiten
+- Welche Klassen voneinander abhängen
+- Wie Daten zwischen Klassen fließen</p>
+<p>Es gibt vier Haupttypen von Beziehungen:
+1. <strong>Vererbung</strong> (Generalisierung)
+2. <strong>Assoziation</strong>
+3. <strong>Aggregation</strong>
+4. <strong>Komposition</strong></p>
+<h3 id="32-vererbung-die-ist-ein-beziehung">3.2 Vererbung: Die "ist-ein"-Beziehung</h3>
+<p><strong>Das Konzept:</strong>
+Vererbung stellt eine "ist-ein"-Verbindung dar. Eine Unterklasse ist eine spezialisierte Version der Oberklasse und erbt deren Eigenschaften und Methoden.</p>
+<p><strong>Beispiele:</strong>
+- Ein PKW <strong>ist ein</strong> Fahrzeug
+- Ein Sparkonto <strong>ist ein</strong> Konto
+- Ein Student <strong>ist eine</strong> Person</p>
+<p><strong>UML-Notation:</strong>
+- Geschlossener, hohler Pfeil (Dreieck)
+- Pfeil zeigt von der Unterklasse zur Oberklasse</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Vererbung: Sparkonto erbt von Konto" src="../bilder/kls-04.svg"></p>
+<p><strong>Was bedeutet das?</strong>
+- <code>Sparkonto</code> erbt alle Attribute und Methoden von <code>Konto</code>
+- <code>Sparkonto</code> hat zusätzlich ein eigenes Attribut <code>zinssatz</code>
+- <code>Sparkonto</code> hat zusätzlich eine eigene Methode <code>zinsenBerechnen()</code></p>
+<p><code>Sparkonto</code> erbt alle Methoden von <code>Konto</code> (<code>einzahlen</code>, <code>abheben</code>, <code>getKontostand</code>) und fügt eigene Funktionalität hinzu (<code>zinsenBerechnen</code>, <code>zinsenGutschreiben</code>).</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Vererbung ermöglicht Wiederverwendung von Code. Die Unterklasse erbt alles von der Oberklasse und kann zusätzliche Funktionalität hinzufügen oder bestehendes Verhalten überschreiben.</p>
+</blockquote>
+<h4 id="zoo-beispiel-vererbung-aggregation-und-assoziation-kombiniert">Zoo-Beispiel: Vererbung, Aggregation und Assoziation kombiniert</h4>
+<p>Ein etwas größeres Beispiel zeigt, wie mehrere Beziehungen in einem Diagramm zusammenspielen: Ein
+<code>Zoo</code> hat mehrere <code>Tier</code>e (Aggregation), <code>Pfleger</code> betreuen diese Tiere (Assoziation mit
+Multiplizität), und <code>Löwe</code> sowie <code>Elefant</code> sind spezialisierte Tierarten (Vererbung).</p>
+<p><img alt="Zoo-Beispiel mit mehreren Beziehungstypen" src="../bilder/kls-05.svg"></p>
+<h3 id="33-assoziation-die-kennt-ein-beziehung">3.3 Assoziation: Die "kennt-ein"-Beziehung</h3>
+<p><strong>Das Konzept:</strong>
+Eine Assoziation ist eine allgemeine Beziehung zwischen zwei Klassen. Sie bedeutet, dass Objekte der einen Klasse Objekte der anderen Klasse kennen und mit ihnen arbeiten.</p>
+<p><strong>Beispiele:</strong>
+- Ein Fahrer <strong>kennt</strong> ein Auto (fährt es)
+- Ein Lehrer <strong>kennt</strong> Studenten (unterrichtet sie)
+- Ein Kunde <strong>kennt</strong> Bestellungen (hat sie aufgegeben)</p>
+<p><strong>UML-Notation:</strong>
+- Einfache Linie zwischen den Klassen
+- Optional: Pfeil zeigt die Navigationsrichtung</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Assoziation: Fahrer fährt Auto" src="../bilder/kls-06.svg"></p>
+<p><strong>Bedeutung:</strong> Ein Fahrer kennt ein Auto und kann damit arbeiten. Umgesetzt wird das über ein Attribut <code>auto</code> in der Klasse <code>Fahrer</code>, das auf ein <code>Auto</code>-Objekt verweist.</p>
+<h3 id="34-aggregation-die-lose-hat-ein-beziehung">3.4 Aggregation: Die lose "hat-ein"-Beziehung</h3>
+<p><strong>Das Konzept:</strong>
+Aggregation ist eine spezielle Form der Assoziation. Sie drückt eine "hat-ein"-Beziehung aus, bei der das Teil auch ohne das Ganze existieren kann.</p>
+<p><strong>Beispiele:</strong>
+- Ein Team <strong>hat</strong> Spieler (löst sich das Team auf, existieren die Spieler weiter)
+- Eine Universität <strong>hat</strong> Studenten (verlässt ein Student die Uni, existiert er weiter)
+- Ein Kunde <strong>hat</strong> Konten (der Kunde kann auch ohne Konto existieren)</p>
+<p><strong>UML-Notation:</strong>
+- Linie mit hohler Raute am Ende des "Ganzen"
+- Die Raute zeigt auf die Klasse, die das Ganze repräsentiert</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Aggregation: Kunde hat Konto" src="../bilder/kls-07.svg"></p>
+<p><strong>Bedeutung:</strong> Ein Kunde hat Konten, aber Kunde und Konto können unabhängig voneinander existieren.</p>
+<p><strong>Was ist der Unterschied zur einfachen Assoziation?</strong>
+Aggregation betont, dass eine Klasse Teile "besitzt", aber diese Teile können auch ohne die besitzende Klasse existieren. Das Konto kann auch ohne Kunden existieren.</p>
+<h3 id="35-komposition-die-starke-enthalt-ein-beziehung">3.5 Komposition: Die starke "enthält-ein"-Beziehung</h3>
+<p><strong>Das Konzept:</strong>
+Komposition ist die stärkste Form der Beziehung. Sie drückt aus, dass das Teil nicht ohne das Ganze existieren kann. Wird das Ganze zerstört, werden auch die Teile zerstört.</p>
+<p><strong>Beispiele:</strong>
+- Ein Haus <strong>besteht aus</strong> Räumen (reißt man das Haus ab, sind die Räume zerstört)
+- Ein Auto <strong>besteht aus</strong> einem Motor (verschrottet man das Auto, ist der Motor auch weg)
+- Ein Dokument <strong>besteht aus</strong> Seiten (löscht man das Dokument, sind die Seiten weg)</p>
+<p><strong>UML-Notation:</strong>
+- Linie mit gefüllter Raute am Ende des "Ganzen"
+- Die Raute zeigt auf die Klasse, die das Ganze repräsentiert</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Komposition: Haus besteht aus Raum" src="../bilder/kls-08.svg"></p>
+<p><strong>Bedeutung:</strong> Ein Haus besteht aus Räumen. Ohne Haus gibt es keine Räume. Die Räume werden beim Erstellen des Hauses erzeugt und mit ihm zusammen zerstört.</p>
+<p><strong>Was ist der Unterschied zur Aggregation?</strong>
+Bei Komposition werden die Teile (Räume) vom Ganzen (Haus) erstellt und verwaltet. Sie existieren nicht unabhängig. Bei Aggregation könnten die Teile auch außerhalb des Ganzen existieren.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Aggregation (hohle Raute): Das Teil kann ohne das Ganze existieren. Komposition (gefüllte Raute): Das Teil kann nicht ohne das Ganze existieren.</p>
+</blockquote>
+<p><strong>Analogie:</strong>
+Stellen Sie sich ein Auto vor:
+- <strong>Komposition</strong>: Die Beziehung "Auto hat Motor" ist eine Komposition. Ohne Auto macht der spezifische Motor keinen Sinn.
+- <strong>Aggregation</strong>: Die Beziehung "Auto hat Fahrer" ist eine Aggregation. Das Auto kann ohne Fahrer existieren und der Fahrer kann ohne Auto existieren.</p>
+<h3 id="36-ubersicht-welche-beziehung-wann">3.6 Übersicht: Welche Beziehung wann?</h3>
+<p><img alt="Übersicht: Welche Beziehung wann?" src="../bilder/kls-09.svg"></p>
+<h4 id="korrekte-pfeile-fur-klassendiagramme">Korrekte Pfeile für Klassendiagramme</h4>
+<p><img alt="Korrekte Pfeile für die vier Beziehungstypen" src="../bilder/kls-10.svg"></p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+In der Praxis ist die Unterscheidung zwischen Aggregation und Komposition oft nicht eindeutig. Wichtig ist, dass Sie die Konzepte verstehen und begründen können, warum Sie eine bestimmte Beziehung gewählt haben.</p>
+</blockquote>
+<h4 id="beispiel-mit-allen-4-beziehungen">Beispiel mit allen 4 Beziehungen</h4>
+<p><img alt="Beispiel mit allen vier Beziehungstypen in einem Diagramm" src="../bilder/kls-11.svg"></p>
+<hr>
+<h2 id="4-multiplizitaten-wie-viele-objekte-sind-beteiligt">4. Multiplizitäten: Wie viele Objekte sind beteiligt?</h2>
+<p><img alt="Übersicht: typische Multiplizitäten im Vergleich" src="../bilder/kls-12.svg"></p>
+<h3 id="41-das-konzept">4.1 Das Konzept</h3>
+<p>Multiplizitäten (auch Kardinalitäten genannt) geben an, wie viele Objekte an einer Beziehung beteiligt sind. Sie stehen an den Enden der Beziehungslinien.</p>
+<p><strong>Warum sind Multiplizitäten wichtig?</strong>
+Sie beantworten Fragen wie:
+- Kann ein Kunde mehrere Konten haben?
+- Muss ein Konto genau einem Kunden gehören?
+- Kann ein Student in mehreren Kursen sein?</p>
+<h3 id="42-die-wichtigsten-multiplizitaten">4.2 Die wichtigsten Multiplizitäten</h3>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Genau eins</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Null oder viele (beliebig viele)</td>
+</tr>
+<tr>
+<td>0..1</td>
+<td>Null oder eins (optional)</td>
+</tr>
+<tr>
+<td>1..*</td>
+<td>Eins oder viele (mindestens eins)</td>
+</tr>
+<tr>
+<td>2..5</td>
+<td>Zwischen 2 und 5</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="43-praktisches-beispiel-kunde-und-konto">4.3 Praktisches Beispiel: Kunde und Konto</h3>
+<p><strong>Anforderung:</strong>
+- Ein Kunde kann ein oder mehrere Konten haben
+- Ein Konto gehört genau einem Kunden</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Multiplizität: Kunde hat Konto" src="../bilder/kls-13.svg"></p>
+<p><strong>Bedeutung:</strong>
+- Links (Kunde): <code>1</code> bedeutet, dass ein Konto genau einem Kunden gehört
+- Rechts (Konto): <code>1..*</code> bedeutet, dass ein Kunde mindestens ein Konto haben muss</p>
+<p>Die Beziehung ist bidirektional: Der Kunde kennt seine Konten (Multiplizität <code>1..*</code>), und jedes Konto kennt seinen Kunden (Multiplizität <code>1</code>).</p>
+<h3 id="44-weitere-beispiele">4.4 Weitere Beispiele</h3>
+<p><strong>Student und Kurs (viele-zu-viele):</strong></p>
+<p><img alt="Viele-zu-viele: Student belegt Kurs" src="../bilder/kls-14.svg"></p>
+<p><strong>Bedeutung:</strong>
+- Ein Student kann in beliebig vielen Kursen sein (0 oder mehr)
+- Ein Kurs kann beliebig viele Studenten haben (0 oder mehr)</p>
+<p><strong>Person und Reisepass (eins-zu-null-oder-eins):</strong></p>
+<p><img alt="Eins-zu-null-oder-eins: Person besitzt Reisepass" src="../bilder/kls-15.svg"></p>
+<p><strong>Bedeutung:</strong>
+- Eine Person kann keinen oder einen Reisepass haben (optional)
+- Ein Reisepass gehört genau einer Person</p>
+<blockquote>
+<p><strong>Warnung:</strong>
+Multiplizitäten werden oft falsch herum gelesen. Die Zahl steht immer auf der Seite, die angibt, wie viele Objekte dieser Klasse an der Beziehung beteiligt sind.</p>
+</blockquote>
+<hr>
+<h2 id="5-vollstandiges-beispiel-banksystem">5. Vollständiges Beispiel: Banksystem</h2>
+<h3 id="51-das-szenario">5.1 Das Szenario</h3>
+<p>Wir modellieren ein einfaches Banksystem mit folgenden Anforderungen:
+- Es gibt Kunden und Konten
+- Ein Kunde kann mehrere Konten haben
+- Ein Konto gehört genau einem Kunden
+- Es gibt verschiedene Kontotypen: Girokonto und Sparkonto
+- Beide Kontotypen erben von einer Basisklasse Konto</p>
+<h3 id="52-das-klassendiagramm">5.2 Das Klassendiagramm</h3>
+<p><img alt="Vollständiges Klassendiagramm des Banksystems" src="../bilder/kls-16.svg"></p>
+<p>Dieses Beispiel zeigt das Zusammenspiel mehrerer Konzepte: <strong>Vererbung</strong> (<code>Girokonto</code> und <code>Sparkonto</code> erben von <code>Konto</code> und erweitern die Funktionalität), <strong>Aggregation</strong> (<code>Kunde</code> hat mehrere Konten, Multiplizität <code>1..*</code>), <strong>Polymorphismus</strong> (beide Kontotypen können als <code>Konto</code> behandelt werden), <strong>Kapselung</strong> (Attribute sind private) und <strong>Überschreiben</strong> (<code>Girokonto</code> überschreibt <code>abheben()</code>, um den Dispositionskredit zu berücksichtigen).</p>
+<hr>
+<h2 id="6-vom-klassendiagramm-zum-code">6. Vom Klassendiagramm zum Code</h2>
+<h3 id="61-der-ubersetzungsprozess">6.1 Der Übersetzungsprozess</h3>
+<p>Ein Klassendiagramm ist eine Blaupause für Code. Die Übersetzung folgt klaren Regeln, die sich in jeder objektorientierten Sprache wiederfinden — hier am Beispiel Java:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>UML-Element</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klasse <code>Konto</code></td>
+<td><code>class Konto { }</code></td>
+</tr>
+<tr>
+<td>Attribut <code>-kontostand: double</code></td>
+<td><code>private double kontostand;</code></td>
+</tr>
+<tr>
+<td>Methode <code>+einzahlen(betrag: double)</code></td>
+<td><code>public void einzahlen(double betrag) { }</code></td>
+</tr>
+<tr>
+<td>Vererbung <code>Sparkonto ──▷── Konto</code></td>
+<td><code>class Sparkonto extends Konto { }</code></td>
+</tr>
+<tr>
+<td>Assoziation <code>Kunde ──── Konto</code></td>
+<td><code>private Konto konto;</code> (Referenz als Attribut)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="62-praktische-tipps">6.2 Praktische Tipps</h3>
+<p><strong>Tipp 1: Beginne mit den Basisklassen</strong>
+Implementiere zuerst die Klassen ohne Abhängigkeiten, dann die abgeleiteten Klassen.</p>
+<p><strong>Tipp 2: Teste jede Klasse einzeln</strong>
+Bevor du Beziehungen implementierst, stelle sicher, dass jede Klasse für sich funktioniert.</p>
+<p><strong>Tipp 3: Nutze das Diagramm als Dokumentation</strong>
+Halte das Klassendiagramm aktuell, wenn sich der Code ändert.</p>
+<blockquote>
+<p><strong>Tipp:</strong>
+Verwende Tools wie PlantUML, draw.io oder Lucidchart, um Klassendiagramme zu erstellen. Diese Tools können oft auch Code aus Diagrammen generieren.</p>
+</blockquote>
+<hr>
+<h2 id="7-zusammenfassung">7. Zusammenfassung</h2>
+<h3 id="71-kernkonzepte">7.1 Kernkonzepte</h3>
+<p><strong>Klassendiagramm:</strong>
+- Zeigt die statische Struktur eines Systems
+- Visualisiert Klassen, Attribute, Methoden und Beziehungen
+- Ist der wichtigste Diagrammtyp in der OOP</p>
+<p><strong>Anatomie einer Klasse:</strong>
+- <strong>Oben</strong>: Klassenname (fett)
+- <strong>Mitte</strong>: Attribute (Zustand)
+- <strong>Unten</strong>: Methoden (Verhalten)
+- <strong>Sichtbarkeiten</strong>: <code>+</code> public, <code>-</code> private, <code>#</code> protected</p>
+<p><strong>Beziehungen:</strong>
+- <strong>Vererbung</strong> (△): "ist-ein" (Sparkonto ist ein Konto)
+- <strong>Assoziation</strong> (─): "kennt-ein" (Fahrer kennt Auto)
+- <strong>Aggregation</strong> (◇): "hat-ein" lose (Team hat Spieler)
+- <strong>Komposition</strong> (◆): "enthält-ein" stark (Haus enthält Räume)</p>
+<p><strong>Multiplizitäten:</strong>
+- <code>1</code>: Genau eins
+- <code>*</code>: Beliebig viele
+- <code>0..1</code>: Optional
+- <code>1..*</code>: Mindestens eins</p>
+<h3 id="72-praktische-faustregeln">7.2 Praktische Faustregeln</h3>
+<ol>
+<li>
+<p><strong>Beginne mit den Hauptklassen</strong>
+   - Welche Substantive kommen in den Anforderungen vor?
+   - Diese werden oft zu Klassen</p>
+</li>
+<li>
+<p><strong>Identifiziere Beziehungen</strong>
+   - Welche Klassen arbeiten zusammen?
+   - Gibt es "ist-ein" oder "hat-ein" Beziehungen?</p>
+</li>
+<li>
+<p><strong>Füge Details hinzu</strong>
+   - Welche Attribute braucht jede Klasse?
+   - Welche Methoden sind nötig?</p>
+</li>
+<li>
+<p><strong>Prüfe die Multiplizitäten</strong>
+   - Wie viele Objekte sind beteiligt?
+   - Sind Beziehungen optional oder verpflichtend?</p>
+</li>
+<li>
+<p><strong>Halte es einfach</strong>
+   - Nicht jedes Detail muss im Diagramm sein
+   - Fokus auf die wichtigsten Klassen und Beziehungen</p>
+</li>
+</ol>
+<h3 id="73-wichtige-erkenntnisse">7.3 Wichtige Erkenntnisse</h3>
+<ul>
+<li>Klassendiagramme sind Werkzeuge zur Planung, nicht zur Dokumentation jedes Details</li>
+<li>Ein gutes Klassendiagramm zeigt die Struktur auf einen Blick</li>
+<li>Die Unterscheidung zwischen Aggregation und Komposition ist oft Interpretationssache</li>
+<li>Klassendiagramme sind lebendig: Sie entwickeln sich mit dem Projekt</li>
+<li>In der IHK-Prüfung sind Klassendiagramme oft der Kern der Projektdokumentation</li>
+</ul>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein Klassendiagramm ist wie ein Stadtplan: Es zeigt die wichtigsten Straßen und Gebäude, aber nicht jedes Detail. Es hilft bei der Orientierung und Planung, ersetzt aber nicht die Erkundung vor Ort (den Code).</p>
+</blockquote>
+<hr>
+<h2 id="glossar">Glossar</h2>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klassendiagramm (class diagram)</td>
+<td>UML-Strukturdiagramm, das Klassen, ihre Attribute, Methoden und Beziehungen zeigt</td>
+</tr>
+<tr>
+<td>Klasse (class)</td>
+<td>Bauplan für Objekte; im Diagramm als Rechteck mit drei Bereichen dargestellt</td>
+</tr>
+<tr>
+<td>Objekt (object)</td>
+<td>Konkrete Instanz einer Klasse zur Laufzeit</td>
+</tr>
+<tr>
+<td>Attribut (attribute)</td>
+<td>Eigenschaft bzw. Zustand eines Objekts, notiert im mittleren Bereich der Klasse</td>
+</tr>
+<tr>
+<td>Methode (method / operation)</td>
+<td>Verhalten bzw. Fähigkeit eines Objekts, notiert im unteren Bereich der Klasse</td>
+</tr>
+<tr>
+<td>Sichtbarkeit (visibility)</td>
+<td>Zugriffsrecht auf ein Attribut oder eine Methode: <code>+</code> public, <code>-</code> private, <code>#</code> protected</td>
+</tr>
+<tr>
+<td>public</td>
+<td>Von überall sichtbar und aufrufbar (<code>+</code>)</td>
+</tr>
+<tr>
+<td>private</td>
+<td>Nur innerhalb der eigenen Klasse sichtbar (<code>-</code>)</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>Sichtbar für die eigene Klasse und ihre Unterklassen (<code>#</code>)</td>
+</tr>
+<tr>
+<td>Kapselung (encapsulation)</td>
+<td>Prinzip, den Zustand eines Objekts zu schützen und nur über eine definierte Schnittstelle zugänglich zu machen</td>
+</tr>
+<tr>
+<td>Vererbung / Generalisierung (inheritance)</td>
+<td>"ist-ein"-Beziehung; eine Unterklasse erbt Attribute und Methoden einer Oberklasse</td>
+</tr>
+<tr>
+<td>Oberklasse (superclass / base class)</td>
+<td>Allgemeinere Klasse, von der geerbt wird</td>
+</tr>
+<tr>
+<td>Unterklasse (subclass / derived class)</td>
+<td>Spezialisierte Klasse, die von einer Oberklasse erbt</td>
+</tr>
+<tr>
+<td>Assoziation (association)</td>
+<td>Allgemeine "kennt-ein"-Beziehung zwischen zwei Klassen</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>Lose "hat-ein"-Beziehung; das Teil kann unabhängig vom Ganzen existieren (hohle Raute)</td>
+</tr>
+<tr>
+<td>Komposition (composition)</td>
+<td>Starke "enthält-ein"-Beziehung; das Teil kann nicht ohne das Ganze existieren (gefüllte Raute)</td>
+</tr>
+<tr>
+<td>Multiplizität / Kardinalität (multiplicity)</td>
+<td>Angabe, wie viele Objekte an einer Beziehung beteiligt sind, z. B. <code>1</code>, <code>*</code>, <code>0..1</code>, <code>1..*</code></td>
+</tr>
+<tr>
+<td>Navigationsrichtung</td>
+<td>Optionaler Pfeil an einer Assoziation, der anzeigt, von welcher Klasse aus die andere erreichbar ist</td>
+</tr>
+<tr>
+<td>Polymorphismus (polymorphism)</td>
+<td>Fähigkeit, Objekte unterschiedlicher (aber verwandter) Klassen über denselben Typ anzusprechen</td>
+</tr>
+<tr>
+<td>Konstruktor (constructor)</td>
+<td>Spezielle Methode, die beim Erzeugen eines Objekts aufgerufen wird (in Java: eine Methode mit demselben Namen wie die Klasse)</td>
+</tr>
+<tr>
+<td>Getter</td>
+<td>Methode, die den Wert eines (meist privaten) Attributs nach außen zugänglich macht</td>
+</tr>
+<tr>
+<td>Use-Case-Diagramm</td>
+<td>Vorgelagertes UML-Diagramm, das die Anforderungen aus Anwendersicht beschreibt</td>
+</tr>
+</tbody>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_3.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 3: Klassendiagramme</div></a><a class="blatt blatt--weiter" href="a3_ue_aufgaben-7-2-klassen.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Klassendiagramm</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#notationsreferenz-alle-elemente-auf-einen-blick">Notationsreferenz: Alle Elemente auf einen Blick</a><a href="#1-warum-brauchen-wir-klassendiagramme">1. Warum brauchen wir Klassendiagramme?</a><a href="#11-das-problem-vom-konzept-zum-code" class="stufe3">1.1 Das Problem: Vom Konzept zum Code</a><a href="#12-die-brucke-zwischen-anforderungen-und-code" class="stufe3">1.2 Die Brücke zwischen Anforderungen und Code</a><a href="#13-praktischer-nutzen" class="stufe3">1.3 Praktischer Nutzen</a><a href="#2-die-anatomie-einer-klasse">2. Die Anatomie einer Klasse</a><a href="#21-das-drei-bereiche-modell" class="stufe3">2.1 Das Drei-Bereiche-Modell</a><a href="#22-sichtbarkeiten-wer-darf-was-sehen" class="stufe3">2.2 Sichtbarkeiten: Wer darf was sehen?</a><a href="#23-attribute-der-zustand-eines-objekts" class="stufe3">2.3 Attribute: Der Zustand eines Objekts</a><a href="#24-methoden-das-verhalten-eines-objekts" class="stufe3">2.4 Methoden: Das Verhalten eines Objekts</a><a href="#3-beziehungen-zwischen-klassen">3. Beziehungen zwischen Klassen</a><a href="#31-warum-beziehungen-wichtig-sind" class="stufe3">3.1 Warum Beziehungen wichtig sind</a><a href="#32-vererbung-die-ist-ein-beziehung" class="stufe3">3.2 Vererbung: Die "ist-ein"-Beziehung</a><a href="#33-assoziation-die-kennt-ein-beziehung" class="stufe3">3.3 Assoziation: Die "kennt-ein"-Beziehung</a><a href="#34-aggregation-die-lose-hat-ein-beziehung" class="stufe3">3.4 Aggregation: Die lose "hat-ein"-Beziehung</a><a href="#35-komposition-die-starke-enthalt-ein-beziehung" class="stufe3">3.5 Komposition: Die starke "enthält-ein"-Beziehung</a><a href="#36-ubersicht-welche-beziehung-wann" class="stufe3">3.6 Übersicht: Welche Beziehung wann?</a><a href="#4-multiplizitaten-wie-viele-objekte-sind-beteiligt">4. Multiplizitäten: Wie viele Objekte sind beteiligt?</a><a href="#41-das-konzept" class="stufe3">4.1 Das Konzept</a><a href="#42-die-wichtigsten-multiplizitaten" class="stufe3">4.2 Die wichtigsten Multiplizitäten</a><a href="#43-praktisches-beispiel-kunde-und-konto" class="stufe3">4.3 Praktisches Beispiel: Kunde und Konto</a><a href="#44-weitere-beispiele" class="stufe3">4.4 Weitere Beispiele</a><a href="#5-vollstandiges-beispiel-banksystem">5. Vollständiges Beispiel: Banksystem</a><a href="#51-das-szenario" class="stufe3">5.1 Das Szenario</a><a href="#52-das-klassendiagramm" class="stufe3">5.2 Das Klassendiagramm</a><a href="#6-vom-klassendiagramm-zum-code">6. Vom Klassendiagramm zum Code</a><a href="#61-der-ubersetzungsprozess" class="stufe3">6.1 Der Übersetzungsprozess</a><a href="#62-praktische-tipps" class="stufe3">6.2 Praktische Tipps</a><a href="#7-zusammenfassung">7. Zusammenfassung</a><a href="#71-kernkonzepte" class="stufe3">7.1 Kernkonzepte</a><a href="#72-praktische-faustregeln" class="stufe3">7.2 Praktische Faustregeln</a><a href="#73-wichtige-erkenntnisse" class="stufe3">7.3 Wichtige Erkenntnisse</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

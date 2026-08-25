@@ -1,0 +1,29 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Tier {
+  #name: String
+  #alter: int
+  +fressen(): void
+  +lautGeben(): void
+}
+class "Löwe" as Loewe {
+  -rudelgroesse: int
+  +lautGeben(): void
+}
+class Elefant {
+  -ruesselLaenge: double
+  +lautGeben(): void
+}
+class Zoo {
+  -name: String
+  -tiere: List<Tier>
+  +tierAufnehmen(tier: Tier): void
+}
+class Pfleger {
+  -name: String
+}
+Tier <|-- Loewe
+Tier <|-- Elefant
+Zoo "1" o-- "0..*" Tier : hat
+Pfleger "1..*" -- "0..*" Tier : betreut
+@enduml

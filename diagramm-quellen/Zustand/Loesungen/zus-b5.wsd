@@ -1,0 +1,11 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Aktiv
+
+Aktiv --> Gesperrt : beitragUeberfaellig() [Beitrag nicht bezahlt]
+Gesperrt --> Aktiv : beitragBezahlen()
+Aktiv --> Gekuendigt : kuendigen()
+Gesperrt --> Gekuendigt : kuendigen()
+
+Gekuendigt --> [*]
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Benutzer
+participant "service: UploadService" as Service
+
+Benutzer -> Service: ladeDateiHoch(datei)
+activate Service
+
+create "handler: UploadHandler" as Handler
+Service -> Handler: <<create>>
+activate Handler
+Handler --> Service:
+deactivate Handler
+
+Service -> Handler: verarbeiteDatei(datei)
+activate Handler
+Handler --> Service: verarbeitungErfolgreich
+deactivate Handler
+
+Service --> Benutzer: zeigeErfolgsmeldung()
+
+destroy Handler
+note right: Handler wird nach Gebrauch zerstört
+deactivate Service
+@enduml

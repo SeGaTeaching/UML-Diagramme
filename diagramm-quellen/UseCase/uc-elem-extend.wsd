@@ -1,0 +1,7 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+left to right direction
+usecase "Rabattcode eingeben" as UC2
+usecase "Ticket kaufen" as UC1
+UC2 .> UC1 : <<extend>>
+@enduml

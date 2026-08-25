@@ -1,0 +1,24 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Fahrgast
+actor Wartungstechniker
+actor "Banksystem" as Bank
+
+rectangle "Fahrkartenautomat" {
+  usecase "Fahrkarte kaufen" as UC1
+  usecase "Bezahlen" as UC2
+  usecase "Rabattkarte scannen" as UC3
+  usecase "Automat warten" as UC4
+  usecase "Fehlerbericht erstellen" as UC5
+}
+
+Fahrgast --> UC1
+UC1 .> UC2 : <<include>>
+UC2 --> Bank : kommuniziert mit
+UC3 .> UC1 : <<extend>>
+
+Wartungstechniker --> UC4
+Wartungstechniker --> UC5
+@enduml

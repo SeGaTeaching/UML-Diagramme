@@ -1,0 +1,10 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Gestoppt
+
+Gestoppt --> Abspielen : play()
+Abspielen --> Pausiert : pause()
+Pausiert --> Abspielen : play()
+Abspielen --> Gestoppt : stop()
+Pausiert --> Gestoppt : stop()
+@enduml

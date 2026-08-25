@@ -1,0 +1,34 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Medium {
+  #titel: String
+  #inventarnummer: String
+  +verfuegbarkeitPruefen(): boolean
+}
+class Buch {
+  -autor: String
+  -isbn: String
+}
+class DVD {
+  -laufzeit: int
+  -regisseur: String
+}
+class Bibliothek {
+  -name: String
+  +medienAnzeigen(): void
+}
+class Mitglied {
+  -mitgliedsnummer: String
+  -name: String
+}
+class Ausleihe {
+  -ausleihdatum: String
+  -rueckgabedatum: String
+}
+
+Medium <|-- Buch
+Medium <|-- DVD
+Bibliothek "1" o-- "0..*" Medium : verwaltet
+Mitglied "1" -- "0..*" Ausleihe : tätigt
+Ausleihe "0..*" -- "1" Medium : betrifft
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+actor Benutzer
+participant "ui: LoginUI" as UI
+participant "ctrl: LoginController" as Ctrl
+participant "db: Database" as DB
+
+Benutzer -> UI: gibBenutzerdatenEin()
+activate UI
+
+UI -> Ctrl: login(username, password)
+activate Ctrl
+
+Ctrl -> DB: pruefeAnmeldedaten(username, password)
+activate DB
+DB --> Ctrl: true
+deactivate DB
+
+Ctrl --> UI: erfolg
+deactivate Ctrl
+
+UI --> Benutzer: zeigeWillkommensnachricht()
+deactivate UI
+
+@enduml

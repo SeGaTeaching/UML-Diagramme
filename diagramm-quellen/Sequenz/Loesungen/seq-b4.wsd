@@ -1,0 +1,24 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Fahrgast
+participant "automat: Fahrkartenautomat" as Automat
+participant "zahlung: Zahlungssystem" as Zahlung
+
+Fahrgast -> Automat: waehleFahrkarte(ziel)
+activate Automat
+
+Fahrgast -> Automat: legeGeldEin(betrag)
+Automat -> Zahlung: pruefeBetrag(betrag, preis)
+activate Zahlung
+Zahlung --> Automat: guthabenAusreichend
+deactivate Zahlung
+
+alt Guthaben ausreichend
+    Automat -> Automat: druckeFahrkarte()
+    Automat --> Fahrgast: gibFahrkarteUndWechselgeldAus()
+else Guthaben nicht ausreichend
+    Automat --> Fahrgast: zeigeFehlermeldung("Bitte mehr Geld einwerfen")
+end
+
+deactivate Automat
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Fahrzeug {
+  #kennzeichen: String
+  +starten(): void
+}
+class PKW {
+  -tueren: int
+}
+class Motor {
+  -leistungPS: int
+}
+class Fahrer {
+  -name: String
+}
+class Autohaus {
+  -name: String
+}
+
+Fahrzeug <|-- PKW : Vererbung
+PKW *-- Motor : Komposition
+Fahrer --> PKW : Assoziation (fährt)
+Autohaus o-- PKW : Aggregation (hat im Bestand)
+@enduml

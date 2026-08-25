@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant A
+participant B
+
+A -> B: synchroneNachricht()
+activate B
+B --> A: rueckgabewert
+deactivate B
+
+A ->> B: asynchroneNachricht()
+@enduml

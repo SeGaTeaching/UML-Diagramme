@@ -1,0 +1,25 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant "ui: ShopUI" as UI
+participant "ctrl: BestellController" as Ctrl
+participant "lager: Lager" as Lager
+
+UI -> Ctrl: pruefeVerfuegbarkeit(produkt)
+activate Ctrl
+
+Ctrl -> Lager: istVerfuegbar(produkt)
+activate Lager
+Lager --> Ctrl: verfuegbar
+deactivate Lager
+
+alt alle Produkte verfügbar
+    Ctrl --> UI: erfolg
+    UI -> Ctrl: bestaetigenBestellung()
+else Produkte nicht verfügbar
+    Ctrl --> UI: fehler
+    UI -> UI: zeigeFehlermeldung()
+end
+
+deactivate Ctrl
+
+@enduml

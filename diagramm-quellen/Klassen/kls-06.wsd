@@ -1,0 +1,15 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Fahrer {
+  -name: String
+  -auto: Auto
+  +autoZuweisen(auto: Auto): void
+  +fahren(): void
+}
+class Auto {
+  -marke: String
+  -modell: String
+  +starten(): void
+}
+Fahrer --> Auto : fährt
+@enduml

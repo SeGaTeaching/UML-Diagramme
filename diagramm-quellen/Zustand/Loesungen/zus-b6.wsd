@@ -1,0 +1,11 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Aus
+
+Aus --> Heizen : einschalten() [Temperatur < Zielwert]
+Aus --> Standby : einschalten() [Temperatur >= Zielwert]
+Heizen --> Standby : zielwertErreicht()
+Standby --> Heizen : temperaturSinkt() [Temperatur < Zielwert]
+Heizen --> Aus : ausschalten()
+Standby --> Aus : ausschalten()
+@enduml

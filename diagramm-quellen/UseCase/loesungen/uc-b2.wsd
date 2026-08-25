@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Nutzer
+
+rectangle "Bibliothekssystem" {
+  usecase "Buch suchen" as UC1
+}
+
+Nutzer --> UC1
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+start
+:Ziel auswählen;
+:Zahlungsart wählen;
+if (Zahlungsart?) then ([Bargeld])
+  :Münzen/Scheine einwerfen;
+else ([Karte])
+  :Karte einstecken;
+endif
+:Ticket ausgeben;
+stop
+@enduml

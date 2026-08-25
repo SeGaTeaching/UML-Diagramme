@@ -1,0 +1,18 @@
+{
+  "kurs": {"code":"UML","name":"UML-Diagramme","kurztitel":"UML Lernportal","marke":"Enders Training","zeichen":"UML"},
+  "design": {"akzent_hell":"#1976D2","akzent_dunkel":"#5DB0F2"},
+  "gliederung": {"wort_singular":"Kapitel","wort_plural":"Kapitel","gewicht_zeigen":false},
+  "umsetzung": {"ausloeser":"","marke":""},
+  "quelle": "../Bibliothek",
+  "abschnitte": [
+    {"nr":1,"ordner":"Abschnitt_1_Einleitung","titel":"Einführung in UML","unter":"Was UML ist und die Diagramm-Landkarte","ergaenzung":false},
+    {"nr":2,"ordner":"Abschnitt_2_UseCase","titel":"Use-Case-Diagramme","unter":"Die Anwendersicht auf Software","ergaenzung":false},
+    {"nr":3,"ordner":"Abschnitt_3_Klassen","titel":"Klassendiagramme","unter":"Die statische Struktur eines Systems","ergaenzung":false}
+  ],
+  "gattungen": {
+    "Lerntext": ["lt","Lerntext","Lerntext – lesen und verstehen","text"],
+    "Uebungen": ["ue","Übungen","Übungen – anwenden","uebung"]
+  },
+  "global": {},
+  "pruefung": {"zeigen": false}
+}

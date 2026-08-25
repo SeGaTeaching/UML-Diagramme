@@ -1,0 +1,11 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+state Aktiv
+state Gesperrt
+state ImRegal
+state InReparatur
+
+Aktiv --> Gesperrt : login() [Fehlversuche >= 3]
+ImRegal --> ImRegal : zurueckgeben() [kein Schaden]
+ImRegal --> InReparatur : zurueckgeben() [Schaden festgestellt]
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Bereit
+
+Bereit --> Bereit : waehlen() [Betrag nicht ausreichend]
+Bereit --> GetraenkAusgeben : waehlen() [Betrag ausreichend]
+GetraenkAusgeben --> Bereit : ausgabeFertig()
+@enduml

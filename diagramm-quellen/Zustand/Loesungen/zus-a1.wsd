@@ -1,0 +1,9 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Rot
+
+Rot --> RotGelb : zeitAblauf()
+RotGelb --> Gruen : zeitAblauf()
+Gruen --> Gelb : zeitAblauf()
+Gelb --> Rot : zeitAblauf()
+@enduml

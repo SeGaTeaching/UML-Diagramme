@@ -1,0 +1,47 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+' Styling für den sauberen blauen Look
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor black
+  StartColor black
+  EndColor black
+}
+
+[*] --> Idle
+
+' --- ZUSTÄNDE (Flache Schreibweise ohne Klammern) ---
+
+state Idle
+' Doppelpunkt-Syntax ist robuster gegen Parser-Fehler
+Idle : entry / Display zurücksetzen
+
+state VerifyCard
+VerifyCard : entry / Karte einlesen
+VerifyCard : do / Karte validieren
+VerifyCard : exit / Karte zurückgeben
+
+state VerifyPin
+VerifyPin : entry / PIN eingeben
+VerifyPin : do / PIN prüfen
+
+state DispenseMoney
+DispenseMoney : entry / Betrag prüfen
+DispenseMoney : do / Geld ausgeben
+DispenseMoney : exit / Log schreiben
+
+' --- ÜBERGÄNGE ---
+
+Idle --> VerifyCard : Karte gesteckt
+
+VerifyCard --> VerifyPin : [Karte gültig]
+VerifyCard --> Idle : [Karte ungültig]
+
+VerifyPin --> DispenseMoney : [PIN korrekt]
+VerifyPin --> Idle : [PIN falsch]
+
+DispenseMoney --> Idle : Transaktion fertig
+
+@enduml

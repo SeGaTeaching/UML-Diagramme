@@ -1,0 +1,14 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Kunde
+
+rectangle "Pizzabestellsystem" {
+  usecase "Pizza bestellen" as UC1
+  usecase "Extra-Belag hinzufügen" as UC2
+}
+
+Kunde --> UC1
+UC2 .> UC1 : <<extend>>
+@enduml

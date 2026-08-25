@@ -1,0 +1,19 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant A
+participant B
+
+loop n mal
+    A -> B: wiederhole()
+end
+
+opt Bedingung erfüllt
+    A -> B: optionalerAufruf()
+end
+
+alt Fall 1
+    A -> B: aufrufFall1()
+else Fall 2
+    A -> B: aufrufFall2()
+end
+@enduml

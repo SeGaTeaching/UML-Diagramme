@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="411px" preserveAspectRatio="none" style="width:192px;height:411px;" version="1.1" viewBox="0 0 192 411" width="192px" zoomAndPan="magnify"><defs/><g><!--class Bibliothek--><rect fill="#E3F2FD" height="78.5938" id="Bibliothek" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="175" x="6" y="8"/><ellipse cx="55.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M57.8906,27.7031 Q57.4063,27.9531 56.875,28.0781 Q56.3594,28.2031 55.7813,28.2031 Q53.7188,28.2031 52.625,26.8438 Q51.5469,25.4844 51.5469,22.9063 Q51.5469,20.3281 52.625,18.9688 Q53.7188,17.6094 55.7813,17.6094 Q56.3594,17.6094 56.8906,17.7344 Q57.4219,17.8594 57.8906,18.0938 L57.8906,20.3438 Q57.375,19.8594 56.875,19.6406 Q56.3906,19.4219 55.875,19.4219 Q54.7656,19.4219 54.2031,20.2969 Q53.6406,21.1719 53.6406,22.9063 Q53.6406,24.625 54.2031,25.5156 Q54.7656,26.3906 55.875,26.3906 Q56.3906,26.3906 56.875,26.1719 Q57.375,25.9375 57.8906,25.4688 L57.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="74.5" y="27.8467">Bibliothek</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="180" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="25" y="54.9951">name: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="150" x="25" y="71.292">buecher: List&lt;Buch&gt;</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="180" y1="78.5938" y2="78.5938"/><!--class Buch--><rect fill="#E3F2FD" height="78.5938" id="Buch" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="172" x="7.5" y="165"/><ellipse cx="71.5" cy="180" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M73.8906,184.7031 Q73.4063,184.9531 72.875,185.0781 Q72.3594,185.2031 71.7813,185.2031 Q69.7188,185.2031 68.625,183.8438 Q67.5469,182.4844 67.5469,179.9063 Q67.5469,177.3281 68.625,175.9688 Q69.7188,174.6094 71.7813,174.6094 Q72.3594,174.6094 72.8906,174.7344 Q73.4219,174.8594 73.8906,175.0938 L73.8906,177.3438 Q73.375,176.8594 72.875,176.6406 Q72.3906,176.4219 71.875,176.4219 Q70.7656,176.4219 70.2031,177.2969 Q69.6406,178.1719 69.6406,179.9063 Q69.6406,181.625 70.2031,182.5156 Q70.7656,183.3906 71.875,183.3906 Q72.3906,183.3906 72.875,183.1719 Q73.375,182.9375 73.8906,182.4688 L73.8906,184.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="90.5" y="184.8467">Buch</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="8.5" x2="178.5" y1="195" y2="195"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15.5" y="205.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="26.5" y="211.9951">titel: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15.5" y="221.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="147" x="26.5" y="228.292">kapitel: List&lt;Kapitel&gt;</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="8.5" x2="178.5" y1="235.5938" y2="235.5938"/><!--class Kapitel--><rect fill="#E3F2FD" height="78.5938" id="Kapitel" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="109" x="39" y="322"/><ellipse cx="67.85" cy="337" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M70.2406,341.7031 Q69.7563,341.9531 69.225,342.0781 Q68.7094,342.2031 68.1313,342.2031 Q66.0688,342.2031 64.975,340.8438 Q63.8969,339.4844 63.8969,336.9063 Q63.8969,334.3281 64.975,332.9688 Q66.0688,331.6094 68.1313,331.6094 Q68.7094,331.6094 69.2406,331.7344 Q69.7719,331.8594 70.2406,332.0938 L70.2406,334.3438 Q69.725,333.8594 69.225,333.6406 Q68.7406,333.4219 68.225,333.4219 Q67.1156,333.4219 66.5531,334.2969 Q65.9906,335.1719 65.9906,336.9063 Q65.9906,338.625 66.5531,339.5156 Q67.1156,340.3906 68.225,340.3906 Q68.7406,340.3906 69.225,340.1719 Q69.725,339.9375 70.2406,339.4688 L70.2406,341.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="84.15" y="341.8467">Kapitel</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="40" x2="147" y1="352" y2="352"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="47" y="362.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="58" y="368.9951">nummer: int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="47" y="378.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="58" y="385.292">titel: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="40" x2="147" y1="392.5938" y2="392.5938"/><!--link Bibliothek to Buch--><path d="M93.5,100.23 C93.5,121.29 93.5,145.23 93.5,164.74 " fill="none" id="Bibliothek-Buch" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="93.5,87.21,89.5,93.21,93.5,99.21,97.5,93.21,93.5,87.21" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="94.5" y="130.9951">hat</text><!--link Buch to Kapitel--><path d="M93.5,257.23 C93.5,278.29 93.5,302.23 93.5,321.74 " fill="none" id="Buch-Kapitel" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="93.5,244.21,89.5,250.21,93.5,256.21,97.5,250.21,93.5,244.21" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="94.5" y="287.9951">besteht aus</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Bibliothek {
+  -name: String
+  -buecher: List<Buch>
+}
+class Buch {
+  -titel: String
+  -kapitel: List<Kapitel>
+}
+class Kapitel {
+  -nummer: int
+  -titel: String
+}
+Bibliothek o- - Buch : hat
+Buch *- - Kapitel : besteht aus
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

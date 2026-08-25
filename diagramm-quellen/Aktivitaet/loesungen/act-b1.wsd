@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+!pragma useVerticalIf on
+
+start
+:Pizza auswählen;
+:In den Warenkorb legen;
+:Lieferadresse eingeben;
+:Bestellung abschicken;
+stop
+@enduml

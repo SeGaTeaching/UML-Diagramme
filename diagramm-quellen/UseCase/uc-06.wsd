@@ -1,0 +1,18 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+skinparam rectangle {
+  BackgroundColor #F5F5F5
+  BorderColor #333333
+  FontColor #000000
+}
+skinparam ArrowColor #555555
+
+rectangle "Use-Case-Diagramm:\nKunde kann Geld abheben" as A #D1ECF1
+rectangle "Klassendiagramm:\nKlassen: Kunde, Konto, Karte, Automat" as B #F8D7DA
+rectangle "Sequenzdiagramm:\nKunde -> Automat -> Karte -> Konto\nWie die Objekte kommunizieren" as C #D4EDDA
+rectangle "Code:\nclass Kunde, class Konto, etc." as D #FFF3CD
+
+A --> B
+B --> C
+C --> D
+@enduml

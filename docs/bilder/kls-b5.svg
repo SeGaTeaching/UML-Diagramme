@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="254px" preserveAspectRatio="none" style="width:367px;height:254px;" version="1.1" viewBox="0 0 367 254" width="367px" zoomAndPan="magnify"><defs/><g><!--class Kurs--><rect fill="#E3F2FD" height="94.8906" id="Kurs" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="350" x="6" y="8"/><ellipse cx="161.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M163.8906,27.7031 Q163.4063,27.9531 162.875,28.0781 Q162.3594,28.2031 161.7813,28.2031 Q159.7188,28.2031 158.625,26.8438 Q157.5469,25.4844 157.5469,22.9063 Q157.5469,20.3281 158.625,18.9688 Q159.7188,17.6094 161.7813,17.6094 Q162.3594,17.6094 162.8906,17.7344 Q163.4219,17.8594 163.8906,18.0938 L163.8906,20.3438 Q163.375,19.8594 162.875,19.6406 Q162.3906,19.4219 161.875,19.4219 Q160.7656,19.4219 160.2031,20.2969 Q159.6406,21.1719 159.6406,22.9063 Q159.6406,24.625 160.2031,25.5156 Q160.7656,26.3906 161.875,26.3906 Q162.3906,26.3906 162.875,26.1719 Q163.375,25.9375 163.8906,25.4688 L163.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="180.5" y="27.8467">Kurs</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="355" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="25" y="54.9951">titel: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="177" x="25" y="71.292">schueler: List&lt;Schueler&gt;</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="355" y1="78.5938" y2="78.5938"/><ellipse cx="17" cy="92.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="325" x="25" y="95.5889">schuelerHinzufuegen(schueler: Schueler): void</text><!--class Schueler--><rect fill="#E3F2FD" height="62.2969" id="Schueler" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="113" x="124.5" y="181"/><ellipse cx="148.4" cy="196" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M150.7906,200.7031 Q150.3063,200.9531 149.775,201.0781 Q149.2594,201.2031 148.6813,201.2031 Q146.6188,201.2031 145.525,199.8438 Q144.4469,198.4844 144.4469,195.9063 Q144.4469,193.3281 145.525,191.9688 Q146.6188,190.6094 148.6813,190.6094 Q149.2594,190.6094 149.7906,190.7344 Q150.3219,190.8594 150.7906,191.0938 L150.7906,193.3438 Q150.275,192.8594 149.775,192.6406 Q149.2906,192.4219 148.775,192.4219 Q147.6656,192.4219 147.1031,193.2969 Q146.5406,194.1719 146.5406,195.9063 Q146.5406,197.625 147.1031,198.5156 Q147.6656,199.3906 148.775,199.3906 Q149.2906,199.3906 149.775,199.1719 Q150.275,198.9375 150.7906,198.4688 L150.7906,200.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="163.6" y="200.8467">Schueler</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="125.5" x2="236.5" y1="211" y2="211"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="132.5" y="221.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="143.5" y="227.9951">name: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="125.5" x2="236.5" y1="235.2969" y2="235.2969"/><!--link Kurs to Schueler--><path d="M181,116.36 C181,138.47 181,162.59 181,180.94 " fill="none" id="Kurs-Schueler" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="181,103.27,177,109.27,181,115.27,185,109.27,181,103.27" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="182" y="146.9951">hat</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Kurs {
+  -titel: String
+  -schueler: List<Schueler>
+  +schuelerHinzufuegen(schueler: Schueler): void
+}
+class Schueler {
+  -name: String
+}
+Kurs o- - Schueler : hat
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

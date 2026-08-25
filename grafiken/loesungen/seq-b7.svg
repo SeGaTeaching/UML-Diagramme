@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="500px" preserveAspectRatio="none" style="width:533px;height:500px;" version="1.1" viewBox="0 0 533 500" width="533px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="288.2656" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="237" y="114.5938"/><rect fill="#ECEFF1" height="181.0781" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="465" y="221.7813"/><rect fill="#FFFFFF" height="62.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="319" x="124.5" y="129.5938"/><rect fill="#FFFFFF" height="159.0781" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="508.5" x="13" y="236.7813"/><rect fill="#FFFFFF" height="78.8906" style="stroke: none; stroke-width: 1.0;" width="508.5" x="13" y="316.9688"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="56" x2="56" y1="82.2969" y2="412.8594"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="241.5" x2="241.5" y1="82.2969" y2="412.8594"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="469.5" x2="469.5" y1="82.2969" y2="412.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="23" y="78.9951">Fahrgast</text><ellipse cx="56" cy="13" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M56,21 L56,48 M43,29 L69,29 M56,48 L43,63 M56,48 L69,63 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="23" y="424.8545">Fahrgast</text><ellipse cx="56" cy="438.1563" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M56,446.1563 L56,473.1563 M43,454.1563 L69,454.1563 M56,473.1563 L43,488.1563 M56,473.1563 L69,488.1563 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="215" x="134.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="141.5" y="70.9951">steuerung: Aufzugsteuerung</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="215" x="134.5" y="411.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="141.5" y="431.8545">steuerung: Aufzugsteuerung</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="83" x="428.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="435.5" y="70.9951">tuer: Tuer</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="83" x="428.5" y="411.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="435.5" y="431.8545">tuer: Tuer</text><rect fill="#ECEFF1" height="288.2656" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="237" y="114.5938"/><rect fill="#ECEFF1" height="181.0781" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="465" y="221.7813"/><polygon fill="#1976D2" points="225,110.5938,235,114.5938,225,118.5938,229,114.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="56" x2="231" y1="114.5938" y2="114.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="162" x="63" y="109.292">drueckeStockwerk(ziel)</text><path d="M130.5,129.5938 L203.5,129.5938 L203.5,137.5938 L193.5,147.5938 L124.5,147.5938 L124.5,135.5938 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="62.8906" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="319" x="124.5" y="129.5938"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="34" x="139.5" y="143.5889">loop</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="220" x="218.5" y="144.5889">[bis Zielstockwerk erreicht]</text><line style="stroke: #1976D2; stroke-width: 1.0;" x1="247" x2="289" y1="171.4844" y2="171.4844"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="289" x2="289" y1="171.4844" y2="184.4844"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="248" x2="289" y1="184.4844" y2="184.4844"/><polygon fill="#1976D2" points="258,180.4844,248,184.4844,258,188.4844,254,184.4844" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="138" x="254" y="166.1826">fahreEinStockwerk()</text><polygon fill="#1976D2" points="453,217.7813,463,221.7813,453,225.7813,457,221.7813" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="247" x2="459" y1="221.7813" y2="221.7813"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="254" y="216.4795">oeffneTuer()</text><path d="M19,236.7813 L77,236.7813 L77,244.7813 L67,254.7813 L13,254.7813 L13,242.7813 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="159.0781" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="508.5" x="13" y="236.7813"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="28" y="250.7764">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="81" x="92" y="251.7764">[Tuer frei]</text><polygon fill="#1976D2" points="258,274.6719,248,278.6719,258,282.6719,254,278.6719" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="252" x2="464" y1="278.6719" y2="278.6719"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="264" y="273.3701">tuerGeoeffnet</text><polygon fill="#1976D2" points="67,304.9688,57,308.9688,67,312.9688,63,308.9688" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="61" x2="236" y1="308.9688" y2="308.9688"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="140" x="73" y="303.667">signalisiereAnkunft()</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="521.5" y1="317.9688" y2="317.9688"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="123" x="18" y="330.9639">[Tuer blockiert]</text><polygon fill="#1976D2" points="258,353.5625,248,357.5625,258,361.5625,254,357.5625" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="252" x2="464" y1="357.5625" y2="357.5625"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="264" y="352.2607">tuerBlockiert</text><polygon fill="#1976D2" points="453,383.8594,463,387.8594,453,391.8594,457,387.8594" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="247" x2="459" y1="387.8594" y2="387.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="194" x="254" y="382.5576">versucheErneutZuOeffnen()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+actor Fahrgast
+participant "steuerung: Aufzugsteuerung" as Steuerung
+participant "tuer: Tuer" as Tuer
+
+Fahrgast -> Steuerung: drueckeStockwerk(ziel)
+activate Steuerung
+
+loop bis Zielstockwerk erreicht
+    Steuerung -> Steuerung: fahreEinStockwerk()
+end
+
+Steuerung -> Tuer: oeffneTuer()
+activate Tuer
+
+alt Tuer frei
+    Tuer - -> Steuerung: tuerGeoeffnet
+    Steuerung - -> Fahrgast: signalisiereAnkunft()
+else Tuer blockiert
+    Tuer - -> Steuerung: tuerBlockiert
+    Steuerung -> Tuer: versucheErneutZuOeffnen()
+end
+
+deactivate Tuer
+deactivate Steuerung
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

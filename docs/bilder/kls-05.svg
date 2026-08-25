@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="442px" preserveAspectRatio="none" style="width:427px;height:442px;" version="1.1" viewBox="0 0 427 442" width="427px" zoomAndPan="magnify"><defs/><g><!--class Tier--><rect fill="#E3F2FD" height="111.1875" id="Tier" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="144" x="152.5" y="181"/><ellipse cx="207.5" cy="196" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M209.8906,200.7031 Q209.4063,200.9531 208.875,201.0781 Q208.3594,201.2031 207.7813,201.2031 Q205.7188,201.2031 204.625,199.8438 Q203.5469,198.4844 203.5469,195.9063 Q203.5469,193.3281 204.625,191.9688 Q205.7188,190.6094 207.7813,190.6094 Q208.3594,190.6094 208.8906,190.7344 Q209.4219,190.8594 209.8906,191.0938 L209.8906,193.3438 Q209.375,192.8594 208.875,192.6406 Q208.3906,192.4219 207.875,192.4219 Q206.7656,192.4219 206.2031,193.2969 Q205.6406,194.1719 205.6406,195.9063 Q205.6406,197.625 206.2031,198.5156 Q206.7656,199.3906 207.875,199.3906 Q208.3906,199.3906 208.875,199.1719 Q209.375,198.9375 209.8906,198.4688 L209.8906,200.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="226.5" y="200.8467">Tier</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="153.5" x2="295.5" y1="211" y2="211"/><polygon fill="none" points="163.5,219.6484,167.5,223.6484,163.5,227.6484,159.5,223.6484" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="171.5" y="227.9951">name: String</text><polygon fill="none" points="163.5,235.9453,167.5,239.9453,163.5,243.9453,159.5,239.9453" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="171.5" y="244.292">alter: int</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="153.5" x2="295.5" y1="251.5938" y2="251.5938"/><ellipse cx="163.5" cy="265.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="171.5" y="268.5889">fressen(): void</text><ellipse cx="163.5" cy="281.5391" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="171.5" y="284.8857">lautGeben(): void</text><!--class Loewe--><rect fill="#E3F2FD" height="78.5938" id="Loewe" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="144" x="53.5" y="353"/><ellipse cx="103.5" cy="368" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M105.8906,372.7031 Q105.4063,372.9531 104.875,373.0781 Q104.3594,373.2031 103.7813,373.2031 Q101.7188,373.2031 100.625,371.8438 Q99.5469,370.4844 99.5469,367.9063 Q99.5469,365.3281 100.625,363.9688 Q101.7188,362.6094 103.7813,362.6094 Q104.3594,362.6094 104.8906,362.7344 Q105.4219,362.8594 105.8906,363.0938 L105.8906,365.3438 Q105.375,364.8594 104.875,364.6406 Q104.3906,364.4219 103.875,364.4219 Q102.7656,364.4219 102.2031,365.2969 Q101.6406,366.1719 101.6406,367.9063 Q101.6406,369.625 102.2031,370.5156 Q102.7656,371.3906 103.875,371.3906 Q104.3906,371.3906 104.875,371.1719 Q105.375,370.9375 105.8906,370.4688 L105.8906,372.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="122.5" y="372.8467">Löwe</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="54.5" x2="196.5" y1="383" y2="383"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="61.5" y="393.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="72.5" y="399.9951">rudelgroesse: int</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="54.5" x2="196.5" y1="407.2969" y2="407.2969"/><ellipse cx="64.5" cy="420.9453" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="72.5" y="424.292">lautGeben(): void</text><!--class Elefant--><rect fill="#E3F2FD" height="78.5938" id="Elefant" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="184" x="232.5" y="353"/><ellipse cx="297" cy="368" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M299.3906,372.7031 Q298.9063,372.9531 298.375,373.0781 Q297.8594,373.2031 297.2813,373.2031 Q295.2188,373.2031 294.125,371.8438 Q293.0469,370.4844 293.0469,367.9063 Q293.0469,365.3281 294.125,363.9688 Q295.2188,362.6094 297.2813,362.6094 Q297.8594,362.6094 298.3906,362.7344 Q298.9219,362.8594 299.3906,363.0938 L299.3906,365.3438 Q298.875,364.8594 298.375,364.6406 Q297.8906,364.4219 297.375,364.4219 Q296.2656,364.4219 295.7031,365.2969 Q295.1406,366.1719 295.1406,367.9063 Q295.1406,369.625 295.7031,370.5156 Q296.2656,371.3906 297.375,371.3906 Q297.8906,371.3906 298.375,371.1719 Q298.875,370.9375 299.3906,370.4688 L299.3906,372.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="316" y="372.8467">Elefant</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="233.5" x2="415.5" y1="383" y2="383"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="240.5" y="393.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="159" x="251.5" y="399.9951">ruesselLaenge: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="233.5" x2="415.5" y1="407.2969" y2="407.2969"/><ellipse cx="243.5" cy="420.9453" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="251.5" y="424.292">lautGeben(): void</text><!--class Zoo--><rect fill="#E3F2FD" height="94.8906" id="Zoo" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="231" x="6" y="8"/><ellipse cx="103.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M105.8906,27.7031 Q105.4063,27.9531 104.875,28.0781 Q104.3594,28.2031 103.7813,28.2031 Q101.7188,28.2031 100.625,26.8438 Q99.5469,25.4844 99.5469,22.9063 Q99.5469,20.3281 100.625,18.9688 Q101.7188,17.6094 103.7813,17.6094 Q104.3594,17.6094 104.8906,17.7344 Q105.4219,17.8594 105.8906,18.0938 L105.8906,20.3438 Q105.375,19.8594 104.875,19.6406 Q104.3906,19.4219 103.875,19.4219 Q102.7656,19.4219 102.2031,20.2969 Q101.6406,21.1719 101.6406,22.9063 Q101.6406,24.625 102.2031,25.5156 Q102.7656,26.3906 103.875,26.3906 Q104.3906,26.3906 104.875,26.1719 Q105.375,25.9375 105.8906,25.4688 L105.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="122.5" y="27.8467">Zoo</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="236" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="25" y="54.9951">name: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="25" y="71.292">tiere: List&lt;Tier&gt;</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="236" y1="78.5938" y2="78.5938"/><ellipse cx="17" cy="92.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="206" x="25" y="95.5889">tierAufnehmen(tier: Tier): void</text><!--class Pfleger--><rect fill="#E3F2FD" height="62.2969" id="Pfleger" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="113" x="272" y="24.5"/><ellipse cx="301.75" cy="39.5" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M304.1406,44.2031 Q303.6563,44.4531 303.125,44.5781 Q302.6094,44.7031 302.0313,44.7031 Q299.9688,44.7031 298.875,43.3438 Q297.7969,41.9844 297.7969,39.4063 Q297.7969,36.8281 298.875,35.4688 Q299.9688,34.1094 302.0313,34.1094 Q302.6094,34.1094 303.1406,34.2344 Q303.6719,34.3594 304.1406,34.5938 L304.1406,36.8438 Q303.625,36.3594 303.125,36.1406 Q302.6406,35.9219 302.125,35.9219 Q301.0156,35.9219 300.4531,36.7969 Q299.8906,37.6719 299.8906,39.4063 Q299.8906,41.125 300.4531,42.0156 Q301.0156,42.8906 302.125,42.8906 Q302.6406,42.8906 303.125,42.6719 Q303.625,42.4375 304.1406,41.9688 L304.1406,44.2031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="318.25" y="44.3467">Pfleger</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="273" x2="384" y1="54.5" y2="54.5"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="280" y="65.1484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="291" y="71.4951">name: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="273" x2="384" y1="78.7969" y2="78.7969"/><!--link Tier to Loewe--><path d="M178.19,309.54 C168.57,324.5 158.79,339.71 150.31,352.9 " fill="none" id="Tier-Loewe" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="172.61,305.27,189.32,292.23,184.39,312.84,172.61,305.27" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Tier to Elefant--><path d="M270.96,309.05 C280.78,324.17 290.78,339.57 299.44,352.9 " fill="none" id="Tier-Elefant" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="265.06,312.81,260.04,292.23,276.8,305.19,265.06,312.81" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Zoo to Tier--><path d="M154.92,114.58 C167.18,135.89 181.01,159.92 193.09,180.91 " fill="none" id="Zoo-Tier" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="148.29,103.06,147.8154,110.2555,154.2749,113.461,154.7494,106.2656,148.29,103.06" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="174.5" y="146.9951">hat</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="142.4245" y="123.8968">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="163.5281" y="169.7647">0..*</text><!--link Pfleger to Tier--><path d="M310.86,86.86 C295.96,112.5 274.26,149.85 256.34,180.69 " fill="none" id="Pfleger-Tier" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="51" x="283.5" y="146.9951">betreut</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="280.7468" y="107.9731">1..*</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="234.882" y="169.5165">0..*</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Tier {
+  #name: String
+  #alter: int
+  +fressen(): void
+  +lautGeben(): void
+}
+class "Löwe" as Loewe {
+  -rudelgroesse: int
+  +lautGeben(): void
+}
+class Elefant {
+  -ruesselLaenge: double
+  +lautGeben(): void
+}
+class Zoo {
+  -name: String
+  -tiere: List<Tier>
+  +tierAufnehmen(tier: Tier): void
+}
+class Pfleger {
+  -name: String
+}
+Tier <|- - Loewe
+Tier <|- - Elefant
+Zoo "1" o- - "0..*" Tier : hat
+Pfleger "1..*" - - "0..*" Tier : betreut
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

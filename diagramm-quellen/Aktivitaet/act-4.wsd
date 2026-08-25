@@ -1,0 +1,34 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+' Zwingt PlantUML in den Aktivitätsmodus
+!pragma useVerticalIf on
+
+' Design-Definitionen
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityBarColor black
+
+' --- Start des Ablaufs ---
+
+start
+
+:Webseite aufrufen;
+
+' Erzeugt den Fork-Balken
+fork
+  :Bilder laden;
+fork again
+  :Text laden;
+fork again
+  :Werbung laden;
+' Erzeugt den Join-Balken
+end fork
+
+:Seite anzeigen;
+
+stop
+
+@enduml

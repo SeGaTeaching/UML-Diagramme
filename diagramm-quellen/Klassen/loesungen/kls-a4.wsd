@@ -1,0 +1,17 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Bibliothek {
+  -name: String
+  -buecher: List<Buch>
+}
+class Buch {
+  -titel: String
+  -kapitel: List<Kapitel>
+}
+class Kapitel {
+  -nummer: int
+  -titel: String
+}
+Bibliothek o-- Buch : hat
+Buch *-- Kapitel : besteht aus
+@enduml

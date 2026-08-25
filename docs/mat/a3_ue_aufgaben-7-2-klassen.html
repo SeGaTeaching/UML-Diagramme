@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aufgaben — Klassendiagramm · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 3: Klassendiagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 3</div><a href="../Abschnitt_3.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext"><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a3_lt_7-2-uml-klassendiagram.html">Klassendiagramm</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen" open><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a3_ue_aufgaben-7-2-klassen.html" class="hier">Aufgaben — Klassendiagramm</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_3.html">Kapitel 3</a><span>›</span>Aufgaben — Klassendiagramm</div><h1>Aufgaben — Klassendiagramm</h1><p>Diese Aufgaben gehören zum Skript <code>7.2_UML-Klassendiagram.md</code>. Lesen Sie dort zuerst die Abschnitte
+zur Anatomie einer Klasse, zu den vier Beziehungstypen und zu Multiplizitäten — die Aufgaben bauen
+direkt darauf auf.</p>
+<p>Modellieren Sie jede Aufgabe zunächst auf Papier oder in PlantUML, bevor Sie die Musterlösung
+aufklappen. Achten Sie besonders auf: korrekte Sichtbarkeiten (<code>+</code>/<code>-</code>/<code>#</code>), den richtigen
+Beziehungstyp (Vererbung, Assoziation, Aggregation, Komposition) und — wo gefordert — die passenden
+Multiplizitäten.</p>
+<hr>
+<h2 id="teil-a-zwischenubungen-vormittag">Teil A — Zwischenübungen (Vormittag)</h2>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A1 [leicht]: Die Klasse Fahrzeug</h3><p>Modellieren Sie eine einzelne Klasse <code>Fahrzeug</code> für eine Fuhrpark-Software. Sie soll folgende
+Eigenschaften und Fähigkeiten abbilden:
+- ein Kennzeichen (Text)
+- eine Marke (Text)
+- ein Baujahr (Ganzzahl)
+- die Möglichkeit, das Fahrzeug zu starten
+- die Möglichkeit, eine bestimmte Menge Kraftstoff (Dezimalzahl, in Litern) zu tanken</p>
+<p>Alle Attribute sollen von außen nicht direkt zugreifbar sein, alle Methoden sollen von überall
+aufrufbar sein.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A1" src="../bilder/kls-a1.svg"></p>
+<pre><code>class Fahrzeug {
+  -kennzeichen: String
+  -marke: String
+  -baujahr: int
+  +starten(): void
+  +tanken(liter: double): void
+}</code></pre>
+
+<p>Alle drei Attribute sind <code>private</code> (Kapselung: der Zustand des Fahrzeugs wird geschützt), beide
+Methoden sind <code>public</code> (sie bilden die Schnittstelle nach außen). Das ist die typische Verteilung,
+die Sie in fast jeder Klasse wiederfinden werden.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A2 [leicht]: PKW und LKW erben von Fahrzeug</h3><p>Erweitern Sie Aufgabe A1: Es gibt nicht nur allgemeine Fahrzeuge, sondern speziell <strong>PKW</strong> und
+<strong>LKW</strong>. Beide sollen alle Eigenschaften eines Fahrzeugs besitzen, zusätzlich:
+- ein PKW hat eine Anzahl an Sitzen (Ganzzahl)
+- ein LKW hat eine Ladefläche in Quadratmetern (Dezimalzahl)</p>
+<p>Damit die Unterklassen später auf <code>kennzeichen</code> und <code>marke</code> zugreifen können, sollen diese beiden
+Attribute in der Oberklasse <strong>protected</strong> statt private sein.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A2" src="../bilder/kls-a2.svg"></p>
+<pre><code>class Fahrzeug {
+  #kennzeichen: String
+  #marke: String
+  +starten(): void
+}
+class PKW {
+  -anzahlSitze: int
+}
+class LKW {
+  -ladeflaeche: double
+}
+Fahrzeug <|-- PKW
+Fahrzeug <|-- LKW</code></pre>
+
+<p>Der hohle Dreieckspfeil zeigt von der Unterklasse zur Oberklasse — es ist eine "ist-ein"-Beziehung:
+Ein PKW ist ein Fahrzeug, ein LKW ist ein Fahrzeug. Beide erben <code>kennzeichen</code>, <code>marke</code> und
+<code>starten()</code>, ohne sie erneut zu deklarieren.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A3 [mittel]: Bibliothekar und Buch</h3><p>Ein Bibliothekar verwaltet Bücher: Er kann ein Buch an ein Mitglied ausleihen. Modellieren Sie die
+Klassen <code>Bibliothekar</code> (Attribut: Name) und <code>Buch</code> (Attribute: Titel, ISBN) sowie die Beziehung
+zwischen beiden. Der Bibliothekar soll eine Methode <code>buchAusleihen</code> besitzen, die ein <code>Buch</code> als
+Parameter entgegennimmt.</p>
+<p>Überlegen Sie: Ist das eine Vererbung, eine Assoziation, eine Aggregation oder eine Komposition?</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A3" src="../bilder/kls-a3.svg"></p>
+<pre><code>class Bibliothekar {
+  -name: String
+  +buchAusleihen(buch: Buch): void
+}
+class Buch {
+  -titel: String
+  -isbn: String
+}
+Bibliothekar --> Buch : verwaltet</code></pre>
+
+<p>Das ist eine <strong>Assoziation</strong>: Der Bibliothekar kennt Bücher und arbeitet mit ihnen, aber es gibt
+keine "ist-ein"-Beziehung und auch keine Ganzes-Teil-Beziehung. Weder gehört das Buch untrennbar zum
+Bibliothekar (keine Komposition), noch "besitzt" der Bibliothekar die Bücher im Sinne von
+Aggregation — er verwaltet sie lediglich.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A4 [mittel]: Bibliothek, Buch und Kapitel</h3><p>Modellieren Sie ein kleines Bibliothekssystem mit drei Klassen:
+- <code>Bibliothek</code> (Attribut: Name) — eine Bibliothek hat mehrere Bücher
+- <code>Buch</code> (Attribute: Titel) — ein Buch besteht aus mehreren Kapiteln
+- <code>Kapitel</code> (Attribute: Nummer, Titel)</p>
+<p>Überlegen Sie für jede der beiden Beziehungen einzeln: Kann der Teil auch ohne das Ganze
+existieren? Ein Buch existiert auch, wenn die Bibliothek schließt (es wandert einfach in eine
+andere Bibliothek). Ein Kapitel dagegen ergibt ohne das zugehörige Buch keinen Sinn.</p>
+<h2 id="teil-b-selbstlernphase-nachmittag">Teil B — Selbstlernphase (Nachmittag)</h2></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A4" src="../bilder/kls-a4.svg"></p>
+<pre><code>class Bibliothek {
+  -name: String
+  -buecher: List<Buch>
+}
+class Buch {
+  -titel: String
+  -kapitel: List<Kapitel>
+}
+class Kapitel {
+  -nummer: int
+  -titel: String
+}
+Bibliothek o-- Buch : hat
+Buch *-- Kapitel : besteht aus</code></pre>
+
+<p><code>Bibliothek</code> zu <code>Buch</code> ist eine <strong>Aggregation</strong> (hohle Raute): Das Buch kann unabhängig von der
+Bibliothek existieren. <code>Buch</code> zu <code>Kapitel</code> ist eine <strong>Komposition</strong> (gefüllte Raute): Ohne das Buch
+gibt es die Kapitel nicht — wird das Buch gelöscht, verschwinden auch seine Kapitel.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B1 [leicht]: Die Klasse Produkt</h3><p>Ein Online-Shop verwaltet Produkte. Modellieren Sie eine Klasse <code>Produkt</code> mit:
+- einer Produkt-ID (Text)
+- einem Namen (Text)
+- einem Preis (Dezimalzahl)
+- einem Lagerbestand (Ganzzahl)
+- einer Methode, die prüft, ob das Produkt verfügbar ist (gibt einen Wahrheitswert zurück)</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B1" src="../bilder/kls-b1.svg"></p>
+<pre><code>class Produkt {
+  -produktId: String
+  -name: String
+  -preis: double
+  -bestand: int
+  +istVerfuegbar(): boolean
+}</code></pre>
+
+<p>Eine einzelne Klasse ohne Beziehungen — der einfachste Baustein eines Klassendiagramms. Wichtig:
+<code>istVerfuegbar()</code> hat als Rückgabetyp <code>boolean</code>, weil sie eine Ja/Nein-Frage beantwortet.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B2 [leicht]: Die Klasse Schüler</h3><p>Modellieren Sie eine Klasse <code>Schueler</code> für eine Schulverwaltung mit:
+- Name (Text)
+- Klasse, z. B. "9a" (Text)
+- Geburtsdatum (Text)
+- einer Methode, um eine Note in einem Fach einzutragen (Fach als Text, Note als Ganzzahl,
+  kein Rückgabewert)</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B2" src="../bilder/kls-b2.svg"></p>
+<pre><code>class Schueler {
+  -name: String
+  -klasse: String
+  -geburtsdatum: String
+  +noteEintragen(fach: String, note: int): void
+}</code></pre>
+
+<p>Eine Methode kann mehrere Parameter haben — hier <code>fach</code> und <code>note</code>, getrennt durch Komma.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B3 [leicht-mittel]: Hund und Katze erben von Tier</h3><p>Ein Tierheim verwaltet Tiere. Es gibt eine allgemeine Klasse <code>Tier</code> (Name, Alter, kann fressen) und
+zwei speziellere Klassen:
+- <code>Hund</code> mit einer Rasse (Text) und der Fähigkeit zu bellen
+- <code>Katze</code> mit einer Fellfarbe (Text) und der Fähigkeit zu miauen</p>
+<p>Die Attribute der Oberklasse sollen für die Unterklassen zugänglich sein (aber nicht von komplett
+außerhalb).</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B3" src="../bilder/kls-b3.svg"></p>
+<pre><code>class Tier {
+  #name: String
+  #alter: int
+  +fressen(): void
+}
+class Hund {
+  -rasse: String
+  +bellen(): void
+}
+class Katze {
+  -farbe: String
+  +miauen(): void
+}
+Tier <|-- Hund
+Tier <|-- Katze</code></pre>
+
+<p><code>#</code> (protected) statt <code>-</code> (private), weil <code>Hund</code> und <code>Katze</code> auf <code>name</code> und <code>alter</code> zugreifen
+können sollen. Zwei Pfeile zeigen auf dieselbe Oberklasse — das ist normal, wenn mehrere Klassen
+von derselben Basis erben.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B4 [mittel]: Lehrer unterrichtet Kurs</h3><p>Ein Lehrer unterrichtet Kurse. Modellieren Sie <code>Lehrer</code> (Name, Liste von Fächern, Methode um einen
+Kurs zu leiten) und <code>Kurs</code> (Titel, Raum) sowie die passende Beziehung. Ein Lehrer kann existieren,
+auch wenn er gerade keinen Kurs unterrichtet, und ein Kurs kann grundsätzlich auch ohne einen
+konkret zugewiesenen Lehrer im System stehen — es ist also keine der beiden "starken" Ganzes-Teil-
+Beziehungen gefragt.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B4" src="../bilder/kls-b4.svg"></p>
+<pre><code>class Lehrer {
+  -name: String
+  -faecher: List<String>
+  +kursLeiten(kurs: Kurs): void
+}
+class Kurs {
+  -titel: String
+  -raum: String
+}
+Lehrer --> Kurs : unterrichtet</code></pre>
+
+<p>Eine einfache <strong>Assoziation</strong> mit Navigationspfeil und Beschriftung. Weder Aggregation noch
+Komposition passen hier, weil kein "Ganzes" existiert, aus dem der Kurs ein "Teil" wäre.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B5 [mittel]: Kurs hat Schüler</h3><p>Ein Kurs hat mehrere Schüler. Modellieren Sie <code>Kurs</code> (Titel, Liste von Schülern, Methode um einen
+Schüler hinzuzufügen) und <code>Schueler</code> (Name). Ein Schüler soll auch dann weiter existieren, wenn er
+aus dem Kurs abgemeldet wird — er wechselt einfach in einen anderen Kurs.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B5" src="../bilder/kls-b5.svg"></p>
+<pre><code>class Kurs {
+  -titel: String
+  -schueler: List<Schueler>
+  +schuelerHinzufuegen(schueler: Schueler): void
+}
+class Schueler {
+  -name: String
+}
+Kurs o-- Schueler : hat</code></pre>
+
+<p><strong>Aggregation</strong> (hohle Raute): Der Schüler ist Teil des Kurses, kann aber unabhängig vom Kurs
+existieren — genau wie ein Team, das sich auflöst, ohne dass die Spieler verschwinden.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B6 [mittel]: Bestellung besteht aus Bestellpositionen</h3><p>Ein Online-Shop-Warenkorb wird beim Abschluss zu einer Bestellung. Eine <code>Bestellung</code>
+(Bestellnummer, Datum, Liste von Bestellpositionen, Methode zur Berechnung der Gesamtsumme) besteht
+aus mehreren <code>Bestellposition</code>en (Produktname, Menge, Einzelpreis). Eine Bestellposition ergibt ohne
+die zugehörige Bestellung keinen Sinn und wird mit ihr zusammen gelöscht.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B6" src="../bilder/kls-b6.svg"></p>
+<pre><code>class Bestellung {
+  -bestellnummer: String
+  -datum: String
+  -positionen: List<Bestellposition>
+  +gesamtsummeBerechnen(): double
+}
+class Bestellposition {
+  -produktname: String
+  -menge: int
+  -einzelpreis: double
+}
+Bestellung *-- Bestellposition : besteht aus</code></pre>
+
+<p><strong>Komposition</strong> (gefüllte Raute): Die Bestellposition hat ohne ihre Bestellung keinen eigenen
+Zweck. Wird die Bestellung storniert, verschwinden auch ihre Positionen.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B7 [mittel]: Kunde und Bestellung mit Multiplizität</h3><p>Ein Kunde kann keine, eine oder mehrere Bestellungen aufgeben; jede Bestellung gehört zu genau
+einem Kunden. Modellieren Sie <code>Kunde</code> (Kundennummer, Name) und <code>Bestellung</code> (Bestellnummer, Datum)
+mit korrekter Multiplizität auf beiden Seiten.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B7" src="../bilder/kls-b7.svg"></p>
+<pre><code>class Kunde {
+  -kundennummer: String
+  -name: String
+}
+class Bestellung {
+  -bestellnummer: String
+  -datum: String
+}
+Kunde "1" -- "0..*" Bestellung : gibt auf</code></pre>
+
+<p>Auf der Kunden-Seite steht <code>1</code> (jede Bestellung gehört zu genau einem Kunden), auf der
+Bestellungs-Seite steht <code>0..*</code> (ein Kunde kann auch noch gar keine oder beliebig viele Bestellungen
+haben). Achten Sie darauf, dass die Zahl immer auf der Seite der Klasse steht, die sie beschreibt.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B8 [mittel-schwer]: Schauspieler und Film (viele-zu-viele)</h3><p>Ein Schauspieler spielt in der Regel in mehreren Filmen mit, und ein Film hat üblicherweise mehrere
+Schauspieler. Modellieren Sie <code>Schauspieler</code> (Name) und <code>Film</code> (Titel, Erscheinungsjahr) mit der
+passenden Multiplizität auf beiden Seiten.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B8" src="../bilder/kls-b8.svg"></p>
+<pre><code>class Schauspieler {
+  -name: String
+}
+class Film {
+  -titel: String
+  -erscheinungsjahr: int
+}
+Schauspieler "*" -- "*" Film : spielt in</code></pre>
+
+<p>Eine <strong>viele-zu-viele-Beziehung</strong>: Auf beiden Seiten steht <code>*</code>. Das ist ein typisches Muster, das in
+der Programmierung meist über eine zusätzliche Verbindungstabelle bzw. -klasse umgesetzt wird
+(hier zunächst als einfache Assoziation ausreichend modelliert).</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B9 [schwer]: Bibliothekssystem mit Medien und Ausleihen</h3><p>Modellieren Sie ein etwas größeres Bibliothekssystem mit sechs Klassen:</p>
+<ul>
+<li>Eine allgemeine Klasse <code>Medium</code> (Titel, Inventarnummer, Methode um die Verfügbarkeit zu prüfen).</li>
+<li>Davon abgeleitet: <code>Buch</code> (zusätzlich Autor, ISBN) und <code>DVD</code> (zusätzlich Laufzeit, Regisseur).</li>
+<li>Eine <code>Bibliothek</code> (Name, Methode um alle Medien anzuzeigen), die beliebig viele Medien verwaltet
+  (ein Medium gehört zu genau einer Bibliothek).</li>
+<li>Ein <code>Mitglied</code> (Mitgliedsnummer, Name), das beliebig viele <code>Ausleihe</code>n tätigen kann (jede
+  Ausleihe gehört zu genau einem Mitglied).</li>
+<li>Eine <code>Ausleihe</code> (Ausleihdatum, Rückgabedatum), die sich immer auf genau ein Medium bezieht
+  (ein Medium kann Gegenstand mehrerer Ausleihen im Lauf der Zeit sein).</li>
+</ul>
+<p>Kombinieren Sie: Vererbung, Aggregation und Assoziationen mit Multiplizitäten.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B9" src="../bilder/kls-b9.svg"></p>
+<pre><code>class Medium {
+  #titel: String
+  #inventarnummer: String
+  +verfuegbarkeitPruefen(): boolean
+}
+class Buch {
+  -autor: String
+  -isbn: String
+}
+class DVD {
+  -laufzeit: int
+  -regisseur: String
+}
+class Bibliothek {
+  -name: String
+  +medienAnzeigen(): void
+}
+class Mitglied {
+  -mitgliedsnummer: String
+  -name: String
+}
+class Ausleihe {
+  -ausleihdatum: String
+  -rueckgabedatum: String
+}
+
+Medium <|-- Buch
+Medium <|-- DVD
+Bibliothek "1" o-- "0..*" Medium : verwaltet
+Mitglied "1" -- "0..*" Ausleihe : tätigt
+Ausleihe "0..*" -- "1" Medium : betrifft</code></pre>
+
+<p>Der Aufbau in drei Schritten: Zuerst die Vererbung (<code>Buch</code> und <code>DVD</code> sind beide ein <code>Medium</code>),
+dann die Aggregation (die Bibliothek "hat" ihre Medien, aber ein Medium könnte theoretisch auch
+umziehen), zuletzt zwei Assoziationen mit Multiplizität, die das eigentliche Ausleihen abbilden.
+Beachten Sie, dass <code>Ausleihe</code> als eigene Klasse modelliert ist, weil sie eigene Daten trägt
+(Ausleih- und Rückgabedatum) — eine reine Beziehungslinie könnte das nicht.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B10 [schwer]: Fuhrpark-Verwaltungssystem</h3><p>Die anspruchsvollste Aufgabe: Modellieren Sie ein Fuhrpark-Verwaltungssystem für eine Spedition mit
+sieben Klassen:</p>
+<ul>
+<li><code>Fahrzeug</code> (Kennzeichen, Baujahr — für Unterklassen zugänglich; Methode zum Starten).</li>
+<li>Drei Unterklassen von <code>Fahrzeug</code>: <code>PKW</code> (Anzahl Sitze), <code>LKW</code> (maximale Zuladung) und
+  <code>Transporter</code> (Laderaumvolumen).</li>
+<li><code>Motor</code> (Leistung in PS, Kraftstoffart) — jedes Fahrzeug besteht aus genau einem Motor; ohne das
+  Fahrzeug ergibt der konkrete Motor keinen Sinn mehr.</li>
+<li><code>Fuhrpark</code> (Firmenname, Methode um ein Fahrzeug hinzuzufügen) — verwaltet beliebig viele
+  Fahrzeuge; ein Fahrzeug gehört zu genau einem Fuhrpark.</li>
+<li><code>Fahrer</code> (Name, Führerscheinklasse) — ein Fahrer fährt aktuell höchstens ein Fahrzeug (auch keins
+  ist möglich), ein Fahrzeug wird aktuell von keinem oder beliebig vielen Fahrern gefahren
+  (im Schichtbetrieb).</li>
+</ul>
+<p>Kombinieren Sie: Vererbung (drei Unterklassen), Komposition, Aggregation und eine Assoziation mit
+Multiplizität auf beiden Seiten.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B10" src="../bilder/kls-b10.svg"></p>
+<pre><code>class Fahrzeug {
+  #kennzeichen: String
+  #baujahr: int
+  +starten(): void
+}
+class PKW {
+  -anzahlSitze: int
+}
+class LKW {
+  -maxZuladung: double
+}
+class Transporter {
+  -laderaumvolumen: double
+}
+class Motor {
+  -leistungPS: int
+  -kraftstoffart: String
+}
+class Fahrer {
+  -name: String
+  -fuehrerscheinklasse: String
+}
+class Fuhrpark {
+  -firmenname: String
+  +fahrzeugHinzufuegen(fahrzeug: Fahrzeug): void
+}
+
+Fahrzeug <|-- PKW
+Fahrzeug <|-- LKW
+Fahrzeug <|-- Transporter
+Fahrzeug *-- Motor : besteht aus
+Fuhrpark "1" o-- "0..*" Fahrzeug : verwaltet
+Fahrer "0..*" -- "0..1" Fahrzeug : fährt aktuell</code></pre>
+
+<p>Der Trick bei dieser Aufgabe: drei verschiedene Beziehungstypen an derselben Klasse <code>Fahrzeug</code>.
+Die Vererbung beschreibt, <em>was</em> ein Fahrzeug sein kann. Die Komposition zum Motor beschreibt, <em>woraus</em>
+es besteht. Die Aggregation zum Fuhrpark beschreibt, <em>wem</em> es organisatorisch zugeordnet ist. Die
+Assoziation zum Fahrer beschreibt schließlich eine lose, veränderliche Zuordnung zur Laufzeit —
+deshalb hier <code>0..1</code> statt <code>1</code>, denn ein Fahrzeug kann auch gerade unbenutzt in der Halle stehen.</p></div></details></div></article><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="a3_lt_7-2-uml-klassendiagram.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Klassendiagramm</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#teil-a-zwischenubungen-vormittag">Teil A — Zwischenübungen (Vormittag)</a><a href="#teil-b-selbstlernphase-nachmittag">Teil B — Selbstlernphase (Nachmittag)</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

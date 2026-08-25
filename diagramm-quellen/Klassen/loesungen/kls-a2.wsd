@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Fahrzeug {
+  #kennzeichen: String
+  #marke: String
+  +starten(): void
+}
+class PKW {
+  -anzahlSitze: int
+}
+class LKW {
+  -ladeflaeche: double
+}
+Fahrzeug <|-- PKW
+Fahrzeug <|-- LKW
+@enduml

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="280px" preserveAspectRatio="none" style="width:1305px;height:280px;" version="1.1" viewBox="0 0 1305 280" width="1305px" zoomAndPan="magnify"><defs/><g><!--entity UML--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="133" x="481.5" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="491.5" y="30.9951">UML-Diagramme</text><!--entity Struktur--><rect fill="#D4EDDA" height="52.5938" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="162" x="267" y="104"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="277" y="126.9951">Strukturdiagramme</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="142" x="277" y="143.292">WAS ist das System?</text><!--entity Verhalten--><rect fill="#CCE5FF" height="52.5938" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="218" x="737" y="104"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="151" x="747" y="126.9951">Verhaltensdiagramme</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="198" x="747" y="143.292">WIE verhält sich das System?</text><!--entity Klasse--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="142" x="6" y="225.5"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="16" y="248.4951">Klassendiagramm</text><!--entity Objekt--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="133" x="183.5" y="225.5"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="193.5" y="248.4951">Objektdiagramm</text><!--entity Komponente--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="187" x="351.5" y="225.5"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="167" x="361.5" y="248.4951">Komponentendiagramm</text><!--entity UC--><rect fill="#FFF3CD" height="52.5938" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="162" x="574" y="217"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="142" x="584" y="239.9951">Use-Case-Diagramm</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="584" y="256.292">(Wir sind hier)</text><!--entity Aktivitaet--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="149" x="771.5" y="225.5"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="129" x="781.5" y="248.4951">Aktivitätsdiagramm</text><!--entity Sequenz--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="150" x="955" y="225.5"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="965" y="248.4951">Sequenzdiagramm</text><!--entity Zustand--><rect fill="#F5F5F5" height="36.2969" rx="6" ry="6" style="stroke: #333333; stroke-width: 1.5;" width="154" x="1140" y="225.5"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="1150" y="248.4951">Zustandsdiagramm</text><!--link UML to Struktur--><path d="M514.52,44.16 C484.09,59.76 438.6,83.07 402.86,101.39 " fill="none" id="UML-Struktur" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="398.1,103.82,407.935,103.2974,402.5549,101.5497,404.3026,96.1696,398.1,103.82" style="stroke: #555555; stroke-width: 1.0;"/><!--link UML to Verhalten--><path d="M597.54,44.04 C643.65,59.9 713.14,83.8 766.92,102.3 " fill="none" id="UML-Verhalten" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="771.75,103.96,764.5431,97.2473,767.0225,102.3318,761.938,104.8112,771.75,103.96" style="stroke: #555555; stroke-width: 1.0;"/><!--link Struktur to Klasse--><path d="M285.49,157.11 C236.02,177.37 168.05,205.21 123.35,223.51 " fill="none" id="Struktur-Klasse" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="118.56,225.48,128.4048,225.7627,123.1855,223.5813,125.3668,218.3619,118.56,225.48" style="stroke: #555555; stroke-width: 1.0;"/><!--link Struktur to Objekt--><path d="M325.27,157.24 C308.13,176.65 284.91,202.96 268.81,221.19 " fill="none" id="Struktur-Objekt" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="265.29,225.19,274.2434,221.0868,268.5976,221.4404,268.2441,215.7946,265.29,225.19" style="stroke: #555555; stroke-width: 1.0;"/><!--link Struktur to Komponente--><path d="M370.5,157.24 C387.46,176.65 410.45,202.96 426.38,221.19 " fill="none" id="Struktur-Komponente" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="429.87,225.19,426.974,215.7765,426.5856,221.42,420.9421,221.0316,429.87,225.19" style="stroke: #555555; stroke-width: 1.0;"/><!--link Verhalten to UC--><path d="M801.7,157.24 C772.29,174.34 733.68,196.77 703.46,214.34 " fill="none" id="Verhalten-UC" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="699.06,216.89,708.8515,215.8284,703.3835,214.3786,704.8333,208.9107,699.06,216.89" style="stroke: #555555; stroke-width: 1.0;"/><!--link Verhalten to Aktivitaet--><path d="M846,157.24 C846,176.17 846,201.64 846,219.8 " fill="none" id="Verhalten-Aktivitaet" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="846,225.19,850,216.19,846,220.19,842,216.19,846,225.19" style="stroke: #555555; stroke-width: 1.0;"/><!--link Verhalten to Sequenz--><path d="M888.68,157.24 C921.76,177.21 966.94,204.46 997.22,222.73 " fill="none" id="Verhalten-Sequenz" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="1001.58,225.35,995.9403,217.2757,997.2988,222.767,991.8075,224.1256,1001.58,225.35" style="stroke: #555555; stroke-width: 1.0;"/><!--link Verhalten to Zustand--><path d="M931.58,157.11 C999.85,177.53 1093.86,205.66 1155.02,223.96 " fill="none" id="Verhalten-Zustand" style="stroke: #555555; stroke-width: 1.0;"/><polygon fill="#555555" points="1160.1,225.48,1152.6377,219.0523,1155.3128,224.0367,1150.3285,226.7118,1160.1,225.48" style="stroke: #555555; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+skinparam rectangle {
+  BackgroundColor #F5F5F5
+  BorderColor #333333
+  FontColor #000000
+}
+skinparam ArrowColor #555555
+
+rectangle "UML-Diagramme" as UML
+
+rectangle "Strukturdiagramme\nWAS ist das System?" as Struktur #D4EDDA
+rectangle "Verhaltensdiagramme\nWIE verhält sich das System?" as Verhalten #CCE5FF
+
+rectangle "Klassendiagramm" as Klasse
+rectangle "Objektdiagramm" as Objekt
+rectangle "Komponentendiagramm" as Komponente
+
+rectangle "Use-Case-Diagramm\n(Wir sind hier)" as UC #FFF3CD
+rectangle "Aktivitätsdiagramm" as Aktivitaet
+rectangle "Sequenzdiagramm" as Sequenz
+rectangle "Zustandsdiagramm" as Zustand
+
+UML - -> Struktur
+UML - -> Verhalten
+
+Struktur - -> Klasse
+Struktur - -> Objekt
+Struktur - -> Komponente
+
+Verhalten - -> UC
+Verhalten - -> Aktivitaet
+Verhalten - -> Sequenz
+Verhalten - -> Zustand
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

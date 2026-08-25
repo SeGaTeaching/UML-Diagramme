@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+[*] --> NichtVerifiziert : registrieren() / Bestätigungs-E-Mail senden
+
+NichtVerifiziert --> Aktiv : verifizieren()
+
+Aktiv --> Deaktiviert : deaktivieren() / Bestätigungs-E-Mail senden
+Aktiv --> Gesperrt : login() [Anzahl Fehlversuche >= 3] / Fehlversuch-Zähler erhöhen
+
+Deaktiviert --> Aktiv : aktivieren()
+
+Gesperrt --> Aktiv : passwortZuruecksetzen()
+
+Aktiv --> Aktiv : login() [Passwort falsch] / Fehlversuch-Zähler erhöhen
+
+@enduml

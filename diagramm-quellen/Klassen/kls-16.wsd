@@ -1,0 +1,29 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Kunde {
+  -kundennummer: String
+  -name: String
+  -adresse: String
+  +kontoHinzufuegen(konto: Konto): void
+  +kontenAnzeigen(): void
+}
+class Konto {
+  -kontonummer: String
+  -kontostand: double
+  -inhaber: Kunde
+  +einzahlen(betrag: double): void
+  +abheben(betrag: double): boolean
+  +getKontostand(): double
+}
+class Girokonto {
+  -dispo: double
+  +ueberziehen(): boolean
+}
+class Sparkonto {
+  -zinssatz: double
+  +zinsenBerechnen(): double
+}
+Kunde "1" o-- "1..*" Konto : hat
+Konto <|-- Girokonto
+Konto <|-- Sparkonto
+@enduml

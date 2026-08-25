@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant "logger: Logger" as Logger
+
+activate Logger
+Logger -> Logger: schreibeLog("Start")
+activate Logger
+Logger -> Logger: formatiereZeitstempel()
+activate Logger
+Logger --> Logger: timestamp
+deactivate Logger
+Logger --> Logger: 
+deactivate Logger
+deactivate Logger
+
+@enduml

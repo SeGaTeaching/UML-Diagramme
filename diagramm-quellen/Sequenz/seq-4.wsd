@@ -1,0 +1,19 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant "app: Application" as App
+participant "logger: Logger" as Logger
+
+App -> Logger: <<create>>
+activate Logger
+Logger --> App: 
+deactivate Logger
+
+App -> Logger: schreibeLog("Start")
+activate Logger
+Logger --> App: 
+deactivate Logger
+
+destroy Logger
+note right: Objekt wird zerstört
+
+@enduml

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="438px" preserveAspectRatio="none" style="width:661px;height:438px;" version="1.1" viewBox="0 0 661 438" width="661px" zoomAndPan="magnify"><defs/><g><!--cluster Fahrkartenautomat--><rect fill="#FFFFFF" height="403" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="213" x="184" y="24"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="215.5" y="38.9951">Fahrkartenautomat</text><ellipse cx="290.3797" cy="158.1759" fill="#E3F2FD" rx="73.8797" ry="17.1759" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="232.3797" y="162.8244">Fahrkarte kaufen</text><ellipse cx="290.4619" cy="74.0236" fill="#E3F2FD" rx="48.9619" ry="14.5236" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="257.9619" y="78.6721">Bezahlen</text><ellipse cx="290.728" cy="247.0456" fill="#E3F2FD" rx="85.728" ry="19.5456" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="144" x="218.728" y="251.694">Rabattkarte scannen</text><ellipse cx="290.5454" cy="318.1091" fill="#E3F2FD" rx="71.0454" ry="16.6091" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="236.0454" y="322.7575">Automat warten</text><ellipse cx="290.5567" cy="390.0113" fill="#E3F2FD" rx="90.5567" ry="20.5113" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="155" x="213.0567" y="394.6598">Fehlerbericht erstellen</text><!--entity Fahrgast--><ellipse cx="71.5" cy="128.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M71.5,136.5 L71.5,163.5 M58.5,144.5 L84.5,144.5 M71.5,163.5 L58.5,178.5 M71.5,163.5 L84.5,178.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="41.5" y="194.4951">Fahrgast</text><!--entity Wartungstechniker--><ellipse cx="71.5" cy="324.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M71.5,332.5 L71.5,359.5 M58.5,340.5 L84.5,340.5 M71.5,359.5 L58.5,374.5 M71.5,359.5 L84.5,374.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="6" y="390.4951">Wartungstechniker</text><!--entity Bank--><ellipse cx="606.5" cy="44.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M606.5,52.5 L606.5,79.5 M593.5,60.5 L619.5,60.5 M606.5,79.5 L593.5,94.5 M606.5,79.5 L619.5,94.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="564" y="110.4951">Banksystem</text><!--link Fahrgast to UC1--><path d="M101.77,158 C129.78,158 173.28,158 211.36,158 " fill="none" id="Fahrgast-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="216.45,158,207.45,154,211.45,158,207.45,162,216.45,158" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link UC1 to UC2--><path d="M290.5,140.6 C290.5,126.9 290.5,107.82 290.5,93.59 " fill="none" id="UC1-UC2" style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#1976D2" points="290.5,88.58,286.5,97.58,290.5,93.58,294.5,97.58,290.5,88.58" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="244.5" y="119.7451">«include»</text><!--link UC2 to Bank--><path d="M339.53,74 C399.07,74 499.85,74 558.78,74 " fill="none" id="UC2-Bank" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="564,74,555.0115,69.9743,559,73.9857,554.9886,77.9743,564,74" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="414" y="69.9951">kommuniziert mit</text><!--link UC3 to UC1--><path d="M290.5,227.25 C290.5,213.38 290.5,194.82 290.5,180.4 " fill="none" id="UC3-UC1" style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#1976D2" points="290.5,175.29,286.5,184.29,290.5,180.29,294.5,184.29,290.5,175.29" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="245.5" y="206.2451">«extend»</text><!--link Wartungstechniker to UC4--><path d="M137.02,343.3 C165.48,338.57 198.8,333.05 227.03,328.36 " fill="none" id="Wartungstechniker-UC4" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="232.24,327.5,222.7083,325.0206,227.3069,328.315,224.0124,332.9136,232.24,327.5" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Wartungstechniker to UC5--><path d="M137.02,364.7 C160.46,368.59 187.21,373.03 211.68,377.09 " fill="none" id="Wartungstechniker-UC5" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="216.86,377.95,208.6451,372.5171,211.9288,377.1234,207.3226,380.407,216.86,377.95" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+left to right direction
+
+actor Fahrgast
+actor Wartungstechniker
+actor "Banksystem" as Bank
+
+rectangle "Fahrkartenautomat" {
+  usecase "Fahrkarte kaufen" as UC1
+  usecase "Bezahlen" as UC2
+  usecase "Rabattkarte scannen" as UC3
+  usecase "Automat warten" as UC4
+  usecase "Fehlerbericht erstellen" as UC5
+}
+
+Fahrgast - -> UC1
+UC1 .> UC2 : <<include>>
+UC2 - -> Bank : kommuniziert mit
+UC3 .> UC1 : <<extend>>
+
+Wartungstechniker - -> UC4
+Wartungstechniker - -> UC5
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

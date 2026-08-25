@@ -1,0 +1,10 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+participant "redaktion: Redaktionssystem" as Redaktion
+participant "versand: Versanddienst" as Versand
+
+Redaktion -> Redaktion: erstelleNewsletter()
+Redaktion ->> Versand: sendeNewsletterAnAlle(empfaengerliste)
+note right: Asynchron: Redaktion wartet nicht auf den Versand
+Redaktion -> Redaktion: zeigeErfolgsmeldung()
+@enduml

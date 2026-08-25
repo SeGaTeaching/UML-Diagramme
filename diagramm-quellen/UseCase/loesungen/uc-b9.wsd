@@ -1,0 +1,22 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Bewohner
+actor Gast
+actor "Zeitschaltuhr" as Timer
+
+rectangle "Smart-Home-System" {
+  usecase "Licht steuern" as UC1
+  usecase "Tür entriegeln" as UC2
+  usecase "Authentifizieren" as UC3
+  usecase "Zeitplan ausführen" as UC4
+}
+
+Bewohner --> UC1
+Bewohner --> UC2
+Gast --> UC1
+
+UC2 .> UC3 : <<include>>
+Timer --> UC4
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Aus
+
+Aus --> An : einschalten()
+An --> Aus : ausschalten()
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+left to right direction
+rectangle "Vererbung\n(ist-ein)" as Vererbung #E1F5FF
+rectangle "Dreieck-Pfeil" as DreieckPfeil #FFFFFF
+rectangle "Assoziation\n(kennt-ein)" as Assoziation #FFF4E1
+rectangle "Einfache Linie" as EinfacheLinie #FFFFFF
+rectangle "Aggregation\n(hat-ein, lose)" as Aggregation #E8F5E9
+rectangle "Hohle Raute" as HohleRaute #FFFFFF
+rectangle "Komposition\n(enthält-ein, stark)" as Komposition #FCE4EC
+rectangle "Gefüllte Raute" as GefuellteRaute #FFFFFF
+
+Vererbung --> DreieckPfeil : Sparkonto ist ein Konto
+Assoziation --> EinfacheLinie : Fahrer kennt Auto
+Aggregation --> HohleRaute : Team hat Spieler
+Komposition --> GefuellteRaute : Haus enthält Räume
+@enduml

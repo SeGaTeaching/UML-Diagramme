@@ -1,0 +1,19 @@
+/* Erzeugt aus kurs_konfig.json – nicht von Hand ändern.
+   Die einzige Datei mit einer kursspezifischen Farbe. */
+:root {
+  --akzent: #1976D2;
+  --akzent-weich: rgba(25,118,210,.10);
+  --auf-akzent: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-thema="hell"]) {
+    --akzent: #5DB0F2;
+    --akzent-weich: rgba(93,176,242,.16);
+    --auf-akzent: #0d1117;
+  }
+}
+:root[data-thema="dunkel"] {
+  --akzent: #5DB0F2;
+  --akzent-weich: rgba(93,176,242,.16);
+  --auf-akzent: #0d1117;
+}

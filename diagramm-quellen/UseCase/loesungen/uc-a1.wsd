@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Kunde
+
+rectangle "Kino-System" {
+  usecase "Vorstellung auswählen" as UC1
+  usecase "Sitzplatz reservieren" as UC2
+  usecase "Ticket kaufen" as UC3
+}
+
+Kunde --> UC1
+Kunde --> UC2
+Kunde --> UC3
+@enduml

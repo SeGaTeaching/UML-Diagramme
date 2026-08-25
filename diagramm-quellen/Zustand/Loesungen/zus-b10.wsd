@@ -1,0 +1,26 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Deaktiviert
+
+state Aktiviert
+Aktiviert : entry / Sensoren scharfschalten
+Aktiviert : exit / Sensoren entschaerfen
+
+state Verzoegerung
+Verzoegerung : entry / Countdown starten
+Verzoegerung : do / Auf Codeeingabe warten
+
+state Alarm
+Alarm : entry / Sirene einschalten
+Alarm : do / Alarmmeldung an Zentrale senden
+Alarm : exit / Sirene ausschalten
+
+Deaktiviert --> Aktiviert : scharfschalten()
+
+Aktiviert --> Verzoegerung : bewegungErkannt()
+Verzoegerung --> Deaktiviert : codeEingeben() [Code korrekt]
+Verzoegerung --> Alarm : codeEingeben() [Code falsch]
+Verzoegerung --> Alarm : timeout() [kein Code eingegeben]
+
+Alarm --> Deaktiviert : codeEingeben() [Code korrekt]
+@enduml

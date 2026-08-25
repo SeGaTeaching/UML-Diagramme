@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="567px" preserveAspectRatio="none" style="width:434px;height:567px;" version="1.1" viewBox="0 0 434 567" width="434px" zoomAndPan="magnify"><defs/><g><!--class Medium--><rect fill="#E3F2FD" height="94.8906" id="Medium" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="253" x="26" y="322"/><ellipse cx="121" cy="337" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M123.3906,341.7031 Q122.9063,341.9531 122.375,342.0781 Q121.8594,342.2031 121.2813,342.2031 Q119.2188,342.2031 118.125,340.8438 Q117.0469,339.4844 117.0469,336.9063 Q117.0469,334.3281 118.125,332.9688 Q119.2188,331.6094 121.2813,331.6094 Q121.8594,331.6094 122.3906,331.7344 Q122.9219,331.8594 123.3906,332.0938 L123.3906,334.3438 Q122.875,333.8594 122.375,333.6406 Q121.8906,333.4219 121.375,333.4219 Q120.2656,333.4219 119.7031,334.2969 Q119.1406,335.1719 119.1406,336.9063 Q119.1406,338.625 119.7031,339.5156 Q120.2656,340.3906 121.375,340.3906 Q121.8906,340.3906 122.375,340.1719 Q122.875,339.9375 123.3906,339.4688 L123.3906,341.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="140" y="341.8467">Medium</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="27" x2="278" y1="352" y2="352"/><polygon fill="none" points="37,360.6484,41,364.6484,37,368.6484,33,364.6484" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="45" y="368.9951">titel: String</text><polygon fill="none" points="37,376.9453,41,380.9453,37,384.9453,33,380.9453" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="162" x="45" y="385.292">inventarnummer: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="27" x2="278" y1="392.5938" y2="392.5938"/><ellipse cx="37" cy="406.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="228" x="45" y="409.5889">verfuegbarkeitPruefen(): boolean</text><!--class Buch--><rect fill="#E3F2FD" height="78.5938" id="Buch" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="110" x="17.5" y="478"/><ellipse cx="51.3" cy="493" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M53.6906,497.7031 Q53.2063,497.9531 52.675,498.0781 Q52.1594,498.2031 51.5813,498.2031 Q49.5188,498.2031 48.425,496.8438 Q47.3469,495.4844 47.3469,492.9063 Q47.3469,490.3281 48.425,488.9688 Q49.5188,487.6094 51.5813,487.6094 Q52.1594,487.6094 52.6906,487.7344 Q53.2219,487.8594 53.6906,488.0938 L53.6906,490.3438 Q53.175,489.8594 52.675,489.6406 Q52.1906,489.4219 51.675,489.4219 Q50.5656,489.4219 50.0031,490.2969 Q49.4406,491.1719 49.4406,492.9063 Q49.4406,494.625 50.0031,495.5156 Q50.5656,496.3906 51.675,496.3906 Q52.1906,496.3906 52.675,496.1719 Q53.175,495.9375 53.6906,495.4688 L53.6906,497.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="68.7" y="497.8467">Buch</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="18.5" x2="126.5" y1="508" y2="508"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="25.5" y="518.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="36.5" y="524.9951">autor: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="25.5" y="534.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="36.5" y="541.292">isbn: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="18.5" x2="126.5" y1="548.5938" y2="548.5938"/><!--class DVD--><rect fill="#E3F2FD" height="78.5938" id="DVD" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="139" x="163" y="478"/><ellipse cx="213" cy="493" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M215.3906,497.7031 Q214.9063,497.9531 214.375,498.0781 Q213.8594,498.2031 213.2813,498.2031 Q211.2188,498.2031 210.125,496.8438 Q209.0469,495.4844 209.0469,492.9063 Q209.0469,490.3281 210.125,488.9688 Q211.2188,487.6094 213.2813,487.6094 Q213.8594,487.6094 214.3906,487.7344 Q214.9219,487.8594 215.3906,488.0938 L215.3906,490.3438 Q214.875,489.8594 214.375,489.6406 Q213.8906,489.4219 213.375,489.4219 Q212.2656,489.4219 211.7031,490.2969 Q211.1406,491.1719 211.1406,492.9063 Q211.1406,494.625 211.7031,495.5156 Q212.2656,496.3906 213.375,496.3906 Q213.8906,496.3906 214.375,496.1719 Q214.875,495.9375 215.3906,495.4688 L215.3906,497.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="232" y="497.8467">DVD</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="164" x2="301" y1="508" y2="508"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="171" y="518.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="75" x="182" y="524.9951">laufzeit: int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="171" y="534.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="114" x="182" y="541.292">regisseur: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="164" x2="301" y1="548.5938" y2="548.5938"/><!--class Bibliothek--><rect fill="#E3F2FD" height="78.5938" id="Bibliothek" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="189" x="6" y="165"/><ellipse cx="62.5" cy="180" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M64.8906,184.7031 Q64.4063,184.9531 63.875,185.0781 Q63.3594,185.2031 62.7813,185.2031 Q60.7188,185.2031 59.625,183.8438 Q58.5469,182.4844 58.5469,179.9063 Q58.5469,177.3281 59.625,175.9688 Q60.7188,174.6094 62.7813,174.6094 Q63.3594,174.6094 63.8906,174.7344 Q64.4219,174.8594 64.8906,175.0938 L64.8906,177.3438 Q64.375,176.8594 63.875,176.6406 Q63.3906,176.4219 62.875,176.4219 Q61.7656,176.4219 61.2031,177.2969 Q60.6406,178.1719 60.6406,179.9063 Q60.6406,181.625 61.2031,182.5156 Q61.7656,183.3906 62.875,183.3906 Q63.3906,183.3906 63.875,183.1719 Q64.375,182.9375 64.8906,182.4688 L64.8906,184.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="81.5" y="184.8467">Bibliothek</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="194" y1="195" y2="195"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="205.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="25" y="211.9951">name: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="194" y1="219.2969" y2="219.2969"/><ellipse cx="17" cy="232.9453" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="164" x="25" y="236.292">medienAnzeigen(): void</text><!--class Mitglied--><rect fill="#E3F2FD" height="78.5938" id="Mitglied" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="194" x="229.5" y="8"/><ellipse cx="296" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M298.3906,27.7031 Q297.9063,27.9531 297.375,28.0781 Q296.8594,28.2031 296.2813,28.2031 Q294.2188,28.2031 293.125,26.8438 Q292.0469,25.4844 292.0469,22.9063 Q292.0469,20.3281 293.125,18.9688 Q294.2188,17.6094 296.2813,17.6094 Q296.8594,17.6094 297.3906,17.7344 Q297.9219,17.8594 298.3906,18.0938 L298.3906,20.3438 Q297.875,19.8594 297.375,19.6406 Q296.8906,19.4219 296.375,19.4219 Q295.2656,19.4219 294.7031,20.2969 Q294.1406,21.1719 294.1406,22.9063 Q294.1406,24.625 294.7031,25.5156 Q295.2656,26.3906 296.375,26.3906 Q296.8906,26.3906 297.375,26.1719 Q297.875,25.9375 298.3906,25.4688 L298.3906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="315" y="27.8467">Mitglied</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="230.5" x2="422.5" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="237.5" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="169" x="248.5" y="54.9951">mitgliedsnummer: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="237.5" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="248.5" y="71.292">name: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="230.5" x2="422.5" y1="78.5938" y2="78.5938"/><!--class Ausleihe--><rect fill="#E3F2FD" height="78.5938" id="Ausleihe" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="192" x="230.5" y="165"/><ellipse cx="293" cy="180" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M295.3906,184.7031 Q294.9063,184.9531 294.375,185.0781 Q293.8594,185.2031 293.2813,185.2031 Q291.2188,185.2031 290.125,183.8438 Q289.0469,182.4844 289.0469,179.9063 Q289.0469,177.3281 290.125,175.9688 Q291.2188,174.6094 293.2813,174.6094 Q293.8594,174.6094 294.3906,174.7344 Q294.9219,174.8594 295.3906,175.0938 L295.3906,177.3438 Q294.875,176.8594 294.375,176.6406 Q293.8906,176.4219 293.375,176.4219 Q292.2656,176.4219 291.7031,177.2969 Q291.1406,178.1719 291.1406,179.9063 Q291.1406,181.625 291.7031,182.5156 Q292.2656,183.3906 293.375,183.3906 Q293.8906,183.3906 294.375,183.1719 Q294.875,182.9375 295.3906,182.4688 L295.3906,184.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="312" y="184.8467">Ausleihe</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="231.5" x2="421.5" y1="195" y2="195"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="238.5" y="205.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="142" x="249.5" y="211.9951">ausleihdatum: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="238.5" y="221.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="167" x="249.5" y="228.292">rueckgabedatum: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="231.5" x2="421.5" y1="235.5938" y2="235.5938"/><!--link Medium to Buch--><path d="M117.11,435.08 C109.15,449.61 100.94,464.59 93.77,477.68 " fill="none" id="Medium-Buch" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="111.22,431.27,126.97,417.1,123.5,438,111.22,431.27" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Medium to DVD--><path d="M187.89,435.08 C195.85,449.61 204.06,464.59 211.23,477.68 " fill="none" id="Medium-DVD" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="181.5,438,178.03,417.1,193.78,431.27,181.5,438" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bibliothek to Medium--><path d="M116.81,256.64 C123.46,277.46 131.08,301.37 137.58,321.72 " fill="none" id="Bibliothek-Medium" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="112.82,244.13,110.8358,251.0627,116.472,255.5608,118.4563,248.628,112.82,244.13" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="129.5" y="287.9951">verwaltet</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="105.0174" y="264.4723">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="109.6261" y="310.5523">0..*</text><!--link Mitglied to Ausleihe--><path d="M326.5,87.21 C326.5,110.89 326.5,141.06 326.5,164.74 " fill="none" id="Mitglied-Ausleihe" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="327.5" y="130.9951">tätigt</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="316.8109" y="107.5645">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="300.4375" y="153.5868">0..*</text><!--link Ausleihe to Medium--><path d="M285.26,244.13 C260.44,267.38 228.67,297.14 202.43,321.72 " fill="none" id="Ausleihe-Medium" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="250.5" y="287.9951">betrifft</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="253.1076" y="264.4723">0..*</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="200.1025" y="310.5523">1</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Medium {
+  #titel: String
+  #inventarnummer: String
+  +verfuegbarkeitPruefen(): boolean
+}
+class Buch {
+  -autor: String
+  -isbn: String
+}
+class DVD {
+  -laufzeit: int
+  -regisseur: String
+}
+class Bibliothek {
+  -name: String
+  +medienAnzeigen(): void
+}
+class Mitglied {
+  -mitgliedsnummer: String
+  -name: String
+}
+class Ausleihe {
+  -ausleihdatum: String
+  -rueckgabedatum: String
+}
+
+Medium <|- - Buch
+Medium <|- - DVD
+Bibliothek "1" o- - "0..*" Medium : verwaltet
+Mitglied "1" - - "0..*" Ausleihe : tätigt
+Ausleihe "0..*" - - "1" Medium : betrifft
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,14 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Nutzer
+
+rectangle "Social-Media-System" {
+  usecase "Beitrag veröffentlichen" as UC1
+  usecase "Bild anhängen" as UC2
+}
+
+Nutzer --> UC1
+UC2 .> UC1 : <<extend>>
+@enduml

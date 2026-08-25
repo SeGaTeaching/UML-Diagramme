@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="656px" preserveAspectRatio="none" style="width:950px;height:656px;" version="1.1" viewBox="0 0 950 656" width="950px" zoomAndPan="magnify"><defs/><g><rect fill="#ECEFF1" height="445.0469" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="431" y="114.5938"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="814" y="144.8906"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="814" y="292.6719"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="814" y="379.8594"/><rect fill="#FFFFFF" height="362.4531" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="925.5" x="13" y="190.1875"/><rect fill="#FFFFFF" height="159.0781" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="905.5" x="23" y="337.9688"/><rect fill="#FFFFFF" height="48.5938" style="stroke: none; stroke-width: 1.0;" width="905.5" x="23" y="448.4531"/><rect fill="#FFFFFF" height="48.5938" style="stroke: none; stroke-width: 1.0;" width="925.5" x="13" y="504.0469"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="68" x2="68" y1="82.2969" y2="569.6406"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="435.5" x2="435.5" y1="82.2969" y2="569.6406"/><line style="stroke: #90A4AE; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="818.5" x2="818.5" y1="82.2969" y2="569.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="33" y="78.9951">Benutzer</text><ellipse cx="68" cy="13" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M68,21 L68,48 M55,29 L81,29 M68,48 L55,63 M68,48 L81,63 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="33" y="581.6357">Benutzer</text><ellipse cx="68" cy="594.9375" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M68,602.9375 L68,629.9375 M55,610.9375 L81,610.9375 M68,629.9375 L55,644.9375 M68,629.9375 L81,644.9375 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="137" x="367.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="374.5" y="70.9951">terminal: Terminal</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="137" x="367.5" y="568.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="374.5" y="588.6357">terminal: Terminal</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="199" x="719.5" y="51"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="185" x="726.5" y="70.9951">system: Bibliothekssystem</text><rect fill="#E3F2FD" height="30.2969" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="199" x="719.5" y="568.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="185" x="726.5" y="588.6357">system: Bibliothekssystem</text><rect fill="#ECEFF1" height="445.0469" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="431" y="114.5938"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="814" y="144.8906"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="814" y="292.6719"/><rect fill="#ECEFF1" height="30.2969" style="stroke: #90A4AE; stroke-width: 1.0;" width="10" x="814" y="379.8594"/><polygon fill="#1976D2" points="419,110.5938,429,114.5938,419,118.5938,423,114.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="68" x2="425" y1="114.5938" y2="114.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="232" x="75" y="109.292">scanneAusweis(ausweisnummer)</text><polygon fill="#1976D2" points="802,140.8906,812,144.8906,802,148.8906,806,144.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="441" x2="808" y1="144.8906" y2="144.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="226" x="448" y="139.5889">pruefeAusweis(ausweisnummer)</text><polygon fill="#1976D2" points="452,171.1875,442,175.1875,452,179.1875,448,175.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="446" x2="818" y1="175.1875" y2="175.1875"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="458" y="169.8857">ausweisStatus</text><path d="M19,190.1875 L77,190.1875 L77,198.1875 L67,208.1875 L13,208.1875 L13,196.1875 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="362.4531" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="925.5" x="13" y="190.1875"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="28" y="204.1826">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="128" x="92" y="205.1826">[Ausweis gültig]</text><polygon fill="#1976D2" points="79,228.0781,69,232.0781,79,236.0781,75,232.0781" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="73" x2="430" y1="232.0781" y2="232.0781"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="210" x="85" y="226.7764">fordereZumBuchscannenAuf()</text><polygon fill="#1976D2" points="419,258.375,429,262.375,419,266.375,423,262.375" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="68" x2="425" y1="262.375" y2="262.375"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="190" x="75" y="257.0732">scanneBuch(buchnummer)</text><polygon fill="#1976D2" points="802,288.6719,812,292.6719,802,296.6719,806,292.6719" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="441" x2="808" y1="292.6719" y2="292.6719"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="285" x="448" y="287.3701">pruefeBuchVerfuegbarkeit(buchnummer)</text><polygon fill="#1976D2" points="452,318.9688,442,322.9688,452,326.9688,448,322.9688" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="446" x2="818" y1="322.9688" y2="322.9688"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="458" y="317.667">verfuegbar</text><path d="M29,337.9688 L87,337.9688 L87,345.9688 L77,355.9688 L23,355.9688 L23,343.9688 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="159.0781" rx="6" ry="6" style="stroke: #000000; stroke-width: 2.0;" width="905.5" x="23" y="337.9688"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="19" x="38" y="351.9639">alt</text><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="134" x="102" y="352.9639">[Buch verfügbar]</text><polygon fill="#1976D2" points="802,375.8594,812,379.8594,802,383.8594,806,379.8594" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0;" x1="441" x2="808" y1="379.8594" y2="379.8594"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="354" x="448" y="374.5576">registriereAusleihe(ausweisnummer, buchnummer)</text><polygon fill="#1976D2" points="452,406.1563,442,410.1563,452,414.1563,448,410.1563" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="446" x2="818" y1="410.1563" y2="410.1563"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="458" y="404.8545">ausleihbestaetigung</text><polygon fill="#1976D2" points="79,436.4531,69,440.4531,79,444.4531,75,440.4531" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="73" x2="430" y1="440.4531" y2="440.4531"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="287" x="85" y="435.1514">zeigeBestaetigung("Ausleihe erfolgreich")</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="23" x2="928.5" y1="449.4531" y2="449.4531"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="178" x="28" y="462.4482">[Buch nicht verfügbar]</text><polygon fill="#1976D2" points="79,485.0469,69,489.0469,79,493.0469,75,489.0469" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="73" x2="430" y1="489.0469" y2="489.0469"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="339" x="85" y="483.7451">zeigeFehlermeldung("Buch bereits ausgeliehen")</text><line style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="13" x2="938.5" y1="505.0469" y2="505.0469"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="148" x="18" y="518.042">[Ausweis ungültig]</text><polygon fill="#1976D2" points="79,540.6406,69,544.6406,79,548.6406,75,544.6406" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="73" x2="430" y1="544.6406" y2="544.6406"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="279" x="85" y="539.3389">zeigeFehlermeldung("Ausweis ungültig")</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+actor Benutzer
+participant "terminal: Terminal" as Terminal
+participant "system: Bibliothekssystem" as System
+
+Benutzer -> Terminal: scanneAusweis(ausweisnummer)
+activate Terminal
+
+Terminal -> System: pruefeAusweis(ausweisnummer)
+activate System
+System - -> Terminal: ausweisStatus
+deactivate System
+
+alt Ausweis gültig
+    Terminal - -> Benutzer: fordereZumBuchscannenAuf()
+
+    Benutzer -> Terminal: scanneBuch(buchnummer)
+
+    Terminal -> System: pruefeBuchVerfuegbarkeit(buchnummer)
+    activate System
+    System - -> Terminal: verfuegbar
+    deactivate System
+
+    alt Buch verfügbar
+        Terminal -> System: registriereAusleihe(ausweisnummer, buchnummer)
+        activate System
+        System - -> Terminal: ausleihbestaetigung
+        deactivate System
+        Terminal - -> Benutzer: zeigeBestaetigung("Ausleihe erfolgreich")
+    else Buch nicht verfügbar
+        Terminal - -> Benutzer: zeigeFehlermeldung("Buch bereits ausgeliehen")
+    end
+else Ausweis ungültig
+    Terminal - -> Benutzer: zeigeFehlermeldung("Ausweis ungültig")
+end
+
+deactivate Terminal
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

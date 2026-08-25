@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="252px" preserveAspectRatio="none" style="width:289px;height:252px;" version="1.1" viewBox="0 0 289 252" width="289px" zoomAndPan="magnify"><defs/><g><!--class Tier--><rect fill="#E3F2FD" height="94.8906" id="Tier" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="124" x="78" y="8"/><ellipse cx="123" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M125.3906,27.7031 Q124.9063,27.9531 124.375,28.0781 Q123.8594,28.2031 123.2813,28.2031 Q121.2188,28.2031 120.125,26.8438 Q119.0469,25.4844 119.0469,22.9063 Q119.0469,20.3281 120.125,18.9688 Q121.2188,17.6094 123.2813,17.6094 Q123.8594,17.6094 124.3906,17.7344 Q124.9219,17.8594 125.3906,18.0938 L125.3906,20.3438 Q124.875,19.8594 124.375,19.6406 Q123.8906,19.4219 123.375,19.4219 Q122.2656,19.4219 121.7031,20.2969 Q121.1406,21.1719 121.1406,22.9063 Q121.1406,24.625 121.7031,25.5156 Q122.2656,26.3906 123.375,26.3906 Q123.8906,26.3906 124.375,26.1719 Q124.875,25.9375 125.3906,25.4688 L125.3906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="142" y="27.8467">Tier</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="79" x2="201" y1="38" y2="38"/><polygon fill="none" points="89,46.6484,93,50.6484,89,54.6484,85,50.6484" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="97" y="54.9951">name: String</text><polygon fill="none" points="89,62.9453,93,66.9453,89,70.9453,85,66.9453" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="97" y="71.292">alter: int</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="79" x2="201" y1="78.5938" y2="78.5938"/><ellipse cx="89" cy="92.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="97" y="95.5889">fressen(): void</text><!--class Hund--><rect fill="#E3F2FD" height="78.5938" id="Hund" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="114" x="6" y="163"/><ellipse cx="41.15" cy="178" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M43.5406,182.7031 Q43.0563,182.9531 42.525,183.0781 Q42.0094,183.2031 41.4313,183.2031 Q39.3688,183.2031 38.275,181.8438 Q37.1969,180.4844 37.1969,177.9063 Q37.1969,175.3281 38.275,173.9688 Q39.3688,172.6094 41.4313,172.6094 Q42.0094,172.6094 42.5406,172.7344 Q43.0719,172.8594 43.5406,173.0938 L43.5406,175.3438 Q43.025,174.8594 42.525,174.6406 Q42.0406,174.4219 41.525,174.4219 Q40.4156,174.4219 39.8531,175.2969 Q39.2906,176.1719 39.2906,177.9063 Q39.2906,179.625 39.8531,180.5156 Q40.4156,181.3906 41.525,181.3906 Q42.0406,181.3906 42.525,181.1719 Q43.025,180.9375 43.5406,180.4688 L43.5406,182.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="58.85" y="182.8467">Hund</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="119" y1="193" y2="193"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="203.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="25" y="209.9951">rasse: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="119" y1="217.2969" y2="217.2969"/><ellipse cx="17" cy="230.9453" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="89" x="25" y="234.292">bellen(): void</text><!--class Katze--><rect fill="#E3F2FD" height="78.5938" id="Katze" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="123" x="155.5" y="163"/><ellipse cx="193.8" cy="178" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M196.1906,182.7031 Q195.7063,182.9531 195.175,183.0781 Q194.6594,183.2031 194.0813,183.2031 Q192.0188,183.2031 190.925,181.8438 Q189.8469,180.4844 189.8469,177.9063 Q189.8469,175.3281 190.925,173.9688 Q192.0188,172.6094 194.0813,172.6094 Q194.6594,172.6094 195.1906,172.7344 Q195.7219,172.8594 196.1906,173.0938 L196.1906,175.3438 Q195.675,174.8594 195.175,174.6406 Q194.6906,174.4219 194.175,174.4219 Q193.0656,174.4219 192.5031,175.2969 Q191.9406,176.1719 191.9406,177.9063 Q191.9406,179.625 192.5031,180.5156 Q193.0656,181.3906 194.175,181.3906 Q194.6906,181.3906 195.175,181.1719 Q195.675,180.9375 196.1906,180.4688 L196.1906,182.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="212.2" y="182.8467">Katze</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="156.5" x2="277.5" y1="193" y2="193"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="163.5" y="203.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="174.5" y="209.9951">farbe: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="156.5" x2="277.5" y1="217.2969" y2="217.2969"/><ellipse cx="166.5" cy="230.9453" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="98" x="174.5" y="234.292">miauen(): void</text><!--link Tier to Hund--><path d="M105.83,120.85 C98.25,135.12 90.45,149.81 83.62,162.68 " fill="none" id="Tier-Hund" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="99.65,117.56,115.21,103.18,112.02,124.12,99.65,117.56" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Tier to Katze--><path d="M174.17,120.85 C181.75,135.12 189.55,149.81 196.38,162.68 " fill="none" id="Tier-Katze" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="167.98,124.12,164.79,103.18,180.35,117.56,167.98,124.12" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Tier {
+  #name: String
+  #alter: int
+  +fressen(): void
+}
+class Hund {
+  -rasse: String
+  +bellen(): void
+}
+class Katze {
+  -farbe: String
+  +miauen(): void
+}
+Tier <|- - Hund
+Tier <|- - Katze
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

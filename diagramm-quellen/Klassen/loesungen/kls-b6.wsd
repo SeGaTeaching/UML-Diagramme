@@ -1,0 +1,15 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Bestellung {
+  -bestellnummer: String
+  -datum: String
+  -positionen: List<Bestellposition>
+  +gesamtsummeBerechnen(): double
+}
+class Bestellposition {
+  -produktname: String
+  -menge: int
+  -einzelpreis: double
+}
+Bestellung *-- Bestellposition : besteht aus
+@enduml

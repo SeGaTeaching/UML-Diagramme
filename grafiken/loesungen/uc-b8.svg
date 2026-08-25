@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="187px" preserveAspectRatio="none" style="width:585px;height:187px;" version="1.1" viewBox="0 0 585 187" width="585px" zoomAndPan="magnify"><defs/><g><!--cluster Kino-System--><rect fill="#FFFFFF" height="152" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="176" x="98" y="24"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="99" x="136.5" y="38.9951">Kino-System</text><ellipse cx="185.8237" cy="74.8647" fill="#E3F2FD" rx="64.8237" ry="15.3647" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="139.3237" y="79.5132">Ticket kaufen</text><ellipse cx="185.8489" cy="142.7698" fill="#E3F2FD" rx="71.8489" ry="16.7698" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="130.3489" y="147.4182">Sitzplatz wählen</text><!--entity Kunde--><ellipse cx="28.5" cy="80.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M28.5,88.5 L28.5,115.5 M15.5,96.5 L41.5,96.5 M28.5,115.5 L15.5,130.5 M28.5,115.5 L41.5,130.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="6" y="146.4951">Kunde</text><!--entity Bezahl--><ellipse cx="507" cy="45.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M507,53.5 L507,80.5 M494,61.5 L520,61.5 M507,80.5 L494,95.5 M507,80.5 L520,95.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="441" y="111.4951">Bezahldienstleister</text><!--link Kunde to UC1--><path d="M51.12,105.13 C72.18,100.39 104.99,93.01 132.86,86.74 " fill="none" id="Kunde-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="138,85.58,128.34,83.6606,133.1228,86.6813,130.1021,91.4641,138,85.58" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Kunde to UC2--><path d="M51.12,114.59 C70.68,118.74 100.4,125.05 126.86,130.66 " fill="none" id="Kunde-UC2" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="131.76,131.7,123.7898,125.9141,126.8695,130.6592,122.1245,133.7389,131.76,131.7" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link UC1 to Bezahl--><path d="M251.17,75 C304.58,75 380.5,75 435.57,75 " fill="none" id="UC1-Bezahl" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="440.84,75,431.84,71,435.84,75,431.84,79,440.84,75" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="119" x="291" y="70.9951">kommuniziert mit</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+left to right direction
+
+actor Kunde
+actor "Bezahldienstleister" as Bezahl
+
+rectangle "Kino-System" {
+  usecase "Ticket kaufen" as UC1
+  usecase "Sitzplatz wählen" as UC2
+}
+
+Kunde - -> UC1
+Kunde - -> UC2
+UC1 - -> Bezahl : kommuniziert mit
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

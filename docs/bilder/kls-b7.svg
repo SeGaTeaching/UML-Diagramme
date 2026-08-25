@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="254px" preserveAspectRatio="none" style="width:202px;height:254px;" version="1.1" viewBox="0 0 202 254" width="202px" zoomAndPan="magnify"><defs/><g><!--class Kunde--><rect fill="#E3F2FD" height="78.5938" id="Kunde" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="185" x="6" y="8"/><ellipse cx="72" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M74.3906,27.7031 Q73.9063,27.9531 73.375,28.0781 Q72.8594,28.2031 72.2813,28.2031 Q70.2188,28.2031 69.125,26.8438 Q68.0469,25.4844 68.0469,22.9063 Q68.0469,20.3281 69.125,18.9688 Q70.2188,17.6094 72.2813,17.6094 Q72.8594,17.6094 73.3906,17.7344 Q73.9219,17.8594 74.3906,18.0938 L74.3906,20.3438 Q73.875,19.8594 73.375,19.6406 Q72.8906,19.4219 72.375,19.4219 Q71.2656,19.4219 70.7031,20.2969 Q70.1406,21.1719 70.1406,22.9063 Q70.1406,24.625 70.7031,25.5156 Q71.2656,26.3906 72.375,26.3906 Q72.8906,26.3906 73.375,26.1719 Q73.875,25.9375 74.3906,25.4688 L74.3906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="91" y="27.8467">Kunde</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="190" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="160" x="25" y="54.9951">kundennummer: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="25" y="71.292">name: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="190" y1="78.5938" y2="78.5938"/><!--class Bestellung--><rect fill="#E3F2FD" height="78.5938" id="Bestellung" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="178" x="9.5" y="165"/><ellipse cx="57.5" cy="180" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M59.8906,184.7031 Q59.4063,184.9531 58.875,185.0781 Q58.3594,185.2031 57.7813,185.2031 Q55.7188,185.2031 54.625,183.8438 Q53.5469,182.4844 53.5469,179.9063 Q53.5469,177.3281 54.625,175.9688 Q55.7188,174.6094 57.7813,174.6094 Q58.3594,174.6094 58.8906,174.7344 Q59.4219,174.8594 59.8906,175.0938 L59.8906,177.3438 Q59.375,176.8594 58.875,176.6406 Q58.3906,176.4219 57.875,176.4219 Q56.7656,176.4219 56.2031,177.2969 Q55.6406,178.1719 55.6406,179.9063 Q55.6406,181.625 56.2031,182.5156 Q56.7656,183.3906 57.875,183.3906 Q58.3906,183.3906 58.875,183.1719 Q59.375,182.9375 59.8906,182.4688 L59.8906,184.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="76.5" y="184.8467">Bestellung</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="10.5" x2="186.5" y1="195" y2="195"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="17.5" y="205.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="153" x="28.5" y="211.9951">bestellnummer: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="17.5" y="221.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="28.5" y="228.292">datum: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="10.5" x2="186.5" y1="235.5938" y2="235.5938"/><!--link Kunde to Bestellung--><path d="M98.5,87.21 C98.5,110.89 98.5,141.06 98.5,164.74 " fill="none" id="Kunde-Bestellung" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="51" x="99.5" y="130.9951">gibt auf</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="88.8109" y="107.5645">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="72.4375" y="153.5868">0..*</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Kunde {
+  -kundennummer: String
+  -name: String
+}
+class Bestellung {
+  -bestellnummer: String
+  -datum: String
+}
+Kunde "1" - - "0..*" Bestellung : gibt auf
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

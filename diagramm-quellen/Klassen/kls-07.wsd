@@ -1,0 +1,14 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Kunde {
+  -name: String
+  -konten: List<Konto>
+  +kontoHinzufuegen(konto: Konto): void
+  +kontenAnzeigen(): void
+}
+class Konto {
+  -kontonummer: String
+  -kontostand: double
+}
+Kunde o-- Konto : hat
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+participant "client: Client" as Client
+participant "server: Server" as Server
+participant "dienst: BenachrichtigungsDienst" as Dienst
+
+Client -> Server: sendeBestellung(bestellung)
+activate Server
+Server --> Client: bestellungEingegangen
+deactivate Server
+
+Server ->> Dienst: informiereUeberNeueBestellung(bestellung)
+note right: Asynchron: Server wartet nicht auf den Dienst
+
+Dienst ->> Client: pushBenachrichtigung("Bestellung eingegangen")
+note right: Asynchron: Push kommt zeitversetzt an
+@enduml

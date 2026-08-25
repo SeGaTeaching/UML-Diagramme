@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="55px" preserveAspectRatio="none" style="width:2030px;height:55px;" version="1.1" viewBox="0 0 2030 55" width="2030px" zoomAndPan="magnify"><defs/><g><!--entity A--><rect fill="#E1F5FF" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="103" x="6" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="16" y="30.9951">UML: Klasse</text><!--entity B--><rect fill="#C8E6C9" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="112" x="194.5" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="204.5" y="30.9951">Python: class</text><!--entity C--><rect fill="#E1F5FF" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="108" x="341.5" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="351.5" y="30.9951">UML: Attribut</text><!--entity D--><rect fill="#C8E6C9" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="161" x="535" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="545" y="30.9951">Python: self._attribut</text><!--entity E--><rect fill="#E1F5FF" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="120" x="731.5" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="741.5" y="30.9951">UML: Methode</text><!--entity F--><rect fill="#C8E6C9" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="176" x="936.5" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="946.5" y="30.9951">Python: def methode()</text><!--entity G--><rect fill="#E1F5FF" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="131" x="1148" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="1158" y="30.9951">UML: Vererbung</text><!--entity H--><rect fill="#C8E6C9" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="201" x="1365" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="181" x="1375" y="30.9951">Python: class Kind(Parent)</text><!--entity I--><rect fill="#E1F5FF" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="137" x="1601" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="1611" y="30.9951">UML: Assoziation</text><!--entity J--><rect fill="#C8E6C9" height="36.2969" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="195" x="1824" y="8"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="175" x="1834" y="30.9951">Python: Referenz-Attribut</text><!--link A to B--><path d="M109.22,26 C133.82,26 163.41,26 189.14,26 " fill="none" id="A-B" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="194.23,26,185.23,22,189.23,26,185.23,30,194.23,26" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="127.25" y="18.9951">wird zu</text><!--link C to D--><path d="M449.6,26 C473.79,26 502.9,26 529.94,26 " fill="none" id="C-D" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="534.96,26,525.96,22,529.96,26,525.96,30,534.96,26" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="467.75" y="18.9951">wird zu</text><!--link E to F--><path d="M851.5,26 C875.65,26 904.06,26 930.81,26 " fill="none" id="E-F" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="936.13,26,927.1415,21.9743,931.13,25.9857,927.1186,29.9743,936.13,26" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="869.5" y="18.9951">wird zu</text><!--link G to H--><path d="M1279.05,26 C1303.63,26 1332.22,26 1359.53,26 " fill="none" id="G-H" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="1364.61,26,1355.61,22,1359.61,26,1355.61,30,1364.61,26" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="1297.5" y="18.9951">wird zu</text><!--link I to J--><path d="M1738.03,26 C1762.86,26 1791.49,26 1818.63,26 " fill="none" id="I-J" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="1823.68,26,1814.68,22,1818.68,26,1814.68,30,1823.68,26" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="1756.5" y="18.9951">wird zu</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+rectangle "UML: Klasse" as A #E1F5FF
+rectangle "Python: class" as B #C8E6C9
+rectangle "UML: Attribut" as C #E1F5FF
+rectangle "Python: self._attribut" as D #C8E6C9
+rectangle "UML: Methode" as E #E1F5FF
+rectangle "Python: def methode()" as F #C8E6C9
+rectangle "UML: Vererbung" as G #E1F5FF
+rectangle "Python: class Kind(Parent)" as H #C8E6C9
+rectangle "UML: Assoziation" as I #E1F5FF
+rectangle "Python: Referenz-Attribut" as J #C8E6C9
+
+A -right-> B : wird zu
+C -right-> D : wird zu
+E -right-> F : wird zu
+G -right-> H : wird zu
+I -right-> J : wird zu
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

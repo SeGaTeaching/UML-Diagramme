@@ -1,0 +1,36 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Fahrzeug {
+  #kennzeichen: String
+  #baujahr: int
+  +starten(): void
+}
+class PKW {
+  -anzahlSitze: int
+}
+class LKW {
+  -maxZuladung: double
+}
+class Transporter {
+  -laderaumvolumen: double
+}
+class Motor {
+  -leistungPS: int
+  -kraftstoffart: String
+}
+class Fahrer {
+  -name: String
+  -fuehrerscheinklasse: String
+}
+class Fuhrpark {
+  -firmenname: String
+  +fahrzeugHinzufuegen(fahrzeug: Fahrzeug): void
+}
+
+Fahrzeug <|-- PKW
+Fahrzeug <|-- LKW
+Fahrzeug <|-- Transporter
+Fahrzeug *-- Motor : besteht aus
+Fuhrpark "1" o-- "0..*" Fahrzeug : verwaltet
+Fahrer "0..*" -- "0..1" Fahrzeug : fährt aktuell
+@enduml

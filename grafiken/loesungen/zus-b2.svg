@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="487px" preserveAspectRatio="none" style="width:270px;height:487px;" version="1.1" viewBox="0 0 270 487" width="270px" zoomAndPan="magnify"><defs/><g><ellipse cx="134" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="112" x="78" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="78" x2="190" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="88" y="106.9951">Eingegangen</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="95" x="86.5" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="86.5" x2="181.5" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="75" x="96.5" y="234.9951">InPruefung</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="118" x="6" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="124" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="98" x="16" y="362.9951">Angenommen</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="91" x="159.5" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="159.5" x2="250.5" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="169.5" y="362.9951">Abgelehnt</text><ellipse cx="134" cy="466" fill="none" rx="10" ry="10" style="stroke: #222222; stroke-width: 1.0;"/><ellipse cx="134.5" cy="466.5" fill="#222222" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/><!--link *start to Eingegangen--><path d="M134,28.01 C134,40.7 134,64.41 134,83.57 " fill="none" id="*start-Eingegangen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="134,88.84,138,79.84,134,83.84,130,79.84,134,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Eingegangen to InPruefung--><path d="M134,139.29 C134,159.95 134,189.67 134,211.65 " fill="none" id="Eingegangen-InPruefung" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="134,216.78,138,207.78,134,211.78,130,207.78,134,216.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="135" y="182.9951">pruefungStarten()</text><!--link InPruefung to Angenommen--><path d="M96.33,267.11 C86.44,275.36 76.9,285.46 71,297 C64.4,309.92 62.53,325.86 62.48,339.45 " fill="none" id="InPruefung-Angenommen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="62.54,344.73,66.4369,335.6849,62.4829,339.7303,58.4374,335.7763,62.54,344.73" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="72" y="310.9951">annehmen()</text><!--link InPruefung to Abgelehnt--><path d="M147.69,267.29 C159.43,288.12 176.36,318.17 188.77,340.21 " fill="none" id="InPruefung-Abgelehnt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="191.35,344.78,190.4377,334.9735,188.9048,340.4187,183.4596,338.8858,191.35,344.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="75" x="174" y="310.9951">ablehnen()</text><!--link Angenommen to *end--><path d="M82.77,395.21 C96.52,413.94 114.95,439.05 125.54,453.48 " fill="none" id="Angenommen-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="128.57,457.6,126.4689,447.9779,125.6113,453.5693,120.0199,452.7118,128.57,457.6" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Abgelehnt to *end--><path d="M186.72,395.21 C172.57,413.94 153.6,439.05 142.7,453.48 " fill="none" id="Abgelehnt-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="139.59,457.6,148.2091,452.8345,142.606,453.612,141.8284,448.0089,139.59,457.6" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> Eingegangen
+
+Eingegangen - -> InPruefung : pruefungStarten()
+InPruefung - -> Angenommen : annehmen()
+InPruefung - -> Abgelehnt : ablehnen()
+
+Angenommen - -> [*]
+Abgelehnt - -> [*]
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="400px" preserveAspectRatio="none" style="width:416px;height:400px;" version="1.1" viewBox="0 0 416 400" width="416px" zoomAndPan="magnify"><defs/><g><ellipse cx="207" cy="20" fill="#000000" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="153" x="130.5" y="50"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="133" x="140.5" y="72.9951">Punktzahl ermitteln</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="196" x="183.5" y="130.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="176" x="193.5" y="153.292">Note "Sehr gut" vergeben</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="225" x="169" y="210.5938"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="205" x="179" y="233.5889">Note "Befriedigend" vergeben</text><polygon fill="#FFF9C4" points="32,106.2969,157,106.2969,169,118.2969,157,130.2969,32,130.2969,20,118.2969,32,106.2969" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="32" y="123.1436">Punktzahl &gt;= 90?</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="169" y="114.9951">[ja]</text><polygon fill="#FFF9C4" points="32,186.5938,157,186.5938,169,198.5938,157,210.5938,32,210.5938,20,198.5938,32,186.5938" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="98.5" y="223.5889">[nein]</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="32" y="203.4404">Punktzahl &gt;= 50?</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="169" y="195.292">[ja]</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="251" x="81.5" y="266.8906"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="231" x="91.5" y="289.8857">Note "Nicht bestanden" vergeben</text><polygon fill="#FFF9C4" points="207,323.1875,219,335.1875,207,347.1875,195,335.1875,207,323.1875" style="stroke: #FBC02D; stroke-width: 1.5;"/><ellipse cx="207" cy="378.1875" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="207" cy="378.1875" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="207" y1="30" y2="50"/><polygon fill="#1976D2" points="203,40,207,50,211,40,207,44" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="169" x2="281.5" y1="118.2969" y2="118.2969"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281.5" x2="281.5" y1="118.2969" y2="130.2969"/><polygon fill="#1976D2" points="277.5,120.2969,281.5,130.2969,285.5,120.2969,281.5,124.2969" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="169" x2="281.5" y1="198.5938" y2="198.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281.5" x2="281.5" y1="198.5938" y2="210.5938"/><polygon fill="#1976D2" points="277.5,200.5938,281.5,210.5938,285.5,200.5938,281.5,204.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="94.5" x2="94.5" y1="130.2969" y2="186.5938"/><polygon fill="#1976D2" points="90.5,176.5938,94.5,186.5938,98.5,176.5938,94.5,180.5938" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281.5" x2="281.5" y1="166.5938" y2="181.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281.5" x2="394" y1="181.5938" y2="181.5938"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="394" x2="394" y1="181.5938" y2="335.1875"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="394" x2="219" y1="335.1875" y2="335.1875"/><polygon fill="#1976D2" points="229,331.1875,219,335.1875,229,339.1875,225,335.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281.5" x2="281.5" y1="246.8906" y2="261.8906"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="281.5" x2="394" y1="261.8906" y2="261.8906"/><polygon fill="#1976D2" points="384,257.8906,394,261.8906,384,265.8906,388,261.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="207" y1="86.2969" y2="91.2969"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="94.5" y1="91.2969" y2="91.2969"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="94.5" x2="94.5" y1="91.2969" y2="106.2969"/><polygon fill="#1976D2" points="90.5,96.2969,94.5,106.2969,98.5,96.2969,94.5,100.2969" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="94.5" x2="94.5" y1="210.5938" y2="251.8906"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="94.5" x2="207" y1="251.8906" y2="251.8906"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="207" y1="251.8906" y2="266.8906"/><polygon fill="#1976D2" points="203,256.8906,207,266.8906,211,256.8906,207,260.8906" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="207" y1="303.1875" y2="308.1875"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="207" y1="308.1875" y2="323.1875"/><polygon fill="#1976D2" points="203,313.1875,207,323.1875,211,313.1875,207,317.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207" x2="207" y1="347.1875" y2="367.1875"/><polygon fill="#1976D2" points="203,357.1875,207,367.1875,211,357.1875,207,361.1875" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+start
+:Punktzahl ermitteln;
+if (Punktzahl >= 90?) then ([ja])
+  :Note "Sehr gut" vergeben;
+elseif (Punktzahl >= 50?) then ([ja])
+  :Note "Befriedigend" vergeben;
+else ([nein])
+  :Note "Nicht bestanden" vergeben;
+endif
+stop
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

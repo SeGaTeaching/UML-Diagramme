@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="236px" preserveAspectRatio="none" style="width:343px;height:236px;" version="1.1" viewBox="0 0 343 236" width="343px" zoomAndPan="magnify"><defs/><g><!--class Fahrzeug--><rect fill="#E3F2FD" height="94.8906" id="Fahrzeug" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="164" x="79" y="8"/><ellipse cx="124.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M126.8906,27.7031 Q126.4063,27.9531 125.875,28.0781 Q125.3594,28.2031 124.7813,28.2031 Q122.7188,28.2031 121.625,26.8438 Q120.5469,25.4844 120.5469,22.9063 Q120.5469,20.3281 121.625,18.9688 Q122.7188,17.6094 124.7813,17.6094 Q125.3594,17.6094 125.8906,17.7344 Q126.4219,17.8594 126.8906,18.0938 L126.8906,20.3438 Q126.375,19.8594 125.875,19.6406 Q125.3906,19.4219 124.875,19.4219 Q123.7656,19.4219 123.2031,20.2969 Q122.6406,21.1719 122.6406,22.9063 Q122.6406,24.625 123.2031,25.5156 Q123.7656,26.3906 124.875,26.3906 Q125.3906,26.3906 125.875,26.1719 Q126.375,25.9375 126.8906,25.4688 L126.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="143.5" y="27.8467">Fahrzeug</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="80" x2="242" y1="38" y2="38"/><polygon fill="none" points="90,46.6484,94,50.6484,90,54.6484,86,50.6484" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="98" y="54.9951">kennzeichen: String</text><polygon fill="none" points="90,62.9453,94,66.9453,90,70.9453,86,66.9453" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="98" y="71.292">marke: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="80" x2="242" y1="78.5938" y2="78.5938"/><ellipse cx="90" cy="92.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="96" x="98" y="95.5889">starten(): void</text><!--class PKW--><rect fill="#E3F2FD" height="62.2969" id="PKW" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="130" x="6" y="163"/><ellipse cx="51.5" cy="178" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M53.8906,182.7031 Q53.4063,182.9531 52.875,183.0781 Q52.3594,183.2031 51.7813,183.2031 Q49.7188,183.2031 48.625,181.8438 Q47.5469,180.4844 47.5469,177.9063 Q47.5469,175.3281 48.625,173.9688 Q49.7188,172.6094 51.7813,172.6094 Q52.3594,172.6094 52.8906,172.7344 Q53.4219,172.8594 53.8906,173.0938 L53.8906,175.3438 Q53.375,174.8594 52.875,174.6406 Q52.3906,174.4219 51.875,174.4219 Q50.7656,174.4219 50.2031,175.2969 Q49.6406,176.1719 49.6406,177.9063 Q49.6406,179.625 50.2031,180.5156 Q50.7656,181.3906 51.875,181.3906 Q52.3906,181.3906 52.875,181.1719 Q53.375,180.9375 53.8906,180.4688 L53.8906,182.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="70.5" y="182.8467">PKW</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="135" y1="193" y2="193"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="203.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="105" x="25" y="209.9951">anzahlSitze: int</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="135" y1="217.2969" y2="217.2969"/><!--class LKW--><rect fill="#E3F2FD" height="62.2969" id="LKW" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="161" x="171.5" y="163"/><ellipse cx="233.5" cy="178" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M235.8906,182.7031 Q235.4063,182.9531 234.875,183.0781 Q234.3594,183.2031 233.7813,183.2031 Q231.7188,183.2031 230.625,181.8438 Q229.5469,180.4844 229.5469,177.9063 Q229.5469,175.3281 230.625,173.9688 Q231.7188,172.6094 233.7813,172.6094 Q234.3594,172.6094 234.8906,172.7344 Q235.4219,172.8594 235.8906,173.0938 L235.8906,175.3438 Q235.375,174.8594 234.875,174.6406 Q234.3906,174.4219 233.875,174.4219 Q232.7656,174.4219 232.2031,175.2969 Q231.6406,176.1719 231.6406,177.9063 Q231.6406,179.625 232.2031,180.5156 Q232.7656,181.3906 233.875,181.3906 Q234.3906,181.3906 234.875,181.1719 Q235.375,180.9375 235.8906,180.4688 L235.8906,182.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="29" x="252.5" y="182.8467">LKW</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="172.5" x2="331.5" y1="193" y2="193"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="179.5" y="203.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="190.5" y="209.9951">ladeflaeche: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="172.5" x2="331.5" y1="217.2969" y2="217.2969"/><!--link Fahrzeug to PKW--><path d="M118.97,120.25 C109.16,135.12 99.17,150.27 90.86,162.88 " fill="none" id="Fahrzeug-PKW" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="113.43,115.94,130.28,103.09,125.11,123.64,113.43,115.94" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Fahrzeug to LKW--><path d="M203.18,119.76 C213.19,134.79 223.42,150.14 231.92,162.88 " fill="none" id="Fahrzeug-LKW" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="197.33,123.62,192.06,103.09,208.98,115.85,197.33,123.62" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Fahrzeug {
+  #kennzeichen: String
+  #marke: String
+  +starten(): void
+}
+class PKW {
+  -anzahlSitze: int
+}
+class LKW {
+  -ladeflaeche: double
+}
+Fahrzeug <|- - PKW
+Fahrzeug <|- - LKW
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

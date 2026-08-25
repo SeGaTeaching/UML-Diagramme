@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="212px" preserveAspectRatio="none" style="width:323px;height:212px;" version="1.1" viewBox="0 0 323 212" width="323px" zoomAndPan="magnify"><defs/><g><!--cluster Social-Media-System--><rect fill="#FFFFFF" height="177" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="213" x="99" y="24"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="162" x="124.5" y="38.9951">Social-Media-System</text><ellipse cx="205.5567" cy="80.0113" fill="#E3F2FD" rx="90.5567" ry="20.5113" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="155" x="128.0567" y="84.6598">Beitrag veröffentlichen</text><ellipse cx="205.6107" cy="168.8221" fill="#E3F2FD" rx="67.1107" ry="15.8221" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="156.1107" y="173.4706">Bild anhängen</text><!--entity Nutzer--><ellipse cx="29" cy="50.5" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M29,58.5 L29,85.5 M16,66.5 L42,66.5 M29,85.5 L16,100.5 M29,85.5 L42,100.5 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="46" x="6" y="116.4951">Nutzer</text><!--link Nutzer to UC1--><path d="M52.1,80 C67.13,80 88.15,80 109.78,80 " fill="none" id="Nutzer-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="115,80,106,76,110,80,106,84,115,80" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link UC2 to UC1--><path d="M205.5,152.68 C205.5,139.63 205.5,121.08 205.5,105.99 " fill="none" id="UC2-UC1" style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#1976D2" points="205.5,100.61,201.5,109.61,205.5,105.61,209.5,109.61,205.5,100.61" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="160.5" y="131.7451">«extend»</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+left to right direction
+
+actor Nutzer
+
+rectangle "Social-Media-System" {
+  usecase "Beitrag veröffentlichen" as UC1
+  usecase "Bild anhängen" as UC2
+}
+
+Nutzer - -> UC1
+UC2 .> UC1 : <<extend>>
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,9 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Schueler {
+  -name: String
+  -klasse: String
+  -geburtsdatum: String
+  +noteEintragen(fach: String, note: int): void
+}
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Fahrgast
+actor Techniker
+
+rectangle "Aufzugsystem" {
+  usecase "Etage anfordern" as UC1
+  usecase "Wartungsmodus aktivieren" as UC2
+  usecase "Fehlerprotokoll auslesen" as UC3
+}
+
+Fahrgast --> UC1
+Techniker --> UC2
+Techniker --> UC3
+@enduml

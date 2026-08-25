@@ -1,0 +1,39 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Benutzer
+participant "terminal: Terminal" as Terminal
+participant "system: Bibliothekssystem" as System
+
+Benutzer -> Terminal: scanneAusweis(ausweisnummer)
+activate Terminal
+
+Terminal -> System: pruefeAusweis(ausweisnummer)
+activate System
+System --> Terminal: ausweisStatus
+deactivate System
+
+alt Ausweis gültig
+    Terminal --> Benutzer: fordereZumBuchscannenAuf()
+
+    Benutzer -> Terminal: scanneBuch(buchnummer)
+
+    Terminal -> System: pruefeBuchVerfuegbarkeit(buchnummer)
+    activate System
+    System --> Terminal: verfuegbar
+    deactivate System
+
+    alt Buch verfügbar
+        Terminal -> System: registriereAusleihe(ausweisnummer, buchnummer)
+        activate System
+        System --> Terminal: ausleihbestaetigung
+        deactivate System
+        Terminal --> Benutzer: zeigeBestaetigung("Ausleihe erfolgreich")
+    else Buch nicht verfügbar
+        Terminal --> Benutzer: zeigeFehlermeldung("Buch bereits ausgeliehen")
+    end
+else Ausweis ungültig
+    Terminal --> Benutzer: zeigeFehlermeldung("Ausweis ungültig")
+end
+
+deactivate Terminal
+@enduml

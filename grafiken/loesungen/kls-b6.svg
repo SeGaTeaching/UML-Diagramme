@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="302px" preserveAspectRatio="none" style="width:290px;height:302px;" version="1.1" viewBox="0 0 290 302" width="290px" zoomAndPan="magnify"><defs/><g><!--class Bestellung--><rect fill="#E3F2FD" height="111.1875" id="Bestellung" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="273" x="6" y="8"/><ellipse cx="101.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M103.8906,27.7031 Q103.4063,27.9531 102.875,28.0781 Q102.3594,28.2031 101.7813,28.2031 Q99.7188,28.2031 98.625,26.8438 Q97.5469,25.4844 97.5469,22.9063 Q97.5469,20.3281 98.625,18.9688 Q99.7188,17.6094 101.7813,17.6094 Q102.3594,17.6094 102.8906,17.7344 Q103.4219,17.8594 103.8906,18.0938 L103.8906,20.3438 Q103.375,19.8594 102.875,19.6406 Q102.3906,19.4219 101.875,19.4219 Q100.7656,19.4219 100.2031,20.2969 Q99.6406,21.1719 99.6406,22.9063 Q99.6406,24.625 100.2031,25.5156 Q100.7656,26.3906 101.875,26.3906 Q102.3906,26.3906 102.875,26.1719 Q103.375,25.9375 103.8906,25.4688 L103.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="120.5" y="27.8467">Bestellung</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="278" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="153" x="25" y="54.9951">bestellnummer: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="25" y="71.292">datum: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="81.2422"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="231" x="25" y="87.5889">positionen: List&lt;Bestellposition&gt;</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="278" y1="94.8906" y2="94.8906"/><ellipse cx="17" cy="108.5391" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="248" x="25" y="111.8857">gesamtsummeBerechnen(): double</text><!--class Bestellposition--><rect fill="#E3F2FD" height="94.8906" id="Bestellposition" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="167" x="59" y="197"/><ellipse cx="88.75" cy="212" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M91.1406,216.7031 Q90.6563,216.9531 90.125,217.0781 Q89.6094,217.2031 89.0313,217.2031 Q86.9688,217.2031 85.875,215.8438 Q84.7969,214.4844 84.7969,211.9063 Q84.7969,209.3281 85.875,207.9688 Q86.9688,206.6094 89.0313,206.6094 Q89.6094,206.6094 90.1406,206.7344 Q90.6719,206.8594 91.1406,207.0938 L91.1406,209.3438 Q90.625,208.8594 90.125,208.6406 Q89.6406,208.4219 89.125,208.4219 Q88.0156,208.4219 87.4531,209.2969 Q86.8906,210.1719 86.8906,211.9063 Q86.8906,213.625 87.4531,214.5156 Q88.0156,215.3906 89.125,215.3906 Q89.6406,215.3906 90.125,215.1719 Q90.625,214.9375 91.1406,214.4688 L91.1406,216.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="105.25" y="216.8467">Bestellposition</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="60" x2="225" y1="227" y2="227"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="67" y="237.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="142" x="78" y="243.9951">produktname: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="67" y="253.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="75" x="78" y="260.292">menge: int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="67" y="270.2422"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="78" y="276.5889">einzelpreis: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="60" x2="225" y1="283.8906" y2="283.8906"/><!--link Bestellung to Bestellposition--><path d="M142.5,132.28 C142.5,153.77 142.5,177.04 142.5,196.71 " fill="none" id="Bestellung-Bestellposition" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="142.5,119.18,138.5,125.18,142.5,131.18,146.5,125.18,142.5,119.18" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="143.5" y="162.9951">besteht aus</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Bestellung {
+  -bestellnummer: String
+  -datum: String
+  -positionen: List<Bestellposition>
+  +gesamtsummeBerechnen(): double
+}
+class Bestellposition {
+  -produktname: String
+  -menge: int
+  -einzelpreis: double
+}
+Bestellung *- - Bestellposition : besteht aus
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

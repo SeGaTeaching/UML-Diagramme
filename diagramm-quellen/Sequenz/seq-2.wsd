@@ -1,0 +1,17 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant "client: Client" as Client
+participant "server: Server" as Server
+participant "queue: MessageQueue" as Queue
+
+Client -> Server: sendeAnfrage()
+activate Server
+note right: Synchron: Client wartet
+
+Server --> Client: antwort
+deactivate Server
+
+Client ->> Queue: sendeNachricht()
+note right: Asynchron: Client wartet nicht
+
+@enduml

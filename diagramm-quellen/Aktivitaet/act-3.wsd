@@ -1,0 +1,27 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+' Sorgt für die vertikale Darstellung
+skinparam ActivityMode true
+
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+
+start
+
+:PIN eingeben;
+
+if (PIN korrekt?) then ([ja])
+  :Betrag wählen;
+else ([nein])
+  :Karte auswerfen (Fehler);
+endif
+
+:Karte auswerfen;
+
+stop
+@enduml

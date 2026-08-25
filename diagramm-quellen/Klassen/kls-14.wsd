@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Student {
+  -name: String
+  -kurse: List<Kurs>
+}
+class Kurs {
+  -titel: String
+  -studenten: List<Student>
+}
+Student "*" -- "*" Kurs : belegt
+@enduml

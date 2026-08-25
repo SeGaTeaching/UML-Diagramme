@@ -1,0 +1,20 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Bereit
+
+state Waschen
+Waschen : entry / Wasser einlassen
+Waschen : do / Trommel drehen
+Waschen : exit / Wasser abpumpen
+
+state Schleudern
+Schleudern : entry / Drehzahl hochfahren
+Schleudern : do / Waesche schleudern
+Schleudern : exit / Drehzahl herunterfahren
+
+Bereit --> Waschen : programmStarten() [Tuer geschlossen]
+Waschen --> Schleudern : waschgangFertig()
+Schleudern --> Fertig : schleudergangFertig()
+
+Fertig --> [*]
+@enduml

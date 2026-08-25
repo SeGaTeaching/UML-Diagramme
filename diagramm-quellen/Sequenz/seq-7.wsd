@@ -1,0 +1,42 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+actor Kunde
+participant "ui: ShopUI" as UI
+participant "ctrl: BestellController" as Ctrl
+participant "lager: Lager" as Lager
+participant "zahlung: Zahlungssystem" as Zahlung
+
+Kunde -> UI: bestelleProdukte(warenkorb)
+activate UI
+
+loop für jedes Produkt
+    UI -> Ctrl: pruefeVerfuegbarkeit(produkt)
+    activate Ctrl
+    Ctrl -> Lager: istVerfuegbar(produkt)
+    activate Lager
+    Lager --> Ctrl: verfuegbar
+    deactivate Lager
+    Ctrl --> UI: verfuegbar
+    deactivate Ctrl
+end
+
+alt alle Produkte verfügbar
+    UI -> Ctrl: bestaetigenBestellung(warenkorb)
+    activate Ctrl
+    Ctrl -> Zahlung: verarbeiteZahlung(betrag)
+    activate Zahlung
+    Zahlung --> Ctrl: erfolg
+    deactivate Zahlung
+    Ctrl -> Lager: reserviereProdukte(warenkorb)
+    activate Lager
+    Lager --> Ctrl: reserviert
+    deactivate Lager
+    Ctrl --> UI: bestellungErfolgreich
+    deactivate Ctrl
+    UI --> Kunde: zeigeBestaetigung()
+else Produkte nicht verfügbar
+    UI --> Kunde: zeigeFehlermeldung()
+end
+
+deactivate UI
+@enduml

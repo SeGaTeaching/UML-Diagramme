@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="789px" preserveAspectRatio="none" style="width:729px;height:789px;" version="1.1" viewBox="0 0 729 789" width="729px" zoomAndPan="magnify"><defs/><g><rect fill="#E3F2FD" height="765.375" style="stroke: #E3F2FD; stroke-width: 1.0;" width="224" x="10" y="11.8018"/><ellipse cx="122.5" cy="38.0986" fill="#000000" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="182" x="31.5" y="83.0986"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="162" x="41.5" y="106.0938">Reklamation einreichen</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="205" x="20" y="347.8408"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="185" x="30" y="370.8359">Informationen nachreichen</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="177" x="34" y="683.8799"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="157" x="44" y="706.875">Rückmeldung erhalten</text><ellipse cx="122.5" cy="766.1768" fill="#FFFFFF" rx="11" ry="11" style="stroke: #000000; stroke-width: 1.0;"/><ellipse cx="122.5" cy="766.1768" fill="#000000" rx="6" ry="6" style="stroke: #7F7F7F; stroke-width: 1.0;"/><rect fill="#FFF3E0" height="765.375" style="stroke: #FFF3E0; stroke-width: 1.0;" width="319" x="234" y="11.8018"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="91" x="333" y="226.3955"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="343" y="249.3906">Fall prüfen</text><polygon fill="#FFF9C4" points="266,297.6924,491,297.6924,503,309.6924,491,321.6924,266,321.6924,254,309.6924,266,297.6924" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="382.5" y="334.6875">[ja]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="225" x="266" y="314.5391">Zusätzliche Informationen nötig?</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="503" y="306.3906">[nein]</text><polygon fill="#FFF9C4" points="378.5,410.2861,390.5,422.2861,378.5,434.2861,366.5,422.2861,378.5,410.2861" style="stroke: #FBC02D; stroke-width: 1.5;"/><polygon fill="#FFF9C4" points="378.5,154.3955,390.5,166.3955,378.5,178.3955,366.5,166.3955,378.5,154.3955" style="stroke: #FBC02D; stroke-width: 1.5;"/><polygon fill="#FFF9C4" points="280,482.2861,477,482.2861,489,494.2861,477,506.2861,280,506.2861,268,494.2861,280,482.2861" style="stroke: #FBC02D; stroke-width: 1.5;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="197" x="280" y="499.1328">Informationen unvollständig?</text><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="146" x="305.5" y="541.2861"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="126" x="315.5" y="564.2813">Lösung erarbeiten</text><rect fill="#F3E5F5" height="765.375" style="stroke: #F3E5F5; stroke-width: 1.0;" width="164" x="553" y="11.8018"/><rect fill="#E3F2FD" height="36.2969" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="145" x="563" y="612.583"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="573" y="635.5781">Lösung umsetzen</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="122.5" y1="48.0986" y2="83.0986"/><polygon fill="#1976D2" points="118.5,73.0986,122.5,83.0986,126.5,73.0986,122.5,77.0986" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="122.5" y1="720.1768" y2="755.1768"/><polygon fill="#1976D2" points="118.5,745.1768,122.5,755.1768,126.5,745.1768,122.5,749.1768" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="503" x2="515" y1="309.6924" y2="309.6924"/><polygon fill="#1976D2" points="511,355.9893,515,365.9893,519,355.9893,515,359.9893" style="stroke: #1976D2; stroke-width: 1.5;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="515" x2="515" y1="309.6924" y2="422.2861"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="515" x2="390.5" y1="422.2861" y2="422.2861"/><polygon fill="#1976D2" points="400.5,418.2861,390.5,422.2861,400.5,426.2861,396.5,422.2861" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="262.6924" y2="297.6924"/><polygon fill="#1976D2" points="374.5,287.6924,378.5,297.6924,382.5,287.6924,378.5,291.6924" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="178.3955" y2="226.3955"/><polygon fill="#1976D2" points="374.5,216.3955,378.5,226.3955,382.5,216.3955,378.5,220.3955" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="489" x2="527" y1="494.2861" y2="494.2861"/><polygon fill="#1976D2" points="523,340.3408,527,330.3408,531,340.3408,527,336.3408" style="stroke: #1976D2; stroke-width: 1.5;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="527" x2="527" y1="166.3955" y2="494.2861"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="527" x2="390.5" y1="166.3955" y2="166.3955"/><polygon fill="#1976D2" points="400.5,162.3955,390.5,166.3955,400.5,170.3955,396.5,166.3955" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="434.2861" y2="482.2861"/><polygon fill="#1976D2" points="374.5,472.2861,378.5,482.2861,382.5,472.2861,378.5,476.2861" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="506.2861" y2="541.2861"/><polygon fill="#1976D2" points="374.5,531.2861,378.5,541.2861,382.5,531.2861,378.5,535.2861" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="321.6924" y2="334.7666"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="122.5" y1="334.7666" y2="334.7666"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="122.5" y1="334.7666" y2="347.8408"/><polygon fill="#1976D2" points="118.5,337.8408,122.5,347.8408,126.5,337.8408,122.5,341.8408" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="122.5" y1="384.1377" y2="397.2119"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="378.5" y1="397.2119" y2="397.2119"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="397.2119" y2="410.2861"/><polygon fill="#1976D2" points="374.5,400.2861,378.5,410.2861,382.5,400.2861,378.5,404.2861" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="122.5" y1="119.3955" y2="136.8955"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="378.5" y1="136.8955" y2="136.8955"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="136.8955" y2="154.3955"/><polygon fill="#1976D2" points="374.5,144.3955,378.5,154.3955,382.5,144.3955,378.5,148.3955" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="378.5" y1="577.583" y2="595.083"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="378.5" x2="635.5" y1="595.083" y2="595.083"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="635.5" x2="635.5" y1="595.083" y2="612.583"/><polygon fill="#1976D2" points="631.5,602.583,635.5,612.583,639.5,602.583,635.5,606.583" style="stroke: #1976D2; stroke-width: 1.0;"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="635.5" x2="635.5" y1="648.8799" y2="666.3799"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="635.5" x2="122.5" y1="666.3799" y2="666.3799"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="122.5" x2="122.5" y1="666.3799" y2="683.8799"/><polygon fill="#1976D2" points="118.5,673.8799,122.5,683.8799,126.5,673.8799,122.5,677.8799" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="99.5" y="24.7969">Kunde</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="366" y="24.7969">Support</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="586.5" y="24.7969">Fachabteilung</text><line style="stroke: #000000; stroke-width: 2.0;" x1="10" x2="10" y1="11.8018" y2="777.1768"/><line style="stroke: #000000; stroke-width: 2.0;" x1="234" x2="234" y1="11.8018" y2="777.1768"/><line style="stroke: #000000; stroke-width: 2.0;" x1="553" x2="553" y1="11.8018" y2="777.1768"/><line style="stroke: #000000; stroke-width: 2.0;" x1="717" x2="717" y1="11.8018" y2="777.1768"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+|#e3f2fd|Kunde|
+start
+:Reklamation einreichen;
+|#fff3e0|Support|
+repeat
+  :Fall prüfen;
+  if (Zusätzliche Informationen nötig?) then ([ja])
+    |#e3f2fd|Kunde|
+    :Informationen nachreichen;
+    |#fff3e0|Support|
+  else ([nein])
+  endif
+repeat while (Informationen unvollständig?)
+:Lösung erarbeiten;
+|#f3e5f5|Fachabteilung|
+:Lösung umsetzen;
+|#e3f2fd|Kunde|
+:Rückmeldung erhalten;
+stop
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,24 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Fahrgast
+participant "app: TaxiApp" as App
+participant "zentrale: Taxizentrale" as Zentrale
+participant "fahrer: Fahrer" as Fahrer
+
+Fahrgast -> App: bestelleTaxi(standort)
+activate App
+
+App -> Zentrale: sucheFreienFahrer(standort)
+activate Zentrale
+
+Zentrale -> Fahrer: frageVerfuegbarkeit()
+activate Fahrer
+Fahrer --> Zentrale: verfuegbar
+deactivate Fahrer
+
+Zentrale --> App: fahrerZugewiesen(fahrerId, ankunftszeit)
+deactivate Zentrale
+
+App --> Fahrgast: zeigeFahrerdaten(fahrerId, ankunftszeit)
+deactivate App
+@enduml

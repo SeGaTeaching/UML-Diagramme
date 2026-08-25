@@ -1,0 +1,31 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+' Styling für die Boxen und Knoten
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor white
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+
+|#e3f2fd|Kunde|
+start
+:Karte eingeben;
+:PIN eingeben;
+
+|#fff3e0|Automat|
+:PIN prüfen;
+
+if (PIN korrekt?) then ([PIN korrekt])
+  |#e3f2fd|Kunde|
+  :Betrag wählen;
+  |#fff3e0|Automat|
+  :Geld ausgeben;
+else ([PIN falsch])
+  |#fff3e0|Automat|
+  ' Zweig für PIN falsch
+endif
+
+:Karte auswerfen;
+stop
+@enduml

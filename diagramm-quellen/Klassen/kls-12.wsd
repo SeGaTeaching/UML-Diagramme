@@ -1,0 +1,18 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class "Kunde" as Kunde1
+class "Konto" as Konto1
+Kunde1 "1" -- "1..*" Konto1 : 1..* (mind. eins)
+
+class "Student" as Student1
+class "Kurs" as Kurs1
+Student1 "*" -- "*" Kurs1 : *..* (viele-zu-viele)
+
+class "Person" as Person1
+class "Reisepass" as Reisepass1
+Person1 "1" -- "0..1" Reisepass1 : 0..1 (optional)
+
+class "Team" as Team1
+class "Spieler" as Spieler1
+Team1 "1" -- "2..5" Spieler1 : 2..5 (Bereich)
+@enduml

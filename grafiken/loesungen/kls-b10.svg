@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="427px" preserveAspectRatio="none" style="width:785px;height:427px;" version="1.1" viewBox="0 0 785 427" width="785px" zoomAndPan="magnify"><defs/><g><!--class Fahrzeug--><rect fill="#E3F2FD" height="94.8906" id="Fahrzeug" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="164" x="289" y="165"/><ellipse cx="334.5" cy="180" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M336.8906,184.7031 Q336.4063,184.9531 335.875,185.0781 Q335.3594,185.2031 334.7813,185.2031 Q332.7188,185.2031 331.625,183.8438 Q330.5469,182.4844 330.5469,179.9063 Q330.5469,177.3281 331.625,175.9688 Q332.7188,174.6094 334.7813,174.6094 Q335.3594,174.6094 335.8906,174.7344 Q336.4219,174.8594 336.8906,175.0938 L336.8906,177.3438 Q336.375,176.8594 335.875,176.6406 Q335.3906,176.4219 334.875,176.4219 Q333.7656,176.4219 333.2031,177.2969 Q332.6406,178.1719 332.6406,179.9063 Q332.6406,181.625 333.2031,182.5156 Q333.7656,183.3906 334.875,183.3906 Q335.3906,183.3906 335.875,183.1719 Q336.375,182.9375 336.8906,182.4688 L336.8906,184.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="353.5" y="184.8467">Fahrzeug</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="290" x2="452" y1="195" y2="195"/><polygon fill="none" points="300,203.6484,304,207.6484,300,211.6484,296,207.6484" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="308" y="211.9951">kennzeichen: String</text><polygon fill="none" points="300,219.9453,304,223.9453,300,227.9453,296,223.9453" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="308" y="228.292">baujahr: int</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="290" x2="452" y1="235.5938" y2="235.5938"/><ellipse cx="300" cy="249.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="96" x="308" y="252.5889">starten(): void</text><!--class PKW--><rect fill="#E3F2FD" height="62.2969" id="PKW" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="130" x="6" y="346.5"/><ellipse cx="51.5" cy="361.5" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M53.8906,366.2031 Q53.4063,366.4531 52.875,366.5781 Q52.3594,366.7031 51.7813,366.7031 Q49.7188,366.7031 48.625,365.3438 Q47.5469,363.9844 47.5469,361.4063 Q47.5469,358.8281 48.625,357.4688 Q49.7188,356.1094 51.7813,356.1094 Q52.3594,356.1094 52.8906,356.2344 Q53.4219,356.3594 53.8906,356.5938 L53.8906,358.8438 Q53.375,358.3594 52.875,358.1406 Q52.3906,357.9219 51.875,357.9219 Q50.7656,357.9219 50.2031,358.7969 Q49.6406,359.6719 49.6406,361.4063 Q49.6406,363.125 50.2031,364.0156 Q50.7656,364.8906 51.875,364.8906 Q52.3906,364.8906 52.875,364.6719 Q53.375,364.4375 53.8906,363.9688 L53.8906,366.2031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="70.5" y="366.3467">PKW</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="135" y1="376.5" y2="376.5"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="387.1484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="105" x="25" y="393.4951">anzahlSitze: int</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="135" y1="400.7969" y2="400.7969"/><!--class LKW--><rect fill="#E3F2FD" height="62.2969" id="LKW" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="176" x="171" y="346.5"/><ellipse cx="240.5" cy="361.5" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M242.8906,366.2031 Q242.4063,366.4531 241.875,366.5781 Q241.3594,366.7031 240.7813,366.7031 Q238.7188,366.7031 237.625,365.3438 Q236.5469,363.9844 236.5469,361.4063 Q236.5469,358.8281 237.625,357.4688 Q238.7188,356.1094 240.7813,356.1094 Q241.3594,356.1094 241.8906,356.2344 Q242.4219,356.3594 242.8906,356.5938 L242.8906,358.8438 Q242.375,358.3594 241.875,358.1406 Q241.3906,357.9219 240.875,357.9219 Q239.7656,357.9219 239.2031,358.7969 Q238.6406,359.6719 238.6406,361.4063 Q238.6406,363.125 239.2031,364.0156 Q239.7656,364.8906 240.875,364.8906 Q241.3906,364.8906 241.875,364.6719 Q242.375,364.4375 242.8906,363.9688 L242.8906,366.2031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="29" x="259.5" y="366.3467">LKW</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="172" x2="346" y1="376.5" y2="376.5"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="179" y="387.1484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="151" x="190" y="393.4951">maxZuladung: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="172" x2="346" y1="400.7969" y2="400.7969"/><!--class Transporter--><rect fill="#E3F2FD" height="62.2969" id="Transporter" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="205" x="381.5" y="346.5"/><ellipse cx="439.5" cy="361.5" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M441.8906,366.2031 Q441.4063,366.4531 440.875,366.5781 Q440.3594,366.7031 439.7813,366.7031 Q437.7188,366.7031 436.625,365.3438 Q435.5469,363.9844 435.5469,361.4063 Q435.5469,358.8281 436.625,357.4688 Q437.7188,356.1094 439.7813,356.1094 Q440.3594,356.1094 440.8906,356.2344 Q441.4219,356.3594 441.8906,356.5938 L441.8906,358.8438 Q441.375,358.3594 440.875,358.1406 Q440.3906,357.9219 439.875,357.9219 Q438.7656,357.9219 438.2031,358.7969 Q437.6406,359.6719 437.6406,361.4063 Q437.6406,363.125 438.2031,364.0156 Q438.7656,364.8906 439.875,364.8906 Q440.3906,364.8906 440.875,364.6719 Q441.375,364.4375 441.8906,363.9688 L441.8906,366.2031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="458.5" y="366.3467">Transporter</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="382.5" x2="585.5" y1="376.5" y2="376.5"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="389.5" y="387.1484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="180" x="400.5" y="393.4951">laderaumvolumen: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="382.5" x2="585.5" y1="400.7969" y2="400.7969"/><!--class Motor--><rect fill="#E3F2FD" height="78.5938" id="Motor" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="152" x="622" y="338"/><ellipse cx="674" cy="353" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M676.3906,357.7031 Q675.9063,357.9531 675.375,358.0781 Q674.8594,358.2031 674.2813,358.2031 Q672.2188,358.2031 671.125,356.8438 Q670.0469,355.4844 670.0469,352.9063 Q670.0469,350.3281 671.125,348.9688 Q672.2188,347.6094 674.2813,347.6094 Q674.8594,347.6094 675.3906,347.7344 Q675.9219,347.8594 676.3906,348.0938 L676.3906,350.3438 Q675.875,349.8594 675.375,349.6406 Q674.8906,349.4219 674.375,349.4219 Q673.2656,349.4219 672.7031,350.2969 Q672.1406,351.1719 672.1406,352.9063 Q672.1406,354.625 672.7031,355.5156 Q673.2656,356.3906 674.375,356.3906 Q674.8906,356.3906 675.375,356.1719 Q675.875,355.9375 676.3906,355.4688 L676.3906,357.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="693" y="357.8467">Motor</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="623" x2="773" y1="368" y2="368"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="630" y="378.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="641" y="384.9951">leistungPS: int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="630" y="394.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="127" x="641" y="401.292">kraftstoffart: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="623" x2="773" y1="408.5938" y2="408.5938"/><!--class Fahrer--><rect fill="#E3F2FD" height="78.5938" id="Fahrer" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="214" x="104" y="8"/><ellipse cx="185" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M187.3906,27.7031 Q186.9063,27.9531 186.375,28.0781 Q185.8594,28.2031 185.2813,28.2031 Q183.2188,28.2031 182.125,26.8438 Q181.0469,25.4844 181.0469,22.9063 Q181.0469,20.3281 182.125,18.9688 Q183.2188,17.6094 185.2813,17.6094 Q185.8594,17.6094 186.3906,17.7344 Q186.9219,17.8594 187.3906,18.0938 L187.3906,20.3438 Q186.875,19.8594 186.375,19.6406 Q185.8906,19.4219 185.375,19.4219 Q184.2656,19.4219 183.7031,20.2969 Q183.1406,21.1719 183.1406,22.9063 Q183.1406,24.625 183.7031,25.5156 Q184.2656,26.3906 185.375,26.3906 Q185.8906,26.3906 186.375,26.1719 Q186.875,25.9375 187.3906,25.4688 L187.3906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="204" y="27.8467">Fahrer</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="105" x2="317" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="112" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="123" y="54.9951">name: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="112" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="189" x="123" y="71.292">fuehrerscheinklasse: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="105" x2="317" y1="78.5938" y2="78.5938"/><!--class Fuhrpark--><rect fill="#E3F2FD" height="78.5938" id="Fuhrpark" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="356" x="353" y="8"/><ellipse cx="496.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M498.8906,27.7031 Q498.4063,27.9531 497.875,28.0781 Q497.3594,28.2031 496.7813,28.2031 Q494.7188,28.2031 493.625,26.8438 Q492.5469,25.4844 492.5469,22.9063 Q492.5469,20.3281 493.625,18.9688 Q494.7188,17.6094 496.7813,17.6094 Q497.3594,17.6094 497.8906,17.7344 Q498.4219,17.8594 498.8906,18.0938 L498.8906,20.3438 Q498.375,19.8594 497.875,19.6406 Q497.3906,19.4219 496.875,19.4219 Q495.7656,19.4219 495.2031,20.2969 Q494.6406,21.1719 494.6406,22.9063 Q494.6406,24.625 495.2031,25.5156 Q495.7656,26.3906 496.875,26.3906 Q497.3906,26.3906 497.875,26.1719 Q498.375,25.9375 498.8906,25.4688 L498.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="61" x="515.5" y="27.8467">Fuhrpark</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="354" x2="708" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="361" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="372" y="54.9951">firmenname: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="354" x2="708" y1="62.2969" y2="62.2969"/><ellipse cx="364" cy="75.9453" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="331" x="372" y="79.292">fahrzeugHinzufuegen(fahrzeug: Fahrzeug): void</text><!--link Fahrzeug to PKW--><path d="M270.97,267.85 C222.88,293.98 167.07,324.3 126.64,346.27 " fill="none" id="Fahrzeug-PKW" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="267.71,261.65,288.63,258.26,274.4,273.96,267.71,261.65" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Fahrzeug to LKW--><path d="M327.58,276.7 C311.15,300.6 293.2,326.73 279.79,346.25 " fill="none" id="Fahrzeug-LKW" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="321.81,272.73,338.91,260.21,333.35,280.66,321.81,272.73" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Fahrzeug to Transporter--><path d="M414.81,276.7 C431.39,300.6 449.49,326.73 463.03,346.25 " fill="none" id="Fahrzeug-Transporter" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="409.02,280.63,403.38,260.21,420.53,272.66,409.02,280.63" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Fahrzeug to Motor--><path d="M464.84,260.28 C514.6,285.08 574.94,315.16 621.77,338.5 " fill="none" id="Fahrzeug-Motor" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="453.09,254.42,456.6739,260.6775,463.8284,259.776,460.2445,253.5185,453.09,254.42" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="83" x="555" y="303.9951">besteht aus</text><!--link Fuhrpark to Fahrzeug--><path d="M483.96,96.42 C462.81,117.97 437.93,143.31 416.91,164.72 " fill="none" id="Fuhrpark-Fahrzeug" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="493.08,87.13,486.0224,88.6101,484.6743,95.6941,491.7318,94.214,493.08,87.13" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="461" y="130.9951">verwaltet</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="477.5844" y="107.4723">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="397.8905" y="153.5523">0..*</text><!--link Fahrer to Fahrzeug--><path d="M248.92,87.13 C271.74,110.38 300.96,140.14 325.09,164.72 " fill="none" id="Fahrer-Fahrzeug" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="297" y="130.9951">fährt aktuell</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="228.889" y="107.4723">0..*</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="290.4376" y="153.5523">0..1</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Fahrzeug {
+  #kennzeichen: String
+  #baujahr: int
+  +starten(): void
+}
+class PKW {
+  -anzahlSitze: int
+}
+class LKW {
+  -maxZuladung: double
+}
+class Transporter {
+  -laderaumvolumen: double
+}
+class Motor {
+  -leistungPS: int
+  -kraftstoffart: String
+}
+class Fahrer {
+  -name: String
+  -fuehrerscheinklasse: String
+}
+class Fuhrpark {
+  -firmenname: String
+  +fahrzeugHinzufuegen(fahrzeug: Fahrzeug): void
+}
+
+Fahrzeug <|- - PKW
+Fahrzeug <|- - LKW
+Fahrzeug <|- - Transporter
+Fahrzeug *- - Motor : besteht aus
+Fuhrpark "1" o- - "0..*" Fahrzeug : verwaltet
+Fahrer "0..*" - - "0..1" Fahrzeug : fährt aktuell
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

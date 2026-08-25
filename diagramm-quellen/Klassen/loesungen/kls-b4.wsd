@@ -1,0 +1,13 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Lehrer {
+  -name: String
+  -faecher: List<String>
+  +kursLeiten(kurs: Kurs): void
+}
+class Kurs {
+  -titel: String
+  -raum: String
+}
+Lehrer --> Kurs : unterrichtet
+@enduml

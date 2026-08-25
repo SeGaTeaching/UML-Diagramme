@@ -1,0 +1,14 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Techniker
+
+rectangle "Ampelsteuerungssystem" {
+  usecase "Ampelphase manuell schalten" as UC1
+  usecase "Fehlerstatus abfragen" as UC2
+}
+
+Techniker --> UC1
+Techniker --> UC2
+@enduml

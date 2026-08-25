@@ -1,0 +1,17 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant "ersteller: Ersteller" as E
+create "objekt: Klasse" as O
+
+E -> O: <<create>>
+activate O
+O --> E:
+deactivate O
+
+E -> O: methode()
+activate O
+O --> E:
+deactivate O
+
+destroy O
+@enduml

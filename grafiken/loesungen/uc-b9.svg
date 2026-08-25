@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="422px" preserveAspectRatio="none" style="width:346px;height:422px;" version="1.1" viewBox="0 0 346 422" width="346px" zoomAndPan="magnify"><defs/><g><!--cluster Smart-Home-System--><rect fill="#FFFFFF" height="307" rx="6" ry="6" style="stroke: #000000; stroke-width: 1.5;" width="191" x="144" y="24.5"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="159" y="39.4951">Smart-Home-System</text><ellipse cx="239.7036" cy="227.6407" fill="#E3F2FD" rx="63.7036" ry="15.1407" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="194.7036" y="232.2892">Licht steuern</text><ellipse cx="239.3417" cy="161.6683" fill="#E3F2FD" rx="66.3417" ry="15.6683" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="190.8417" y="166.3168">Tür entriegeln</text><ellipse cx="239.6456" cy="76.5291" fill="#E3F2FD" rx="70.6456" ry="16.5291" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="185.6456" y="81.1776">Authentifizieren</text><ellipse cx="239.7133" cy="296.3427" fill="#E3F2FD" rx="79.7133" ry="18.3427" style="stroke: #1976D2; stroke-width: 1.5;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="174.7133" y="300.9911">Zeitplan ausführen</text><!--entity Bewohner--><ellipse cx="51.5" cy="115" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M51.5,123 L51.5,150 M38.5,131 L64.5,131 M51.5,150 L38.5,165 M51.5,150 L64.5,165 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="16" y="180.9951">Bewohner</text><!--entity Gast--><ellipse cx="51.5" cy="229" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M51.5,237 L51.5,264 M38.5,245 L64.5,245 M51.5,264 L38.5,279 M51.5,264 L64.5,279 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="35.5" y="294.9951">Gast</text><!--entity Timer--><ellipse cx="51.5" cy="343" fill="#E3F2FD" rx="8" ry="8" style="stroke: #1976D2; stroke-width: 2.0;"/><path d="M51.5,351 L51.5,378 M38.5,359 L64.5,359 M51.5,378 L38.5,393 M51.5,378 L64.5,393 " fill="none" style="stroke: #1976D2; stroke-width: 2.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="91" x="6" y="408.9951">Zeitschaltuhr</text><!--link Bewohner to UC1--><path d="M87.29,167.76 C101.92,176.89 119.38,186.97 136,194.5 C153.59,202.47 173.67,209.38 191.37,214.79 " fill="none" id="Bewohner-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="196.29,216.28,188.8277,209.8523,191.5028,214.8367,186.5185,217.5118,196.29,216.28" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Bewohner to UC2--><path d="M87.05,147.66 C110.88,149.84 143.33,152.8 172.08,155.43 " fill="none" id="Bewohner-UC2" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="177.41,155.92,168.8141,151.1127,172.431,155.4622,168.0815,159.0791,177.41,155.92" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Gast to UC1--><path d="M67.72,255.96 C92.38,251.85 142.3,243.53 181.82,236.95 " fill="none" id="Gast-UC1" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="187.08,236.07,177.5414,233.6175,182.1492,236.8989,178.8677,241.5067,187.08,236.07" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link UC2 to UC3--><path d="M239.5,145.91 C239.5,132.59 239.5,113.29 239.5,98.41 " fill="none" id="UC2-UC3" style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#1976D2" points="239.5,93.15,235.5,102.15,239.5,98.15,243.5,102.15,239.5,93.15" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="193.5" y="124.4951">«include»</text><!--link Timer to UC4--><path d="M97.05,354.3 C126.64,342.21 165.3,326.41 194.72,314.39 " fill="none" id="Timer-UC4" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="199.36,312.49,189.516,312.1813,194.7295,314.3765,192.5344,319.59,199.36,312.49" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+left to right direction
+
+actor Bewohner
+actor Gast
+actor "Zeitschaltuhr" as Timer
+
+rectangle "Smart-Home-System" {
+  usecase "Licht steuern" as UC1
+  usecase "Tür entriegeln" as UC2
+  usecase "Authentifizieren" as UC3
+  usecase "Zeitplan ausführen" as UC4
+}
+
+Bewohner - -> UC1
+Bewohner - -> UC2
+Gast - -> UC1
+
+UC2 .> UC3 : <<include>>
+Timer - -> UC4
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

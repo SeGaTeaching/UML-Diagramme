@@ -1,0 +1,18 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Oberklasse
+class Unterklasse
+Oberklasse <|-- Unterklasse : Vererbung
+
+class KlasseX
+class KlasseY
+KlasseX --> KlasseY : Assoziation
+
+class Ganzes1
+class Teil1
+Ganzes1 o-- Teil1 : Aggregation
+
+class Ganzes2
+class Teil2
+Ganzes2 *-- Teil2 : Komposition
+@enduml

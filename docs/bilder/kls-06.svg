@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="302px" preserveAspectRatio="none" style="width:260px;height:302px;" version="1.1" viewBox="0 0 260 302" width="260px" zoomAndPan="magnify"><defs/><g><!--class Fahrer--><rect fill="#E3F2FD" height="111.1875" id="Fahrer" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="243" x="6" y="8"/><ellipse cx="101.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M103.8906,27.7031 Q103.4063,27.9531 102.875,28.0781 Q102.3594,28.2031 101.7813,28.2031 Q99.7188,28.2031 98.625,26.8438 Q97.5469,25.4844 97.5469,22.9063 Q97.5469,20.3281 98.625,18.9688 Q99.7188,17.6094 101.7813,17.6094 Q102.3594,17.6094 102.8906,17.7344 Q103.4219,17.8594 103.8906,18.0938 L103.8906,20.3438 Q103.375,19.8594 102.875,19.6406 Q102.3906,19.4219 101.875,19.4219 Q100.7656,19.4219 100.2031,20.2969 Q99.6406,21.1719 99.6406,22.9063 Q99.6406,24.625 100.2031,25.5156 Q100.7656,26.3906 101.875,26.3906 Q102.3906,26.3906 102.875,26.1719 Q103.375,25.9375 103.8906,25.4688 L103.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="120.5" y="27.8467">Fahrer</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="248" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="25" y="54.9951">name: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="72" x="25" y="71.292">auto: Auto</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="248" y1="78.5938" y2="78.5938"/><ellipse cx="17" cy="92.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="218" x="25" y="95.5889">autoZuweisen(auto: Auto): void</text><ellipse cx="17" cy="108.5391" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="91" x="25" y="111.8857">fahren(): void</text><!--class Auto--><rect fill="#E3F2FD" height="94.8906" id="Auto" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="121" x="67" y="197"/><ellipse cx="107.55" cy="212" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M109.9406,216.7031 Q109.4563,216.9531 108.925,217.0781 Q108.4094,217.2031 107.8313,217.2031 Q105.7688,217.2031 104.675,215.8438 Q103.5969,214.4844 103.5969,211.9063 Q103.5969,209.3281 104.675,207.9688 Q105.7688,206.6094 107.8313,206.6094 Q108.4094,206.6094 108.9406,206.7344 Q109.4719,206.8594 109.9406,207.0938 L109.9406,209.3438 Q109.425,208.8594 108.925,208.6406 Q108.4406,208.4219 107.925,208.4219 Q106.8156,208.4219 106.2531,209.2969 Q105.6906,210.1719 105.6906,211.9063 Q105.6906,213.625 106.2531,214.5156 Q106.8156,215.3906 107.925,215.3906 Q108.4406,215.3906 108.925,215.1719 Q109.425,214.9375 109.9406,214.4688 L109.9406,216.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="126.45" y="216.8467">Auto</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="68" x2="187" y1="227" y2="227"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="75" y="237.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="86" y="243.9951">marke: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="75" y="253.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="86" y="260.292">modell: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="68" x2="187" y1="267.5938" y2="267.5938"/><ellipse cx="78" cy="281.2422" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="96" x="86" y="284.5889">starten(): void</text><!--link Fahrer to Auto--><path d="M127.5,119.18 C127.5,142.21 127.5,168.9 127.5,191.62 " fill="none" id="Fahrer-Auto" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="127.5,196.71,131.5,187.71,127.5,191.71,123.5,187.71,127.5,196.71" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="128.5" y="162.9951">fährt</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Fahrer {
+  -name: String
+  -auto: Auto
+  +autoZuweisen(auto: Auto): void
+  +fahren(): void
+}
+class Auto {
+  -marke: String
+  -modell: String
+  +starten(): void
+}
+Fahrer - -> Auto : fährt
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,0 +1,19 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+[*] --> ImRegal
+
+ImRegal --> Reserviert : reservieren()
+ImRegal --> Ausgeliehen : ausleihen() / Ausleihfrist in Kalender eintragen
+
+Reserviert --> Ausgeliehen : ausleihen() / Ausleihfrist in Kalender eintragen
+Reserviert --> ImRegal : reservierungStornieren()
+
+Ausgeliehen --> ImRegal : zurueckgeben() [kein Schaden]
+Ausgeliehen --> InReparatur : zurueckgeben() [Schaden festgestellt]
+Ausgeliehen --> Verloren : verlustMelden()
+
+InReparatur --> ImRegal : reparieren()
+
+Verloren --> [*]
+
+@enduml

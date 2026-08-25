@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Kunde {
+  -kundennummer: String
+  -name: String
+}
+class Bestellung {
+  -bestellnummer: String
+  -datum: String
+}
+Kunde "1" -- "0..*" Bestellung : gibt auf
+@enduml

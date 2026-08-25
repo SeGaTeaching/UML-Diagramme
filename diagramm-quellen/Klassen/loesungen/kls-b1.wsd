@@ -1,0 +1,10 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Produkt {
+  -produktId: String
+  -name: String
+  -preis: double
+  -bestand: int
+  +istVerfuegbar(): boolean
+}
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+' Farben für die Knoten festlegen
+skinparam StartNodeColor black
+skinparam EndNodeColor black
+
+' Optional: Styling für die Aktions-Box
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+
+start
+:Aktion ausführen;
+stop
+@enduml

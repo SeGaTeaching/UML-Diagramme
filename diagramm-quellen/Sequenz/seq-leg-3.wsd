@@ -1,0 +1,11 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+participant "objekt: Klasse" as O
+
+activate O
+O -> O: eigeneMethode()
+activate O
+O --> O:
+deactivate O
+deactivate O
+@enduml

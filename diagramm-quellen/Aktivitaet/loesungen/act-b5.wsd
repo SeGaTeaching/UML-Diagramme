@@ -1,0 +1,25 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+start
+repeat
+  :Bewerbung senden;
+  :Rückmeldung abwarten;
+  if (Angenommen?) then ([ja])
+    :Vertrag unterschreiben;
+    stop
+  elseif (Versuche >= 3?) then ([ja])
+    :Suche abbrechen;
+    stop
+  else ([nein])
+  endif
+repeat while (Abgelehnt, weitere Versuche möglich?)
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Neu
+
+Neu --> Bezahlt : bezahlen()
+Neu --> Storniert : stornieren()
+Bezahlt --> Storniert : stornieren() [noch nicht versendet]
+Bezahlt --> Versendet : versenden()
+Versendet --> Zugestellt : liefern()
+
+Storniert --> [*]
+Zugestellt --> [*]
+@enduml

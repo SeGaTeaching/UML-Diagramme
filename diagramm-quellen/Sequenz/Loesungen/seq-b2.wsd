@@ -1,0 +1,15 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+participant "wecker: Wecker" as Wecker
+
+activate Wecker
+Wecker -> Wecker: klingeln()
+activate Wecker
+Wecker -> Wecker: berechneNeueWeckzeit(minuten)
+activate Wecker
+Wecker --> Wecker: neueWeckzeit
+deactivate Wecker
+Wecker -> Wecker: snooze(neueWeckzeit)
+deactivate Wecker
+deactivate Wecker
+@enduml

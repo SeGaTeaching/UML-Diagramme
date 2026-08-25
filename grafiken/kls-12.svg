@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="189px" preserveAspectRatio="none" style="width:612px;height:189px;" version="1.1" viewBox="0 0 612 189" width="612px" zoomAndPan="magnify"><defs/><g><!--class Kunde1--><rect fill="#E3F2FD" height="46" id="Kunde1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="75" x="9.26" y="8"/><ellipse cx="23.26" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M25.6506,27.7031 Q25.1662,27.9531 24.635,28.0781 Q24.1194,28.2031 23.5412,28.2031 Q21.4787,28.2031 20.385,26.8438 Q19.3069,25.4844 19.3069,22.9063 Q19.3069,20.3281 20.385,18.9688 Q21.4787,17.6094 23.5412,17.6094 Q24.1194,17.6094 24.6506,17.7344 Q25.1819,17.8594 25.6506,18.0938 L25.6506,20.3438 Q25.135,19.8594 24.635,19.6406 Q24.1506,19.4219 23.635,19.4219 Q22.5256,19.4219 21.9631,20.2969 Q21.4006,21.1719 21.4006,22.9063 Q21.4006,24.625 21.9631,25.5156 Q22.5256,26.3906 23.635,26.3906 Q24.1506,26.3906 24.635,26.1719 Q25.135,25.9375 25.6506,25.4688 L25.6506,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="36.26" y="27.8467">Kunde</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="10.26" x2="83.26" y1="38" y2="38"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="10.26" x2="83.26" y1="46" y2="46"/><!--class Konto1--><rect fill="#E3F2FD" height="46" id="Konto1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="71" x="11.26" y="132"/><ellipse cx="25.26" cy="147" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M27.6506,151.7031 Q27.1662,151.9531 26.635,152.0781 Q26.1194,152.2031 25.5412,152.2031 Q23.4787,152.2031 22.385,150.8438 Q21.3069,149.4844 21.3069,146.9063 Q21.3069,144.3281 22.385,142.9688 Q23.4787,141.6094 25.5412,141.6094 Q26.1194,141.6094 26.6506,141.7344 Q27.1819,141.8594 27.6506,142.0938 L27.6506,144.3438 Q27.135,143.8594 26.635,143.6406 Q26.1506,143.4219 25.635,143.4219 Q24.5256,143.4219 23.9631,144.2969 Q23.4006,145.1719 23.4006,146.9063 Q23.4006,148.625 23.9631,149.5156 Q24.5256,150.3906 25.635,150.3906 Q26.1506,150.3906 26.635,150.1719 Q27.135,149.9375 27.6506,149.4688 L27.6506,151.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="38.26" y="151.8467">Konto</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="12.26" x2="81.26" y1="162" y2="162"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="12.26" x2="81.26" y1="170" y2="170"/><!--class Student1--><rect fill="#E3F2FD" height="46" id="Student1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="85" x="155.26" y="8"/><ellipse cx="169.26" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M171.6506,27.7031 Q171.1663,27.9531 170.635,28.0781 Q170.1194,28.2031 169.5413,28.2031 Q167.4788,28.2031 166.385,26.8438 Q165.3069,25.4844 165.3069,22.9063 Q165.3069,20.3281 166.385,18.9688 Q167.4788,17.6094 169.5413,17.6094 Q170.1194,17.6094 170.6506,17.7344 Q171.1819,17.8594 171.6506,18.0938 L171.6506,20.3438 Q171.135,19.8594 170.635,19.6406 Q170.1506,19.4219 169.635,19.4219 Q168.5256,19.4219 167.9631,20.2969 Q167.4006,21.1719 167.4006,22.9063 Q167.4006,24.625 167.9631,25.5156 Q168.5256,26.3906 169.635,26.3906 Q170.1506,26.3906 170.635,26.1719 Q171.135,25.9375 171.6506,25.4688 L171.6506,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="182.26" y="27.8467">Student</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="156.26" x2="239.26" y1="38" y2="38"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="156.26" x2="239.26" y1="46" y2="46"/><!--class Kurs1--><rect fill="#E3F2FD" height="46" id="Kurs1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="61" x="167.26" y="132"/><ellipse cx="181.26" cy="147" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M183.6506,151.7031 Q183.1663,151.9531 182.635,152.0781 Q182.1194,152.2031 181.5413,152.2031 Q179.4788,152.2031 178.385,150.8438 Q177.3069,149.4844 177.3069,146.9063 Q177.3069,144.3281 178.385,142.9688 Q179.4788,141.6094 181.5413,141.6094 Q182.1194,141.6094 182.6506,141.7344 Q183.1819,141.8594 183.6506,142.0938 L183.6506,144.3438 Q183.135,143.8594 182.635,143.6406 Q182.1506,143.4219 181.635,143.4219 Q180.5256,143.4219 179.9631,144.2969 Q179.4006,145.1719 179.4006,146.9063 Q179.4006,148.625 179.9631,149.5156 Q180.5256,150.3906 181.635,150.3906 Q182.1506,150.3906 182.635,150.1719 Q183.135,149.9375 183.6506,149.4688 L183.6506,151.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="194.26" y="151.8467">Kurs</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="168.26" x2="227.26" y1="162" y2="162"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="168.26" x2="227.26" y1="170" y2="170"/><!--class Person1--><rect fill="#E3F2FD" height="46" id="Person1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="79" x="330.26" y="8"/><ellipse cx="344.26" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M346.6506,27.7031 Q346.1663,27.9531 345.635,28.0781 Q345.1194,28.2031 344.5413,28.2031 Q342.4788,28.2031 341.385,26.8438 Q340.3069,25.4844 340.3069,22.9063 Q340.3069,20.3281 341.385,18.9688 Q342.4788,17.6094 344.5413,17.6094 Q345.1194,17.6094 345.6506,17.7344 Q346.1819,17.8594 346.6506,18.0938 L346.6506,20.3438 Q346.135,19.8594 345.635,19.6406 Q345.1506,19.4219 344.635,19.4219 Q343.5256,19.4219 342.9631,20.2969 Q342.4006,21.1719 342.4006,22.9063 Q342.4006,24.625 342.9631,25.5156 Q343.5256,26.3906 344.635,26.3906 Q345.1506,26.3906 345.635,26.1719 Q346.135,25.9375 346.6506,25.4688 L346.6506,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="357.26" y="27.8467">Person</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="331.26" x2="408.26" y1="38" y2="38"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="331.26" x2="408.26" y1="46" y2="46"/><!--class Reisepass1--><rect fill="#E3F2FD" height="46" id="Reisepass1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="102" x="318.76" y="132"/><ellipse cx="332.76" cy="147" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M335.1506,151.7031 Q334.6663,151.9531 334.135,152.0781 Q333.6194,152.2031 333.0413,152.2031 Q330.9788,152.2031 329.885,150.8438 Q328.8069,149.4844 328.8069,146.9063 Q328.8069,144.3281 329.885,142.9688 Q330.9788,141.6094 333.0413,141.6094 Q333.6194,141.6094 334.1506,141.7344 Q334.6819,141.8594 335.1506,142.0938 L335.1506,144.3438 Q334.635,143.8594 334.135,143.6406 Q333.6506,143.4219 333.135,143.4219 Q332.0256,143.4219 331.4631,144.2969 Q330.9006,145.1719 330.9006,146.9063 Q330.9006,148.625 331.4631,149.5156 Q332.0256,150.3906 333.135,150.3906 Q333.6506,150.3906 334.135,150.1719 Q334.635,149.9375 335.1506,149.4688 L335.1506,151.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="72" x="345.76" y="151.8467">Reisepass</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="319.76" x2="419.76" y1="162" y2="162"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="319.76" x2="419.76" y1="170" y2="170"/><!--class Team1--><rect fill="#E3F2FD" height="46" id="Team1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="69" x="472.26" y="8"/><ellipse cx="486.26" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M488.6506,27.7031 Q488.1663,27.9531 487.635,28.0781 Q487.1194,28.2031 486.5413,28.2031 Q484.4788,28.2031 483.385,26.8438 Q482.3069,25.4844 482.3069,22.9063 Q482.3069,20.3281 483.385,18.9688 Q484.4788,17.6094 486.5413,17.6094 Q487.1194,17.6094 487.6506,17.7344 Q488.1819,17.8594 488.6506,18.0938 L488.6506,20.3438 Q488.135,19.8594 487.635,19.6406 Q487.1506,19.4219 486.635,19.4219 Q485.5256,19.4219 484.9631,20.2969 Q484.4006,21.1719 484.4006,22.9063 Q484.4006,24.625 484.9631,25.5156 Q485.5256,26.3906 486.635,26.3906 Q487.1506,26.3906 487.635,26.1719 Q488.135,25.9375 488.6506,25.4688 L488.6506,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="499.26" y="27.8467">Team</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="473.26" x2="540.26" y1="38" y2="38"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="473.26" x2="540.26" y1="46" y2="46"/><!--class Spieler1--><rect fill="#E3F2FD" height="46" id="Spieler1" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="77" x="468.26" y="132"/><ellipse cx="482.26" cy="147" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M484.6506,151.7031 Q484.1663,151.9531 483.635,152.0781 Q483.1194,152.2031 482.5413,152.2031 Q480.4788,152.2031 479.385,150.8438 Q478.3069,149.4844 478.3069,146.9063 Q478.3069,144.3281 479.385,142.9688 Q480.4788,141.6094 482.5413,141.6094 Q483.1194,141.6094 483.6506,141.7344 Q484.1819,141.8594 484.6506,142.0938 L484.6506,144.3438 Q484.135,143.8594 483.635,143.6406 Q483.1506,143.4219 482.635,143.4219 Q481.5256,143.4219 480.9631,144.2969 Q480.4006,145.1719 480.4006,146.9063 Q480.4006,148.625 480.9631,149.5156 Q481.5256,150.3906 482.635,150.3906 Q483.1506,150.3906 483.635,150.1719 Q484.135,149.9375 484.6506,149.4688 L484.6506,151.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="495.26" y="151.8467">Spieler</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="469.26" x2="544.26" y1="162" y2="162"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="469.26" x2="544.26" y1="170" y2="170"/><!--link Kunde1 to Konto1--><path d="M45.21,54 C44.63,63.26 44.04,74.15 43.76,84 C43.3,100.05 44.11,118.16 45,131.94 " fill="none" id="Kunde1-Konto1" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="44.76" y="97.9951">1..* (mind. eins)</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="34.6597" y="74.9769">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="17.302" y="120.6276">1..*</text><!--link Student1 to Kurs1--><path d="M196,54.06 C195.11,67.84 194.3,85.95 194.76,102 C195.04,111.85 195.63,122.74 196.21,132 " fill="none" id="Student1-Kurs1" style="stroke: #1976D2; stroke-width: 1.0;"/><ellipse cx="200.76" cy="93.6484" fill="none" rx="3" ry="3" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="207.76" y="97.9951">..* (viele-zu-viele)</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="7" x="187.6521" y="75.0523">*</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="7" x="187.8528" y="120.7038">*</text><!--link Person1 to Reisepass1--><path d="M368,54.06 C367.11,67.84 366.3,85.95 366.76,102 C367.04,111.85 367.63,122.74 368.21,132 " fill="none" id="Person1-Reisepass1" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="367.76" y="97.9951">0..1 (optional)</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="357.3959" y="75.0523">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="338.2997" y="120.7038">0..1</text><!--link Team1 to Spieler1--><path d="M506.76,54.09 C506.76,76.07 506.76,109.6 506.76,131.66 " fill="none" id="Team1-Spieler1" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="507.76" y="97.9951">2..5 (Bereich)</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="496.6069" y="75.09">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="26" x="477.4288" y="120.6623">2..5</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class "Kunde" as Kunde1
+class "Konto" as Konto1
+Kunde1 "1" - - "1..*" Konto1 : 1..* (mind. eins)
+
+class "Student" as Student1
+class "Kurs" as Kurs1
+Student1 "*" - - "*" Kurs1 : *..* (viele-zu-viele)
+
+class "Person" as Person1
+class "Reisepass" as Reisepass1
+Person1 "1" - - "0..1" Reisepass1 : 0..1 (optional)
+
+class "Team" as Team1
+class "Spieler" as Spieler1
+Team1 "1" - - "2..5" Spieler1 : 2..5 (Bereich)
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

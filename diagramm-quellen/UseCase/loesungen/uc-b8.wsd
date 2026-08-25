@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Kunde
+actor "Bezahldienstleister" as Bezahl
+
+rectangle "Kino-System" {
+  usecase "Ticket kaufen" as UC1
+  usecase "Sitzplatz wählen" as UC2
+}
+
+Kunde --> UC1
+Kunde --> UC2
+UC1 --> Bezahl : kommuniziert mit
+@enduml

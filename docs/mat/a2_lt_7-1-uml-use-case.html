@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Use-Case-Diagramme: Die Anwendersicht auf Software · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 2: Use-Case-Diagramme</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_1.html">Kapitel 1: Einführung in UML</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 2</div><a href="../Abschnitt_2.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a2_lt_7-1-uml-use-case.html" class="hier">Use-Case-Diagramme: Die Anwendersicht auf Software</a></div></details>
+<details class="nav-gruppe" data-gruppe="uebungen"><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a2_ue_aufgaben-7-1-usecase.html">Aufgaben — Use-Case-Diagramme</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_2.html">Kapitel 2</a><span>›</span>Use-Case-Diagramme: Die Anwendersicht auf Software</div><h1>Use-Case-Diagramme: Die Anwendersicht auf Software</h1><h2 id="lernziele">Lernziele</h2>
+<ul>
+<li>Use-Case-Diagramme lesen und erstellen können</li>
+<li>Akteure und Anwendungsfälle identifizieren und korrekt darstellen</li>
+<li>Die Rolle von Use-Case-Diagrammen im Softwareentwicklungsprozess verstehen</li>
+</ul>
+<blockquote>
+<p><strong>Voraussetzung:</strong> die UML-Grundlagen aus dem Einführungsskript (7.0) — was UML ist und die zwei Diagrammkategorien.</p>
+</blockquote>
+<hr>
+<h2 id="1-das-use-case-diagramm-die-auensicht">1. Das Use-Case-Diagramm: Die Außensicht</h2>
+<h3 id="11-warum-beginnen-wir-mit-use-case-diagrammen">1.1 Warum beginnen wir mit Use-Case-Diagrammen?</h3>
+<p>Das Use-Case-Diagramm ist der Startpunkt jeder Softwareplanung. Es ist die Brücke zwischen der Anforderungsanalyse (dem Lastenheft) und dem technischen Entwurf.</p>
+<p><strong>Die zentrale Frage:</strong> Wer benutzt das System und wozu?</p>
+<p>Das Use-Case-Diagramm betrachtet das System komplett von außen, aus der Perspektive der Anwender. Es interessiert sich nicht dafür, wie das System intern funktioniert, sondern nur dafür, was es für wen tun soll.</p>
+<p><strong>Analogie: Das Restaurant</strong></p>
+<p>Stellen Sie sich ein Restaurant vor. Aus Sicht eines Gastes ist relevant:
+- Ich kann einen Tisch reservieren
+- Ich kann Essen bestellen
+- Ich kann bezahlen</p>
+<p>Wie die Küche intern organisiert ist, welche Töpfe verwendet werden, wie die Buchhaltung funktioniert - das ist für den Gast irrelevant. Das Use-Case-Diagramm zeigt genau diese Außensicht.</p>
+<h3 id="12-die-drei-kernelemente">1.2 Die drei Kernelemente</h3>
+<p>Ein Use-Case-Diagramm besteht aus drei grundlegenden Bausteinen:</p>
+<p><strong>1. Akteure (Actors)</strong>
+- Rollen oder externe Systeme, die mit unserem System interagieren
+- Notation: Strichmännchen
+- Beispiele: Kunde, Administrator, Banksystem, Drucker</p>
+<p><strong>2. Anwendungsfälle (Use Cases)</strong>
+- Konkrete Ziele, die ein Akteur mit dem System erreichen will
+- Notation: Ellipse mit Beschriftung
+- Beispiele: "Geld abheben", "Kontostand abfragen", "Ticket kaufen"</p>
+<p><strong>3. Systemgrenze</strong>
+- Ein Rechteck, das zeigt, was Teil unseres Systems ist
+- Alles innerhalb: Unser System
+- Alles außerhalb: Die Außenwelt (Akteure)</p>
+<h3 id="121-die-diagramm-elemente-im-detail">1.2.1 Die Diagramm-Elemente im Detail</h3>
+<p>Bevor wir ein vollständiges Diagramm betrachten, schauen wir uns die einzelnen Elemente und ihre korrekte Darstellung genau an:</p>
+<p><strong>Element 1: Der Akteur (Actor)</strong></p>
+<p><img alt="Notationselement Akteur" src="../bilder/uc-elem-actor.svg"></p>
+<ul>
+<li><strong>Form:</strong> Strichmännchen</li>
+<li><strong>Position:</strong> Immer außerhalb der Systemgrenze</li>
+<li><strong>Beschriftung:</strong> Name der Rolle (z.B. "Kunde", "Administrator", "Banksystem")</li>
+<li><strong>Bedeutung:</strong> Repräsentiert eine Rolle oder ein externes System, das mit unserem System interagiert</li>
+</ul>
+<p><strong>Element 2: Der Anwendungsfall (Use Case)</strong></p>
+<p><img alt="Notationselement Anwendungsfall" src="../bilder/uc-elem-usecase.svg"></p>
+<ul>
+<li><strong>Form:</strong> Ellipse (Oval)</li>
+<li><strong>Position:</strong> Immer innerhalb der Systemgrenze</li>
+<li><strong>Beschriftung:</strong> Verb im Infinitiv (z.B. "Geld abheben", "Kontostand abfragen")</li>
+<li><strong>Bedeutung:</strong> Repräsentiert ein konkretes Ziel, das ein Akteur mit dem System erreichen will</li>
+</ul>
+<p><strong>Element 3: Die Systemgrenze</strong></p>
+<p><img alt="Notationselement Systemgrenze" src="../bilder/uc-elem-boundary.svg"></p>
+<ul>
+<li><strong>Form:</strong> Rechteck</li>
+<li><strong>Position:</strong> Umschließt alle Use Cases</li>
+<li><strong>Beschriftung:</strong> Name des Systems (z.B. "Geldautomat-System", "Bibliothekssystem")</li>
+<li><strong>Bedeutung:</strong> Zeigt die Grenze zwischen System und Außenwelt</li>
+</ul>
+<p><strong>Element 4: Die Assoziationslinie (Association)</strong></p>
+<p><img alt="Notationselement Assoziation" src="../bilder/uc-elem-assoc.svg"></p>
+<ul>
+<li><strong>Form:</strong> Einfache durchgezogene Linie</li>
+<li><strong>Richtung:</strong> Verbindet Akteur mit Use Case</li>
+<li><strong>Pfeilspitze:</strong> Optional (zeigt Richtung der Interaktion)</li>
+<li><strong>Bedeutung:</strong> Der Akteur kann diesen Use Case ausführen</li>
+</ul>
+<p><strong>Element 5: Include-Beziehung</strong></p>
+<p><img alt="Notationselement Include-Beziehung" src="../bilder/uc-elem-include.svg"></p>
+<ul>
+<li><strong>Form:</strong> Gestrichelte Linie mit Pfeil</li>
+<li><strong>Beschriftung:</strong> <code>«include»</code></li>
+<li><strong>Richtung:</strong> Von Basis-Use-Case zum inkludierten Use Case</li>
+<li><strong>Bedeutung:</strong> Der Basis-Use-Case enthält den anderen Use Case immer als notwendigen Teilschritt</li>
+</ul>
+<p><strong>Element 6: Extend-Beziehung</strong></p>
+<p><img alt="Notationselement Extend-Beziehung" src="../bilder/uc-elem-extend.svg"></p>
+<ul>
+<li><strong>Form:</strong> Gestrichelte Linie mit Pfeil</li>
+<li><strong>Beschriftung:</strong> <code>«extend»</code></li>
+<li><strong>Richtung:</strong> Von Erweiterungs-Use-Case zum Basis-Use-Case</li>
+<li><strong>Bedeutung:</strong> Der Erweiterungs-Use-Case kann den Basis-Use-Case optional erweitern</li>
+</ul>
+<p><strong>Notations-Referenztabelle: Alle Elemente im Überblick</strong></p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Darstellung</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Akteur (Actor)</strong></td>
+<td><img alt="Akteur" src="../bilder/uc-elem-actor.svg"></td>
+<td>Rolle oder externes System, das mit dem System interagiert</td>
+</tr>
+<tr>
+<td><strong>Anwendungsfall (Use Case)</strong></td>
+<td><img alt="Anwendungsfall" src="../bilder/uc-elem-usecase.svg"></td>
+<td>Konkretes Ziel, das ein Akteur mit dem System erreichen will</td>
+</tr>
+<tr>
+<td><strong>Systemgrenze</strong></td>
+<td><img alt="Systemgrenze" src="../bilder/uc-elem-boundary.svg"></td>
+<td>Rechteck, das zeigt, was zum System gehört und was nicht</td>
+</tr>
+<tr>
+<td><strong>Assoziation</strong></td>
+<td><img alt="Assoziation" src="../bilder/uc-elem-assoc.svg"></td>
+<td>Durchgezogene Linie: Der Akteur kann diesen Use Case ausführen ("nutzt")</td>
+</tr>
+<tr>
+<td><strong>Include</strong></td>
+<td><img alt="Include" src="../bilder/uc-elem-include.svg"></td>
+<td>Gestrichelte Linie mit <code>«include»</code>: Basis-Use-Case enthält den anderen <strong>immer</strong> als Teilschritt</td>
+</tr>
+<tr>
+<td><strong>Extend</strong></td>
+<td><img alt="Extend" src="../bilder/uc-elem-extend.svg"></td>
+<td>Gestrichelte Linie mit <code>«extend»</code>: Erweiterungs-Use-Case erweitert den Basis-Use-Case <strong>optional</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Die korrekte Darstellung dieser Elemente ist entscheidend für die Verständlichkeit des Diagramms. Alle Diagramme in diesem Skript sind mit PlantUML erstellt und folgen exakt dieser Notation.</p>
+</blockquote>
+<p><strong>Einfaches Beispiel:</strong></p>
+<p><img alt="Use-Case-Diagramm Geldautomat: Geld abheben, Kontostand abfragen" src="../bilder/uc-02.svg"></p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Ein Use-Case-Diagramm zeigt, WER (Akteur) WAS (Anwendungsfall) mit dem System tun kann. Es ist die Außensicht auf das System.</p>
+</blockquote>
+<h3 id="13-was-ist-ein-akteur">1.3 Was ist ein Akteur?</h3>
+<p>Ein Akteur ist <strong>keine konkrete Person</strong>, sondern eine <strong>Rolle</strong>. Das ist ein wichtiger Unterschied.</p>
+<p><strong>Beispiel:</strong>
+- Falsch: "Max Mustermann" ist ein Akteur
+- Richtig: "Kunde" ist ein Akteur</p>
+<p>Max Mustermann kann die Rolle "Kunde" einnehmen. Aber auch Anna Schmidt kann diese Rolle einnehmen. Die Rolle ist das, was zählt, nicht die konkrete Person.</p>
+<p><strong>Arten von Akteuren:</strong></p>
+<ol>
+<li>
+<p><strong>Primäre Akteure (Hauptnutzer)</strong>
+   - Nutzen das System direkt
+   - Haben ein Ziel, das sie erreichen wollen
+   - Beispiele: Kunde, Administrator, Lehrer</p>
+</li>
+<li>
+<p><strong>Sekundäre Akteure (Unterstützende Systeme)</strong>
+   - Externe Systeme, die mit unserem System kommunizieren
+   - Beispiele: Banksystem, Drucker, E-Mail-Server, Datenbank</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Warnung:</strong>
+Akteure stehen IMMER außerhalb der Systemgrenze. Wenn Sie einen Akteur innerhalb zeichnen, ist das ein Fehler.</p>
+</blockquote>
+<h3 id="14-was-ist-ein-anwendungsfall-use-case">1.4 Was ist ein Anwendungsfall (Use Case)?</h3>
+<p>Ein Anwendungsfall beschreibt ein konkretes, von außen sichtbares Ziel, das ein Akteur mit dem System erreichen will.</p>
+<p><strong>Wichtige Eigenschaften:</strong></p>
+<ol>
+<li>
+<p><strong>Aus Sicht des Akteurs formuliert</strong>
+   - Richtig: "Geld abheben" (Sicht des Kunden)
+   - Falsch: "Geld ausgeben" (Sicht des Systems)</p>
+</li>
+<li>
+<p><strong>Ein vollständiges Ziel</strong>
+   - Richtig: "Ticket kaufen" (vollständiges Ziel)
+   - Falsch: "Zahlungsmethode auswählen" (nur ein Teilschritt)</p>
+</li>
+<li>
+<p><strong>Messbar und abgeschlossen</strong>
+   - Der Anwendungsfall hat einen klaren Anfang und ein klares Ende
+   - Man kann sagen: "Ja, das Ziel wurde erreicht" oder "Nein, es wurde nicht erreicht"</p>
+</li>
+</ol>
+<p><strong>Namenskonventionen:</strong></p>
+<ul>
+<li>Verwende Verben im Infinitiv: "Geld abheben", "Ticket kaufen", "Bericht erstellen"</li>
+<li>Sei konkret und präzise: "Kontostand abfragen" statt "Informationen anzeigen"</li>
+<li>Vermeide technische Details: "Rechnung drucken" statt "PDF generieren und an Drucker senden"</li>
+</ul>
+<hr>
+<h2 id="2-ein-vollstandiges-beispiel-bibliothekssystem">2. Ein vollständiges Beispiel: Bibliothekssystem</h2>
+<h3 id="21-die-anforderungen-verstehen">2.1 Die Anforderungen verstehen</h3>
+<p>Stellen Sie sich vor, Sie sollen ein System für eine Bibliothek entwickeln. Nach Gesprächen mit den Stakeholdern haben Sie folgende Anforderungen:</p>
+<p><strong>Nutzer der Bibliothek können:</strong>
+- Bücher ausleihen
+- Bücher zurückgeben
+- Bücher suchen</p>
+<p><strong>Bibliothekare können zusätzlich:</strong>
+- Neue Bücher ins System aufnehmen
+- Bücher aus dem System entfernen
+- Mahnungen verschicken</p>
+<p><strong>Das externe Bezahlsystem:</strong>
+- Wird kontaktiert, wenn Mahngebühren fällig sind</p>
+<h3 id="22-schritt-1-akteure-identifizieren">2.2 Schritt 1: Akteure identifizieren</h3>
+<p>Wir analysieren die Anforderungen und identifizieren die Rollen:</p>
+<ol>
+<li>
+<p><strong>Nutzer</strong> (primärer Akteur)
+   - Jemand, der Bücher ausleihen möchte</p>
+</li>
+<li>
+<p><strong>Bibliothekar</strong> (primärer Akteur)
+   - Mitarbeiter der Bibliothek mit erweiterten Rechten</p>
+</li>
+<li>
+<p><strong>Bezahlsystem</strong> (sekundärer Akteur)
+   - Externes System zur Abwicklung von Zahlungen</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Der Bibliothekar kann alles, was ein Nutzer kann, und noch mehr. Das ist eine Spezialisierung, die wir später mit Vererbung darstellen können.</p>
+</blockquote>
+<h3 id="23-schritt-2-anwendungsfalle-identifizieren">2.3 Schritt 2: Anwendungsfälle identifizieren</h3>
+<p>Aus den Anforderungen extrahieren wir die Use Cases:</p>
+<p><strong>Für Nutzer:</strong>
+- Buch ausleihen
+- Buch zurückgeben
+- Buch suchen</p>
+<p><strong>Für Bibliothekar:</strong>
+- Alle Use Cases des Nutzers
+- Buch hinzufügen
+- Buch entfernen
+- Mahnung verschicken</p>
+<h3 id="24-schritt-3-das-diagramm-zeichnen">2.4 Schritt 3: Das Diagramm zeichnen</h3>
+<p><img alt="Use-Case-Diagramm Bibliothekssystem" src="../bilder/uc-03.svg"></p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Akteure stehen außerhalb der Systemgrenze, Anwendungsfälle innerhalb. Linien zeigen, wer welche Anwendungsfälle nutzen kann.</p>
+</blockquote>
+<hr>
+<h2 id="3-erweiterte-konzepte-beziehungen-zwischen-use-cases">3. Erweiterte Konzepte: Beziehungen zwischen Use Cases</h2>
+<h3 id="31-warum-beziehungen">3.1 Warum Beziehungen?</h3>
+<p>In realen Systemen sind Anwendungsfälle oft nicht völlig unabhängig. Manche Use Cases teilen gemeinsame Schritte, andere sind Erweiterungen von Basis-Use-Cases. Um diese Zusammenhänge darzustellen, gibt es Beziehungen.</p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Beziehungen zwischen Use Cases sind ein fortgeschrittenes Konzept. Für einfache Systeme reichen oft Akteure, Use Cases und Systemgrenze aus.</p>
+</blockquote>
+<h3 id="32-include-beziehung-gemeinsame-teilschritte">3.2 Include-Beziehung: Gemeinsame Teilschritte</h3>
+<p><strong>Das Konzept:</strong></p>
+<p>Die <code>«include»</code>-Beziehung zeigt an, dass ein Use Case einen anderen Use Case <strong>immer</strong> als Teilschritt enthält.</p>
+<p><strong>Beispiel:</strong></p>
+<p>Beim "Geld abheben" und "Kontostand abfragen" muss der Kunde sich <strong>immer</strong> zuerst authentifizieren (PIN eingeben). Statt diesen Schritt in beiden Use Cases zu wiederholen, lagern wir ihn in einen eigenen Use Case "Authentifizieren" aus.</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Use-Case-Diagramm Include-Beziehung Geldautomat" src="../bilder/uc-04.svg"></p>
+<p><strong>Bedeutung:</strong> "Geld abheben" <strong>beinhaltet immer</strong> "Authentifizieren". Ohne Authentifizierung kann kein Geld abgehoben werden.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+<code>«include»</code> bedeutet: "Dieser Use Case enthält immer diesen anderen Use Case als notwendigen Teilschritt."</p>
+</blockquote>
+<h3 id="33-extend-beziehung-optionale-erweiterungen">3.3 Extend-Beziehung: Optionale Erweiterungen</h3>
+<p><strong>Das Konzept:</strong></p>
+<p>Die <code>«extend»</code>-Beziehung zeigt an, dass ein Use Case einen anderen Use Case <strong>optional</strong> erweitern kann.</p>
+<p><strong>Beispiel:</strong></p>
+<p>Beim "Ticket kaufen" kann optional der Use Case "Rabattcode eingeben" hinzukommen. Nicht jeder Kunde hat einen Rabattcode, aber wenn er einen hat, wird der Basis-Use-Case erweitert.</p>
+<p><strong>Visualisierung:</strong></p>
+<p><img alt="Use-Case-Diagramm Extend-Beziehung Ticketsystem" src="../bilder/uc-05.svg"></p>
+<p><strong>Bedeutung:</strong> "Rabattcode eingeben" <strong>erweitert optional</strong> "Ticket kaufen". Man kann ein Ticket auch ohne Rabattcode kaufen.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+<code>«extend»</code> bedeutet: "Dieser Use Case kann den anderen Use Case optional erweitern, ist aber nicht notwendig."</p>
+</blockquote>
+<h3 id="34-include-vs-extend-der-unterschied">3.4 Include vs. Extend: Der Unterschied</h3>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th><code>«include»</code></th>
+<th><code>«extend»</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Notwendigkeit</strong></td>
+<td>Immer notwendig</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><strong>Richtung</strong></td>
+<td>Basis-Use-Case inkludiert Teilschritt</td>
+<td>Erweiterung erweitert Basis</td>
+</tr>
+<tr>
+<td><strong>Beispiel</strong></td>
+<td>"Geld abheben" inkludiert "Authentifizieren"</td>
+<td>"Rabattcode eingeben" erweitert "Ticket kaufen"</td>
+</tr>
+<tr>
+<td><strong>Im Code</strong></td>
+<td>Methode wird immer aufgerufen</td>
+<td>Methode wird nur manchmal aufgerufen</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Warnung:</strong>
+Verwenden Sie <code>«include»</code> und <code>«extend»</code> sparsam. Zu viele Beziehungen machen das Diagramm unübersichtlich. Oft reicht ein einfaches Diagramm ohne Beziehungen aus.</p>
+</blockquote>
+<hr>
+<h2 id="4-use-case-diagramme-im-entwicklungsprozess">4. Use-Case-Diagramme im Entwicklungsprozess</h2>
+<h3 id="41-wann-erstelle-ich-use-case-diagramme">4.1 Wann erstelle ich Use-Case-Diagramme?</h3>
+<p>Use-Case-Diagramme entstehen in der <strong>Anforderungsanalyse</strong>, also ganz am Anfang eines Projekts.</p>
+<p><strong>Der typische Ablauf:</strong></p>
+<ol>
+<li><strong>Anforderungen sammeln</strong> (Gespräche mit Stakeholdern, Lastenheft)</li>
+<li><strong>Use-Case-Diagramm erstellen</strong> (Wer tut was?)</li>
+<li><strong>Use-Case-Beschreibungen schreiben</strong> (Detaillierte Textbeschreibung jedes Use Cases)</li>
+<li><strong>Weitere UML-Diagramme</strong> (Klassendiagramm, Sequenzdiagramm, etc.)</li>
+<li><strong>Implementierung</strong> (Code schreiben)</li>
+</ol>
+<p><strong>Visualisierung des Prozesses:</strong></p>
+<pre><code>Anforderungen
+     ↓
+Use-Case-Diagramm ← Wir sind hier
+     ↓
+Use-Case-Beschreibungen
+     ↓
+Klassendiagramm
+     ↓
+Sequenzdiagramm
+     ↓
+Code
+</code></pre>
+<h3 id="42-wie-use-case-diagramme-mit-anderen-diagrammen-zusammenhangen">4.2 Wie Use-Case-Diagramme mit anderen Diagrammen zusammenhängen</h3>
+<p>Use-Case-Diagramme sind der Startpunkt. Die anderen Diagramme bauen darauf auf:</p>
+<p><strong>Use-Case-Diagramm → Klassendiagramm</strong>
+- Use Cases zeigen, <strong>was</strong> das System tun soll
+- Klassendiagramm zeigt, <strong>womit</strong> (welche Klassen) wir das umsetzen</p>
+<p><strong>Use-Case-Diagramm → Aktivitätsdiagramm</strong>
+- Use Cases zeigen das Ziel
+- Aktivitätsdiagramm zeigt den detaillierten Ablauf (Schritte, Entscheidungen)</p>
+<p><strong>Use-Case-Diagramm → Sequenzdiagramm</strong>
+- Use Cases zeigen die Interaktion zwischen Akteur und System
+- Sequenzdiagramm zeigt, wie Objekte intern zusammenarbeiten</p>
+<p><strong>Beispiel am Geldautomaten:</strong></p>
+<p><img alt="Vom Use-Case-Diagramm zum Code: Geldautomat" src="../bilder/uc-06.svg"></p>
+<blockquote>
+<p><strong>Hinweis:</strong>
+Jedes Diagramm zeigt eine andere Perspektive auf dasselbe System. Zusammen ergeben sie ein vollständiges Bild.</p>
+</blockquote>
+<h3 id="43-praktische-tipps-fur-gute-use-case-diagramme">4.3 Praktische Tipps für gute Use-Case-Diagramme</h3>
+<p><strong>1. Halte es einfach</strong>
+- Nicht zu viele Use Cases (5-15 ist ein guter Bereich)
+- Nicht zu viele Beziehungen
+- Lieber mehrere einfache Diagramme als ein komplexes</p>
+<p><strong>2. Verwende die Perspektive des Akteurs</strong>
+- Richtig: "Buch ausleihen" (Sicht des Nutzers)
+- Falsch: "Ausleihe verarbeiten" (Sicht des Systems)</p>
+<p><strong>3. Vermeide technische Details</strong>
+- Richtig: "Rechnung drucken"
+- Falsch: "PDF generieren und an Drucker-API senden"</p>
+<p><strong>4. Ein Use Case = Ein Ziel</strong>
+- Richtig: "Ticket kaufen" (vollständiges Ziel)
+- Falsch: "Zahlungsmethode auswählen" (nur ein Teilschritt)</p>
+<p><strong>5. Dokumentiere die Use Cases</strong>
+- Das Diagramm ist nur der Überblick
+- Schreibe für jeden Use Case eine detaillierte Textbeschreibung</p>
+<p><strong>Beispiel einer Use-Case-Beschreibung:</strong></p>
+<pre><code>Use Case: Geld abheben
+Akteur: Kunde
+Vorbedingung: Kunde hat eine gültige Karte
+Nachbedingung: Geld wurde ausgegeben, Kontostand aktualisiert
+
+Normalablauf:
+1. Kunde steckt Karte ein
+2. System fordert PIN an
+3. Kunde gibt PIN ein
+4. System prüft PIN
+5. System zeigt Menü an
+6. Kunde wählt &quot;Geld abheben&quot;
+7. System fordert Betrag an
+8. Kunde gibt Betrag ein
+9. System prüft Kontostand
+10. System gibt Geld aus
+11. System aktualisiert Kontostand
+12. System gibt Karte zurück
+
+Alternativabläufe:
+4a. PIN ist falsch
+    4a1. System zeigt Fehlermeldung
+    4a2. Zurück zu Schritt 2
+    4a3. Nach 3 Fehlversuchen: Karte einbehalten
+
+9a. Kontostand nicht ausreichend
+    9a1. System zeigt Fehlermeldung
+    9a2. Zurück zu Schritt 7
+</code></pre>
+<p>Diese Textbeschreibung ist die Grundlage für die spätere Implementierung und für Aktivitätsdiagramme.</p>
+<hr>
+<h2 id="5-zusammenfassung">5. Zusammenfassung</h2>
+<h3 id="51-kernkonzepte">5.1 Kernkonzepte</h3>
+<p><strong>UML ist:</strong>
+- Eine standardisierte, visuelle Sprache für Softwaremodellierung
+- International anerkannt und verstanden
+- Unterteilt in Struktur- und Verhaltensdiagramme</p>
+<p><strong>Use-Case-Diagramme zeigen:</strong>
+- Die Außensicht auf ein System
+- Wer (Akteur) was (Use Case) mit dem System tun kann
+- Die Systemgrenze (was gehört zum System, was nicht)</p>
+<p><strong>Die drei Kernelemente:</strong>
+1. <strong>Akteure</strong>: Rollen oder externe Systeme (Strichmännchen, außerhalb)
+2. <strong>Anwendungsfälle</strong>: Ziele, die Akteure erreichen wollen (Ellipsen, innerhalb)
+3. <strong>Systemgrenze</strong>: Rechteck, das das System umschließt</p>
+<p><strong>Beziehungen (fortgeschritten):</strong>
+- <code>«include»</code>: Ein Use Case enthält immer einen anderen als Teilschritt
+- <code>«extend»</code>: Ein Use Case kann einen anderen optional erweitern</p>
+<h3 id="52-praktische-faustregeln">5.2 Praktische Faustregeln</h3>
+<ol>
+<li>
+<p><strong>Erstelle Use-Case-Diagramme am Anfang</strong>
+   - In der Anforderungsanalyse
+   - Vor dem Klassendiagramm und der Implementierung</p>
+</li>
+<li>
+<p><strong>Denke aus Sicht des Akteurs</strong>
+   - Was will der Nutzer erreichen?
+   - Nicht: Wie funktioniert das System intern?</p>
+</li>
+<li>
+<p><strong>Halte es einfach</strong>
+   - 5-15 Use Cases pro Diagramm
+   - Nicht zu viele Beziehungen
+   - Lieber mehrere einfache Diagramme</p>
+</li>
+<li>
+<p><strong>Dokumentiere detailliert</strong>
+   - Das Diagramm ist nur der Überblick
+   - Schreibe Use-Case-Beschreibungen</p>
+</li>
+<li>
+<p><strong>Verwende Use-Case-Diagramme als Grundlage</strong>
+   - Für Klassendiagramme
+   - Für Aktivitätsdiagramme
+   - Für die Implementierung</p>
+</li>
+</ol>
+<h3 id="53-vom-diagramm-zum-code">5.3 Vom Diagramm zum Code</h3>
+<p>Jeder Use Case wird zu einer Methode (oder mehreren Methoden) im Code. Das Use-Case-Diagramm ist die Blaupause für die Architektur.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Use-Case-Diagramme sind die Brücke zwischen Anforderungen und Code. Sie zeigen, was das System tun soll, bevor wir uns Gedanken machen, wie es das tut.</p>
+</blockquote>
+<hr>
+<p>Das Use-Case-Diagramm ist der erste Schritt in der visuellen Modellierung. Es legt das Fundament für alle weiteren Diagramme und für die Implementierung. Mit einem klaren Use-Case-Diagramm wissen alle Beteiligten, was das System leisten soll und für wen.</p>
+<hr>
+<h2 id="glossar">Glossar</h2>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UML (Unified Modeling Language)</td>
+<td>Standardisierte, grafische Sprache zur Modellierung von Software</td>
+</tr>
+<tr>
+<td>Strukturdiagramm</td>
+<td>UML-Diagrammkategorie, die den statischen Aufbau eines Systems zeigt (z. B. Klassendiagramm)</td>
+</tr>
+<tr>
+<td>Verhaltensdiagramm</td>
+<td>UML-Diagrammkategorie, die Abläufe und Interaktionen zeigt (z. B. Use-Case-, Aktivitäts-, Sequenz-, Zustandsdiagramm)</td>
+</tr>
+<tr>
+<td>Use-Case-Diagramm (Anwendungsfalldiagramm)</td>
+<td>Verhaltensdiagramm, das die Außensicht auf ein System zeigt: welcher Akteur welchen Anwendungsfall nutzen kann</td>
+</tr>
+<tr>
+<td>Akteur (Actor)</td>
+<td>Rolle oder externes System, das mit dem betrachteten System interagiert; steht immer außerhalb der Systemgrenze</td>
+</tr>
+<tr>
+<td>Primärer Akteur</td>
+<td>Akteur, der das System direkt nutzt und ein eigenes Ziel verfolgt (z. B. Kunde)</td>
+</tr>
+<tr>
+<td>Sekundärer Akteur</td>
+<td>Externes System, das unterstützend mit dem System kommuniziert (z. B. Bezahlsystem, Drucker)</td>
+</tr>
+<tr>
+<td>Anwendungsfall (Use Case)</td>
+<td>Konkretes, abgeschlossenes Ziel, das ein Akteur mit dem System erreichen will; dargestellt als Ellipse innerhalb der Systemgrenze</td>
+</tr>
+<tr>
+<td>Systemgrenze (System Boundary)</td>
+<td>Rechteck, das festlegt, was zum System gehört (innen) und was Außenwelt ist (außen)</td>
+</tr>
+<tr>
+<td>Assoziation (Association)</td>
+<td>Durchgezogene Linie zwischen Akteur und Use Case; bedeutet "nutzt"</td>
+</tr>
+<tr>
+<td>Include-Beziehung (<code>«include»</code>)</td>
+<td>Gestrichelte Beziehung: Ein Basis-Use-Case enthält einen anderen Use Case <strong>immer</strong> als notwendigen Teilschritt</td>
+</tr>
+<tr>
+<td>Extend-Beziehung (<code>«extend»</code>)</td>
+<td>Gestrichelte Beziehung: Ein Use Case erweitert einen Basis-Use-Case <strong>optional</strong></td>
+</tr>
+<tr>
+<td>Anforderungsanalyse</td>
+<td>Phase am Projektanfang, in der die Wünsche der Stakeholder erhoben werden (Grundlage für Use-Case-Diagramme)</td>
+</tr>
+<tr>
+<td>Use-Case-Beschreibung</td>
+<td>Detaillierte Textbeschreibung eines Use Cases mit Akteur, Vor-/Nachbedingung, Normal- und Alternativablauf</td>
+</tr>
+<tr>
+<td>Stakeholder</td>
+<td>Person oder Gruppe mit einem Interesse am Projekt (z. B. Auftraggeber, Nutzer)</td>
+</tr>
+</tbody>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_2.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 2: Use-Case-Diagramme</div></a><a class="blatt blatt--weiter" href="a2_ue_aufgaben-7-1-usecase.html"><div class="blatt-marke">Weiter ›</div><div class="blatt-titel">Aufgaben — Use-Case-Diagramme</div></a></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-das-use-case-diagramm-die-auensicht">1. Das Use-Case-Diagramm: Die Außensicht</a><a href="#11-warum-beginnen-wir-mit-use-case-diagrammen" class="stufe3">1.1 Warum beginnen wir mit Use-Case-Diagrammen?</a><a href="#12-die-drei-kernelemente" class="stufe3">1.2 Die drei Kernelemente</a><a href="#121-die-diagramm-elemente-im-detail" class="stufe3">1.2.1 Die Diagramm-Elemente im Detail</a><a href="#13-was-ist-ein-akteur" class="stufe3">1.3 Was ist ein Akteur?</a><a href="#14-was-ist-ein-anwendungsfall-use-case" class="stufe3">1.4 Was ist ein Anwendungsfall (Use Case)?</a><a href="#2-ein-vollstandiges-beispiel-bibliothekssystem">2. Ein vollständiges Beispiel: Bibliothekssystem</a><a href="#21-die-anforderungen-verstehen" class="stufe3">2.1 Die Anforderungen verstehen</a><a href="#22-schritt-1-akteure-identifizieren" class="stufe3">2.2 Schritt 1: Akteure identifizieren</a><a href="#23-schritt-2-anwendungsfalle-identifizieren" class="stufe3">2.3 Schritt 2: Anwendungsfälle identifizieren</a><a href="#24-schritt-3-das-diagramm-zeichnen" class="stufe3">2.4 Schritt 3: Das Diagramm zeichnen</a><a href="#3-erweiterte-konzepte-beziehungen-zwischen-use-cases">3. Erweiterte Konzepte: Beziehungen zwischen Use Cases</a><a href="#31-warum-beziehungen" class="stufe3">3.1 Warum Beziehungen?</a><a href="#32-include-beziehung-gemeinsame-teilschritte" class="stufe3">3.2 Include-Beziehung: Gemeinsame Teilschritte</a><a href="#33-extend-beziehung-optionale-erweiterungen" class="stufe3">3.3 Extend-Beziehung: Optionale Erweiterungen</a><a href="#34-include-vs-extend-der-unterschied" class="stufe3">3.4 Include vs. Extend: Der Unterschied</a><a href="#4-use-case-diagramme-im-entwicklungsprozess">4. Use-Case-Diagramme im Entwicklungsprozess</a><a href="#41-wann-erstelle-ich-use-case-diagramme" class="stufe3">4.1 Wann erstelle ich Use-Case-Diagramme?</a><a href="#42-wie-use-case-diagramme-mit-anderen-diagrammen-zusammenhangen" class="stufe3">4.2 Wie Use-Case-Diagramme mit anderen Diagrammen zusammenhängen</a><a href="#43-praktische-tipps-fur-gute-use-case-diagramme" class="stufe3">4.3 Praktische Tipps für gute Use-Case-Diagramme</a><a href="#5-zusammenfassung">5. Zusammenfassung</a><a href="#51-kernkonzepte" class="stufe3">5.1 Kernkonzepte</a><a href="#52-praktische-faustregeln" class="stufe3">5.2 Praktische Faustregeln</a><a href="#53-vom-diagramm-zum-code" class="stufe3">5.3 Vom Diagramm zum Code</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

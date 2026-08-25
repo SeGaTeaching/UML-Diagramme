@@ -1,0 +1,18 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Nutzer
+
+rectangle "Bibliothekssystem" {
+  usecase "Buch ausleihen" as UC1
+  usecase "Buch zurückgeben" as UC2
+  usecase "Ausweis prüfen" as UC3
+}
+
+Nutzer --> UC1
+Nutzer --> UC2
+
+UC1 .> UC3 : <<include>>
+UC2 .> UC3 : <<include>>
+@enduml

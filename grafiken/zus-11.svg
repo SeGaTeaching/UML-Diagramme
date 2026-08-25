@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="615px" preserveAspectRatio="none" style="width:1113px;height:615px;" version="1.1" viewBox="0 0 1113 615" width="1113px" zoomAndPan="magnify"><defs/><g><ellipse cx="375" cy="18" fill="#222222" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="75" x="337.5" y="89"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="337.5" x2="412.5" y1="115.2969" y2="115.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="347.5" y="106.9951">ImRegal</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="90" x="6" y="217"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="96" y1="243.2969" y2="243.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="16" y="234.9951">Reserviert</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="106" x="377" y="345"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="377" x2="483" y1="371.2969" y2="371.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="387" y="362.9951">Ausgeliehen</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="100" x="895" y="473"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="895" x2="995" y1="499.2969" y2="499.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="905" y="490.9951">InReparatur</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="78" x="391" y="473"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="391" x2="469" y1="499.2969" y2="499.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="58" x="401" y="490.9951">Verloren</text><ellipse cx="430" cy="594" fill="none" rx="10" ry="10" style="stroke: #222222; stroke-width: 1.0;"/><ellipse cx="430.5" cy="594.5" fill="#222222" rx="6" ry="6" style="stroke: none; stroke-width: 1.0;"/><!--link *start to ImRegal--><path d="M375,28.01 C375,40.7 375,64.41 375,83.57 " fill="none" id="*start-ImRegal" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="375,88.84,379,79.84,375,83.84,371,79.84,375,88.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link ImRegal to Reserviert--><path d="M337.34,115.38 C259.43,117.06 84.76,125.67 48,169 C38.2,180.56 38.34,197.29 41.22,211.72 " fill="none" id="ImRegal-Reserviert" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="42.38,216.92,44.2994,207.26,41.2787,212.0428,36.4959,209.0221,42.38,216.92" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="49" y="182.9951">reservieren()</text><!--link Reserviert to ImRegal--><path d="M91.1,216.82 C121.46,198.8 160.78,176.11 178,169 C229.29,147.82 291.48,132.36 332.08,123.53 " fill="none" id="Reserviert-ImRegal" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="337.42,122.39,327.7776,120.3838,332.5331,123.4474,329.4695,128.2029,337.42,122.39" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="169" x="179" y="182.9951">reservierungStornieren()</text><!--link ImRegal to Ausgeliehen--><path d="M378.58,139.09 C383.21,169.18 391.89,222.16 402,267 C407.59,291.77 415.31,319.54 421.23,339.84 " fill="none" id="ImRegal-Ausgeliehen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="422.69,344.84,424.0022,335.0789,421.2861,340.0411,416.324,337.3251,422.69,344.84" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="316" x="403" y="246.9951">ausleihen() / Ausleihfrist in Kalender eintragen</text><!--link Ausgeliehen to ImRegal--><path d="M483.18,362.55 C584.92,348.03 791.29,306.77 724,217 C686.96,167.59 502.68,134.12 417.86,121.09 " fill="none" id="Ausgeliehen-ImRegal" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="412.67,120.3,420.9756,125.5932,417.6145,121.0431,422.1645,117.682,412.67,120.3" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="219" x="738" y="246.9951">zurueckgeben() [kein Schaden]</text><!--link Reserviert to Ausgeliehen--><path d="M34.1,267.21 C25.67,282.51 19.48,301.81 31,315 C53.05,340.24 265.95,357.96 371.4,365.27 " fill="none" id="Reserviert-Ausgeliehen" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="376.65,365.63,367.9447,361.0237,371.6617,365.2879,367.3974,369.0049,376.65,365.63" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="316" x="32" y="310.9951">ausleihen() / Ausleihfrist in Kalender eintragen</text><!--link Ausgeliehen to InReparatur--><path d="M483.17,384.01 C581.36,408.03 790.16,459.12 889.83,483.5 " fill="none" id="Ausgeliehen-InReparatur" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="894.78,484.71,886.9854,478.6897,889.9226,483.5242,885.0881,486.4615,894.78,484.71" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="267" x="719" y="438.9951">zurueckgeben() [Schaden festgestellt]</text><!--link Ausgeliehen to Verloren--><path d="M430,395.29 C430,415.95 430,445.67 430,467.65 " fill="none" id="Ausgeliehen-Verloren" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="430,472.78,434,463.78,430,467.78,426,463.78,430,472.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="431" y="438.9951">verlustMelden()</text><!--link InReparatur to ImRegal--><path d="M974.46,472.93 C982.71,464.43 990.62,454.18 995,443 C1031.95,348.71 1036.44,289.76 966,217 C890,138.5 541.38,120.16 418.23,116.1 " fill="none" id="InReparatur-ImRegal" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="412.89,115.92,421.7472,120.2269,417.887,116.0918,422.0221,112.2316,412.89,115.92" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="1020" y="310.9951">reparieren()</text><!--link Verloren to *end--><path d="M430,523.21 C430,540.84 430,564.13 430,578.84 " fill="none" id="Verloren-*end" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="430,583.84,434,574.84,430,578.84,426,574.84,430,583.84" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+[*] - -> ImRegal
+
+ImRegal - -> Reserviert : reservieren()
+ImRegal - -> Ausgeliehen : ausleihen() / Ausleihfrist in Kalender eintragen
+
+Reserviert - -> Ausgeliehen : ausleihen() / Ausleihfrist in Kalender eintragen
+Reserviert - -> ImRegal : reservierungStornieren()
+
+Ausgeliehen - -> ImRegal : zurueckgeben() [kein Schaden]
+Ausgeliehen - -> InReparatur : zurueckgeben() [Schaden festgestellt]
+Ausgeliehen - -> Verloren : verlustMelden()
+
+InReparatur - -> ImRegal : reparieren()
+
+Verloren - -> [*]
+
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

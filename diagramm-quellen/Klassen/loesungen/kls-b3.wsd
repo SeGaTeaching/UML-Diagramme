@@ -1,0 +1,18 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+class Tier {
+  #name: String
+  #alter: int
+  +fressen(): void
+}
+class Hund {
+  -rasse: String
+  +bellen(): void
+}
+class Katze {
+  -farbe: String
+  +miauen(): void
+}
+Tier <|-- Hund
+Tier <|-- Katze
+@enduml

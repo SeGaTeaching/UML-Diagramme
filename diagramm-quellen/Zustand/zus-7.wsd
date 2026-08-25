@@ -1,0 +1,18 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+state DatenVerarbeiten {
+}
+DatenVerarbeiten : entry / Verbindung öffnen
+DatenVerarbeiten : do / Daten verarbeiten
+DatenVerarbeiten : exit / Verbindung schließen
+
+state KarteVerifizieren {
+}
+KarteVerifizieren : entry / Karte prüfen
+
+state BonDrucken {
+}
+BonDrucken : entry / Drucker initialisieren
+BonDrucken : do / Bon drucken
+BonDrucken : exit / Drucker herunterfahren
+@enduml

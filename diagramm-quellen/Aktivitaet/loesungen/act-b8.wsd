@@ -1,0 +1,29 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+skinparam ActivityDiamondBackgroundColor #FFF9C4
+skinparam ActivityDiamondBorderColor #FBC02D
+!pragma useVerticalIf on
+
+|#e3f2fd|Kunde|
+start
+:Kreditantrag stellen;
+|#fff3e0|Sachbearbeiter|
+:Unterlagen prüfen;
+:Bonität bewerten;
+if (Bonität ausreichend?) then ([nein])
+  :Antrag ablehnen;
+  |#e3f2fd|Kunde|
+  :Ablehnung erhalten;
+  stop
+else ([ja])
+  :Kredit genehmigen;
+endif
+|#e3f2fd|Kunde|
+:Vertrag unterschreiben;
+stop
+@enduml

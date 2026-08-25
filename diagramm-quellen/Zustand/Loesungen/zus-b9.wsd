@@ -1,0 +1,29 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Puffern
+
+state Puffern
+Puffern : entry / Ladeanzeige einblenden
+Puffern : do / Daten laden
+
+state Abspielen
+Abspielen : entry / Ladeanzeige ausblenden
+Abspielen : do / Video wiedergeben
+
+state Pausiert
+Pausiert : entry / Wiedergabe anhalten
+
+state Fehler
+Fehler : entry / Fehlermeldung anzeigen
+
+Puffern --> Abspielen : pufferVoll() [Verbindung stabil]
+Puffern --> Fehler : verbindungVerloren()
+
+Abspielen --> Pausiert : pause()
+Pausiert --> Abspielen : play()
+
+Abspielen --> Puffern : bandbreiteZuNiedrig()
+Abspielen --> Fehler : verbindungVerloren()
+
+Fehler --> Puffern : verbindungWiederhergestellt()
+@enduml

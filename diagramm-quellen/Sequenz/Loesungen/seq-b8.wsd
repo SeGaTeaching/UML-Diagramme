@@ -1,0 +1,60 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Bewohner
+participant "app: Smart-Home-App" as App
+participant "system: Smart-Home-System" as System
+participant "szenario: Szenario" as Szenario
+participant "rollladen: Rollläden" as Rollladen
+participant "kaffee: Kaffeemaschine" as Kaffee
+participant "heizung: Heizung" as Heizung
+
+Bewohner -> App: aktiviereGutenMorgenModus()
+activate App
+
+App -> System: starteGutenMorgenModus()
+activate System
+
+create Szenario
+System -> Szenario: <<create>>("Guten-Morgen")
+activate Szenario
+Szenario --> System:
+deactivate Szenario
+
+loop für jedes Gerät in Geräteliste
+    System -> System: pruefeGeraetStatus(geraet)
+end
+
+alt alle Geräte online
+    System -> Szenario: starten()
+    activate Szenario
+
+    par Parallele Gerätesteuerung
+        Szenario -> Rollladen: oeffnen()
+        activate Rollladen
+        Rollladen --> Szenario:
+        deactivate Rollladen
+    else
+        Szenario -> Kaffee: einschalten()
+        activate Kaffee
+        Kaffee --> Szenario:
+        deactivate Kaffee
+    else
+        Szenario -> Heizung: setzeTemperatur(21)
+        activate Heizung
+        Heizung --> Szenario:
+        deactivate Heizung
+    end
+
+    Szenario --> System:
+    deactivate Szenario
+
+    System -> App: sendePushBenachrichtigung("Guten-Morgen-Modus aktiviert")
+    App --> Bewohner: zeigeBenachrichtigung()
+else einige Geräte offline
+    System -> App: zeigeFehlermeldung("Einige Geräte sind offline", offlineGeraete)
+    App --> Bewohner: zeigeFehlermeldung()
+end
+
+deactivate System
+deactivate App
+@enduml

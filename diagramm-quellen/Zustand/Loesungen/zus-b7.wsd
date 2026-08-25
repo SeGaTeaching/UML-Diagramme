@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Offen
+
+Offen --> InBearbeitung : bearbeitungStarten()
+InBearbeitung --> Geloest : loesen()
+InBearbeitung --> Offen : bearbeitungAbbrechen()
+Geloest --> Geschlossen : schliessen()
+Geschlossen --> Offen : wiedereroeffnen() [innerhalb Garantiezeit]
+
+Geschlossen --> [*]
+@enduml

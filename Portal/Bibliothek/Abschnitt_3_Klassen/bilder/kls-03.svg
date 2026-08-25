@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="162px" preserveAspectRatio="none" style="width:281px;height:162px;" version="1.1" viewBox="0 0 281 162" width="281px" zoomAndPan="magnify"><defs/><g><!--class Konto--><rect fill="#E3F2FD" height="143.7813" id="Konto" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="264" x="6" y="8"/><ellipse cx="113.5" cy="23" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M115.8906,27.7031 Q115.4063,27.9531 114.875,28.0781 Q114.3594,28.2031 113.7813,28.2031 Q111.7188,28.2031 110.625,26.8438 Q109.5469,25.4844 109.5469,22.9063 Q109.5469,20.3281 110.625,18.9688 Q111.7188,17.6094 113.7813,17.6094 Q114.3594,17.6094 114.8906,17.7344 Q115.4219,17.8594 115.8906,18.0938 L115.8906,20.3438 Q115.375,19.8594 114.875,19.6406 Q114.3906,19.4219 113.875,19.4219 Q112.7656,19.4219 112.2031,20.2969 Q111.6406,21.1719 111.6406,22.9063 Q111.6406,24.625 112.2031,25.5156 Q112.7656,26.3906 113.875,26.3906 Q114.3906,26.3906 114.875,26.1719 Q115.375,25.9375 115.8906,25.4688 L115.8906,27.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="132.5" y="27.8467">Konto</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="269" y1="38" y2="38"/><polygon fill="none" points="17,46.6484,21,50.6484,17,54.6484,13,50.6484" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="147" x="25" y="54.9951">kontonummer: String</text><polygon fill="none" points="17,62.9453,21,66.9453,17,70.9453,13,66.9453" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="25" y="71.292">kontostand: double</text><polygon fill="none" points="17,79.2422,21,83.2422,17,87.2422,13,83.2422" style="stroke: #B38D22; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="101" x="25" y="87.5889">inhaber: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="269" y1="94.8906" y2="94.8906"/><ellipse cx="17" cy="108.5391" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="216" x="25" y="111.8857">einzahlen(betrag: double): void</text><ellipse cx="17" cy="124.8359" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="239" x="25" y="128.1826">abheben(betrag: double): boolean</text><ellipse cx="17" cy="141.1328" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="170" x="25" y="144.4795">getKontostand(): double</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+class Konto {
+  #kontonummer: String
+  #kontostand: double
+  #inhaber: String
+  +einzahlen(betrag: double): void
+  +abheben(betrag: double): boolean
+  +getKontostand(): double
+}
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

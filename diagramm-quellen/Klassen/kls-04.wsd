@@ -1,0 +1,15 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Konto {
+  #kontonummer: String
+  #kontostand: double
+  #inhaber: String
+  +einzahlen(betrag: double): void
+  +abheben(betrag: double): boolean
+}
+class Sparkonto {
+  -zinssatz: double
+  +zinsenBerechnen(): double
+}
+Konto <|-- Sparkonto
+@enduml

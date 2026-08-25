@@ -1,0 +1,7 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+left to right direction
+rectangle "Geldautomat-System" {
+  usecase "Geld abheben" as UC1
+}
+@enduml

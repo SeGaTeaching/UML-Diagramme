@@ -1,0 +1,16 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+left to right direction
+
+actor Kunde
+actor "Zahlungsdienstleister" as Zahlung
+
+rectangle "Online-Shop" {
+  usecase "Produkt suchen" as UC1
+  usecase "Bestellung aufgeben" as UC2
+}
+
+Kunde --> UC1
+Kunde --> UC2
+UC2 --> Zahlung : kommuniziert mit
+@enduml

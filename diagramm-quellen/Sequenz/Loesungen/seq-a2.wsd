@@ -1,0 +1,30 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Kunde
+participant "automat: Geldautomat" as Automat
+participant "bank: Bankserver" as Bank
+
+Kunde -> Automat: karteEinfuehren()
+activate Automat
+
+Automat -> Bank: pruefeKarte(kartennummer)
+activate Bank
+Bank --> Automat: kartenStatus
+deactivate Bank
+
+Kunde -> Automat: gibPinEin(pin)
+Automat -> Bank: pruefePin(kartennummer, pin)
+activate Bank
+Bank --> Automat: pinKorrekt
+deactivate Bank
+
+Kunde -> Automat: gibBetragEin(betrag)
+Automat -> Bank: pruefeGuthaben(kartennummer, betrag)
+activate Bank
+Bank --> Automat: guthabenAusreichend
+deactivate Bank
+
+Automat -> Automat: zaehleScheineAus(betrag)
+Automat --> Kunde: gibGeldAus(betrag)
+deactivate Automat
+@enduml

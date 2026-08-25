@@ -1,0 +1,22 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Kunde
+participant "app: TrackingApp" as App
+participant "dienst: Paketdienst" as Dienst
+
+Kunde -> App: verfolgePaket(sendungsnummer)
+activate App
+
+App -> Dienst: holeStatus(sendungsnummer)
+activate Dienst
+
+loop für jeden Checkpoint
+    Dienst -> Dienst: pruefeCheckpoint()
+end
+
+Dienst --> App: statusverlauf
+deactivate Dienst
+
+App --> Kunde: zeigeStatusverlauf(statusverlauf)
+deactivate App
+@enduml

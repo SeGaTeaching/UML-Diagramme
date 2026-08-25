@@ -1,0 +1,802 @@
+/* ===========================================================================
+   Lernportal – Grundgerüst
+   ---------------------------------------------------------------------------
+   Herstellerneutral. Die Akzentfarbe des Kurses kommt aus kurs.css, die der
+   Generator aus kurs_konfig.json erzeugt. Hier steht keine einzige Kursfarbe.
+
+   Aufbau dieser Datei:
+     1  Grundwerte (Abstandsleiter, Typografie, Maße)
+     2  Farben hell / dunkel
+     3  Grundelemente
+     4  Kopfzeile und Lesefortschritt
+     5  Seitengerüst (drei Spalten)
+     6  Seitenleiste links
+     7  Inhaltsspalte: Typografie und Fließtext-Bausteine
+     8  Rechte Spalte "Auf dieser Seite"
+     9  Blättern, Fußzeile
+    10  Schmale Fenster
+    11  Druck
+   =========================================================================== */
+
+/* --------------------------------------------------------------- 1 Grundwerte */
+:root {
+  /* Abstandsleiter: ausschließlich Vielfache von 4. Der Grund, warum
+     Oberflächen ruhig wirken, ist nicht der einzelne Wert, sondern dass es
+     wenige davon gibt. Neue Abstände nur aus dieser Leiter. */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  --rund-s: 6px;
+  --rund-m: 10px;
+  --rund-l: 14px;
+
+  --schrift: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  --schrift-fest: "Cascadia Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Maße des Gerüsts */
+  --mass: 74ch;              /* Lesebreite: 60–80 Zeichen je Zeile */
+  --kopf-hoehe: 56px;
+  --nav-breite: 280px;
+  --toc-breite: 220px;
+  --spalten-abstand: 56px;
+  --rahmen-max: 1440px;
+}
+
+/* ------------------------------------------------------------------ 2 Farben */
+/* Die helle Palette ist die Grundfassung. Der dunkle Modus definiert nur die
+   Tokens neu, nie einzelne Regeln. Drei Zustände: Systemvorgabe, ausdrücklich
+   hell, ausdrücklich dunkel. */
+:root {
+  --grund: #f5f6f8;
+  --flaeche: #ffffff;
+  --flaeche-2: #eef0f4;
+  --flaeche-3: #e4e8ee;
+
+  --text: #15181d;
+  --text-2: #545b66;
+  --text-3: #79808b;
+
+  --linie: #e1e5ea;
+  --linie-2: #c9d0d9;
+
+  --ok: #1a7f37;
+  --ok-weich: #e7f5ec;
+  --fehler: #c0392b;
+  --fehler-weich: #fdeaea;
+  --warn: #a8620a;
+  --warn-weich: #fdf3e4;
+  --erg: #7448cf;
+  --erg-weich: #f4efff;
+
+  --code-grund: #eceff3;
+  --block-grund: #1d2430;
+  --block-text: #e8edf5;
+
+  --schatten-1: 0 1px 2px rgba(16, 24, 40, .05);
+  --schatten-2: 0 1px 2px rgba(16, 24, 40, .05), 0 6px 16px rgba(16, 24, 40, .06);
+  --schatten-3: 0 2px 4px rgba(16, 24, 40, .06), 0 12px 28px rgba(16, 24, 40, .10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-thema="hell"]) {
+    --grund: #12151a;
+    --flaeche: #1a1f26;
+    --flaeche-2: #222831;
+    --flaeche-3: #2b323c;
+
+    --text: #e7eaee;
+    --text-2: #a5adb8;
+    --text-3: #7f8894;
+
+    --linie: #2a313a;
+    --linie-2: #3b434e;
+
+    --ok: #4ec97a;
+    --ok-weich: #16301f;
+    --fehler: #f0776a;
+    --fehler-weich: #341c1a;
+    --warn: #e0a651;
+    --warn-weich: #33270f;
+    --erg: #b295f5;
+    --erg-weich: #25203a;
+
+    --code-grund: #252c35;
+    --block-grund: #0e1319;
+    --block-text: #dfe6ef;
+
+    --schatten-1: 0 1px 2px rgba(0, 0, 0, .4);
+    --schatten-2: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 16px rgba(0, 0, 0, .35);
+    --schatten-3: 0 2px 4px rgba(0, 0, 0, .45), 0 12px 28px rgba(0, 0, 0, .45);
+  }
+}
+
+:root[data-thema="dunkel"] {
+  --grund: #12151a;
+  --flaeche: #1a1f26;
+  --flaeche-2: #222831;
+  --flaeche-3: #2b323c;
+
+  --text: #e7eaee;
+  --text-2: #a5adb8;
+  --text-3: #7f8894;
+
+  --linie: #2a313a;
+  --linie-2: #3b434e;
+
+  --ok: #4ec97a;
+  --ok-weich: #16301f;
+  --fehler: #f0776a;
+  --fehler-weich: #341c1a;
+  --warn: #e0a651;
+  --warn-weich: #33270f;
+  --erg: #b295f5;
+  --erg-weich: #25203a;
+
+  --code-grund: #252c35;
+  --block-grund: #0e1319;
+  --block-text: #dfe6ef;
+
+  --schatten-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --schatten-2: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 16px rgba(0, 0, 0, .35);
+  --schatten-3: 0 2px 4px rgba(0, 0, 0, .45), 0 12px 28px rgba(0, 0, 0, .45);
+}
+
+/* ----------------------------------------------------------- 3 Grundelemente */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--text);
+  font-family: var(--schrift);
+  font-size: 1.0625rem;          /* 17px – bewusst größer als Browser-Standard */
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--akzent); }
+
+::selection { background: var(--akzent-weich); }
+
+:focus-visible {
+  outline: 2px solid var(--akzent);
+  outline-offset: 2px;
+  border-radius: var(--rund-s);
+}
+
+/* Sprungmarke: erstes fokussierbares Element der Seite, überspringt die
+   Navigation. Für Tastatur- und Screenreader-Nutzung. */
+.sprungmarke {
+  position: absolute;
+  left: var(--s4);
+  top: -60px;
+  z-index: 60;
+  background: var(--akzent);
+  color: var(--auf-akzent);
+  padding: var(--s2) var(--s4);
+  border-radius: var(--rund-s);
+  text-decoration: none;
+  font-weight: 600;
+  transition: top .15s;
+}
+.sprungmarke:focus { top: var(--s2); }
+
+/* Knöpfe – eine Grundform für das ganze Portal */
+.knopf {
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 600;
+  padding: var(--s2) var(--s4);
+  border-radius: var(--rund-m);
+  border: 1px solid var(--linie-2);
+  background: var(--flaeche);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  transition: background .12s, border-color .12s;
+}
+.knopf:hover { background: var(--flaeche-2); border-color: var(--text-3); }
+.knopf--stark {
+  background: var(--akzent);
+  border-color: var(--akzent);
+  color: var(--auf-akzent);
+}
+.knopf--stark:hover { filter: brightness(1.08); background: var(--akzent); }
+.knopf--klein { font-size: .82rem; padding: var(--s1) var(--s3); }
+
+/* --------------------------------------------------- 4 Kopfzeile, Fortschritt */
+.kopf {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: var(--kopf-hoehe);
+  background: var(--flaeche);
+  border-bottom: 1px solid var(--linie);
+}
+.kopf-innen {
+  max-width: var(--rahmen-max);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--s6);
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+}
+
+/* Die Marke oben links ist der Heimatlink – die stärkste Konvention im Web.
+   Vorher stand hier ein totes <b> an der prominentesten Stelle der Seite. */
+.marke {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: .97rem;
+  white-space: nowrap;
+}
+.marke:hover .marke-name { color: var(--akzent); }
+.marke-zeichen {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 8px;
+  background: var(--akzent);
+  color: var(--auf-akzent);
+  display: grid;
+  place-items: center;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.marke-zusatz {
+  color: var(--text-3);
+  font-weight: 400;
+  font-size: .88rem;
+  border-left: 1px solid var(--linie);
+  padding-left: var(--s3);
+  margin-left: var(--s1);
+}
+.kopf-rechts { margin-left: auto; display: flex; align-items: center; gap: var(--s2); }
+
+.themaschalter {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  justify-content: center;
+  border-radius: var(--rund-m);
+}
+/* Der Schalter zeigt, wohin er führt: bei heller Ansicht den Mond, bei dunkler
+   die Sonne. Die drei Zustände in derselben Reihenfolge wie bei den Farben —
+   Grundfassung, Systemvorgabe, ausdrückliche Wahl. */
+.themaschalter .sonne { display: none; }
+.themaschalter .mond  { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-thema="hell"]) .themaschalter .sonne { display: block; }
+  :root:not([data-thema="hell"]) .themaschalter .mond  { display: none; }
+}
+:root[data-thema="dunkel"] .themaschalter .sonne { display: block; }
+:root[data-thema="dunkel"] .themaschalter .mond  { display: none; }
+:root[data-thema="hell"] .themaschalter .sonne { display: none; }
+:root[data-thema="hell"] .themaschalter .mond  { display: block; }
+
+.menuknopf { display: none; width: 34px; height: 34px; padding: 0; justify-content: center; }
+
+/* Lesefortschritt: 3 px unter der Kopfzeile. Beantwortet "wie viel kommt noch". */
+.fortschritt {
+  position: fixed;
+  top: var(--kopf-hoehe);
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--akzent);
+  z-index: 41;
+  transition: width .1s linear;
+}
+
+/* ---------------------------------------------------------- 5 Seitengerüst */
+.schale {
+  max-width: var(--rahmen-max);
+  margin: 0 auto;
+  padding: 0 var(--s6);
+  display: grid;
+  grid-template-columns: var(--nav-breite) minmax(0, 1fr) var(--toc-breite);
+  gap: var(--spalten-abstand);
+  align-items: start;
+}
+/* Seiten ohne Navigation (Startseite) laufen einspaltig, aber in Lesebreite. */
+.schale--schlicht {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1000px;
+}
+
+/* ------------------------------------------------------- 6 Seitenleiste links */
+.navseite {
+  position: sticky;
+  top: var(--kopf-hoehe);
+  max-height: calc(100vh - var(--kopf-hoehe));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--s5) var(--s5) var(--s7) 0;
+  border-right: 1px solid var(--linie);
+  font-size: .9rem;
+}
+.navseite::-webkit-scrollbar { width: 8px; }
+.navseite::-webkit-scrollbar-thumb { background: var(--linie-2); border-radius: 4px; }
+
+.navseite a {
+  display: block;
+  padding: var(--s2) var(--s3);
+  border-radius: var(--rund-s);
+  border-left: 3px solid transparent;
+  color: var(--text-2);
+  text-decoration: none;
+  line-height: 1.45;
+}
+.navseite a:hover { background: var(--flaeche-2); color: var(--text); }
+.navseite a.hier {
+  background: var(--akzent-weich);
+  border-left-color: var(--akzent);
+  color: var(--akzent);
+  font-weight: 650;
+}
+
+/* Heimatlink ganz oben – nicht unten hinter allen anderen Abschnitten. */
+.nav-heim {
+  font-weight: 650;
+  color: var(--text) !important;
+  display: flex !important;
+  align-items: center;
+  gap: var(--s2);
+}
+
+/* Abschnittswechsler: klappt ohne JavaScript, weil <details>. */
+.nav-wechsler { margin-top: var(--s2); }
+.nav-wechsler > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: var(--s2) var(--s3);
+  border: 1px solid var(--linie-2);
+  border-radius: var(--rund-m);
+  background: var(--flaeche);
+  color: var(--text);
+  font-weight: 600;
+  font-size: .87rem;
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+.nav-wechsler > summary::-webkit-details-marker { display: none; }
+.nav-wechsler > summary:after {
+  content: "";
+  margin-left: auto;
+  width: 7px; height: 7px;
+  border-right: 2px solid var(--text-3);
+  border-bottom: 2px solid var(--text-3);
+  transform: rotate(45deg) translateY(-2px);
+}
+.nav-wechsler[open] > summary:after { transform: rotate(-135deg) translateY(-2px); }
+.nav-wechsler > summary:hover { border-color: var(--akzent); }
+.nav-wechsler-liste { padding: var(--s2) 0 0; }
+.nav-wechsler-liste a { font-size: .86rem; }
+
+/* Gruppen: die Trennung macht die Haarlinie, nicht der Weißraum allein. */
+.nav-gruppe { margin-top: var(--s5); padding-top: var(--s5); border-top: 1px solid var(--linie); }
+.nav-gruppe-titel {
+  font-size: .69rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 700;
+  color: var(--text-3);
+  padding: 0 var(--s3);
+  margin-bottom: var(--s2);
+}
+
+/* Einklappbare Gruppe. Die Zahl rechts sagt, was in einer zugeklappten Gruppe
+   steckt – ohne sie ist Zuklappen ein Informationsverlust. */
+details.nav-gruppe > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s1) var(--s3);
+  margin: 0 calc(var(--s3) * -1) var(--s1);
+  border-radius: var(--rund-s);
+}
+details.nav-gruppe > summary::-webkit-details-marker { display: none; }
+details.nav-gruppe > summary:hover { background: var(--flaeche-2); }
+details.nav-gruppe > summary:hover .nav-gruppe-titel { color: var(--text-2); }
+details.nav-gruppe > summary .nav-gruppe-titel { padding: 0; margin: 0; }
+.nav-gruppe-anzahl {
+  margin-left: auto;
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--text-3);
+  background: var(--flaeche-2);
+  border-radius: 20px;
+  padding: 0 6px;
+  line-height: 1.55;
+}
+details.nav-gruppe > summary:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-right: 1.6px solid var(--text-3);
+  border-bottom: 1.6px solid var(--text-3);
+  transform: rotate(-45deg);
+  transition: transform .15s;
+}
+details.nav-gruppe[open] > summary:after { transform: rotate(45deg); }
+/* Enthält die Gruppe die aktuelle Seite, wird ihr Titel kräftiger – man sieht
+   im zugeklappten Zustand, wo man steckt. */
+details.nav-gruppe:has(a.hier) > summary .nav-gruppe-titel { color: var(--akzent); }
+
+.nav-schluss {
+  margin-top: var(--s5);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--linie);
+  font-size: .78rem;
+  color: var(--text-3);
+  padding-left: var(--s3);
+}
+
+.navschatten { display: none; }
+
+/* --------------------------------------------- 7 Inhaltsspalte und Fließtext */
+.inhalt { min-width: 0; padding: var(--s6) 0 var(--s8); }
+.inhalt > * { max-width: var(--mass); }
+
+.krume {
+  font-size: .82rem;
+  color: var(--text-3);
+  margin-bottom: var(--s5);
+}
+.krume a { color: var(--text-2); text-decoration: none; }
+.krume a:hover { color: var(--akzent); text-decoration: underline; }
+.krume span { margin: 0 var(--s1); color: var(--linie-2); }
+
+h1 {
+  font-size: 2.05rem;
+  line-height: 1.22;
+  letter-spacing: -.021em;
+  margin: 0 0 var(--s5);
+  font-weight: 750;
+}
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  letter-spacing: -.012em;
+  margin: var(--s7) 0 var(--s4);
+  padding-bottom: var(--s2);
+  border-bottom: 1px solid var(--linie);
+  font-weight: 700;
+}
+h3 { font-size: 1.13rem; margin: var(--s6) 0 var(--s3); font-weight: 700; }
+h4 { font-size: 1rem; margin: var(--s5) 0 var(--s2); font-weight: 700; color: var(--text-2); }
+
+/* Unterkapitel im Fließtext.
+   Das eigentliche Problem war nicht die fehlende Trennlinie, sondern die
+   Konkurrenz: fette Satzanfänge wie "Stolperstelle:" waren genauso laut wie
+   die Überschrift. Deshalb zwei Maßnahmen zusammen — die Überschrift wird
+   größer und schwerer, das Fließtext-Fett etwas leiser (siehe strong).
+   Der Akzentbalken links ist bewusst ein anderes Mittel als die durchgehende
+   Haarlinie der h2: er trennt nicht, er markiert. Und er spricht dieselbe
+   Sprache wie der aktive Punkt in Seitenleiste und rechter Spalte.
+   Gilt nur für direkte Kinder von .inhalt – Karteikarten und Übungen bringen
+   eigene h3 mit, die davon unberührt bleiben. */
+.inhalt > h3 {
+  position: relative;
+  font-size: 1.26rem;
+  font-weight: 760;
+  letter-spacing: -.012em;
+  margin: var(--s7) 0 var(--s3);
+  padding-left: 15px;
+}
+.inhalt > h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .16em;
+  bottom: .16em;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--akzent);
+}
+
+p { margin: 0 0 var(--s4); }
+ul, ol { margin: 0 0 var(--s4); padding-left: var(--s5); }
+li { margin: var(--s1) 0; }
+li > ul, li > ol { margin: var(--s1) 0; }
+
+hr { border: 0; border-top: 1px solid var(--linie); margin: var(--s7) 0; }
+
+/* Bewusst leichter als früher (680): Fett im Fließtext soll betonen, nicht mit
+   den Unterkapitel-Überschriften konkurrieren. */
+strong { font-weight: 620; }
+
+/* Überschriften bekommen beim Überfahren eine Ankermarke. */
+.inhalt h2, .inhalt h3 { scroll-margin-top: calc(var(--kopf-hoehe) + var(--s4)); }
+
+/* Tabellen laufen in einer eigenen Scroll-Hülle, damit die Seite nie
+   waagerecht scrollt. */
+.tabellenhuelle {
+  overflow-x: auto;
+  margin: var(--s5) 0;
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-m);
+  background: var(--flaeche);
+}
+.tabellenhuelle table { margin: 0; border: 0; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { padding: var(--s3) var(--s4); text-align: left; vertical-align: top; border-bottom: 1px solid var(--linie); }
+th { background: var(--flaeche-2); font-weight: 680; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+
+code {
+  background: var(--code-grund);
+  padding: .12em .38em;
+  border-radius: var(--rund-s);
+  font-family: var(--schrift-fest);
+  font-size: .88em;
+}
+pre {
+  background: var(--block-grund);
+  color: var(--block-text);
+  padding: var(--s4) var(--s5);
+  border-radius: var(--rund-m);
+  overflow-x: auto;
+  margin: var(--s5) 0;
+  font-size: .88rem;
+  line-height: 1.6;
+}
+pre code { background: none; padding: 0; color: inherit; font-size: 1em; }
+
+blockquote {
+  margin: var(--s5) 0;
+  padding: var(--s3) var(--s5);
+  border-left: 3px solid var(--linie-2);
+  color: var(--text-2);
+  background: var(--flaeche-2);
+  border-radius: 0 var(--rund-m) var(--rund-m) 0;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+/* Umsetzungsbox: die zweite Ebene des Konzept/Produkt-Aufbaus (Regel A5).
+   Bewusst abgesetzt, damit sie für einen herstellerfreien Kurs mit einem
+   Handgriff entfernbar bleibt. */
+blockquote.umsetzung {
+  border-left-color: var(--akzent);
+  background: var(--akzent-weich);
+  color: var(--text);
+}
+blockquote.umsetzung:before {
+  content: attr(data-marke);
+  display: block;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  font-weight: 800;
+  color: var(--akzent);
+  margin-bottom: var(--s2);
+}
+
+.hinweis {
+  background: var(--akzent-weich);
+  border: 1px solid var(--akzent);
+  border-radius: var(--rund-m);
+  padding: var(--s3) var(--s5);
+  margin: var(--s5) 0;
+}
+.hinweis p:last-child { margin-bottom: 0; }
+
+.ergnote {
+  background: var(--erg-weich);
+  border-left: 3px solid var(--erg);
+  border-radius: 0 var(--rund-m) var(--rund-m) 0;
+  padding: var(--s3) var(--s5);
+  margin: var(--s5) 0;
+  font-size: .95rem;
+}
+
+.merker-erg {
+  display: inline-block;
+  background: var(--erg-weich);
+  color: var(--erg);
+  border: 1px solid var(--erg);
+  border-radius: 20px;
+  padding: 0 var(--s2);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  vertical-align: middle;
+  margin-left: var(--s2);
+  line-height: 1.6;
+}
+/* In der Navigation schrumpft der Ergänzungs-Merker zum Punkt. Als Pille
+   erzwingt er bei langen Titeln einen zusätzlichen Zeilenumbruch und kostet
+   damit mehr Platz als der Titel selbst. Der Text bleibt für Vorleseprogramme
+   erhalten, sichtbar ist er auf der Seite selbst. */
+.navseite .merker-erg {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  margin-left: 6px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--erg);
+  overflow: hidden;
+  text-indent: -999px;
+  vertical-align: middle;
+}
+
+.quellenbox {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-l);
+  padding: var(--s5);
+  margin: var(--s6) 0;
+}
+.quellenbox h2 { border: 0; margin: 0 0 var(--s3); font-size: 1.1rem; padding: 0; }
+.quellenbox table { font-size: .88rem; }
+
+/* Klappbox im Fließtext (nicht die der Karteikarten – die sind eigenständig) */
+.inhalt > details {
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-left: 3px solid var(--linie-2);
+  border-radius: var(--rund-m);
+  margin: var(--s3) 0;
+  padding: var(--s3) var(--s5);
+}
+.inhalt > details > summary { cursor: pointer; font-weight: 640; list-style: none; }
+.inhalt > details > summary::-webkit-details-marker { display: none; }
+.inhalt > details > summary:before { content: "▸ "; color: var(--text-3); }
+.inhalt > details[open] > summary:before { content: "▾ "; }
+
+img { max-width: 100%; height: auto; border-radius: var(--rund-m); margin: var(--s4) 0; }
+
+li.aufgabe { list-style: none; margin-left: calc(var(--s5) * -1); }
+li.aufgabe input { margin-right: var(--s2); transform: scale(1.15); }
+
+/* ---------------------------------------------- 8 Rechte Spalte "Auf dieser Seite" */
+.toc {
+  position: sticky;
+  top: var(--kopf-hoehe);
+  max-height: calc(100vh - var(--kopf-hoehe));
+  overflow-y: auto;
+  padding: var(--s6) 0 var(--s7);
+  font-size: .83rem;
+}
+.toc-titel {
+  font-size: .69rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 700;
+  color: var(--text-3);
+  margin-bottom: var(--s3);
+  padding-left: var(--s3);
+}
+.toc a {
+  display: block;
+  padding: var(--s1) var(--s2) var(--s1) var(--s3);
+  border-left: 2px solid var(--linie);
+  color: var(--text-2);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.toc a:hover { color: var(--text); border-left-color: var(--linie-2); }
+.toc a.hier { color: var(--akzent); border-left-color: var(--akzent); font-weight: 640; }
+.toc a.stufe3 { padding-left: var(--s5); font-size: .95em; }
+
+/* ------------------------------------------------- 9 Blättern und Fußzeile */
+.weiterblaettern {
+  display: flex;
+  gap: var(--s4);
+  margin-top: var(--s8);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--linie);
+  max-width: var(--mass);
+}
+.blatt {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund-m);
+  background: var(--flaeche);
+  text-decoration: none;
+  color: var(--text);
+}
+.blatt:hover { border-color: var(--akzent); box-shadow: var(--schatten-1); }
+.blatt-marke { font-size: .74rem; color: var(--text-3); font-weight: 600; }
+.blatt-titel { font-weight: 650; line-height: 1.35; }
+.blatt--weiter { text-align: right; }
+
+.fusszeile {
+  max-width: var(--mass);
+  margin-top: var(--s8);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--linie);
+  color: var(--text-3);
+  font-size: .8rem;
+}
+
+/* -------------------------------------------------------- 10 Schmale Fenster */
+/* Unter 1200 px fällt die rechte Spalte weg. */
+@media (max-width: 1200px) {
+  .schale { grid-template-columns: var(--nav-breite) minmax(0, 1fr); --spalten-abstand: 44px; }
+  .toc { display: none; }
+}
+
+/* Unter 1000 px wird die Seitenleiste zur Schublade. Vorher wurde sie über den
+   Inhalt gestapelt – dann scrollt man auf dem Tablet an 40 Menüpunkten vorbei,
+   bevor der Text anfängt. */
+@media (max-width: 1000px) {
+  .schale { grid-template-columns: minmax(0, 1fr); padding: 0 var(--s5); }
+  .menuknopf { display: inline-flex; }
+  .navseite {
+    position: fixed;
+    top: var(--kopf-hoehe);
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    max-height: none;
+    z-index: 45;
+    background: var(--flaeche);
+    border-right: 1px solid var(--linie);
+    padding: var(--s5) var(--s4) var(--s8);
+    transform: translateX(-101%);
+    transition: transform .2s ease;
+    box-shadow: var(--schatten-3);
+  }
+  .navseite.offen { transform: none; }
+  .navschatten {
+    display: block;
+    position: fixed;
+    inset: var(--kopf-hoehe) 0 0 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: 44;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+  }
+  .navschatten.sichtbar { opacity: 1; pointer-events: auto; }
+  .kopf-innen { padding: 0 var(--s5); }
+  .marke-zusatz { display: none; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .schale { padding: 0 var(--s4); }
+  .kopf-innen { padding: 0 var(--s4); }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.22rem; margin-top: var(--s6); }
+  .weiterblaettern { flex-direction: column; }
+}
+
+/* ------------------------------------------------------------------ 11 Druck */
+@media print {
+  .kopf, .navseite, .toc, .fortschritt, .weiterblaettern, .navschatten,
+  .menuknopf, .themaschalter, .sprungmarke { display: none !important; }
+  .schale { display: block; max-width: none; padding: 0; }
+  .inhalt { padding: 0; }
+  .inhalt > * { max-width: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  a { color: #000; }
+  details { display: block; }
+  details > div, details > p { display: block !important; }
+  pre, .karte, .tabellenhuelle { break-inside: avoid; }
+}

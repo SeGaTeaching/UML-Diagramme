@@ -1,0 +1,36 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+actor Benutzer
+participant "app: Application" as App
+participant "logger: Logger" as Logger
+
+Benutzer -> App: starte()
+activate App
+
+create Logger
+App -> Logger: <<create>>
+activate Logger
+Logger --> App: 
+deactivate Logger
+
+App -> Logger: schreibeLog("Start")
+activate Logger
+Logger -> Logger: formatiereZeitstempel()
+activate Logger
+Logger --> Logger: timestamp
+deactivate Logger
+Logger --> App: 
+deactivate Logger
+
+App -> App: fuehreHauptlogikAus()
+activate App
+App --> App: 
+deactivate App
+
+App -> Logger: schreibeLog("Ende")
+activate Logger
+Logger --> App: 
+deactivate Logger
+
+deactivate App
+@enduml

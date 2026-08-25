@@ -1,0 +1,13 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Haus {
+  -adresse: String
+  -raeume: List<Raum>
+  +raeumeAnzeigen(): void
+}
+class Raum {
+  -name: String
+  -flaeche: double
+}
+Haus *-- Raum : besteht aus
+@enduml

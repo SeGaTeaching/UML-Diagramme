@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="325px" preserveAspectRatio="none" style="width:149px;height:325px;" version="1.1" viewBox="0 0 149 325" width="149px" zoomAndPan="magnify"><defs/><g><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="50" x="27" y="8"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="27" x2="77" y1="34.2969" y2="34.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="38" y="25.9951">Neu</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="72" x="16" y="136"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="16" x2="88" y1="162.2969" y2="162.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52" x="26" y="153.9951">Bezahlt</text><rect fill="#E3F2FD" height="50" rx="12.5" ry="12.5" style="stroke: #1976D2; stroke-width: 1.5;" width="92" x="6" y="264"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="6" x2="98" y1="290.2969" y2="290.2969"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="72" x="16" y="281.9951">Versendet</text><!--link Neu to Bezahlt--><path d="M52,58.29 C52,78.95 52,108.67 52,130.65 " fill="none" id="Neu-Bezahlt" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="52,135.78,56,126.78,52,130.78,48,126.78,52,135.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="53" y="101.9951">bezahlen()</text><!--link Bezahlt to Versendet--><path d="M52,186.29 C52,206.95 52,236.67 52,258.65 " fill="none" id="Bezahlt-Versendet" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="52,263.78,56,254.78,52,258.78,48,254.78,52,263.78" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="53" y="229.9951">versenden()</text><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+state Neu
+state Bezahlt
+state Versendet
+
+Neu - -> Bezahlt : bezahlen()
+Bezahlt - -> Versendet : versenden()
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

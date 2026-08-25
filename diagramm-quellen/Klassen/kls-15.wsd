@@ -1,0 +1,12 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Person {
+  -name: String
+  -reisepass: Reisepass
+}
+class Reisepass {
+  -nummer: String
+  -person: Person
+}
+Person "1" -- "0..1" Reisepass : besitzt
+@enduml

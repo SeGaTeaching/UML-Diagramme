@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Einführung in UML: Die Sprache der Softwaremodellierung · UML Lernportal</title><link rel="stylesheet" href="../assets/portal.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/komponenten.css?v=f8d9af0d"><link rel="stylesheet" href="../assets/kurs.css?v=f8d9af0d"><script>(function(){var w=document.documentElement;w.classList.add('js');try{var t=localStorage.getItem('portal-thema');if(t==='hell'||t==='dunkel')w.setAttribute('data-thema',t);}catch(e){}})();</script></head><body><a class="sprungmarke" href="#inhalt">Zum Inhalt springen</a><header class="kopf"><div class="kopf-innen"><button class="knopf menuknopf" aria-label="Navigation anzeigen" aria-expanded="false" aria-controls="navseite"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg></button><a class="marke" href="../index.html"><span class="marke-zeichen">UML</span><span class="marke-name">UML Lernportal</span><span class="marke-zusatz">UML-Diagramme</span></a><div class="kopf-rechts"><button class="knopf themaschalter" aria-label="Dunkle Ansicht umschalten"><svg class="sonne" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M13 3l-1.1 1.1M4.1 11.9 3 13"/></svg><svg class="mond" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 9.6A6 6 0 0 1 6.4 2.5a6 6 0 1 0 7.1 7.1z"/></svg></button></div></div></header><div class="fortschritt"></div><div class="navschatten"></div><div class="schale"><nav class="navseite" id="navseite" aria-label="Kursnavigation">
+<a class="nav-heim" href="../index.html"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5 8 2l6 4.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg> Startseite</a>
+<details class="nav-wechsler"><summary>Kapitel 1: Einführung in UML</summary><div class="nav-wechsler-liste"><a href="../Abschnitt_2.html">Kapitel 2: Use-Case-Diagramme</a><a href="../Abschnitt_3.html">Kapitel 3: Klassendiagramme</a></div></details>
+<div class="nav-gruppe"><div class="nav-gruppe-titel">Kapitel 1</div><a href="../Abschnitt_1.html">Übersicht und Lernweg</a></div>
+<details class="nav-gruppe" data-gruppe="lerntext" open><summary><span class="nav-gruppe-titel">Lerntext</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a1_lt_7-0-uml-einleitung.html" class="hier">Einführung in UML: Die Sprache der Softwaremodellierung</a></div></details>
+</nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_1.html">Kapitel 1</a><span>›</span>Einführung in UML: Die Sprache der Softwaremodellierung</div><h1>Einführung in UML: Die Sprache der Softwaremodellierung</h1><h2 id="lernziele">Lernziele</h2>
+<ul>
+<li>Erklären können, warum visuelle Modellierung bei Software wichtig ist</li>
+<li>Beschreiben können, was UML ist und wofür sie eingesetzt wird</li>
+<li>Die zwei Hauptkategorien von UML-Diagrammen unterscheiden können</li>
+<li>Die fünf Diagrammtypen dieses Kurses einordnen und ihre Leitfrage benennen können</li>
+</ul>
+<hr>
+<h2 id="1-warum-brauchen-wir-visuelle-modellierung">1. Warum brauchen wir visuelle Modellierung?</h2>
+<h3 id="11-das-problem-komplexitat-beherrschen">1.1 Das Problem: Komplexität beherrschen</h3>
+<p>Stellen Sie sich vor, Sie sollen die Software für einen Geldautomaten entwickeln. Der Auftraggeber erklärt Ihnen in einem einstündigen Gespräch, was sie alles können soll: Geld abheben, Kontostand abfragen, Überweisungen tätigen, PIN ändern und vieles mehr. Sie machen sich Notizen.</p>
+<p>Eine Woche später beginnen Sie mit der Programmierung, schauen in Ihre Notizen — und stellen fest: Welche Funktionen waren nochmal wichtig? Wer darf was? Wie hängt das zusammen? Die Textnotizen sind unübersichtlich, wichtige Details fehlen, und Sie sind sich nicht sicher, ob Sie alles richtig verstanden haben.</p>
+<p><strong>Das Kernproblem:</strong> Natürliche Sprache ist mehrdeutig, unstrukturiert und schwer zu überblicken. Bei komplexen Systemen verliert man schnell den Überblick — und Missverständnisse zwischen Auftraggeber, Team und Entwickler werden erst im fertigen Code sichtbar, wo ihre Korrektur am teuersten ist.</p>
+<h3 id="12-die-losung-eine-gemeinsame-visuelle-sprache">1.2 Die Lösung: Eine gemeinsame visuelle Sprache</h3>
+<p>Genau hier kommt die <strong>UML (Unified Modeling Language)</strong> ins Spiel. UML ist eine standardisierte, grafische Sprache zur Modellierung von Software — eine internationale „Bauplansprache", die Entwickler weltweit gleich lesen.</p>
+<p><strong>Die Analogie zum Hausbau:</strong> Wer ein Haus baut, hat nicht einen einzigen Plan, sondern mehrere:</p>
+<ul>
+<li>einen <strong>Grundriss</strong> für die Raumaufteilung,</li>
+<li>einen <strong>Schaltplan</strong> für die Elektrik,</li>
+<li>einen <strong>Leitungsplan</strong> für Wasser und Heizung,</li>
+<li>eine <strong>Ansicht</strong> von außen für die Fassade.</li>
+</ul>
+<p>Jeder Plan zeigt eine andere Perspektive auf dasselbe Gebäude; zusammen ergeben sie ein vollständiges Bild. <strong>UML funktioniert genauso:</strong> Verschiedene Diagrammtypen zeigen verschiedene Aspekte derselben Software.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+UML ist die standardisierte, visuelle Sprache der Softwareentwicklung. Sie macht komplexe Systeme überschaubar und kommunizierbar — bevor die erste Zeile Code entsteht.</p>
+</blockquote>
+<hr>
+<h2 id="2-was-ist-uml-genau">2. Was ist UML genau?</h2>
+<p>UML ist <strong>keine Programmiersprache</strong>. Aus einem UML-Diagramm läuft nichts; es ist der Plan, nach dem anschließend programmiert wird. UML ist außerdem <strong>herstellerneutral</strong> und <strong>sprachunabhängig</strong> — dasselbe Klassendiagramm lässt sich in Java, C# oder Python umsetzen.</p>
+<p>UML dient drei Zwecken:</p>
+<ul>
+<li><strong>Visualisieren</strong> — ein System sichtbar und besprechbar machen, auch für Nicht-Programmierer.</li>
+<li><strong>Spezifizieren</strong> — präzise festlegen, was gebaut werden soll, bevor gebaut wird.</li>
+<li><strong>Dokumentieren</strong> — festhalten, wie ein System aufgebaut ist, damit auch später noch jemand durchblickt.</li>
+</ul>
+<blockquote>
+<p><strong>Hinweis:</strong>
+UML wird von der <strong>Object Management Group (OMG)</strong> gepflegt und ist ein internationaler Standard. Die aktuelle Fassung ist UML 2.x — die meisten Diagramme sehen aber seit Jahren gleich aus.</p>
+</blockquote>
+<hr>
+<h2 id="3-die-zwei-hauptkategorien-von-uml-diagrammen">3. Die zwei Hauptkategorien von UML-Diagrammen</h2>
+<p>UML-Diagramme teilen sich in zwei große Gruppen:</p>
+<p><strong>Strukturdiagramme (statische Sicht)</strong></p>
+<ul>
+<li>Beschreiben den <strong>Aufbau</strong> eines Systems.</li>
+<li>Zeigen die „Substantive" der Software: Klassen, Objekte, Komponenten.</li>
+<li>Leitfrage: <strong>„Woraus besteht das System?"</strong></li>
+<li>Wichtigstes Beispiel: das <strong>Klassendiagramm</strong>.</li>
+</ul>
+<p><strong>Verhaltensdiagramme (dynamische Sicht)</strong></p>
+<ul>
+<li>Beschreiben die <strong>Abläufe</strong> und Interaktionen.</li>
+<li>Zeigen die „Verben" der Software: Aktionen, Nachrichten, Zustandsänderungen.</li>
+<li>Leitfrage: <strong>„Was passiert zur Laufzeit?"</strong></li>
+<li>Beispiele: Use-Case-, Aktivitäts-, Sequenz- und Zustandsdiagramm.</li>
+</ul>
+<p><strong>Die Landkarte der UML-Diagramme:</strong></p>
+<p><img alt="Übersicht: Struktur- und Verhaltensdiagramme in UML" src="../bilder/uc-01.svg"></p>
+<hr>
+<h2 id="4-die-funf-diagrammtypen-dieses-kurses">4. Die fünf Diagrammtypen dieses Kurses</h2>
+<p>UML kennt über ein Dutzend Diagrammtypen. Dieser Kurs konzentriert sich auf die fünf, die in der Praxis am häufigsten gebraucht werden:</p>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Diagrammtyp</th>
+<th>Kategorie</th>
+<th>Leitfrage</th>
+<th>Typischer Einsatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Use-Case-Diagramm</strong></td>
+<td>Verhalten</td>
+<td>Wer will was vom System?</td>
+<td>Anforderungen zu Projektbeginn</td>
+</tr>
+<tr>
+<td><strong>Klassendiagramm</strong></td>
+<td>Struktur</td>
+<td>Woraus besteht das System?</td>
+<td>Bauplan für die Programmierung</td>
+</tr>
+<tr>
+<td><strong>Aktivitätsdiagramm</strong></td>
+<td>Verhalten</td>
+<td>Wie läuft ein Prozess ab?</td>
+<td>Abläufe, Entscheidungen, Parallelität</td>
+</tr>
+<tr>
+<td><strong>Sequenzdiagramm</strong></td>
+<td>Verhalten</td>
+<td>Wer spricht wann mit wem?</td>
+<td>Zusammenspiel von Objekten über die Zeit</td>
+</tr>
+<tr>
+<td><strong>Zustandsdiagramm</strong></td>
+<td>Verhalten</td>
+<td>Welche Zustände durchläuft ein Objekt?</td>
+<td>Lebenszyklus eines Objekts</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Die Reihenfolge ist kein Zufall.</strong> Man beginnt außen (Use-Case: wer will was?), geht dann zur inneren Struktur (Klassen: woraus besteht es?) und beschreibt zuletzt das Verhalten (Aktivität, Sequenz, Zustand: wie läuft es ab?). Erst die Außensicht, dann die Innensicht, dann die Bewegung.</p>
+<blockquote>
+<p><strong>Merksatz:</strong>
+Struktur beantwortet „woraus?", Verhalten beantwortet „was passiert?". Jedes Diagramm ist eine eigene Perspektive — kein einzelnes zeigt das ganze System.</p>
+</blockquote>
+<hr>
+<h2 id="5-typische-fehler">5. Typische Fehler</h2>
+<ul>
+<li><strong>Alles in ein Diagramm pressen</strong> → UML lebt von der Trennung der Perspektiven. Lieber mehrere klare Diagramme als eins, das alles zeigen will.</li>
+<li><strong>UML für ein Programm halten</strong> → UML modelliert, sie führt nichts aus. Sie ist der Plan, nicht das Gebäude.</li>
+<li><strong>Den falschen Diagrammtyp wählen</strong> → Wer einen Ablauf zeigen will, braucht ein Verhaltensdiagramm, kein Klassendiagramm. Die Leitfrage (Abschnitt 4) entscheidet.</li>
+</ul>
+<h2 id="6-zusammenfassung">6. Zusammenfassung</h2>
+<ul>
+<li>UML ist die <strong>standardisierte, visuelle Sprache</strong> der Softwareentwicklung — herstellerneutral und sprachunabhängig.</li>
+<li>Sie dient dem <strong>Visualisieren, Spezifizieren und Dokumentieren</strong> von Systemen.</li>
+<li><strong>Strukturdiagramme</strong> zeigen den Aufbau („woraus?"), <strong>Verhaltensdiagramme</strong> die Abläufe („was passiert?").</li>
+<li>Dieser Kurs behandelt fünf Typen; jeder beantwortet eine eigene Leitfrage.</li>
+<li>Das nächste Skript beginnt mit dem <strong>Use-Case-Diagramm</strong> — der Außensicht auf das System.</li>
+</ul>
+<hr>
+<h2 id="glossar">Glossar</h2>
+<div class="tabellenhuelle"><table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Kurzerklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UML (Unified Modeling Language)</td>
+<td>Standardisierte, grafische Sprache zur Modellierung von Software</td>
+</tr>
+<tr>
+<td>Modell</td>
+<td>Vereinfachte Abbildung eines Systems, die nur die gerade wichtigen Aspekte zeigt</td>
+</tr>
+<tr>
+<td>Strukturdiagramm</td>
+<td>UML-Kategorie für den statischen Aufbau eines Systems (z. B. Klassendiagramm)</td>
+</tr>
+<tr>
+<td>Verhaltensdiagramm</td>
+<td>UML-Kategorie für Abläufe und Interaktionen (Use-Case-, Aktivitäts-, Sequenz-, Zustandsdiagramm)</td>
+</tr>
+<tr>
+<td>OMG (Object Management Group)</td>
+<td>Organisation, die den UML-Standard pflegt</td>
+</tr>
+<tr>
+<td>Spezifikation</td>
+<td>Präzise Festlegung, was ein System leisten soll, vor der Umsetzung</td>
+</tr>
+</tbody>
+</table></div><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="../Abschnitt_1.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Kapitel 1: Einführung in UML</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#lernziele">Lernziele</a><a href="#1-warum-brauchen-wir-visuelle-modellierung">1. Warum brauchen wir visuelle Modellierung?</a><a href="#11-das-problem-komplexitat-beherrschen" class="stufe3">1.1 Das Problem: Komplexität beherrschen</a><a href="#12-die-losung-eine-gemeinsame-visuelle-sprache" class="stufe3">1.2 Die Lösung: Eine gemeinsame visuelle Sprache</a><a href="#2-was-ist-uml-genau">2. Was ist UML genau?</a><a href="#3-die-zwei-hauptkategorien-von-uml-diagrammen">3. Die zwei Hauptkategorien von UML-Diagrammen</a><a href="#4-die-funf-diagrammtypen-dieses-kurses">4. Die fünf Diagrammtypen dieses Kurses</a><a href="#5-typische-fehler">5. Typische Fehler</a><a href="#6-zusammenfassung">6. Zusammenfassung</a><a href="#glossar">Glossar</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

@@ -1,0 +1,27 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+actor Fahrgast
+participant "steuerung: Aufzugsteuerung" as Steuerung
+participant "tuer: Tuer" as Tuer
+
+Fahrgast -> Steuerung: drueckeStockwerk(ziel)
+activate Steuerung
+
+loop bis Zielstockwerk erreicht
+    Steuerung -> Steuerung: fahreEinStockwerk()
+end
+
+Steuerung -> Tuer: oeffneTuer()
+activate Tuer
+
+alt Tuer frei
+    Tuer --> Steuerung: tuerGeoeffnet
+    Steuerung --> Fahrgast: signalisiereAnkunft()
+else Tuer blockiert
+    Tuer --> Steuerung: tuerBlockiert
+    Steuerung -> Tuer: versucheErneutZuOeffnen()
+end
+
+deactivate Tuer
+deactivate Steuerung
+@enduml

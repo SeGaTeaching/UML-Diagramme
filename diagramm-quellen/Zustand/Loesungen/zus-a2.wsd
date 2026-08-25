@@ -1,0 +1,7 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+[*] --> Verriegelt
+
+Verriegelt --> Entriegelt : aufschliessen()
+Entriegelt --> Verriegelt : abschliessen()
+@enduml
