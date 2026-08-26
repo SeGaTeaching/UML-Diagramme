@@ -1,0 +1,20 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Nutzer {
+  -name: String
+}
+class Kochbuch {
+  -titel: String
+}
+class Rezept {
+  -name: String
+  -dauerMin: int
+  +berechneKalorien(): int
+}
+class Zubereitungsschritt {
+  -beschreibung: String
+}
+Nutzer "1" --> "0..*" Kochbuch : besitzt >
+Kochbuch "1" o-- "0..*" Rezept
+Rezept "1" *-- "1..*" Zubereitungsschritt
+@enduml

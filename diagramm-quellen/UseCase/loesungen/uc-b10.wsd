@@ -1,5 +1,5 @@
 @startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
 left to right direction
 
 actor Fahrgast
@@ -20,5 +20,5 @@ UC2 --> Bank : kommuniziert mit
 UC3 .> UC1 : <<extend>>
 
 Wartungstechniker --> UC4
-Wartungstechniker --> UC5
+UC5 .> UC4 : <<extend>>
 @enduml

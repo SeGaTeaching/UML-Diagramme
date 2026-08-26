@@ -8,9 +8,7 @@ Musterlösung aufklappst.
 
 ---
 
-## Teil A — Grundübungen
-
-### Aufgabe A1 [leicht]: Tee zubereiten
+### Aufgabe 1 [leicht]: Tee zubereiten
 
 Modelliere den Ablauf des Teekochens als einfache Sequenz (keine Entscheidungen, keine
 Parallelität): Wasser wird erhitzt, ein Teebeutel wird in die Tasse gegeben, der Tee zieht eine
@@ -21,7 +19,6 @@ Weile, danach wird der Teebeutel wieder entfernt.
 ![Lösung A1](../bilder/act-a1.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -45,7 +42,7 @@ Keine Rauten, keine Balken — das ist der einfachste Fall eines Aktivitätsdiag
 
 ---
 
-### Aufgabe A2 [leicht]: Ampel für Fußgänger
+### Aufgabe 2 [leicht]: Ampel für Fußgänger
 
 Modelliere: Ein Fußgänger prüft die Ampelfarbe. Ist sie grün, überquert er die Straße; ist sie
 rot, wartet er. In beiden Fällen verlässt er anschließend den Gehweg (dieselbe Folgeaktion für
@@ -56,7 +53,6 @@ beide Zweige).
 ![Lösung A2](../bilder/act-a2.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -86,7 +82,69 @@ danach folgt "Gehweg verlassen" nur einmal.
 
 ---
 
-### Aufgabe A3 [mittel]: Getränkeautomat
+### Aufgabe 3 [leicht]: Pizza online bestellen
+
+Modelliere als reine Sequenz: Pizza auswählen, in den Warenkorb legen, Lieferadresse eingeben,
+Bestellung abschicken.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B1](../bilder/act-b1.svg)
+
+<pre><code>@startuml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+!pragma useVerticalIf on
+
+start
+:Pizza auswählen;
+:In den Warenkorb legen;
+:Lieferadresse eingeben;
+:Bestellung abschicken;
+stop
+@enduml
+</code></pre>
+
+Vier Aktionen, eine Reihenfolge, keine Verzweigung — die Grundübung für jede Prozessmodellierung.
+
+</details>
+
+---
+
+### Aufgabe 4 [leicht]: Wecker stellen
+
+Modelliere: Weckzeit eingeben, Wecker aktivieren, Handy ablegen.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B2](../bilder/act-b2.svg)
+
+<pre><code>@startuml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+!pragma useVerticalIf on
+
+start
+:Weckzeit eingeben;
+:Wecker aktivieren;
+:Handy ablegen;
+stop
+@enduml
+</code></pre>
+
+Auch hier: keine Bedingung nötig, solange der Ablauf immer identisch verläuft.
+
+</details>
+
+---
+
+### Aufgabe 5 [mittel]: Getränkeautomat
 
 Modelliere einen Getränkeautomaten: Der Kunde wirft so lange Münzen ein, bis der eingeworfene
 Betrag den Preis erreicht oder übersteigt. Erst dann gibt der Automat das Getränk aus. Nutze eine
@@ -97,7 +155,6 @@ Schleife.
 ![Lösung A3](../bilder/act-a3.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -124,7 +181,7 @@ zurück zu einem früheren Punkt führt. Achte auf die Abbruchbedingung — hier
 
 ---
 
-### Aufgabe A4 [mittel]: Wäsche waschen
+### Aufgabe 6 [mittel]: Wäsche waschen
 
 Modelliere: Bevor die Waschmaschine startet, müssen zwei unabhängige Vorbereitungen erledigt
 werden — Waschmittel einfüllen und das passende Programm auswählen. Beide können gleichzeitig
@@ -135,7 +192,6 @@ werden — Waschmittel einfüllen und das passende Programm auswählen. Beide k�
 ![Lösung A4](../bilder/act-a4.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -163,7 +219,7 @@ Der Fork-Balken teilt den Ablauf in zwei parallele Stränge, der Join-Balken (hi
 
 ---
 
-### Aufgabe A5 [mittel]: Buch in der Bibliothek ausleihen
+### Aufgabe 7 [mittel]: Buch in der Bibliothek ausleihen
 
 Modelliere mit zwei Swimlanes ("Kunde" und "Bibliothekar"): Der Kunde sucht ein Buch und bringt es
 zum Schalter. Der Bibliothekar prüft den Ausweis, verbucht das Buch im System und händigt es aus.
@@ -174,7 +230,6 @@ Zum Schluss verlässt der Kunde die Bibliothek.
 ![Lösung A5](../bilder/act-a5.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -204,73 +259,7 @@ mit dem Pfeil — dafür brauchst du keine besondere Notation, nur den Wechsel d
 
 ---
 
-## Teil B — Vertiefungsaufgaben
-
-### Aufgabe B1 [leicht]: Pizza online bestellen
-
-Modelliere als reine Sequenz: Pizza auswählen, in den Warenkorb legen, Lieferadresse eingeben,
-Bestellung abschicken.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B1](../bilder/act-b1.svg)
-
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-skinparam ActivityStartColor black
-skinparam ActivityEndColor black
-skinparam ActivityBackgroundColor #E3F2FD
-skinparam ActivityBorderColor #1976D2
-skinparam ActivityFontColor #0D47A1
-!pragma useVerticalIf on
-
-start
-:Pizza auswählen;
-:In den Warenkorb legen;
-:Lieferadresse eingeben;
-:Bestellung abschicken;
-stop
-@enduml
-</code></pre>
-
-Vier Aktionen, eine Reihenfolge, keine Verzweigung — die Grundübung für jede Prozessmodellierung.
-
-</details>
-
----
-
-### Aufgabe B2 [leicht]: Wecker stellen
-
-Modelliere: Weckzeit eingeben, Wecker aktivieren, Handy ablegen.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B2](../bilder/act-b2.svg)
-
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-skinparam ActivityStartColor black
-skinparam ActivityEndColor black
-skinparam ActivityBackgroundColor #E3F2FD
-skinparam ActivityBorderColor #1976D2
-skinparam ActivityFontColor #0D47A1
-!pragma useVerticalIf on
-
-start
-:Weckzeit eingeben;
-:Wecker aktivieren;
-:Handy ablegen;
-stop
-@enduml
-</code></pre>
-
-Auch hier: keine Bedingung nötig, solange der Ablauf immer identisch verläuft.
-
-</details>
-
----
-
-### Aufgabe B3 [mittel]: Fahrkartenkauf am Automaten
+### Aufgabe 8 [mittel]: Fahrkartenkauf am Automaten
 
 Modelliere: Der Fahrgast wählt zuerst das Ziel, dann die Zahlungsart. Bei "Bargeld" wirft er
 Münzen oder Scheine ein, bei "Karte" steckt er die Karte in den Automaten. In beiden Fällen gibt
@@ -281,7 +270,6 @@ der Automat anschließend das Ticket aus.
 ![Lösung B3](../bilder/act-b3.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -310,7 +298,7 @@ Beachte die konkreten Bedingungsbeschriftungen ("Bargeld"/"Karte") statt vager L
 
 ---
 
-### Aufgabe B4 [mittel]: Notenberechnung
+### Aufgabe 9 [mittel]: Notenberechnung
 
 Modelliere eine Entscheidung mit **drei** Ausgängen: Bei einer Punktzahl ab 90 wird die Note
 "Sehr gut" vergeben, ab 50 (aber unter 90) die Note "Befriedigend", darunter "Nicht bestanden".
@@ -320,7 +308,6 @@ Modelliere eine Entscheidung mit **drei** Ausgängen: Bei einer Punktzahl ab 90 
 ![Lösung B4](../bilder/act-b4.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -350,7 +337,7 @@ zusammen **alle** möglichen Punktzahlen abdecken und dürfen sich nicht übersc
 
 ---
 
-### Aufgabe B5 [mittel]: Bewerbungsprozess mit Wiederholung
+### Aufgabe 10 [mittel]: Bewerbungsprozess mit Wiederholung
 
 Modelliere: Ein Bewerber sendet eine Bewerbung ab und wartet auf Rückmeldung. Wird sie angenommen,
 unterschreibt er den Vertrag (Ende). Wird sie abgelehnt, prüft er, ob er schon drei Versuche hatte
@@ -361,7 +348,6 @@ unterschreibt er den Vertrag (Ende). Wird sie abgelehnt, prüft er, ob er schon 
 ![Lösung B5](../bilder/act-b5.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -395,7 +381,7 @@ Versuche) braucht die Schleife eine klare Abbruchbedingung.
 
 ---
 
-### Aufgabe B6 [mittel]: Auto starten
+### Aufgabe 11 [mittel]: Auto starten
 
 Modelliere: Nach dem Aufschließen prüft der Fahrer parallel den Motor und den Reifendruck. Erst
 wenn beides geprüft ist, startet er den Motor und fährt los.
@@ -405,7 +391,6 @@ wenn beides geprüft ist, startet er den Motor und fährt los.
 ![Lösung B6](../bilder/act-b6.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -434,7 +419,7 @@ beide vor dem Join abgeschlossen sind.
 
 ---
 
-### Aufgabe B7 [mittel]: Software-Build-Pipeline
+### Aufgabe 12 [mittel]: Software-Build-Pipeline
 
 Modelliere: Nach dem Commit laufen drei Schritte parallel — Unit-Tests, Linting und die
 Dokumentationsgenerierung. Erst wenn alle drei fertig sind, werden die Ergebnisse
@@ -445,7 +430,6 @@ zusammengeführt und das Deployment gestartet.
 ![Lösung B7](../bilder/act-b7.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -476,7 +460,7 @@ trotzdem, bis **alle** Zweige beim `end fork` angekommen sind.
 
 ---
 
-### Aufgabe B8 [schwer]: Kreditantrag in einer Bank
+### Aufgabe 13 [schwer]: Kreditantrag in einer Bank
 
 Modelliere mit zwei Swimlanes ("Kunde" und "Sachbearbeiter"): Der Kunde stellt einen Kreditantrag.
 Der Sachbearbeiter prüft die Unterlagen und bewertet die Bonität. Reicht die Bonität nicht aus,
@@ -488,7 +472,6 @@ Kredit, und der Kunde unterschreibt den Vertrag (Ende).
 ![Lösung B8](../bilder/act-b8.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -525,7 +508,7 @@ Kontrollfluss beim Bahnwechsel (z. B. zurück zum Kunden) korrekt weitergeführt
 
 ---
 
-### Aufgabe B9 [schwer]: Reklamationsbearbeitung im Kundenservice
+### Aufgabe 14 [schwer]: Reklamationsbearbeitung im Kundenservice
 
 Modelliere mit drei Swimlanes ("Kunde", "Support", "Fachabteilung"): Der Kunde reicht eine
 Reklamation ein. Der Support prüft den Fall; fehlen Informationen, fordert er sie beim Kunden an,
@@ -538,7 +521,6 @@ Rückmeldung.
 ![Lösung B9](../bilder/act-b9.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -578,10 +560,10 @@ die Rückfrage-Schleife ein.
 
 ---
 
-### Aufgabe B10 [schwer, Transfer]: Restaurant-Bestellvorgang
+### Aufgabe 15 [schwer, Transfer]: Restaurant-Bestellvorgang
 
 Die anspruchsvollste Aufgabe: Kombiniere Swimlanes, eine Schleife **und** Fork/Join in einem
-Diagramm. Vier Beteiligte: Kunde, Kellner, Küche.
+Diagramm. Drei Beteiligte: Kunde, Kellner, Küche.
 
 Ablauf: Der Kunde gibt seine Bestellung beim Kellner auf. Der Kellner reicht sie an die Küche
 weiter, die die Verfügbarkeit prüft; ist ein Gericht nicht verfügbar, wird die Bestellung erneut
@@ -595,7 +577,6 @@ das Essen und bezahlt zum Schluss.
 ![Lösung B10](../bilder/act-b10.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -614,8 +595,11 @@ repeat
   :Bestellung an Küche weitergeben;
   |#f3e5f5|Küche|
   :Verfügbarkeit prüfen;
-repeat while (Gericht nicht verfügbar?) is ([nein, andere Wahl nötig]) not ([ja, verfügbar])
+  |#fff3e0|Kellner|
+backward:Bestellung anpassen;
+repeat while (Gericht nicht verfügbar?) is ([ja]) not ([nein])
 fork
+  |#f3e5f5|Küche|
   :Speisen zubereiten;
 fork again
   |#fff3e0|Kellner|

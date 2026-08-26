@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="565px" preserveAspectRatio="none" style="width:674px;height:565px;" version="1.1" viewBox="0 0 674 565" width="674px" zoomAndPan="magnify"><defs/><g><!--class Person--><rect fill="#E3F2FD" height="78.5938" id="Person" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="165" x="498" y="8"/><ellipse cx="553" cy="23" fill="#A9DCDF" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M552.7188,19.1406 L551.7656,23.3125 L553.6719,23.3125 L552.7188,19.1406 Z M551.4844,17.2969 L553.9531,17.2969 L556.7031,27.5 L554.6875,27.5 L554.0625,24.9844 L551.3594,24.9844 L550.75,27.5 L548.7188,27.5 L551.4844,17.2969 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="47" x="572" y="27.8467">Person</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="499" x2="662" y1="38" y2="38"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="506" y="48.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="517" y="54.9951">name: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="506" y="64.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="140" x="517" y="71.292">geburtsdatum: Date</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="499" x2="662" y1="78.5938" y2="78.5938"/><!--class Schüler--><rect fill="#E3F2FD" height="62.2969" id="Schüler" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="142" x="476.5" y="148"/><ellipse cx="517.5" cy="163" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M519.8906,167.7031 Q519.4063,167.9531 518.875,168.0781 Q518.3594,168.2031 517.7813,168.2031 Q515.7188,168.2031 514.625,166.8438 Q513.5469,165.4844 513.5469,162.9063 Q513.5469,160.3281 514.625,158.9688 Q515.7188,157.6094 517.7813,157.6094 Q518.3594,157.6094 518.8906,157.7344 Q519.4219,157.8594 519.8906,158.0938 L519.8906,160.3438 Q519.375,159.8594 518.875,159.6406 Q518.3906,159.4219 517.875,159.4219 Q516.7656,159.4219 516.2031,160.2969 Q515.6406,161.1719 515.6406,162.9063 Q515.6406,164.625 516.2031,165.5156 Q516.7656,166.3906 517.875,166.3906 Q518.3906,166.3906 518.875,166.1719 Q519.375,165.9375 519.8906,165.4688 L519.8906,167.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52" x="536.5" y="167.8467">Schüler</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="477.5" x2="617.5" y1="178" y2="178"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="484.5" y="188.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="495.5" y="194.9951">matrikelnr: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="477.5" x2="617.5" y1="202.2969" y2="202.2969"/><!--class Lehrer--><rect fill="#E3F2FD" height="62.2969" id="Lehrer" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="148" x="260.5" y="148"/><ellipse cx="308.5" cy="163" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M310.8906,167.7031 Q310.4063,167.9531 309.875,168.0781 Q309.3594,168.2031 308.7813,168.2031 Q306.7188,168.2031 305.625,166.8438 Q304.5469,165.4844 304.5469,162.9063 Q304.5469,160.3281 305.625,158.9688 Q306.7188,157.6094 308.7813,157.6094 Q309.3594,157.6094 309.8906,157.7344 Q310.4219,157.8594 310.8906,158.0938 L310.8906,160.3438 Q310.375,159.8594 309.875,159.6406 Q309.3906,159.4219 308.875,159.4219 Q307.7656,159.4219 307.2031,160.2969 Q306.6406,161.1719 306.6406,162.9063 Q306.6406,164.625 307.2031,165.5156 Q307.7656,166.3906 308.875,166.3906 Q309.3906,166.3906 309.875,166.1719 Q310.375,165.9375 310.8906,165.4688 L310.8906,167.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="327.5" y="167.8467">Lehrer</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="261.5" x2="407.5" y1="178" y2="178"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="268.5" y="188.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="279.5" y="194.9951">personalnr: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="261.5" x2="407.5" y1="202.2969" y2="202.2969"/><!--class Kurs--><rect fill="#E3F2FD" height="127.4844" id="Kurs" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="238" x="215.5" y="288"/><ellipse cx="315" cy="303" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M317.3906,307.7031 Q316.9063,307.9531 316.375,308.0781 Q315.8594,308.2031 315.2813,308.2031 Q313.2188,308.2031 312.125,306.8438 Q311.0469,305.4844 311.0469,302.9063 Q311.0469,300.3281 312.125,298.9688 Q313.2188,297.6094 315.2813,297.6094 Q315.8594,297.6094 316.3906,297.7344 Q316.9219,297.8594 317.3906,298.0938 L317.3906,300.3438 Q316.875,299.8594 316.375,299.6406 Q315.8906,299.4219 315.375,299.4219 Q314.2656,299.4219 313.7031,300.2969 Q313.1406,301.1719 313.1406,302.9063 Q313.1406,304.625 313.7031,305.5156 Q314.2656,306.3906 315.375,306.3906 Q315.8906,306.3906 316.375,306.1719 Q316.875,305.9375 317.3906,305.4688 L317.3906,307.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="334" y="307.8467">Kurs</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="216.5" x2="452.5" y1="318" y2="318"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="223.5" y="328.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="234.5" y="334.9951">titel: String</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="223.5" y="344.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="234.5" y="351.292">maxTeilnehmer: int</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="223.5" y="361.2422"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="234.5" y="367.5889">gebuehr: double</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="216.5" x2="452.5" y1="374.8906" y2="374.8906"/><ellipse cx="226.5" cy="388.5391" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="213" x="234.5" y="391.8857">anmelden(s: Schüler): boolean</text><ellipse cx="226.5" cy="404.8359" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="144" x="234.5" y="408.1826">getFreiePlaetze(): int</text><!--class Fachbereich--><rect fill="#E3F2FD" height="62.2969" id="Fachbereich" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="165" x="6" y="16.5"/><ellipse cx="42.5" cy="31.5" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M44.8906,36.2031 Q44.4063,36.4531 43.875,36.5781 Q43.3594,36.7031 42.7813,36.7031 Q40.7188,36.7031 39.625,35.3438 Q38.5469,33.9844 38.5469,31.4063 Q38.5469,28.8281 39.625,27.4688 Q40.7188,26.1094 42.7813,26.1094 Q43.3594,26.1094 43.8906,26.2344 Q44.4219,26.3594 44.8906,26.5938 L44.8906,28.8438 Q44.375,28.3594 43.875,28.1406 Q43.3906,27.9219 42.875,27.9219 Q41.7656,27.9219 41.2031,28.7969 Q40.6406,29.6719 40.6406,31.4063 Q40.6406,33.125 41.2031,34.0156 Q41.7656,34.8906 42.875,34.8906 Q43.3906,34.8906 43.875,34.6719 Q44.375,34.4375 44.8906,33.9688 L44.8906,36.2031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="60.5" y="36.3467">Fachbereich</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="170" y1="46.5" y2="46.5"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="57.1484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="140" x="25" y="63.4951">bezeichnung: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="7" x2="170" y1="70.7969" y2="70.7969"/><!--class Kurstermin--><rect fill="#E3F2FD" height="78.5938" id="Kurstermin" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="111" x="279" y="476"/><ellipse cx="295.7" cy="491" fill="#ADD1B2" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M298.0906,495.7031 Q297.6063,495.9531 297.075,496.0781 Q296.5594,496.2031 295.9813,496.2031 Q293.9188,496.2031 292.825,494.8438 Q291.7469,493.4844 291.7469,490.9063 Q291.7469,488.3281 292.825,486.9688 Q293.9188,485.6094 295.9813,485.6094 Q296.5594,485.6094 297.0906,485.7344 Q297.6219,485.8594 298.0906,486.0938 L298.0906,488.3438 Q297.575,487.8594 297.075,487.6406 Q296.5906,487.4219 296.075,487.4219 Q294.9656,487.4219 294.4031,488.2969 Q293.8406,489.1719 293.8406,490.9063 Q293.8406,492.625 294.4031,493.5156 Q294.9656,494.3906 296.075,494.3906 Q296.5906,494.3906 297.075,494.1719 Q297.575,493.9375 298.0906,493.4688 L298.0906,495.7031 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="75" x="309.3" y="495.8467">Kurstermin</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="280" x2="389" y1="506" y2="506"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="287" y="516.6484"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="298" y="522.9951">datum: Date</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="287" y="532.9453"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="298" y="539.292">raum: String</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="280" x2="389" y1="546.5938" y2="546.5938"/><!--class Benachrichtigbar--><rect fill="#E3F2FD" height="62.2969" id="Benachrichtigbar" rx="6" ry="6" style="stroke: #1976D2; stroke-width: 1.5;" width="256" x="206.5" y="16.5"/><ellipse cx="272" cy="31.5" fill="#B4A7E5" rx="10" ry="10" style="stroke: #1976D2; stroke-width: 1.0;"/><path d="M269.1719,28.0781 L269.1719,26.2969 L275.25,26.2969 L275.25,28.0781 L273.2188,28.0781 L273.2188,34.7188 L275.25,34.7188 L275.25,36.5 L269.1719,36.5 L269.1719,34.7188 L271.2031,34.7188 L271.2031,28.0781 L269.1719,28.0781 Z "/><text fill="#0D47A1" font-family="Helvetica" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="117" x="291" y="36.3467">Benachrichtigbar</text><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207.5" x2="461.5" y1="46.5" y2="46.5"/><line style="stroke: #1976D2; stroke-width: 1.5;" x1="207.5" x2="461.5" y1="54.5" y2="54.5"/><ellipse cx="217.5" cy="68.1484" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="231" x="225.5" y="71.4951">sendeNachricht(text: String): void</text><!--link Lehrer to Kurs--><path d="M334.5,210.09 C334.5,230.26 334.5,257.64 334.5,282.87 " fill="none" id="Lehrer-Kurs" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="334.5,287.88,338.5,278.88,334.5,282.88,330.5,278.88,334.5,287.88" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="34" x="335.5" y="253.9951">leitet</text><polygon fill="#0D47A1" points="347.5,262.2969,351.5,270.2969,355.5,262.2969,347.5,262.2969" style="stroke: #0D47A1; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="324.5719" y="231.1474">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="309.1125" y="276.5832">0..*</text><!--link Person to Schüler--><path d="M565.72,106.5 C562.1,120.71 558.37,135.35 555.23,147.66 " fill="none" id="Person-Schüler" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="558.97,104.66,570.69,87,572.53,108.11,558.97,104.66" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Person to Lehrer--><path d="M489.57,96.37 C456.82,113.61 420.81,132.56 391.75,147.86 " fill="none" id="Person-Lehrer" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="none" points="486.4,90.13,507.36,87,492.92,102.51,486.4,90.13" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Fachbereich to Lehrer--><path d="M157.5,84.83 C195.3,104.72 241.57,129.08 277.33,147.9 " fill="none" id="Fachbereich-Lehrer" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#FFFFFF" points="145.56,78.54,149.0078,84.8734,156.1802,84.1268,152.7323,77.7933,145.56,78.54" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="147.4005" y="99.5871">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="239.0637" y="136.8307">1..*</text><!--link Kurs to Kurstermin--><path d="M334.5,428.26 C334.5,444.77 334.5,461.58 334.5,475.91 " fill="none" id="Kurs-Kurstermin" style="stroke: #1976D2; stroke-width: 1.0;"/><polygon fill="#1976D2" points="334.5,415.13,330.5,421.13,334.5,427.13,338.5,421.13,334.5,415.13" style="stroke: #1976D2; stroke-width: 1.0;"/><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="324.9797" y="436.3965">1</text><text fill="#0D47A1" font-family="Helvetica" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="24" x="308.4375" y="464.786">1..*</text><!--link Benachrichtigbar to Schüler--><path d="M401.15,89.02 C432.48,108.07 469.18,130.38 498,147.9 " fill="none" id="Benachrichtigbar-Schüler" style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="397.35,94.91,383.9,78.54,404.63,82.94,397.35,94.91" style="stroke: #1976D2; stroke-width: 1.0;"/><!--link Benachrichtigbar to Lehrer--><path d="M334.5,98.75 C334.5,115.27 334.5,133.11 334.5,147.68 " fill="none" id="Benachrichtigbar-Lehrer" style="stroke: #1976D2; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="327.5,98.54,334.5,78.54,341.5,98.54,327.5,98.54" style="stroke: #1976D2; stroke-width: 1.0;"/><!--
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 14
+skinparam shadowing false
+skinparam roundCorner 12
+skinparam ArrowColor #1976D2
+skinparam ArrowFontColor #0D47A1
+
+skinparam actor {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+}
+skinparam class {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  AttributeFontColor #0D47A1
+  HeaderBackgroundColor #BBDEFB
+}
+skinparam state {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  ArrowColor #1976D2
+  StartColor #222222
+  EndColor #222222
+}
+skinparam sequence {
+  ParticipantBackgroundColor #E3F2FD
+  ParticipantBorderColor #1976D2
+  ParticipantFontColor #0D47A1
+  ActorBackgroundColor #E3F2FD
+  ActorBorderColor #1976D2
+  LifeLineBorderColor #90A4AE
+  LifeLineBackgroundColor #ECEFF1
+  BoxBorderColor #1976D2
+}
+skinparam activity {
+  BackgroundColor #E3F2FD
+  BorderColor #1976D2
+  FontColor #0D47A1
+  DiamondBackgroundColor #FFF3E0
+  DiamondBorderColor #FB8C00
+  StartColor #222222
+  EndColor #222222
+  BarColor #455A64
+}
+abstract class Person {
+  -name: String
+  -geburtsdatum: Date
+}
+class Schüler {
+  -matrikelnr: String
+}
+class Lehrer {
+  -personalnr: String
+}
+class Kurs {
+  -titel: String
+  -maxTeilnehmer: int
+  -gebuehr: double
+  +anmelden(s: Schüler): boolean
+  +getFreiePlaetze(): int
+}
+class Fachbereich {
+  -bezeichnung: String
+}
+class Kurstermin {
+  -datum: Date
+  -raum: String
+}
+interface Benachrichtigbar {
+  +sendeNachricht(text: String): void
+}
+Lehrer "1" - -> "0..*" Kurs : leitet >
+Person <|- - Schüler
+Person <|- - Lehrer
+Fachbereich "1" o- - "1..*" Lehrer
+Kurs "1" *- - "1..*" Kurstermin
+Benachrichtigbar <|.. Schüler
+Benachrichtigbar <|.. Lehrer
+@enduml
+
+PlantUML version 1.2019.06(Fri May 24 19:10:25 CEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.31+11-post-1ubuntu1-22.04.2-Ubuntu
+Operating System: Linux
+OS Version: 6.8.0-136-generic
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

@@ -1,5 +1,5 @@
 @startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -18,8 +18,11 @@ repeat
   :Bestellung an Küche weitergeben;
   |#f3e5f5|Küche|
   :Verfügbarkeit prüfen;
-repeat while (Gericht nicht verfügbar?) is ([nein, andere Wahl nötig]) not ([ja, verfügbar])
+  |#fff3e0|Kellner|
+backward:Bestellung anpassen;
+repeat while (Gericht nicht verfügbar?) is ([ja]) not ([nein])
 fork
+  |#f3e5f5|Küche|
   :Speisen zubereiten;
 fork again
   |#fff3e0|Kellner|

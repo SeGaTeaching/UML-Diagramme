@@ -1,0 +1,14 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+class Kurs {
+  -titel: String
+  -maxTeilnehmer: int
+  -gebuehr: double
+  +anmelden(s: Schüler): boolean
+  +getFreiePlaetze(): int
+}
+class Lehrer {
+  -personalnr: String
+}
+Lehrer "1" --> "0..*" Kurs : leitet >
+@enduml

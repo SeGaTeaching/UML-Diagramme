@@ -1,0 +1,37 @@
+@startuml
+!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/diagramm-quellen/theme.puml
+abstract class Person {
+  -name: String
+  -geburtsdatum: Date
+}
+class Schüler {
+  -matrikelnr: String
+}
+class Lehrer {
+  -personalnr: String
+}
+class Kurs {
+  -titel: String
+  -maxTeilnehmer: int
+  -gebuehr: double
+  +anmelden(s: Schüler): boolean
+  +getFreiePlaetze(): int
+}
+class Fachbereich {
+  -bezeichnung: String
+}
+class Kurstermin {
+  -datum: Date
+  -raum: String
+}
+interface Benachrichtigbar {
+  +sendeNachricht(text: String): void
+}
+Lehrer "1" --> "0..*" Kurs : leitet >
+Person <|-- Schüler
+Person <|-- Lehrer
+Fachbereich "1" o-- "1..*" Lehrer
+Kurs "1" *-- "1..*" Kurstermin
+Benachrichtigbar <|.. Schüler
+Benachrichtigbar <|.. Lehrer
+@enduml

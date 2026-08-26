@@ -7,9 +7,7 @@ und auf die richtige Verschachtelung von Fragmenten.
 
 ---
 
-## Teil A — Grundübungen
-
-### Aufgabe A1 [leicht]: Kaffeemaschine
+### Aufgabe 1 [leicht]: Kaffeemaschine
 
 **Szenario:** Ein Benutzer möchte an einer automatischen Kaffeemaschine einen Kaffee zubereiten:
 
@@ -63,7 +61,7 @@ Kaffeemaschine, ohne dass ein anderes Objekt beteiligt ist.
 
 ---
 
-### Aufgabe A2 [leicht]: Geldautomat
+### Aufgabe 2 [leicht]: Geldautomat
 
 **Szenario:** Ein Kunde hebt an einem Geldautomaten Bargeld ab:
 
@@ -118,7 +116,96 @@ das ist im Diagramm durch weitere Nachrichten vom Akteur zum Automaten sichtbar.
 
 ---
 
-### Aufgabe A3 [mittel]: Bibliothekssystem mit Verzweigung
+### Aufgabe 3 [leicht]: Taxi-Bestellung per App
+
+**Szenario:** Ein Fahrgast bestellt über eine App ein Taxi:
+
+1. Der Fahrgast bestellt ein Taxi mit seinem Standort.
+2. Die App fragt bei der Taxizentrale nach einem freien Fahrer.
+3. Die Zentrale fragt bei einem Fahrer die Verfügbarkeit ab; der Fahrer meldet sich verfügbar.
+4. Die Zentrale meldet der App den zugewiesenen Fahrer und die Ankunftszeit.
+5. Die App zeigt dem Fahrgast die Fahrerdaten an.
+
+Modelliere ein Sequenzdiagramm mit Fahrgast (Akteur), App, Taxizentrale und Fahrer. Nur
+synchrone Nachrichten, keine Fragmente nötig.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B1: Taxi-App](../grafiken/loesungen/seq-b1.svg)
+
+<pre><code>@startuml
+actor Fahrgast
+participant "app: TaxiApp" as App
+participant "zentrale: Taxizentrale" as Zentrale
+participant "fahrer: Fahrer" as Fahrer
+
+Fahrgast -> App: bestelleTaxi(standort)
+activate App
+
+App -> Zentrale: sucheFreienFahrer(standort)
+activate Zentrale
+
+Zentrale -> Fahrer: frageVerfuegbarkeit()
+activate Fahrer
+Fahrer --> Zentrale: verfuegbar
+deactivate Fahrer
+
+Zentrale --> App: fahrerZugewiesen(fahrerId, ankunftszeit)
+deactivate Zentrale
+
+App --> Fahrgast: zeigeFahrerdaten(fahrerId, ankunftszeit)
+deactivate App
+@enduml
+</code></pre>
+
+Eine reine Kette aus vier synchronen Aufrufen — jede Schicht wartet auf die Antwort der nächsten,
+bevor sie selbst antwortet. Gute Übung, um die Grundform "Aufruf → Aufruf → Rückgabe → Rückgabe"
+zu festigen.
+
+</details>
+
+---
+
+### Aufgabe 4 [leicht]: Wecker mit Schlummerfunktion
+
+**Szenario:** Ein Wecker klingelt und wird per Schlummerfunktion (Snooze) verschoben:
+
+1. Der Wecker klingelt (interner Ablauf, kein externer Auslöser nötig).
+2. Beim Klingeln berechnet der Wecker intern eine neue Weckzeit.
+3. Der Wecker aktiviert intern die Schlummerfunktion mit der neuen Weckzeit.
+
+Modelliere ein Sequenzdiagramm mit nur einem Teilnehmer (Wecker) und ausschließlich
+Selbstaufrufen. Achte auf die Verschachtelung der Aktivierungsbalken.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B2: Wecker](../grafiken/loesungen/seq-b2.svg)
+
+<pre><code>@startuml
+participant "wecker: Wecker" as Wecker
+
+activate Wecker
+Wecker -> Wecker: klingeln()
+activate Wecker
+Wecker -> Wecker: berechneNeueWeckzeit(minuten)
+activate Wecker
+Wecker --> Wecker: neueWeckzeit
+deactivate Wecker
+Wecker -> Wecker: snooze(neueWeckzeit)
+deactivate Wecker
+deactivate Wecker
+@enduml
+</code></pre>
+
+Drei Ebenen von Aktivierungsbalken übereinander zeigen den Call Stack: `klingeln()` ruft
+`berechneNeueWeckzeit()` auf, danach ruft `klingeln()` noch `snooze()` auf. Ein Diagramm mit
+nur einem Teilnehmer ist ungewöhnlich, aber für reine Selbstaufruf-Ketten völlig zulässig.
+
+</details>
+
+---
+
+### Aufgabe 5 [mittel]: Bibliothekssystem mit Verzweigung
 
 **Szenario:** Ein Benutzer möchte an einem Terminal ein Buch ausleihen:
 
@@ -183,7 +270,7 @@ jedes Fragment übersichtlich, statt eine einzige Bedingung mit vier Fällen zu 
 
 ---
 
-### Aufgabe A4 [mittel]: Newsletter-Versand (asynchron)
+### Aufgabe 6 [mittel]: Newsletter-Versand (asynchron)
 
 **Szenario:** Ein Redaktionssystem verschickt einen Newsletter:
 
@@ -218,98 +305,7 @@ der Kern von "Fire and Forget". Es gibt bewusst keine Rückgabenachricht vom Ver
 
 ---
 
-## Teil B — Vertiefungsaufgaben
-
-### Aufgabe B1 [leicht]: Taxi-Bestellung per App
-
-**Szenario:** Ein Fahrgast bestellt über eine App ein Taxi:
-
-1. Der Fahrgast bestellt ein Taxi mit seinem Standort.
-2. Die App fragt bei der Taxizentrale nach einem freien Fahrer.
-3. Die Zentrale fragt bei einem Fahrer die Verfügbarkeit ab; der Fahrer meldet sich verfügbar.
-4. Die Zentrale meldet der App den zugewiesenen Fahrer und die Ankunftszeit.
-5. Die App zeigt dem Fahrgast die Fahrerdaten an.
-
-Modelliere ein Sequenzdiagramm mit Fahrgast (Akteur), App, Taxizentrale und Fahrer. Nur
-synchrone Nachrichten, keine Fragmente nötig.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B1: Taxi-App](../grafiken/loesungen/seq-b1.svg)
-
-<pre><code>@startuml
-actor Fahrgast
-participant "app: TaxiApp" as App
-participant "zentrale: Taxizentrale" as Zentrale
-participant "fahrer: Fahrer" as Fahrer
-
-Fahrgast -> App: bestelleTaxi(standort)
-activate App
-
-App -> Zentrale: sucheFreienFahrer(standort)
-activate Zentrale
-
-Zentrale -> Fahrer: frageVerfuegbarkeit()
-activate Fahrer
-Fahrer --> Zentrale: verfuegbar
-deactivate Fahrer
-
-Zentrale --> App: fahrerZugewiesen(fahrerId, ankunftszeit)
-deactivate Zentrale
-
-App --> Fahrgast: zeigeFahrerdaten(fahrerId, ankunftszeit)
-deactivate App
-@enduml
-</code></pre>
-
-Eine reine Kette aus vier synchronen Aufrufen — jede Schicht wartet auf die Antwort der nächsten,
-bevor sie selbst antwortet. Gute Übung, um die Grundform "Aufruf → Aufruf → Rückgabe → Rückgabe"
-zu festigen.
-
-</details>
-
----
-
-### Aufgabe B2 [leicht]: Wecker mit Schlummerfunktion
-
-**Szenario:** Ein Wecker klingelt und wird per Schlummerfunktion (Snooze) verschoben:
-
-1. Der Wecker klingelt (interner Ablauf, kein externer Auslöser nötig).
-2. Beim Klingeln berechnet der Wecker intern eine neue Weckzeit.
-3. Der Wecker aktiviert intern die Schlummerfunktion mit der neuen Weckzeit.
-
-Modelliere ein Sequenzdiagramm mit nur einem Teilnehmer (Wecker) und ausschließlich
-Selbstaufrufen. Achte auf die Verschachtelung der Aktivierungsbalken.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B2: Wecker](../grafiken/loesungen/seq-b2.svg)
-
-<pre><code>@startuml
-participant "wecker: Wecker" as Wecker
-
-activate Wecker
-Wecker -> Wecker: klingeln()
-activate Wecker
-Wecker -> Wecker: berechneNeueWeckzeit(minuten)
-activate Wecker
-Wecker --> Wecker: neueWeckzeit
-deactivate Wecker
-Wecker -> Wecker: snooze(neueWeckzeit)
-deactivate Wecker
-deactivate Wecker
-@enduml
-</code></pre>
-
-Drei Ebenen von Aktivierungsbalken übereinander zeigen den Call Stack: `klingeln()` ruft
-`berechneNeueWeckzeit()` auf, danach ruft `klingeln()` noch `snooze()` auf. Ein Diagramm mit
-nur einem Teilnehmer ist ungewöhnlich, aber für reine Selbstaufruf-Ketten völlig zulässig.
-
-</details>
-
----
-
-### Aufgabe B3 [mittel]: Paketverfolgung mit mehreren Checkpoints
+### Aufgabe 7 [mittel]: Paketverfolgung mit mehreren Checkpoints
 
 **Szenario:** Ein Kunde verfolgt eine Sendung in einer Tracking-App:
 
@@ -357,7 +353,7 @@ ein einziges, gesammeltes Ergebnis zurückgegeben.
 
 ---
 
-### Aufgabe B4 [mittel]: Fahrkartenautomat mit Guthabenprüfung
+### Aufgabe 8 [mittel]: Fahrkartenautomat mit Guthabenprüfung
 
 **Szenario:** Ein Fahrgast kauft am Automaten eine Fahrkarte:
 
@@ -406,7 +402,7 @@ vom Akteur zum Automaten. Das `alt`-Fragment kapselt danach sauber die beiden m�
 
 ---
 
-### Aufgabe B5 [mittel]: Datei-Upload mit temporärem Handler-Objekt
+### Aufgabe 9 [mittel]: Datei-Upload mit temporärem Handler-Objekt
 
 **Szenario:** Ein Benutzer lädt eine Datei über einen Upload-Dienst hoch:
 
@@ -457,7 +453,7 @@ deshalb sichtbar erst mittendrin im Diagramm, nicht schon ganz oben.
 
 ---
 
-### Aufgabe B6 [mittel]: Bestellbestätigung mit Push-Benachrichtigung
+### Aufgabe 10 [mittel]: Bestellbestätigung mit Push-Benachrichtigung
 
 **Szenario:** Ein Online-Shop bestätigt eine Bestellung und benachrichtigt den Kunden zusätzlich
 per Push:
@@ -503,7 +499,7 @@ oder der Server darauf warten.
 
 ---
 
-### Aufgabe B7 [schwer]: Aufzugsteuerung mit Etagenfahrt und Türlogik
+### Aufgabe 11 [schwer]: Aufzugsteuerung mit Etagenfahrt und Türlogik
 
 **Szenario:** Ein Fahrgast ruft einen Aufzug zu einem Stockwerk:
 
@@ -557,7 +553,7 @@ für die Türlogik. Das ist ein typisches Muster in technischen Steuerungsabläu
 
 ---
 
-### Aufgabe B8 [schwer, Transfer]: Smart-Home "Guten-Morgen-Modus"
+### Aufgabe 12 [schwer, Transfer]: Smart-Home "Guten-Morgen-Modus"
 
 **Szenario:** Ein Bewohner aktiviert über eine App den "Guten-Morgen-Modus" seines Smart-Home-Systems:
 

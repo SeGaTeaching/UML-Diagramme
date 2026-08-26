@@ -4,9 +4,7 @@ Diese Aufgaben gehören zum Skript `7.5_UML-Zustand.md`. Modellieren Sie jeweils
 
 ---
 
-## Teil A — Grundübungen
-
-### Aufgabe A1 [leicht]: Verkehrsampel
+### Aufgabe 1 [leicht]: Verkehrsampel
 
 Eine einfache Verkehrsampel durchläuft immer wieder dieselbe Reihenfolge von Lichtern: Rot, Rot-Gelb, Grün, Gelb, und dann wieder Rot. Der Wechsel von einer Farbe zur nächsten erfolgt jeweils durch Zeitablauf.
 
@@ -32,7 +30,7 @@ Vier Zustände, ein einziges Ereignis (`zeitAblauf()`), das immer denselben Krei
 
 ---
 
-### Aufgabe A2 [leicht]: Türschloss
+### Aufgabe 2 [leicht]: Türschloss
 
 Ein elektronisches Türschloss kennt nur zwei Zustände: verriegelt und entriegelt. Mit dem Ereignis "aufschließen" wird es entriegelt, mit "abschließen" wieder verriegelt.
 
@@ -56,7 +54,82 @@ Das einfachste mögliche Zustandsdiagramm: zwei Zustände, zwei Transitionen, di
 
 ---
 
-### Aufgabe A3 [mittel]: Bestellung mit Stornierung
+### Aufgabe 3 [leicht]: Lichtschalter
+
+Ein einfacher Lichtschalter kennt die Zustände "Aus" und "An". Modellieren Sie den Lebenszyklus mit den Ereignissen "einschalten()" und "ausschalten()".
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B1: Lichtschalter](../bilder/zus-b1.svg)
+
+<pre><code>@startuml
+[*] --> Aus
+
+Aus --> An : einschalten()
+An --> Aus : ausschalten()
+@enduml
+</code></pre>
+
+Das denkbar einfachste Zustandsdiagramm — guter Einstieg in die Selbstlernphase, bevor es komplexer wird.
+
+</details>
+
+---
+
+### Aufgabe 4 [leicht]: Bewerbung
+
+Eine Bewerbung geht bei einer Firma ein (Zustand "Eingegangen"). Die Personalabteilung beginnt die Prüfung (→ "In Prüfung"). Am Ende der Prüfung wird die Bewerbung entweder angenommen (Endzustand "Angenommen") oder abgelehnt (Endzustand "Abgelehnt").
+
+Modellieren Sie den Lebenszyklus der Bewerbung.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B2: Bewerbung](../bilder/zus-b2.svg)
+
+<pre><code>@startuml
+[*] --> Eingegangen
+
+Eingegangen --> InPruefung : pruefungStarten()
+InPruefung --> Angenommen : annehmen()
+InPruefung --> Abgelehnt : ablehnen()
+
+Angenommen --> [*]
+Abgelehnt --> [*]
+@enduml
+</code></pre>
+
+Ein klassischer linearer Ablauf mit einer abschließenden Verzweigung in zwei Endzustände.
+
+</details>
+
+---
+
+### Aufgabe 5 [leicht-mittel]: Getränkeautomat
+
+Ein Getränkeautomat ist zunächst "Bereit". Wählt ein Kunde ein Getränk und der eingeworfene Betrag reicht aus, gibt der Automat das Getränk aus (Zustand "Getränk ausgeben") und kehrt danach zu "Bereit" zurück. Reicht der Betrag nicht aus, bleibt der Automat in "Bereit" (Selbst-Transition).
+
+Modellieren Sie den Lebenszyklus mit passenden Wächterbedingungen.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B3: Getränkeautomat](../bilder/zus-b3.svg)
+
+<pre><code>@startuml
+[*] --> Bereit
+
+Bereit --> Bereit : waehlen() [Betrag nicht ausreichend]
+Bereit --> GetraenkAusgeben : waehlen() [Betrag ausreichend]
+GetraenkAusgeben --> Bereit : ausgabeFertig()
+@enduml
+</code></pre>
+
+Dieselbe Methode `waehlen()` löst je nach Wächterbedingung entweder eine Selbst-Transition oder einen echten Zustandswechsel aus — ein häufiges Muster bei Automaten.
+
+</details>
+
+---
+
+### Aufgabe 6 [mittel]: Bestellung mit Stornierung
 
 Eine Bestellung beginnt im Zustand "Neu". Sie kann bezahlt werden (→ "Bezahlt") oder storniert werden (→ "Storniert", Endzustand). Eine bezahlte Bestellung kann noch storniert werden, aber nur, solange sie noch nicht versendet wurde. Wurde sie versendet (→ "Versendet"), kann sie später zugestellt werden (→ "Zugestellt", Endzustand).
 
@@ -86,7 +159,7 @@ Wichtig ist die Wächterbedingung `[noch nicht versendet]` an der Transition von
 
 ---
 
-### Aufgabe A4 [mittel]: Medienplayer
+### Aufgabe 7 [mittel]: Medienplayer
 
 Ein Medienplayer kennt drei Zustände: "Gestoppt", "Abspielen" und "Pausiert". Aus dem gestoppten Zustand startet "play()" die Wiedergabe. Während der Wiedergabe pausiert "pause()" den Player, und aus der Pause heraus setzt "play()" die Wiedergabe fort. Aus beiden Zuständen "Abspielen" und "Pausiert" kann "stop()" zurück zum gestoppten Zustand führen.
 
@@ -113,84 +186,7 @@ Diese Aufgabe übt, dass dasselbe Ereignis (`play()` bzw. `stop()`) von mehreren
 
 ---
 
-## Teil B — Vertiefungsaufgaben
-
-### Aufgabe B1 [leicht]: Lichtschalter
-
-Ein einfacher Lichtschalter kennt die Zustände "Aus" und "An". Modellieren Sie den Lebenszyklus mit den Ereignissen "einschalten()" und "ausschalten()".
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B1: Lichtschalter](../bilder/zus-b1.svg)
-
-<pre><code>@startuml
-[*] --> Aus
-
-Aus --> An : einschalten()
-An --> Aus : ausschalten()
-@enduml
-</code></pre>
-
-Das denkbar einfachste Zustandsdiagramm — guter Einstieg in die Selbstlernphase, bevor es komplexer wird.
-
-</details>
-
----
-
-### Aufgabe B2 [leicht]: Bewerbung
-
-Eine Bewerbung geht bei einer Firma ein (Zustand "Eingegangen"). Die Personalabteilung beginnt die Prüfung (→ "In Prüfung"). Am Ende der Prüfung wird die Bewerbung entweder angenommen (Endzustand "Angenommen") oder abgelehnt (Endzustand "Abgelehnt").
-
-Modellieren Sie den Lebenszyklus der Bewerbung.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B2: Bewerbung](../bilder/zus-b2.svg)
-
-<pre><code>@startuml
-[*] --> Eingegangen
-
-Eingegangen --> InPruefung : pruefungStarten()
-InPruefung --> Angenommen : annehmen()
-InPruefung --> Abgelehnt : ablehnen()
-
-Angenommen --> [*]
-Abgelehnt --> [*]
-@enduml
-</code></pre>
-
-Ein klassischer linearer Ablauf mit einer abschließenden Verzweigung in zwei Endzustände.
-
-</details>
-
----
-
-### Aufgabe B3 [leicht-mittel]: Getränkeautomat
-
-Ein Getränkeautomat ist zunächst "Bereit". Wählt ein Kunde ein Getränk und der eingeworfene Betrag reicht aus, gibt der Automat das Getränk aus (Zustand "Getränk ausgeben") und kehrt danach zu "Bereit" zurück. Reicht der Betrag nicht aus, bleibt der Automat in "Bereit" (Selbst-Transition).
-
-Modellieren Sie den Lebenszyklus mit passenden Wächterbedingungen.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B3: Getränkeautomat](../bilder/zus-b3.svg)
-
-<pre><code>@startuml
-[*] --> Bereit
-
-Bereit --> Bereit : waehlen() [Betrag nicht ausreichend]
-Bereit --> GetraenkAusgeben : waehlen() [Betrag ausreichend]
-GetraenkAusgeben --> Bereit : ausgabeFertig()
-@enduml
-</code></pre>
-
-Dieselbe Methode `waehlen()` löst je nach Wächterbedingung entweder eine Selbst-Transition oder einen echten Zustandswechsel aus — ein häufiges Muster bei Automaten.
-
-</details>
-
----
-
-### Aufgabe B4 [mittel]: Aufzug
+### Aufgabe 8 [mittel]: Aufzug
 
 Ein Aufzug steht zunächst still (Zustand "Stehend"). Wird er gerufen, fährt er los (→ "Fahrend"). Kommt er an seinem Ziel an, öffnen sich die Türen (→ "Türen offen"). Sobald die Türen wieder schließen, steht der Aufzug erneut still.
 
@@ -215,7 +211,7 @@ Ein einfacher, aber realistischer dreistufiger Kreislauf. In einer späteren Auf
 
 ---
 
-### Aufgabe B5 [mittel]: Mitgliedskonto
+### Aufgabe 9 [mittel]: Mitgliedskonto
 
 Ein Mitgliedskonto in einem Verein ist zunächst "Aktiv". Bleibt der Mitgliedsbeitrag unbezahlt, wird das Konto gesperrt (→ "Gesperrt"), mit einer Wächterbedingung, die genau das ausdrückt. Zahlt das Mitglied den Beitrag nachträglich, wird das Konto wieder aktiv. Aus beiden Zuständen "Aktiv" und "Gesperrt" kann das Mitglied kündigen (Endzustand "Gekündigt").
 
@@ -243,7 +239,7 @@ Wieder ein Ereignis (`kuendigen()`), das von zwei unterschiedlichen Zuständen a
 
 ---
 
-### Aufgabe B6 [mittel]: Heizungsthermostat
+### Aufgabe 10 [mittel]: Heizungsthermostat
 
 Ein Thermostat ist zunächst "Aus". Beim Einschalten prüft es die aktuelle Temperatur: Liegt sie unter dem Zielwert, beginnt es zu heizen (→ "Heizen"), sonst geht es in Bereitschaft (→ "Standby"). Ist der Zielwert beim Heizen erreicht, wechselt es zu "Standby". Sinkt die Temperatur im Standby-Zustand wieder unter den Zielwert, beginnt erneut das Heizen. Aus "Heizen" und "Standby" kann jeweils ausgeschaltet werden (zurück zu "Aus").
 
@@ -271,7 +267,7 @@ Hier entscheidet dieselbe Methode `einschalten()` je nach Wächterbedingung übe
 
 ---
 
-### Aufgabe B7 [mittel-schwer]: Support-Ticket
+### Aufgabe 11 [mittel-schwer]: Support-Ticket
 
 Ein Support-Ticket wird als "Offen" angelegt. Ein Mitarbeiter beginnt die Bearbeitung (→ "In Bearbeitung"). Von dort kann die Bearbeitung entweder erfolgreich beendet werden (→ "Gelöst") oder abgebrochen werden (zurück zu "Offen"). Ein gelöstes Ticket wird geschlossen (→ "Geschlossen", Endzustand). Ein bereits geschlossenes Ticket kann jedoch innerhalb der Garantiezeit wiedereröffnet werden — dann springt es zurück zu "Offen".
 
@@ -300,7 +296,7 @@ Der interessante Punkt: Der Endzustand ist mit "Geschlossen" verbunden, aber "Ge
 
 ---
 
-### Aufgabe B8 [schwer]: Waschmaschine mit Zustandsaktionen
+### Aufgabe 12 [schwer]: Waschmaschine mit Zustandsaktionen
 
 Eine Waschmaschine ist zunächst "Bereit". Wird ein Programm gestartet (nur möglich, wenn die Tür geschlossen ist), beginnt der Waschgang (Zustand "Waschen"). Beim Betreten dieses Zustands wird Wasser eingelassen, während des Zustands dreht sich die Trommel, und beim Verlassen wird das Wasser abgepumpt. Danach folgt der Schleudergang (Zustand "Schleudern"): Beim Betreten wird die Drehzahl hochgefahren, während des Zustands wird die Wäsche geschleudert, und beim Verlassen wird die Drehzahl wieder heruntergefahren. Danach ist die Maschine "Fertig" (Endzustand).
 
@@ -337,7 +333,7 @@ Hier kombinieren sich zwei Konzepte: eine Wächterbedingung für den Start und Z
 
 ---
 
-### Aufgabe B9 [schwer, Transfer]: Video-Streaming-Player
+### Aufgabe 13 [schwer, Transfer]: Video-Streaming-Player
 
 Ein Streaming-Player beginnt jede Wiedergabe mit dem Zustand "Puffern": Beim Betreten wird eine Ladeanzeige eingeblendet, während des Zustands werden Daten geladen. Ist genug gepuffert und die Verbindung stabil, wechselt der Player zu "Abspielen" (beim Betreten wird die Ladeanzeige ausgeblendet, während des Zustands läuft das Video). Bricht während des Puffervorgangs die Verbindung ab, geht der Player in den Zustand "Fehler" (beim Betreten wird eine Fehlermeldung angezeigt). Während der Wiedergabe kann pausiert werden (→ "Pausiert", beim Betreten wird die Wiedergabe angehalten) und von dort wieder fortgesetzt werden. Sinkt während der Wiedergabe die Bandbreite zu stark, wechselt der Player zurück zu "Puffern". Bricht die Verbindung während der Wiedergabe komplett ab, wechselt er zu "Fehler". Ist die Verbindung nach einem Fehler wiederhergestellt, beginnt der Player erneut mit "Puffern".
 
@@ -383,7 +379,7 @@ Diese Transferaufgabe kombiniert mehrere Konzepte auf einmal: entry/do-Aktionen 
 
 ---
 
-### Aufgabe B10 [sehr schwer, Transfer]: Smart-Home-Alarmanlage
+### Aufgabe 14 [sehr schwer, Transfer]: Smart-Home-Alarmanlage
 
 Eine Alarmanlage ist zunächst "Deaktiviert". Wird sie scharfgeschaltet, wechselt sie zu "Aktiviert" (beim Betreten werden die Sensoren scharfgeschaltet, beim Verlassen wieder entschärft). Erkennt die Anlage im aktivierten Zustand eine Bewegung, wechselt sie zu "Verzögerung" (beim Betreten startet ein Countdown, währenddessen wartet die Anlage auf eine Codeeingabe). Wird während der Verzögerung der richtige Code eingegeben, kehrt die Anlage direkt zu "Deaktiviert" zurück. Wird ein falscher Code eingegeben oder läuft die Zeit ab, ohne dass ein Code eingegeben wurde, löst die Anlage Alarm aus (Zustand "Alarm": beim Betreten wird die Sirene eingeschaltet und eine Meldung an die Zentrale gesendet, während des Zustands läuft die Meldung weiter, beim Verlassen wird die Sirene ausgeschaltet). Auch im Alarmzustand kann die Anlage durch Eingabe des richtigen Codes deaktiviert werden.
 

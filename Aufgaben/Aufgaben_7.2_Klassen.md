@@ -11,9 +11,7 @@ Multiplizitäten.
 
 ---
 
-## Teil A — Grundübungen
-
-### Aufgabe A1 [leicht]: Die Klasse Fahrzeug
+### Aufgabe 1 [leicht]: Die Klasse Fahrzeug
 
 Modellieren Sie eine einzelne Klasse `Fahrzeug` für eine Fuhrpark-Software. Sie soll folgende
 Eigenschaften und Fähigkeiten abbilden:
@@ -46,7 +44,7 @@ die Sie in fast jeder Klasse wiederfinden werden.
 
 ---
 
-### Aufgabe A2 [leicht]: PKW und LKW erben von Fahrzeug
+### Aufgabe 2 [leicht]: PKW und LKW erben von Fahrzeug
 
 Erweitern Sie Aufgabe A1: Es gibt nicht nur allgemeine Fahrzeuge, sondern speziell **PKW** und
 **LKW**. Beide sollen alle Eigenschaften eines Fahrzeugs besitzen, zusätzlich:
@@ -82,79 +80,7 @@ Ein PKW ist ein Fahrzeug, ein LKW ist ein Fahrzeug. Beide erben `kennzeichen`, `
 
 ---
 
-### Aufgabe A3 [mittel]: Bibliothekar und Buch
-
-Ein Bibliothekar verwaltet Bücher: Er kann ein Buch an ein Mitglied ausleihen. Modellieren Sie die
-Klassen `Bibliothekar` (Attribut: Name) und `Buch` (Attribute: Titel, ISBN) sowie die Beziehung
-zwischen beiden. Der Bibliothekar soll eine Methode `buchAusleihen` besitzen, die ein `Buch` als
-Parameter entgegennimmt.
-
-Überlegen Sie: Ist das eine Vererbung, eine Assoziation, eine Aggregation oder eine Komposition?
-
-<details><summary>Musterlösung</summary>
-
-![Lösung A3](../grafiken/loesungen/kls-a3.svg)
-
-<pre><code>class Bibliothekar {
-  -name: String
-  +buchAusleihen(buch: Buch): void
-}
-class Buch {
-  -titel: String
-  -isbn: String
-}
-Bibliothekar --> Buch : verwaltet</code></pre>
-
-Das ist eine **Assoziation**: Der Bibliothekar kennt Bücher und arbeitet mit ihnen, aber es gibt
-keine "ist-ein"-Beziehung und auch keine Ganzes-Teil-Beziehung. Weder gehört das Buch untrennbar zum
-Bibliothekar (keine Komposition), noch "besitzt" der Bibliothekar die Bücher im Sinne von
-Aggregation — er verwaltet sie lediglich.
-
-</details>
-
----
-
-### Aufgabe A4 [mittel]: Bibliothek, Buch und Kapitel
-
-Modellieren Sie ein kleines Bibliothekssystem mit drei Klassen:
-- `Bibliothek` (Attribut: Name) — eine Bibliothek hat mehrere Bücher
-- `Buch` (Attribute: Titel) — ein Buch besteht aus mehreren Kapiteln
-- `Kapitel` (Attribute: Nummer, Titel)
-
-Überlegen Sie für jede der beiden Beziehungen einzeln: Kann der Teil auch ohne das Ganze
-existieren? Ein Buch existiert auch, wenn die Bibliothek schließt (es wandert einfach in eine
-andere Bibliothek). Ein Kapitel dagegen ergibt ohne das zugehörige Buch keinen Sinn.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung A4](../grafiken/loesungen/kls-a4.svg)
-
-<pre><code>class Bibliothek {
-  -name: String
-  -buecher: List<Buch>
-}
-class Buch {
-  -titel: String
-  -kapitel: List<Kapitel>
-}
-class Kapitel {
-  -nummer: int
-  -titel: String
-}
-Bibliothek o-- Buch : hat
-Buch *-- Kapitel : besteht aus</code></pre>
-
-`Bibliothek` zu `Buch` ist eine **Aggregation** (hohle Raute): Das Buch kann unabhängig von der
-Bibliothek existieren. `Buch` zu `Kapitel` ist eine **Komposition** (gefüllte Raute): Ohne das Buch
-gibt es die Kapitel nicht — wird das Buch gelöscht, verschwinden auch seine Kapitel.
-
-</details>
-
----
-
-## Teil B — Vertiefungsaufgaben
-
-### Aufgabe B1 [leicht]: Die Klasse Produkt
+### Aufgabe 3 [leicht]: Die Klasse Produkt
 
 Ein Online-Shop verwaltet Produkte. Modellieren Sie eine Klasse `Produkt` mit:
 - einer Produkt-ID (Text)
@@ -182,7 +108,7 @@ Eine einzelne Klasse ohne Beziehungen — der einfachste Baustein eines Klassend
 
 ---
 
-### Aufgabe B2 [leicht]: Die Klasse Schüler
+### Aufgabe 4 [leicht]: Die Klasse Schüler
 
 Modellieren Sie eine Klasse `Schueler` für eine Schulverwaltung mit:
 - Name (Text)
@@ -208,7 +134,7 @@ Eine Methode kann mehrere Parameter haben — hier `fach` und `note`, getrennt d
 
 ---
 
-### Aufgabe B3 [leicht-mittel]: Hund und Katze erben von Tier
+### Aufgabe 5 [leicht-mittel]: Hund und Katze erben von Tier
 
 Ein Tierheim verwaltet Tiere. Es gibt eine allgemeine Klasse `Tier` (Name, Alter, kann fressen) und
 zwei speziellere Klassen:
@@ -246,7 +172,77 @@ von derselben Basis erben.
 
 ---
 
-### Aufgabe B4 [mittel]: Lehrer unterrichtet Kurs
+### Aufgabe 6 [mittel]: Bibliothekar und Buch
+
+Ein Bibliothekar verwaltet Bücher: Er kann ein Buch an ein Mitglied ausleihen. Modellieren Sie die
+Klassen `Bibliothekar` (Attribut: Name) und `Buch` (Attribute: Titel, ISBN) sowie die Beziehung
+zwischen beiden. Der Bibliothekar soll eine Methode `buchAusleihen` besitzen, die ein `Buch` als
+Parameter entgegennimmt.
+
+Überlegen Sie: Ist das eine Vererbung, eine Assoziation, eine Aggregation oder eine Komposition?
+
+<details><summary>Musterlösung</summary>
+
+![Lösung A3](../grafiken/loesungen/kls-a3.svg)
+
+<pre><code>class Bibliothekar {
+  -name: String
+  +buchAusleihen(buch: Buch): void
+}
+class Buch {
+  -titel: String
+  -isbn: String
+}
+Bibliothekar --> Buch : verwaltet</code></pre>
+
+Das ist eine **Assoziation**: Der Bibliothekar kennt Bücher und arbeitet mit ihnen, aber es gibt
+keine "ist-ein"-Beziehung und auch keine Ganzes-Teil-Beziehung. Weder gehört das Buch untrennbar zum
+Bibliothekar (keine Komposition), noch "besitzt" der Bibliothekar die Bücher im Sinne von
+Aggregation — er verwaltet sie lediglich.
+
+</details>
+
+---
+
+### Aufgabe 7 [mittel]: Bibliothek, Buch und Kapitel
+
+Modellieren Sie ein kleines Bibliothekssystem mit drei Klassen:
+- `Bibliothek` (Attribut: Name) — eine Bibliothek hat mehrere Bücher
+- `Buch` (Attribute: Titel) — ein Buch besteht aus mehreren Kapiteln
+- `Kapitel` (Attribute: Nummer, Titel)
+
+Überlegen Sie für jede der beiden Beziehungen einzeln: Kann der Teil auch ohne das Ganze
+existieren? Ein Buch existiert auch, wenn die Bibliothek schließt (es wandert einfach in eine
+andere Bibliothek). Ein Kapitel dagegen ergibt ohne das zugehörige Buch keinen Sinn.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung A4](../grafiken/loesungen/kls-a4.svg)
+
+<pre><code>class Bibliothek {
+  -name: String
+  -buecher: List<Buch>
+}
+class Buch {
+  -titel: String
+  -kapitel: List<Kapitel>
+}
+class Kapitel {
+  -nummer: int
+  -titel: String
+}
+Bibliothek o-- Buch : hat
+Buch *-- Kapitel : besteht aus</code></pre>
+
+`Bibliothek` zu `Buch` ist eine **Aggregation** (hohle Raute): Das Buch kann unabhängig von der
+Bibliothek existieren. `Buch` zu `Kapitel` ist eine **Komposition** (gefüllte Raute): Ohne das Buch
+gibt es die Kapitel nicht — wird das Buch gelöscht, verschwinden auch seine Kapitel.
+
+</details>
+
+---
+
+### Aufgabe 8 [mittel]: Lehrer unterrichtet Kurs
 
 Ein Lehrer unterrichtet Kurse. Modellieren Sie `Lehrer` (Name, Liste von Fächern, Methode um einen
 Kurs zu leiten) und `Kurs` (Titel, Raum) sowie die passende Beziehung. Ein Lehrer kann existieren,
@@ -276,7 +272,7 @@ Komposition passen hier, weil kein "Ganzes" existiert, aus dem der Kurs ein "Tei
 
 ---
 
-### Aufgabe B5 [mittel]: Kurs hat Schüler
+### Aufgabe 9 [mittel]: Kurs hat Schüler
 
 Ein Kurs hat mehrere Schüler. Modellieren Sie `Kurs` (Titel, Liste von Schülern, Methode um einen
 Schüler hinzuzufügen) und `Schueler` (Name). Ein Schüler soll auch dann weiter existieren, wenn er
@@ -303,7 +299,7 @@ existieren — genau wie ein Team, das sich auflöst, ohne dass die Spieler vers
 
 ---
 
-### Aufgabe B6 [mittel]: Bestellung besteht aus Bestellpositionen
+### Aufgabe 10 [mittel]: Bestellung besteht aus Bestellpositionen
 
 Ein Online-Shop-Warenkorb wird beim Abschluss zu einer Bestellung. Eine `Bestellung`
 (Bestellnummer, Datum, Liste von Bestellpositionen, Methode zur Berechnung der Gesamtsumme) besteht
@@ -334,7 +330,7 @@ Zweck. Wird die Bestellung storniert, verschwinden auch ihre Positionen.
 
 ---
 
-### Aufgabe B7 [mittel]: Kunde und Bestellung mit Multiplizität
+### Aufgabe 11 [mittel]: Kunde und Bestellung mit Multiplizität
 
 Ein Kunde kann keine, eine oder mehrere Bestellungen aufgeben; jede Bestellung gehört zu genau
 einem Kunden. Modellieren Sie `Kunde` (Kundennummer, Name) und `Bestellung` (Bestellnummer, Datum)
@@ -362,7 +358,7 @@ haben). Achten Sie darauf, dass die Zahl immer auf der Seite der Klasse steht, d
 
 ---
 
-### Aufgabe B8 [mittel-schwer]: Schauspieler und Film (viele-zu-viele)
+### Aufgabe 12 [mittel-schwer]: Schauspieler und Film (viele-zu-viele)
 
 Ein Schauspieler spielt in der Regel in mehreren Filmen mit, und ein Film hat üblicherweise mehrere
 Schauspieler. Modellieren Sie `Schauspieler` (Name) und `Film` (Titel, Erscheinungsjahr) mit der
@@ -389,7 +385,7 @@ der Programmierung meist über eine zusätzliche Verbindungstabelle bzw. -klasse
 
 ---
 
-### Aufgabe B9 [schwer]: Bibliothekssystem mit Medien und Ausleihen
+### Aufgabe 13 [schwer]: Bibliothekssystem mit Medien und Ausleihen
 
 Modellieren Sie ein etwas größeres Bibliothekssystem mit sechs Klassen:
 
@@ -450,7 +446,7 @@ Beachten Sie, dass `Ausleihe` als eigene Klasse modelliert ist, weil sie eigene 
 
 ---
 
-### Aufgabe B10 [schwer]: Fuhrpark-Verwaltungssystem
+### Aufgabe 14 [schwer]: Fuhrpark-Verwaltungssystem
 
 Die anspruchsvollste Aufgabe: Modellieren Sie ein Fuhrpark-Verwaltungssystem für eine Spedition mit
 sieben Klassen:
@@ -514,3 +510,5 @@ Assoziation zum Fahrer beschreibt schließlich eine lose, veränderliche Zuordnu
 deshalb hier `0..1` statt `1`, denn ein Fahrzeug kann auch gerade unbenutzt in der Halle stehen.
 
 </details>
+
+---

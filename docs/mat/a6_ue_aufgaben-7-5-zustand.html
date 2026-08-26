@@ -6,8 +6,7 @@
 <details class="nav-gruppe" data-gruppe="uebungen" open><summary><span class="nav-gruppe-titel">Übungen</span><span class="nav-gruppe-anzahl">1</span></summary><div class="nav-gruppe-inhalt"><a href="a6_ue_aufgaben-7-5-zustand.html" class="hier">Aufgaben — Zustandsdiagramme</a></div></details>
 </nav><main class="inhalt" id="inhalt"><div class="krume"><a href="../index.html">Start</a><span>›</span><a href="../Abschnitt_6.html">Kapitel 6</a><span>›</span>Aufgaben — Zustandsdiagramme</div><h1>Aufgaben — Zustandsdiagramme</h1><p>Diese Aufgaben gehören zum Skript <code>7.5_UML-Zustand.md</code>. Modellieren Sie jeweils den Lebenszyklus des beschriebenen Objekts: Welche Zustände gibt es, welche Ereignisse lösen einen Wechsel aus, und — wo angegeben — welche Wächterbedingungen oder Aktionen gehören dazu? Klappen Sie die Musterlösung erst auf, nachdem Sie selbst eine Lösung skizziert haben.</p>
 <hr>
-<h2 id="teil-a-grundubungen">Teil A — Grundübungen</h2>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A1 [leicht]: Verkehrsampel</h3><p>Eine einfache Verkehrsampel durchläuft immer wieder dieselbe Reihenfolge von Lichtern: Rot, Rot-Gelb, Grün, Gelb, und dann wieder Rot. Der Wechsel von einer Farbe zur nächsten erfolgt jeweils durch Zeitablauf.</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 1 [leicht]: Verkehrsampel</h3><p>Eine einfache Verkehrsampel durchläuft immer wieder dieselbe Reihenfolge von Lichtern: Rot, Rot-Gelb, Grün, Gelb, und dann wieder Rot. Der Wechsel von einer Farbe zur nächsten erfolgt jeweils durch Zeitablauf.</p>
 <p>Modellieren Sie den Lebenszyklus der Ampel als Zustandsdiagramm. Die Ampel hat keinen Endzustand — sie läuft dauerhaft im Kreis.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A1: Verkehrsampel" src="../bilder/zus-a1.svg"></p>
 <pre><code>@startuml
 [*] --> Rot
@@ -20,7 +19,7 @@ Gelb --> Rot : zeitAblauf()
 </code></pre>
 
 <p>Vier Zustände, ein einziges Ereignis (<code>zeitAblauf()</code>), das immer denselben Kreislauf antreibt. Da die Ampel niemals "endet", gibt es keinen Endzustand — nur der Startzustand zeigt, wo der Kreislauf beginnt.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A2 [leicht]: Türschloss</h3><p>Ein elektronisches Türschloss kennt nur zwei Zustände: verriegelt und entriegelt. Mit dem Ereignis "aufschließen" wird es entriegelt, mit "abschließen" wieder verriegelt.</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 2 [leicht]: Türschloss</h3><p>Ein elektronisches Türschloss kennt nur zwei Zustände: verriegelt und entriegelt. Mit dem Ereignis "aufschließen" wird es entriegelt, mit "abschließen" wieder verriegelt.</p>
 <p>Modellieren Sie den Lebenszyklus des Türschlosses.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A2: Türschloss" src="../bilder/zus-a2.svg"></p>
 <pre><code>@startuml
 [*] --> Verriegelt
@@ -31,7 +30,44 @@ Entriegelt --> Verriegelt : abschliessen()
 </code></pre>
 
 <p>Das einfachste mögliche Zustandsdiagramm: zwei Zustände, zwei Transitionen, die sich gegenseitig aufheben. Trotzdem gilt auch hier die volle Notation: Startzustand nicht vergessen.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A3 [mittel]: Bestellung mit Stornierung</h3><p>Eine Bestellung beginnt im Zustand "Neu". Sie kann bezahlt werden (→ "Bezahlt") oder storniert werden (→ "Storniert", Endzustand). Eine bezahlte Bestellung kann noch storniert werden, aber nur, solange sie noch nicht versendet wurde. Wurde sie versendet (→ "Versendet"), kann sie später zugestellt werden (→ "Zugestellt", Endzustand).</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 3 [leicht]: Lichtschalter</h3><p>Ein einfacher Lichtschalter kennt die Zustände "Aus" und "An". Modellieren Sie den Lebenszyklus mit den Ereignissen "einschalten()" und "ausschalten()".</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B1: Lichtschalter" src="../bilder/zus-b1.svg"></p>
+<pre><code>@startuml
+[*] --> Aus
+
+Aus --> An : einschalten()
+An --> Aus : ausschalten()
+@enduml
+</code></pre>
+
+<p>Das denkbar einfachste Zustandsdiagramm — guter Einstieg in die Selbstlernphase, bevor es komplexer wird.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 4 [leicht]: Bewerbung</h3><p>Eine Bewerbung geht bei einer Firma ein (Zustand "Eingegangen"). Die Personalabteilung beginnt die Prüfung (→ "In Prüfung"). Am Ende der Prüfung wird die Bewerbung entweder angenommen (Endzustand "Angenommen") oder abgelehnt (Endzustand "Abgelehnt").</p>
+<p>Modellieren Sie den Lebenszyklus der Bewerbung.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B2: Bewerbung" src="../bilder/zus-b2.svg"></p>
+<pre><code>@startuml
+[*] --> Eingegangen
+
+Eingegangen --> InPruefung : pruefungStarten()
+InPruefung --> Angenommen : annehmen()
+InPruefung --> Abgelehnt : ablehnen()
+
+Angenommen --> [*]
+Abgelehnt --> [*]
+@enduml
+</code></pre>
+
+<p>Ein klassischer linearer Ablauf mit einer abschließenden Verzweigung in zwei Endzustände.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 5 [leicht-mittel]: Getränkeautomat</h3><p>Ein Getränkeautomat ist zunächst "Bereit". Wählt ein Kunde ein Getränk und der eingeworfene Betrag reicht aus, gibt der Automat das Getränk aus (Zustand "Getränk ausgeben") und kehrt danach zu "Bereit" zurück. Reicht der Betrag nicht aus, bleibt der Automat in "Bereit" (Selbst-Transition).</p>
+<p>Modellieren Sie den Lebenszyklus mit passenden Wächterbedingungen.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B3: Getränkeautomat" src="../bilder/zus-b3.svg"></p>
+<pre><code>@startuml
+[*] --> Bereit
+
+Bereit --> Bereit : waehlen() [Betrag nicht ausreichend]
+Bereit --> GetraenkAusgeben : waehlen() [Betrag ausreichend]
+GetraenkAusgeben --> Bereit : ausgabeFertig()
+@enduml
+</code></pre>
+
+<p>Dieselbe Methode <code>waehlen()</code> löst je nach Wächterbedingung entweder eine Selbst-Transition oder einen echten Zustandswechsel aus — ein häufiges Muster bei Automaten.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 6 [mittel]: Bestellung mit Stornierung</h3><p>Eine Bestellung beginnt im Zustand "Neu". Sie kann bezahlt werden (→ "Bezahlt") oder storniert werden (→ "Storniert", Endzustand). Eine bezahlte Bestellung kann noch storniert werden, aber nur, solange sie noch nicht versendet wurde. Wurde sie versendet (→ "Versendet"), kann sie später zugestellt werden (→ "Zugestellt", Endzustand).</p>
 <p>Modellieren Sie den Lebenszyklus. Verwenden Sie für die Stornierung einer bezahlten Bestellung eine passende Wächterbedingung.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A3: Bestellung mit Stornierung" src="../bilder/zus-a3.svg"></p>
 <pre><code>@startuml
 [*] --> Neu
@@ -48,9 +84,8 @@ Zugestellt --> [*]
 </code></pre>
 
 <p>Wichtig ist die Wächterbedingung <code>[noch nicht versendet]</code> an der Transition von "Bezahlt" zu "Storniert": Sie macht sichtbar, dass eine Stornierung nach dem Bezahlen nur unter einer Zusatzbedingung erlaubt ist. Zwei Endzustände sind hier völlig normal — eine Bestellung kann auf zwei Wegen enden.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A4 [mittel]: Medienplayer</h3><p>Ein Medienplayer kennt drei Zustände: "Gestoppt", "Abspielen" und "Pausiert". Aus dem gestoppten Zustand startet "play()" die Wiedergabe. Während der Wiedergabe pausiert "pause()" den Player, und aus der Pause heraus setzt "play()" die Wiedergabe fort. Aus beiden Zuständen "Abspielen" und "Pausiert" kann "stop()" zurück zum gestoppten Zustand führen.</p>
-<p>Modellieren Sie den Lebenszyklus.</p>
-<h2 id="teil-b-vertiefungsaufgaben">Teil B — Vertiefungsaufgaben</h2></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A4: Medienplayer" src="../bilder/zus-a4.svg"></p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 7 [mittel]: Medienplayer</h3><p>Ein Medienplayer kennt drei Zustände: "Gestoppt", "Abspielen" und "Pausiert". Aus dem gestoppten Zustand startet "play()" die Wiedergabe. Während der Wiedergabe pausiert "pause()" den Player, und aus der Pause heraus setzt "play()" die Wiedergabe fort. Aus beiden Zuständen "Abspielen" und "Pausiert" kann "stop()" zurück zum gestoppten Zustand führen.</p>
+<p>Modellieren Sie den Lebenszyklus.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A4: Medienplayer" src="../bilder/zus-a4.svg"></p>
 <pre><code>@startuml
 [*] --> Gestoppt
 
@@ -63,44 +98,7 @@ Pausiert --> Gestoppt : stop()
 </code></pre>
 
 <p>Diese Aufgabe übt, dass dasselbe Ereignis (<code>play()</code> bzw. <code>stop()</code>) von mehreren Zuständen aus vorkommen kann, jeweils mit einem eigenen Pfeil. Leicht zu übersehen: "Pausiert" hat zwei ausgehende Transitionen, nicht nur eine.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B1 [leicht]: Lichtschalter</h3><p>Ein einfacher Lichtschalter kennt die Zustände "Aus" und "An". Modellieren Sie den Lebenszyklus mit den Ereignissen "einschalten()" und "ausschalten()".</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B1: Lichtschalter" src="../bilder/zus-b1.svg"></p>
-<pre><code>@startuml
-[*] --> Aus
-
-Aus --> An : einschalten()
-An --> Aus : ausschalten()
-@enduml
-</code></pre>
-
-<p>Das denkbar einfachste Zustandsdiagramm — guter Einstieg in die Selbstlernphase, bevor es komplexer wird.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B2 [leicht]: Bewerbung</h3><p>Eine Bewerbung geht bei einer Firma ein (Zustand "Eingegangen"). Die Personalabteilung beginnt die Prüfung (→ "In Prüfung"). Am Ende der Prüfung wird die Bewerbung entweder angenommen (Endzustand "Angenommen") oder abgelehnt (Endzustand "Abgelehnt").</p>
-<p>Modellieren Sie den Lebenszyklus der Bewerbung.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B2: Bewerbung" src="../bilder/zus-b2.svg"></p>
-<pre><code>@startuml
-[*] --> Eingegangen
-
-Eingegangen --> InPruefung : pruefungStarten()
-InPruefung --> Angenommen : annehmen()
-InPruefung --> Abgelehnt : ablehnen()
-
-Angenommen --> [*]
-Abgelehnt --> [*]
-@enduml
-</code></pre>
-
-<p>Ein klassischer linearer Ablauf mit einer abschließenden Verzweigung in zwei Endzustände.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B3 [leicht-mittel]: Getränkeautomat</h3><p>Ein Getränkeautomat ist zunächst "Bereit". Wählt ein Kunde ein Getränk und der eingeworfene Betrag reicht aus, gibt der Automat das Getränk aus (Zustand "Getränk ausgeben") und kehrt danach zu "Bereit" zurück. Reicht der Betrag nicht aus, bleibt der Automat in "Bereit" (Selbst-Transition).</p>
-<p>Modellieren Sie den Lebenszyklus mit passenden Wächterbedingungen.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B3: Getränkeautomat" src="../bilder/zus-b3.svg"></p>
-<pre><code>@startuml
-[*] --> Bereit
-
-Bereit --> Bereit : waehlen() [Betrag nicht ausreichend]
-Bereit --> GetraenkAusgeben : waehlen() [Betrag ausreichend]
-GetraenkAusgeben --> Bereit : ausgabeFertig()
-@enduml
-</code></pre>
-
-<p>Dieselbe Methode <code>waehlen()</code> löst je nach Wächterbedingung entweder eine Selbst-Transition oder einen echten Zustandswechsel aus — ein häufiges Muster bei Automaten.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B4 [mittel]: Aufzug</h3><p>Ein Aufzug steht zunächst still (Zustand "Stehend"). Wird er gerufen, fährt er los (→ "Fahrend"). Kommt er an seinem Ziel an, öffnen sich die Türen (→ "Türen offen"). Sobald die Türen wieder schließen, steht der Aufzug erneut still.</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 8 [mittel]: Aufzug</h3><p>Ein Aufzug steht zunächst still (Zustand "Stehend"). Wird er gerufen, fährt er los (→ "Fahrend"). Kommt er an seinem Ziel an, öffnen sich die Türen (→ "Türen offen"). Sobald die Türen wieder schließen, steht der Aufzug erneut still.</p>
 <p>Modellieren Sie den Lebenszyklus.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B4: Aufzug" src="../bilder/zus-b4.svg"></p>
 <pre><code>@startuml
 [*] --> Stehend
@@ -112,7 +110,7 @@ TuerOffen --> Stehend : tuerSchliessen()
 </code></pre>
 
 <p>Ein einfacher, aber realistischer dreistufiger Kreislauf. In einer späteren Aufgabe (B10 und die Aufzug-Variante mit Zustandsaktionen) wird dieses Muster wieder aufgegriffen und erweitert.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B5 [mittel]: Mitgliedskonto</h3><p>Ein Mitgliedskonto in einem Verein ist zunächst "Aktiv". Bleibt der Mitgliedsbeitrag unbezahlt, wird das Konto gesperrt (→ "Gesperrt"), mit einer Wächterbedingung, die genau das ausdrückt. Zahlt das Mitglied den Beitrag nachträglich, wird das Konto wieder aktiv. Aus beiden Zuständen "Aktiv" und "Gesperrt" kann das Mitglied kündigen (Endzustand "Gekündigt").</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 9 [mittel]: Mitgliedskonto</h3><p>Ein Mitgliedskonto in einem Verein ist zunächst "Aktiv". Bleibt der Mitgliedsbeitrag unbezahlt, wird das Konto gesperrt (→ "Gesperrt"), mit einer Wächterbedingung, die genau das ausdrückt. Zahlt das Mitglied den Beitrag nachträglich, wird das Konto wieder aktiv. Aus beiden Zuständen "Aktiv" und "Gesperrt" kann das Mitglied kündigen (Endzustand "Gekündigt").</p>
 <p>Modellieren Sie den Lebenszyklus.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B5: Mitgliedskonto" src="../bilder/zus-b5.svg"></p>
 <pre><code>@startuml
 [*] --> Aktiv
@@ -127,7 +125,7 @@ Gekuendigt --> [*]
 </code></pre>
 
 <p>Wieder ein Ereignis (<code>kuendigen()</code>), das von zwei unterschiedlichen Zuständen aus zum selben Ziel führt — das ist erlaubt und in der Praxis häufig.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B6 [mittel]: Heizungsthermostat</h3><p>Ein Thermostat ist zunächst "Aus". Beim Einschalten prüft es die aktuelle Temperatur: Liegt sie unter dem Zielwert, beginnt es zu heizen (→ "Heizen"), sonst geht es in Bereitschaft (→ "Standby"). Ist der Zielwert beim Heizen erreicht, wechselt es zu "Standby". Sinkt die Temperatur im Standby-Zustand wieder unter den Zielwert, beginnt erneut das Heizen. Aus "Heizen" und "Standby" kann jeweils ausgeschaltet werden (zurück zu "Aus").</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 10 [mittel]: Heizungsthermostat</h3><p>Ein Thermostat ist zunächst "Aus". Beim Einschalten prüft es die aktuelle Temperatur: Liegt sie unter dem Zielwert, beginnt es zu heizen (→ "Heizen"), sonst geht es in Bereitschaft (→ "Standby"). Ist der Zielwert beim Heizen erreicht, wechselt es zu "Standby". Sinkt die Temperatur im Standby-Zustand wieder unter den Zielwert, beginnt erneut das Heizen. Aus "Heizen" und "Standby" kann jeweils ausgeschaltet werden (zurück zu "Aus").</p>
 <p>Modellieren Sie den Lebenszyklus mit passenden Wächterbedingungen.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B6: Heizungsthermostat" src="../bilder/zus-b6.svg"></p>
 <pre><code>@startuml
 [*] --> Aus
@@ -142,7 +140,7 @@ Standby --> Aus : ausschalten()
 </code></pre>
 
 <p>Hier entscheidet dieselbe Methode <code>einschalten()</code> je nach Wächterbedingung über zwei völlig unterschiedliche Zielzustände — typisch für Geräte, die beim Start ihren aktuellen Messwert prüfen.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B7 [mittel-schwer]: Support-Ticket</h3><p>Ein Support-Ticket wird als "Offen" angelegt. Ein Mitarbeiter beginnt die Bearbeitung (→ "In Bearbeitung"). Von dort kann die Bearbeitung entweder erfolgreich beendet werden (→ "Gelöst") oder abgebrochen werden (zurück zu "Offen"). Ein gelöstes Ticket wird geschlossen (→ "Geschlossen", Endzustand). Ein bereits geschlossenes Ticket kann jedoch innerhalb der Garantiezeit wiedereröffnet werden — dann springt es zurück zu "Offen".</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 11 [mittel-schwer]: Support-Ticket</h3><p>Ein Support-Ticket wird als "Offen" angelegt. Ein Mitarbeiter beginnt die Bearbeitung (→ "In Bearbeitung"). Von dort kann die Bearbeitung entweder erfolgreich beendet werden (→ "Gelöst") oder abgebrochen werden (zurück zu "Offen"). Ein gelöstes Ticket wird geschlossen (→ "Geschlossen", Endzustand). Ein bereits geschlossenes Ticket kann jedoch innerhalb der Garantiezeit wiedereröffnet werden — dann springt es zurück zu "Offen".</p>
 <p>Modellieren Sie den vollständigen Lebenszyklus mit der passenden Wächterbedingung für die Wiedereröffnung.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B7: Support-Ticket" src="../bilder/zus-b7.svg"></p>
 <pre><code>@startuml
 [*] --> Offen
@@ -158,7 +156,7 @@ Geschlossen --> [*]
 </code></pre>
 
 <p>Der interessante Punkt: Der Endzustand ist mit "Geschlossen" verbunden, aber "Geschlossen" selbst hat trotzdem noch eine ausgehende Transition. Das ist zulässig — der Endzustands-Pfeil bedeutet nur "der Lebenszyklus kann hier enden", nicht "der Zustand hat keine weiteren Übergänge".</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B8 [schwer]: Waschmaschine mit Zustandsaktionen</h3><p>Eine Waschmaschine ist zunächst "Bereit". Wird ein Programm gestartet (nur möglich, wenn die Tür geschlossen ist), beginnt der Waschgang (Zustand "Waschen"). Beim Betreten dieses Zustands wird Wasser eingelassen, während des Zustands dreht sich die Trommel, und beim Verlassen wird das Wasser abgepumpt. Danach folgt der Schleudergang (Zustand "Schleudern"): Beim Betreten wird die Drehzahl hochgefahren, während des Zustands wird die Wäsche geschleudert, und beim Verlassen wird die Drehzahl wieder heruntergefahren. Danach ist die Maschine "Fertig" (Endzustand).</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 12 [schwer]: Waschmaschine mit Zustandsaktionen</h3><p>Eine Waschmaschine ist zunächst "Bereit". Wird ein Programm gestartet (nur möglich, wenn die Tür geschlossen ist), beginnt der Waschgang (Zustand "Waschen"). Beim Betreten dieses Zustands wird Wasser eingelassen, während des Zustands dreht sich die Trommel, und beim Verlassen wird das Wasser abgepumpt. Danach folgt der Schleudergang (Zustand "Schleudern"): Beim Betreten wird die Drehzahl hochgefahren, während des Zustands wird die Wäsche geschleudert, und beim Verlassen wird die Drehzahl wieder heruntergefahren. Danach ist die Maschine "Fertig" (Endzustand).</p>
 <p>Modellieren Sie den Lebenszyklus einschließlich der Zustandsaktionen (entry/do/exit) für "Waschen" und "Schleudern" sowie der Wächterbedingung für den Start.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B8: Waschmaschine mit Zustandsaktionen" src="../bilder/zus-b8.svg"></p>
 <pre><code>@startuml
 [*] --> Bereit
@@ -182,7 +180,7 @@ Fertig --> [*]
 </code></pre>
 
 <p>Hier kombinieren sich zwei Konzepte: eine Wächterbedingung für den Start und Zustandsaktionen in zwei aufeinanderfolgenden Zuständen. Beachten Sie, dass die exit-Aktion von "Waschen" (Wasser abpumpen) unabhängig davon ausgeführt wird, warum der Zustand verlassen wird — hier gibt es zwar nur einen Übergang, aber das Prinzip gilt allgemein.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B9 [schwer, Transfer]: Video-Streaming-Player</h3><p>Ein Streaming-Player beginnt jede Wiedergabe mit dem Zustand "Puffern": Beim Betreten wird eine Ladeanzeige eingeblendet, während des Zustands werden Daten geladen. Ist genug gepuffert und die Verbindung stabil, wechselt der Player zu "Abspielen" (beim Betreten wird die Ladeanzeige ausgeblendet, während des Zustands läuft das Video). Bricht während des Puffervorgangs die Verbindung ab, geht der Player in den Zustand "Fehler" (beim Betreten wird eine Fehlermeldung angezeigt). Während der Wiedergabe kann pausiert werden (→ "Pausiert", beim Betreten wird die Wiedergabe angehalten) und von dort wieder fortgesetzt werden. Sinkt während der Wiedergabe die Bandbreite zu stark, wechselt der Player zurück zu "Puffern". Bricht die Verbindung während der Wiedergabe komplett ab, wechselt er zu "Fehler". Ist die Verbindung nach einem Fehler wiederhergestellt, beginnt der Player erneut mit "Puffern".</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 13 [schwer, Transfer]: Video-Streaming-Player</h3><p>Ein Streaming-Player beginnt jede Wiedergabe mit dem Zustand "Puffern": Beim Betreten wird eine Ladeanzeige eingeblendet, während des Zustands werden Daten geladen. Ist genug gepuffert und die Verbindung stabil, wechselt der Player zu "Abspielen" (beim Betreten wird die Ladeanzeige ausgeblendet, während des Zustands läuft das Video). Bricht während des Puffervorgangs die Verbindung ab, geht der Player in den Zustand "Fehler" (beim Betreten wird eine Fehlermeldung angezeigt). Während der Wiedergabe kann pausiert werden (→ "Pausiert", beim Betreten wird die Wiedergabe angehalten) und von dort wieder fortgesetzt werden. Sinkt während der Wiedergabe die Bandbreite zu stark, wechselt der Player zurück zu "Puffern". Bricht die Verbindung während der Wiedergabe komplett ab, wechselt er zu "Fehler". Ist die Verbindung nach einem Fehler wiederhergestellt, beginnt der Player erneut mit "Puffern".</p>
 <p>Modellieren Sie den vollständigen Lebenszyklus mit allen Zustandsaktionen, der Wächterbedingung beim ersten Pufferschritt und den mehreren Ereignissen, die zu "Fehler" führen können.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B9: Video-Streaming-Player" src="../bilder/zus-b9.svg"></p>
 <pre><code>@startuml
 [*] --> Puffern
@@ -215,7 +213,7 @@ Fehler --> Puffern : verbindungWiederhergestellt()
 </code></pre>
 
 <p>Diese Transferaufgabe kombiniert mehrere Konzepte auf einmal: entry/do-Aktionen in vier Zuständen, eine Wächterbedingung, und ein Ereignis (<code>verbindungVerloren()</code>), das von zwei unterschiedlichen Zuständen aus zum selben Zielzustand führt. Achten Sie darauf, dass "Fehler" hier keinen Endzustand markiert — der Player kann sich davon erholen.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B10 [sehr schwer, Transfer]: Smart-Home-Alarmanlage</h3><p>Eine Alarmanlage ist zunächst "Deaktiviert". Wird sie scharfgeschaltet, wechselt sie zu "Aktiviert" (beim Betreten werden die Sensoren scharfgeschaltet, beim Verlassen wieder entschärft). Erkennt die Anlage im aktivierten Zustand eine Bewegung, wechselt sie zu "Verzögerung" (beim Betreten startet ein Countdown, währenddessen wartet die Anlage auf eine Codeeingabe). Wird während der Verzögerung der richtige Code eingegeben, kehrt die Anlage direkt zu "Deaktiviert" zurück. Wird ein falscher Code eingegeben oder läuft die Zeit ab, ohne dass ein Code eingegeben wurde, löst die Anlage Alarm aus (Zustand "Alarm": beim Betreten wird die Sirene eingeschaltet und eine Meldung an die Zentrale gesendet, während des Zustands läuft die Meldung weiter, beim Verlassen wird die Sirene ausgeschaltet). Auch im Alarmzustand kann die Anlage durch Eingabe des richtigen Codes deaktiviert werden.</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 14 [sehr schwer, Transfer]: Smart-Home-Alarmanlage</h3><p>Eine Alarmanlage ist zunächst "Deaktiviert". Wird sie scharfgeschaltet, wechselt sie zu "Aktiviert" (beim Betreten werden die Sensoren scharfgeschaltet, beim Verlassen wieder entschärft). Erkennt die Anlage im aktivierten Zustand eine Bewegung, wechselt sie zu "Verzögerung" (beim Betreten startet ein Countdown, währenddessen wartet die Anlage auf eine Codeeingabe). Wird während der Verzögerung der richtige Code eingegeben, kehrt die Anlage direkt zu "Deaktiviert" zurück. Wird ein falscher Code eingegeben oder läuft die Zeit ab, ohne dass ein Code eingegeben wurde, löst die Anlage Alarm aus (Zustand "Alarm": beim Betreten wird die Sirene eingeschaltet und eine Meldung an die Zentrale gesendet, während des Zustands läuft die Meldung weiter, beim Verlassen wird die Sirene ausgeschaltet). Auch im Alarmzustand kann die Anlage durch Eingabe des richtigen Codes deaktiviert werden.</p>
 <p>Modellieren Sie den vollständigen Lebenszyklus mit Zustandsaktionen, mehreren Wächterbedingungen für dasselbe Ereignis und mehreren Ereignissen, die zu "Alarm" führen können.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B10: Smart-Home-Alarmanlage" src="../bilder/zus-b10.svg"></p>
 <pre><code>@startuml
 [*] --> Deaktiviert
@@ -244,4 +242,4 @@ Alarm --> Deaktiviert : codeEingeben() [Code korrekt]
 @enduml
 </code></pre>
 
-<p>Die anspruchsvollste Aufgabe des Satzes: Das Ereignis <code>codeEingeben()</code> tritt an drei verschiedenen Stellen im Diagramm auf, jedes Mal mit einer anderen Wächterbedingung oder von einem anderen Ausgangszustand aus. Zusätzlich führen zwei unterschiedliche Ereignisse (<code>codeEingeben() [Code falsch]</code> und <code>timeout()</code>) zum selben Zielzustand "Alarm". Wer diese Aufgabe sauber löst, beherrscht Wächterbedingungen, Zustandsaktionen und die Modellierung mehrerer Ereignisse im Zusammenspiel.</p></div></details></div></article><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="a6_lt_7-5-uml-zustand.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Zustandsdiagramme: Die Lebenszyklus-Sicht</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#teil-a-grundubungen">Teil A — Grundübungen</a><a href="#teil-b-vertiefungsaufgaben">Teil B — Vertiefungsaufgaben</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>
+<p>Die anspruchsvollste Aufgabe des Satzes: Das Ereignis <code>codeEingeben()</code> tritt an drei verschiedenen Stellen im Diagramm auf, jedes Mal mit einer anderen Wächterbedingung oder von einem anderen Ausgangszustand aus. Zusätzlich führen zwei unterschiedliche Ereignisse (<code>codeEingeben() [Code falsch]</code> und <code>timeout()</code>) zum selben Zielzustand "Alarm". Wer diese Aufgabe sauber löst, beherrscht Wächterbedingungen, Zustandsaktionen und die Modellierung mehrerer Ereignisse im Zusammenspiel.</p></div></details></div></article><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="a6_lt_7-5-uml-zustand.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Zustandsdiagramme: Die Lebenszyklus-Sicht</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>

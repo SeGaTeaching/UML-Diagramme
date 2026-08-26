@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dozentenskript — Klassendiagramme live entwickeln</title>
+<style>/* Basis-Stylesheet fuer skript_bauen.py (Dozentenskript des Live-Kurses).
+   NICHT das Portal-Stylesheet - das Portal benutzt portal.css, komponenten.css
+   und portal.js unter HTML/assets/.
+
+   Diese Datei ist das alte Portal-Stylesheet (Stand vor Template 2.0.0). Sie
+   lebt weiter, weil skript_bauen.py und sein ZUSATZ-Block auf den alten
+   Klassennamen (.layout, .side, .grp, .cur, --brand ...) aufbauen. Das
+   Dozentenskript auf die neue Darstellung umzustellen ist eine eigene
+   Aufgabe - bis dahin bleibt diese Datei unveraendert bestehen.
+
+   Vorsicht: Aenderungen hier wirken NUR auf das Dozentenskript. */
+
+:root{--brand:#0078D4;--brand2:#50E6FF;--ink:#1b1b1b;--mut:#5b5b5b;--bg:#f7f9fb;--card:#fff;--line:#dde3e9;--accent:#0b5aa2;--ok:#1a7f37;--okbg:#e7f5ec;--bad:#c0392b;--badbg:#fdeaea;--erg:#8250df;--ergbg:#f5f0ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.nav{position:sticky;top:0;background:#1a1a2e;color:#fff;padding:10px 18px;font-size:14px;z-index:20;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.nav a{color:var(--brand2);text-decoration:none;font-weight:600}.nav a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:24px 20px 80px}
+.layout{display:flex;gap:26px;max-width:1144px;margin:0 auto;padding:14px 20px 70px}
+.side{flex:0 0 258px;position:sticky;top:54px;align-self:flex-start;max-height:calc(100vh - 74px);overflow:auto;font-size:.9em;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.side .stitle{font-weight:800;font-size:1.02em;margin:2px 0 8px}
+.side a{display:block;padding:5px 9px;border-radius:7px;color:var(--ink);text-decoration:none}
+.side a:hover{background:#eaf4fc}.side a.cur{background:var(--brand);color:#fff;font-weight:700}
+.side .grp{font-size:.72em;text-transform:uppercase;color:var(--mut);margin:11px 0 2px;letter-spacing:.06em;font-weight:700}
+.main{flex:1 1 auto;min-width:0;width:100%;max-width:820px}
+h1{font-size:1.85em;border-bottom:4px solid var(--brand);padding-bottom:.25em;margin-top:.15em}
+h2{font-size:1.3em;margin-top:1.5em;border-bottom:1px solid var(--line);padding-bottom:.2em}
+h3{font-size:1.08em;margin-top:1.2em}
+a{color:var(--accent)}
+.bc{font-size:.85em;color:var(--mut);margin:0 0 10px}.bc a{color:var(--accent);text-decoration:none}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95em}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#eef3f8}tr:nth-child(even) td{background:#fafcfe}
+code{background:#eef1f4;padding:1px 5px;border-radius:4px;font-size:.9em}
+pre{background:#1e293b;color:#f1f5f9;padding:14px;border-radius:8px;overflow:auto}pre code{background:none;color:inherit}
+blockquote{border-left:4px solid var(--brand);margin:1em 0;padding:.4em 1em;background:#f2f9ff;color:#333}
+
+/* Azure-Umsetzungsbox – die zweite Ebene des Konzept/Produkt-Aufbaus (A5).
+   Bewusst visuell abgesetzt, damit sie fuer einen spaeteren CompTIA-Data+-Kurs
+   mit einem Handgriff entfernbar ist. */
+blockquote.azure{border-left:4px solid var(--brand);background:#eaf4fc;position:relative;padding:.6em 1em .6em 1em}
+blockquote.azure:before{content:"AZURE-UMSETZUNG";display:block;font-size:.68em;letter-spacing:.09em;font-weight:800;color:var(--brand);margin-bottom:.3em}
+
+details{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;margin:10px 0;padding:6px 14px}
+details summary{cursor:pointer;font-weight:600;padding:6px 0;list-style:none}details summary::-webkit-details-marker{display:none}
+details summary:before{content:"\25B6 ";color:var(--accent);font-size:.8em}details[open] summary:before{content:"\25BC "}
+.hub{display:grid;gap:10px;margin:10px 0 4px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 16px;text-decoration:none;color:var(--ink);position:relative;padding-right:36px}
+.card:hover{border-color:var(--brand);box-shadow:0 3px 10px rgba(0,0,0,.09)}.card .t{font-weight:700}
+.card:after{content:"\203A";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.7em;font-weight:700;line-height:.5}
+.card:hover:after{right:10px;color:var(--brand)}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:14px 0}
+.step .sh{font-weight:700;font-size:1.05em}.step .si{color:var(--mut);font-size:.92em;margin:2px 0 8px}
+.objbtns{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:18px 0}
+.objbtn{background:#fff;border:1px solid var(--line);border-top:5px solid var(--brand);border-radius:12px;padding:18px;text-decoration:none;color:var(--ink);position:relative}
+.objbtn.erg{border-top-color:var(--erg)}
+.objbtn:hover{box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.objbtn .n{font-size:.8em;color:var(--mut);font-weight:700;text-transform:uppercase}
+.objbtn .h{font-size:1.1em;font-weight:700;margin-top:4px}
+.objbtn .w{font-size:.8em;color:var(--mut);margin-top:4px}
+.objbtn .cta{margin-top:12px;display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.82em;padding:6px 13px;border-radius:8px}
+.objbtn:hover .cta{background:#083f72}
+
+/* Ergaenzungs-Badge – kennzeichnet Material ueber den Pruefungs-Syllabus hinaus (A7) */
+.badge-erg{display:inline-block;background:var(--ergbg);color:var(--erg);border:1px solid var(--erg);border-radius:20px;padding:1px 9px;font-size:.7em;font-weight:800;letter-spacing:.04em;vertical-align:middle;margin-left:7px}
+.side a .badge-erg{margin-left:4px;font-size:.62em;padding:0 6px}
+.ergnote{background:var(--ergbg);border:1px solid #d8c9f5;border-left:4px solid var(--erg);border-radius:8px;padding:10px 14px;margin:14px 0;font-size:.93em}
+
+footer{color:var(--mut);font-size:.82em;border-top:1px solid var(--line);margin-top:40px;padding-top:14px;flex:1 0 100%;clear:both}
+li.task{list-style:none;margin-left:-1.2em}li.task input{margin-right:8px;transform:scale(1.15)}
+.mslearn{background:#eef6fb;border:1px solid #cfe6f5;border-radius:12px;padding:12px 16px;margin:16px 0}
+.mslearn h2{border:0;margin:.2em 0 .4em;font-size:1.1em}.mslearn ul{margin:.3em 0}
+.mslearn table{font-size:.88em;margin:.4em 0}
+.prevnext{display:flex;justify-content:space-between;gap:12px;margin-top:34px;border-top:2px solid var(--brand);padding-top:16px}
+.pn{flex:1;max-width:49%;border:1px solid var(--line);border-radius:10px;padding:10px 14px;text-decoration:none;color:var(--ink);background:#fff}
+.pn:hover{border-color:var(--brand)}.pn .lab{font-size:.75em;color:var(--mut)}.pn .tt{font-weight:700}.pn.next{text-align:right;margin-left:auto}
+.scorebar{position:sticky;top:52px;background:#f2f9ff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0;font-weight:600;display:flex;gap:16px;align-items:center;z-index:6}
+.scorebar button{margin-left:auto;background:#eee;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer;font:inherit}
+.mcq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:16px 0}
+.mcq-h{font-weight:700}.mcq .lvl{font-size:.72em;background:#e8eefc;border-radius:20px;padding:2px 8px;margin-right:6px;color:#334}.mcq-q{margin:6px 0 12px}
+.opt{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin:7px 0;cursor:pointer}
+.opt:hover{border-color:var(--brand);background:#f7fbff}.opt input{margin-top:3px}.opt .ltr{font-weight:700;min-width:1.3em}
+.mcq.answered .opt{cursor:default}
+.opt.correct{background:var(--okbg);border-color:var(--ok)}.opt.correct .ltr{color:var(--ok)}
+.opt.wrong{background:var(--badbg);border-color:var(--bad)}.opt.wrong .ltr{color:var(--bad)}
+.opt .mark{margin-left:auto;font-weight:700}
+.opt.correct .mark:after{content:"\2714 richtig";color:var(--ok)}.opt.wrong .mark:after{content:"\2716 falsch";color:var(--bad)}
+.sol{display:none;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px}.mcq.answered .sol{display:block}
+.pruefen{display:none;margin-top:8px;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 16px;cursor:pointer;font:inherit}
+.subh{font-weight:700;margin:14px 0 4px}
+.hint{background:#e8f4fd;border:1px solid var(--brand);border-radius:8px;padding:10px 14px;font-weight:600;margin:12px 0}
+img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:.6em 0}
+@media(max-width:820px){.layout{flex-direction:column}.side{position:static;flex-basis:auto;max-height:none}}
+@media print{.side,.nav,.prevnext,.scorebar{display:none}.layout{display:block}.sol{display:block}}
+
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #f8f8f8; }
+.codehilite .c { color: #3D7B7B; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #9C6500 } /* Comment.Preproc */
+.codehilite .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #E40000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #008400 } /* Generic.Inserted */
+.codehilite .go { color: #717171 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #687822 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #767600 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #A45A77 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* --- Dozentenskript: Ergaenzungen zum Portal-Stylesheet --- */
+.layout{max-width:1186px}
+.side{flex-basis:300px;top:58px;max-height:calc(100vh - 78px);font-size:.87em}
+.main{max-width:820px}
+.side .grp{margin:13px 0 3px;font-size:.7em}
+.side a{line-height:1.35;padding:5px 9px;display:flex;gap:8px;align-items:baseline}
+.side a span.txt{flex:1 1 auto;min-width:0}
+.side a.sec{font-weight:700}
+.side a.cur{background:var(--brand);color:#fff}
+.side .zeit{flex:0 0 auto;font-size:.78em;opacity:.6;font-weight:600;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.side a.cur .zeit{opacity:.9}
+.nav{display:flex;align-items:baseline;gap:14px}
+.nav .hier{margin-left:auto;color:#c8d0e0;font-weight:400;font-size:.93em;
+  max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.main h1{font-size:1.5em;border-bottom:0;border-left:6px solid var(--brand);
+  padding:.1em 0 .1em .55em;margin:2.4em 0 .8em;background:linear-gradient(90deg,#eaf4fc,transparent 70%)}
+.main h1:first-of-type{margin-top:.2em}
+.titel{font-size:2.05em;font-weight:800;border-bottom:4px solid var(--brand);
+  padding-bottom:.22em;margin:.1em 0 .35em;line-height:1.2}
+.untertitel{color:var(--mut);font-size:1.02em;margin:0 0 .3em}
+h2{font-size:1.24em;margin-top:1.9em;border-bottom:1px solid var(--line);padding-bottom:.18em}
+h3{font-size:1.06em;margin-top:1.4em;color:var(--accent)}
+hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+blockquote{border-left:4px solid var(--brand);background:#f2f9ff;padding:.7em 1.1em}
+/* Marker-Kaesten */
+.mk{border-radius:10px;padding:.85em 1.25em;margin:1.25em 0}
+.mk>:first-child{margin-top:0}.mk>:last-child{margin-bottom:0}
+.mk .lbl{display:block;font-size:.68em;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:.15em}
+.mk-wissen{background:#f5f7f9;border:1px solid var(--line);border-left:5px solid #8a94a0}
+.mk-wissen .lbl{color:#6b7580}
+.mk-sagen{background:#f0f8ff;border:1px solid #bfdcf5;border-left:5px solid var(--brand)}
+.mk-sagen .lbl{color:var(--brand)}
+.mk-sagen blockquote{background:#fff;border-left-color:var(--brand);margin:.6em 0;
+  font-size:1.06em;line-height:1.68}
+.mk-aus{background:#1e293b;border-left:5px solid var(--brand2);color:#f1f5f9}
+.mk-aus .lbl{color:var(--brand2)}
+.mk-aus code{background:rgba(255,255,255,.17);color:#fff}
+.mk-aus strong{color:#fff}
+.mk-aus em{color:#9fd8ff;font-style:normal;font-weight:600}
+.mk-frage{background:var(--ergbg);border:1px solid #d8c9f5;border-left:5px solid var(--erg)}
+.mk-frage .lbl{color:var(--erg)}
+.mk-frage blockquote{background:#fff;border-left-color:var(--erg);margin:.6em 0;font-size:1.06em}
+.mk-brueck{background:#fff7e8;border:1px solid #f0d7a8;border-left:5px solid #b8791a}
+.mk-brueck .lbl{color:#a06a12}
+.mk-brueck blockquote{background:#fff;border-left-color:#b8791a;margin:.6em 0;font-size:1.06em}
+.mk-tun{background:var(--okbg);border:1px solid #b9e0c6;border-left:5px solid var(--ok)}
+.mk-tun .lbl{color:var(--ok)}
+.mk table{background:#fff;margin:.7em 0}
+/* Tabellen und Codebloecke im dunklen Ausfuehren-Kasten lesbar halten */
+.mk-aus table,.mk-aus table *{color:#101828}
+.mk-aus table th{background:#e8eef6}
+.mk-aus table td code,.mk-aus table th code{background:#e6ebf2;color:#101828}
+.mk-aus .codehilite{background:#0a1120;border:1px solid #3a4a63;border-radius:7px;
+  margin:.7em 0;padding:.15em .4em}
+.mk-aus .codehilite pre{background:transparent;color:#e8eef7;margin:0}
+.mk-aus .codehilite code,.mk-aus .codehilite span{background:transparent;color:#e8eef7}
+.mk-aus blockquote{background:#16233a;border-left-color:var(--brand2);color:#e8eef7}
+.zurueck{position:fixed;right:22px;bottom:22px;background:var(--accent);color:#fff;
+  border:0;border-radius:24px;padding:9px 17px;font:inherit;font-size:.88em;font-weight:600;
+  cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.22);display:none;z-index:30}
+.zurueck.an{display:block}
+@media(max-width:900px){.side{display:none}.nav .hier{display:none}}
+@media print{.nav,.side,.zurueck,.zurueck.an{display:none !important}.layout{display:block}.main{width:100%}
+  .mk{break-inside:avoid}h1,h2{page-break-after:avoid}.wrap,.layout{max-width:none;padding:0}}
+</style></head>
+<body>
+<div class="nav"><b>UML · Dozentenskript</b>
+<a href="../docs/index.html">Schüler-Lernportal</a>
+<span class="hier" id="hier"></span></div>
+<div class="layout">
+<aside class="side"><div class="stitle">Dozentenskript<br><span style="font-weight:400;font-size:.9em">Klassendiagramm · Live-Tutorial</span></div><a href="#so-arbeitest-du-mit-diesem-skript" data-ziel="so-arbeitest-du-mit-diesem-skript"><span class="txt">So arbeitest du mit diesem Skript</span></a><a href="#vor-dem-unterricht" data-ziel="vor-dem-unterricht"><span class="txt">Vor dem Unterricht</span></a><a href="#das-zielbild" data-ziel="das-zielbild"><span class="txt">Das Zielbild</span></a><a href="#zeitplan-vorschlag" data-ziel="zeitplan-vorschlag"><span class="txt">Zeitplan (Vorschlag)</span></a><a href="#der-einstieg" data-ziel="der-einstieg"><span class="txt">Der Einstieg</span></a><a href="#schritt-1-die-klasse-drei-faecher-und-sichtbarkeiten-15-minuten" data-ziel="schritt-1-die-klasse-drei-faecher-und-sichtbarkeiten-15-minuten"><span class="txt">Schritt 1 — Die Klasse: drei Fächer und Sichtbarkeiten</span><span class="zeit">15 min</span></a><a href="#schritt-2-assoziation-und-multiplizitaet-15-minuten" data-ziel="schritt-2-assoziation-und-multiplizitaet-15-minuten"><span class="txt">Schritt 2 — Assoziation und Multiplizität</span><span class="zeit">15 min</span></a><a href="#schritt-3-vererbung-und-abstrakte-klasse-15-minuten" data-ziel="schritt-3-vererbung-und-abstrakte-klasse-15-minuten"><span class="txt">Schritt 3 — Vererbung und abstrakte Klasse</span><span class="zeit">15 min</span></a><a href="#schritt-4-aggregation-und-komposition-der-raute-test-17-minuten" data-ziel="schritt-4-aggregation-und-komposition-der-raute-test-17-minuten"><span class="txt">Schritt 4 — Aggregation und Komposition: der Raute-Test</span><span class="zeit">17 min</span></a><a href="#schritt-5-interface-und-realisierung-12-minuten" data-ziel="schritt-5-interface-und-realisierung-12-minuten"><span class="txt">Schritt 5 — Interface und Realisierung</span><span class="zeit">12 min</span></a><a href="#schritt-6-abhaengigkeit-und-die-m-n-beziehung-12-minuten" data-ziel="schritt-6-abhaengigkeit-und-die-m-n-beziehung-12-minuten"><span class="txt">Schritt 6 — Abhängigkeit und die m:n-Beziehung</span><span class="zeit">12 min</span></a><a href="#schritt-7-jetzt-die-schueler-selbst-modellieren-18-minuten" data-ziel="schritt-7-jetzt-die-schueler-selbst-modellieren-18-minuten"><span class="txt">Schritt 7 — Jetzt die Schüler: selbst modellieren</span><span class="zeit">18 min</span></a><a href="#abschluss" data-ziel="abschluss"><span class="txt">Abschluss</span></a></aside>
+<main class="main">
+<div class="titel">Dozentenskript — Klassendiagramme live entwickeln</div>
+<p class="untertitel">Klassendiagramm · Schritt-für-Schritt live entwickeln · Beispiel Schulverwaltung</p>
+
+<p><strong>Ein Klassendiagramm Schritt für Schritt an der Tafel aufbauen — Tutorial für dich als Dozent</strong>
+UML-Diagramme · Klassendiagramm · durchgehendes Beispiel: eine <strong>Schulverwaltung</strong></p>
+<blockquote>
+<p><strong>Was das hier ist.</strong> Kein Foliennachlesen, sondern eine <strong>Zeichen-Anleitung</strong>: Du baust über
+die ganze Stunde <strong>ein einziges</strong> Klassendiagramm auf — Baustein für Baustein — und führst die
+Notation genau an diesem wachsenden Diagramm ein. Bei jedem Schritt steht hier <strong>exakt</strong>, was du
+zeichnest, was du in die Kästen schreibst und was du dazu sagst. Nach jedem Schritt siehst du ein
+Bild, wie dein Diagramm jetzt aussehen muss.</p>
+<p><strong>Das Beispiel (Schulverwaltung) ist bewusst neu</strong> — es steht in keinem Lerntext. So sehen die
+Teilnehmer den Stoff ein zweites Mal an einem frischen Fall, statt eine Wiederholung zu erleben.</p>
+</blockquote>
+<hr />
+<h2 id="so-arbeitest-du-mit-diesem-skript">So arbeitest du mit diesem Skript</h2>
+<p>Jeder Baustein läuft nach dem <strong>Ich – Wir – Ihr</strong>-Muster:</p>
+<ol>
+<li><strong>Ich zeige</strong> — du zeichnest den neuen Baustein live vor und erklärst ihn (Kästen <code>So erklärst du es</code> + <code>Mit der Gruppe machen</code>).</li>
+<li><strong>Wir prüfen</strong> — eine kurze Frage an die Gruppe (<code>Frage an die Gruppe</code>).</li>
+<li><strong>Ihr macht</strong> — eine 2-Minuten-Mini-Übung an einem kleinen Nebenbeispiel, dann geht es weiter.</li>
+</ol>
+<p>Die farbigen Kästen bedeuten:</p>
+<ul>
+<li><strong>Mit der Gruppe machen</strong> — die konkreten Zeichenschritte (was ziehen, was hineinschreiben).</li>
+<li><strong>So erklärst du es</strong> — der Sprechtext, den du dazu sagst (kannst du fast vorlesen).</li>
+<li><strong>Frage an die Gruppe</strong> — kurze Kontrollfrage zum Mitdenken.</li>
+<li><strong>Du musst wissen</strong> — Stolperstellen und Hintergrund nur für dich.</li>
+</ul>
+<hr />
+<h2 id="vor-dem-unterricht">Vor dem Unterricht</h2>
+<p><strong>Zeichenwerkzeug:</strong> Öffne <strong>draw.io</strong> (<code>app.diagrams.net</code>), leeres Blatt. Aktiviere links unten
+über „<strong>More Shapes…</strong>" die Kategorie <strong>UML</strong> — dann liegen Klassen-Kasten und alle
+Beziehungspfeile bereit.</p>
+<p><strong>Die drei Handgriffe, die du brauchst</strong> (einmal vorher ausprobieren):</p>
+<ul>
+<li><strong>Klasse anlegen:</strong> Den UML-Shape „Class" (Kasten mit drei Fächern) auf die Fläche ziehen.</li>
+<li><strong>Fächer füllen:</strong> Doppelklick auf eine Zeile zum Bearbeiten. Mittleres Fach = Attribute, unteres
+  Fach = Methoden. Neue Zeile im Fach: Zeile anklicken, Enter.</li>
+<li><strong>Beziehung ziehen:</strong> Mit der Maus an den <strong>Rand</strong> einer Klasse fahren, bis ein blauer Pfeil
+  erscheint, und zur zweiten Klasse ziehen. Danach die Linie anklicken und rechts im Format-Panel
+  die <strong>Enden</strong> einstellen (offener Pfeil, hohles Dreieck, leere/gefüllte Raute). Multiplizitäten
+  schreibst du per Doppelklick <strong>nahe an die Linienenden</strong>.</li>
+</ul>
+<p><strong>Materialien daneben:</strong> der Lerntext „Klassendiagramme" (7.2) und das Portal zum Nachschlagen.</p>
+<blockquote>
+<p><strong>Tipp:</strong> Zieh dir vor Kursbeginn einmal testweise eine Klasse und eine Beziehung auf, damit du
+im Unterricht die Handgriffe sicher hast und nicht suchen musst.</p>
+</blockquote>
+<hr />
+<h2 id="das-zielbild">Das Zielbild</h2>
+<p>So sieht das Diagramm am <strong>Ende</strong> der Stunde aus. Zeig es der Gruppe <strong>nicht</strong> zu Beginn — es ist
+deine Landkarte, damit du weißt, wohin jeder Schritt führt.</p>
+<p><img alt="Zielbild: vollständiges Klassendiagramm der Schulverwaltung" src="../grafiken/kd-snap6.svg" /></p>
+<p>Wir bauen es von links oben (eine einzelne Klasse) bis zu diesem vollständigen Modell auf.</p>
+<hr />
+<h2 id="zeitplan-vorschlag">Zeitplan (Vorschlag)</h2>
+<table>
+<thead>
+<tr>
+<th>Zeit</th>
+<th>Schritt</th>
+<th>Baustein</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00:00–00:08</td>
+<td>Einstieg</td>
+<td>Warum modellieren wir?</td>
+</tr>
+<tr>
+<td>00:08–00:23</td>
+<td>Schritt 1</td>
+<td>Die Klasse: drei Fächer, Sichtbarkeiten</td>
+</tr>
+<tr>
+<td>00:23–00:38</td>
+<td>Schritt 2</td>
+<td>Assoziation und Multiplizität</td>
+</tr>
+<tr>
+<td>00:38–00:53</td>
+<td>Schritt 3</td>
+<td>Vererbung und abstrakte Klasse</td>
+</tr>
+<tr>
+<td>00:53–01:10</td>
+<td>Schritt 4</td>
+<td>Aggregation und Komposition (Raute-Test)</td>
+</tr>
+<tr>
+<td>01:10–01:22</td>
+<td>Schritt 5</td>
+<td>Interface und Realisierung</td>
+</tr>
+<tr>
+<td>01:22–01:32</td>
+<td>Schritt 6</td>
+<td>Abhängigkeit und m:n</td>
+</tr>
+<tr>
+<td>01:32–01:50</td>
+<td>Schritt 7</td>
+<td>Schüler bauen selbst (Kochbuch-App)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="der-einstieg">Der Einstieg</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Wir planen heute Software, bevor wir sie programmieren — mit dem wichtigsten UML-Diagramm der
+objektorientierten Entwicklung: dem Klassendiagramm. Und wir machen das nicht theoretisch,
+sondern bauen gemeinsam ein echtes Modell auf: eine <strong>Schulverwaltung</strong> mit Kursen, Lehrern,
+Schülern. Am Ende steht ein vollständiges Diagramm an der Tafel, und Sie können jedes Zeichen
+darin lesen und selbst zeichnen.</p>
+</blockquote>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Sie kennen Java. Was steht in einer Java-Klasse drin? — Sammle „Attribute/Felder" und „Methoden".</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Das ist der Aufhänger für alles Weitere:</strong> Ein Klassendiagramm ist Java in Kurzschrift. Wer eine
+Klasse schreiben kann, kann sie auch zeichnen. Halte den Einstieg kurz (max. 8 Minuten) — der Stoff
+entsteht gleich beim Zeichnen.</p>
+</div>
+<hr />
+<h2 id="schritt-1-die-klasse-drei-faecher-und-sichtbarkeiten-15-minuten">Schritt 1 — Die Klasse: drei Fächer und Sichtbarkeiten — 15 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Jede Klasse ist ein Rechteck mit <strong>drei Fächern</strong>: oben der <strong>Name</strong>, in der Mitte die
+<strong>Attribute</strong> (was ein Objekt weiß), unten die <strong>Methoden</strong> (was es kann). Vor jedem Attribut und
+jeder Methode steht ein Zeichen für die Sichtbarkeit: <strong>Minus (<code>-</code>) ist privat</strong>, <strong>Plus (<code>+</code>)
+ist öffentlich</strong>. Wir modellieren als Erstes einen Kurs.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p>Zeichne die erste Klasse — Fach für Fach, und schreib <strong>genau</strong> das hinein:</p>
+<ol>
+<li><strong>Klassen-Kasten</strong> auf die Fläche ziehen. Ins <strong>oberste</strong> Fach schreiben: <code>Kurs</code> (Singular, groß).</li>
+<li>Ins <strong>mittlere</strong> Fach, Zeile für Zeile:
+   - <code>- titel: String</code>
+   - <code>- maxTeilnehmer: int</code>
+   - <code>- gebuehr: double</code>
+   Sag dabei: „Minus heißt privat. Format ist immer <code>- name: Typ</code> — genau wie <code>private String titel;</code> in Java."</li>
+<li>Ins <strong>untere</strong> Fach:
+   - <code>+ anmelden(s: Schüler): boolean</code>
+   - <code>+ getFreiePlaetze(): int</code>
+   Sag: „Plus heißt öffentlich. Bei Methoden steht in Klammern der Parameter mit Typ, hinter dem Doppelpunkt der Rückgabetyp."</li>
+</ol>
+<p>So sieht dein Diagramm jetzt aus:</p>
+<p><img alt="Schritt 1: die Klasse Kurs" src="../grafiken/kd-snap1.svg" /></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Warum sind die Attribute privat (<code>-</code>) und die Methoden öffentlich (<code>+</code>)?</p>
+</blockquote>
+<p>Erwarte: „Kapselung" — die Daten werden geschützt, der Zugriff läuft über Methoden. Ergänze:
+genau das „private Feld, public Getter", das sie aus Java kennen.</p>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p><strong>(Mini-Übung, 2 Minuten)</strong></p>
+<p>Lass die Gruppe auf Papier eine Klasse <code>Schüler</code> zeichnen: Attribute <code>- name: String</code>,
+<code>- matrikelnr: String</code>, Methode <code>+ getName(): String</code>. Danach einer nennt seine Lösung, du zeichnest
+sie kurz als zweiten Kasten daneben (den brauchst du in Schritt 3 wieder).</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Häufigste Fehler hier:</strong> Klassenname im Plural („Kurse"), Typ vergessen (<code>titel</code> statt
+<code>titel: String</code>), Sichtbarkeitszeichen weggelassen. Bestehe von Anfang an auf dem Format
+<code>- name: Typ</code> — das zahlt sich in jeder Prüfungsaufgabe aus.</p>
+</div>
+<hr />
+<h2 id="schritt-2-assoziation-und-multiplizitaet-15-minuten">Schritt 2 — Assoziation und Multiplizität — 15 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Klassen stehen selten allein. Eine <strong>Assoziation</strong> ist eine dauerhafte Verbindung — „kennt-ein".
+Wir sagen: Ein Lehrer leitet Kurse. Und wir machen es präzise mit <strong>Multiplizitäten</strong>: Zahlen an
+den Linienenden, die sagen, wie viele Objekte beteiligt sind.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<ol>
+<li><strong>Zweite Klasse</strong> <code>Lehrer</code> zeichnen, mittleres Fach: <code>- personalnr: String</code>.</li>
+<li><strong>Linie ziehen</strong> von <code>Lehrer</code> zu <code>Kurs</code>. Als Ende bei <code>Kurs</code> einen <strong>offenen Pfeil</strong> einstellen
+   (gerichtete Assoziation: der Lehrer kennt seine Kurse). Sag: „Der Pfeil zeigt die Navigierbarkeit
+   — vom Lehrer kommt man zu seinen Kursen."</li>
+<li><strong>Beziehungsnamen</strong> an die Linie schreiben: <code>leitet</code> mit einem kleinen Dreieck ▸ (Leserichtung).</li>
+<li><strong>Multiplizitäten</strong> an die Enden:
+   - beim <code>Lehrer</code> eine <code>1</code>
+   - beim <code>Kurs</code> <code>0..*</code>
+   Sag: „Gelesen über Kreuz: Ein Kurs wird von <strong>genau einem</strong> Lehrer geleitet — die <code>1</code>. Ein Lehrer
+   leitet <strong>beliebig viele</strong> Kurse, auch mal keinen — <code>0..*</code>."</li>
+</ol>
+<p><img alt="Schritt 2: Lehrer leitet Kurse" src="../grafiken/kd-snap2.svg" /></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Was bedeutet der Stern in <code>0..*</code>? Und was wäre der Unterschied zu <code>1..*</code>?</p>
+</blockquote>
+<p>Erwarte: <code>*</code> = beliebig viele (obere Schranke offen); <code>0..*</code> = auch keiner erlaubt, <code>1..*</code> =
+mindestens einer. Merksatz: „Die Zahl steht bei der Klasse, von der aus man zählt."</p>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p><strong>(Mini-Übung, 2 Minuten)</strong></p>
+<p>Frage in die Runde: „Ein Kunde und seine Bestellungen — welche Multiplizitäten?" Erwartete Lösung:
+Kunde <code>1</code> — Bestellung <code>0..*</code>. Zeichne sie kurz an den Rand.</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Stolperstelle:</strong> Multiplizitäten werden gern <strong>vertauscht</strong> (Seite verwechselt). Lies die Beziehung
+immer laut in beide Richtungen vor, dann fällt der Fehler sofort auf. Die einfache Assoziation (ohne
+Pfeil) und die gerichtete (mit Pfeil) sind beide korrekt — der Pfeil ist die Zusatzinformation „wer
+kennt wen".</p>
+</div>
+<hr />
+<h2 id="schritt-3-vererbung-und-abstrakte-klasse-15-minuten">Schritt 3 — Vererbung und abstrakte Klasse — 15 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Schüler und Lehrer haben etwas gemeinsam: beide sind <strong>Personen</strong> mit Name und Geburtsdatum. Statt
+das doppelt zu modellieren, ziehen wir es in eine gemeinsame Oberklasse <code>Person</code> hoch — das ist
+<strong>Vererbung</strong>, die „ist-ein"-Beziehung. Und weil es „eine Person" als solche nie konkret gibt,
+machen wir sie <strong>abstrakt</strong>.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<ol>
+<li>Neue Klasse <code>Person</code> <strong>oben</strong> zeichnen. Namen <strong>kursiv</strong> setzen (im Format-Panel), das markiert
+   sie als <strong>abstrakt</strong>. Attribute: <code>- name: String</code>, <code>- geburtsdatum: Date</code>.</li>
+<li>Deinen <code>Schüler</code>-Kasten aus Schritt 1 unter <code>Person</code> schieben, daneben <code>Lehrer</code>.</li>
+<li>Von <code>Schüler</code> zu <code>Person</code> eine Linie mit <strong>hohlem Dreieck</strong> (Vererbungspfeil) ziehen, Spitze zeigt
+   auf <code>Person</code>. Dasselbe von <code>Lehrer</code> zu <code>Person</code>. Sag: „Die Spitze zeigt immer auf den Elternteil,
+   von dem geerbt wird. In Java: <code>class Schüler extends Person</code>."</li>
+<li>Aus <code>Person</code> das doppelte <code>- name</code> bei Schüler/Lehrer <strong>entfernen</strong> — es wird ja vererbt. Sag:
+   „Name und Geburtsdatum stehen jetzt nur noch einmal, oben. Schüler und Lehrer erben sie."</li>
+</ol>
+<p><img alt="Schritt 3: Person als abstrakte Oberklasse" src="../grafiken/kd-snap3.svg" /></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Der <strong>ist-ein-Test</strong>: „Ist ein Schüler eine Person?" — ja. „Ist ein Kurs eine Person?" — nein.
+Was heißt das für die Beziehung Kurs–Person?</p>
+</blockquote>
+<p>Erwarte: Kurs erbt <strong>nicht</strong> von Person — Kurs „ist keine" Person. Vererbung nur bei „ist ein".</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Der wichtigste Anfängerfehler des Tages:</strong> Vererbung dort verwenden, wo eine Teil-Beziehung
+gemeint ist („Ein Motor ist ein Auto" — falsch). Der ist-ein-Test schützt davor. <strong>Abstrakt</strong>
+bedeutet: von <code>Person</code> gibt es keine eigenen Objekte, nur konkrete Schüler und Lehrer (kursiver
+Name).</p>
+</div>
+<hr />
+<h2 id="schritt-4-aggregation-und-komposition-der-raute-test-17-minuten">Schritt 4 — Aggregation und Komposition: der Raute-Test — 17 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Jetzt zwei „Teil-Ganzes"-Beziehungen, die ständig verwechselt werden — und der einfache Test, der
+sie trennt. Beide haben eine <strong>Raute beim Ganzen</strong>: leere Raute = <strong>Aggregation</strong> (das Teil
+überlebt allein), gefüllte Raute = <strong>Komposition</strong> (das Teil stirbt mit dem Ganzen).</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<ol>
+<li>Klasse <code>Fachbereich</code> zeichnen (<code>- bezeichnung: String</code>). Linie zu <code>Lehrer</code> mit <strong>leerer Raute</strong>
+   beim Fachbereich. Multiplizitäten: Fachbereich <code>1</code>, Lehrer <code>1..*</code>. Sag: „Aggregation. Schließt
+   der Fachbereich, sind die Lehrer nicht weg — sie wechseln woanders hin. Das Teil überlebt."</li>
+<li>Klasse <code>Kurstermin</code> zeichnen (<code>- datum: Date</code>, <code>- raum: String</code>). Linie von <code>Kurs</code> zu
+   <code>Kurstermin</code> mit <strong>gefüllter Raute</strong> beim Kurs. Multiplizitäten: Kurs <code>1</code>, Kurstermin <code>1..*</code>.
+   Sag: „Komposition. Wird der Kurs gelöscht, verschwinden seine Termine mit — ein Kurstermin ohne
+   Kurs ergibt keinen Sinn. Das Teil stirbt mit dem Ganzen."</li>
+</ol>
+<p><img alt="Schritt 4: Aggregation (Fachbereich) und Komposition (Kurstermin)" src="../grafiken/kd-snap4.svg" /></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Der <strong>Raute-Test</strong>: „Ein Team und seine Spieler" — leere oder gefüllte Raute? Und „ein Haus und
+seine Räume"?</p>
+</blockquote>
+<p>Erwarte: Team/Spieler = leer (Spieler überlebt), Haus/Raum = gefüllt (Raum stirbt mit). Lass sie den
+Test laut anwenden: „Zerstöre das Ganze — lebt das Teil weiter?"</p>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p><strong>(Mini-Übung, 3 Minuten)</strong></p>
+<p>Zwei Fälle an die Gruppe, jeder entscheidet leere/gefüllte Raute und begründet mit dem Test:
+„Playlist und Songs" (leer — Song überlebt) und „Rechnung und Rechnungsposition" (gefüllt — Position
+stirbt mit). Kurz auflösen.</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Die zwei Rauten sind die häufigste Prüfungsfalle des Themas.</strong> Die Raute sitzt <strong>immer beim
+Ganzen</strong>, nie beim Teil. In der Praxis ist die Grenze manchmal unscharf — verlange deshalb immer die
+<strong>Begründung</strong> über den Test, nicht das Auswendiglernen.</p>
+</div>
+<hr />
+<h2 id="schritt-5-interface-und-realisierung-12-minuten">Schritt 5 — Interface und Realisierung — 12 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Schüler und Lehrer sollen beide <strong>benachrichtigt</strong> werden können — per E-Mail, App, was auch
+immer. Statt das in beide Klassen zu schreiben, definieren wir einen <strong>Vertrag</strong>: ein
+<strong>Interface</strong>. Es sagt nur, <strong>was</strong> können muss (<code>sendeNachricht</code>), nicht wie. Klassen, die den
+Vertrag erfüllen, verbindet man mit der <strong>Realisierung</strong> — gestricheltes Dreieck.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<ol>
+<li>Neuen Kasten oben zeichnen, in die erste Zeile schreiben: <code>«interface»</code>, darunter den Namen
+   <code>Benachrichtigbar</code>. Ins Methodenfach: <code>+ sendeNachricht(text: String): void</code>.</li>
+<li>Von <code>Schüler</code> und von <code>Lehrer</code> je eine <strong>gestrichelte</strong> Linie mit <strong>hohlem Dreieck</strong> zum
+   Interface ziehen. Sag: „Gestrichelt + Dreieck = Realisierung. In Java: <code>class Schüler implements
+   Benachrichtigbar</code>. Eine Klasse kann mehrere Interfaces erfüllen — anders als bei der Vererbung."</li>
+</ol>
+<p><img alt="Schritt 5: Interface Benachrichtigbar mit Realisierung" src="../grafiken/kd-snap5.svg" /></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Woran unterscheidet man im Bild <strong>Vererbung</strong> von <strong>Realisierung</strong>? Beide haben ein Dreieck.</p>
+</blockquote>
+<p>Erwarte: durchgezogen = Vererbung (<code>extends</code>), gestrichelt = Realisierung (<code>implements</code>). Merksatz:
+„gestrichelt = nur ein Versprechen".</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Prüfungsrelevant</strong> ist genau diese Unterscheidung durchgezogenes/gestricheltes Dreieck. Das
+Interface erkennt man zusätzlich am <code>«interface»</code> über dem Namen.</p>
+</div>
+<hr />
+<h2 id="schritt-6-abhaengigkeit-und-die-m-n-beziehung-12-minuten">Schritt 6 — Abhängigkeit und die m:n-Beziehung — 12 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Zwei letzte Bausteine. Erstens die <strong>Abhängigkeit</strong> — die schwächste Beziehung: Ein Objekt
+benutzt ein anderes nur <strong>kurz</strong>, ohne es zu speichern. Der Lehrer stellt am Kursende ein
+Zertifikat aus. Zweitens die <strong>m:n-Beziehung</strong>: Ein Schüler besucht viele Kurse, ein Kurs hat
+viele Schüler.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<ol>
+<li>Klasse <code>Zertifikat</code> zeichnen. Von <code>Lehrer</code> eine <strong>gestrichelte</strong> Linie mit <strong>offener Pfeilspitze</strong>
+   zu <code>Zertifikat</code>, beschriftet <code>«create»</code>. Sag: „Abhängigkeit — der Lehrer erzeugt das Zertifikat
+   im Moment, speichert es aber nicht als Attribut. Gestrichelt = kurzfristig, ‚benutzt-ein'."</li>
+<li>Linie zwischen <code>Schüler</code> und <code>Kurs</code> ziehen, beschriften <code>besucht</code>, Multiplizitäten <strong><code>0..*</code></strong> an
+   <strong>beiden</strong> Enden. Sag: „Das ist eine <strong>m:n</strong>-Beziehung: viele zu viele. Ein Schüler besucht
+   mehrere Kurse, ein Kurs hat mehrere Schüler."</li>
+</ol>
+<p><img alt="Schritt 6: Abhängigkeit und m:n — das vollständige Modell" src="../grafiken/kd-snap6.svg" /></p>
+</div>
+<div class="mk mk-frage">
+<p><span class="lbl">Frage an die Gruppe</span></p>
+<blockquote>
+<p>Warum ist Lehrer–Zertifikat gestrichelt, aber Lehrer–Kurs durchgezogen?</p>
+</blockquote>
+<p>Erwarte: Zertifikat wird nur kurz benutzt/erzeugt (Abhängigkeit), der Kurs wird dauerhaft „gekannt"
+(Assoziation, als Attribut). Leitfrage: „Wird es als Attribut gespeichert?"</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Jetzt steht das vollständige Zielbild an der Tafel.</strong> Geh es einmal langsam mit dem Finger ab und
+lies jede Beziehung laut vor — das ist die beste Zusammenfassung. Die m:n-Beziehung löst man in der
+Umsetzung später oft über eine <strong>Zwischenklasse</strong> (z. B. <code>Anmeldung</code>); für heute reicht die
+m:n-Assoziation.</p>
+</div>
+<hr />
+<h2 id="schritt-7-jetzt-die-schueler-selbst-modellieren-18-minuten">Schritt 7 — Jetzt die Schüler: selbst modellieren — 18 Minuten</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Sie haben alle Bausteine gesehen. Jetzt modellieren Sie selbst — an einem neuen Beispiel: einer
+<strong>Kochbuch-App</strong>. Zeichnen Sie in draw.io oder auf Papier.</p>
+</blockquote>
+</div>
+<div class="mk mk-tun">
+<p><span class="lbl">Mit der Gruppe machen</span></p>
+<p><strong>(Aufgabe an die Gruppe)</strong></p>
+<p>Gib die Aufgabe wörtlich aus:</p>
+<blockquote>
+<p>Modelliere eine <strong>Kochbuch-App</strong> mit diesen Klassen und Beziehungen:
+- Ein <strong>Nutzer</strong> (<code>name</code>) <strong>besitzt</strong> beliebig viele <strong>Kochbücher</strong> (<code>titel</code>).
+- Ein <strong>Kochbuch</strong> enthält beliebig viele <strong>Rezepte</strong> (<code>name</code>, <code>dauerMin</code>, Methode
+  <code>berechneKalorien()</code>) — die Rezepte existieren aber auch ohne das Kochbuch weiter.
+- Ein <strong>Rezept</strong> besteht aus mindestens einem <strong>Zubereitungsschritt</strong> (<code>beschreibung</code>) — verschwindet das Rezept, verschwinden die Schritte.</p>
+<p>Setze Sichtbarkeiten, Multiplizitäten und die richtigen Beziehungsarten (Assoziation, Aggregation,
+Komposition).</p>
+</blockquote>
+<p>Geh herum, gib Hinweise. Nach ca. 10 Minuten gemeinsam auflösen — zeichne die Musterlösung vor:</p>
+<p><img alt="Musterlösung Kochbuch-App" src="../grafiken/kd-loesung.svg" /></p>
+<p><strong>Auflösung, laut mitsprechen:</strong> Nutzer–Kochbuch ist eine <strong>Assoziation</strong> (<code>1</code> zu <code>0..*</code>, „besitzt").
+Kochbuch–Rezept ist eine <strong>Aggregation</strong> (leere Raute — das Rezept überlebt allein). Rezept–Zubereitungsschritt
+ist eine <strong>Komposition</strong> (gefüllte Raute — der Schritt stirbt mit dem Rezept, <code>1</code> zu <code>1..*</code>).</p>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Das ist der Lernbeweis der Stunde.</strong> Wer hier Aggregation und Komposition richtig setzt und die
+Multiplizitäten begründet, hat das Thema verstanden. Häufige Fehler beim Herumgehen: Rezept–Schritt
+als Aggregation (falsch, Test anwenden!) und fehlende Multiplizitäten.</p>
+</div>
+<hr />
+<h2 id="abschluss">Abschluss</h2>
+<div class="mk mk-sagen">
+<p><span class="lbl">So erklärst du es</span></p>
+<blockquote>
+<p>Zwei Sätze zum Mitnehmen. <strong>Erstens:</strong> Ein Klassendiagramm ist Java in Kurzschrift — drei Fächer,
+Sichtbarkeiten, und Beziehungen, die man mit einfachen Fragen auseinanderhält: ist-ein
+(Vererbung), kennt-ein (Assoziation), Teil-von mit Raute-Test (Aggregation/Komposition),
+erfüllt-Vertrag (Interface), benutzt-kurz (Abhängigkeit). <strong>Zweitens:</strong> Fangen Sie immer bei den
+Klassen an, dann die Beziehungen, dann die Multiplizitäten.</p>
+</blockquote>
+</div>
+<div class="mk mk-wissen">
+<p><span class="lbl">Du musst wissen</span></p>
+<p><strong>Verweis fürs Selbststudium:</strong> der Lerntext „Klassendiagramme" (Portal) mit allen Beziehungsarten,
+Referenztabelle, „Typische Fehler" und Übungssatz. Das nächste Diagramm bringt das System in
+Bewegung — Aktivitäts- oder Sequenzdiagramm.</p>
+</div>
+</main></div>
+<button class="zurueck" id="hoch">Nach oben</button>
+<script>
+(function(){
+ var links=[].slice.call(document.querySelectorAll('.side a[data-ziel]'));
+ var karte={}; links.forEach(function(a){karte[a.dataset.ziel]=a;});
+ var ziele=links.map(function(a){return document.getElementById(a.dataset.ziel);}).filter(Boolean);
+ var hier=document.getElementById('hier'), seite=document.querySelector('.side');
+ function setzen(){
+   var akt=null, grenze=140;
+   for(var i=0;i<ziele.length;i++){ if(ziele[i].getBoundingClientRect().top<=grenze) akt=ziele[i]; }
+   if(!akt) akt=ziele[0];
+   if(!akt) return;
+   links.forEach(function(a){a.classList.remove('cur');});
+   var a=karte[akt.id];
+   if(a){ a.classList.add('cur');
+     var r=a.getBoundingClientRect(), s=seite.getBoundingClientRect();
+     if(r.top<s.top+8||r.bottom>s.bottom-8) a.scrollIntoView({block:'nearest'});
+     var tx=a.querySelector('.txt'); hier.textContent=(tx?tx.textContent:a.textContent).replace(/\s+/g,' ').trim(); }
+ }
+ var wartet=false;
+ addEventListener('scroll',function(){ if(wartet)return; wartet=true;
+   requestAnimationFrame(function(){setzen();wartet=false;}); },{passive:true});
+ addEventListener('resize',setzen); setzen();
+ var btn=document.getElementById('hoch');
+ addEventListener('scroll',function(){ btn.classList.toggle('an',scrollY>700); },{passive:true});
+ btn.onclick=function(){ scrollTo({top:0,behavior:'smooth'}); };
+})();</script>
+</body></html>

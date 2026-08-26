@@ -7,9 +7,7 @@ Systemgrenze (Rechteck), Assoziation, `«include»` und `«extend»`.
 
 ---
 
-## Teil A — Grundübungen
-
-### Aufgabe A1 [leicht]: Kino-Ticketkauf
+### Aufgabe 1 [leicht]: Kino-Ticketkauf
 
 Ein Kino-System soll für Kunden folgende Funktionen bieten: Eine Vorstellung auswählen, einen
 Sitzplatz reservieren und ein Ticket kaufen. Modellieren Sie den passenden Akteur, die drei
@@ -20,7 +18,6 @@ Anwendungsfälle und die Systemgrenze.
 ![Lösung A1: Kino-Ticketkauf](../bilder/uc-a1.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Kunde
@@ -45,7 +42,7 @@ braucht `«include»` oder `«extend»`.
 
 ---
 
-### Aufgabe A2 [leicht]: Smart Home
+### Aufgabe 2 [leicht]: Smart Home
 
 Ein Smart-Home-System soll dem Bewohner erlauben: Licht steuern, Temperatur einstellen und die
 Kamera prüfen. Modellieren Sie das Use-Case-Diagramm.
@@ -55,7 +52,6 @@ Kamera prüfen. Modellieren Sie das Use-Case-Diagramm.
 ![Lösung A2: Smart Home](../bilder/uc-a2.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Bewohner
@@ -79,7 +75,99 @@ dass die Namen Verben im Infinitiv sind ("Licht steuern", nicht "Lichtsteuerung"
 
 ---
 
-### Aufgabe A3 [mittel]: Online-Shop mit externem Zahlungsdienstleister
+### Aufgabe 3 [leicht]: Geldautomat — Grundmodell
+
+Ein Geldautomat bietet einem Kunden drei Funktionen: Geld abheben, Kontostand abfragen und PIN
+ändern. Modellieren Sie das Grundmodell ohne Beziehungen.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B1: Geldautomat Grundmodell](../bilder/uc-b1.svg)
+
+<pre><code>@startuml
+left to right direction
+
+actor Kunde
+
+rectangle "Geldautomat-System" {
+  usecase "Geld abheben" as UC1
+  usecase "Kontostand abfragen" as UC2
+  usecase "PIN ändern" as UC3
+}
+
+Kunde --> UC1
+Kunde --> UC2
+Kunde --> UC3
+@enduml
+</code></pre>
+
+Das einfachste mögliche Use-Case-Diagramm: ein Akteur, drei unabhängige Anwendungsfälle.
+
+</details>
+
+---
+
+### Aufgabe 4 [leicht]: Bibliothek — Nur Buchsuche
+
+Modellieren Sie das denkbar kleinste sinnvolle Use-Case-Diagramm: Ein Nutzer kann in einem
+Bibliothekssystem ein Buch suchen. Sonst nichts.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B2: Bibliothek nur Buchsuche](../bilder/uc-b2.svg)
+
+<pre><code>@startuml
+left to right direction
+
+actor Nutzer
+
+rectangle "Bibliothekssystem" {
+  usecase "Buch suchen" as UC1
+}
+
+Nutzer --> UC1
+@enduml
+</code></pre>
+
+Auch ein Diagramm mit nur einem Use Case ist vollständig gültig — nicht jedes System braucht
+viele Anwendungsfälle, um sinnvoll modelliert zu sein.
+
+</details>
+
+---
+
+### Aufgabe 5 [leicht]: Ampelsteuerung
+
+Ein Techniker kann eine Ampelphase manuell schalten und den Fehlerstatus der Ampel abfragen.
+Modellieren Sie das Diagramm.
+
+<details><summary>Musterlösung</summary>
+
+![Lösung B3: Ampelsteuerung](../bilder/uc-b3.svg)
+
+<pre><code>@startuml
+left to right direction
+
+actor Techniker
+
+rectangle "Ampelsteuerungssystem" {
+  usecase "Ampelphase manuell schalten" as UC1
+  usecase "Fehlerstatus abfragen" as UC2
+}
+
+Techniker --> UC1
+Techniker --> UC2
+@enduml
+</code></pre>
+
+Der Techniker ist hier ein primärer Akteur mit administrativer Rolle — vergleichbar mit dem
+Bibliothekar aus dem Skript.
+
+</details>
+
+---
+
+### Aufgabe 6 [mittel]: Online-Shop mit externem Zahlungsdienstleister
 
 Ein Online-Shop erlaubt Kunden, Produkte zu suchen und Bestellungen aufzugeben. Beim Aufgeben
 einer Bestellung kommuniziert das System mit einem externen Zahlungsdienstleister. Modellieren
@@ -91,7 +179,6 @@ Kommunikation zwischen Bestellung und Zahlungsdienstleister.
 ![Lösung A3: Online-Shop mit Zahlungsdienstleister](../bilder/uc-a3.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Kunde
@@ -115,7 +202,7 @@ zwischen zwei Akteuren gibt es nicht — die Verbindung läuft immer über einen
 
 ---
 
-### Aufgabe A4 [mittel]: Include — Bibliotheksausleihe
+### Aufgabe 7 [mittel]: Include — Bibliotheksausleihe
 
 Sowohl beim Ausleihen als auch beim Zurückgeben eines Buches muss der Nutzer immer zuerst seinen
 Ausweis prüfen lassen. Lagern Sie diesen gemeinsamen Teilschritt in einen eigenen Use Case aus und
@@ -126,7 +213,6 @@ verbinden Sie ihn korrekt mit den beiden anderen.
 ![Lösung A4: Include Bibliotheksausleihe](../bilder/uc-a4.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Nutzer
@@ -153,7 +239,7 @@ Basis-Use-Cases, der eingeschlossene Schritt läuft automatisch mit.
 
 ---
 
-### Aufgabe A5 [mittel]: Extend — Pizza mit Extra-Belag
+### Aufgabe 8 [mittel]: Extend — Pizza mit Extra-Belag
 
 Ein Kunde kann bei einer Pizzabestellung optional einen Extra-Belag hinzufügen. Nicht jede
 Bestellung enthält diesen Schritt. Modellieren Sie die passende Beziehung.
@@ -163,7 +249,6 @@ Bestellung enthält diesen Schritt. Modellieren Sie die passende Beziehung.
 ![Lösung A5: Extend Pizza mit Extra-Belag](../bilder/uc-a5.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Kunde
@@ -186,104 +271,7 @@ Basis-Use-Case verbunden, denn "Pizza bestellen" funktioniert auch ohne die Erwe
 
 ---
 
-## Teil B — Vertiefungsaufgaben
-
-### Aufgabe B1 [leicht]: Geldautomat — Grundmodell
-
-Ein Geldautomat bietet einem Kunden drei Funktionen: Geld abheben, Kontostand abfragen und PIN
-ändern. Modellieren Sie das Grundmodell ohne Beziehungen.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B1: Geldautomat Grundmodell](../bilder/uc-b1.svg)
-
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-left to right direction
-
-actor Kunde
-
-rectangle "Geldautomat-System" {
-  usecase "Geld abheben" as UC1
-  usecase "Kontostand abfragen" as UC2
-  usecase "PIN ändern" as UC3
-}
-
-Kunde --> UC1
-Kunde --> UC2
-Kunde --> UC3
-@enduml
-</code></pre>
-
-Das einfachste mögliche Use-Case-Diagramm: ein Akteur, drei unabhängige Anwendungsfälle.
-
-</details>
-
----
-
-### Aufgabe B2 [leicht]: Bibliothek — Nur Buchsuche
-
-Modellieren Sie das denkbar kleinste sinnvolle Use-Case-Diagramm: Ein Nutzer kann in einem
-Bibliothekssystem ein Buch suchen. Sonst nichts.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B2: Bibliothek nur Buchsuche](../bilder/uc-b2.svg)
-
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-left to right direction
-
-actor Nutzer
-
-rectangle "Bibliothekssystem" {
-  usecase "Buch suchen" as UC1
-}
-
-Nutzer --> UC1
-@enduml
-</code></pre>
-
-Auch ein Diagramm mit nur einem Use Case ist vollständig gültig — nicht jedes System braucht
-viele Anwendungsfälle, um sinnvoll modelliert zu sein.
-
-</details>
-
----
-
-### Aufgabe B3 [leicht]: Ampelsteuerung
-
-Ein Techniker kann eine Ampelphase manuell schalten und den Fehlerstatus der Ampel abfragen.
-Modellieren Sie das Diagramm.
-
-<details><summary>Musterlösung</summary>
-
-![Lösung B3: Ampelsteuerung](../bilder/uc-b3.svg)
-
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-left to right direction
-
-actor Techniker
-
-rectangle "Ampelsteuerungssystem" {
-  usecase "Ampelphase manuell schalten" as UC1
-  usecase "Fehlerstatus abfragen" as UC2
-}
-
-Techniker --> UC1
-Techniker --> UC2
-@enduml
-</code></pre>
-
-Der Techniker ist hier ein primärer Akteur mit administrativer Rolle — vergleichbar mit dem
-Bibliothekar aus dem Skript.
-
-</details>
-
----
-
-### Aufgabe B4 [mittel]: Online-Shop — Erweitertes Modell
+### Aufgabe 9 [mittel]: Online-Shop — Erweitertes Modell
 
 Erweitern Sie das Grundmodell eines Online-Shops um einen dritten Anwendungsfall: Neben "Produkt
 suchen" und "Bestellung aufgeben" soll ein Kunde auch seinen Warenkorb verwalten können.
@@ -293,7 +281,6 @@ suchen" und "Bestellung aufgeben" soll ein Kunde auch seinen Warenkorb verwalten
 ![Lösung B4: Online-Shop erweitertes Modell](../bilder/uc-b4.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Kunde
@@ -317,7 +304,7 @@ eines Systems, bevor Beziehungen wie Include oder Extend hinzukommen.
 
 ---
 
-### Aufgabe B5 [mittel]: Aufzugsystem mit zwei Akteuren
+### Aufgabe 10 [mittel]: Aufzugsystem mit zwei Akteuren
 
 Ein Aufzugsystem hat zwei Rollen: Ein Fahrgast kann eine Etage anfordern. Ein Techniker kann
 zusätzlich den Wartungsmodus aktivieren und das Fehlerprotokoll auslesen. Diese beiden Akteure
@@ -328,7 +315,6 @@ teilen sich keine gemeinsamen Anwendungsfälle.
 ![Lösung B5: Aufzugsystem mit zwei Akteuren](../bilder/uc-b5.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Fahrgast
@@ -353,7 +339,7 @@ Das ist der einfachste Fall von "mehreren Rollen im selben System".
 
 ---
 
-### Aufgabe B6 [mittel]: Include — Bestellung und Bezahlung
+### Aufgabe 11 [mittel]: Include — Bestellung und Bezahlung
 
 Beim Aufgeben einer Bestellung im Online-Shop muss der Kunde immer bezahlen — dieser Schritt ist
 notwendig, kein optionales Extra. Modellieren Sie "Bestellung aufgeben" und "Bezahlen" mit der
@@ -364,7 +350,6 @@ passenden Beziehung.
 ![Lösung B6: Include Bestellung und Bezahlung](../bilder/uc-b6.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Kunde
@@ -386,7 +371,7 @@ Basis-Use-Case "Bestellung aufgeben" verbunden.
 
 ---
 
-### Aufgabe B7 [mittel]: Extend — Beitrag mit optionalem Bild
+### Aufgabe 12 [mittel]: Extend — Beitrag mit optionalem Bild
 
 Ein Nutzer eines sozialen Netzwerks kann einen Beitrag veröffentlichen. Optional kann er dabei
 ein Bild anhängen — viele Beiträge kommen aber ganz ohne Bild aus. Modellieren Sie die passende
@@ -397,7 +382,6 @@ Beziehung.
 ![Lösung B7: Extend Beitrag mit optionalem Bild](../bilder/uc-b7.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Nutzer
@@ -419,7 +403,7 @@ funktioniert vollständig auch ohne die Erweiterung.
 
 ---
 
-### Aufgabe B8 [mittel-schwer]: Kino-System mit sekundärem Akteur
+### Aufgabe 13 [mittel-schwer]: Kino-System mit sekundärem Akteur
 
 Ein Kino-System erlaubt Kunden, ein Ticket zu kaufen und einen Sitzplatz zu wählen. Beim
 Ticketkauf kommuniziert das System mit einem externen Bezahldienstleister. Modellieren Sie
@@ -430,7 +414,6 @@ sowohl den primären als auch den sekundären Akteur korrekt.
 ![Lösung B8: Kino-System mit sekundärem Akteur](../bilder/uc-b8.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Kunde
@@ -454,7 +437,7 @@ Akteur, weil er von außen mit dem System interagiert.
 
 ---
 
-### Aufgabe B9 [schwer]: Smart Home mit drei Akteuren und Include
+### Aufgabe 14 [schwer]: Smart Home mit drei Akteuren und Include
 
 Ein Smart-Home-System hat drei Akteure: Ein Bewohner kann das Licht steuern und die Tür
 entriegeln. Ein Gast kann nur das Licht steuern. Das Türentriegeln erfordert immer eine
@@ -467,7 +450,6 @@ die Anwendungsfälle korrekt.
 ![Lösung B9: Smart Home mit drei Akteuren](../bilder/uc-b9.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Bewohner
@@ -499,7 +481,7 @@ Use Case selbstständig auslöst statt ihn "manuell zu nutzen".
 
 ---
 
-### Aufgabe B10 [schwer, Transfer]: Fahrkartenautomat — Alles kombiniert
+### Aufgabe 15 [schwer, Transfer]: Fahrkartenautomat — Alles kombiniert
 
 Ein Fahrkartenautomat wird von zwei sehr unterschiedlichen Akteuren genutzt:
 
@@ -510,14 +492,13 @@ Ein Fahrkartenautomat wird von zwei sehr unterschiedlichen Akteuren genutzt:
 Die Bezahlung selbst läuft über ein externes Banksystem.
 
 Modellieren Sie das vollständige Diagramm: zwei primäre Akteure, einen sekundären Akteur, eine
-Include- und eine Extend-Beziehung.
+Include- und zwei Extend-Beziehungen.
 
 <details><summary>Musterlösung</summary>
 
 ![Lösung B10: Fahrkartenautomat kombiniert](../bilder/uc-b10.svg)
 
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 left to right direction
 
 actor Fahrgast
@@ -538,16 +519,18 @@ UC2 --> Bank : kommuniziert mit
 UC3 .> UC1 : <<extend>>
 
 Wartungstechniker --> UC4
-Wartungstechniker --> UC5
+UC5 .> UC4 : <<extend>>
 @enduml
 </code></pre>
 
 Diese Transferaufgabe vereint alles aus diesem Kapitel in einem Diagramm: zwei unabhängige
 primäre Akteure (Fahrgast und Wartungstechniker teilen sich keinen Use Case), einen sekundären
-Akteur (Banksystem), eine Include-Beziehung (Bezahlen ist beim Kauf immer notwendig) und eine
-Extend-Beziehung (Rabattkarte scannen ist optional). Wichtig: Der Fahrgast ist nicht direkt mit
-"Bezahlen" oder "Rabattkarte scannen" verbunden — diese Use Cases werden ausschließlich über ihre
-Beziehung zum Basis-Use-Case erreicht.
+Akteur (Banksystem), eine Include-Beziehung (Bezahlen ist beim Kauf immer notwendig) und **zwei
+Extend-Beziehungen** für die beiden optionalen Fälle: "Rabattkarte scannen" (der Fahrgast macht das
+nur manchmal) und "Fehlerbericht erstellen" (der Wartungstechniker erstellt ihn nur **bei Bedarf**).
+Beides ist optional und erweitert einen Basisfall — deshalb `«extend»`, nicht ein eigener
+Anwendungsfall. Wichtig: Der Fahrgast ist nicht direkt mit "Bezahlen" oder "Rabattkarte scannen"
+verbunden — diese Use Cases werden ausschließlich über ihre Beziehung zum Basis-Use-Case erreicht.
 
 </details>
 

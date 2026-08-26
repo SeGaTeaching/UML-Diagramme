@@ -10,12 +10,10 @@ bevor du hier modellierst. Jede Aufgabe beschreibt <strong>was</strong> passiere
 ist deine Aufgabe. Skizziere dein Diagramm zuerst auf Papier oder in PlantUML, bevor du die
 Musterlösung aufklappst.</p>
 <hr>
-<h2 id="teil-a-grundubungen">Teil A — Grundübungen</h2>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A1 [leicht]: Tee zubereiten</h3><p>Modelliere den Ablauf des Teekochens als einfache Sequenz (keine Entscheidungen, keine
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 1 [leicht]: Tee zubereiten</h3><p>Modelliere den Ablauf des Teekochens als einfache Sequenz (keine Entscheidungen, keine
 Parallelität): Wasser wird erhitzt, ein Teebeutel wird in die Tasse gegeben, der Tee zieht eine
 Weile, danach wird der Teebeutel wieder entfernt.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A1" src="../bilder/act-a1.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -34,11 +32,10 @@ stop
 
 <p>Eine reine Sequenz braucht nur Startknoten, Aktionen in fester Reihenfolge und einen Endknoten.
 Keine Rauten, keine Balken — das ist der einfachste Fall eines Aktivitätsdiagramms.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A2 [leicht]: Ampel für Fußgänger</h3><p>Modelliere: Ein Fußgänger prüft die Ampelfarbe. Ist sie grün, überquert er die Straße; ist sie
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 2 [leicht]: Ampel für Fußgänger</h3><p>Modelliere: Ein Fußgänger prüft die Ampelfarbe. Ist sie grün, überquert er die Straße; ist sie
 rot, wartet er. In beiden Fällen verlässt er anschließend den Gehweg (dieselbe Folgeaktion für
 beide Zweige).</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A2" src="../bilder/act-a2.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -63,11 +60,48 @@ stop
 <p>Wichtig ist, dass beide Bedingungen sich gegenseitig ausschließen ("grün" vs. "nicht grün") und
 dass nach dem <code>endif</code> automatisch eine Zusammenführung entsteht: Egal welcher Zweig genommen wurde,
 danach folgt "Gehweg verlassen" nur einmal.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A3 [mittel]: Getränkeautomat</h3><p>Modelliere einen Getränkeautomaten: Der Kunde wirft so lange Münzen ein, bis der eingeworfene
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 3 [leicht]: Pizza online bestellen</h3><p>Modelliere als reine Sequenz: Pizza auswählen, in den Warenkorb legen, Lieferadresse eingeben,
+Bestellung abschicken.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B1" src="../bilder/act-b1.svg"></p>
+<pre><code>@startuml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+!pragma useVerticalIf on
+
+start
+:Pizza auswählen;
+:In den Warenkorb legen;
+:Lieferadresse eingeben;
+:Bestellung abschicken;
+stop
+@enduml
+</code></pre>
+
+<p>Vier Aktionen, eine Reihenfolge, keine Verzweigung — die Grundübung für jede Prozessmodellierung.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 4 [leicht]: Wecker stellen</h3><p>Modelliere: Weckzeit eingeben, Wecker aktivieren, Handy ablegen.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B2" src="../bilder/act-b2.svg"></p>
+<pre><code>@startuml
+skinparam ActivityStartColor black
+skinparam ActivityEndColor black
+skinparam ActivityBackgroundColor #E3F2FD
+skinparam ActivityBorderColor #1976D2
+skinparam ActivityFontColor #0D47A1
+!pragma useVerticalIf on
+
+start
+:Weckzeit eingeben;
+:Wecker aktivieren;
+:Handy ablegen;
+stop
+@enduml
+</code></pre>
+
+<p>Auch hier: keine Bedingung nötig, solange der Ablauf immer identisch verläuft.</p></div></details></div></article>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 5 [mittel]: Getränkeautomat</h3><p>Modelliere einen Getränkeautomaten: Der Kunde wirft so lange Münzen ein, bis der eingeworfene
 Betrag den Preis erreicht oder übersteigt. Erst dann gibt der Automat das Getränk aus. Nutze eine
 Schleife.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A3" src="../bilder/act-a3.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -89,11 +123,10 @@ stop
 
 <p>Eine Schleife ist kein eigenes Symbol, sondern ein Kontrollfluss, der von einer Entscheidung
 zurück zu einem früheren Punkt führt. Achte auf die Abbruchbedingung — hier: "Betrag reicht".</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A4 [mittel]: Wäsche waschen</h3><p>Modelliere: Bevor die Waschmaschine startet, müssen zwei unabhängige Vorbereitungen erledigt
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 6 [mittel]: Wäsche waschen</h3><p>Modelliere: Bevor die Waschmaschine startet, müssen zwei unabhängige Vorbereitungen erledigt
 werden — Waschmittel einfüllen und das passende Programm auswählen. Beide können gleichzeitig
 (in beliebiger Reihenfolge) erledigt werden. Erst wenn beides erledigt ist, startet der Waschgang.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A4" src="../bilder/act-a4.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -116,12 +149,10 @@ stop
 
 <p>Der Fork-Balken teilt den Ablauf in zwei parallele Stränge, der Join-Balken (hier derselbe
 <code>end fork</code>) wartet, bis beide fertig sind. Das ist UND-Logik, kein ODER.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe A5 [mittel]: Buch in der Bibliothek ausleihen</h3><p>Modelliere mit zwei Swimlanes ("Kunde" und "Bibliothekar"): Der Kunde sucht ein Buch und bringt es
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 7 [mittel]: Buch in der Bibliothek ausleihen</h3><p>Modelliere mit zwei Swimlanes ("Kunde" und "Bibliothekar"): Der Kunde sucht ein Buch und bringt es
 zum Schalter. Der Bibliothekar prüft den Ausweis, verbucht das Buch im System und händigt es aus.
-Zum Schluss verlässt der Kunde die Bibliothek.</p>
-<h2 id="teil-b-vertiefungsaufgaben">Teil B — Vertiefungsaufgaben</h2></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A5" src="../bilder/act-a5.svg"></p>
+Zum Schluss verlässt der Kunde die Bibliothek.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung A5" src="../bilder/act-a5.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -146,51 +177,10 @@ stop
 <p>Jede Aktion steht in der Bahn des Verantwortlichen. Der Kontrollfluss überquert die Bahnen einfach
 mit dem Pfeil — dafür brauchst du keine besondere Notation, nur den Wechsel der Bahnüberschrift
 (<code>|Name|</code>) im Diagrammtext.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B1 [leicht]: Pizza online bestellen</h3><p>Modelliere als reine Sequenz: Pizza auswählen, in den Warenkorb legen, Lieferadresse eingeben,
-Bestellung abschicken.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B1" src="../bilder/act-b1.svg"></p>
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-skinparam ActivityStartColor black
-skinparam ActivityEndColor black
-skinparam ActivityBackgroundColor #E3F2FD
-skinparam ActivityBorderColor #1976D2
-skinparam ActivityFontColor #0D47A1
-!pragma useVerticalIf on
-
-start
-:Pizza auswählen;
-:In den Warenkorb legen;
-:Lieferadresse eingeben;
-:Bestellung abschicken;
-stop
-@enduml
-</code></pre>
-
-<p>Vier Aktionen, eine Reihenfolge, keine Verzweigung — die Grundübung für jede Prozessmodellierung.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B2 [leicht]: Wecker stellen</h3><p>Modelliere: Weckzeit eingeben, Wecker aktivieren, Handy ablegen.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B2" src="../bilder/act-b2.svg"></p>
-<pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
-skinparam ActivityStartColor black
-skinparam ActivityEndColor black
-skinparam ActivityBackgroundColor #E3F2FD
-skinparam ActivityBorderColor #1976D2
-skinparam ActivityFontColor #0D47A1
-!pragma useVerticalIf on
-
-start
-:Weckzeit eingeben;
-:Wecker aktivieren;
-:Handy ablegen;
-stop
-@enduml
-</code></pre>
-
-<p>Auch hier: keine Bedingung nötig, solange der Ablauf immer identisch verläuft.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B3 [mittel]: Fahrkartenkauf am Automaten</h3><p>Modelliere: Der Fahrgast wählt zuerst das Ziel, dann die Zahlungsart. Bei "Bargeld" wirft er
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 8 [mittel]: Fahrkartenkauf am Automaten</h3><p>Modelliere: Der Fahrgast wählt zuerst das Ziel, dann die Zahlungsart. Bei "Bargeld" wirft er
 Münzen oder Scheine ein, bei "Karte" steckt er die Karte in den Automaten. In beiden Fällen gibt
 der Automat anschließend das Ticket aus.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B3" src="../bilder/act-b3.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -214,10 +204,9 @@ stop
 </code></pre>
 
 <p>Beachte die konkreten Bedingungsbeschriftungen ("Bargeld"/"Karte") statt vager Labels wie "Ja/Nein".</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B4 [mittel]: Notenberechnung</h3><p>Modelliere eine Entscheidung mit <strong>drei</strong> Ausgängen: Bei einer Punktzahl ab 90 wird die Note
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 9 [mittel]: Notenberechnung</h3><p>Modelliere eine Entscheidung mit <strong>drei</strong> Ausgängen: Bei einer Punktzahl ab 90 wird die Note
 "Sehr gut" vergeben, ab 50 (aber unter 90) die Note "Befriedigend", darunter "Nicht bestanden".</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B4" src="../bilder/act-b4.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -242,11 +231,10 @@ stop
 
 <p>Ein Entscheidungsknoten kann mehr als zwei Ausgänge haben. Wichtig: Die drei Bedingungen müssen
 zusammen <strong>alle</strong> möglichen Punktzahlen abdecken und dürfen sich nicht überschneiden.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B5 [mittel]: Bewerbungsprozess mit Wiederholung</h3><p>Modelliere: Ein Bewerber sendet eine Bewerbung ab und wartet auf Rückmeldung. Wird sie angenommen,
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 10 [mittel]: Bewerbungsprozess mit Wiederholung</h3><p>Modelliere: Ein Bewerber sendet eine Bewerbung ab und wartet auf Rückmeldung. Wird sie angenommen,
 unterschreibt er den Vertrag (Ende). Wird sie abgelehnt, prüft er, ob er schon drei Versuche hatte
 — wenn ja, bricht er die Suche ab (Ende); wenn nein, bewirbt er sich erneut (Schleife).</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B5" src="../bilder/act-b5.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -275,10 +263,9 @@ repeat while (Abgelehnt, weitere Versuche möglich?)
 <p>Diese Aufgabe kombiniert Schleife und Mehrfachentscheidung: Es gibt drei mögliche Enden
 (Vertrag, Abbruch) und einen Rücksprung. Genau wie beim Passwort-Beispiel im Skript (max. 3
 Versuche) braucht die Schleife eine klare Abbruchbedingung.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B6 [mittel]: Auto starten</h3><p>Modelliere: Nach dem Aufschließen prüft der Fahrer parallel den Motor und den Reifendruck. Erst
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 11 [mittel]: Auto starten</h3><p>Modelliere: Nach dem Aufschließen prüft der Fahrer parallel den Motor und den Reifendruck. Erst
 wenn beides geprüft ist, startet er den Motor und fährt los.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B6" src="../bilder/act-b6.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -302,11 +289,10 @@ stop
 
 <p>Wieder Fork/Join mit zwei Strängen — die Reihenfolge der beiden Prüfungen ist beliebig, solange
 beide vor dem Join abgeschlossen sind.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B7 [mittel]: Software-Build-Pipeline</h3><p>Modelliere: Nach dem Commit laufen drei Schritte parallel — Unit-Tests, Linting und die
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 12 [mittel]: Software-Build-Pipeline</h3><p>Modelliere: Nach dem Commit laufen drei Schritte parallel — Unit-Tests, Linting und die
 Dokumentationsgenerierung. Erst wenn alle drei fertig sind, werden die Ergebnisse
 zusammengeführt und das Deployment gestartet.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B7" src="../bilder/act-b7.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -332,12 +318,11 @@ stop
 
 <p>Ein Fork kann mehr als zwei Ausgänge haben (hier drei <code>fork again</code>-Zweige) — der Join wartet
 trotzdem, bis <strong>alle</strong> Zweige beim <code>end fork</code> angekommen sind.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B8 [schwer]: Kreditantrag in einer Bank</h3><p>Modelliere mit zwei Swimlanes ("Kunde" und "Sachbearbeiter"): Der Kunde stellt einen Kreditantrag.
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 13 [schwer]: Kreditantrag in einer Bank</h3><p>Modelliere mit zwei Swimlanes ("Kunde" und "Sachbearbeiter"): Der Kunde stellt einen Kreditantrag.
 Der Sachbearbeiter prüft die Unterlagen und bewertet die Bonität. Reicht die Bonität nicht aus,
 lehnt er den Antrag ab und der Kunde erhält eine Ablehnung (Ende). Reicht sie aus, genehmigt er den
 Kredit, und der Kunde unterschreibt den Vertrag (Ende).</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B8" src="../bilder/act-b8.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -369,13 +354,12 @@ stop
 
 <p>Zwei Endknoten, weil der Prozess zwei völlig unterschiedliche Ausgänge hat. Achte darauf, dass der
 Kontrollfluss beim Bahnwechsel (z. B. zurück zum Kunden) korrekt weitergeführt wird.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B9 [schwer]: Reklamationsbearbeitung im Kundenservice</h3><p>Modelliere mit drei Swimlanes ("Kunde", "Support", "Fachabteilung"): Der Kunde reicht eine
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 14 [schwer]: Reklamationsbearbeitung im Kundenservice</h3><p>Modelliere mit drei Swimlanes ("Kunde", "Support", "Fachabteilung"): Der Kunde reicht eine
 Reklamation ein. Der Support prüft den Fall; fehlen Informationen, fordert er sie beim Kunden an,
 der Kunde reicht sie nach — das wiederholt sich, bis alle Informationen vollständig sind. Danach
 erarbeitet der Support eine Lösung, die Fachabteilung setzt sie um, und der Kunde erhält eine
 Rückmeldung.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B9" src="../bilder/act-b9.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -410,8 +394,8 @@ stop
 <p>Diese Aufgabe kombiniert drei Swimlanes mit einer Schleife, die selbst wieder die Bahn wechselt
 (Support fragt nach, Kunde antwortet, zurück zu Support). Zeichne zuerst den Hauptpfad, dann füge
 die Rückfrage-Schleife ein.</p></div></details></div></article>
-<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe B10 [schwer, Transfer]: Restaurant-Bestellvorgang</h3><p>Die anspruchsvollste Aufgabe: Kombiniere Swimlanes, eine Schleife <strong>und</strong> Fork/Join in einem
-Diagramm. Vier Beteiligte: Kunde, Kellner, Küche.</p>
+<article class="karte karte--uebung"><div class="karte-koerper"><h3 class="uebung-titel">Aufgabe 15 [schwer, Transfer]: Restaurant-Bestellvorgang</h3><p>Die anspruchsvollste Aufgabe: Kombiniere Swimlanes, eine Schleife <strong>und</strong> Fork/Join in einem
+Diagramm. Drei Beteiligte: Kunde, Kellner, Küche.</p>
 <p>Ablauf: Der Kunde gibt seine Bestellung beim Kellner auf. Der Kellner reicht sie an die Küche
 weiter, die die Verfügbarkeit prüft; ist ein Gericht nicht verfügbar, wird die Bestellung erneut
 angepasst und der Küche erneut vorgelegt (Schleife), bis alles verfügbar ist. Danach laufen zwei
@@ -419,7 +403,6 @@ Dinge parallel: Die Küche bereitet die Speisen zu, während der Kellner die Get
 Erst wenn beides fertig ist, serviert der Kellner Speisen und Getränke gemeinsam. Der Kunde genießt
 das Essen und bezahlt zum Schluss.</p></div><div class="karte-fuss"><details data-rolle="musterloesung"><summary>Musterlösung</summary><div class="klappinhalt"><p><img alt="Lösung B10" src="../bilder/act-b10.svg"></p>
 <pre><code>@startuml
-!include /sessions/amazing-cool-carson/mnt/07_UML-Diagramme/PlantUMLs/theme.puml
 skinparam ActivityStartColor black
 skinparam ActivityEndColor black
 skinparam ActivityBackgroundColor #E3F2FD
@@ -438,8 +421,11 @@ repeat
   :Bestellung an Küche weitergeben;
   |#f3e5f5|Küche|
   :Verfügbarkeit prüfen;
-repeat while (Gericht nicht verfügbar?) is ([nein, andere Wahl nötig]) not ([ja, verfügbar])
+  |#fff3e0|Kellner|
+backward:Bestellung anpassen;
+repeat while (Gericht nicht verfügbar?) is ([ja]) not ([nein])
 fork
+  |#f3e5f5|Küche|
   :Speisen zubereiten;
 fork again
   |#fff3e0|Kellner|
@@ -457,4 +443,4 @@ stop
 <p>Der Trick bei solchen Transferaufgaben: Baue in Schichten. Zuerst der Hauptpfad ohne Verzweigung,
 dann die Swimlanes zuordnen, dann die Schleife für die Verfügbarkeitsprüfung einfügen, zuletzt den
 Fork/Join für die parallele Zubereitung ergänzen. So bleibt die Übersicht auch bei einem
-komplexen Prozess erhalten.</p></div></details></div></article><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="a4_lt_7-3-uml-aktivitaet.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Aktivitätsdiagramme: Die Prozess-Sicht</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main><aside class="toc" aria-label="Auf dieser Seite"><div class="toc-titel">Auf dieser Seite</div><a href="#teil-a-grundubungen">Teil A — Grundübungen</a><a href="#teil-b-vertiefungsaufgaben">Teil B — Vertiefungsaufgaben</a></aside></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>
+komplexen Prozess erhalten.</p></div></details></div></article><nav class="weiterblaettern" aria-label="Blättern"><a class="blatt blatt--zurueck" href="a4_lt_7-3-uml-aktivitaet.html"><div class="blatt-marke">‹ Zurück</div><div class="blatt-titel">Aktivitätsdiagramme: Die Prozess-Sicht</div></a><span></span></nav><footer class="fusszeile">UML · Enders Training</footer></main></div><script src="../assets/portal.js?v=f8d9af0d" defer></script><!-- Erzeugt aus der Markdown-SSOT. HTML nicht von Hand bearbeiten. --></body></html>
